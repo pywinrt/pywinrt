@@ -18,6 +18,7 @@
 #include "members.h"
 #include "module_state.h"
 #include "objects.h"
+#include "protocols.h"
 #include "types.h"
 
 namespace py::interp
@@ -279,15 +280,25 @@ namespace py::interp
             overload_desc& overload,
             arg_desc* args)
         {
-            overload.shape = get_forward_shape(member.forward_shape());
-
-            if (!overload.shape)
+            if (member.forward_shape() != table::no_ref)
             {
-                return false;
+                overload.shape = get_forward_shape(member.forward_shape());
+
+                if (!overload.shape)
+                {
+                    return false;
+                }
             }
+
+            // A member that passes a type argument by value has no ABI until
+            // the type argument is known, so a parameterized interface with
+            // none has no shape here. The attribute is still bound, because it
+            // is what an instance's own attribute overrides, and calling it is
+            // what interp.cpp refuses.
 
             overload.slot = member.slot();
             overload.winrt_name = member.winrt_name().data();
+            overload.role = member.role();
             overload.in_count = static_cast<uint16_t>(member.in_count());
             overload.out_count = static_cast<uint16_t>(member.out_count());
             overload.arg_count = static_cast<uint16_t>(member.param_count());
@@ -328,6 +339,15 @@ namespace py::interp
                 {
                     overload.iface = record.guid();
                 }
+            }
+
+            if (!overload.shape)
+            {
+                // There is nowhere to put the arguments of a call that cannot
+                // be made, and nothing to receive from it either.
+                overload.prepared = true;
+
+                return true;
             }
 
             // Where each argument sits is what the shape says, and an array
@@ -512,6 +532,8 @@ namespace py::interp
         auto* overload = proj.overloads.back().get();
         auto* argument = proj.args.back().get();
 
+        entry.members = member;
+
         auto const composable = (record.flags() & table::type_flags::composable) != 0;
 
         for (uint32_t i = 0; i < record.group_count(); i++)
@@ -618,6 +640,13 @@ namespace py::interp
             member++;
             overload += group.member_count();
         }
+
+        // What was filled rather than what was reserved: an event is counted
+        // as its two halves above, and a table that named only one of them
+        // would leave the second descriptor empty.
+        entry.member_count = static_cast<uint16_t>(member - entry.members);
+
+        find_protocol_members(entry);
 
         return true;
     }

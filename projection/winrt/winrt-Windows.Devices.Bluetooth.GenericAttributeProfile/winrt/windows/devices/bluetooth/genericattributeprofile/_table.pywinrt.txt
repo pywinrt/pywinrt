@@ -2,6 +2,204 @@ format 4.0
 generator 0.0.0
 namespace Windows.Devices.Bluetooth.GenericAttributeProfile
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattCharacteristicsResult]
+    guid d6a15475-1e72-5c56-98e8-88f4bc3e0313
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult;{1194945c-b257-4f3e-9db7-f68bc9a9aef2}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattClientNotificationResult]
+    guid 9783fef1-1b62-5418-9898-933138c2bd14
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult;{506d5599-0112-419a-8e3b-ae21afabd2c2}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattCommunicationStatus]
+    guid 2154117a-978d-59db-99cf-6b690cb3389b
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattDescriptorsResult]
+    guid df09ae77-f606-53e4-8ba6-799f5992c85e
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult;{9bc091f3-95e7-4489-8d25-ff81955a57b9}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattDeviceService]
+    guid 2dbcf64a-262b-5708-adb1-c3b8750bd680
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService;{ac7b7c05-b33c-47cf-990f-6b8f5577df71}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattDeviceServicesResult]
+    guid 74ab0892-a631-5d6c-b1b4-bd2e1a741a9b
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult;{171dd3ee-016d-419d-838a-576cf475a3d8}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattLocalCharacteristicResult]
+    guid 85c70edd-d815-5284-8c84-58a8f769e388
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult;{7975de9b-0170-4397-9666-92f863f12ee6}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattLocalDescriptorResult]
+    guid f2927eec-47d9-5338-9ba5-5be8461ad410
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult;{375791be-321f-4366-bfc1-3bc6b82c79f8}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattOpenStatus]
+    guid 548b3cd0-dce8-5d3d-98ab-6948dd7f90b8
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattReadClientCharacteristicConfigurationDescriptorResult]
+    guid 98f9a6f3-4d29-5351-8b12-751dc977a331
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult;{63a66f09-1aea-4c4c-a50f-97bae474b348}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattReadRequest]
+    guid 31823848-3ab2-547a-8303-964dcc377c9c
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest;{f1dd6535-6acd-42a6-a4bb-d789dae0043e}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattReadResult]
+    guid d8992aa0-eac2-55b7-92c5-894886beb0ca
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult;{63a66f08-1aea-4c4c-a50f-97bae474b348}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattServiceProviderResult]
+    guid f992789a-e981-597a-9197-1fbd986f74c7
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult;{764696d8-c53e-428c-8a48-67afe02c3ae6}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattSession]
+    guid cae01a28-fd33-542e-a5ad-3d878f73db90
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession;{d23b5143-e04e-4c24-999c-9c256f9856b1}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattWriteRequest]
+    guid 25b737f6-30ff-558e-ba16-b564c45fdc06
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest;{aeb6a9ed-de2f-4fc2-a9a8-94ea7844f13d}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[GattWriteResult]
+    guid 6fa8c9c3-ff7e-5fa1-a2f3-2714cf04b899
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult;{4991ddb1-cb2b-44f7-99fc-d29a2871dc9b}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Enumeration.DeviceAccessStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[DeviceAccessStatus]
+    guid ee154d83-805b-53e8-8469-90715036d013
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Devices.Enumeration.DeviceAccessStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Enumeration.DeviceAccessStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceAccessStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[GattClientNotificationResult]]
+    guid 2f6c4343-667f-5d74-8ee7-b39de335a960
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult;{506d5599-0112-419a-8e3b-ae21afabd2c2})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic python_type
     py GattCharacteristic
     signature rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic;{59cb50c1-5934-4f68-a198-eb864fa44e6b})
@@ -501,7 +699,7 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService python
         get get_SharingMode slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3 shape=4 reverse=62
             out enum32 type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSharingMode return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method convert_short_id_to_uuid static deprecated
         method ConvertShortIdToUuid slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceServiceStatics shape=51 reverse=100 static deprecated
             in uint16 name=shortId
@@ -1299,7 +1497,7 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession python_type 
         remove remove_SessionStatusChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattSession shape=26 reverse=200
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_device_id_async static
         method FromDeviceIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattSessionStatics shape=51 reverse=24 static
             in class type=Windows.Devices.Bluetooth.BluetoothDeviceId name=deviceId
@@ -1415,95 +1613,527 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult python_t
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattWriteResult shape=4 reverse=22
             out enum32 type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattCharacteristicsResult]
     guid 0972194a-ac1c-5536-9886-27e58a18f273
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult;{1194945c-b257-4f3e-9db7-f68bc9a9aef2}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattClientNotificationResult]
     guid de27c5cf-6227-5829-b997-88e575ad0680
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult;{506d5599-0112-419a-8e3b-ae21afabd2c2}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattCommunicationStatus]
     guid 3ff69516-1bfb-52e9-9ee6-e5cdb78e1683
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattDescriptorsResult]
     guid ceaf40c7-be37-52a5-9a1b-63398513e597
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult;{9bc091f3-95e7-4489-8d25-ff81955a57b9}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattDeviceService]
     guid e5e90272-408f-5055-9bd3-88408982d301
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService;{ac7b7c05-b33c-47cf-990f-6b8f5577df71}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattDeviceServicesResult]
     guid e7c667f6-e874-500f-86ff-760ca6f07a58
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult;{171dd3ee-016d-419d-838a-576cf475a3d8}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattLocalCharacteristicResult]
     guid 1f97164e-88d5-567d-90f9-75d4f6455274
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult;{7975de9b-0170-4397-9666-92f863f12ee6}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattLocalDescriptorResult]
     guid 3ef6d808-754f-5040-97ac-0703309c574f
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult;{375791be-321f-4366-bfc1-3bc6b82c79f8}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattOpenStatus]
     guid 983201ac-8777-53e8-86e0-63fa684be1bd
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattReadClientCharacteristicConfigurationDescriptorResult]
     guid cf4444cc-4077-5719-8366-46e86b983685
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult;{63a66f09-1aea-4c4c-a50f-97bae474b348}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattReadRequest]
     guid 4732cec2-d943-5ceb-8281-8d54a21b9a45
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest;{f1dd6535-6acd-42a6-a4bb-d789dae0043e}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattReadResult]
     guid d40432a8-1e14-51d0-b49b-ae2ce1aa05e5
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult;{63a66f08-1aea-4c4c-a50f-97bae474b348}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattServiceProviderResult]
     guid 21781028-f5a2-5d99-a5ab-bce6554fbc02
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult;{764696d8-c53e-428c-8a48-67afe02c3ae6}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattSession]
     guid 6d40b467-46b9-516f-8208-db23b786ea48
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession;{d23b5143-e04e-4c24-999c-9c256f9856b1}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattWriteRequest]
     guid fb8b3c18-2f60-5b43-b773-146045816e03
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest;{aeb6a9ed-de2f-4fc2-a9a8-94ea7844f13d}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[GattWriteResult]
     guid e83b4534-bd14-5a9b-a53b-17cc02a2a8a8
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult;{4991ddb1-cb2b-44f7-99fc-d29a2871dc9b}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceAccessStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceAccessStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[DeviceAccessStatus]
     guid c00bc2f2-a7f8-5f3f-80d1-2808ef6bca10
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.Enumeration.DeviceAccessStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Enumeration.DeviceAccessStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceAccessStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Enumeration.DeviceAccessStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceAccessStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Enumeration.DeviceAccessStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceAccessStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Devices.Enumeration.DeviceAccessStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[GattClientNotificationResult]]
     guid b6fa5848-accd-536b-a37e-2444d86f2c1f
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult;{506d5599-0112-419a-8e3b-ae21afabd2c2})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> return
 
 interface Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic
     guid 59cb50c1-5934-4f68-a198-eb864fa44e6b
@@ -1682,127 +2312,793 @@ interface Windows.Devices.Bluetooth.GenericAttributeProfile.IGattWriteRequestedE
 interface Windows.Devices.Bluetooth.GenericAttributeProfile.IGattWriteResult
     guid 4991ddb1-cb2b-44f7-99fc-d29a2871dc9b
 
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[GattCharacteristic]
+    guid e3c56728-7f2d-5a0d-ad38-030d39c60f9f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic;{59cb50c1-5934-4f68-a198-eb864fa44e6b}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[GattClientNotificationResult]
+    guid d3f4b8ad-251f-5bbb-ada2-ea47434e74d6
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult;{506d5599-0112-419a-8e3b-ae21afabd2c2}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[GattDescriptor]
+    guid 30e2ffc4-3aa3-5219-9a18-ca2d0b6562e8
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor;{92055f2b-8084-4344-b4c2-284de19a8506}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[GattDeviceService]
+    guid 4b192e23-4893-56b2-8eff-439c3ab7fd1f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService;{ac7b7c05-b33c-47cf-990f-6b8f5577df71}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[GattLocalCharacteristic]
+    guid 7082ed53-37f6-5262-8d09-939bea9edbd5
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic;{aede376d-5412-4d74-92a8-8deb8526829c}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[GattLocalDescriptor]
+    guid 9016e9a2-c9f7-5d09-b0ae-552fa67796ae
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor;{f48ebe06-789d-4a4b-8652-bd017b5d2fc6}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[GattPresentationFormat]
+    guid d75fcef1-c10e-5b7b-b130-f5a00314d35d
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat;{196d0021-faad-45dc-ae5b-2ac3184e84db}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[GattSubscribedClient]
+    guid b19864e4-f2b1-50de-8c11-fff9eca934e9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient;{736e9001-15a4-4ec2-9248-e3f20d463be9}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[GattCharacteristic]
+    guid 1ffc4777-4346-5564-b7a5-59eae385f4f6
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic;{59cb50c1-5934-4f68-a198-eb864fa44e6b}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[GattClientNotificationResult]
+    guid fca87386-a3ab-55e2-a83e-21f5bfab4049
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult;{506d5599-0112-419a-8e3b-ae21afabd2c2}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[GattDescriptor]
+    guid 3d8df436-cefb-5ffb-858c-4882ce1da079
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor;{92055f2b-8084-4344-b4c2-284de19a8506}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[GattDeviceService]
+    guid 8beb3a26-73ca-50f3-a1d3-418c60a9f3b2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService;{ac7b7c05-b33c-47cf-990f-6b8f5577df71}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[GattLocalCharacteristic]
+    guid edd74875-8e85-546f-83b8-1e00aa896419
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic;{aede376d-5412-4d74-92a8-8deb8526829c}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[GattLocalDescriptor]
+    guid 08023045-5f5c-59cc-abd3-bbcfe6fa7030
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor;{f48ebe06-789d-4a4b-8652-bd017b5d2fc6}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[GattPresentationFormat]
+    guid 20006c53-5dda-5319-91b1-c6f28fe65933
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat;{196d0021-faad-45dc-ae5b-2ac3184e84db}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[GattSubscribedClient]
+    guid df039115-a5ff-5d5a-b07b-20b42e078765
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient;{736e9001-15a4-4ec2-9248-e3f20d463be9}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.Foundation.IReference<System.Byte> concrete
+    py winrt.windows.foundation._IReference[Byte]
     guid e5198cc8-2873-55f5-b0a1-84ff9e4aad62
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u1)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Byte
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Byte> shape=4 reverse=22 role=value
+            out uint8 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[GattPresentationFormat]
     guid cba635ef-1c70-5412-8ede-7316276b9ee4
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat;{196d0021-faad-45dc-ae5b-2ac3184e84db}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat>
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=4 reverse=173
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=117 reverse=101
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=51 reverse=211
+            pass_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[GattCharacteristic]
     guid cb3ab3ae-b561-504f-a808-599deceb2df4
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic;{59cb50c1-5934-4f68-a198-eb864fa44e6b}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic>
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> shape=117 reverse=66
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[GattClientNotificationResult]
     guid c886eb62-ec71-586b-a158-66dc62a378b7
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult;{506d5599-0112-419a-8e3b-ae21afabd2c2}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=117 reverse=66
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[GattDescriptor]
     guid 19605ea8-73d6-5760-849b-fe5f8a2bd05c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor;{92055f2b-8084-4344-b4c2-284de19a8506}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor>
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> shape=117 reverse=66
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[GattDeviceService]
     guid 7c8e7fdd-a1a1-528a-81d1-296769227a08
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService;{ac7b7c05-b33c-47cf-990f-6b8f5577df71}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService>
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=117 reverse=66
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[GattLocalCharacteristic]
     guid e4865eba-6de3-5a99-9a75-7efd8e3cb096
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic;{aede376d-5412-4d74-92a8-8deb8526829c}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic>
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> shape=117 reverse=66
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[GattLocalDescriptor]
     guid 7f4688cc-0bbc-5070-8974-19fcb1acbf6c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor;{f48ebe06-789d-4a4b-8652-bd017b5d2fc6}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor>
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> shape=117 reverse=66
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[GattPresentationFormat]
     guid 0ea2c154-22b8-5c8e-925d-d47e1aad31bb
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat;{196d0021-faad-45dc-ae5b-2ac3184e84db}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat>
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=117 reverse=66
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[GattSubscribedClient]
     guid 63391d79-4ba7-5f45-9681-3a683089353b
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient;{736e9001-15a4-4ec2-9248-e3f20d463be9}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient>
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> shape=117 reverse=66
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient name=value
+            out uint32 name=index
+            out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GattCharacteristic, GattValueChangedEventArgs]
     guid c1f420f6-6292-5760-a2c9-9ddf98683cfc
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic;{59cb50c1-5934-4f68-a198-eb864fa44e6b});rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs;{d21bdb54-06e3-4ed8-a263-acfac8ba7313}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic name=sender
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[GattLocalCharacteristic, Object]
     guid 8087acd6-aed7-53eb-9b23-4808bb910c17
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic;{aede376d-5412-4d74-92a8-8deb8526829c});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic,Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GattLocalCharacteristic, GattReadRequestedEventArgs]
     guid 218a3e4a-aa9d-500e-bca7-047751bb10a3
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic;{aede376d-5412-4d74-92a8-8deb8526829c});rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs;{93497243-f39c-484b-8ab6-996ba486cfa3}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic name=sender
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic,Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GattLocalCharacteristic, GattWriteRequestedEventArgs]
     guid ed61a2fb-7d2a-5ba3-8ebf-8ad878e539a9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic;{aede376d-5412-4d74-92a8-8deb8526829c});rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs;{2dec8bbe-a73a-471a-94d5-037deadd0806}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic name=sender
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor,Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GattLocalDescriptor, GattReadRequestedEventArgs]
     guid 252dca5c-86e7-5be1-aeed-f78c6ed466ab
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor;{f48ebe06-789d-4a4b-8652-bd017b5d2fc6});rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs;{93497243-f39c-484b-8ab6-996ba486cfa3}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor name=sender
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor,Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GattLocalDescriptor, GattWriteRequestedEventArgs]
     guid 6cf5b169-3731-591b-ae7c-d939faaa8a71
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor;{f48ebe06-789d-4a4b-8652-bd017b5d2fc6});rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs;{2dec8bbe-a73a-471a-94d5-037deadd0806}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor name=sender
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest,Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GattReadRequest, GattRequestStateChangedEventArgs]
     guid 0246e199-5199-5bdb-919d-8544ce30fd71
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest;{f1dd6535-6acd-42a6-a4bb-d789dae0043e});rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs;{e834d92c-27be-44b3-9d0d-4fc6e808dd3f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest name=sender
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider,Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisementStatusChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GattServiceProvider, GattServiceProviderAdvertisementStatusChangedEventArgs]
     guid 56ce41b0-2570-50d3-a1b1-7e4167e1fde7
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider;{7822b3cd-2889-4f86-a051-3f0aed1c2760});rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisementStatusChangedEventArgs;{59a5aa65-fa21-4ffc-b155-04d928012686}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisementStatusChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider name=sender
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisementStatusChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[GattSession, Object]
     guid 6c7ec2ec-9f00-5ea0-9a08-60e5070bcf03
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession;{d23b5143-e04e-4c24-999c-9c256f9856b1});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession,Windows.Devices.Bluetooth.GenericAttributeProfile.GattSessionStatusChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GattSession, GattSessionStatusChangedEventArgs]
     guid 0e1210f2-7b6f-543e-8adb-a61d34ab535d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession;{d23b5143-e04e-4c24-999c-9c256f9856b1});rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattSessionStatusChangedEventArgs;{7605b72e-837f-404c-ab34-3163f39ddf32}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattSessionStatusChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession name=sender
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSessionStatusChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[GattSubscribedClient, Object]
     guid 9c17a110-806d-594b-b33d-ed280bbf27e5
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient;{736e9001-15a4-4ec2-9248-e3f20d463be9});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest,Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GattWriteRequest, GattRequestStateChangedEventArgs]
     guid 7744c6bc-cdcd-5283-9e4f-2e21b49a2ef2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest;{aeb6a9ed-de2f-4fc2-a9a8-94ea7844f13d});rc(Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs;{e834d92c-27be-44b3-9d0d-4fc6e808dd3f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest
     argument Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest name=sender
+            in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs name=args
 
 class System.Byte external
     py winrt.system.Byte
@@ -1828,12 +3124,67 @@ class Windows.Devices.Enumeration.DeviceAccessInformation external
 enum Windows.Devices.Enumeration.DeviceAccessStatus external
     py winrt.windows.devices.enumeration.DeviceAccessStatus
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.Streams.IBuffer external
     py winrt.windows.storage.streams._IBuffer

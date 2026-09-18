@@ -62,7 +62,7 @@ class Windows.ApplicationModel.AppService.AppServiceConnection activatable pytho
         remove remove_ServiceClosed slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=26 reverse=200
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method open_async
         method OpenAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4 reverse=121
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> return
@@ -162,6 +162,72 @@ class Windows.ApplicationModel.AppService.AppServiceTriggerDetails python_type
             in string name=capabilityName
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[AppServiceConnectionStatus]
+    guid b6c6bbf2-72ca-5799-a651-d1990670097b
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.AppService.AppServiceConnectionStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.AppService.AppServiceConnectionStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.AppService.AppServiceResponse> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[AppServiceResponse]
+    guid 7ea7d7ec-e164-52c3-8e32-bba7126d9028
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.AppService.AppServiceResponse;{8d503cec-9aa3-4e68-9559-9de63e372ce4}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.AppService.AppServiceResponse
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponse> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.AppService.AppServiceResponseStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[AppServiceResponseStatus]
+    guid b824383d-32e0-5579-8670-a06a61457f20
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.AppService.AppServiceResponseStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.AppService.AppServiceResponseStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponseStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StatelessAppServiceResponse]
+    guid 4d1ee4ed-4d79-53fa-a9d7-c9c9354e4f55
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.AppService.StatelessAppServiceResponse;{43754af7-a9ec-52fe-82e7-939b68dc9388}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.AppService.StatelessAppServiceResponse
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[AppInfo]]
+    guid 07f25b6f-f054-5649-a5ce-b348ddc618b6
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.AppInfo;{cf7f59b3-6a09-4de8-a6c0-5792d56880d1})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 interface Windows.ApplicationModel.AppService.IAppServiceCatalogStatics
     guid ef0d2507-d132-4c85-8395-3c31d5a1e941
 
@@ -201,43 +267,240 @@ interface Windows.ApplicationModel.AppService.IAppServiceTriggerDetails3
 interface Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4
     guid 1185b180-8861-5e30-ab55-1cf4d08bbf6d
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[AppServiceConnectionStatus]
     guid 0d0e6663-2639-5a9a-9cbc-30d7d4ce533b
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.AppService.AppServiceConnectionStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.AppService.AppServiceConnectionStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.AppService.AppServiceConnectionStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponse> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponse> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[AppServiceResponse]
     guid 48755a7c-c88f-5ef0-9b4c-876fcc2610b4
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.AppService.AppServiceResponse;{8d503cec-9aa3-4e68-9559-9de63e372ce4}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.AppService.AppServiceResponse
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponse> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.AppService.AppServiceResponse> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponse> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.AppService.AppServiceResponse> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponse> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.AppService.AppServiceResponse return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponseStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponseStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[AppServiceResponseStatus]
     guid 98fdb842-5a0b-539a-a35c-55ac5f228612
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.AppService.AppServiceResponseStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.AppService.AppServiceResponseStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponseStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.AppService.AppServiceResponseStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponseStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.AppService.AppServiceResponseStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponseStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.AppService.AppServiceResponseStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StatelessAppServiceResponse]
     guid b2a1524e-beab-5beb-aae9-b43501c3a488
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.AppService.StatelessAppServiceResponse;{43754af7-a9ec-52fe-82e7-939b68dc9388}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.AppService.StatelessAppServiceResponse
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.AppService.StatelessAppServiceResponse return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[AppInfo]]
     guid 07543d91-8610-5152-b0e4-43d6e4cdd0cb
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.AppInfo;{cf7f59b3-6a09-4de8-a6c0-5792d56880d1})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.AppInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AppInfo]
+    guid 63d0bffe-0e34-55b3-83d5-314caff2b137
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.AppInfo;{cf7f59b3-6a09-4de8-a6c0-5792d56880d1}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.AppInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.AppInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInfo> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AppInfo]
+    guid 69cec62c-41eb-5d69-a475-29ee22323dd8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.AppInfo;{cf7f59b3-6a09-4de8-a6c0-5792d56880d1}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.AppInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInfo> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.AppInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInfo> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.AppInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInfo> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.ApplicationModel.AppService.IStatelessAppServiceResponse
     guid 43754af7-a9ec-52fe-82e7-939b68dc9388
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AppInfo]
     guid 8246ed12-33e8-52b3-a5c5-19779de9999e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.AppInfo;{cf7f59b3-6a09-4de8-a6c0-5792d56880d1}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.AppInfo>
     argument Windows.ApplicationModel.AppInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.AppInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.AppInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.AppInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.AppInfo name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.ApplicationModel.AppService.StatelessAppServiceResponse python_type
     py StatelessAppServiceResponse
@@ -256,16 +519,28 @@ enum Windows.ApplicationModel.AppService.StatelessAppServiceResponseStatus pytho
     signature enum(Windows.ApplicationModel.AppService.StatelessAppServiceResponseStatus;i4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppService.AppServiceConnection,Windows.ApplicationModel.AppService.AppServiceClosedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[AppServiceConnection, AppServiceClosedEventArgs]
     guid e4efa98d-4bfc-5e61-a233-688f5f06521f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.AppService.AppServiceConnection;{9dd474a2-871f-4d52-89a9-9e090531bd27});rc(Windows.ApplicationModel.AppService.AppServiceClosedEventArgs;{de6016f6-cb03-4d35-ac8d-cc6303239731}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.AppService.AppServiceConnection
     argument Windows.ApplicationModel.AppService.AppServiceClosedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.AppService.AppServiceConnection name=sender
+            in class type=Windows.ApplicationModel.AppService.AppServiceClosedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppService.AppServiceConnection,Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[AppServiceConnection, AppServiceRequestReceivedEventArgs]
     guid 18c67d61-4176-5553-b18d-d8f57fe79552
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.AppService.AppServiceConnection;{9dd474a2-871f-4d52-89a9-9e090531bd27});rc(Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs;{6e122360-ff65-44ae-9e45-857fe4180681}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.AppService.AppServiceConnection
     argument Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.AppService.AppServiceConnection name=sender
+            in class type=Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs name=args
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -273,9 +548,40 @@ class System.Boolean external
 class Windows.ApplicationModel.AppInfo external
     py winrt.windows.applicationmodel.AppInfo
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Foundation.Collections.ValueSet external
     py winrt.windows.foundation.collections.ValueSet

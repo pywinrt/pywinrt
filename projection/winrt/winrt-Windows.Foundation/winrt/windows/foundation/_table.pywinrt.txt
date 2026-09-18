@@ -89,7 +89,7 @@ class Windows.Foundation.Deferral python_type closeable
             in delegate type=Windows.Foundation.DeferralCompletedHandler name=handler
             out class type=Windows.Foundation.Deferral return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method complete
         method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IDeferral shape=0 reverse=16
 
@@ -139,7 +139,7 @@ interface Windows.Foundation.IAsyncAction python_type awaitable
     signature {5a648006-843a-4da9-865b-9d26e5dfad7b}
     requires Windows.Foundation.IAsyncInfo
     property completed
-        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=43
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=43 role=completed
             out delegate type=Windows.Foundation.AsyncActionCompletedHandler return
         put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=4 reverse=22
             in delegate type=Windows.Foundation.AsyncActionCompletedHandler name=handler
@@ -150,14 +150,14 @@ interface Windows.Foundation.IAsyncAction python_type awaitable
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
         method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
-        method GetResults slot=8 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=0 reverse=55
+        method GetResults slot=8 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncAction shape=0 reverse=55 role=get_results
 
 interface Windows.Foundation.IAsyncActionWithProgress<TProgress> parameterized
     argument TProgress
@@ -172,7 +172,7 @@ interface Windows.Foundation.IAsyncActionWithProgress parameterized python_type 
         put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncActionWithProgress shape=4 reverse=22
             in delegate type=Windows.Foundation.AsyncActionProgressHandler<TProgress> name=handler
     property completed
-        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncActionWithProgress shape=4 reverse=99
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncActionWithProgress shape=4 reverse=99 role=completed
             out delegate type=Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress> return
         put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncActionWithProgress shape=4 reverse=62
             in delegate type=Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress> name=handler
@@ -183,14 +183,14 @@ interface Windows.Foundation.IAsyncActionWithProgress parameterized python_type 
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
         method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
-        method GetResults slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncActionWithProgress shape=0 reverse=117
+        method GetResults slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncActionWithProgress shape=0 reverse=117 role=get_results
 
 interface Windows.Foundation.IAsyncInfo python_type
     py _IAsyncInfo
@@ -203,7 +203,7 @@ interface Windows.Foundation.IAsyncInfo python_type
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
         method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
@@ -218,7 +218,7 @@ interface Windows.Foundation.IAsyncOperation parameterized python_type awaitable
     guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
     requires Windows.Foundation.IAsyncInfo
     property completed
-        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation shape=4 reverse=43
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation shape=4 reverse=43 role=completed
             out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<TResult> return
         put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation shape=4 reverse=22
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<TResult> name=handler
@@ -229,14 +229,14 @@ interface Windows.Foundation.IAsyncOperation parameterized python_type awaitable
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
         method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
-        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation shape=4 reverse=62
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation shape=4 reverse=62 role=get_results
             out object return
 
 interface Windows.Foundation.IAsyncOperationWithProgress<TResult,TProgress> parameterized
@@ -253,7 +253,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress parameterized python_ty
         put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress shape=4 reverse=22
             in delegate type=Windows.Foundation.AsyncOperationProgressHandler<TResult,TProgress> name=handler
     property completed
-        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress shape=4 reverse=99
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress shape=4 reverse=99 role=completed
             out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<TResult,TProgress> return
         put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress shape=4 reverse=62
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<TResult,TProgress> name=handler
@@ -264,14 +264,14 @@ interface Windows.Foundation.IAsyncOperationWithProgress parameterized python_ty
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
         method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
-        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress shape=4 reverse=121
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress shape=4 reverse=121 role=get_results
             out object return
 
 interface Windows.Foundation.IClosable python_type closeable
@@ -279,7 +279,7 @@ interface Windows.Foundation.IClosable python_type closeable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
     signature {30d5a829-7fa4-4026-83bb-d75bae4ea99e}
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 interface Windows.Foundation.IDeferral
     guid d6269732-3b7f-46a7-b40b-4fdca2a2c693
@@ -302,15 +302,35 @@ interface Windows.Foundation.IGuidHelperStatics
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.IWwwFormUrlDecoderEntry> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.IWwwFormUrlDecoderEntry> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IWwwFormUrlDecoderEntry]
     guid 876be83b-7218-5bfb-a169-83152ef7e146
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{125e7431-f678-4e8e-b670-20a9b06c512d})
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Foundation.IWwwFormUrlDecoderEntry
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUrlDecoderEntry> return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUrlDecoderEntry> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUrlDecoderEntry> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IWwwFormUrlDecoderEntry]
     guid 32e54295-373c-50cb-80a1-468a990ca780
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{125e7431-f678-4e8e-b670-20a9b06c512d})
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Foundation.IWwwFormUrlDecoderEntry
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=22 role=current
+            out interface type=Windows.Foundation.IWwwFormUrlDecoderEntry return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=117 reverse=101
+            fill_array interface type=Windows.Foundation.IWwwFormUrlDecoderEntry name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Foundation.IMemoryBuffer python_type closeable
     py _IMemoryBuffer
@@ -318,7 +338,7 @@ interface Windows.Foundation.IMemoryBuffer python_type closeable
     signature {fbc4dd2a-245b-11e4-af98-689423260cf8}
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_reference
         method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
             out interface type=Windows.Foundation.IMemoryBufferReference return
@@ -341,7 +361,7 @@ interface Windows.Foundation.IMemoryBufferReference python_type closeable buffer
         remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IMemoryBufferReference shape=26 reverse=82
             in event_token name=cookie
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 interface Windows.Foundation.IPropertyValue python_type
     py _IPropertyValue
@@ -473,7 +493,7 @@ interface Windows.Foundation.IReference parameterized python_type
     guid 61c17706-2d65-11e0-9ae8-d48564015472
     requires Windows.Foundation.IPropertyValue
     property value
-        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference shape=4 reverse=22
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference shape=4 reverse=22 role=value
             out object return
     property is_numeric_scalar
         get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
@@ -723,7 +743,7 @@ interface Windows.Foundation.IStringable python_type stringable
     guid 96369f54-8eb6-48f0-abce-c1b211e627c3
     signature {96369f54-8eb6-48f0-abce-c1b211e627c3}
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
 
 interface Windows.Foundation.IUriEscapeStatics
@@ -738,10 +758,33 @@ interface Windows.Foundation.IUriRuntimeClassFactory
 interface Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri
     guid 758d9661-221c-480f-a339-50656673f46f
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IWwwFormUrlDecoderEntry]
     guid b1f00d3b-1f06-5117-93ea-2a0d79116701
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{125e7431-f678-4e8e-b670-20a9b06c512d})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.IWwwFormUrlDecoderEntry>
     argument Windows.Foundation.IWwwFormUrlDecoderEntry
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUrlDecoderEntry> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Foundation.IWwwFormUrlDecoderEntry return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Foundation.IWwwFormUrlDecoderEntry name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=117 reverse=66
+            in interface type=Windows.Foundation.IWwwFormUrlDecoderEntry name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Foundation.IWwwFormUrlDecoderEntry python_type
     py _IWwwFormUrlDecoderEntry
@@ -772,7 +815,7 @@ class Windows.Foundation.MemoryBuffer python_type closeable
             in uint32 name=capacity
             out class type=Windows.Foundation.MemoryBuffer return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_reference
         method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
             out interface type=Windows.Foundation.IMemoryBufferReference return
@@ -972,10 +1015,16 @@ struct Windows.Foundation.TimeSpan python_type
     field duration Duration int64
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Foundation.IMemoryBufferReference,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[IMemoryBufferReference, Object]
     guid f4637d4a-0760-5431-bfc0-24eb1d4f6c4f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{fbc4dd29-245b-11e4-af98-689423260cf8};cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Foundation.IMemoryBufferReference
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Foundation.IMemoryBufferReference name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler parameterized python_type
     py TypedEventHandler
@@ -1066,7 +1115,7 @@ class Windows.Foundation.Uri python_type stringable
             in string name=toEscape
             out string return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method unescape_component static
         method UnescapeComponent slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.IUriEscapeStatics shape=51 reverse=24 static
@@ -1087,13 +1136,13 @@ class Windows.Foundation.WwwFormUrlDecoder python_type iterable sequence
             in string name=query
             out class type=Windows.Foundation.WwwFormUrlDecoder return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=43 role=size
             out uint32 return
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUrlDecoderEntry> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out interface type=Windows.Foundation.IWwwFormUrlDecoderEntry return
     method get_first_value_by_name
@@ -1125,3 +1174,15 @@ class Windows.Foundation.WwwFormUrlDecoderEntry python_type
 
 class System.Object external
     py winrt.system.Object
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

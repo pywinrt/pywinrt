@@ -2,10 +2,143 @@ format 4.0
 generator 0.0.0
 namespace Windows.Storage.Streams
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UInt32]
     guid 9343b6e7-e3d2-5e4a-ab2d-2bce4919a6a4
     signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};u4)
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageStreamTransaction> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StorageStreamTransaction]
+    guid d11739e6-2995-5d33-bfff-51b6041f68c1
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Storage.StorageStreamTransaction;{f67cf363-a53d-4d94-ae2c-67232d93acdd}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.StorageStreamTransaction
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IInputStream> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IInputStream]
+    guid d0bd0125-9049-57a3-bd66-e2525d98c814
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{905a0fe2-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IInputStream
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStream> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IRandomAccessStream]
+    guid 398c4183-793d-5b00-819b-4aef92485e94
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IRandomAccessStream
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IRandomAccessStreamWithContentType]
+    guid 3dddecf4-1d39-58e8-83b1-dbed541c7f35
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{cc254827-4b3d-438f-9232-10c76bc7e038})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IRandomAccessStreamWithContentType
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<System.UInt32,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[UInt32, UInt32]
+    guid ea0fe405-d432-5ac7-9ef8-5a65e1f97d7e
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};u4;u4)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument System.UInt32
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> name=asyncInfo
+            in uint32 name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<System.UInt64,System.UInt64> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[UInt64, UInt64]
+    guid ffb2b65d-4120-5d13-826d-107851e6bb1c
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};u8;u8)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument System.UInt64
+    argument System.UInt64
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=50 reverse=3
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> name=asyncInfo
+            in uint64 name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[IBuffer, UInt32]
+    guid bf666554-7605-5d9a-b14e-18d8c8472afe
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Storage.Streams.IBuffer
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> name=asyncInfo
+            in uint32 name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[UInt32, UInt32]
+    guid 1e466dc5-840f-54f9-b877-5e3a9f4b6c74
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};u4;u4)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument System.UInt32
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt64,System.UInt64> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[UInt64, UInt64]
+    guid d2024e41-5500-5b5a-ba46-cb7009596a2f
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};u8;u8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument System.UInt64
+    argument System.UInt64
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[IBuffer, UInt32]
+    guid 06386a7a-e009-5b0b-ab68-a8e48b516647
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Storage.Streams.IBuffer
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
 class Windows.Storage.Streams.Buffer python_type buffer buffer_length
     py Buffer
@@ -70,7 +203,7 @@ class Windows.Storage.Streams.DataReader python_type closeable
         get get_UnconsumedBufferLength slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=22
             out uint32 return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method detach_buffer
         method DetachBuffer slot=30 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=270
             out interface type=Windows.Storage.Streams.IBuffer return
@@ -149,10 +282,10 @@ class Windows.Storage.Streams.DataReaderLoadOperation python_type awaitable
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     property completed
-        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=43
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=43 role=completed
             out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> return
         put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=22
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
@@ -161,7 +294,7 @@ class Windows.Storage.Streams.DataReaderLoadOperation python_type awaitable
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
-        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=62
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=62 role=get_results
             out uint32 return
 
 class Windows.Storage.Streams.DataWriter activatable python_type closeable
@@ -192,7 +325,7 @@ class Windows.Storage.Streams.DataWriter activatable python_type closeable
         get get_UnstoredBufferLength slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=22
             out uint32 return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method detach_buffer
         method DetachBuffer slot=31 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriter shape=4 reverse=273
             out interface type=Windows.Storage.Streams.IBuffer return
@@ -276,10 +409,10 @@ class Windows.Storage.Streams.DataWriterStoreOperation python_type awaitable
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     property completed
-        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=43
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=43 role=completed
             out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> return
         put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=22
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
@@ -288,7 +421,7 @@ class Windows.Storage.Streams.DataWriterStoreOperation python_type awaitable
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
-        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=62
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=62 role=get_results
             out uint32 return
 
 class Windows.Storage.Streams.FileInputStream python_type closeable
@@ -298,7 +431,7 @@ class Windows.Storage.Streams.FileInputStream python_type closeable
     requires Windows.Storage.Streams.IInputStream
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
@@ -317,7 +450,7 @@ class Windows.Storage.Streams.FileOutputStream python_type closeable
     requires Windows.Storage.Streams.IOutputStream
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method flush_async
         method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -353,7 +486,7 @@ class Windows.Storage.Streams.FileRandomAccessStream python_type closeable
         method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method flush_async
         method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -423,53 +556,284 @@ class Windows.Storage.Streams.FileRandomAccessStream python_type closeable
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete
+interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UInt32]
     guid ef60385f-be78-584b-aaef-7829ada2b0de
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u4)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.UInt32
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=62 role=get_results
+            out uint32 return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StorageStreamTransaction]
     guid 0d81405a-9bd3-5e87-82f4-9b4128a887eb
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageStreamTransaction;{f67cf363-a53d-4d94-ae2c-67232d93acdd}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.StorageStreamTransaction
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageStreamTransaction> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageStreamTransaction> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> shape=4 reverse=62 role=get_results
+            out class type=Windows.Storage.StorageStreamTransaction return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IInputStream]
     guid a8fe0732-556d-5841-b7ee-b3450fb52666
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe2-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IInputStream
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IInputStream> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IInputStream> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IInputStream return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IRandomAccessStream]
     guid 430ecece-1418-5d19-81b2-5ddb381603cc
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IRandomAccessStream
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStream> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStream> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IRandomAccessStreamWithContentType]
     guid c4a57c5e-32b0-55b3-ad13-ce1c23041ed6
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{cc254827-4b3d-438f-9232-10c76bc7e038})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IRandomAccessStreamWithContentType
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamWithContentType> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[UInt32, UInt32]
     guid eccb574a-c684-5572-a679-6b0842cfb57f
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};u4;u4)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument System.UInt32
     argument System.UInt32
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.UInt32,System.UInt32> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.UInt32,System.UInt32> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> shape=4 reverse=121 role=get_results
+            out uint32 return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[UInt64, UInt64]
     guid 8f1db6e3-6556-5516-825c-1021ee27cd0c
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};u8;u8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument System.UInt64
     argument System.UInt64
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.UInt64,System.UInt64> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.UInt64,System.UInt64> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt64,System.UInt64> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt64,System.UInt64> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> shape=4 reverse=121 role=get_results
+            out uint64 return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[IBuffer, UInt32]
     guid d26b2819-897f-5c7d-84d6-56d796561431
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};{905a0fe0-bc53-11df-8c49-001e4fc686da};u4)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IBuffer
     argument System.UInt32
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,System.UInt32> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,System.UInt32> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt32> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> shape=4 reverse=121 role=get_results
+            out interface type=Windows.Storage.Streams.IBuffer return
 
 interface Windows.Storage.Streams.IBuffer python_type buffer buffer_length
     py _IBuffer
@@ -686,7 +1050,7 @@ interface Windows.Storage.Streams.IInputStream python_type closeable
     signature {905a0fe2-bc53-11df-8c49-001e4fc686da}
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
@@ -708,7 +1072,7 @@ interface Windows.Storage.Streams.IOutputStream python_type closeable
     signature {905a0fe6-bc53-11df-8c49-001e4fc686da}
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method flush_async
         method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -755,7 +1119,7 @@ interface Windows.Storage.Streams.IRandomAccessStream python_type closeable
         method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method flush_async
         method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -825,7 +1189,7 @@ interface Windows.Storage.Streams.IRandomAccessStreamWithContentType python_type
         method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method flush_async
         method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -880,7 +1244,7 @@ class Windows.Storage.Streams.InMemoryRandomAccessStream activatable python_type
         method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method flush_async
         method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -917,7 +1281,7 @@ class Windows.Storage.Streams.InputStreamOverStream python_type closeable
     requires Windows.Storage.Streams.IInputStream
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
@@ -932,7 +1296,7 @@ class Windows.Storage.Streams.OutputStreamOverStream python_type closeable
     requires Windows.Storage.Streams.IOutputStream
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method flush_async
         method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -986,7 +1350,7 @@ class Windows.Storage.Streams.RandomAccessStreamOverStream python_type closeable
         method CloneStream slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStream shape=4 reverse=162
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method flush_async
         method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -1047,12 +1411,32 @@ class System.UInt32 external
 class System.UInt64 external
     py winrt.system.UInt64
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo
     guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable

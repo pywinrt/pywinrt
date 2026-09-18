@@ -49,7 +49,7 @@ class Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource composable python_type c
         remove remove_TakeFocusRequested slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=26 reverse=181
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method initialize
         method Initialize slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=38
             in struct type=Microsoft.UI.WindowId name=parentWindowId
@@ -164,22 +164,40 @@ interface Microsoft.UI.Xaml.Hosting.IXamlSourceFocusNavigationResultFactory
     guid f533f53b-5c00-5c88-9a41-3888cb86e495
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource,Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[DesktopWindowXamlSource, DesktopWindowXamlSourceGotFocusEventArgs]
     guid 819741f0-1d2d-5731-9489-6bac155a9ef9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource;{553af92c-1381-51d6-bee0-f34beb042ea8});rc(Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs;{cc63d863-2071-5f6b-aef9-c0ba35f3b8df}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource
     argument Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource name=sender
+            in class type=Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource,Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[DesktopWindowXamlSource, DesktopWindowXamlSourceTakeFocusRequestedEventArgs]
     guid a16513ab-cc2e-57a0-9b6a-0ce9f4837285
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource;{553af92c-1381-51d6-bee0-f34beb042ea8});rc(Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs;{4f5a0e2c-4ddc-5c03-939f-6f3bda560363}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource
     argument Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource name=sender
+            in class type=Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Hosting.WindowsXamlManager,Microsoft.UI.Xaml.Hosting.XamlShutdownCompletedOnThreadEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WindowsXamlManager, XamlShutdownCompletedOnThreadEventArgs]
     guid 1056f3f8-d8b3-58ea-b256-490450626c55
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Hosting.WindowsXamlManager;{85a2e562-7e8f-5333-a104-a3e672a2ffee});rc(Microsoft.UI.Xaml.Hosting.XamlShutdownCompletedOnThreadEventArgs;{accd20e5-3576-5262-a3dd-990657681f1f}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Hosting.WindowsXamlManager
     argument Microsoft.UI.Xaml.Hosting.XamlShutdownCompletedOnThreadEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Hosting.WindowsXamlManager name=sender
+            in class type=Microsoft.UI.Xaml.Hosting.XamlShutdownCompletedOnThreadEventArgs name=args
 
 class Microsoft.UI.Xaml.Hosting.WindowsXamlManager python_type closeable
     py WindowsXamlManager
@@ -197,7 +215,7 @@ class Microsoft.UI.Xaml.Hosting.WindowsXamlManager python_type closeable
         remove remove_XamlShutdownCompletedOnThread slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Hosting.IWindowsXamlManager2 shape=26 reverse=53
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_for_current_thread static
         method GetForCurrentThread slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Hosting.IWindowsXamlManagerStatics2 shape=4 reverse=22 static
             out class type=Microsoft.UI.Xaml.Hosting.WindowsXamlManager return
@@ -295,3 +313,7 @@ interface Windows.Foundation.IClosable external
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f

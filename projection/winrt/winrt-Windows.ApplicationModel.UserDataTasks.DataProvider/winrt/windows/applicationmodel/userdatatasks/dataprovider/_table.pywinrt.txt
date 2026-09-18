@@ -39,34 +39,64 @@ interface Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListS
     guid 8ead1c12-768e-43bd-8385-5cdc351ffdea
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[UserDataTaskDataProviderConnection, UserDataTaskListCompleteTaskRequestEventArgs]
     guid 6035f9f7-d4c5-5394-b0e3-5d606987ba47
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection;{9ff39d1d-a447-428b-afe9-e5402bdeb041});rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs;{d77c393d-4cf2-48ad-87fd-963f0eaa7a95}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection
     argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[UserDataTaskDataProviderConnection, UserDataTaskListCreateOrUpdateTaskRequestEventArgs]
     guid 28adf45c-6807-5590-a7f1-934747937592
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection;{9ff39d1d-a447-428b-afe9-e5402bdeb041});rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs;{12c55a52-e378-419b-ae38-a5e9e604476e}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection
     argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[UserDataTaskDataProviderConnection, UserDataTaskListDeleteTaskRequestEventArgs]
     guid 0b18e688-b269-5ca2-a8f3-d6d10f0fb320
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection;{9ff39d1d-a447-428b-afe9-e5402bdeb041});rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs;{6063dad9-f562-4145-8efe-d50078c92b7f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection
     argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[UserDataTaskDataProviderConnection, UserDataTaskListSkipOccurrenceRequestEventArgs]
     guid 0887b178-c546-5ac8-ae10-3292ab5265bc
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection;{9ff39d1d-a447-428b-afe9-e5402bdeb041});rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs;{7a3b924a-cc2f-4e7b-aacd-a5b9d29cfa4e}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection
     argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[UserDataTaskDataProviderConnection, UserDataTaskListSyncManagerSyncRequestEventArgs]
     guid b164e8ef-167c-5852-a792-0930b4001871
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection;{9ff39d1d-a447-428b-afe9-e5402bdeb041});rc(Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs;{8ead1c12-768e-43bd-8385-5cdc351ffdea}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection
     argument Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection name=sender
+            in class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs name=args
 
 class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection python_type
     py UserDataTaskDataProviderConnection
@@ -273,3 +303,7 @@ class Windows.Foundation.Deferral external
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f

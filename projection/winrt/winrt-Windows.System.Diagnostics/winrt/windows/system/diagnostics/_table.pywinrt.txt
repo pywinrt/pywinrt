@@ -2,6 +2,30 @@ format 4.0
 generator 0.0.0
 namespace Windows.System.Diagnostics
 
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[DiagnosticActionResult, DiagnosticActionState]
+    guid a0422898-b50a-52e3-b461-53989308be12
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.System.Diagnostics.DiagnosticActionResult;{c265a296-e73b-4097-b28f-3442f03dd831});enum(Windows.System.Diagnostics.DiagnosticActionState;i4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.System.Diagnostics.DiagnosticActionResult
+    argument Windows.System.Diagnostics.DiagnosticActionState
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> name=asyncInfo
+            in enum32 type=Windows.System.Diagnostics.DiagnosticActionState name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[DiagnosticActionResult, DiagnosticActionState]
+    guid 390b0091-caf7-5b64-839d-4990ae7f753c
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.System.Diagnostics.DiagnosticActionResult;{c265a296-e73b-4097-b28f-3442f03dd831});enum(Windows.System.Diagnostics.DiagnosticActionState;i4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.System.Diagnostics.DiagnosticActionResult
+    argument Windows.System.Diagnostics.DiagnosticActionState
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.System.Diagnostics.DiagnosticActionResult python_type
     py DiagnosticActionResult
     signature rc(Windows.System.Diagnostics.DiagnosticActionResult;{c265a296-e73b-4097-b28f-3442f03dd831})
@@ -44,11 +68,40 @@ class Windows.System.Diagnostics.DiagnosticInvoker python_type
             in string name=context
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[DiagnosticActionResult, DiagnosticActionState]
     guid bb5d493e-74e9-57a1-8c4c-923e0dc4565b
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.System.Diagnostics.DiagnosticActionResult;{c265a296-e73b-4097-b28f-3442f03dd831});enum(Windows.System.Diagnostics.DiagnosticActionState;i4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.System.Diagnostics.DiagnosticActionResult
     argument Windows.System.Diagnostics.DiagnosticActionState
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> shape=4 reverse=121 role=get_results
+            out class type=Windows.System.Diagnostics.DiagnosticActionResult return
 
 interface Windows.System.Diagnostics.IDiagnosticActionResult
     guid c265a296-e73b-4097-b28f-3442f03dd831
@@ -61,6 +114,66 @@ interface Windows.System.Diagnostics.IDiagnosticInvoker2
 
 interface Windows.System.Diagnostics.IDiagnosticInvokerStatics
     guid 5cfad8de-f15c-4554-a813-c113c3881b09
+
+interface Windows.Foundation.Collections.IIterable<Windows.System.AppDiagnosticInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AppDiagnosticInfo]
+    guid 8118de8f-3ae3-55e1-80a8-25453cdba894
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.System.AppDiagnosticInfo;{e348a69a-8889-4ca3-be07-d5ffff5f0804}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.System.AppDiagnosticInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.AppDiagnosticInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.System.Diagnostics.ProcessDiagnosticInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ProcessDiagnosticInfo]
+    guid 97b73627-b296-5076-b8cd-6bd8a240e966
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.System.Diagnostics.ProcessDiagnosticInfo;{e830b04b-300e-4ee6-a0ab-5b5f5231b434}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.System.Diagnostics.ProcessDiagnosticInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.ProcessDiagnosticInfo> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AppDiagnosticInfo]
+    guid 183f1e4a-2224-5fe4-b064-68869c53e361
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.System.AppDiagnosticInfo;{e348a69a-8889-4ca3-be07-d5ffff5f0804}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.System.AppDiagnosticInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo> shape=4 reverse=22 role=current
+            out class type=Windows.System.AppDiagnosticInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo> shape=117 reverse=101
+            fill_array class type=Windows.System.AppDiagnosticInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.ProcessDiagnosticInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ProcessDiagnosticInfo]
+    guid a89b4418-4c3b-5f49-b957-785697c99abf
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.System.Diagnostics.ProcessDiagnosticInfo;{e830b04b-300e-4ee6-a0ab-5b5f5231b434}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.System.Diagnostics.ProcessDiagnosticInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=22 role=current
+            out class type=Windows.System.Diagnostics.ProcessDiagnosticInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=117 reverse=101
+            fill_array class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.System.Diagnostics.IProcessCpuUsage
     guid 0bbb2472-c8bf-423a-a810-b559ae4354e2
@@ -113,15 +226,113 @@ interface Windows.System.Diagnostics.ISystemMemoryUsage
 interface Windows.System.Diagnostics.ISystemMemoryUsageReport
     guid 38663c87-2a9f-403a-bd19-2cf3e8169500
 
-interface Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> concrete
+interface Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[AppDiagnosticInfo]
     guid 9cffa2c3-7eeb-599c-b94d-c794b11f807f
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.System.AppDiagnosticInfo;{e348a69a-8889-4ca3-be07-d5ffff5f0804}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.System.AppDiagnosticInfo>
     argument Windows.System.AppDiagnosticInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=4 reverse=173
+            in class type=Windows.System.AppDiagnosticInfo name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.AppDiagnosticInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.System.AppDiagnosticInfo return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.System.AppDiagnosticInfo name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=117 reverse=101
+            in class type=Windows.System.AppDiagnosticInfo name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.System.AppDiagnosticInfo name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=51 reverse=211
+            pass_array class type=Windows.System.AppDiagnosticInfo name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.System.AppDiagnosticInfo name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AppDiagnosticInfo]
+    guid b0c2c7a4-78ba-50fd-84fe-00e02a6c1d42
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.AppDiagnosticInfo;{e348a69a-8889-4ca3-be07-d5ffff5f0804}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.System.AppDiagnosticInfo>
+    argument Windows.System.AppDiagnosticInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.AppDiagnosticInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.System.AppDiagnosticInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.System.AppDiagnosticInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> shape=117 reverse=66
+            in class type=Windows.System.AppDiagnosticInfo name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ProcessDiagnosticInfo]
     guid 74ab2473-9624-5a06-9025-6d91e622bf8e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.Diagnostics.ProcessDiagnosticInfo;{e830b04b-300e-4ee6-a0ab-5b5f5231b434}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.System.Diagnostics.ProcessDiagnosticInfo>
     argument Windows.System.Diagnostics.ProcessDiagnosticInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.ProcessDiagnosticInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.System.Diagnostics.ProcessDiagnosticInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=117 reverse=66
+            in class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.System.Diagnostics.ProcessCpuUsage python_type
     py ProcessCpuUsage
@@ -348,6 +559,41 @@ class Windows.System.Diagnostics.SystemMemoryUsageReport python_type
 
 class Windows.Data.Json.JsonObject external
     py winrt.windows.data.json.JsonObject
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Foundation.Collections.ValueSet external
     py winrt.windows.foundation.collections.ValueSet

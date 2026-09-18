@@ -2,113 +2,1046 @@ format 4.0
 generator 0.0.0
 namespace Windows.Services.Store
 
-interface Windows.Foundation.IAsyncOperation<System.String> concrete
-    guid 3e1fe603-f897-5263-b328-0806426b8a79
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.String> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[String]
+    guid b79a741f-7fb5-50ae-9e99-911201ec3d41
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};string)
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.String> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
-    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>> concrete
-    guid 0ac66c33-45b8-546b-aaaf-d58d62a4c5c5
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Store.StorePackageUpdate;{140fa150-3cbf-4a35-b91f-48271c31b072})))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[StorePackageUpdate]]
+    guid f8491bcd-2db5-58e0-8c47-44e6eb10c12d
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Store.StorePackageUpdate;{140fa150-3cbf-4a35-b91f-48271c31b072})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> concrete
-    guid 1346377d-4d6f-5999-9a6e-9c8fbf6f38a2
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Store.StoreQueueItem;{56d5c32b-f830-4293-9188-cad2dcde7357})))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[StoreQueueItem]]
+    guid 776b0864-b93d-5669-a75d-70a29325e919
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Store.StoreQueueItem;{56d5c32b-f830-4293-9188-cad2dcde7357})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAcquireLicenseResult> concrete
-    guid dd6c4705-a76c-528e-99a5-cdd13197d4cf
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreAcquireLicenseResult;{fbd7946d-f040-4cb3-9a39-29bcecdbe22d}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreAcquireLicenseResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StoreAcquireLicenseResult]
+    guid 6987c97c-2c19-5f44-b5ac-37393f3c1a4a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Store.StoreAcquireLicenseResult;{fbd7946d-f040-4cb3-9a39-29bcecdbe22d}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Services.Store.StoreAcquireLicenseResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAcquireLicenseResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAppLicense> concrete
-    guid 3866370b-afc6-5d01-84c2-4574628de539
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreAppLicense;{f389f9de-73c0-45ce-9bab-b2fe3e5eafd3}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreAppLicense> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StoreAppLicense]
+    guid ceff1e09-e506-50ad-a908-52038c256552
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Store.StoreAppLicense;{f389f9de-73c0-45ce-9bab-b2fe3e5eafd3}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Services.Store.StoreAppLicense
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAppLicense> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreCanAcquireLicenseResult> concrete
-    guid 71ae9f6e-0d10-5bdb-b441-9312e3d2efc2
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreCanAcquireLicenseResult;{3a693db3-0088-482f-86d5-bd46522663ad}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreCanAcquireLicenseResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StoreCanAcquireLicenseResult]
+    guid 572a21d0-7150-50ba-a558-d91dffec1a24
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Store.StoreCanAcquireLicenseResult;{3a693db3-0088-482f-86d5-bd46522663ad}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Services.Store.StoreCanAcquireLicenseResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreCanAcquireLicenseResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreConsumableResult> concrete
-    guid 873c497b-c3f7-5657-b921-3e58ce48ee50
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreConsumableResult;{ea5dab72-6a00-4052-be5b-bfdab4433352}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreConsumableResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StoreConsumableResult]
+    guid 3f2bb178-3c4e-56ed-86a5-ad13797cfbfd
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Store.StoreConsumableResult;{ea5dab72-6a00-4052-be5b-bfdab4433352}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Services.Store.StoreConsumableResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreConsumableResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductPagedQueryResult> concrete
-    guid 3079e7db-1ba4-5b9e-856a-6576bf7f9c8a
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreProductPagedQueryResult;{c92718c5-4dd5-4869-a462-ecc6872e43c5}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreProductPagedQueryResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StoreProductPagedQueryResult]
+    guid e786321f-b791-5e38-8bc4-98cb287d1085
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Store.StoreProductPagedQueryResult;{c92718c5-4dd5-4869-a462-ecc6872e43c5}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Services.Store.StoreProductPagedQueryResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductPagedQueryResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductQueryResult> concrete
-    guid 9699e7bb-ea1f-5e03-9439-c80e6977b711
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreProductQueryResult;{d805e6c5-d456-4ff6-8049-9076d5165f73}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreProductQueryResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StoreProductQueryResult]
+    guid 02f4a42c-0458-58d6-923c-b44ba8ef2222
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Store.StoreProductQueryResult;{d805e6c5-d456-4ff6-8049-9076d5165f73}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Services.Store.StoreProductQueryResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductQueryResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductResult> concrete
-    guid 9e61e86b-6afb-50ae-afc1-c59f545108dd
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreProductResult;{b7674f73-3c87-4ee1-8201-f428359bd3af}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreProductResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StoreProductResult]
+    guid eb93e936-d515-5414-9d15-f050c0b8f521
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Store.StoreProductResult;{b7674f73-3c87-4ee1-8201-f428359bd3af}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Services.Store.StoreProductResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> concrete
-    guid 33d8cc30-78f5-5f81-aa2d-a4fa2a3b1c68
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StorePurchaseResult;{add28552-f96a-463d-a7bb-c20b4fca6952}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StorePurchaseResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StorePurchaseResult]
+    guid 1d9f89ee-2fce-54e6-a0a9-52d00c52cc3a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Store.StorePurchaseResult;{add28552-f96a-463d-a7bb-c20b4fca6952}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Services.Store.StorePurchaseResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreRateAndReviewResult> concrete
-    guid 844673ec-3402-5a20-becf-e92c3f9681ea
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreRateAndReviewResult;{9d209d56-a6b5-4121-9b61-ee6d0fbdbdbb}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreRateAndReviewResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StoreRateAndReviewResult]
+    guid ee12d599-9dbd-5e46-a46f-0223b8492761
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Store.StoreRateAndReviewResult;{9d209d56-a6b5-4121-9b61-ee6d0fbdbdbb}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Services.Store.StoreRateAndReviewResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreRateAndReviewResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreSendRequestResult> concrete
-    guid 2acdffe8-259c-5eae-93c1-13a23c74dfee
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreSendRequestResult;{c73abe60-8272-4502-8a69-6e75153a4299}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreSendRequestResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StoreSendRequestResult]
+    guid 7800b2a3-bbbc-5a11-8c35-d2bde5489e81
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Store.StoreSendRequestResult;{c73abe60-8272-4502-8a69-6e75153a4299}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Services.Store.StoreSendRequestResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreSendRequestResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreUninstallStorePackageResult> concrete
-    guid 55aa82fd-ce55-550a-95ec-0554b1915208
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreUninstallStorePackageResult;{9fca39fd-126f-4cda-b801-1346b8d0a260}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreUninstallStorePackageResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StoreUninstallStorePackageResult]
+    guid c4de9fb6-1fd9-5229-8818-ba65751db046
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Store.StoreUninstallStorePackageResult;{9fca39fd-126f-4cda-b801-1346b8d0a260}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Services.Store.StoreUninstallStorePackageResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreUninstallStorePackageResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> concrete
-    guid 42c436ca-51f7-50b2-8fe4-7b754062e6eb
-    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Services.Store.StorePackageUpdateResult;{e79142ed-61f9-4893-b4fe-cf191603af7b});struct(Windows.Services.Store.StorePackageUpdateStatus;string;u8;u8;f8;f8;enum(Windows.Services.Store.StorePackageUpdateState;i4)))
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[StorePackageUpdateResult, StorePackageUpdateStatus]
+    guid 961260f1-7352-5edf-9666-1f9a0a8ee477
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.Services.Store.StorePackageUpdateResult;{e79142ed-61f9-4893-b4fe-cf191603af7b});struct(Windows.Services.Store.StorePackageUpdateStatus;string;u8;u8;f8;f8;enum(Windows.Services.Store.StorePackageUpdateState;i4)))
+    base Windows.Foundation.AsyncOperationProgressHandler
     argument Windows.Services.Store.StorePackageUpdateResult
     argument Windows.Services.Store.StorePackageUpdateStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=66 reverse=10
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> name=asyncInfo
+            in struct type=Windows.Services.Store.StorePackageUpdateStatus name=progressInfo
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[StorePackageUpdateResult, StorePackageUpdateStatus]
+    guid b3be0c8b-ef1d-56dc-8547-4da06ea563df
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.Services.Store.StorePackageUpdateResult;{e79142ed-61f9-4893-b4fe-cf191603af7b});struct(Windows.Services.Store.StorePackageUpdateStatus;string;u8;u8;f8;f8;enum(Windows.Services.Store.StorePackageUpdateState;i4)))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Services.Store.StorePackageUpdateResult
+    argument Windows.Services.Store.StorePackageUpdateStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[String]
+    guid 3e1fe603-f897-5263-b328-0806426b8a79
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument System.String
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=62 role=get_results
+            out string return
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[StorePackageUpdate]]
+    guid 0ac66c33-45b8-546b-aaaf-d58d62a4c5c5
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Store.StorePackageUpdate;{140fa150-3cbf-4a35-b91f-48271c31b072})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate> return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[StoreQueueItem]]
+    guid 1346377d-4d6f-5999-9a6e-9c8fbf6f38a2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Store.StoreQueueItem;{56d5c32b-f830-4293-9188-cad2dcde7357})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem> return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAcquireLicenseResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StoreAcquireLicenseResult]
+    guid dd6c4705-a76c-528e-99a5-cdd13197d4cf
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreAcquireLicenseResult;{fbd7946d-f040-4cb3-9a39-29bcecdbe22d}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Services.Store.StoreAcquireLicenseResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAcquireLicenseResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreAcquireLicenseResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAcquireLicenseResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreAcquireLicenseResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAcquireLicenseResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Store.StoreAcquireLicenseResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAppLicense> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StoreAppLicense]
+    guid 3866370b-afc6-5d01-84c2-4574628de539
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreAppLicense;{f389f9de-73c0-45ce-9bab-b2fe3e5eafd3}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Services.Store.StoreAppLicense
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAppLicense> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreAppLicense> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAppLicense> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreAppLicense> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAppLicense> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Store.StoreAppLicense return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreCanAcquireLicenseResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StoreCanAcquireLicenseResult]
+    guid 71ae9f6e-0d10-5bdb-b441-9312e3d2efc2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreCanAcquireLicenseResult;{3a693db3-0088-482f-86d5-bd46522663ad}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Services.Store.StoreCanAcquireLicenseResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreCanAcquireLicenseResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreCanAcquireLicenseResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreCanAcquireLicenseResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreCanAcquireLicenseResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreCanAcquireLicenseResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Store.StoreCanAcquireLicenseResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreConsumableResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StoreConsumableResult]
+    guid 873c497b-c3f7-5657-b921-3e58ce48ee50
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreConsumableResult;{ea5dab72-6a00-4052-be5b-bfdab4433352}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Services.Store.StoreConsumableResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreConsumableResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreConsumableResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreConsumableResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreConsumableResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreConsumableResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Store.StoreConsumableResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductPagedQueryResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StoreProductPagedQueryResult]
+    guid 3079e7db-1ba4-5b9e-856a-6576bf7f9c8a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreProductPagedQueryResult;{c92718c5-4dd5-4869-a462-ecc6872e43c5}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Services.Store.StoreProductPagedQueryResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductPagedQueryResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreProductPagedQueryResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductPagedQueryResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreProductPagedQueryResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductPagedQueryResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Store.StoreProductPagedQueryResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductQueryResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StoreProductQueryResult]
+    guid 9699e7bb-ea1f-5e03-9439-c80e6977b711
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreProductQueryResult;{d805e6c5-d456-4ff6-8049-9076d5165f73}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Services.Store.StoreProductQueryResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductQueryResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreProductQueryResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductQueryResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreProductQueryResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductQueryResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Store.StoreProductQueryResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StoreProductResult]
+    guid 9e61e86b-6afb-50ae-afc1-c59f545108dd
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreProductResult;{b7674f73-3c87-4ee1-8201-f428359bd3af}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Services.Store.StoreProductResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreProductResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreProductResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Store.StoreProductResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StorePurchaseResult]
+    guid 33d8cc30-78f5-5f81-aa2d-a4fa2a3b1c68
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StorePurchaseResult;{add28552-f96a-463d-a7bb-c20b4fca6952}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Services.Store.StorePurchaseResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StorePurchaseResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StorePurchaseResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Store.StorePurchaseResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreRateAndReviewResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StoreRateAndReviewResult]
+    guid 844673ec-3402-5a20-becf-e92c3f9681ea
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreRateAndReviewResult;{9d209d56-a6b5-4121-9b61-ee6d0fbdbdbb}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Services.Store.StoreRateAndReviewResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreRateAndReviewResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreRateAndReviewResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreRateAndReviewResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreRateAndReviewResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreRateAndReviewResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Store.StoreRateAndReviewResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreSendRequestResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StoreSendRequestResult]
+    guid 2acdffe8-259c-5eae-93c1-13a23c74dfee
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreSendRequestResult;{c73abe60-8272-4502-8a69-6e75153a4299}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Services.Store.StoreSendRequestResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreSendRequestResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreSendRequestResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreSendRequestResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreSendRequestResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreSendRequestResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Store.StoreSendRequestResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreUninstallStorePackageResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StoreUninstallStorePackageResult]
+    guid 55aa82fd-ce55-550a-95ec-0554b1915208
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Store.StoreUninstallStorePackageResult;{9fca39fd-126f-4cda-b801-1346b8d0a260}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Services.Store.StoreUninstallStorePackageResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreUninstallStorePackageResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreUninstallStorePackageResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreUninstallStorePackageResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreUninstallStorePackageResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreUninstallStorePackageResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Store.StoreUninstallStorePackageResult return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[StorePackageUpdateResult, StorePackageUpdateStatus]
+    guid 42c436ca-51f7-50b2-8fe4-7b754062e6eb
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Services.Store.StorePackageUpdateResult;{e79142ed-61f9-4893-b4fe-cf191603af7b});struct(Windows.Services.Store.StorePackageUpdateStatus;string;u8;u8;f8;f8;enum(Windows.Services.Store.StorePackageUpdateState;i4)))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Services.Store.StorePackageUpdateResult
+    argument Windows.Services.Store.StorePackageUpdateStatus
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> shape=4 reverse=121 role=get_results
+            out class type=Windows.Services.Store.StorePackageUpdateResult return
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdate> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, StoreLicense]]
+    guid ca8ba445-6f4d-5da9-95ee-42cf118def63
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Services.Store.StoreLicense;{26dc9579-4c4f-4f30-bc89-649f60e36055})))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, StoreProduct]]
+    guid 78a33722-abfb-57c0-853f-5616a3ab8d57
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Services.Store.StoreProduct;{320e2c52-d760-450a-a42b-67d1e901ac90})))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreAvailability> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StoreAvailability]
+    guid c58de1a0-25de-578b-bb69-e0a26d67b203
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.Store.StoreAvailability;{fa060325-0ffd-4493-ad43-f1f9918f69fa}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.Store.StoreAvailability
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreAvailability> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreAvailability> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreImage> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StoreImage]
+    guid b2da6de8-ad55-56ce-8754-2c96f4fe1c2e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.Store.StoreImage;{081fd248-adb4-4b64-a993-784789926ed5}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.Store.StoreImage
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreImage> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreImage> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdate> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StorePackageUpdate]
     guid 6b076c51-849e-5ec5-aed5-9b0585591902
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.Store.StorePackageUpdate;{140fa150-3cbf-4a35-b91f-48271c31b072}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Services.Store.StorePackageUpdate
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdate> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdate> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreQueueItem> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdateStatus> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StorePackageUpdateStatus]
+    guid 60832223-7eb4-5cd7-8340-f5077173d364
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Services.Store.StorePackageUpdateStatus;string;u8;u8;f8;f8;enum(Windows.Services.Store.StorePackageUpdateState;i4)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.Store.StorePackageUpdateStatus
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdateStatus> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdateStatus> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreQueueItem> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StoreQueueItem]
     guid 68eb92e6-3cc6-5259-9a05-bd7f8d9fb8da
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.Store.StoreQueueItem;{56d5c32b-f830-4293-9188-cad2dcde7357}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Services.Store.StoreQueueItem
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreQueueItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreQueueItem> return
 
-interface Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreLicense> concrete
-    guid 7d0d74f5-4020-54aa-9f3d-0f17127acddf
-    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Services.Store.StoreLicense;{26dc9579-4c4f-4f30-bc89-649f60e36055}))
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreSku> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StoreSku]
+    guid 522d34ef-4b5a-5b44-a046-7a16051d011e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.Store.StoreSku;{397e6f55-4440-4f03-863c-91f3fec83d79}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.Store.StoreSku
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreSku> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreSku> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreVideo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StoreVideo]
+    guid 46be61e4-7173-565e-aed5-4a2152f1ce69
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.Store.StoreVideo;{f26cb184-6f5e-4dc2-886c-3c63083c2f94}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.Store.StoreVideo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreVideo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreVideo> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, StoreLicense]]
+    guid a1509348-6522-5062-ae86-cf595475926d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Services.Store.StoreLicense;{26dc9579-4c4f-4f30-bc89-649f60e36055})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, StoreProduct]]
+    guid 0edb142c-9d04-532b-81e9-4c84ab09b34b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Services.Store.StoreProduct;{320e2c52-d760-450a-a42b-67d1e901ac90})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreAvailability> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StoreAvailability]
+    guid 50511ccb-089e-5b73-bb4a-4d1ef77b8f0f
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.Store.StoreAvailability;{fa060325-0ffd-4493-ad43-f1f9918f69fa}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Store.StoreAvailability
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreAvailability> shape=4 reverse=22 role=current
+            out class type=Windows.Services.Store.StoreAvailability return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreAvailability> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreAvailability> shape=117 reverse=101
+            fill_array class type=Windows.Services.Store.StoreAvailability name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreAvailability> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreImage> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StoreImage]
+    guid fbe076f6-c3d2-5df7-839f-012ac0f951c5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.Store.StoreImage;{081fd248-adb4-4b64-a993-784789926ed5}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Store.StoreImage
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreImage> shape=4 reverse=22 role=current
+            out class type=Windows.Services.Store.StoreImage return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreImage> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreImage> shape=117 reverse=101
+            fill_array class type=Windows.Services.Store.StoreImage name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreImage> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdate> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StorePackageUpdate]
+    guid b75dd77b-87ca-5956-8902-84e9ffc97d83
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.Store.StorePackageUpdate;{140fa150-3cbf-4a35-b91f-48271c31b072}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Store.StorePackageUpdate
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdate> shape=4 reverse=22 role=current
+            out class type=Windows.Services.Store.StorePackageUpdate return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdate> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdate> shape=117 reverse=101
+            fill_array class type=Windows.Services.Store.StorePackageUpdate name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdate> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdateStatus> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StorePackageUpdateStatus]
+    guid 6181d84f-f731-57b8-9a6b-8a12fcd58d04
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Services.Store.StorePackageUpdateStatus;string;u8;u8;f8;f8;enum(Windows.Services.Store.StorePackageUpdateState;i4)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Store.StorePackageUpdateStatus
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdateStatus> shape=4 reverse=22 role=current
+            out struct type=Windows.Services.Store.StorePackageUpdateStatus return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdateStatus> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdateStatus> shape=117 reverse=101
+            fill_array struct type=Windows.Services.Store.StorePackageUpdateStatus name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdateStatus> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreQueueItem> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StoreQueueItem]
+    guid 907dd469-85b9-52e7-b52f-7310a44745ef
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.Store.StoreQueueItem;{56d5c32b-f830-4293-9188-cad2dcde7357}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Store.StoreQueueItem
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreQueueItem> shape=4 reverse=22 role=current
+            out class type=Windows.Services.Store.StoreQueueItem return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreQueueItem> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreQueueItem> shape=117 reverse=101
+            fill_array class type=Windows.Services.Store.StoreQueueItem name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreQueueItem> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreSku> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StoreSku]
+    guid 365cde92-7fe3-59d5-b8f8-8f05acf50947
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.Store.StoreSku;{397e6f55-4440-4f03-863c-91f3fec83d79}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Store.StoreSku
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreSku> shape=4 reverse=22 role=current
+            out class type=Windows.Services.Store.StoreSku return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreSku> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreSku> shape=117 reverse=101
+            fill_array class type=Windows.Services.Store.StoreSku name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreSku> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreVideo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StoreVideo]
+    guid 91b0b554-a537-5e22-b39f-6a935d0bef45
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.Store.StoreVideo;{f26cb184-6f5e-4dc2-886c-3c63083c2f94}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Store.StoreVideo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreVideo> shape=4 reverse=22 role=current
+            out class type=Windows.Services.Store.StoreVideo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreVideo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreVideo> shape=117 reverse=101
+            fill_array class type=Windows.Services.Store.StoreVideo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreVideo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, StoreLicense]
+    guid 33eefc64-ef0c-5c8d-b620-476edf7df799
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Services.Store.StoreLicense;{26dc9579-4c4f-4f30-bc89-649f60e36055}))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Windows.Services.Store.StoreLicense
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense> shape=4 reverse=43
+            out class type=Windows.Services.Store.StoreLicense return
 
-interface Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreProduct> concrete
-    guid dbaac6e5-61a4-5c88-b5d8-3a3e161c3e4a
-    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Services.Store.StoreProduct;{320e2c52-d760-450a-a42b-67d1e901ac90}))
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, StoreProduct]
+    guid 0e89a311-437a-5957-9593-8ed64511545b
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Services.Store.StoreProduct;{320e2c52-d760-450a-a42b-67d1e901ac90}))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Windows.Services.Store.StoreProduct
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct> shape=4 reverse=43
+            out class type=Windows.Services.Store.StoreProduct return
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreLicense> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, StoreLicense]
+    guid 7d0d74f5-4020-54aa-9f3d-0f17127acddf
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Services.Store.StoreLicense;{26dc9579-4c4f-4f30-bc89-649f60e36055}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>>
+    argument System.String
+    argument Windows.Services.Store.StoreLicense
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreLicense> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreLicense>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreLicense> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreLicense> shape=51 reverse=24 role=lookup
+            in string name=key
+            out class type=Windows.Services.Store.StoreLicense return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreLicense> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreLicense> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreLicense> name=second
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreProduct> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, StoreProduct]
+    guid dbaac6e5-61a4-5c88-b5d8-3a3e161c3e4a
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Services.Store.StoreProduct;{320e2c52-d760-450a-a42b-67d1e901ac90}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>>
+    argument System.String
+    argument Windows.Services.Store.StoreProduct
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreProduct> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.Store.StoreProduct>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreProduct> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreProduct> shape=51 reverse=24 role=lookup
+            in string name=key
+            out class type=Windows.Services.Store.StoreProduct return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreProduct> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreProduct> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreProduct> name=second
 
 interface Windows.Services.Store.IStoreAcquireLicenseResult
     guid fbd7946d-f040-4cb3-9a39-29bcecdbe22d
@@ -236,50 +1169,281 @@ interface Windows.Services.Store.IStoreUninstallStorePackageResult
 interface Windows.Services.Store.IStoreVideo
     guid f26cb184-6f5e-4dc2-886c-3c63083c2f94
 
-interface Windows.Foundation.Collections.IVector<System.String> concrete
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
     guid 98b9acc1-4b56-532e-ac73-03d5291cca90
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreAvailability> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreAvailability> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StoreAvailability]
     guid 01e5f751-8c50-52cb-abc2-e9862402c78a
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Store.StoreAvailability;{fa060325-0ffd-4493-ad43-f1f9918f69fa}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreAvailability>
     argument Windows.Services.Store.StoreAvailability
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreAvailability> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreAvailability> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreAvailability> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreAvailability> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.Store.StoreAvailability return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreAvailability> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.Store.StoreAvailability name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreAvailability> shape=117 reverse=66
+            in class type=Windows.Services.Store.StoreAvailability name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreImage> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreImage> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StoreImage]
     guid 7e1ceace-82bd-5db3-8f35-9bf0c88ef839
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Store.StoreImage;{081fd248-adb4-4b64-a993-784789926ed5}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreImage>
     argument Windows.Services.Store.StoreImage
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreImage> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreImage> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreImage> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreImage> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.Store.StoreImage return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreImage> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.Store.StoreImage name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreImage> shape=117 reverse=66
+            in class type=Windows.Services.Store.StoreImage name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StorePackageUpdate]
     guid 971c3ea6-4388-5a38-ae13-4929b6d6d780
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Store.StorePackageUpdate;{140fa150-3cbf-4a35-b91f-48271c31b072}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdate>
     argument Windows.Services.Store.StorePackageUpdate
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdate> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdate> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.Store.StorePackageUpdate return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.Store.StorePackageUpdate name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate> shape=117 reverse=66
+            in class type=Windows.Services.Store.StorePackageUpdate name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdateStatus> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdateStatus> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StorePackageUpdateStatus]
     guid 68e2f036-4982-55e3-8c0f-9bf4e69aa45a
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Services.Store.StorePackageUpdateStatus;string;u8;u8;f8;f8;enum(Windows.Services.Store.StorePackageUpdateState;i4)))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdateStatus>
     argument Windows.Services.Store.StorePackageUpdateStatus
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdateStatus> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdateStatus> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StorePackageUpdateStatus> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdateStatus> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Services.Store.StorePackageUpdateStatus return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdateStatus> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Services.Store.StorePackageUpdateStatus name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdateStatus> shape=174 reverse=86
+            in struct type=Windows.Services.Store.StorePackageUpdateStatus name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StoreQueueItem]
     guid b2d3e99f-d3ac-577d-b977-fdb667d20def
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Store.StoreQueueItem;{56d5c32b-f830-4293-9188-cad2dcde7357}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreQueueItem>
     argument Windows.Services.Store.StoreQueueItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreQueueItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreQueueItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.Store.StoreQueueItem return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.Store.StoreQueueItem name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem> shape=117 reverse=66
+            in class type=Windows.Services.Store.StoreQueueItem name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreSku> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreSku> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StoreSku]
     guid 407c4593-063d-5c9b-b8e0-949fe1387963
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Store.StoreSku;{397e6f55-4440-4f03-863c-91f3fec83d79}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreSku>
     argument Windows.Services.Store.StoreSku
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreSku> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreSku> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreSku> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreSku> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.Store.StoreSku return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreSku> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.Store.StoreSku name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreSku> shape=117 reverse=66
+            in class type=Windows.Services.Store.StoreSku name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreVideo> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreVideo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StoreVideo]
     guid 6e31fca5-119e-5799-a51b-cd6addecd870
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Store.StoreVideo;{f26cb184-6f5e-4dc2-886c-3c63083c2f94}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreVideo>
     argument Windows.Services.Store.StoreVideo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreVideo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreVideo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Store.StoreVideo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreVideo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.Store.StoreVideo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreVideo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.Store.StoreVideo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreVideo> shape=117 reverse=66
+            in class type=Windows.Services.Store.StoreVideo name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Services.Store.StoreAcquireLicenseResult python_type
     py StoreAcquireLicenseResult
@@ -686,7 +1850,7 @@ class Windows.Services.Store.StorePackageLicense python_type closeable
         remove remove_LicenseLost slot=7 inputs=1 outputs=0 declaring=Windows.Services.Store.IStorePackageLicense shape=26 reverse=53
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method release_license
         method ReleaseLicense slot=10 inputs=0 outputs=0 declaring=Windows.Services.Store.IStorePackageLicense shape=0 reverse=117
 
@@ -1172,28 +2336,52 @@ class Windows.Services.Store.StoreVideo python_type
             out uint32 return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.Store.StoreContext,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[StoreContext, Object]
     guid d5a00ac7-082d-547c-a04b-2540c1cde97a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Store.StoreContext;{ac98b6be-f4fd-4912-babd-5035e5e8bcab});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Services.Store.StoreContext
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Services.Store.StoreContext name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.Store.StorePackageLicense,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[StorePackageLicense, Object]
     guid 6c59d637-2970-5f64-9511-d39ac245bc94
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Store.StorePackageLicense;{0c465714-14e1-4973-bd14-f77724271e99});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Services.Store.StorePackageLicense
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Services.Store.StorePackageLicense name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.Store.StoreQueueItem,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[StoreQueueItem, Object]
     guid f8ae3690-f9db-57e8-843e-244c0a6a13e0
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Store.StoreQueueItem;{56d5c32b-f830-4293-9188-cad2dcde7357});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Services.Store.StoreQueueItem
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Services.Store.StoreQueueItem name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.Store.StoreQueueItem,Windows.Services.Store.StoreQueueItemCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[StoreQueueItem, StoreQueueItemCompletedEventArgs]
     guid 2bac2880-78fd-5cbe-8271-7d583e4ec2c4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Store.StoreQueueItem;{56d5c32b-f830-4293-9188-cad2dcde7357});rc(Windows.Services.Store.StoreQueueItemCompletedEventArgs;{1247df6c-b44a-439b-bb07-1d3003d005c2}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Services.Store.StoreQueueItem
     argument Windows.Services.Store.StoreQueueItemCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Services.Store.StoreQueueItem name=sender
+            in class type=Windows.Services.Store.StoreQueueItemCompletedEventArgs name=args
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -1207,16 +2395,71 @@ class System.String external
 class Windows.ApplicationModel.Package external
     py winrt.windows.applicationmodel.Package
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
 
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.System.User external
     py winrt.windows.system.User

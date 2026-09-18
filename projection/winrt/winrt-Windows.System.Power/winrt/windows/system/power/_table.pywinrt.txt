@@ -51,9 +51,15 @@ enum Windows.System.Power.EnergySaverStatus python_type
     signature enum(Windows.System.Power.EnergySaverStatus;i4)
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 class Windows.System.Power.ForegroundEnergyManager static python_type
     py ForegroundEnergyManager
@@ -153,3 +159,7 @@ enum Windows.System.Power.PowerSupplyStatus python_type
 
 class System.Object external
     py winrt.system.Object
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f

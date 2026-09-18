@@ -2,11 +2,136 @@ format 4.0
 generator 0.0.0
 namespace Windows.Graphics.Printing.OptionDetails
 
-interface Windows.Foundation.Collections.IMapView<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> concrete
-    guid 79e5168f-702a-5030-bd44-ef23d8887aed
-    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;{390686cf-d682-495f-adfe-d7333f5c1808})
+interface Windows.Foundation.Collections.IIterable<System.Object> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Object]
+    guid 092b849b-60b1-52be-a44a-6fe8e933cbe4
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IIterable
+    argument System.Object
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, IPrintOptionDetails]]
+    guid 6770cf39-094f-59c5-8a5d-e3b5dc64db0f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;{390686cf-d682-495f-adfe-d7333f5c1808}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>> return
+
+interface Windows.Foundation.Collections.IIterator<System.Object> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Object]
+    guid 44a94f2d-04f8-5091-b336-be7892dd10be
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IIterator
+    argument System.Object
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=22 role=current
+            out object return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=117 reverse=101
+            fill_array object name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, IPrintOptionDetails]]
+    guid 7bef6011-58a1-5523-8e2a-309f8cb1bd39
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;{390686cf-d682-495f-adfe-d7333f5c1808}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, IPrintOptionDetails]
+    guid f5d9c723-a4b1-5fc8-9f78-0b95b716720b
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;{390686cf-d682-495f-adfe-d7333f5c1808})
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> shape=4 reverse=43
+            out interface type=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails return
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, IPrintOptionDetails]
+    guid 79e5168f-702a-5030-bd44-ef23d8887aed
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;{390686cf-d682-495f-adfe-d7333f5c1808})
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>>
+    argument System.String
+    argument Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> shape=51 reverse=24 role=lookup
+            in string name=key
+            out interface type=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> name=second
 
 interface Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails
     guid c3f4cc98-9564-4f16-a055-a98b9a49e9d3
@@ -241,15 +366,113 @@ interface Windows.Graphics.Printing.OptionDetails.IPrintTextOptionDetails python
             in object name=value
             out boolean return
 
-interface Windows.Foundation.Collections.IVector<System.String> concrete
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
     guid 98b9acc1-4b56-532e-ac73-03d5291cca90
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
 
-interface Windows.Foundation.Collections.IVectorView<System.Object> concrete
+interface Windows.Foundation.Collections.IVectorView<System.Object> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Object]
     guid a6487363-b074-5c60-ab16-866dce4ee54d
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Object>
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out object return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array object name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=117 reverse=66
+            in object name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Graphics.Printing.OptionDetails.PrintBindingOptionDetails python_type
     py PrintBindingOptionDetails
@@ -1064,22 +1287,62 @@ class Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails python_type
             out struct type=Windows.Graphics.Printing.PrintPageDescription return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintTaskOptionDetails, Object]
     guid 5c88455c-5b59-557c-8064-5e4f3d59a8ec
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails;{f5720af1-a89e-42a6-81af-f8e010b38a68});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails,Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintTaskOptionDetails, PrintTaskOptionChangedEventArgs]
     guid 1b1f456b-8821-592e-b4a7-9b4c3712518e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails;{f5720af1-a89e-42a6-81af-f8e010b38a68});rc(Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs;{65197d05-a5ee-4307-9407-9acad147679c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails
     argument Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails name=sender
+            in class type=Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs name=args
 
 class System.Object external
     py winrt.system.Object
 
 class System.String external
     py winrt.system.String
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Graphics.Printing.IPrintTaskOptionsCore external
     py winrt.windows.graphics.printing._IPrintTaskOptionsCore

@@ -2,21 +2,144 @@ format 4.0
 generator 0.0.0
 namespace Windows.Devices.Scanners
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScanner> concrete
-    guid 75d78736-6c52-551e-ab5f-50674f323431
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Scanners.ImageScanner;{53a88f78-5298-48a0-8da3-8087519665e0}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Scanners.ImageScanner> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ImageScanner]
+    guid b35ad6b4-0da0-5241-87ff-eef3a1883243
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Scanners.ImageScanner;{53a88f78-5298-48a0-8da3-8087519665e0}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Devices.Scanners.ImageScanner
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScanner> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScannerPreviewResult> concrete
-    guid 2f74576f-0498-5348-bc3b-a70d1a771718
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Scanners.ImageScannerPreviewResult;{08b7fe8e-8891-441d-be9c-176fa109c8bb}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Scanners.ImageScannerPreviewResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ImageScannerPreviewResult]
+    guid c054a410-ac3c-5353-b1ee-e85e78faf3f1
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Scanners.ImageScannerPreviewResult;{08b7fe8e-8891-441d-be9c-176fa109c8bb}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Windows.Devices.Scanners.ImageScannerPreviewResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScannerPreviewResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> concrete
-    guid 6e6e228a-f618-5d33-8523-02d16672665b
-    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Devices.Scanners.ImageScannerScanResult;{c91624cd-9037-4e48-84c1-ac0975076bc5});u4)
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[ImageScannerScanResult, UInt32]
+    guid d1662baa-4f20-5d18-97f1-a01a6d0dd980
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.Devices.Scanners.ImageScannerScanResult;{c91624cd-9037-4e48-84c1-ac0975076bc5});u4)
+    base Windows.Foundation.AsyncOperationProgressHandler
     argument Windows.Devices.Scanners.ImageScannerScanResult
     argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> name=asyncInfo
+            in uint32 name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[ImageScannerScanResult, UInt32]
+    guid bd8bdbd8-459a-52dc-b101-75b398a61aef
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.Devices.Scanners.ImageScannerScanResult;{c91624cd-9037-4e48-84c1-ac0975076bc5});u4)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Devices.Scanners.ImageScannerScanResult
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScanner> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ImageScanner]
+    guid 75d78736-6c52-551e-ab5f-50674f323431
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Scanners.ImageScanner;{53a88f78-5298-48a0-8da3-8087519665e0}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Devices.Scanners.ImageScanner
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScanner> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Scanners.ImageScanner> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScanner> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Scanners.ImageScanner> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScanner> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Scanners.ImageScanner return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScannerPreviewResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ImageScannerPreviewResult]
+    guid 2f74576f-0498-5348-bc3b-a70d1a771718
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Scanners.ImageScannerPreviewResult;{08b7fe8e-8891-441d-be9c-176fa109c8bb}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Devices.Scanners.ImageScannerPreviewResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScannerPreviewResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Scanners.ImageScannerPreviewResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScannerPreviewResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Scanners.ImageScannerPreviewResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Scanners.ImageScannerPreviewResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Scanners.ImageScannerPreviewResult return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[ImageScannerScanResult, UInt32]
+    guid 6e6e228a-f618-5d33-8523-02d16672665b
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Devices.Scanners.ImageScannerScanResult;{c91624cd-9037-4e48-84c1-ac0975076bc5});u4)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Devices.Scanners.ImageScannerScanResult
+    argument System.UInt32
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Devices.Scanners.ImageScannerScanResult,System.UInt32> shape=4 reverse=121 role=get_results
+            out class type=Windows.Devices.Scanners.ImageScannerScanResult return
 
 interface Windows.Devices.Scanners.IImageScanner
     guid 53a88f78-5298-48a0-8da3-8087519665e0
@@ -151,10 +274,63 @@ interface Windows.Devices.Scanners.IImageScannerSourceConfiguration python_type
 interface Windows.Devices.Scanners.IImageScannerStatics
     guid bc57e70e-d804-4477-9fb5-b911b5473897
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StorageFile]
+    guid 9ac00304-83ea-5688-87b6-ae38aab65d0b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Storage.StorageFile
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StorageFile]
+    guid 43e29f53-0298-55aa-a6c8-4edd323d9598
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Storage.StorageFile
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=4 reverse=22 role=current
+            out class type=Windows.Storage.StorageFile return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=117 reverse=101
+            fill_array class type=Windows.Storage.StorageFile name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StorageFile]
     guid 80646519-5e2a-595d-a8cd-2a24b4067f1b
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile>
     argument Windows.Storage.StorageFile
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Storage.StorageFile return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Storage.StorageFile name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=117 reverse=66
+            in class type=Windows.Storage.StorageFile name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Devices.Scanners.ImageScanner python_type
     py ImageScanner
@@ -519,11 +695,50 @@ enum Windows.Devices.Scanners.ImageScannerScanSource python_type
 class System.UInt32 external
     py winrt.system.UInt32
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
 
 struct Windows.Foundation.Size external
     py winrt.windows.foundation.Size
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 enum Windows.Graphics.Printing.PrintMediaSize external
     py winrt.windows.graphics.printing.PrintMediaSize

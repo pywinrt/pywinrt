@@ -70,9 +70,15 @@ enum Windows.Media.ClosedCaptioning.ClosedCaptionStyle python_type
     signature enum(Windows.Media.ClosedCaptioning.ClosedCaptionStyle;i4)
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 interface Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics
     guid 10aa1f84-cc30-4141-b503-5272289e0c20
@@ -82,6 +88,10 @@ interface Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2
 
 class System.Object external
     py winrt.system.Object
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
 
 struct Windows.UI.Color external
     py winrt.windows.ui.Color

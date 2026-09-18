@@ -16,6 +16,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "generics.h"
 #include "interp.h"
 #include "objects.h"
 #include "structs.h"
@@ -204,6 +205,25 @@ namespace py::interp
     } // namespace
 
     /**
+     * The entry that built @p entry's Python type.
+     *
+     * A parameterized instance belongs to whichever table first named it, and
+     * every other table that names it holds an entry with the type it found
+     * and nothing else. The type itself says which entry that is.
+     */
+    static type_entry* definition_of(type_entry& entry) noexcept
+    {
+        if (!entry.py_type)
+        {
+            return &entry;
+        }
+
+        auto* const definition = get_type_entry(entry.py_type);
+
+        return definition ? definition : &entry;
+    }
+
+    /**
      * Reads the type entry that @p arg or @p field names, importing the package
      * that defines it if this is the first time it has been needed.
      *
@@ -225,17 +245,35 @@ namespace py::interp
         auto& entry = owner.types[type];
         if (entry.py_type)
         {
-            cache = &entry;
+            cache = definition_of(entry);
             return cache;
         }
 
         auto const record = owner.table->type(type);
-        if (record.flags()
-            & (table::type_flags::parameterized | table::type_flags::concrete))
+
+        if (record.flags() & table::type_flags::concrete)
         {
+            // A parameterized interface closed over the types this member
+            // passes, which is a type record like any other except that
+            // nothing binds it in a module, so it is built on first use.
+            if (!ensure_instance_type(owner, entry, record))
+            {
+                return nullptr;
+            }
+
+            cache = definition_of(entry);
+            return cache;
+        }
+
+        if (record.py_name().empty())
+        {
+            // A parameterized interface with a type argument still standing in
+            // for a type - IVectorView<T> as IVector<T>'s own members mention
+            // it - which is a record so that the instance a caller names can be
+            // built from it, and is nothing a member can pass.
             PyErr_Format(
-                PyExc_NotImplementedError,
-                "'%s.%s' is a parameterized interface, which is not interpreted yet",
+                PyExc_TypeError,
+                "'%s.%s' has no type arguments, so no member can pass one",
                 std::string{record.winrt_namespace()}.c_str(),
                 std::string{record.name()}.c_str());
             return nullptr;
@@ -431,6 +469,7 @@ namespace py::interp
         }
         case table::type_code::interface_:
         case table::type_code::class_:
+        case table::type_code::generic:
         {
             auto const info = resolve(owner, arg.type, arg.info);
             if (!info)
@@ -448,6 +487,23 @@ namespace py::interp
             }
 
             auto const abi = unwrap_abi(value, info->guid);
+            if (abi)
+            {
+                frame.add(cleanup_entry::kind::interface_, abi, nullptr);
+            }
+
+            store_widened(frame.args, arg.offset, reinterpret_cast<uintptr_t>(abi));
+            return;
+        }
+        case table::type_code::reference:
+        {
+            auto const info = resolve(owner, arg.type, arg.info);
+            if (!info)
+            {
+                throw python_exception();
+            }
+
+            auto const abi = reference_from_python(*info, value);
             if (abi)
             {
                 frame.add(cleanup_entry::kind::interface_, abi, nullptr);
@@ -478,11 +534,8 @@ namespace py::interp
             return;
         }
         case table::type_code::delegate:
-        case table::type_code::generic:
-        case table::type_code::reference:
             PyErr_SetString(
-                PyExc_NotImplementedError,
-                "delegates, parameterized interfaces and IReference<T> are not interpreted yet");
+                PyExc_NotImplementedError, "delegates are not interpreted yet");
             throw python_exception();
         default:
             PyErr_Format(
@@ -574,6 +627,7 @@ namespace py::interp
             }
             case table::type_code::interface_:
             case table::type_code::class_:
+            case table::type_code::generic:
             {
                 auto const abi = load<void*>(storage);
                 if (!abi)
@@ -588,7 +642,32 @@ namespace py::interp
                     return nullptr;
                 }
 
+                if (!info->py_type)
+                {
+                    static_cast<::IUnknown*>(abi)->Release();
+                    PyErr_Format(
+                        PyExc_NotImplementedError,
+                        "'%s' has no Python type yet",
+                        info->winrt_name);
+                    return nullptr;
+                }
+
                 return wrap_abi(info->py_type, abi);
+            }
+            case table::type_code::reference:
+            {
+                auto const info = resolve(owner, arg.type, arg.info);
+                if (!info)
+                {
+                    if (auto const abi = load<void*>(storage))
+                    {
+                        static_cast<::IUnknown*>(abi)->Release();
+                    }
+
+                    return nullptr;
+                }
+
+                return reference_to_python(*info, load<void*>(storage));
             }
             case table::type_code::struct_:
             {
@@ -604,11 +683,8 @@ namespace py::interp
                 return struct_take_python(*info, storage);
             }
             case table::type_code::delegate:
-            case table::type_code::generic:
-            case table::type_code::reference:
                 PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "delegates, parameterized interfaces and IReference<T> are not interpreted yet");
+                    PyExc_NotImplementedError, "delegates are not interpreted yet");
                 return nullptr;
             default:
                 PyErr_Format(
@@ -796,12 +872,23 @@ namespace py::interp
         PyObject* const* args,
         Py_ssize_t /*nargs*/) noexcept
     {
+        auto const shape = overload.shape;
+
+        if (!shape)
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "'%s' is a member of '%s', which has no type arguments, so there "
+                "is nothing to call it on",
+                overload.winrt_name,
+                member.type_name);
+            return nullptr;
+        }
+
         if (!overload.prepared && !prepare_overload(*member.owner, overload))
         {
             return nullptr;
         }
-
-        auto const shape = overload.shape;
 
         winrt::com_ptr<::IUnknown> queried;
 
@@ -906,9 +993,10 @@ namespace py::interp
                 Py_RETURN_NONE;
             }
 
-            // The outputs come back in declaration order with the return value
-            // last, which is where the metadata puts it and where the
-            // projection has always returned it.
+            // The return value comes first and the declared outputs follow in
+            // order, which is what the stubs say and what the generated thunks
+            // packed - the metadata puts the return value last, so this is the
+            // one place the two orders differ.
             pyobj_handle result{};
 
             if (overload.out_count != 1)
@@ -931,6 +1019,22 @@ namespace py::interp
             }
 
             Py_ssize_t next_out = 0;
+
+            if (overload.out_count != 1)
+            {
+                // Where the declared outputs start, which is after the return
+                // value when there is one.
+                for (uint16_t i = 0; i < overload.arg_count; i++)
+                {
+                    auto const& arg = overload.args[i];
+
+                    if (arg.category == table::param_category::out && arg.is_return)
+                    {
+                        next_out = 1;
+                        break;
+                    }
+                }
+            }
 
             for (uint16_t i = 0; i < overload.arg_count; i++)
             {
@@ -974,7 +1078,8 @@ namespace py::interp
                     return value.detach();
                 }
 
-                PyTuple_SET_ITEM(result.get(), next_out++, value.detach());
+                PyTuple_SET_ITEM(
+                    result.get(), arg.is_return ? 0 : next_out++, value.detach());
             }
 
             return result.detach();

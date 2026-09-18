@@ -2,35 +2,271 @@ format 4.0
 generator 0.0.0
 namespace Windows.Web.UI.Interop
 
-interface Windows.Foundation.IAsyncOperation<System.String> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.String> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[String]
+    guid b79a741f-7fb5-50ae-9e99-911201ec3d41
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};string)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.String> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.DataTransfer.DataPackage> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[DataPackage]
+    guid a93a3b99-e946-57ce-aad9-c23d138c353e
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.DataTransfer.DataPackage;{61ebf5c7-efea-4346-9554-981d7e198ffe}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.DataTransfer.DataPackage
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackage> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Web.UI.Interop.WebViewControl> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[WebViewControl]
+    guid d61963d6-806d-50a8-a81c-75d9356ad5d7
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Web.UI.Interop.WebViewControl;{3f921316-bc70-4bda-9136-c94370899fab}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Web.UI.Interop.WebViewControl
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Web.UI.Interop.WebViewControl> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[String]
     guid 3e1fe603-f897-5263-b328-0806426b8a79
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.String
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=62 role=get_results
+            out string return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackage> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackage> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[DataPackage]
     guid a16f2d07-ead3-53e4-9490-75bdbaeb7a5b
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.DataTransfer.DataPackage;{61ebf5c7-efea-4346-9554-981d7e198ffe}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.DataTransfer.DataPackage
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackage> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.DataTransfer.DataPackage> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackage> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.DataTransfer.DataPackage> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackage> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackage return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Web.UI.Interop.WebViewControl> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Web.UI.Interop.WebViewControl> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[WebViewControl]
     guid ac3d28ac-8362-51c6-b2cc-16f3672758f1
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Web.UI.Interop.WebViewControl;{3f921316-bc70-4bda-9136-c94370899fab}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Web.UI.Interop.WebViewControl
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Web.UI.Interop.WebViewControl> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Web.UI.Interop.WebViewControl> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Web.UI.Interop.WebViewControl> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Web.UI.Interop.WebViewControl> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Web.UI.Interop.WebViewControl> shape=4 reverse=62 role=get_results
+            out class type=Windows.Web.UI.Interop.WebViewControl return
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Web.UI.Interop.WebViewControl> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Web.UI.Interop.WebViewControl> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WebViewControl]
+    guid f1028969-d7aa-59d8-8826-4e02a8064515
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.UI.Interop.WebViewControl;{3f921316-bc70-4bda-9136-c94370899fab}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Web.UI.Interop.WebViewControl
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.UI.Interop.WebViewControl> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.UI.Interop.WebViewControl> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.UI.WebViewControlDeferredPermissionRequest> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WebViewControlDeferredPermissionRequest]
+    guid 91805f3f-13cb-5483-b592-b9ae0e334f17
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.UI.WebViewControlDeferredPermissionRequest;{2ce349e0-d759-445c-9926-8995298f152b}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Web.UI.WebViewControlDeferredPermissionRequest
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.UI.WebViewControlDeferredPermissionRequest> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.UI.Interop.WebViewControl> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WebViewControl]
+    guid 3e183be4-37d8-5239-b1f0-c06c76296a16
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.UI.Interop.WebViewControl;{3f921316-bc70-4bda-9136-c94370899fab}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Web.UI.Interop.WebViewControl
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.UI.Interop.WebViewControl> shape=4 reverse=22 role=current
+            out class type=Windows.Web.UI.Interop.WebViewControl return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.UI.Interop.WebViewControl> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.UI.Interop.WebViewControl> shape=117 reverse=101
+            fill_array class type=Windows.Web.UI.Interop.WebViewControl name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.UI.Interop.WebViewControl> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.UI.WebViewControlDeferredPermissionRequest> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WebViewControlDeferredPermissionRequest]
+    guid 277a80bd-3e2a-5fe8-95d2-cc86f723bf42
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.UI.WebViewControlDeferredPermissionRequest;{2ce349e0-d759-445c-9926-8995298f152b}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Web.UI.WebViewControlDeferredPermissionRequest
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=4 reverse=22 role=current
+            out class type=Windows.Web.UI.WebViewControlDeferredPermissionRequest return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=117 reverse=101
+            fill_array class type=Windows.Web.UI.WebViewControlDeferredPermissionRequest name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.UI.Interop.WebViewControl> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WebViewControl]
     guid 5ecbd5c0-8282-5fe1-ad39-374cde70e0cd
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.UI.Interop.WebViewControl;{3f921316-bc70-4bda-9136-c94370899fab}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.UI.Interop.WebViewControl>
     argument Windows.Web.UI.Interop.WebViewControl
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.UI.Interop.WebViewControl> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.UI.Interop.WebViewControl> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.UI.Interop.WebViewControl> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.UI.Interop.WebViewControl> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.UI.Interop.WebViewControl return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.UI.Interop.WebViewControl> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.UI.Interop.WebViewControl name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.UI.Interop.WebViewControl> shape=117 reverse=66
+            in class type=Windows.Web.UI.Interop.WebViewControl name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Web.UI.WebViewControlDeferredPermissionRequest> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.UI.WebViewControlDeferredPermissionRequest> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WebViewControlDeferredPermissionRequest]
     guid bffd3dcf-1974-53a2-8d88-966d84ba98e0
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.UI.WebViewControlDeferredPermissionRequest;{2ce349e0-d759-445c-9926-8995298f152b}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.UI.WebViewControlDeferredPermissionRequest>
     argument Windows.Web.UI.WebViewControlDeferredPermissionRequest
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.UI.WebViewControlDeferredPermissionRequest> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.UI.WebViewControlDeferredPermissionRequest return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.UI.WebViewControlDeferredPermissionRequest name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=117 reverse=66
+            in class type=Windows.Web.UI.WebViewControlDeferredPermissionRequest name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs
     guid 77a2a53e-7c74-437d-a290-3ac0d8cd5655
@@ -54,100 +290,196 @@ interface Windows.Web.UI.Interop.IWebViewControlSite2
     guid d13b2e3f-48ee-4730-8243-d2ed0c05606a
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[IWebViewControl, Object]
     guid b5089479-abd8-5985-8a93-4c208a85e3a4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.IWebViewControl
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Web.UI.IWebViewControl name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlContentLoadingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IWebViewControl, WebViewControlContentLoadingEventArgs]
     guid 357154fe-ec1a-5fca-b860-62f03dece49d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlContentLoadingEventArgs;{9a3fccb2-b9bb-404b-a22b-66dccd1250c6}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.IWebViewControl
     argument Windows.Web.UI.WebViewControlContentLoadingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Web.UI.IWebViewControl name=sender
+            in class type=Windows.Web.UI.WebViewControlContentLoadingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IWebViewControl, WebViewControlDOMContentLoadedEventArgs]
     guid d7dc333e-b521-5b76-a7ff-48b454f597e5
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs;{be8bc008-9541-4545-9ff2-2df585b29f7d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.IWebViewControl
     argument Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Web.UI.IWebViewControl name=sender
+            in class type=Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IWebViewControl, WebViewControlLongRunningScriptDetectedEventArgs]
     guid bd29249e-4112-533d-96a2-0a1c01519caf
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs;{2a6e5bba-98b4-45bc-bbeb-0f69ce49c599}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.IWebViewControl
     argument Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Web.UI.IWebViewControl name=sender
+            in class type=Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IWebViewControl, WebViewControlNavigationCompletedEventArgs]
     guid 57a87c53-47a5-5864-9881-fd4c00f230a9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlNavigationCompletedEventArgs;{20409918-4a15-4c46-a55d-f79edb0bde8b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.IWebViewControl
     argument Windows.Web.UI.WebViewControlNavigationCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Web.UI.IWebViewControl name=sender
+            in class type=Windows.Web.UI.WebViewControlNavigationCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationStartingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IWebViewControl, WebViewControlNavigationStartingEventArgs]
     guid e92e0bcc-9ae9-5b9b-a684-83dd8ee57775
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlNavigationStartingEventArgs;{0c9057c5-0a08-41c7-863b-71e3a9549137}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.IWebViewControl
     argument Windows.Web.UI.WebViewControlNavigationStartingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Web.UI.IWebViewControl name=sender
+            in class type=Windows.Web.UI.WebViewControlNavigationStartingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IWebViewControl, WebViewControlNewWindowRequestedEventArgs]
     guid 317111df-10c6-559c-85a1-847eb0a1b2d5
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs;{3df44bbb-a124-46d5-a083-d02cacdff5ad}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.IWebViewControl
     argument Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Web.UI.IWebViewControl name=sender
+            in class type=Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlPermissionRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IWebViewControl, WebViewControlPermissionRequestedEventArgs]
     guid e5cacc26-2a68-5e0a-b82b-b3d756e10a56
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlPermissionRequestedEventArgs;{27204d51-2488-4cc5-968e-0a771e59c147}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.IWebViewControl
     argument Windows.Web.UI.WebViewControlPermissionRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Web.UI.IWebViewControl name=sender
+            in class type=Windows.Web.UI.WebViewControlPermissionRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlScriptNotifyEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IWebViewControl, WebViewControlScriptNotifyEventArgs]
     guid ee8b81d3-bbc2-55b0-877b-6ba86e3ad899
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlScriptNotifyEventArgs;{491de57b-6f49-41bb-b591-51b85b817037}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.IWebViewControl
     argument Windows.Web.UI.WebViewControlScriptNotifyEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Web.UI.IWebViewControl name=sender
+            in class type=Windows.Web.UI.WebViewControlScriptNotifyEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IWebViewControl, WebViewControlUnsupportedUriSchemeIdentifiedEventArgs]
     guid 8658050c-5e47-5516-b25b-57fae22c4b88
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs;{e3b81944-e4fc-43dc-94ca-f980f30bc51d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.IWebViewControl
     argument Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Web.UI.IWebViewControl name=sender
+            in class type=Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IWebViewControl, WebViewControlUnviewableContentIdentifiedEventArgs]
     guid 571626e3-9780-5b37-be8a-ab8e4e7898cf
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs;{4a9680db-88f2-4e20-b693-b4e2df4aa581}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.IWebViewControl
     argument Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Web.UI.IWebViewControl name=sender
+            in class type=Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IWebViewControl, WebViewControlWebResourceRequestedEventArgs]
     guid 3a6ed2bc-032b-5ec7-a20a-c1ef49250c3c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{3f921316-bc70-4bda-9136-c94370899fab};rc(Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs;{44d6524d-55a4-4d8b-891c-931d8e25d42e}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.IWebViewControl
     argument Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Web.UI.IWebViewControl name=sender
+            in class type=Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.Interop.WebViewControl,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[WebViewControl, Object]
     guid 34a6446f-5467-5063-bdc0-7fb0657510d1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Web.UI.Interop.WebViewControl;{3f921316-bc70-4bda-9136-c94370899fab});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.Interop.WebViewControl
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Web.UI.Interop.WebViewControl name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.Interop.WebViewControl,Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WebViewControl, WebViewControlAcceleratorKeyPressedEventArgs]
     guid b24e7b5b-b804-5346-97b5-02e6d9b6cba8
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Web.UI.Interop.WebViewControl;{3f921316-bc70-4bda-9136-c94370899fab});rc(Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs;{77a2a53e-7c74-437d-a290-3ac0d8cd5655}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.Interop.WebViewControl
     argument Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Web.UI.Interop.WebViewControl name=sender
+            in class type=Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.Interop.WebViewControl,Windows.Web.UI.Interop.WebViewControlMoveFocusRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WebViewControl, WebViewControlMoveFocusRequestedEventArgs]
     guid 234d40c0-2c51-5128-b919-003f1c0a8a26
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Web.UI.Interop.WebViewControl;{3f921316-bc70-4bda-9136-c94370899fab});rc(Windows.Web.UI.Interop.WebViewControlMoveFocusRequestedEventArgs;{6b2a340d-4bd0-405e-b7c1-1e72a492f446}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.Interop.WebViewControl
     argument Windows.Web.UI.Interop.WebViewControlMoveFocusRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Web.UI.Interop.WebViewControl name=sender
+            in class type=Windows.Web.UI.Interop.WebViewControlMoveFocusRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.Interop.WebViewControlProcess,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[WebViewControlProcess, Object]
     guid 0c4182f4-cc4c-55f3-b421-d4e749eb80a1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Web.UI.Interop.WebViewControlProcess;{02c723ec-98d6-424a-b63e-c6136c36a0f2});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Web.UI.Interop.WebViewControlProcess
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Web.UI.Interop.WebViewControlProcess name=sender
+            in object name=args
 
 class Windows.Web.UI.Interop.WebViewControl python_type
     py WebViewControl
@@ -491,15 +823,46 @@ class System.String external
 class Windows.ApplicationModel.DataTransfer.DataPackage external
     py winrt.windows.applicationmodel.datatransfer.DataPackage
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
 
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.Streams.IRandomAccessStream external
     py winrt.windows.storage.streams._IRandomAccessStream

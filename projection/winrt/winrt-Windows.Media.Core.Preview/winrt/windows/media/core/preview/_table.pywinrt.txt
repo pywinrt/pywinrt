@@ -3,9 +3,15 @@ generator 0.0.0
 namespace Windows.Media.Core.Preview
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 interface Windows.Media.Core.Preview.ISoundLevelBrokerStatics
     guid 6a633961-dbed-464c-a09a-33412f5caa3f
@@ -25,6 +31,10 @@ class Windows.Media.Core.Preview.SoundLevelBroker static python_type
 
 class System.Object external
     py winrt.system.Object
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
 
 enum Windows.Media.SoundLevel external
     py winrt.windows.media.SoundLevel

@@ -34,6 +34,36 @@ interface Windows.UI.Xaml.Markup.IDataTemplateComponent python_type
     method recycle
         method Recycle slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Markup.IDataTemplateComponent shape=0 reverse=16
 
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IRandomAccessStream> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IRandomAccessStream]
+    guid ba666a00-1555-5df4-81a5-07d23f7ffceb
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Storage.Streams.IRandomAccessStream
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IRandomAccessStream> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IRandomAccessStream> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IRandomAccessStream]
+    guid c875446a-587f-58da-897e-3bbe5ec7c30b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Storage.Streams.IRandomAccessStream
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=22 role=current
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IRandomAccessStream> shape=117 reverse=101
+            fill_array interface type=Windows.Storage.Streams.IRandomAccessStream name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.UI.Xaml.Markup.IMarkupExtension
     guid 1ee3416d-562b-486e-9ee5-0f0cbcc8048c
 
@@ -43,10 +73,85 @@ interface Windows.UI.Xaml.Markup.IMarkupExtensionFactory
 interface Windows.UI.Xaml.Markup.IMarkupExtensionOverrides
     guid 393779bf-b9c0-4ffb-a57f-58e7356e425f
 
-interface Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[IRandomAccessStream]
     guid 2736b66b-daa3-5e0c-9842-6a0f44b5440b
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IRandomAccessStream>
     argument Windows.Storage.Streams.IRandomAccessStream
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=173
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IRandomAccessStream> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Storage.Streams.IRandomAccessStream name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IRandomAccessStream> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> shape=117 reverse=101
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> shape=51 reverse=211
+            pass_array interface type=Windows.Storage.Streams.IRandomAccessStream name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IRandomAccessStream> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IRandomAccessStream> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IRandomAccessStream]
+    guid 92cd0a46-2266-5cd6-9293-e111299f2793
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IRandomAccessStream>
+    argument Windows.Storage.Streams.IRandomAccessStream
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IRandomAccessStream> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IRandomAccessStream> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IRandomAccessStream> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Storage.Streams.IRandomAccessStream name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IRandomAccessStream> shape=117 reverse=66
+            in interface type=Windows.Storage.Streams.IRandomAccessStream name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.UI.Xaml.Markup.IXamlBinaryWriter
     guid 829d2ad3-620a-46f6-845d-436a05927100
@@ -451,6 +556,22 @@ struct Windows.Foundation.Size external
 
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.Streams.IRandomAccessStream external
     py winrt.windows.storage.streams._IRandomAccessStream

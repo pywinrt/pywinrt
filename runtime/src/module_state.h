@@ -28,6 +28,10 @@ namespace py::cpp::_winrt
         /// registers both its wrapper and its abstract type, and a class with
         /// statics registers its metaclass as well.
         std::unordered_map<PyTypeObject*, py::interp::type_entry*> type_entries;
+        /// The Python type of each parameterized interface a projection has
+        /// closed, by the WinRT signature of the instance. Borrowed: the
+        /// entry that built one owns it, and they are let go of together.
+        std::unordered_map<std::string_view, PyTypeObject*> generic_types;
         PyObject* to_uuid_func;
         PyObject* wrap_async_func;
     };

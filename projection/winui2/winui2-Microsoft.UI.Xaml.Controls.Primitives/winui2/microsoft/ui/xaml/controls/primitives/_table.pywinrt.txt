@@ -659,10 +659,16 @@ class Microsoft.UI.Xaml.Controls.Primitives.TabViewListView composable python_ty
             out class type=Microsoft.UI.Xaml.Controls.Primitives.TabViewListView return
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum,Microsoft.UI.Xaml.Controls.ColorChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ColorSpectrum, ColorChangedEventArgs]
     guid 0d0cd229-eaa3-57d4-8cef-a2026b779791
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum;{75305916-882d-5667-bfd0-0af72d502d72});rc(Microsoft.UI.Xaml.Controls.ColorChangedEventArgs;{148d57a2-b1cb-5f5d-b6b5-512805d71761}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum
     argument Microsoft.UI.Xaml.Controls.ColorChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ColorChangedEventArgs name=args
 
 class Microsoft.UI.Xaml.Controls.ColorChangedEventArgs external
     py winui2.microsoft.ui.xaml.controls.ColorChangedEventArgs
@@ -684,6 +690,10 @@ class Microsoft.UI.Xaml.Controls.NonVirtualizingLayout external
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 struct Windows.Foundation.Numerics.Vector4 external
     py winrt.windows.foundation.numerics.Vector4

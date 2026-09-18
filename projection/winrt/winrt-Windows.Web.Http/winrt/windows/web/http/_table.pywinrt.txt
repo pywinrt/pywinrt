@@ -2,6 +2,294 @@ format 4.0
 generator 0.0.0
 namespace Windows.Web.Http
 
+delegate Windows.Foundation.AsyncOperationProgressHandler<System.String,System.UInt64> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[String, UInt64]
+    guid 14da7de7-40df-5d4c-823f-cf310625ad39
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};string;u8)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument System.String
+    argument System.UInt64
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=50 reverse=3
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> name=asyncInfo
+            in uint64 name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<System.String,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[String, HttpProgress]
+    guid cf0a03f6-a80a-5b46-9c80-f4ad9ed6e2d6
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};string;struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument System.String
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=62 reverse=9
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.String,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in struct type=Windows.Web.Http.HttpProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<System.UInt64,System.UInt64> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[UInt64, UInt64]
+    guid ffb2b65d-4120-5d13-826d-107851e6bb1c
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};u8;u8)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument System.UInt64
+    argument System.UInt64
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=50 reverse=3
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> name=asyncInfo
+            in uint64 name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,System.UInt64> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[IBuffer, UInt64]
+    guid d17f5eb6-b422-5e26-a817-7e0fd08f75d5
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};{905a0fe0-bc53-11df-8c49-001e4fc686da};u8)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Storage.Streams.IBuffer
+    argument System.UInt64
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=50 reverse=3
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> name=asyncInfo
+            in uint64 name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[IBuffer, HttpProgress]
+    guid 9eb2b852-e019-5440-8f88-0dd7d56fea47
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};{905a0fe0-bc53-11df-8c49-001e4fc686da};struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Storage.Streams.IBuffer
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=62 reverse=9
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in struct type=Windows.Web.Http.HttpProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IInputStream,System.UInt64> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[IInputStream, UInt64]
+    guid f9b2e7f6-762f-50db-95dd-7f6c6ec47090
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};{905a0fe2-bc53-11df-8c49-001e4fc686da};u8)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Storage.Streams.IInputStream
+    argument System.UInt64
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=50 reverse=3
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,System.UInt64> name=asyncInfo
+            in uint64 name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[IInputStream, HttpProgress]
+    guid 04682e89-6e8b-54b1-a466-432e130cf9a6
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};{905a0fe2-bc53-11df-8c49-001e4fc686da};struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Storage.Streams.IInputStream
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=62 reverse=9
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in struct type=Windows.Web.Http.HttpProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[HttpGetBufferResult, HttpProgress]
+    guid 43624279-9a68-5052-a9de-19569b54818a
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.Web.Http.HttpGetBufferResult;{53d08e7c-e209-404e-9a49-742d8236fd3a});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Web.Http.HttpGetBufferResult
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=62 reverse=9
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in struct type=Windows.Web.Http.HttpProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[HttpGetInputStreamResult, HttpProgress]
+    guid 5d399e45-63aa-52f7-bbb6-c718ca64bd2a
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.Web.Http.HttpGetInputStreamResult;{d5d63463-13aa-4ee0-be95-a0c39fe91203});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Web.Http.HttpGetInputStreamResult
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=62 reverse=9
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in struct type=Windows.Web.Http.HttpProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[HttpGetStringResult, HttpProgress]
+    guid 43516920-bbfc-5ba6-9d59-8af34fc97b4e
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.Web.Http.HttpGetStringResult;{9bac466d-8509-4775-b16d-8953f47a7f5f});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Web.Http.HttpGetStringResult
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=62 reverse=9
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in struct type=Windows.Web.Http.HttpProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[HttpRequestResult, HttpProgress]
+    guid 167f8eda-2a7a-56a2-bba3-76d78e24f13d
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.Web.Http.HttpRequestResult;{6acf4da8-b5eb-4a35-a902-4217fbe820c5});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Web.Http.HttpRequestResult
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=62 reverse=9
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in struct type=Windows.Web.Http.HttpProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[HttpResponseMessage, HttpProgress]
+    guid 68e4606a-76ec-5816-b2fe-a04ecde4126a
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.Web.Http.HttpResponseMessage;{fee200fb-8664-44e0-95d9-42696199bffc});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Web.Http.HttpResponseMessage
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=62 reverse=9
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in struct type=Windows.Web.Http.HttpProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.String,System.UInt64> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[String, UInt64]
+    guid bd75eebe-e7b5-5af6-8415-a4b9c9045202
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};string;u8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument System.String
+    argument System.UInt64
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.String,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[String, HttpProgress]
+    guid 98ab9acb-38db-588f-a5f9-9f484b2200cd
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};string;struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument System.String
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.String,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt64,System.UInt64> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[UInt64, UInt64]
+    guid d2024e41-5500-5b5a-ba46-cb7009596a2f
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};u8;u8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument System.UInt64
+    argument System.UInt64
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt64> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[IBuffer, UInt64]
+    guid abc81235-39c7-59bf-9948-2d14a93d40fd
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};{905a0fe0-bc53-11df-8c49-001e4fc686da};u8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Storage.Streams.IBuffer
+    argument System.UInt64
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[IBuffer, HttpProgress]
+    guid b0cf2f85-6992-52be-8f0b-93964b14d963
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};{905a0fe0-bc53-11df-8c49-001e4fc686da};struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Storage.Streams.IBuffer
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IInputStream,System.UInt64> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[IInputStream, UInt64]
+    guid 8db69706-3dd1-5a28-986a-93be0776d9c3
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};{905a0fe2-bc53-11df-8c49-001e4fc686da};u8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Storage.Streams.IInputStream
+    argument System.UInt64
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,System.UInt64> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[IInputStream, HttpProgress]
+    guid 504a34ec-5499-5a16-bffc-3ccb64a3547a
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};{905a0fe2-bc53-11df-8c49-001e4fc686da};struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Storage.Streams.IInputStream
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[HttpGetBufferResult, HttpProgress]
+    guid 6bec534a-1901-5fa2-9686-9a510f6b1217
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.Web.Http.HttpGetBufferResult;{53d08e7c-e209-404e-9a49-742d8236fd3a});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Web.Http.HttpGetBufferResult
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[HttpGetInputStreamResult, HttpProgress]
+    guid 789b1519-4ae1-5475-bb01-6734cad478ff
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.Web.Http.HttpGetInputStreamResult;{d5d63463-13aa-4ee0-be95-a0c39fe91203});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Web.Http.HttpGetInputStreamResult
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[HttpGetStringResult, HttpProgress]
+    guid 625df3b5-bff7-517a-9359-1dc28fb0f586
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.Web.Http.HttpGetStringResult;{9bac466d-8509-4775-b16d-8953f47a7f5f});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Web.Http.HttpGetStringResult
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[HttpRequestResult, HttpProgress]
+    guid fdfc3d8f-08bb-5d82-bfde-ae092e7e3fe1
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.Web.Http.HttpRequestResult;{6acf4da8-b5eb-4a35-a902-4217fbe820c5});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Web.Http.HttpRequestResult
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[HttpResponseMessage, HttpProgress]
+    guid beadb572-f9a3-5e93-b6ca-e311b65933fc
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.Web.Http.HttpResponseMessage;{fee200fb-8664-44e0-95d9-42696199bffc});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Web.Http.HttpResponseMessage
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Web.Http.HttpBufferContent python_type closeable stringable
     py HttpBufferContent
     signature rc(Windows.Web.Http.HttpBufferContent;{6b14a441-fba7-4bd2-af0a-839de7c295da})
@@ -26,7 +314,7 @@ class Windows.Web.Http.HttpBufferContent python_type closeable stringable
         method BufferAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_as_buffer_async
         method ReadAsBufferAsync slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=62
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> return
@@ -37,7 +325,7 @@ class Windows.Web.Http.HttpBufferContent python_type closeable stringable
         method ReadAsStringAsync slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=121
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_compute_length
         method TryComputeLength slot=11 inputs=0 outputs=2 declaring=Windows.Web.Http.IHttpContent shape=51 reverse=144
@@ -74,7 +362,7 @@ class Windows.Web.Http.HttpClient activatable python_type closeable stringable
         put put_DefaultPrivacyAnnotation slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpClient3 shape=4 reverse=43
             in string name=value
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method delete_async
         method DeleteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51 reverse=24
             in class type=Windows.Foundation.Uri name=uri
@@ -118,7 +406,7 @@ class Windows.Web.Http.HttpClient activatable python_type closeable stringable
             in enum32 type=Windows.Web.Http.HttpCompletionOption name=completionOption
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_delete_async
         method TryDeleteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51 reverse=24
@@ -210,7 +498,7 @@ class Windows.Web.Http.HttpCookie python_type stringable
         get get_Path slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4 reverse=62
             out string return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
 
 class Windows.Web.Http.HttpCookieCollection python_type iterable sequence
@@ -221,13 +509,13 @@ class Windows.Web.Http.HttpCookieCollection python_type iterable sequence
     requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpCookie>
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=4 reverse=43 role=size
             out uint32 return
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpCookie> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpCookie> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Windows.Web.Http.HttpCookie return
     method get_many
@@ -281,7 +569,7 @@ class Windows.Web.Http.HttpFormUrlEncodedContent python_type closeable stringabl
         method BufferAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_as_buffer_async
         method ReadAsBufferAsync slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=62
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> return
@@ -292,7 +580,7 @@ class Windows.Web.Http.HttpFormUrlEncodedContent python_type closeable stringabl
         method ReadAsStringAsync slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=121
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_compute_length
         method TryComputeLength slot=11 inputs=0 outputs=2 declaring=Windows.Web.Http.IHttpContent shape=51 reverse=144
@@ -326,9 +614,9 @@ class Windows.Web.Http.HttpGetBufferResult python_type closeable stringable
         get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4 reverse=121
             out interface type=Windows.Storage.Streams.IBuffer return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
 
 class Windows.Web.Http.HttpGetInputStreamResult python_type closeable stringable
@@ -354,9 +642,9 @@ class Windows.Web.Http.HttpGetInputStreamResult python_type closeable stringable
         get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4 reverse=121
             out interface type=Windows.Storage.Streams.IInputStream return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
 
 class Windows.Web.Http.HttpGetStringResult python_type closeable stringable
@@ -382,9 +670,9 @@ class Windows.Web.Http.HttpGetStringResult python_type closeable stringable
         get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4 reverse=121
             out string return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
 
 class Windows.Web.Http.HttpMethod python_type stringable
@@ -424,7 +712,7 @@ class Windows.Web.Http.HttpMethod python_type stringable
         get get_Put slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 reverse=162 static
             out class type=Windows.Web.Http.HttpMethod return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
 
 class Windows.Web.Http.HttpMultipartContent activatable python_type iterable closeable stringable
@@ -458,9 +746,9 @@ class Windows.Web.Http.HttpMultipartContent activatable python_type iterable clo
         method BufferAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.IHttpContent> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.IHttpContent> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.IHttpContent> return
     method read_as_buffer_async
         method ReadAsBufferAsync slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=62
@@ -472,7 +760,7 @@ class Windows.Web.Http.HttpMultipartContent activatable python_type iterable clo
         method ReadAsStringAsync slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=121
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_compute_length
         method TryComputeLength slot=11 inputs=0 outputs=2 declaring=Windows.Web.Http.IHttpContent shape=51 reverse=144
@@ -517,9 +805,9 @@ class Windows.Web.Http.HttpMultipartFormDataContent activatable python_type iter
         method BufferAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.IHttpContent> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.IHttpContent> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.IHttpContent> return
     method read_as_buffer_async
         method ReadAsBufferAsync slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=62
@@ -531,7 +819,7 @@ class Windows.Web.Http.HttpMultipartFormDataContent activatable python_type iter
         method ReadAsStringAsync slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=121
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_compute_length
         method TryComputeLength slot=11 inputs=0 outputs=2 declaring=Windows.Web.Http.IHttpContent shape=51 reverse=144
@@ -604,9 +892,9 @@ class Windows.Web.Http.HttpRequestMessage activatable python_type closeable stri
         put put_PrivacyAnnotation slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpRequestMessage2 shape=4 reverse=43
             in string name=value
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
 
 class Windows.Web.Http.HttpRequestResult python_type closeable stringable
@@ -629,9 +917,9 @@ class Windows.Web.Http.HttpRequestResult python_type closeable stringable
         get get_Succeeded slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestResult shape=4 reverse=99
             out boolean return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
 
 class Windows.Web.Http.HttpResponseMessage activatable python_type closeable stringable
@@ -686,12 +974,12 @@ class Windows.Web.Http.HttpResponseMessage activatable python_type closeable str
         get get_IsSuccessStatusCode slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=99
             out boolean return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method ensure_success_status_code
         method EnsureSuccessStatusCode slot=20 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=228
             out class type=Windows.Web.Http.HttpResponseMessage return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
 
 enum Windows.Web.Http.HttpResponseMessageSource python_type
@@ -721,7 +1009,7 @@ class Windows.Web.Http.HttpStreamContent python_type closeable stringable
         method BufferAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_as_buffer_async
         method ReadAsBufferAsync slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=62
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> return
@@ -732,7 +1020,7 @@ class Windows.Web.Http.HttpStreamContent python_type closeable stringable
         method ReadAsStringAsync slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=121
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_compute_length
         method TryComputeLength slot=11 inputs=0 outputs=2 declaring=Windows.Web.Http.IHttpContent shape=51 reverse=144
@@ -771,7 +1059,7 @@ class Windows.Web.Http.HttpStringContent python_type closeable stringable
         method BufferAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_as_buffer_async
         method ReadAsBufferAsync slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=62
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> return
@@ -782,7 +1070,7 @@ class Windows.Web.Http.HttpStringContent python_type closeable stringable
         method ReadAsStringAsync slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=121
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_compute_length
         method TryComputeLength slot=11 inputs=0 outputs=2 declaring=Windows.Web.Http.IHttpContent shape=51 reverse=144
@@ -812,84 +1100,432 @@ class Windows.Web.Http.HttpTransportInformation python_type stringable
         get get_ServerIntermediateCertificates slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpTransportInformation shape=4 reverse=99
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
 
 enum Windows.Web.Http.HttpVersion python_type
     py HttpVersion
     signature enum(Windows.Web.Http.HttpVersion;i4)
 
-interface Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[String, UInt64]
     guid c8bbcb29-6b64-5ce2-a831-038f6e02199e
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};string;u8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument System.String
     argument System.UInt64
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.String,System.UInt64> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.String,System.UInt64> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.String,System.UInt64> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.String,System.UInt64> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> shape=4 reverse=121 role=get_results
+            out string return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<System.String,Windows.Web.Http.HttpProgress> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<System.String,Windows.Web.Http.HttpProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[String, HttpProgress]
     guid 91ecbe45-e889-5518-bd8d-c5bde163109b
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};string;struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument System.String
     argument Windows.Web.Http.HttpProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.String,Windows.Web.Http.HttpProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.String,Windows.Web.Http.HttpProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.String,Windows.Web.Http.HttpProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.String,Windows.Web.Http.HttpProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.String,Windows.Web.Http.HttpProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.String,Windows.Web.Http.HttpProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.String,Windows.Web.Http.HttpProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.String,Windows.Web.Http.HttpProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.String,Windows.Web.Http.HttpProgress> shape=4 reverse=121 role=get_results
+            out string return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[UInt64, UInt64]
     guid 8f1db6e3-6556-5516-825c-1021ee27cd0c
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};u8;u8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument System.UInt64
     argument System.UInt64
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.UInt64,System.UInt64> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.UInt64,System.UInt64> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt64,System.UInt64> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt64,System.UInt64> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> shape=4 reverse=121 role=get_results
+            out uint64 return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[IBuffer, UInt64]
     guid ad960e7f-d73b-56e4-a58c-6ec7678cfd88
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};{905a0fe0-bc53-11df-8c49-001e4fc686da};u8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IBuffer
     argument System.UInt64
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,System.UInt64> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,System.UInt64> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt64> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt64> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> shape=4 reverse=121 role=get_results
+            out interface type=Windows.Storage.Streams.IBuffer return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[IBuffer, HttpProgress]
     guid 88d9bb75-afb4-5f32-9d7e-d3bf3785354c
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};{905a0fe0-bc53-11df-8c49-001e4fc686da};struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IBuffer
     argument Windows.Web.Http.HttpProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> shape=4 reverse=121 role=get_results
+            out interface type=Windows.Storage.Streams.IBuffer return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,System.UInt64> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,System.UInt64> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[IInputStream, UInt64]
     guid 455aa601-f13e-5dee-b9cb-16b531996327
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};{905a0fe2-bc53-11df-8c49-001e4fc686da};u8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IInputStream
     argument System.UInt64
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,System.UInt64> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IInputStream,System.UInt64> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,System.UInt64> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IInputStream,System.UInt64> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,System.UInt64> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IInputStream,System.UInt64> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,System.UInt64> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IInputStream,System.UInt64> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,System.UInt64> shape=4 reverse=121 role=get_results
+            out interface type=Windows.Storage.Streams.IInputStream return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[IInputStream, HttpProgress]
     guid 0b97c784-df17-571f-8337-447dff068a9c
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};{905a0fe2-bc53-11df-8c49-001e4fc686da};struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IInputStream
     argument Windows.Web.Http.HttpProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> shape=4 reverse=121 role=get_results
+            out interface type=Windows.Storage.Streams.IInputStream return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[HttpGetBufferResult, HttpProgress]
     guid b128fbc4-19c0-5fe1-aec6-d2e64bd22862
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.Http.HttpGetBufferResult;{53d08e7c-e209-404e-9a49-742d8236fd3a});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Web.Http.HttpGetBufferResult
     argument Windows.Web.Http.HttpProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> shape=4 reverse=121 role=get_results
+            out class type=Windows.Web.Http.HttpGetBufferResult return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[HttpGetInputStreamResult, HttpProgress]
     guid 6e1ce5ac-c10b-5d09-ad43-f4ddeada857a
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.Http.HttpGetInputStreamResult;{d5d63463-13aa-4ee0-be95-a0c39fe91203});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Web.Http.HttpGetInputStreamResult
     argument Windows.Web.Http.HttpProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> shape=4 reverse=121 role=get_results
+            out class type=Windows.Web.Http.HttpGetInputStreamResult return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[HttpGetStringResult, HttpProgress]
     guid 7382f299-bbbd-5bd3-b143-8887c627929b
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.Http.HttpGetStringResult;{9bac466d-8509-4775-b16d-8953f47a7f5f});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Web.Http.HttpGetStringResult
     argument Windows.Web.Http.HttpProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> shape=4 reverse=121 role=get_results
+            out class type=Windows.Web.Http.HttpGetStringResult return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[HttpRequestResult, HttpProgress]
     guid 97388336-2eac-5d76-b228-d32ef9a38175
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.Http.HttpRequestResult;{6acf4da8-b5eb-4a35-a902-4217fbe820c5});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Web.Http.HttpRequestResult
     argument Windows.Web.Http.HttpProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> shape=4 reverse=121 role=get_results
+            out class type=Windows.Web.Http.HttpRequestResult return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[HttpResponseMessage, HttpProgress]
     guid 5d144364-77d7-5eca-8b09-936a69446652
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.Http.HttpResponseMessage;{fee200fb-8664-44e0-95d9-42696199bffc});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Web.Http.HttpResponseMessage
     argument Windows.Web.Http.HttpProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> shape=4 reverse=121 role=get_results
+            out class type=Windows.Web.Http.HttpResponseMessage return
 
 interface Windows.Web.Http.IHttpBufferContentFactory
     guid bc20c193-c41f-4ff7-9123-6435736eadc2
@@ -918,7 +1554,7 @@ interface Windows.Web.Http.IHttpContent python_type closeable
         method BufferAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=43
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_as_buffer_async
         method ReadAsBufferAsync slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=62
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt64> return
@@ -1009,67 +1645,616 @@ interface Windows.Web.Http.IHttpTransportInformation
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
+    guid fe2f3d47-5d47-5499-8374-430c7cda0204
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
     guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpCookie> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Certificate]
+    guid 0c7d1423-e8fd-5a91-b55c-8bfbe7ac2d40
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Security.Cryptography.Certificates.Certificate;{333f740c-04d8-43b3-b278-8c5fcc9be5a0}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Security.Cryptography.Certificates.Certificate
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.ChainValidationResult> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ChainValidationResult]
+    guid 2628f58f-3f02-54f2-808f-e1117709d6d0
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Security.Cryptography.Certificates.ChainValidationResult;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Security.Cryptography.Certificates.ChainValidationResult
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpCookie> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[HttpCookie]
     guid 0eb9fa36-88de-590d-8ea0-b613d0ab015f
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Http.HttpCookie;{1f5488e2-cc2d-4779-86a7-88f10687d249}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Web.Http.HttpCookie
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpCookie> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.IHttpContent> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Http.IHttpContent> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IHttpContent]
     guid f102157f-b482-5736-9d12-c683bc494942
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{6b14a441-fba7-4bd2-af0a-839de7c295da})
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Web.Http.IHttpContent
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.IHttpContent> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.IHttpContent> return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, Object]]
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Certificate]
+    guid 676fc159-f15c-58bd-91a7-28f7e795c756
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Security.Cryptography.Certificates.Certificate;{333f740c-04d8-43b3-b278-8c5fcc9be5a0}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Security.Cryptography.Certificates.Certificate
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=22 role=current
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> shape=117 reverse=101
+            fill_array class type=Windows.Security.Cryptography.Certificates.Certificate name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ChainValidationResult]
+    guid 8bcad2b7-0e3b-5eae-bf69-e1f6d9c888f8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Security.Cryptography.Certificates.ChainValidationResult;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Security.Cryptography.Certificates.ChainValidationResult
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=117 reverse=101
+            fill_array enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[HttpCookie]
     guid 626bc177-8403-5030-a88c-7485cc89d730
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Http.HttpCookie;{1f5488e2-cc2d-4779-86a7-88f10687d249}))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Web.Http.HttpCookie
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> shape=4 reverse=22 role=current
+            out class type=Windows.Web.Http.HttpCookie return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> shape=117 reverse=101
+            fill_array class type=Windows.Web.Http.HttpCookie name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.IHttpContent> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.IHttpContent> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IHttpContent]
     guid 59f44f31-695e-5af7-a3c5-85c01939cec8
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{6b14a441-fba7-4bd2-af0a-839de7c295da})
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Web.Http.IHttpContent
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Http.IHttpContent> shape=4 reverse=22 role=current
+            out interface type=Windows.Web.Http.IHttpContent return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Http.IHttpContent> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Http.IHttpContent> shape=117 reverse=101
+            fill_array interface type=Windows.Web.Http.IHttpContent name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Http.IHttpContent> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
-    guid 60310303-49c5-52e6-abc6-a9b36eccc716
-    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
-    argument System.String
-    argument System.String
-
-interface Windows.Foundation.Collections.IMap<System.String,System.Object> concrete
-    guid 1b0d3570-0877-5ec2-8a2c-3b9539506aca
-    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;cinterface(IInspectable))
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
+    guid 09335560-6c6b-5a26-9348-97b781132b20
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43
+            out object return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+            out string return
+
+interface Windows.Foundation.Collections.IMap<System.String,System.Object> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, Object]
+    guid 1b0d3570-0877-5ec2-8a2c-3b9539506aca
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
+    argument System.String
+    argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=117 reverse=125 role=insert
+            in string name=key
+            in object name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=24 role=lookup
+            in string name=key
+            out object return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=141 role=remove
+            in string name=key
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, Object]
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
+    argument System.String
+    argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=24 role=lookup
+            in string name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
 
 interface Windows.Foundation.IReference<System.UInt64> concrete
+    py winrt.windows.foundation._IReference[UInt64]
     guid 6755e376-53bb-568b-a11d-17239868309e
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.UInt64
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.UInt64> shape=4 reverse=22 role=value
+            out uint64 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    py winrt.windows.foundation._IReference[DateTime]
     guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.DateTime
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.DateTime> shape=4 reverse=22 role=value
+            out datetime return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Certificate]
     guid 963f7013-77c2-51c5-8038-b5bcef633edb
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Cryptography.Certificates.Certificate;{333f740c-04d8-43b3-b278-8c5fcc9be5a0}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate>
     argument Windows.Security.Cryptography.Certificates.Certificate
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Security.Cryptography.Certificates.Certificate name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=117 reverse=66
+            in class type=Windows.Security.Cryptography.Certificates.Certificate name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ChainValidationResult]
     guid cb383486-c2bc-5756-912d-6a708a07e5bd
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Security.Cryptography.Certificates.ChainValidationResult;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.ChainValidationResult>
     argument Windows.Security.Cryptography.Certificates.ChainValidationResult
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=117 reverse=66
+            in enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[HttpCookie]
     guid 0064c4f6-3fca-5823-9d92-86c40b28adbc
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.HttpCookie;{1f5488e2-cc2d-4779-86a7-88f10687d249}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpCookie>
     argument Windows.Web.Http.HttpCookie
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpCookie> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.Http.HttpCookie return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Http.HttpCookie name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=117 reverse=66
+            in class type=Windows.Web.Http.HttpCookie name=value
+            out uint32 name=index
+            out boolean return
 
 enum T parameterized
 
@@ -1082,19 +2267,82 @@ class System.String external
 class System.UInt64 external
     py winrt.system.UInt64
 
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
 
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
 interface Windows.Foundation.IStringable external
     py winrt.windows.foundation._IStringable
     guid 96369f54-8eb6-48f0-abce-c1b211e627c3
 
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 enum Windows.Networking.Sockets.SocketSslErrorSeverity external
     py winrt.windows.networking.sockets.SocketSslErrorSeverity

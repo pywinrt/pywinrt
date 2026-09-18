@@ -431,6 +431,11 @@ namespace py::cpp::_winrt
         .pymap_clear = py::pymap_clear,
         .pymap_iter_next = py::pymap_iter_next,
         .type_registry_epoch = &type_registry_epoch,
+        .wrap_object = py::wrap_object,
+        .wrap_by_signature = py::wrap_by_signature,
+        .unwrap_object = py::unwrap_object,
+        .struct_to_python = py::struct_to_python,
+        .struct_from_python = py::struct_from_python,
     };
 
     static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept
@@ -619,6 +624,7 @@ namespace py::cpp::_winrt
         // themselves are freed with the state, below, because a type that
         // outlives this call still has them bound.
         state->type_entries.clear();
+        state->generic_types.clear();
 
         for (auto& [name, projection] : state->projections)
         {
@@ -661,6 +667,7 @@ namespace py::cpp::_winrt
         std::destroy_at(&state->struct_from_tuple_cache);
 
         std::destroy_at(&state->type_entries);
+        std::destroy_at(&state->generic_types);
 
         std::destroy_at(&state->projections);
 
@@ -814,6 +821,7 @@ namespace py::cpp::_winrt
         std::construct_at(&state->struct_from_tuple_cache);
         std::construct_at(&state->projections);
         std::construct_at(&state->type_entries);
+        std::construct_at(&state->generic_types);
 
         type_registry_epoch++;
 

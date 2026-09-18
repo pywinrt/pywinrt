@@ -5,20 +5,65 @@ namespace Windows.Devices.Lights.Effects
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.ILampArrayEffect> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.ILampArrayEffect> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ILampArrayEffect]
     guid 3f108d37-6679-5590-aed2-033362fbf413
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{11d45590-57fb-4546-b1ce-863107f740df})
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Devices.Lights.Effects.ILampArrayEffect
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.ILampArrayEffect> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[LampArrayEffectPlaylist]
     guid 2314acda-c5df-5051-977d-94d79d1312fb
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Lights.Effects.LampArrayEffectPlaylist;{7de58bfe-6f61-4103-98c7-d6632f7b9169}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Devices.Lights.Effects.LampArrayEffectPlaylist
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.ILampArrayEffect> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.ILampArrayEffect> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ILampArrayEffect]
     guid de51580c-48a6-50b5-976b-05894699015a
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{11d45590-57fb-4546-b1ce-863107f740df})
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Devices.Lights.Effects.ILampArrayEffect
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=4 reverse=22 role=current
+            out interface type=Windows.Devices.Lights.Effects.ILampArrayEffect return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=117 reverse=101
+            fill_array interface type=Windows.Devices.Lights.Effects.ILampArrayEffect name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[LampArrayEffectPlaylist]
+    guid 2aaabbc2-4c18-5d1c-9e09-c1249eb46817
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Lights.Effects.LampArrayEffectPlaylist;{7de58bfe-6f61-4103-98c7-d6632f7b9169}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Lights.Effects.LampArrayEffectPlaylist
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Lights.Effects.LampArrayEffectPlaylist return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Lights.Effects.LampArrayEffectPlaylist name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Devices.Lights.Effects.ILampArrayBitmapEffect
     guid 3238e065-d877-4627-89e5-2a88f7052fa6
@@ -72,10 +117,33 @@ interface Windows.Devices.Lights.Effects.ILampArraySolidEffectFactory
 interface Windows.Devices.Lights.Effects.ILampArrayUpdateRequestedEventArgs
     guid 73560d6a-576a-48af-8539-67ffa0ab3516
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ILampArrayEffect]
     guid 97159586-9fb0-56d4-9df4-8c36ea15100e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{11d45590-57fb-4546-b1ce-863107f740df})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.ILampArrayEffect>
     argument Windows.Devices.Lights.Effects.ILampArrayEffect
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.ILampArrayEffect> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Devices.Lights.Effects.ILampArrayEffect return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Devices.Lights.Effects.ILampArrayEffect name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=117 reverse=66
+            in interface type=Windows.Devices.Lights.Effects.ILampArrayEffect name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Devices.Lights.Effects.LampArrayBitmapEffect python_type
     py LampArrayBitmapEffect
@@ -293,16 +361,16 @@ class Windows.Devices.Lights.Effects.LampArrayEffectPlaylist activatable python_
         put put_EffectStartMode slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=4 reverse=162
             in enum32 type=Windows.Devices.Lights.Effects.LampArrayEffectStartMode name=value
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist shape=4 reverse=22
             in interface type=Windows.Devices.Lights.Effects.ILampArrayEffect name=effect
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Lights.Effects.ILampArrayEffect> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out interface type=Windows.Devices.Lights.Effects.ILampArrayEffect return
     method get_many
@@ -407,22 +475,50 @@ class Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs python_ty
 enum T parameterized
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.Effects.LampArrayBitmapEffect,Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[LampArrayBitmapEffect, LampArrayBitmapRequestedEventArgs]
     guid 24b5818b-448e-53fa-ab4c-663008c5d4cf
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Lights.Effects.LampArrayBitmapEffect;{3238e065-d877-4627-89e5-2a88f7052fa6});rc(Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs;{c8b4af9e-fe63-4d51-babd-619defb454ba}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Lights.Effects.LampArrayBitmapEffect
     argument Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Lights.Effects.LampArrayBitmapEffect name=sender
+            in class type=Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.Effects.LampArrayCustomEffect,Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[LampArrayCustomEffect, LampArrayUpdateRequestedEventArgs]
     guid 7d91af6e-ba44-5a0f-bc64-3901fd33661c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Lights.Effects.LampArrayCustomEffect;{ec579170-3c34-4876-818b-5765f78b0ee4});rc(Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs;{73560d6a-576a-48af-8539-67ffa0ab3516}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Lights.Effects.LampArrayCustomEffect
     argument Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Lights.Effects.LampArrayCustomEffect name=sender
+            in class type=Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs name=args
 
 class Windows.Devices.Lights.LampArray external
     py winrt.windows.devices.lights.LampArray
 
 struct Windows.Foundation.Size external
     py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Graphics.Imaging.SoftwareBitmap external
     py winrt.windows.graphics.imaging.SoftwareBitmap

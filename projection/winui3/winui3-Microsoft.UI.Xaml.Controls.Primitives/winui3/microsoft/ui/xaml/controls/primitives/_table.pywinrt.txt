@@ -851,9 +851,15 @@ enum Microsoft.UI.Xaml.Controls.Primitives.EdgeTransitionLocation python_type
     signature enum(Microsoft.UI.Xaml.Controls.Primitives.EdgeTransitionLocation;i4)
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 class Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase composable python_type
     py FlyoutBase
@@ -1486,6 +1492,126 @@ interface Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics
 interface Microsoft.UI.Xaml.Controls.Primitives.IItemsChangedEventArgs
     guid b2ba1610-0e96-538a-978f-ec0b37193228
 
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ScrollSnapPointBase]
+    guid b473ae58-7c88-5b2d-85fb-bf51c6366b5f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase;{45d7319d-c9eb-5109-9668-ff3fc6ccdf11}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ZoomSnapPointBase]
+    guid a3e88653-622e-597c-8cdb-7d54d2342aec
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase;{c6d08756-0860-5c2d-abec-6eb4aa4b53d7}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> return
+
+interface Windows.Foundation.Collections.IIterable<System.Object> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Object]
+    guid 092b849b-60b1-52be-a44a-6fe8e933cbe4
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IIterable
+    argument System.Object
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+
+interface Windows.Foundation.Collections.IIterable<System.Single> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Single]
+    guid b01bee51-063a-5fda-bd72-d76637bb8cb8
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};f4)
+    base Windows.Foundation.Collections.IIterable
+    argument System.Single
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Single> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Single> return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ScrollSnapPointBase]
+    guid 02f96dea-8fc0-535f-bd68-0bdbc85c207f
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase;{45d7319d-c9eb-5109-9668-ff3fc6ccdf11}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ZoomSnapPointBase]
+    guid 3bb2735f-224e-547b-a7ba-4331199af893
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase;{c6d08756-0860-5c2d-abec-6eb4aa4b53d7}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.Object> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Object]
+    guid 44a94f2d-04f8-5091-b336-be7892dd10be
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IIterator
+    argument System.Object
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=22 role=current
+            out object return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=117 reverse=101
+            fill_array object name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.Single> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Single]
+    guid 42614e61-b0aa-5e72-9354-2771db20b7a8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};f4)
+    base Windows.Foundation.Collections.IIterator
+    argument System.Single
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Single> shape=4 reverse=22 role=current
+            out single return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Single> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Single> shape=117 reverse=101
+            fill_array single name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Single> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Microsoft.UI.Xaml.Controls.Primitives.IJumpListItemBackgroundConverter
     guid c475bb52-ea34-5cde-9851-7841febd3d1d
 
@@ -1631,29 +1757,644 @@ interface Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventArgs
     guid b0181692-9578-51c7-9d1c-adfcf8945aa9
 
 interface Windows.Foundation.IReference<System.Boolean> concrete
+    py winrt.windows.foundation._IReference[Boolean]
     guid 3c00fd60-2950-5939-a21a-2d12c5a01b8a
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};b1)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Boolean
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Boolean> shape=4 reverse=22 role=value
+            out boolean return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<System.Single> concrete
+    py winrt.windows.foundation._IReference[Single]
     guid 719cc2ba-3e76-5def-9f1a-38d85a145ea8
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Single
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Single> shape=4 reverse=22 role=value
+            out single return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Foundation.Numerics.Vector2> concrete
+    py winrt.windows.foundation._IReference[Vector2]
     guid 48f6a69e-8465-57ae-9400-9764087f65ad
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.Numerics.Vector2;f4;f4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.Numerics.Vector2
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.Numerics.Vector2> shape=4 reverse=22 role=value
+            out struct type=Windows.Foundation.Numerics.Vector2 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Foundation.Point> concrete
+    py winrt.windows.foundation._IReference[Point]
     guid 84f14c22-a00a-5272-8d3d-82112e66df00
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.Point;f4;f4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.Point
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.Point> shape=4 reverse=22 role=value
+            out struct type=Windows.Foundation.Point return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Foundation.Rect> concrete
+    py winrt.windows.foundation._IReference[Rect]
     guid 80423f11-054f-5eac-afd3-63b6ce15e77b
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.Rect;f4;f4;f4;f4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.Rect
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.Rect> shape=4 reverse=22 role=value
+            out struct type=Windows.Foundation.Rect return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Microsoft.UI.Xaml.Controls.Primitives.IRepeatButton
     guid 97f4c728-4a94-56b5-91e4-e7c6f6a1251a
@@ -1920,25 +2661,273 @@ interface Microsoft.UI.Xaml.Controls.Primitives.IToggleSwitchTemplateSettings
 interface Microsoft.UI.Xaml.Controls.Primitives.IToolTipTemplateSettings
     guid 4f725950-ff64-5cf1-9e86-9011fb10e88e
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ScrollSnapPointBase]
     guid 44786fbd-d376-5b07-b4fd-54113268d3a6
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase;{45d7319d-c9eb-5109-9668-ff3fc6ccdf11}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase>
     argument Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=4 reverse=173
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=117 reverse=101
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase name=value
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ZoomSnapPointBase]
     guid 2705789a-e69c-5274-b15b-ca245be267e2
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase;{c6d08756-0860-5c2d-abec-6eb4aa4b53d7}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase>
     argument Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=4 reverse=173
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=117 reverse=101
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase name=value
 
-interface Windows.Foundation.Collections.IVector<System.Object> concrete
+interface Windows.Foundation.Collections.IVector<System.Object> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Object]
     guid b32bdca4-5e52-5b27-bc5d-d66a1a268c2a
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.Object>
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=173
+            in object name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out object return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array object name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=117 reverse=101
+            in object name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in object name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=211
+            pass_array object name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in object name=value
 
-interface Windows.Foundation.Collections.IVectorView<System.Single> concrete
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ScrollSnapPointBase]
+    guid ffd69432-94da-50ae-ac63-1dadc0e9900f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase;{45d7319d-c9eb-5109-9668-ff3fc6ccdf11}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase>
+    argument Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=117 reverse=66
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ZoomSnapPointBase]
+    guid 09386c00-10c1-5ae0-8e62-3dfb5198c489
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase;{c6d08756-0860-5c2d-abec-6eb4aa4b53d7}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase>
+    argument Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=117 reverse=66
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.Object> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Object]
+    guid a6487363-b074-5c60-ab16-866dce4ee54d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Object>
+    argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out object return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array object name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=117 reverse=66
+            in object name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.Single> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Single]
     guid 7bca64fd-150c-5d50-b56b-9f4f474c5930
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};f4)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Single>
     argument System.Single
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Single> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Single> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Single> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Single> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out single return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Single> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array single name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Single> shape=100 reverse=56
+            in single name=value
+            out uint32 name=index
+            out boolean return
 
 interface Microsoft.UI.Xaml.Controls.Primitives.IZoomSnapPoint
     guid 8101d353-8db3-5ac6-a7f8-b18eb9c123ac
@@ -4185,94 +5174,184 @@ class Microsoft.UI.Xaml.Controls.Primitives.ToolTipTemplateSettings python_type
             out double return
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum,Microsoft.UI.Xaml.Controls.ColorChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ColorSpectrum, ColorChangedEventArgs]
     guid 0d0cd229-eaa3-57d4-8cef-a2026b779791
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum;{75305916-882d-5667-bfd0-0af72d502d72});rc(Microsoft.UI.Xaml.Controls.ColorChangedEventArgs;{148d57a2-b1cb-5f5d-b6b5-512805d71761}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum
     argument Microsoft.UI.Xaml.Controls.ColorChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ColorChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase,Microsoft.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[FlyoutBase, FlyoutBaseClosingEventArgs]
     guid 4451ca06-3e60-5c62-8749-2660907fb86c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase;{bb6603bf-744d-5c31-a87d-744394634d77});rc(Microsoft.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs;{7cb280b4-1cca-5a5a-8ea4-191a2bbc8b32}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase
     argument Microsoft.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase name=sender
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.IScrollController,Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerAddScrollVelocityRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IScrollController, ScrollControllerAddScrollVelocityRequestedEventArgs]
     guid c0a4356f-c7c1-5bcb-8f1e-0f138c82cc8c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{54396786-1726-53d6-97a3-40af0838314c};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerAddScrollVelocityRequestedEventArgs;{317bbc1a-0cf7-5815-a8a7-bd7e6eef966a}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.IScrollController
     argument Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerAddScrollVelocityRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Microsoft.UI.Xaml.Controls.Primitives.IScrollController name=sender
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerAddScrollVelocityRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.IScrollController,Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollByRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IScrollController, ScrollControllerScrollByRequestedEventArgs]
     guid c4fee9cd-ceef-5eed-bf38-75f89964c853
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{54396786-1726-53d6-97a3-40af0838314c};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollByRequestedEventArgs;{e7f305fa-4073-5d88-8bf1-ae4ecb9208bf}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.IScrollController
     argument Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollByRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Microsoft.UI.Xaml.Controls.Primitives.IScrollController name=sender
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollByRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.IScrollController,Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollToRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IScrollController, ScrollControllerScrollToRequestedEventArgs]
     guid 9d17f256-33c9-5cc5-b4d9-ea416e8e2999
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{54396786-1726-53d6-97a3-40af0838314c};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollToRequestedEventArgs;{73f16b99-7310-5c73-872b-276e5a9d4913}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.IScrollController
     argument Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollToRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Microsoft.UI.Xaml.Controls.Primitives.IScrollController name=sender
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerScrollToRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.IScrollController,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[IScrollController, Object]
     guid 8cab3d95-2643-54a4-8007-e267346eefbd
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{54396786-1726-53d6-97a3-40af0838314c};cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.IScrollController
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Microsoft.UI.Xaml.Controls.Primitives.IScrollController name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo,Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerPanRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IScrollControllerPanningInfo, ScrollControllerPanRequestedEventArgs]
     guid 8f3ff86b-c0ee-5f17-948a-38d99f2f8d25
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{53d5b301-9aab-59bc-92cd-42cf21abd590};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerPanRequestedEventArgs;{beee064e-1d4d-5a1a-8781-acf1587a5d6a}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo
     argument Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerPanRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo name=sender
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollControllerPanRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[IScrollControllerPanningInfo, Object]
     guid 7a063665-0787-5de3-81d6-bc11ef04248f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{53d5b301-9aab-59bc-92cd-42cf21abd590};cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter,Microsoft.UI.Xaml.Controls.ScrollingAnchorRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ScrollPresenter, ScrollingAnchorRequestedEventArgs]
     guid 2889a65e-2d95-5770-8cc7-c0d34a525df1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter;{424b8afd-f7aa-5e5b-9d0b-5f0ea4e1a56e});rc(Microsoft.UI.Xaml.Controls.ScrollingAnchorRequestedEventArgs;{6a46cb4b-ab26-55b2-aa76-9b337a4f8e8e}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter
     argument Microsoft.UI.Xaml.Controls.ScrollingAnchorRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ScrollingAnchorRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter,Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ScrollPresenter, ScrollingBringingIntoViewEventArgs]
     guid b6bbe7ed-61e5-59da-93b2-d2fb63ed22ad
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter;{424b8afd-f7aa-5e5b-9d0b-5f0ea4e1a56e});rc(Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs;{09760d99-d60c-5c76-8033-127b2085358c}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter
     argument Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter,Microsoft.UI.Xaml.Controls.ScrollingScrollAnimationStartingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ScrollPresenter, ScrollingScrollAnimationStartingEventArgs]
     guid 3deca623-443c-54f2-9877-5a8afa813887
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter;{424b8afd-f7aa-5e5b-9d0b-5f0ea4e1a56e});rc(Microsoft.UI.Xaml.Controls.ScrollingScrollAnimationStartingEventArgs;{7acb0423-6fc7-516b-ab67-03a4a4285a90}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter
     argument Microsoft.UI.Xaml.Controls.ScrollingScrollAnimationStartingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ScrollingScrollAnimationStartingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter,Microsoft.UI.Xaml.Controls.ScrollingScrollCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ScrollPresenter, ScrollingScrollCompletedEventArgs]
     guid ee55f2ad-9d2b-53b9-86b3-9a0cedb6e170
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter;{424b8afd-f7aa-5e5b-9d0b-5f0ea4e1a56e});rc(Microsoft.UI.Xaml.Controls.ScrollingScrollCompletedEventArgs;{9bdeae9c-972c-54ae-9c62-fc1a03ff3fa8}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter
     argument Microsoft.UI.Xaml.Controls.ScrollingScrollCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ScrollingScrollCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter,Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ScrollPresenter, ScrollingZoomAnimationStartingEventArgs]
     guid 39a1448d-8545-5620-928e-b5c249bae94c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter;{424b8afd-f7aa-5e5b-9d0b-5f0ea4e1a56e});rc(Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs;{59bfb77b-47c9-5691-bdcd-536fbe8eb8c1}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter
     argument Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter,Microsoft.UI.Xaml.Controls.ScrollingZoomCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ScrollPresenter, ScrollingZoomCompletedEventArgs]
     guid 358bdb56-496f-5e61-b553-aa6edad14ed0
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter;{424b8afd-f7aa-5e5b-9d0b-5f0ea4e1a56e});rc(Microsoft.UI.Xaml.Controls.ScrollingZoomCompletedEventArgs;{c821207e-ab2a-5f6c-9074-411840a68d55}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter
     argument Microsoft.UI.Xaml.Controls.ScrollingZoomCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ScrollingZoomCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[ScrollPresenter, Object]
     guid 9301b1f0-4592-54b0-a074-7294734cce33
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter;{424b8afd-f7aa-5e5b-9d0b-5f0ea4e1a56e});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter name=sender
+            in object name=args
 
 class Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPoint composable python_type
     py ZoomSnapPoint
@@ -4512,14 +5591,49 @@ class System.Object external
 class System.Single external
     py winrt.system.Single
 
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
 struct Windows.Foundation.Point external
     py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
 
 struct Windows.Foundation.Size external
     py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Foundation.Numerics.Vector2 external
     py winrt.windows.foundation.numerics.Vector2

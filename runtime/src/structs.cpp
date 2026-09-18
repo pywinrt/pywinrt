@@ -15,6 +15,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "generics.h"
 #include "interp.h"
 #include "objects.h"
 #include "structs.h"
@@ -197,6 +198,7 @@ namespace py::interp
                 return;
             case table::type_code::interface_:
             case table::type_code::class_:
+            case table::type_code::generic:
             {
                 auto const info = resolve(owner, field.type, field.info);
                 if (!info || !info->guid)
@@ -212,6 +214,17 @@ namespace py::interp
                 }
 
                 *reinterpret_cast<void**>(slot) = unwrap_abi(value, info->guid);
+                return;
+            }
+            case table::type_code::reference:
+            {
+                auto const info = resolve(owner, field.type, field.info);
+                if (!info)
+                {
+                    throw python_exception();
+                }
+
+                *reinterpret_cast<void**>(slot) = reference_from_python(*info, value);
                 return;
             }
             case table::type_code::struct_:
@@ -235,8 +248,7 @@ namespace py::interp
             }
             default:
                 PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "delegates, parameterized interfaces and IReference<T> are not interpreted yet");
+                    PyExc_NotImplementedError, "a delegate is not interpreted yet");
                 throw python_exception();
             }
         }
@@ -1028,3 +1040,80 @@ namespace py::interp
         return remember(entry, entry.py_type);
     }
 } // namespace py::interp
+
+namespace
+{
+    /**
+     * What the table says about the struct type @p type, or @c nullptr with a
+     * Python error set.
+     */
+    py::interp::type_entry* struct_entry(PyTypeObject* type) noexcept
+    {
+        auto const info = py::interp::get_type_entry(type);
+        if (!info)
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "'%s' is not a type a projection table built",
+                type->tp_name);
+            return nullptr;
+        }
+
+        if (info->category != py::table::category::struct_)
+        {
+            PyErr_Format(PyExc_TypeError, "'%s' is not a struct", type->tp_name);
+            return nullptr;
+        }
+
+        return info;
+    }
+} // namespace
+
+/**
+ * The Python object for the struct value at @p value, which must have the
+ * layout that the runtime computed for @p type.
+ *
+ * This and py::struct_from_python() replace the capsule of per-type conversion
+ * functions that a projection module used to publish. A struct is passed by
+ * value, so the old protocol handed one back as a C++ type and could not be
+ * written generically at all.
+ */
+PyObject* py::struct_to_python(PyTypeObject* type, void const* value) noexcept
+{
+    auto const info = struct_entry(type);
+    if (!info)
+    {
+        return nullptr;
+    }
+
+    return py::interp::struct_to_python(*info, value);
+}
+
+/**
+ * Reads a Python value of the struct type @p type into @p out, which must be
+ * as large as the runtime computed that type to be.
+ *
+ * @returns @c false with a Python error set. On success @p out owns whatever
+ * is in it, which for a struct with a string or an interface field is a
+ * reference the caller has to give back.
+ */
+bool py::struct_from_python(PyTypeObject* type, PyObject* obj, void* out) noexcept
+{
+    auto const info = struct_entry(type);
+    if (!info)
+    {
+        return false;
+    }
+
+    try
+    {
+        py::interp::struct_from_python(*info, obj, out);
+
+        return true;
+    }
+    catch (...)
+    {
+        to_PyErr();
+        return false;
+    }
+}

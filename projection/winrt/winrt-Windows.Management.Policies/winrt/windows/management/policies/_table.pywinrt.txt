@@ -73,13 +73,23 @@ enum Windows.Management.Policies.NamedPolicyKind python_type
     signature enum(Windows.Management.Policies.NamedPolicyKind;i4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Management.Policies.NamedPolicyData,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[NamedPolicyData, Object]
     guid 791a3c00-5aa2-5f0e-bb17-3480bc2d96cc
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Management.Policies.NamedPolicyData;{38dcb198-95ac-4077-a643-8078cae26400});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Management.Policies.NamedPolicyData
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Management.Policies.NamedPolicyData name=sender
+            in object name=args
 
 class System.Object external
     py winrt.system.Object
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 interface Windows.Storage.Streams.IBuffer external
     py winrt.windows.storage.streams._IBuffer

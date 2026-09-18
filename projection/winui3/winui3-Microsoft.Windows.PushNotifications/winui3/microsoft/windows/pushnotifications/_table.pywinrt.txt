@@ -2,11 +2,64 @@ format 4.0
 generator 0.0.0
 namespace Microsoft.Windows.PushNotifications
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> concrete
-    guid f9b84a9d-7d59-5445-9cf1-33a6c4518241
-    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult;{4df3717f-5d33-56e9-b381-1b350c95722e});struct(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus;enum(Microsoft.Windows.PushNotifications.PushNotificationChannelStatus;i4);struct(Windows.Foundation.HResult;i4);u4))
+delegate Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[PushNotificationCreateChannelResult, PushNotificationCreateChannelStatus]
+    guid 5a89cffd-b4d1-5dc0-add8-7af59fa52b49
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult;{4df3717f-5d33-56e9-b381-1b350c95722e});struct(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus;enum(Microsoft.Windows.PushNotifications.PushNotificationChannelStatus;i4);struct(Windows.Foundation.HResult;i4);u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
     argument Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult
     argument Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=316 reverse=388
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> name=asyncInfo
+            in struct type=Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[PushNotificationCreateChannelResult, PushNotificationCreateChannelStatus]
+    guid 7d14c00d-233f-5126-83b7-e84a5c3d9cce
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult;{4df3717f-5d33-56e9-b381-1b350c95722e});struct(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus;enum(Microsoft.Windows.PushNotifications.PushNotificationChannelStatus;i4);struct(Windows.Foundation.HResult;i4);u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult
+    argument Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[PushNotificationCreateChannelResult, PushNotificationCreateChannelStatus]
+    guid f9b84a9d-7d59-5445-9cf1-33a6c4518241
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult;{4df3717f-5d33-56e9-b381-1b350c95722e});struct(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus;enum(Microsoft.Windows.PushNotifications.PushNotificationChannelStatus;i4);struct(Windows.Foundation.HResult;i4);u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult
+    argument Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> shape=4 reverse=121 role=get_results
+            out class type=Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult return
 
 interface Microsoft.Windows.PushNotifications.IPushNotificationChannel
     guid da28bbcb-7695-5d38-af82-f30b72fef1f6
@@ -111,10 +164,16 @@ class Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs pyth
             out class type=Windows.ApplicationModel.Background.BackgroundTaskDeferral return
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.Windows.PushNotifications.PushNotificationManager,Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PushNotificationManager, PushNotificationReceivedEventArgs]
     guid 64f9e503-18cf-56bf-b85a-97fb8261e2d2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Windows.PushNotifications.PushNotificationManager;{902f4aba-ff63-5dfe-a88f-15cc6bed55ff});rc(Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs;{fbd4ec53-bb83-5495-8777-d3cf13e4299c}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.Windows.PushNotifications.PushNotificationManager
     argument Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Windows.PushNotifications.PushNotificationManager name=sender
+            in class type=Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs name=args
 
 delegate Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler external
     py winrt.windows.applicationmodel.background.BackgroundTaskCanceledEventHandler
@@ -122,6 +181,29 @@ delegate Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler 
 
 class Windows.ApplicationModel.Background.BackgroundTaskDeferral external
     py winrt.windows.applicationmodel.background.BackgroundTaskDeferral
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri

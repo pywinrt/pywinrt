@@ -77,7 +77,7 @@ class Windows.Networking.HostName python_type stringable
             in class type=Windows.Networking.HostName name=hostName
             out boolean return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
 
 enum Windows.Networking.HostNameSortOptions python_type

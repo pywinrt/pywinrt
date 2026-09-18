@@ -97,6 +97,44 @@ enum TableMemberFlags : uint
     Protected = 1 << 5,
     Deprecated = 1 << 6,
     DefaultOverload = 1 << 7,
+    RoleMask = 0x1f << TableWriter.MemberRoleShift,
+}
+
+/// <summary>
+/// The part a member plays in a Python protocol, which is what the slots of a
+/// projected collection call.
+/// </summary>
+/// <remarks>
+/// Which WinRT member stands for <c>__len__</c> or <c>__getitem__</c> is a
+/// convention rather than anything the metadata states, and what settles it is
+/// the parameterized interface that declares the member: the <c>Size</c> of an
+/// <c>IVector&lt;T&gt;</c> is a length, the <c>Size</c> of something else is a
+/// property named <c>size</c>. Only the generator has that interface to hand,
+/// so it writes the answer down instead of leaving the runtime to guess it
+/// from a name.
+/// </remarks>
+enum TableMemberRole : uint
+{
+    None = 0,
+    Size = 1,
+    GetAt = 2,
+    SetAt = 3,
+    RemoveAt = 4,
+    InsertAt = 5,
+    First = 6,
+    Current = 7,
+    HasCurrent = 8,
+    MoveNext = 9,
+    Lookup = 10,
+    HasKey = 11,
+    Insert = 12,
+    Remove = 13,
+    Status = 14,
+    Completed = 15,
+    GetResults = 16,
+    ToString = 17,
+    Value = 18,
+    Close = 19,
 }
 
 enum TableParamFlags : uint
@@ -164,6 +202,7 @@ sealed class TableMember(string winrtName, TableMemberKind kind)
     public string WinRtName { get; } = winrtName;
     public TableMemberKind Kind { get; } = kind;
     public TableMemberFlags Flags { get; set; }
+    public TableMemberRole Role { get; set; }
     public TableType? Declaring { get; set; }
     public uint Slot { get; set; }
     public uint ForwardShape { get; set; } = uint.MaxValue;
@@ -204,6 +243,11 @@ sealed class TableField(string pyName, string winrtName, TypeCode code, TableTyp
 /// </remarks>
 sealed class TableWriter
 {
+    /// <summary>
+    /// Where the member role sits in a member record's flags.
+    /// </summary>
+    public const int MemberRoleShift = 8;
+
     private const uint NoRef = uint.MaxValue;
 
     // The compatibility generation, which is the same number as the ABI major in
@@ -219,6 +263,12 @@ sealed class TableWriter
 
     private readonly Dictionary<string, TableType> types = new(StringComparer.Ordinal);
     private readonly List<TableType> order = [];
+
+    /// <summary>
+    /// The projected form of the definition behind a generic instance, by full
+    /// name, since the same definition serves every instance of it.
+    /// </summary>
+    private readonly Dictionary<string, ProjectedType> definitions = new(StringComparer.Ordinal);
 
     private TableWriter(
         QualifiedNamespace ns,
@@ -441,6 +491,76 @@ sealed class TableWriter
     }
 
     /// <summary>
+    /// The role of each member that a Python protocol is built on, by the
+    /// interface that declares it and the member's WinRT name.
+    /// </summary>
+    private static readonly Dictionary<string, TableMemberRole> memberRoles = new(
+        StringComparer.Ordinal
+    )
+    {
+        ["Windows.Foundation.Collections.IVector`1.get_Size"] = TableMemberRole.Size,
+        ["Windows.Foundation.Collections.IVector`1.GetAt"] = TableMemberRole.GetAt,
+        ["Windows.Foundation.Collections.IVector`1.SetAt"] = TableMemberRole.SetAt,
+        ["Windows.Foundation.Collections.IVector`1.InsertAt"] = TableMemberRole.InsertAt,
+        ["Windows.Foundation.Collections.IVector`1.RemoveAt"] = TableMemberRole.RemoveAt,
+        ["Windows.Foundation.Collections.IVectorView`1.get_Size"] = TableMemberRole.Size,
+        ["Windows.Foundation.Collections.IVectorView`1.GetAt"] = TableMemberRole.GetAt,
+        ["Windows.Foundation.Collections.IMap`2.get_Size"] = TableMemberRole.Size,
+        ["Windows.Foundation.Collections.IMap`2.Lookup"] = TableMemberRole.Lookup,
+        ["Windows.Foundation.Collections.IMap`2.HasKey"] = TableMemberRole.HasKey,
+        ["Windows.Foundation.Collections.IMap`2.Insert"] = TableMemberRole.Insert,
+        ["Windows.Foundation.Collections.IMap`2.Remove"] = TableMemberRole.Remove,
+        ["Windows.Foundation.Collections.IMapView`2.get_Size"] = TableMemberRole.Size,
+        ["Windows.Foundation.Collections.IMapView`2.Lookup"] = TableMemberRole.Lookup,
+        ["Windows.Foundation.Collections.IMapView`2.HasKey"] = TableMemberRole.HasKey,
+        ["Windows.Foundation.Collections.IIterable`1.First"] = TableMemberRole.First,
+        ["Windows.Foundation.Collections.IIterator`1.get_Current"] = TableMemberRole.Current,
+        ["Windows.Foundation.Collections.IIterator`1.get_HasCurrent"] = TableMemberRole.HasCurrent,
+        ["Windows.Foundation.Collections.IIterator`1.MoveNext"] = TableMemberRole.MoveNext,
+        ["Windows.Foundation.IAsyncInfo.get_Status"] = TableMemberRole.Status,
+        ["Windows.Foundation.IAsyncAction.get_Completed"] = TableMemberRole.Completed,
+        ["Windows.Foundation.IAsyncAction.GetResults"] = TableMemberRole.GetResults,
+        ["Windows.Foundation.IAsyncActionWithProgress`1.get_Completed"] = TableMemberRole.Completed,
+        ["Windows.Foundation.IAsyncActionWithProgress`1.GetResults"] = TableMemberRole.GetResults,
+        ["Windows.Foundation.IAsyncOperation`1.get_Completed"] = TableMemberRole.Completed,
+        ["Windows.Foundation.IAsyncOperation`1.GetResults"] = TableMemberRole.GetResults,
+        ["Windows.Foundation.IAsyncOperationWithProgress`2.get_Completed"] =
+            TableMemberRole.Completed,
+        ["Windows.Foundation.IAsyncOperationWithProgress`2.GetResults"] =
+            TableMemberRole.GetResults,
+        ["Windows.Foundation.IStringable.ToString"] = TableMemberRole.ToString,
+        ["Windows.Foundation.IReference`1.get_Value"] = TableMemberRole.Value,
+        ["Windows.Foundation.IClosable.Close"] = TableMemberRole.Close,
+    };
+
+    /// <summary>
+    /// Gets the part a member plays in a Python protocol.
+    /// </summary>
+    /// <param name="declaring">
+    /// The interface that declares the member, closed over its type arguments
+    /// where it has any, or <c>null</c> for a member that is reached without
+    /// one.
+    /// </param>
+    /// <param name="name">The WinRT name of the member.</param>
+    /// <remarks>
+    /// The name alone does not answer this. A runtime class of its own may
+    /// have a <c>Size</c> property or a <c>Remove</c> method that means
+    /// something else entirely, and it is only the collection interface behind
+    /// the member that makes it the one <c>len()</c> or <c>del</c> calls.
+    /// </remarks>
+    private static TableMemberRole GetMemberRole(TypeReference? declaring, string name)
+    {
+        if (declaring is null)
+        {
+            return TableMemberRole.None;
+        }
+
+        var key = $"{declaring.GetElementType().FullName}.{name}";
+
+        return memberRoles.GetValueOrDefault(key, TableMemberRole.None);
+    }
+
+    /// <summary>
     /// Gets every interface <paramref name="type"/> implements, directly or
     /// through another interface, which is the set an instance can be queried
     /// for.
@@ -487,7 +607,11 @@ sealed class TableWriter
         }
     }
 
-    private void AddDelegateInvoke(TableType record, ProjectedType type)
+    private void AddDelegateInvoke(
+        TableType record,
+        ProjectedType type,
+        GenericContext? context = null
+    )
     {
         var invoke = type.Type.Methods.FirstOrDefault(m => m.Name == "Invoke");
 
@@ -502,16 +626,18 @@ sealed class TableWriter
             Slot = ShapeCensus.DelegateInvokeSlot,
         };
 
+        var map = context?.Map;
+
         member.InCount = (uint)invoke.Parameters.Count(p => p.IsPythonInParam);
 
-        AddParams(member, invoke, null);
-        SetShapes(member, invoke, null);
+        AddParams(member, invoke, map);
+        SetShapes(member, invoke, map);
 
         group.Members.Add(member);
         record.Groups.Add(group);
     }
 
-    private void AddMembers(TableType record, ProjectedType type)
+    private void AddMembers(TableType record, ProjectedType type, GenericContext? context = null)
     {
         if (type.Constructors.Count > 0)
         {
@@ -519,7 +645,9 @@ sealed class TableWriter
 
             foreach (var constructor in type.Constructors.OrderBy(c => c.PyInParamCount))
             {
-                group.Members.Add(MakeMember(type, constructor, TableMemberKind.Constructor));
+                group.Members.Add(
+                    MakeMember(type, constructor, TableMemberKind.Constructor, context)
+                );
             }
 
             record.Groups.Add(group);
@@ -537,11 +665,15 @@ sealed class TableWriter
                 group.Flags |= TableGroupFlags.Static;
             }
 
-            group.Members.Add(MakeMember(type, property.GetMethod, TableMemberKind.PropertyGet));
+            group.Members.Add(
+                MakeMember(type, property.GetMethod, TableMemberKind.PropertyGet, context)
+            );
 
             if (property.SetMethod is ProjectedMethod setMethod)
             {
-                group.Members.Add(MakeMember(type, setMethod, TableMemberKind.PropertyPut));
+                group.Members.Add(
+                    MakeMember(type, setMethod, TableMemberKind.PropertyPut, context)
+                );
             }
 
             record.Groups.Add(group);
@@ -559,8 +691,12 @@ sealed class TableWriter
                 group.Flags |= TableGroupFlags.Static;
             }
 
-            group.Members.Add(MakeMember(type, @event.AddMethod, TableMemberKind.EventAdd));
-            group.Members.Add(MakeMember(type, @event.RemoveMethod, TableMemberKind.EventRemove));
+            group.Members.Add(
+                MakeMember(type, @event.AddMethod, TableMemberKind.EventAdd, context)
+            );
+            group.Members.Add(
+                MakeMember(type, @event.RemoveMethod, TableMemberKind.EventRemove, context)
+            );
 
             record.Groups.Add(group);
         }
@@ -576,7 +712,7 @@ sealed class TableWriter
 
             foreach (var overload in methodGroup.Overloads.OrderBy(o => o.PyInParamCount))
             {
-                group.Members.Add(MakeMember(type, overload, TableMemberKind.Method));
+                group.Members.Add(MakeMember(type, overload, TableMemberKind.Method, context));
             }
 
             if (group.Members.All(m => m.Flags.HasFlag(TableMemberFlags.Deprecated)))
@@ -588,7 +724,12 @@ sealed class TableWriter
         }
     }
 
-    private TableMember MakeMember(ProjectedType type, ProjectedMethod method, TableMemberKind kind)
+    private TableMember MakeMember(
+        ProjectedType type,
+        ProjectedMethod method,
+        TableMemberKind kind,
+        GenericContext? context = null
+    )
     {
         var isFactoryCall = method.IsStatic || method.IsConstructor;
         var factoryMethod = isFactoryCall ? type.GetFactoryMethod(method) : null;
@@ -598,9 +739,25 @@ sealed class TableWriter
         var declaring = isFactoryCall
             ? factoryMethod?.DeclaringType
             : type.GetDeclaringInterface(method);
+
+        if (declaring is not null)
+        {
+            declaring = SubstituteDeclaring(declaring, context, context?.Map);
+        }
+
+        // What a member's parameters mean is settled by the interface that
+        // declares it, which is the one reference that has been closed over
+        // every type argument on the way to it. A class lists its interfaces
+        // closed - JsonArray implements IIterable<IJsonValue> directly - but
+        // an interface does not: IObservableMap<K, V> requires IMap<K, V>,
+        // which requires IIterable<IKeyValuePair<K, V>>, and walking that
+        // chain a level at a time loses what K and V stood for.
+        var map = GenericArguments(declaring) ?? EffectiveMap(method.GenericArgMap, context);
+
         var member = new TableMember(method.Method.Name, kind)
         {
             Declaring = declaring is null ? null : GetTypeRecord(declaring),
+            Role = GetMemberRole(declaring, method.Method.Name),
             Slot = GetSlot(type, method),
         };
 
@@ -654,8 +811,8 @@ sealed class TableWriter
         // runtime's business rather than the caller's.
         var implicitFrom = method.IsConstructor ? method.Method.Parameters.Count : int.MaxValue;
 
-        AddParams(member, abiMethod, method.GenericArgMap, implicitFrom);
-        SetShapes(member, abiMethod, method.GenericArgMap);
+        AddParams(member, abiMethod, map, implicitFrom);
+        SetShapes(member, abiMethod, map);
 
         if (method.IsConstructor)
         {
@@ -799,6 +956,164 @@ sealed class TableWriter
                     + "delete runtime/src/shapes.json and regenerate"
             );
 
+    // ----- generic instances ----------------------------------------------
+
+    /// <summary>
+    /// The generic instance whose members are being written and the type
+    /// arguments its definition's parameters stand for.
+    /// </summary>
+    /// <remarks>
+    /// A parameterized interface is written once per instance a namespace
+    /// names, because what its members pass is not the same for
+    /// <c>IVector&lt;String&gt;</c> as for <c>IVector&lt;Point&gt;</c>: the
+    /// first passes a pointer where the second passes a struct by value, so
+    /// they are two ABI shapes and two sets of type codes. The names, the
+    /// slots and the grouping all come from the one open definition.
+    /// </remarks>
+    private sealed record GenericContext(
+        GenericInstanceType Instance,
+        IReadOnlyDictionary<GenericParameter, TypeReference> Map
+    );
+
+    /// <summary>
+    /// Composes the map of a member reached through a required interface with
+    /// the one that closes the type it was reached from.
+    /// </summary>
+    /// <remarks>
+    /// <c>IVector&lt;String&gt;</c> reaches <c>First()</c> through
+    /// <c>IIterable&lt;T&gt;</c>, so the member's own map says
+    /// <c>IIterable.T</c> is <c>IVector.T</c> and the context says
+    /// <c>IVector.T</c> is <c>String</c>. The two sets of keys belong to
+    /// different types, so composing them is one dictionary.
+    /// </remarks>
+    private static IReadOnlyDictionary<GenericParameter, TypeReference>? EffectiveMap(
+        IReadOnlyDictionary<GenericParameter, TypeReference>? map,
+        GenericContext? context
+    )
+    {
+        if (context is null)
+        {
+            return map;
+        }
+
+        if (map is null)
+        {
+            return context.Map;
+        }
+
+        var composed = new Dictionary<GenericParameter, TypeReference>(context.Map);
+
+        foreach (var (parameter, argument) in map)
+        {
+            composed[parameter] = ProjectedType.SubstituteGenericArgs(argument, context.Map);
+        }
+
+        return composed;
+    }
+
+    /// <summary>
+    /// Fills in whatever type arguments <paramref name="map"/> names, so that a
+    /// member of a generic instance mentions the instances it really passes
+    /// and not the open ones its definition is written in terms of.
+    /// </summary>
+    private static TypeReference Substitute(
+        TypeReference type,
+        IReadOnlyDictionary<GenericParameter, TypeReference>? map
+    ) => map is null ? type : ProjectedType.SubstituteGenericArgs(type, map);
+
+    /// <summary>
+    /// Gets the interface that declares a member of a generic instance, which
+    /// for the definition's own members is the instance being written rather
+    /// than the definition the member was read from.
+    /// </summary>
+    private static TypeReference SubstituteDeclaring(
+        TypeReference declaring,
+        GenericContext? context,
+        IReadOnlyDictionary<GenericParameter, TypeReference>? map
+    )
+    {
+        if (context is null)
+        {
+            return declaring;
+        }
+
+        if (declaring.FullName == context.Instance.ElementType.FullName)
+        {
+            return context.Instance;
+        }
+
+        return Substitute(declaring, map);
+    }
+
+    /// <summary>
+    /// The type arguments of a generic instance, by the parameter each fills
+    /// in, or <c>null</c> if the type is not one.
+    /// </summary>
+    private static IReadOnlyDictionary<GenericParameter, TypeReference>? GenericArguments(
+        TypeReference? type
+    ) =>
+        type is GenericInstanceType generic
+        && generic.ElementType.TryResolve() is TypeDefinition definition
+            ? definition.GenericParameters.Zip(generic.GenericArguments).ToDictionary()
+            : null;
+
+    /// <summary>
+    /// The projected form of a parameterized definition, which is where the
+    /// Python names, the grouping and the vtable slots of every instance of it
+    /// come from.
+    /// </summary>
+    private ProjectedType GetProjectedDefinition(TypeDefinition definition)
+    {
+        if (definitions.TryGetValue(definition.FullName, out var existing))
+        {
+            return existing;
+        }
+
+        var projected = new ProjectedType(definition);
+
+        definitions.Add(definition.FullName, projected);
+
+        return projected;
+    }
+
+    /// <summary>
+    /// Writes the members of a generic instance, which are the members of its
+    /// definition with every type argument filled in.
+    /// </summary>
+    private void AddGenericInstanceMembers(
+        TableType record,
+        GenericInstanceType generic,
+        TypeDefinition definition
+    )
+    {
+        var projected = GetProjectedDefinition(definition);
+        var context = new GenericContext(
+            generic,
+            definition.GenericParameters.Zip(generic.GenericArguments).ToDictionary()
+        );
+
+        // The Python type of an instance derives from the one its definition is
+        // bound to, because that is where the collection protocol mixins that
+        // __init__.py adds are.
+        record.BaseType = GetTypeRecord(definition);
+
+        SetProtocolFlags(record, projected);
+
+        if (definition.GetCategory() == Category.Delegate)
+        {
+            AddDelegateInvoke(record, projected, context);
+
+            return;
+        }
+
+        foreach (var iface in GetRequiredInterfaces(definition))
+        {
+            record.Interfaces.Add(GetTypeRecord(SubstituteDeclaring(iface, context, context.Map)));
+        }
+
+        AddMembers(record, projected, context);
+    }
+
     // ----- type records ---------------------------------------------------
 
     private TableType GetTypeRecord(TypeReference type)
@@ -891,8 +1206,39 @@ sealed class TableWriter
             record.GenericArgs.Add(GetTypeRecord(argument));
         }
 
+        if (isConcrete && definition is not null)
+        {
+            record.PyName = GetInstancePyName(generic, definition);
+
+            AddGenericInstanceMembers(record, generic, definition);
+        }
+
         return record;
     }
+
+    /// <summary>
+    /// The name the Python type of a generic instance goes by.
+    /// </summary>
+    /// <remarks>
+    /// It is fully qualified, the way the name of an external reference is,
+    /// because the type belongs to the module that defines the parameterized
+    /// interface rather than to whichever module first names the instance.
+    /// Nothing is bound to it: an instance is only ever reached through a
+    /// member that returns one.
+    /// </remarks>
+    private string GetInstancePyName(GenericInstanceType generic, TypeDefinition definition)
+    {
+        var module = definition.GetQualifiedNamespace(packageMap).PyModuleName;
+        var prefix = definition.GetCategory() == Category.Interface ? "_" : "";
+
+        return $"{module}.{prefix}{GetInstanceDisplayName(generic)}";
+    }
+
+    private static string GetInstanceDisplayName(TypeReference type) =>
+        type is GenericInstanceType generic
+            ? $"{generic.ElementType.Name.ToNonGeneric()}"
+                + $"[{string.Join(", ", generic.GenericArguments.Select(GetInstanceDisplayName))}]"
+            : type.Name.ToNonGeneric();
 
     /// <summary>
     /// True if every type argument of <paramref name="type"/>, and of the
@@ -936,7 +1282,7 @@ sealed class TableWriter
         {
             case GenericInstanceType generic
                 when generic.ElementType.FullName == "Windows.Foundation.IReference`1":
-                return (TypeCode.Reference, GetTypeRecord(generic));
+                return (TypeCode.Reference, GetTypeRecord(Substitute(generic, map)));
             case GenericInstanceType generic:
                 // An instance of a parameterized delegate - EventHandler<T>,
                 // TypedEventHandler<S, R> - is a delegate like any other: what
@@ -947,7 +1293,7 @@ sealed class TableWriter
                     generic.ElementType.TryResolve()?.GetCategory() == Category.Delegate
                         ? TypeCode.Delegate
                         : TypeCode.Generic,
-                    GetTypeRecord(generic)
+                    GetTypeRecord(Substitute(generic, map))
                 );
             case { FullName: "System.Void" }:
                 return (TypeCode.Void, null);
@@ -1081,6 +1427,30 @@ sealed class TableWriter
         ((uint)TableMemberFlags.Protected, "protected"),
         ((uint)TableMemberFlags.Deprecated, "deprecated"),
         ((uint)TableMemberFlags.DefaultOverload, "default_overload"),
+    ];
+
+    private static readonly string[] roleNames =
+    [
+        "none",
+        "size",
+        "get_at",
+        "set_at",
+        "remove_at",
+        "insert_at",
+        "first",
+        "current",
+        "has_current",
+        "move_next",
+        "lookup",
+        "has_key",
+        "insert",
+        "remove",
+        "status",
+        "completed",
+        "get_results",
+        "to_string",
+        "value",
+        "close",
     ];
 
     private static readonly string[] paramCategoryNames =
@@ -1303,6 +1673,11 @@ sealed class TableWriter
         if (member.ReverseShape != NoRef)
         {
             line.Append(" reverse=").Append(member.ReverseShape);
+        }
+
+        if (member.Role != TableMemberRole.None)
+        {
+            line.Append(" role=").Append(roleNames[(uint)member.Role]);
         }
 
         line.Append(FlagNames((uint)member.Flags, memberFlagNames));

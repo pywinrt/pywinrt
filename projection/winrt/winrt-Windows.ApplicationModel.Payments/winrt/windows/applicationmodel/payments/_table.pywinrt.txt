@@ -2,35 +2,275 @@ format 4.0
 generator 0.0.0
 namespace Windows.ApplicationModel.Payments
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PaymentCanMakePaymentResult]
+    guid 89ae5b89-6d05-5842-9cdf-f4cbf706dc5e
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult;{7696fe55-d5d3-4d3d-b345-45591759c510}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PaymentRequestSubmitResult]
+    guid cbcd07a6-ae2a-5a70-bc0b-9120560825d1
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.Payments.PaymentRequestSubmitResult;{7b9c3912-30f2-4e90-b249-8ce7d78ffe56}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Payments.PaymentRequestSubmitResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[String]]
+    guid 7c7899be-5f2e-5bf3-ade5-ad98b772c7cd
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PaymentCanMakePaymentResult]
     guid a467410a-11de-5090-b905-96a562d85de5
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult;{7696fe55-d5d3-4d3d-b345-45591759c510}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PaymentRequestSubmitResult]
     guid cf290deb-5549-57c3-8abd-53b76c643cca
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Payments.PaymentRequestSubmitResult;{7b9c3912-30f2-4e90-b249-8ce7d78ffe56}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.Payments.PaymentRequestSubmitResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.Payments.PaymentRequestSubmitResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[String]]
     guid 2f92b529-119b-575a-a419-3904b4e41af2
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<System.String>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.String>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.String>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentItem> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentDetailsModifier> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PaymentDetailsModifier]
+    guid 585d2b3d-cb34-58c4-81f4-1ea157996def
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Payments.PaymentDetailsModifier;{be1c7d65-4323-41d7-b305-dfcb765f69de}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.Payments.PaymentDetailsModifier
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentDetailsModifier> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentItem> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PaymentItem]
     guid b61b704c-e5fa-5524-8b95-7d03f5d36ae9
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Payments.PaymentItem;{685ac88b-79b2-4b76-9e03-a876223dfe72}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.ApplicationModel.Payments.PaymentItem
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentItem> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentMethodData> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentMethodData> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PaymentMethodData]
     guid 8c9ed87e-4add-58a8-ad9a-9dfa48ca250a
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Payments.PaymentMethodData;{d1d3caf4-de98-4129-b1b7-c3ad86237bf4}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.ApplicationModel.Payments.PaymentMethodData
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentMethodData> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentMethodData> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentShippingOption> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PaymentShippingOption]
+    guid de881c69-6642-54de-a8f7-d1a88b2404cf
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Payments.PaymentShippingOption;{13372ada-9753-4574-8966-93145a76c7f9}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.Payments.PaymentShippingOption
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentShippingOption> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentDetailsModifier> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PaymentDetailsModifier]
+    guid fafb6774-b665-5b8b-b1ef-95038c3aabe1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Payments.PaymentDetailsModifier;{be1c7d65-4323-41d7-b305-dfcb765f69de}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Payments.PaymentDetailsModifier
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Payments.PaymentDetailsModifier return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.Payments.PaymentDetailsModifier name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentItem> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PaymentItem]
+    guid 93c12cc3-6a0b-5f02-ac74-056007472731
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Payments.PaymentItem;{685ac88b-79b2-4b76-9e03-a876223dfe72}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Payments.PaymentItem
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentItem> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Payments.PaymentItem return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentItem> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentItem> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.Payments.PaymentItem name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentItem> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentMethodData> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PaymentMethodData]
+    guid 9666522e-e5ac-5374-a5d9-5cf57c4bf689
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Payments.PaymentMethodData;{d1d3caf4-de98-4129-b1b7-c3ad86237bf4}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Payments.PaymentMethodData
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentMethodData> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Payments.PaymentMethodData return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentMethodData> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentMethodData> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.Payments.PaymentMethodData name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentMethodData> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentShippingOption> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PaymentShippingOption]
+    guid 49edc9f4-2ce6-534c-b529-5ceec705def5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Payments.PaymentShippingOption;{13372ada-9753-4574-8966-93145a76c7f9}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Payments.PaymentShippingOption
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Payments.PaymentShippingOption return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.Payments.PaymentShippingOption name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.ApplicationModel.Payments.IPaymentAddress
     guid 5f2264e9-6f3a-4166-a018-0a0b06bb32b5
@@ -125,30 +365,145 @@ interface Windows.ApplicationModel.Payments.IPaymentToken
 interface Windows.ApplicationModel.Payments.IPaymentTokenFactory
     guid 988cd7aa-4753-4904-8373-dd7b08b995c1
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentDetailsModifier> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentDetailsModifier> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PaymentDetailsModifier]
     guid da7e871c-6e0c-5e32-be40-10715a9f75eb
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Payments.PaymentDetailsModifier;{be1c7d65-4323-41d7-b305-dfcb765f69de}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentDetailsModifier>
     argument Windows.ApplicationModel.Payments.PaymentDetailsModifier
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentDetailsModifier> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Payments.PaymentDetailsModifier return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Payments.PaymentDetailsModifier name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Payments.PaymentDetailsModifier name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentItem> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentItem> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PaymentItem]
     guid 6baf1241-1fa6-5c22-83ef-415e93cdf7b1
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Payments.PaymentItem;{685ac88b-79b2-4b76-9e03-a876223dfe72}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentItem>
     argument Windows.ApplicationModel.Payments.PaymentItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Payments.PaymentItem return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentItem> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Payments.PaymentItem name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentItem> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Payments.PaymentItem name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentMethodData> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentMethodData> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PaymentMethodData]
     guid 1011b9ba-6a05-5b16-82cf-0175085105e0
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Payments.PaymentMethodData;{d1d3caf4-de98-4129-b1b7-c3ad86237bf4}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentMethodData>
     argument Windows.ApplicationModel.Payments.PaymentMethodData
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentMethodData> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentMethodData> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentMethodData> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentMethodData> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Payments.PaymentMethodData return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentMethodData> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Payments.PaymentMethodData name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentMethodData> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Payments.PaymentMethodData name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentShippingOption> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentShippingOption> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PaymentShippingOption]
     guid 8c8128eb-8c33-56dd-9648-39e8040312d4
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Payments.PaymentShippingOption;{13372ada-9753-4574-8966-93145a76c7f9}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentShippingOption>
     argument Windows.ApplicationModel.Payments.PaymentShippingOption
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentShippingOption> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Payments.PaymentShippingOption return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Payments.PaymentShippingOption name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Payments.PaymentShippingOption name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.ApplicationModel.Payments.PaymentAddress activatable python_type
     py PaymentAddress
@@ -698,12 +1053,39 @@ class Windows.ApplicationModel.Payments.PaymentToken python_type
 class System.String external
     py winrt.system.String
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Foundation.Collections.ValueSet external
     py winrt.windows.foundation.collections.ValueSet

@@ -63,7 +63,7 @@ class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConf
         method ClearTrainingDataAsync slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=266
             out interface type=Windows.Foundation.IAsyncAction return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_model_data
         method GetModelData slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=223
             out interface type=Windows.Storage.Streams.IInputStream return
@@ -253,6 +253,248 @@ enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerS
     py ActivationSignalDetectorPowerState
     signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState;i4)
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Object> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Object]
+    guid 3f08262e-a2e1-5134-9297-e9211f481a2d
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};cinterface(IInspectable))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Object> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.String> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[String]
+    guid b79a741f-7fb5-50ae-9e99-911201ec3d41
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};string)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.String> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UInt32]
+    guid 9343b6e7-e3d2-5e4a-ab2d-2bce4919a6a4
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};u4)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ActivationSignalDetectionConfiguration]
+    guid f2c357e2-b348-5451-82a3-f00048c3a217
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ActivationSignalDetectionConfigurationCreationResult]
+    guid 67d722c6-e9e6-56ef-bd63-96fc1a6d0292
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult;{4c89bc1b-8d12-5e48-a71c-7f6bc1cd66e0}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ActivationSignalDetectionConfigurationRemovalResult]
+    guid df53d38d-347f-587d-b115-be893a8d7c49
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ActivationSignalDetectionConfigurationSetModelDataResult]
+    guid c3982503-9ae9-582e-9874-33ea36649a3c
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ActivationSignalDetectionConfigurationStateChangeResult]
+    guid 4aa91bfb-908e-52ba-a23d-06f464b5b54a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ActivationSignalDetector]
+    guid 550e15d0-52f2-5369-bed9-646c9589140b
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector;{b5bf345f-a4d0-5b2b-8e65-b3c55ee756ff}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ConversationalAgentActivationResult]
+    guid 41948ce0-5d83-5e12-a8ba-114c4a3a62e3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ConversationalAgentSession]
+    guid 077a96a1-7932-5db3-a503-34a30571f3f2
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession;{daaae09a-b7ba-57e5-ad13-df520f9b6fa7}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ConversationalAgentSessionUpdateResponse]
+    guid 6f43477a-01c5-59e2-96e2-1d9a00409159
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[DetectionConfigurationTrainingStatus]
+    guid 6c131b87-097f-5965-84d5-964c52b1787e
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<System.String>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVector[String]]
+    guid fae4b396-97c8-5cc3-bf88-ea3098edf6b2
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVector<System.String>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[String]]
+    guid 7c7899be-5f2e-5bf3-ade5-ad98b772c7cd
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.UInt32>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[UInt32]]
+    guid 55772f29-da64-5c87-871c-074337a84573
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<System.UInt32>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[ActivationSignalDetectionConfiguration]]
+    guid 3678f40b-3b3b-539b-8b7c-6f3ab257fb75
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[ActivationSignalDetector]]
+    guid 0ec801b3-4434-5d72-9a12-926ed91738a9
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector;{b5bf345f-a4d0-5b2b-8e65-b3c55ee756ff})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[ConversationalAgentVoiceActivationPrerequisiteKind]]
+    guid 80bbbe11-f1c5-5a42-b20b-005a57f88011
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind;i4)))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.AudioDeviceInputNode> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[AudioDeviceInputNode]
+    guid 19b1586d-db7d-55e8-9729-2256bd9984d4
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Audio.AudioDeviceInputNode;{b01b6be1-6f4e-49e2-ac01-559d62beb3a9}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Audio.AudioDeviceInputNode
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInputNode> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IInputStream> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IInputStream]
+    guid d0bd0125-9049-57a3-bd66-e2525d98c814
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{905a0fe2-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IInputStream
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationKind python_type
     py ConversationalAgentActivationKind
     signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationKind;i4)
@@ -345,7 +587,7 @@ class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession py
         remove remove_SystemStateChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26 reverse=156
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_audio_device_input_node
         method CreateAudioDeviceInputNode slot=29 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=267
             in class type=Windows.Media.Audio.AudioGraph name=graph
@@ -576,115 +818,643 @@ interface Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector
 interface Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2
     guid c7e2490a-baa5-59d2-85d1-ba42f7cf78c9
 
-interface Windows.Foundation.IAsyncOperation<System.Object> concrete
+interface Windows.Foundation.IAsyncOperation<System.Object> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Object]
     guid abf53c57-ee50-5342-b52a-26e3b8cc024f
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};cinterface(IInspectable))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Object
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Object> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Object> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Object> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Object> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Object> shape=4 reverse=62 role=get_results
+            out object return
 
-interface Windows.Foundation.IAsyncOperation<System.String> concrete
+interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[String]
     guid 3e1fe603-f897-5263-b328-0806426b8a79
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.String
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=62 role=get_results
+            out string return
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete
+interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UInt32]
     guid ef60385f-be78-584b-aaef-7829ada2b0de
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u4)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.UInt32
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=62 role=get_results
+            out uint32 return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ActivationSignalDetectionConfiguration]
     guid 754c4ad1-97e2-5443-8558-5d9d5305d01b
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ActivationSignalDetectionConfigurationCreationResult]
     guid edd52757-74d4-5837-941f-c37c5d4b4f53
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult;{4c89bc1b-8d12-5e48-a71c-7f6bc1cd66e0}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ActivationSignalDetectionConfigurationRemovalResult]
     guid 312794cb-0e43-5cbf-a148-58a9d7a65c14
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ActivationSignalDetectionConfigurationSetModelDataResult]
     guid 3738e73c-e4cd-55ad-b760-07af8b4a29d3
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ActivationSignalDetectionConfigurationStateChangeResult]
     guid be03cc1f-0a8a-5878-a84e-af4646df3cc5
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ActivationSignalDetector]
     guid 3566eb2e-4f9c-5261-998d-90296eff00c5
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector;{b5bf345f-a4d0-5b2b-8e65-b3c55ee756ff}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ConversationalAgentActivationResult]
     guid d177b8f3-d984-5c78-a57f-f096e291b374
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ConversationalAgentSession]
     guid 51831e09-6f91-59b0-820d-60b97775c575
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession;{daaae09a-b7ba-57e5-ad13-df520f9b6fa7}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ConversationalAgentSessionUpdateResponse]
     guid 4b85887b-8070-5ef9-aac8-92515257061e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[DetectionConfigurationTrainingStatus]
     guid 7631a007-93a6-554e-bcdd-3baee7c8c2c6
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVector[String]]
     guid 92b02cd3-aa6e-573d-bc03-8d2309cba3eb
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVector<System.String>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<System.String>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<System.String>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[String]]
     guid 2f92b529-119b-575a-a419-3904b4e41af2
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<System.String>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.String>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.String>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[UInt32]]
     guid 52c56f3c-713a-5162-9e62-362ce7ed53be
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<System.UInt32>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.UInt32>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.UInt32>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[ActivationSignalDetectionConfiguration]]
     guid ec02c465-2697-5e66-b867-1411dd7d57a7
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[ActivationSignalDetector]]
     guid ecc1a135-a8a5-51b9-8e1a-6340d9f56cae
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector;{b5bf345f-a4d0-5b2b-8e65-b3c55ee756ff})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[ConversationalAgentVoiceActivationPrerequisiteKind]]
     guid c192099d-c28a-550a-8c2b-e31c8fabcb4b
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind;i4)))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInputNode> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInputNode> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[AudioDeviceInputNode]
     guid d009b9cb-e9c1-5d8d-9575-c33ac26ce44a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Audio.AudioDeviceInputNode;{b01b6be1-6f4e-49e2-ac01-559d62beb3a9}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Audio.AudioDeviceInputNode
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInputNode> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.AudioDeviceInputNode> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInputNode> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.AudioDeviceInputNode> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInputNode> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Audio.AudioDeviceInputNode return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IInputStream]
     guid a8fe0732-556d-5841-b7ee-b3450fb52666
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe2-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IInputStream
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IInputStream> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IInputStream> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IInputStream return
 
 interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager
     guid de94fbb0-597a-5df8-8cfb-9dbb583ba3ff
@@ -728,78 +1498,573 @@ interface Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAv
 interface Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo2
     guid 30e06433-38b3-5c4b-84c3-62b6e685b2ff
 
-interface Windows.Foundation.Collections.IVector<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<System.UInt32> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UInt32]
+    guid 421d4b91-b13b-5f37-ae54-b5249bd80539
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};u4)
+    base Windows.Foundation.Collections.IIterable
+    argument System.UInt32
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.UInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.UInt32> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ActivationSignalDetectionConfiguration]
+    guid cb03ac8c-3a88-5c35-9872-00a466e49a12
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ActivationSignalDetectionTrainingDataFormat]
+    guid 88b67e2c-ec3f-520c-ae65-bfe63272fadd
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ActivationSignalDetector]
+    guid e1f74a8f-38eb-58be-b770-78af5a4a6b2e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector;{b5bf345f-a4d0-5b2b-8e65-b3c55ee756ff}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ActivationSignalDetectorPowerState]
+    guid b6860d48-cec5-5a00-8653-4c924a991575
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ConversationalAgentVoiceActivationPrerequisiteKind]
+    guid 4e9bb4c0-65ab-5049-9336-918b6d359071
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SignalDetectorResourceKind]
+    guid 263e7b6e-5338-5871-9fdb-a27d9bc02e92
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.UInt32> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UInt32]
+    guid f06a2739-9443-5ef0-b284-dc5aff3e7d10
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};u4)
+    base Windows.Foundation.Collections.IIterator
+    argument System.UInt32
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=22 role=current
+            out uint32 return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=117 reverse=101
+            fill_array uint32 name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ActivationSignalDetectionConfiguration]
+    guid 23e55a59-d7b5-5a4f-a51d-45d156776e3f
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ActivationSignalDetectionTrainingDataFormat]
+    guid 1f6ef295-4d31-5874-a22d-29875ee8165c
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> shape=4 reverse=22 role=current
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> shape=117 reverse=101
+            fill_array enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ActivationSignalDetector]
+    guid bc1c2e1c-bdc3-50b8-96ab-2e12531f6bc0
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector;{b5bf345f-a4d0-5b2b-8e65-b3c55ee756ff}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ActivationSignalDetectorPowerState]
+    guid f5daac9c-92cf-5945-9c5b-1c0b8eac8143
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> shape=4 reverse=22 role=current
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> shape=117 reverse=101
+            fill_array enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ConversationalAgentVoiceActivationPrerequisiteKind]
+    guid 89b54546-b694-5277-866b-7f2fc740c640
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> shape=4 reverse=22 role=current
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> shape=117 reverse=101
+            fill_array enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SignalDetectorResourceKind]
+    guid a27176ec-ab9a-5a55-8e50-ad4dab5b5d68
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> shape=4 reverse=22 role=current
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> shape=117 reverse=101
+            fill_array enum32 type=Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
     guid 98b9acc1-4b56-532e-ac73-03d5291cca90
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete
+interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UInt32]
     guid e5ce1a07-8d33-5007-ba64-7d2508ccf85c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.UInt32>
     argument System.UInt32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.UInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.UInt32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out uint32 return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array uint32 name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=117 reverse=66
+            in uint32 name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ActivationSignalDetectionConfiguration]
     guid 2515803e-4d85-5df7-a88a-88388730d659
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>
     argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ActivationSignalDetectionTrainingDataFormat]
     guid 679189c6-73c4-5295-8b04-6ce05cab4d17
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat>
     argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> shape=117 reverse=66
+            in enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ActivationSignalDetector]
     guid 6e514658-da3d-5201-9eb2-b2ef1c8dd1ba
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector;{b5bf345f-a4d0-5b2b-8e65-b3c55ee756ff}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>
     argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ActivationSignalDetectorPowerState]
     guid c303fd7f-d073-54c3-8411-c118226323ac
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState>
     argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> shape=117 reverse=66
+            in enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ConversationalAgentVoiceActivationPrerequisiteKind]
     guid 82216c11-1e7a-592c-9a3d-15d63e6fdd19
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>
     argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> shape=117 reverse=66
+            in enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SignalDetectorResourceKind]
     guid a847ac9b-a9ae-55c5-811d-920122e361d6
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind>
     argument Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> shape=117 reverse=66
+            in enum32 type=Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind name=value
+            out uint32 name=index
+            out boolean return
 
 enum Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind python_type
     py SignalDetectorResourceKind
     signature enum(Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind;i4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration,Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ActivationSignalDetectionConfiguration, DetectionConfigurationAvailabilityChangedEventArgs]
     guid 491146ea-2bc6-5f03-a317-097aae055198
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration;{40d8be16-5217-581c-9ab2-ce9b2f2e8e00});rc(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs;{5129c9fb-4be8-5f14-af2b-88d62b1b4462}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration
     argument Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration name=sender
+            in class type=Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ConversationalAgentSession, ConversationalAgentSessionInterruptedEventArgs]
     guid e1c093f2-c2f4-58c6-9fd1-3beb13b18ec8
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession;{daaae09a-b7ba-57e5-ad13-df520f9b6fa7});rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs;{9766591f-f63d-5d3e-9bf2-bd0760552686}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession
     argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession name=sender
+            in class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ConversationalAgentSession, ConversationalAgentSignalDetectedEventArgs]
     guid d4b78ffb-98b2-5004-9cb4-24dd755734fb
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession;{daaae09a-b7ba-57e5-ad13-df520f9b6fa7});rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs;{4d57eb8f-f88a-599b-91d3-d604876708bc}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession
     argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession name=sender
+            in class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ConversationalAgentSession, ConversationalAgentSystemStateChangedEventArgs]
     guid ac7da0c7-d0d3-5bac-bbc9-52ad49131f1f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession;{daaae09a-b7ba-57e5-ad13-df520f9b6fa7});rc(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs;{1c2c6e3e-2785-59a7-8e71-38adeef79928}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession
     argument Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession name=sender
+            in class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs name=args
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -813,13 +2078,48 @@ class System.String external
 class System.UInt32 external
     py winrt.system.UInt32
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Media.Audio.AudioDeviceInputNode external
     py winrt.windows.media.audio.AudioDeviceInputNode

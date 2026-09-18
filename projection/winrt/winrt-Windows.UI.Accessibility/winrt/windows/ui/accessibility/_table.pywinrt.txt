@@ -39,10 +39,20 @@ class Windows.UI.Accessibility.ScreenReaderService activatable python_type
             in event_token name=token
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Accessibility.ScreenReaderService,Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ScreenReaderService, ScreenReaderPositionChangedEventArgs]
     guid 51b01f42-eefc-56d2-8185-23de8f080e0a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Accessibility.ScreenReaderService;{19475427-eac0-50d3-bdd9-9b487a226256});rc(Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs;{557eb5e5-54d0-5ccd-9fc5-ed33357f8a9f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Accessibility.ScreenReaderService
     argument Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Accessibility.ScreenReaderService name=sender
+            in class type=Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs name=args
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f

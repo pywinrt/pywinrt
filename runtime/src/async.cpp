@@ -5,7 +5,7 @@
 // delegate object with its own vtable, QueryInterface, AddRef and Release, and
 // the wait itself - into every caller. The projection has one caller per
 // awaitable type per module and, for the parameterized async interfaces, one
-// per closed generic type as well, which made IAsyncOperation<T>::get() the
+// per concrete instance as well, which made IAsyncOperation<T>::get() the
 // largest single template instantiation in a projection module.
 //
 // Nothing in that waiter depends on the type arguments. Every WinRT completed
@@ -22,6 +22,8 @@
 
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
+
+#include "async.h"
 #include "module_state.h"
 
 namespace
@@ -110,15 +112,29 @@ namespace
 
 } // namespace
 
-int32_t py::async_wait(
-    winrt::Windows::Foundation::IInspectable const& async,
+/**
+ * Waits up to @p timeout_ms milliseconds for @p async to finish.
+ *
+ * The GIL must not be held: this blocks, and the completed handler is invoked
+ * on whichever thread the operation finishes on.
+ *
+ * @returns The @c AsyncStatus the wait saw, which is @c AsyncStatus::Started
+ * if it timed out, or a failed @c HRESULT if the wait itself could not be set
+ * up. The four status values are not negative, so the two cannot be confused.
+ */
+int32_t py::interp::async_wait_for(
+    void* async,
     uint32_t timeout_ms,
-    winrt::guid const& handler_iid,
-    async_set_completed_fn set_completed) noexcept
+    void const* handler_iid,
+    set_completed_fn set_completed,
+    void* context) noexcept
 {
     try
     {
-        auto const info = async.as<winrt::Windows::Foundation::IAsyncInfo>();
+        winrt::Windows::Foundation::IInspectable object;
+        winrt::copy_from_abi(object, async);
+
+        auto const info = object.as<winrt::Windows::Foundation::IAsyncInfo>();
         auto const status = info.Status();
 
         if (status != winrt::Windows::Foundation::AsyncStatus::Started)
@@ -129,14 +145,13 @@ int32_t py::async_wait(
         }
 
         winrt::com_ptr<async_completed_event> handler;
-        handler.attach(new async_completed_event(handler_iid));
+        handler.attach(
+            new async_completed_event(*static_cast<winrt::guid const*>(handler_iid)));
 
         // The async object takes its own reference, so the handler outlives a
         // wait that returns before the operation is done.
-        winrt::Windows::Foundation::IUnknown unknown;
-        winrt::copy_from_abi(unknown, static_cast<async_completed_abi*>(handler.get()));
-
-        winrt::check_hresult(set_completed(async, unknown));
+        winrt::check_hresult(set_completed(
+            context, async, static_cast<async_completed_abi*>(handler.get())));
 
         return static_cast<int32_t>(handler->wait(timeout_ms));
     }
@@ -148,6 +163,32 @@ int32_t py::async_wait(
         // from, which is why this does not need the GIL to report anything.
         return winrt::to_hresult();
     }
+}
+
+int32_t py::async_wait(
+    winrt::Windows::Foundation::IInspectable const& async,
+    uint32_t timeout_ms,
+    winrt::guid const& handler_iid,
+    async_set_completed_fn set_completed) noexcept
+{
+    // A compiled module's callback takes the two objects and no context, so
+    // the context is the callback itself.
+    return py::interp::async_wait_for(
+        winrt::get_abi(async),
+        timeout_ms,
+        &handler_iid,
+        [](void* callback, void* object, void* handler) noexcept
+        {
+            winrt::Windows::Foundation::IInspectable async_object;
+            winrt::Windows::Foundation::IUnknown unknown;
+
+            winrt::copy_from_abi(async_object, object);
+            winrt::copy_from_abi(unknown, handler);
+
+            return reinterpret_cast<async_set_completed_fn>(callback)(
+                async_object, unknown);
+        },
+        reinterpret_cast<void*>(set_completed));
 }
 
 PyObject* py::await_async(PyObject* obj) noexcept

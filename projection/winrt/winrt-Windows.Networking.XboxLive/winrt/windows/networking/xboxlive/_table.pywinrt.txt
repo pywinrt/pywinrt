@@ -2,40 +2,497 @@ format 4.0
 generator 0.0.0
 namespace Windows.Networking.XboxLive
 
-interface Windows.Foundation.IAsyncOperation<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[XboxLiveEndpointPairCreationResult]
+    guid ad57fa1d-db1b-5df5-9694-f71b9bd5625b
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult;{d9a8bb95-2aab-4d1e-9794-33ecc0dcf0fe}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[XboxLiveEndpointPairCreationResult]
     guid a4b9d41e-4b2c-5bf9-a19d-ed395b23823c
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult;{d9a8bb95-2aab-4d1e-9794-33ecc0dcf0fe}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult return
 
-interface Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveDeviceAddress> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[XboxLiveDeviceAddress]
+    guid 44df817c-b475-5fdb-862a-4a96ed1dad5c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.XboxLive.XboxLiveDeviceAddress;{f5bbd279-3c86-4b57-a31a-b9462408fd01}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.XboxLive.XboxLiveDeviceAddress
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveDeviceAddress> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveEndpointPair> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[XboxLiveEndpointPair]
+    guid 7fcaf666-ddc0-50dc-a76f-9bb6058be3c9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.XboxLive.XboxLiveEndpointPair;{1e9a839b-813e-44e0-b87f-c87a093475e4}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.XboxLive.XboxLiveEndpointPair
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveEndpointPair> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPair> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[XboxLiveEndpointPairTemplate]
+    guid 9fce55c3-5580-581a-85b5-88dd5e9d4ff7
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate;{6b286ecf-3457-40ce-b9a1-c0cfe0213ea7}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[XboxLiveQualityOfServiceMetric]
+    guid e202eef6-93bd-5fa2-91fc-7ca6a4edc38a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[XboxLiveQualityOfServiceMetricResult]
+    guid 65cc99ec-9779-568a-8982-aee439fa24ce
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult;{aeec53d1-3561-4782-b0cf-d3ae29d9fa87}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[XboxLiveQualityOfServicePrivatePayloadResult]
+    guid 3a061dd4-03dd-52fb-9a83-067de27c2bb1
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult;{5a6302ae-6f38-41c0-9fcc-ea6cb978cafc}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveDeviceAddress> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[XboxLiveDeviceAddress]
+    guid 85fb7103-ef5e-5746-9341-1dfbb21d720d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.XboxLive.XboxLiveDeviceAddress;{f5bbd279-3c86-4b57-a31a-b9462408fd01}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.XboxLive.XboxLiveDeviceAddress
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=117 reverse=101
+            fill_array class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPair> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[XboxLiveEndpointPair]
+    guid e796a96b-98a0-52a2-bb54-9dba5bb64fc4
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.XboxLive.XboxLiveEndpointPair;{1e9a839b-813e-44e0-b87f-c87a093475e4}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.XboxLive.XboxLiveEndpointPair
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPair> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.XboxLive.XboxLiveEndpointPair return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPair> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPair> shape=117 reverse=101
+            fill_array class type=Windows.Networking.XboxLive.XboxLiveEndpointPair name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPair> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[XboxLiveEndpointPairTemplate]
+    guid 515331c6-39e1-5cc7-8454-7f1c8bcba18e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate;{6b286ecf-3457-40ce-b9a1-c0cfe0213ea7}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> shape=117 reverse=101
+            fill_array class type=Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[XboxLiveQualityOfServiceMetric]
+    guid b281ef1a-56bc-5daa-bbe2-65e617b49925
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=117 reverse=101
+            fill_array enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[XboxLiveQualityOfServiceMetricResult]
+    guid e0696826-0069-57d6-9ad8-d0b368629e2e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult;{aeec53d1-3561-4782-b0cf-d3ae29d9fa87}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> shape=117 reverse=101
+            fill_array class type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[XboxLiveQualityOfServicePrivatePayloadResult]
+    guid eb5bfdf4-7897-5cbf-aaa5-3582fafb4d78
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult;{5a6302ae-6f38-41c0-9fcc-ea6cb978cafc}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> shape=117 reverse=101
+            fill_array class type=Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[XboxLiveDeviceAddress]
     guid 8aacb2da-c37e-5be0-ab46-ba445910b9cb
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.XboxLive.XboxLiveDeviceAddress;{f5bbd279-3c86-4b57-a31a-b9462408fd01}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveDeviceAddress>
     argument Windows.Networking.XboxLive.XboxLiveDeviceAddress
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=4 reverse=173
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveDeviceAddress> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveDeviceAddress> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=117 reverse=101
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=51 reverse=211
+            pass_array class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[XboxLiveQualityOfServiceMetric]
     guid 8f3109d5-dc6b-58d1-9f70-60cc47bf1ced
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric;i4))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric>
     argument Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=4 reverse=173
+            in enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=117 reverse=101
+            in enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=51 reverse=211
+            pass_array enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPair> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveDeviceAddress> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[XboxLiveDeviceAddress]
+    guid a0594a5f-664d-52f2-a4ef-53a23c0dea3d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.XboxLive.XboxLiveDeviceAddress;{f5bbd279-3c86-4b57-a31a-b9462408fd01}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveDeviceAddress>
+    argument Windows.Networking.XboxLive.XboxLiveDeviceAddress
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveDeviceAddress> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=117 reverse=66
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPair> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[XboxLiveEndpointPair]
     guid c88caa17-ae4a-5e4c-8435-d6db6b120464
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.XboxLive.XboxLiveEndpointPair;{1e9a839b-813e-44e0-b87f-c87a093475e4}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveEndpointPair>
     argument Windows.Networking.XboxLive.XboxLiveEndpointPair
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPair> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveEndpointPair> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPair> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPair> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.XboxLive.XboxLiveEndpointPair return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPair> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.XboxLive.XboxLiveEndpointPair name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPair> shape=117 reverse=66
+            in class type=Windows.Networking.XboxLive.XboxLiveEndpointPair name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[XboxLiveEndpointPairTemplate]
     guid 1128b50b-3ac4-543e-9d7e-d796c6226669
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate;{6b286ecf-3457-40ce-b9a1-c0cfe0213ea7}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate>
     argument Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> shape=117 reverse=66
+            in class type=Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[XboxLiveQualityOfServiceMetric]
+    guid 05b168df-9678-509d-9057-a79fd84b54bf
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric>
+    argument Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=117 reverse=66
+            in enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[XboxLiveQualityOfServiceMetricResult]
     guid fd58662f-d206-5d57-a6ad-a84567187f30
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult;{aeec53d1-3561-4782-b0cf-d3ae29d9fa87}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult>
     argument Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> shape=117 reverse=66
+            in class type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[XboxLiveQualityOfServicePrivatePayloadResult]
     guid 821b8135-7801-5cb5-baa4-fd74772fb91c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult;{5a6302ae-6f38-41c0-9fcc-ea6cb978cafc}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult>
     argument Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> shape=117 reverse=66
+            in class type=Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Networking.XboxLive.IXboxLiveDeviceAddress
     guid f5bbd279-3c86-4b57-a31a-b9462408fd01
@@ -77,22 +534,40 @@ interface Windows.Networking.XboxLive.IXboxLiveQualityOfServicePrivatePayloadRes
     guid 5a6302ae-6f38-41c0-9fcc-ea6cb978cafc
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Networking.XboxLive.XboxLiveDeviceAddress,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[XboxLiveDeviceAddress, Object]
     guid 7fa76199-d1b8-5494-a042-7002a416adc3
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.XboxLive.XboxLiveDeviceAddress;{f5bbd279-3c86-4b57-a31a-b9462408fd01});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Networking.XboxLive.XboxLiveDeviceAddress
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Networking.XboxLive.XboxLiveEndpointPair,Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[XboxLiveEndpointPair, XboxLiveEndpointPairStateChangedEventArgs]
     guid 51037260-4609-58c1-adb3-0618b89b9975
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.XboxLive.XboxLiveEndpointPair;{1e9a839b-813e-44e0-b87f-c87a093475e4});rc(Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs;{592e3b55-de08-44e7-ac3b-b9b9a169583a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Networking.XboxLive.XboxLiveEndpointPair
     argument Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Networking.XboxLive.XboxLiveEndpointPair name=sender
+            in class type=Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate,Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[XboxLiveEndpointPairTemplate, XboxLiveInboundEndpointPairCreatedEventArgs]
     guid 2aef5136-6e7a-51f8-8853-cc0ce466fef9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate;{6b286ecf-3457-40ce-b9a1-c0cfe0213ea7});rc(Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs;{dc183b62-22ba-48d2-80de-c23968bd198b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate
     argument Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate name=sender
+            in class type=Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs name=args
 
 class Windows.Networking.XboxLive.XboxLiveDeviceAddress python_type
     py XboxLiveDeviceAddress
@@ -455,9 +930,44 @@ enum Windows.Networking.XboxLive.XboxLiveSocketKind python_type
 class System.Object external
     py winrt.system.Object
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Networking.HostName external
     py winrt.windows.networking.HostName

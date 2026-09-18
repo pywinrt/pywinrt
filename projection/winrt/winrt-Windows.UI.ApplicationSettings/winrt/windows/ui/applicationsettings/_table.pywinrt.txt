@@ -130,6 +130,126 @@ interface Windows.UI.ApplicationSettings.ICredentialCommand
 interface Windows.UI.ApplicationSettings.ICredentialCommandFactory
     guid 27e88c17-bc3e-4b80-9495-4ed720e48a91
 
+interface Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.CredentialCommand> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[CredentialCommand]
+    guid 883ed18d-4dbb-58f2-8fd2-e4b018509553
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.ApplicationSettings.CredentialCommand;{a5f665e6-6143-4a7a-a971-b017ba978ce2}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.ApplicationSettings.CredentialCommand
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.CredentialCommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.CredentialCommand> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.SettingsCommand> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SettingsCommand]
+    guid 6308e7e8-cb85-5339-a3e9-9a7500d19c68
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.ApplicationSettings.SettingsCommand;{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.ApplicationSettings.SettingsCommand
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.SettingsCommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.SettingsCommand> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.WebAccountCommand> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WebAccountCommand]
+    guid bd0d999c-b2ba-51b2-bcc0-d4a5cd821555
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.ApplicationSettings.WebAccountCommand;{caa39398-9cfa-4246-b0c4-a913a3896541}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.ApplicationSettings.WebAccountCommand
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.WebAccountCommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountCommand> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.WebAccountProviderCommand> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WebAccountProviderCommand]
+    guid 15165367-2e93-59a6-b5c7-16d3b58fd2e7
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.ApplicationSettings.WebAccountProviderCommand;{d69bdd9a-a0a6-4e9b-88dc-c71e757a3501}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.ApplicationSettings.WebAccountProviderCommand
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountProviderCommand> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.CredentialCommand> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[CredentialCommand]
+    guid 9f1177f1-85bb-5cd0-9b08-a0b47a764c75
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.ApplicationSettings.CredentialCommand;{a5f665e6-6143-4a7a-a971-b017ba978ce2}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.ApplicationSettings.CredentialCommand
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.CredentialCommand> shape=4 reverse=22 role=current
+            out class type=Windows.UI.ApplicationSettings.CredentialCommand return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.CredentialCommand> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.CredentialCommand> shape=117 reverse=101
+            fill_array class type=Windows.UI.ApplicationSettings.CredentialCommand name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.CredentialCommand> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.SettingsCommand> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SettingsCommand]
+    guid 2f071c24-4a58-5a00-a294-c7162e98c2a0
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.ApplicationSettings.SettingsCommand;{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.ApplicationSettings.SettingsCommand
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.SettingsCommand> shape=4 reverse=22 role=current
+            out class type=Windows.UI.ApplicationSettings.SettingsCommand return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.SettingsCommand> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.SettingsCommand> shape=117 reverse=101
+            fill_array class type=Windows.UI.ApplicationSettings.SettingsCommand name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.SettingsCommand> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountCommand> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WebAccountCommand]
+    guid 8cbb62b6-bd9c-5486-9d14-9cc4627b32d4
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.ApplicationSettings.WebAccountCommand;{caa39398-9cfa-4246-b0c4-a913a3896541}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.ApplicationSettings.WebAccountCommand
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountCommand> shape=4 reverse=22 role=current
+            out class type=Windows.UI.ApplicationSettings.WebAccountCommand return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountCommand> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountCommand> shape=117 reverse=101
+            fill_array class type=Windows.UI.ApplicationSettings.WebAccountCommand name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountCommand> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountProviderCommand> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WebAccountProviderCommand]
+    guid 82d7cd74-8e33-5f06-92fc-915138aacbde
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.ApplicationSettings.WebAccountProviderCommand;{d69bdd9a-a0a6-4e9b-88dc-c71e757a3501}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.ApplicationSettings.WebAccountProviderCommand
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=4 reverse=22 role=current
+            out class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=117 reverse=101
+            fill_array class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.UI.ApplicationSettings.ISettingsCommandFactory
     guid 68e15b33-1c83-433a-aa5a-ceeea5bd4764
 
@@ -148,25 +268,325 @@ interface Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequestedEventArgs
 interface Windows.UI.ApplicationSettings.ISettingsPaneStatics
     guid 1c6a52c5-ff19-471b-ba6b-f8f35694ad9a
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[CredentialCommand]
     guid b6af1cb5-f60e-5b08-b312-2eb51135cfc6
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.ApplicationSettings.CredentialCommand;{a5f665e6-6143-4a7a-a971-b017ba978ce2}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.CredentialCommand>
     argument Windows.UI.ApplicationSettings.CredentialCommand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=4 reverse=173
+            in class type=Windows.UI.ApplicationSettings.CredentialCommand name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.CredentialCommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.CredentialCommand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.ApplicationSettings.CredentialCommand return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.ApplicationSettings.CredentialCommand name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.CredentialCommand> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=117 reverse=101
+            in class type=Windows.UI.ApplicationSettings.CredentialCommand name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.ApplicationSettings.CredentialCommand name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=51 reverse=211
+            pass_array class type=Windows.UI.ApplicationSettings.CredentialCommand name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.ApplicationSettings.CredentialCommand name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SettingsCommand]
     guid 10bd9cdd-3767-5e96-9022-f00f9cbd6241
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.ApplicationSettings.SettingsCommand;{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.SettingsCommand>
     argument Windows.UI.ApplicationSettings.SettingsCommand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=4 reverse=173
+            in class type=Windows.UI.ApplicationSettings.SettingsCommand name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.SettingsCommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.SettingsCommand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.ApplicationSettings.SettingsCommand return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.ApplicationSettings.SettingsCommand name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.SettingsCommand> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=117 reverse=101
+            in class type=Windows.UI.ApplicationSettings.SettingsCommand name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.ApplicationSettings.SettingsCommand name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=51 reverse=211
+            pass_array class type=Windows.UI.ApplicationSettings.SettingsCommand name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.ApplicationSettings.SettingsCommand name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[WebAccountCommand]
     guid 64e864c8-7fef-5df5-a624-50b577f48554
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.ApplicationSettings.WebAccountCommand;{caa39398-9cfa-4246-b0c4-a913a3896541}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.WebAccountCommand>
     argument Windows.UI.ApplicationSettings.WebAccountCommand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=4 reverse=173
+            in class type=Windows.UI.ApplicationSettings.WebAccountCommand name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.WebAccountCommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountCommand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.ApplicationSettings.WebAccountCommand return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.ApplicationSettings.WebAccountCommand name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountCommand> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=117 reverse=101
+            in class type=Windows.UI.ApplicationSettings.WebAccountCommand name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.ApplicationSettings.WebAccountCommand name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=51 reverse=211
+            pass_array class type=Windows.UI.ApplicationSettings.WebAccountCommand name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.ApplicationSettings.WebAccountCommand name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[WebAccountProviderCommand]
     guid d376abf3-f0c1-5233-9f42-de531884963e
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.ApplicationSettings.WebAccountProviderCommand;{d69bdd9a-a0a6-4e9b-88dc-c71e757a3501}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.WebAccountProviderCommand>
     argument Windows.UI.ApplicationSettings.WebAccountProviderCommand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=4 reverse=173
+            in class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountProviderCommand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountProviderCommand> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=117 reverse=101
+            in class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=51 reverse=211
+            pass_array class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.CredentialCommand> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[CredentialCommand]
+    guid 95cc1bba-c279-5ee5-a524-78012b7fe17e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.ApplicationSettings.CredentialCommand;{a5f665e6-6143-4a7a-a971-b017ba978ce2}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.CredentialCommand>
+    argument Windows.UI.ApplicationSettings.CredentialCommand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.CredentialCommand> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.CredentialCommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.CredentialCommand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.CredentialCommand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.ApplicationSettings.CredentialCommand return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.CredentialCommand> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.ApplicationSettings.CredentialCommand name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.CredentialCommand> shape=117 reverse=66
+            in class type=Windows.UI.ApplicationSettings.CredentialCommand name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.SettingsCommand> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SettingsCommand]
+    guid 67b64d17-4245-5d7c-bfb4-6b68dd525877
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.ApplicationSettings.SettingsCommand;{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.SettingsCommand>
+    argument Windows.UI.ApplicationSettings.SettingsCommand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.SettingsCommand> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.SettingsCommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.SettingsCommand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.SettingsCommand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.ApplicationSettings.SettingsCommand return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.SettingsCommand> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.ApplicationSettings.SettingsCommand name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.SettingsCommand> shape=117 reverse=66
+            in class type=Windows.UI.ApplicationSettings.SettingsCommand name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountCommand> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WebAccountCommand]
+    guid 207eaa3e-5ec9-5bd4-a1d2-73179a8128a8
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.ApplicationSettings.WebAccountCommand;{caa39398-9cfa-4246-b0c4-a913a3896541}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.WebAccountCommand>
+    argument Windows.UI.ApplicationSettings.WebAccountCommand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountCommand> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.WebAccountCommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountCommand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountCommand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.ApplicationSettings.WebAccountCommand return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountCommand> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.ApplicationSettings.WebAccountCommand name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountCommand> shape=117 reverse=66
+            in class type=Windows.UI.ApplicationSettings.WebAccountCommand name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountProviderCommand> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WebAccountProviderCommand]
+    guid b2d19260-1827-5d88-b948-9688cfcd63ae
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.ApplicationSettings.WebAccountProviderCommand;{d69bdd9a-a0a6-4e9b-88dc-c71e757a3501}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.WebAccountProviderCommand>
+    argument Windows.UI.ApplicationSettings.WebAccountProviderCommand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.ApplicationSettings.WebAccountProviderCommand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=117 reverse=66
+            in class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.UI.ApplicationSettings.IWebAccountCommand
     guid caa39398-9cfa-4246-b0c4-a913a3896541
@@ -263,16 +683,28 @@ enum Windows.UI.ApplicationSettings.SupportedWebAccountActions python_type
     signature enum(Windows.UI.ApplicationSettings.SupportedWebAccountActions;u4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.ApplicationSettings.AccountsSettingsPane,Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[AccountsSettingsPane, AccountsSettingsPaneCommandsRequestedEventArgs]
     guid 69b8847e-7d72-5a15-bc1c-4ca39c93b162
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.ApplicationSettings.AccountsSettingsPane;{81ea942c-4f09-4406-a538-838d9b14b7e6});rc(Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs;{3b68c099-db19-45d0-9abf-95d3773c9330}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.ApplicationSettings.AccountsSettingsPane
     argument Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.ApplicationSettings.AccountsSettingsPane name=sender
+            in class type=Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.ApplicationSettings.SettingsPane,Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SettingsPane, SettingsPaneCommandsRequestedEventArgs]
     guid f39a56a2-7db1-5c48-9e13-7dc485a4a99e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.ApplicationSettings.SettingsPane;{b1cd0932-4570-4c69-8d38-89446561ace0});rc(Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs;{205f5d24-1b48-4629-a6ca-2fdfedafb75d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.ApplicationSettings.SettingsPane
     argument Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.ApplicationSettings.SettingsPane name=sender
+            in class type=Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs name=args
 
 enum Windows.UI.ApplicationSettings.WebAccountAction python_type
     py WebAccountAction
@@ -347,6 +779,26 @@ delegate Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Security.Credentials.PasswordCredential external
     py winrt.windows.security.credentials.PasswordCredential

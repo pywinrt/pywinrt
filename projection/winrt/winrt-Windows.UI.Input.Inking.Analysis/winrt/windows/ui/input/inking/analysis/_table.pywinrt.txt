@@ -2,10 +2,45 @@ format 4.0
 generator 0.0.0
 namespace Windows.UI.Input.Inking.Analysis
 
-interface Windows.Foundation.IAsyncOperation<Windows.UI.Input.Inking.Analysis.InkAnalysisResult> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Input.Inking.Analysis.InkAnalysisResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[InkAnalysisResult]
+    guid a7ef2666-6fc4-568f-bbf3-19c1036a26bf
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.UI.Input.Inking.Analysis.InkAnalysisResult;{8948ba79-a243-4aa3-a294-1f98bd0ff580}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.UI.Input.Inking.Analysis.InkAnalysisResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Input.Inking.Analysis.InkAnalysisResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.UI.Input.Inking.Analysis.InkAnalysisResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[InkAnalysisResult]
     guid 2c46d1bd-6dbb-5007-ba85-3d0106bddf50
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.UI.Input.Inking.Analysis.InkAnalysisResult;{8948ba79-a243-4aa3-a294-1f98bd0ff580}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.UI.Input.Inking.Analysis.InkAnalysisResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Input.Inking.Analysis.InkAnalysisResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Input.Inking.Analysis.InkAnalysisResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Input.Inking.Analysis.InkAnalysisResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Input.Inking.Analysis.InkAnalysisResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Input.Inking.Analysis.InkAnalysisResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.UI.Input.Inking.Analysis.InkAnalysisResult return
 
 interface Windows.UI.Input.Inking.Analysis.IInkAnalysisInkBullet
     guid ee049368-6110-4136-95f9-ee809fc20030
@@ -71,35 +106,267 @@ interface Windows.UI.Input.Inking.Analysis.IInkAnalyzerFactory python_type
         method CreateAnalyzer slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzerFactory shape=4 reverse=22
             out class type=Windows.UI.Input.Inking.Analysis.InkAnalyzer return
 
-interface Windows.Foundation.Collections.IIterable<System.UInt32> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<System.UInt32> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UInt32]
     guid 421d4b91-b13b-5f37-ae54-b5249bd80539
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};u4)
+    base Windows.Foundation.Collections.IIterable
     argument System.UInt32
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.UInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.UInt32> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkStroke> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Point> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Point]
+    guid c192280d-3a09-5423-9dc5-67b83ebde41d
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Foundation.Point;f4;f4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Point
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Point> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IInkAnalysisNode]
+    guid 784f069e-badd-5258-bd8f-42ce205cc95a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{30831f05-5f64-4a2c-ba37-4f4887879574})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkStroke> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[InkStroke]
     guid bbc11401-89d0-5305-a3b3-36c887714b9b
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Input.Inking.InkStroke;{15144d60-cce3-4fcf-9d52-11518ab6afd4}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.UI.Input.Inking.InkStroke
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkStroke> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkStroke> return
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.UInt32> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UInt32]
+    guid f06a2739-9443-5ef0-b284-dc5aff3e7d10
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};u4)
+    base Windows.Foundation.Collections.IIterator
+    argument System.UInt32
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=22 role=current
+            out uint32 return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=117 reverse=101
+            fill_array uint32 name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Point]
+    guid c602b59e-0a8e-5e99-b478-2b564585278d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Foundation.Point;f4;f4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Point
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> shape=4 reverse=22 role=current
+            out struct type=Windows.Foundation.Point return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> shape=117 reverse=101
+            fill_array struct type=Windows.Foundation.Point name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IInkAnalysisNode]
+    guid ad35ed5c-5f8c-5a68-a6e1-67f209a05ea7
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{30831f05-5f64-4a2c-ba37-4f4887879574})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> shape=4 reverse=22 role=current
+            out interface type=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> shape=117 reverse=101
+            fill_array interface type=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkStroke> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[InkStroke]
+    guid 5608d5a9-e7e4-5a0b-941f-b7fed76b35bf
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Input.Inking.InkStroke;{15144d60-cce3-4fcf-9d52-11518ab6afd4}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Input.Inking.InkStroke
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkStroke> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Input.Inking.InkStroke return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkStroke> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkStroke> shape=117 reverse=101
+            fill_array class type=Windows.UI.Input.Inking.InkStroke name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkStroke> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete
+interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UInt32]
     guid e5ce1a07-8d33-5007-ba64-7d2508ccf85c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.UInt32>
     argument System.UInt32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.UInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.UInt32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out uint32 return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array uint32 name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=117 reverse=66
+            in uint32 name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Point]
     guid 0b7b4c9d-182f-582a-bddb-42b1aac30cad
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Foundation.Point;f4;f4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Point>
     argument Windows.Foundation.Point
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Point> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Foundation.Point return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Foundation.Point name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> shape=151 reverse=75
+            in struct type=Windows.Foundation.Point name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IInkAnalysisNode]
     guid 2b3fee11-53b5-55b0-8d71-c40b427de029
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{30831f05-5f64-4a2c-ba37-4f4887879574})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode>
     argument Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> shape=117 reverse=66
+            in interface type=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode name=value
+            out uint32 name=index
+            out boolean return
 
 enum Windows.UI.Input.Inking.Analysis.InkAnalysisDrawingKind python_type
     py InkAnalysisDrawingKind
@@ -462,11 +729,38 @@ class System.String external
 class System.UInt32 external
     py winrt.system.UInt32
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 struct Windows.Foundation.Point external
     py winrt.windows.foundation.Point
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.UI.Input.Inking.InkStroke external
     py winrt.windows.ui.input.inking.InkStroke

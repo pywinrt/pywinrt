@@ -2,6 +2,94 @@ format 4.0
 generator 0.0.0
 namespace Windows.Storage.Search
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UInt32]
+    guid 9343b6e7-e3d2-5e4a-ab2d-2bce4919a6a4
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};u4)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,System.Object>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IMapView[String, Object]]
+    guid 89981889-1207-5ae6-9b28-ccc58f3aac6e
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable)))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IMapView<System.String,System.Object>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.Object>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[IMapView[String, Object]]]
+    guid a782a13a-16a0-5326-b985-c4ca49e54e77
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[IStorageItem]]
+    guid 51436e75-ace1-5a68-b260-f843b846f0db
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{4207a996-ca2f-42f7-bde8-8b10457a7f30}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[IIndexableContent]]
+    guid 6a29f493-efb7-5fdb-a13e-f2c28b4dab58
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ccf1a05f-d4b5-483a-b06e-e0db1ec420e4}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[StorageFile]]
+    guid cb4206c5-0988-5104-afa9-253c298f86fd
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[StorageFolder]]
+    guid ed2d1d9b-26ec-5be7-a8a3-56458933d25f
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Search.IndexedState> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IndexedState]
+    guid b67a3cba-f5f7-5e51-968a-385126d1f918
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Storage.Search.IndexedState;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Search.IndexedState
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Search.IndexedState> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 enum Windows.Storage.Search.CommonFileQuery python_type
     py CommonFileQuery
     signature enum(Windows.Storage.Search.CommonFileQuery;i4)
@@ -102,45 +190,237 @@ enum Windows.Storage.Search.FolderDepth python_type
     py FolderDepth
     signature enum(Windows.Storage.Search.FolderDepth;i4)
 
-interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete
+interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UInt32]
     guid ef60385f-be78-584b-aaef-7829ada2b0de
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u4)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.UInt32
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=62 role=get_results
+            out uint32 return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.Object>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.Object>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IMapView[String, Object]]
     guid 5dcbee48-9965-51da-a461-177c885be7e5
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable)))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IMapView<System.String,System.Object>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,System.Object>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,System.Object>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[IMapView[String, Object]]]
     guid fc227365-219d-5d59-8b5b-58eb0a91ca0a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[IStorageItem]]
     guid 4b1c0fd7-7a01-5e7a-a6fe-be4500283f23
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{4207a996-ca2f-42f7-bde8-8b10457a7f30}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[IIndexableContent]]
     guid 919850e1-084b-5f9b-a0a0-50db0cd5da91
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ccf1a05f-d4b5-483a-b06e-e0db1ec420e4}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[StorageFile]]
     guid 03362e33-e413-5f29-97d0-48a4780935f9
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[StorageFolder]]
     guid ca40b21b-aeb1-5a61-9e08-3bd5d9594023
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Search.IndexedState> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Search.IndexedState> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IndexedState]
     guid 88694b1f-f380-574d-8a05-4f67bd52cd11
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Storage.Search.IndexedState;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Search.IndexedState
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Search.IndexedState> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Search.IndexedState> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Search.IndexedState> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Search.IndexedState> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Search.IndexedState> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Storage.Search.IndexedState return
 
 interface Windows.Storage.Search.IContentIndexer
     guid b1767f8d-f698-4982-b05f-3a6e8cab01a2
@@ -177,41 +457,462 @@ interface Windows.Storage.Search.IIndexableContent python_type
         put put_StreamContentType slot=12 inputs=1 outputs=0 declaring=Windows.Storage.Search.IIndexableContent shape=4 reverse=162
             in string name=value
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextSegment> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TextSegment]
+    guid 5498f4f3-cee4-5b72-9729-815c4ad7b9dc
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Data.Text.TextSegment;u4;u4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Data.Text.TextSegment
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextSegment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
+    guid fe2f3d47-5d47-5499-8374-430c7cda0204
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, IVectorView[TextSegment]]]
+    guid f819a276-b3f5-54d4-b8fd-c9adb7f700e3
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Data.Text.TextSegment;u4;u4))))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IMapView<System.String,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IMapView[String, Object]]
+    guid e1670fae-49cd-5c47-a8c8-f6fa2c650c6c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IMapView<System.String,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IMapView<System.String,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IStorageItem]
+    guid bb8b8418-65d1-544b-b083-6d172f568c73
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Storage.IStorageItem
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.Search.IIndexableContent> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IIndexableContent]
+    guid 4a6edbfe-0c41-5042-ac58-a885a8fc7928
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{ccf1a05f-d4b5-483a-b06e-e0db1ec420e4})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Storage.Search.IIndexableContent
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Search.IIndexableContent> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.IIndexableContent> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SortEntry]
     guid 35aff6f9-ef75-5280-bb84-a2bf8317cf35
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Storage.Search.SortEntry;string;b1))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Storage.Search.SortEntry
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.SortEntry> return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Storage.Search.SortEntry> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StorageFile]
+    guid 9ac00304-83ea-5688-87b6-ae38aab65d0b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Storage.StorageFile
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFolder> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StorageFolder]
+    guid 4669befc-ae5c-52b1-8a97-5466ce61e94e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Storage.StorageFolder
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFolder> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFolder> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TextSegment]
+    guid 645a39b4-f001-5272-9015-fb4a327179ae
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Data.Text.TextSegment;u4;u4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Data.Text.TextSegment
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=4 reverse=22 role=current
+            out struct type=Windows.Data.Text.TextSegment return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=117 reverse=101
+            fill_array struct type=Windows.Data.Text.TextSegment name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, Object]]
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, IVectorView[TextSegment]]]
+    guid 00078aa3-8676-5f06-adf5-ffe5d661d670
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Data.Text.TextSegment;u4;u4))))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IMapView<System.String,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IMapView[String, Object]]
+    guid 53a2e825-9bf1-5083-8a7b-9d94f312dade
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IMapView<System.String,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IStorageItem]
+    guid 05b487c2-3830-5d3c-98da-25fa11542dbd
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Storage.IStorageItem
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=4 reverse=22 role=current
+            out interface type=Windows.Storage.IStorageItem return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=117 reverse=101
+            fill_array interface type=Windows.Storage.IStorageItem name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.Search.IIndexableContent> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IIndexableContent]
+    guid 6cdb32ba-2361-57a8-a39d-be1df041bdb8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{ccf1a05f-d4b5-483a-b06e-e0db1ec420e4})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Storage.Search.IIndexableContent
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.IIndexableContent> shape=4 reverse=22 role=current
+            out interface type=Windows.Storage.Search.IIndexableContent return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.IIndexableContent> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.IIndexableContent> shape=117 reverse=101
+            fill_array interface type=Windows.Storage.Search.IIndexableContent name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.IIndexableContent> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.Search.SortEntry> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SortEntry]
     guid 520434a2-acf7-58c9-b47a-2741f2fac2c2
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Storage.Search.SortEntry;string;b1))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Storage.Search.SortEntry
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.SortEntry> shape=4 reverse=22 role=current
+            out struct type=Windows.Storage.Search.SortEntry return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.SortEntry> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.SortEntry> shape=117 reverse=101
+            fill_array struct type=Windows.Storage.Search.SortEntry name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.SortEntry> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IMap<System.String,System.Object> concrete
-    guid 1b0d3570-0877-5ec2-8a2c-3b9539506aca
-    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;cinterface(IInspectable))
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StorageFile]
+    guid 43e29f53-0298-55aa-a6c8-4edd323d9598
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Storage.StorageFile
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=4 reverse=22 role=current
+            out class type=Windows.Storage.StorageFile return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=117 reverse=101
+            fill_array class type=Windows.Storage.StorageFile name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFolder> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StorageFolder]
+    guid 5aac96fb-b3b9-5a7f-a920-4b5a8df81168
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Storage.StorageFolder
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFolder> shape=4 reverse=22 role=current
+            out class type=Windows.Storage.StorageFolder return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFolder> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFolder> shape=117 reverse=101
+            fill_array class type=Windows.Storage.StorageFolder name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFolder> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
+    guid 09335560-6c6b-5a26-9348-97b781132b20
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43
+            out object return
 
-interface Windows.Foundation.Collections.IMap<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> concrete
-    guid a31b6540-b2b1-536d-818f-8ade7051c3b3
-    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Data.Text.TextSegment;u4;u4)))
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, IVectorView[TextSegment]]
+    guid 77b4daf4-4f4f-5568-90ee-1a32cf0caaea
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Data.Text.TextSegment;u4;u4)))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> return
 
-interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
-    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
-    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+interface Windows.Foundation.Collections.IMap<System.String,System.Object> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, Object]
+    guid 1b0d3570-0877-5ec2-8a2c-3b9539506aca
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     argument System.String
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=117 reverse=125 role=insert
+            in string name=key
+            in object name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=24 role=lookup
+            in string name=key
+            out object return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=141 role=remove
+            in string name=key
+
+interface Windows.Foundation.Collections.IMap<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, IVectorView[TextSegment]]
+    guid a31b6540-b2b1-536d-818f-8ade7051c3b3
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Data.Text.TextSegment;u4;u4)))
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>>
+    argument System.String
+    argument Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=117 reverse=125 role=insert
+            in string name=key
+            in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=51 reverse=24 role=lookup
+            in string name=key
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=4 reverse=141 role=remove
+            in string name=key
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, Object]
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
+    argument System.String
+    argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=24 role=lookup
+            in string name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, IVectorView[TextSegment]]
+    guid 91d443d6-3777-5102-b0bc-3d4183a26ff9
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Data.Text.TextSegment;u4;u4)))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>>
+    argument System.String
+    argument Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=51 reverse=24 role=lookup
+            in string name=key
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment>> name=second
 
 interface Windows.Storage.Search.IQueryOptions
     guid 1e5e46ee-0f45-4838-a8e9-d0479d446c30
@@ -346,50 +1047,333 @@ interface Windows.Storage.Search.IStorageQueryResultBase python_type
 interface Windows.Storage.Search.IValueAndLanguage
     guid b9914881-a1ee-4bc4-92a5-466968e30436
 
-interface Windows.Foundation.Collections.IVector<System.String> concrete
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
     guid 98b9acc1-4b56-532e-ac73-03d5291cca90
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SortEntry]
     guid d8ea401b-47b3-5254-84f4-eea10c4cf068
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};struct(Windows.Storage.Search.SortEntry;string;b1))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry>
     argument Windows.Storage.Search.SortEntry
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=27 reverse=182
+            in struct type=Windows.Storage.Search.SortEntry name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.SortEntry> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Storage.Search.SortEntry return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Storage.Search.SortEntry name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.SortEntry> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=171 reverse=112
+            in struct type=Windows.Storage.Search.SortEntry name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=65 reverse=151 role=insert_at
+            in uint32 name=index
+            in struct type=Windows.Storage.Search.SortEntry name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=51 reverse=211
+            pass_array struct type=Windows.Storage.Search.SortEntry name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=65 reverse=131 role=set_at
+            in uint32 name=index
+            in struct type=Windows.Storage.Search.SortEntry name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TextSegment]
     guid 2f245f9d-eb5f-5641-9dcc-6ab1946cc7e6
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Data.Text.TextSegment;u4;u4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextSegment>
     argument Windows.Data.Text.TextSegment
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextSegment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Data.Text.TextSegment return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Data.Text.TextSegment name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=181 reverse=90
+            in struct type=Windows.Data.Text.TextSegment name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IMapView[String, Object]]
     guid 172a655b-b3b8-5eae-bc2e-a6a1f1708b4b
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IMapView<System.String,System.Object>>
     argument Windows.Foundation.Collections.IMapView<System.String,System.Object>
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IMapView<System.String,System.Object>> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Collections.IMapView<System.String,System.Object>> shape=117 reverse=66
+            in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IStorageItem]
     guid 85575a41-06cb-58d0-b98a-7c8f06e6e9d7
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{4207a996-ca2f-42f7-bde8-8b10457a7f30})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem>
     argument Windows.Storage.IStorageItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Storage.IStorageItem return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Storage.IStorageItem name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=117 reverse=66
+            in interface type=Windows.Storage.IStorageItem name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IIndexableContent]
     guid f4512416-6bb8-5c6f-b83a-bf8a2788ce9f
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{ccf1a05f-d4b5-483a-b06e-e0db1ec420e4})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.Search.IIndexableContent>
     argument Windows.Storage.Search.IIndexableContent
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Search.IIndexableContent> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.IIndexableContent> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Storage.Search.IIndexableContent return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Storage.Search.IIndexableContent name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.IIndexableContent> shape=117 reverse=66
+            in interface type=Windows.Storage.Search.IIndexableContent name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.SortEntry> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.SortEntry> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SortEntry]
     guid 823c7604-b37b-5465-a169-29497893cdb9
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Storage.Search.SortEntry;string;b1))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry>
     argument Windows.Storage.Search.SortEntry
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.SortEntry> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.SortEntry> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.SortEntry> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Storage.Search.SortEntry return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.SortEntry> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Storage.Search.SortEntry name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.SortEntry> shape=171 reverse=84
+            in struct type=Windows.Storage.Search.SortEntry name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StorageFile]
     guid 80646519-5e2a-595d-a8cd-2a24b4067f1b
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile>
     argument Windows.Storage.StorageFile
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Storage.StorageFile return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Storage.StorageFile name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=117 reverse=66
+            in class type=Windows.Storage.StorageFile name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StorageFolder]
     guid e20debc6-dc4e-542e-a2e7-a24d19c8dd62
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFolder>
     argument Windows.Storage.StorageFolder
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFolder> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFolder> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Storage.StorageFolder return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Storage.StorageFolder name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder> shape=117 reverse=66
+            in class type=Windows.Storage.StorageFolder name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Storage.Search.IndexableContent activatable python_type
     py IndexableContent
@@ -515,7 +1499,7 @@ class Windows.Storage.Search.SortEntryVector python_type iterable sequence mutab
     requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry>
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=27 reverse=182
@@ -523,10 +1507,10 @@ class Windows.Storage.Search.SortEntryVector python_type iterable sequence mutab
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Search.SortEntry> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out struct type=Windows.Storage.Search.SortEntry return
     method get_many
@@ -543,11 +1527,11 @@ class Windows.Storage.Search.SortEntryVector python_type iterable sequence mutab
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=65 reverse=151
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=65 reverse=151 role=insert_at
             in uint32 name=index
             in struct type=Windows.Storage.Search.SortEntry name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=0 reverse=185
@@ -555,7 +1539,7 @@ class Windows.Storage.Search.SortEntryVector python_type iterable sequence mutab
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=51 reverse=211
             pass_array struct type=Windows.Storage.Search.SortEntry name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=65 reverse=131
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=65 reverse=131 role=set_at
             in uint32 name=index
             in struct type=Windows.Storage.Search.SortEntry name=value
 
@@ -718,10 +1702,16 @@ class Windows.Storage.Search.StorageLibraryContentChangedTriggerDetails python_t
 enum T parameterized
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Search.IStorageQueryResultBase,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[IStorageQueryResultBase, Object]
     guid 4ba22861-00c4-597f-b6bf-3af516f3b870
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{c297d70d-7353-47ab-ba58-8c61425dc54b};cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Storage.Search.IStorageQueryResultBase
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Storage.Search.IStorageQueryResultBase name=sender
+            in object name=args
 
 class Windows.Storage.Search.ValueAndLanguage activatable python_type
     py ValueAndLanguage
@@ -754,9 +1744,56 @@ class System.UInt32 external
 struct Windows.Data.Text.TextSegment external
     py winrt.windows.data.text.TextSegment
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.IStorageItem external
     py winrt.windows.storage._IStorageItem

@@ -79,34 +79,70 @@ struct Windows.Gaming.Input.ArcadeStickReading python_type
     field buttons Buttons enum_u32 type=Windows.Gaming.Input.ArcadeStickButtons
 
 delegate Windows.Foundation.EventHandler<Windows.Gaming.Input.ArcadeStick> concrete
+    py winrt.windows.foundation.EventHandler[ArcadeStick]
     guid 6afb8188-d28d-539b-bb69-ea1763fb9920
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Gaming.Input.ArcadeStick;{b14a539d-befb-4c81-8051-15ecf3b13036}))
+    base Windows.Foundation.EventHandler
     argument Windows.Gaming.Input.ArcadeStick
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Gaming.Input.ArcadeStick name=args
 
 delegate Windows.Foundation.EventHandler<Windows.Gaming.Input.FlightStick> concrete
+    py winrt.windows.foundation.EventHandler[FlightStick]
     guid d57470b1-cc22-5a43-8e18-5ca064aafe21
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Gaming.Input.FlightStick;{b4a2c01c-b83b-4459-a1a9-97b03c33da7c}))
+    base Windows.Foundation.EventHandler
     argument Windows.Gaming.Input.FlightStick
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Gaming.Input.FlightStick name=args
 
 delegate Windows.Foundation.EventHandler<Windows.Gaming.Input.Gamepad> concrete
+    py winrt.windows.foundation.EventHandler[Gamepad]
     guid 8a7639ee-624a-501a-bb53-562d1ec11b52
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Gaming.Input.Gamepad;{bc7bb43c-0a69-3903-9e9d-a50f86a45de5}))
+    base Windows.Foundation.EventHandler
     argument Windows.Gaming.Input.Gamepad
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Gaming.Input.Gamepad name=args
 
 delegate Windows.Foundation.EventHandler<Windows.Gaming.Input.RacingWheel> concrete
+    py winrt.windows.foundation.EventHandler[RacingWheel]
     guid 352ec824-f64b-5353-80ea-7ff58e3b92a4
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Gaming.Input.RacingWheel;{f546656f-e106-4c82-a90f-554012904b85}))
+    base Windows.Foundation.EventHandler
     argument Windows.Gaming.Input.RacingWheel
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Gaming.Input.RacingWheel name=args
 
 delegate Windows.Foundation.EventHandler<Windows.Gaming.Input.RawGameController> concrete
+    py winrt.windows.foundation.EventHandler[RawGameController]
     guid 00621c22-42e8-529f-9270-836b32931d72
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Gaming.Input.RawGameController;{7cad6d91-a7e1-4f71-9a78-33e9c5dfea62}))
+    base Windows.Foundation.EventHandler
     argument Windows.Gaming.Input.RawGameController
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Gaming.Input.RawGameController name=args
 
 delegate Windows.Foundation.EventHandler<Windows.Gaming.Input.UINavigationController> concrete
+    py winrt.windows.foundation.EventHandler[UINavigationController]
     guid 9eaec424-75c1-5871-8da9-ce590c653045
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Gaming.Input.UINavigationController;{e5aeefdd-f50e-4a55-8cdc-d33229548175}))
+    base Windows.Foundation.EventHandler
     argument Windows.Gaming.Input.UINavigationController
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Gaming.Input.UINavigationController name=args
 
 class Windows.Gaming.Input.FlightStick python_type
     py FlightStick
@@ -385,6 +421,246 @@ interface Windows.Gaming.Input.IGamepadStatics2
 interface Windows.Gaming.Input.IHeadset
     guid 3fd156ef-6925-3fa8-9181-029c5223ae3b
 
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Haptics.SimpleHapticsController> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SimpleHapticsController]
+    guid b50da692-4a2b-5c8a-8e14-0439c0b1dba4
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Haptics.SimpleHapticsController;{3d577ef9-4cee-11e6-b535-001bdc06ab3b}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Haptics.SimpleHapticsController
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Haptics.SimpleHapticsController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Haptics.SimpleHapticsController> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.ArcadeStick> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ArcadeStick]
+    guid 9376f457-2da5-544a-a409-c636f5d81c35
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Gaming.Input.ArcadeStick;{b14a539d-befb-4c81-8051-15ecf3b13036}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Gaming.Input.ArcadeStick
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.ArcadeStick> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ArcadeStick> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.FlightStick> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[FlightStick]
+    guid 3b7fc175-bebe-52ef-a3e9-dda75ea1acfc
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Gaming.Input.FlightStick;{b4a2c01c-b83b-4459-a1a9-97b03c33da7c}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Gaming.Input.FlightStick
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.FlightStick> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.FlightStick> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ForceFeedbackMotor]
+    guid c14440d1-fea0-5147-aed8-9b85239da882
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor;{8d3d417c-a5ea-4516-8026-2b00f74ef6e5}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.Gamepad> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Gamepad]
+    guid 47132ba0-6b17-5cd2-a8bd-b5d3443ccb13
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Gaming.Input.Gamepad;{bc7bb43c-0a69-3903-9e9d-a50f86a45de5}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Gaming.Input.Gamepad
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.Gamepad> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.Gamepad> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.RacingWheel> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[RacingWheel]
+    guid 9a7c3830-9a87-5287-a1e2-8a2af29cf68c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Gaming.Input.RacingWheel;{f546656f-e106-4c82-a90f-554012904b85}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Gaming.Input.RacingWheel
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.RacingWheel> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RacingWheel> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.RawGameController> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[RawGameController]
+    guid 8f2f08cc-f4f4-5539-9357-1f07334d381f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Gaming.Input.RawGameController;{7cad6d91-a7e1-4f71-9a78-33e9c5dfea62}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Gaming.Input.RawGameController
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.RawGameController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RawGameController> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.UINavigationController> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UINavigationController]
+    guid 8dea85a0-0204-57dd-abad-90e37c0ef240
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Gaming.Input.UINavigationController;{e5aeefdd-f50e-4a55-8cdc-d33229548175}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Gaming.Input.UINavigationController
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.UINavigationController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.UINavigationController> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Haptics.SimpleHapticsController> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SimpleHapticsController]
+    guid 3c501ba4-eda4-5238-bdb7-d10ba350cd83
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Haptics.SimpleHapticsController;{3d577ef9-4cee-11e6-b535-001bdc06ab3b}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Haptics.SimpleHapticsController
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Haptics.SimpleHapticsController> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Haptics.SimpleHapticsController return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Haptics.SimpleHapticsController> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Haptics.SimpleHapticsController> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Haptics.SimpleHapticsController name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Haptics.SimpleHapticsController> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ArcadeStick> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ArcadeStick]
+    guid d30629af-cc9d-52e1-8b1f-0ffa9629afee
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Gaming.Input.ArcadeStick;{b14a539d-befb-4c81-8051-15ecf3b13036}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Gaming.Input.ArcadeStick
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ArcadeStick> shape=4 reverse=22 role=current
+            out class type=Windows.Gaming.Input.ArcadeStick return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ArcadeStick> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ArcadeStick> shape=117 reverse=101
+            fill_array class type=Windows.Gaming.Input.ArcadeStick name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ArcadeStick> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.FlightStick> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[FlightStick]
+    guid f5fa1919-3f18-5560-bb13-cf7018ac41d5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Gaming.Input.FlightStick;{b4a2c01c-b83b-4459-a1a9-97b03c33da7c}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Gaming.Input.FlightStick
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.FlightStick> shape=4 reverse=22 role=current
+            out class type=Windows.Gaming.Input.FlightStick return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.FlightStick> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.FlightStick> shape=117 reverse=101
+            fill_array class type=Windows.Gaming.Input.FlightStick name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.FlightStick> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ForceFeedbackMotor]
+    guid 64cf69e0-5464-5b72-bd4b-82f7c3d0386d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor;{8d3d417c-a5ea-4516-8026-2b00f74ef6e5}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=4 reverse=22 role=current
+            out class type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=117 reverse=101
+            fill_array class type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.Gamepad> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Gamepad]
+    guid 246737e8-12bc-5c64-af52-06db4b13fa2f
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Gaming.Input.Gamepad;{bc7bb43c-0a69-3903-9e9d-a50f86a45de5}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Gaming.Input.Gamepad
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.Gamepad> shape=4 reverse=22 role=current
+            out class type=Windows.Gaming.Input.Gamepad return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.Gamepad> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.Gamepad> shape=117 reverse=101
+            fill_array class type=Windows.Gaming.Input.Gamepad name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.Gamepad> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RacingWheel> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[RacingWheel]
+    guid 23d735b8-4d36-5377-a245-69df97c9fcd9
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Gaming.Input.RacingWheel;{f546656f-e106-4c82-a90f-554012904b85}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Gaming.Input.RacingWheel
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RacingWheel> shape=4 reverse=22 role=current
+            out class type=Windows.Gaming.Input.RacingWheel return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RacingWheel> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RacingWheel> shape=117 reverse=101
+            fill_array class type=Windows.Gaming.Input.RacingWheel name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RacingWheel> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RawGameController> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[RawGameController]
+    guid 51cc88dc-66fb-55ea-9a1b-aadcd71cc08e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Gaming.Input.RawGameController;{7cad6d91-a7e1-4f71-9a78-33e9c5dfea62}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Gaming.Input.RawGameController
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RawGameController> shape=4 reverse=22 role=current
+            out class type=Windows.Gaming.Input.RawGameController return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RawGameController> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RawGameController> shape=117 reverse=101
+            fill_array class type=Windows.Gaming.Input.RawGameController name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RawGameController> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.UINavigationController> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UINavigationController]
+    guid c10b2696-64a3-5262-bc4f-b741e5d5afab
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Gaming.Input.UINavigationController;{e5aeefdd-f50e-4a55-8cdc-d33229548175}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Gaming.Input.UINavigationController
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.UINavigationController> shape=4 reverse=22 role=current
+            out class type=Windows.Gaming.Input.UINavigationController return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.UINavigationController> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.UINavigationController> shape=117 reverse=101
+            fill_array class type=Windows.Gaming.Input.UINavigationController name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.UINavigationController> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.Gaming.Input.IRacingWheel
     guid f546656f-e106-4c82-a90f-554012904b85
 
@@ -412,45 +688,229 @@ interface Windows.Gaming.Input.IUINavigationControllerStatics
 interface Windows.Gaming.Input.IUINavigationControllerStatics2
     guid e0cb28e3-b20b-4b0b-9ed4-f3d53cec0de4
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsController> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsController> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SimpleHapticsController]
     guid 5390f01e-c701-5382-97cc-94eaac4b6cbf
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Haptics.SimpleHapticsController;{3d577ef9-4cee-11e6-b535-001bdc06ab3b}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Haptics.SimpleHapticsController>
     argument Windows.Devices.Haptics.SimpleHapticsController
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsController> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Haptics.SimpleHapticsController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Haptics.SimpleHapticsController> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsController> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Haptics.SimpleHapticsController return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsController> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Haptics.SimpleHapticsController name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsController> shape=117 reverse=66
+            in class type=Windows.Devices.Haptics.SimpleHapticsController name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ArcadeStick> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ArcadeStick> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ArcadeStick]
     guid becace75-d0cd-5a9c-845f-72f085503cdf
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Gaming.Input.ArcadeStick;{b14a539d-befb-4c81-8051-15ecf3b13036}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.ArcadeStick>
     argument Windows.Gaming.Input.ArcadeStick
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ArcadeStick> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.ArcadeStick> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ArcadeStick> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ArcadeStick> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Gaming.Input.ArcadeStick return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ArcadeStick> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Gaming.Input.ArcadeStick name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ArcadeStick> shape=117 reverse=66
+            in class type=Windows.Gaming.Input.ArcadeStick name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.FlightStick> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.FlightStick> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[FlightStick]
     guid 8b9d067e-b6f5-592f-a90a-d72c3d98d4da
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Gaming.Input.FlightStick;{b4a2c01c-b83b-4459-a1a9-97b03c33da7c}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.FlightStick>
     argument Windows.Gaming.Input.FlightStick
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.FlightStick> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.FlightStick> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.FlightStick> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.FlightStick> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Gaming.Input.FlightStick return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.FlightStick> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Gaming.Input.FlightStick name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.FlightStick> shape=117 reverse=66
+            in class type=Windows.Gaming.Input.FlightStick name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ForceFeedbackMotor]
     guid 5bfc5070-101d-5fbb-8d5f-ce5c23becdd9
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor;{8d3d417c-a5ea-4516-8026-2b00f74ef6e5}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor>
     argument Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=117 reverse=66
+            in class type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepad> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepad> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Gamepad]
     guid eb97bb69-09c9-5a99-86b2-3e36085284d4
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Gaming.Input.Gamepad;{bc7bb43c-0a69-3903-9e9d-a50f86a45de5}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.Gamepad>
     argument Windows.Gaming.Input.Gamepad
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepad> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.Gamepad> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.Gamepad> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepad> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Gaming.Input.Gamepad return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepad> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Gaming.Input.Gamepad name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepad> shape=117 reverse=66
+            in class type=Windows.Gaming.Input.Gamepad name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RacingWheel> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RacingWheel> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[RacingWheel]
     guid 153993b2-6052-5959-91ec-900c53fef120
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Gaming.Input.RacingWheel;{f546656f-e106-4c82-a90f-554012904b85}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.RacingWheel>
     argument Windows.Gaming.Input.RacingWheel
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RacingWheel> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.RacingWheel> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RacingWheel> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RacingWheel> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Gaming.Input.RacingWheel return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RacingWheel> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Gaming.Input.RacingWheel name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RacingWheel> shape=117 reverse=66
+            in class type=Windows.Gaming.Input.RacingWheel name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGameController> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGameController> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[RawGameController]
     guid 779cc322-40c0-55c1-8dc5-cc6e3afe02cf
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Gaming.Input.RawGameController;{7cad6d91-a7e1-4f71-9a78-33e9c5dfea62}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.RawGameController>
     argument Windows.Gaming.Input.RawGameController
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGameController> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.RawGameController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RawGameController> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGameController> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Gaming.Input.RawGameController return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGameController> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Gaming.Input.RawGameController name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGameController> shape=117 reverse=66
+            in class type=Windows.Gaming.Input.RawGameController name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavigationController> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavigationController> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UINavigationController]
     guid 684b9e5a-2dc2-54fc-adf5-5ca8f6871425
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Gaming.Input.UINavigationController;{e5aeefdd-f50e-4a55-8cdc-d33229548175}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.UINavigationController>
     argument Windows.Gaming.Input.UINavigationController
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavigationController> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Gaming.Input.UINavigationController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.UINavigationController> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavigationController> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Gaming.Input.UINavigationController return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavigationController> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Gaming.Input.UINavigationController name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavigationController> shape=117 reverse=66
+            in class type=Windows.Gaming.Input.UINavigationController name=value
+            out uint32 name=index
+            out boolean return
 
 enum Windows.Gaming.Input.OptionalUINavigationButtons python_type
     py OptionalUINavigationButtons
@@ -661,16 +1121,28 @@ enum Windows.Gaming.Input.RequiredUINavigationButtons python_type
     signature enum(Windows.Gaming.Input.RequiredUINavigationButtons;u4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> concrete
+    py winrt.windows.foundation.TypedEventHandler[IGameController, Headset]
     guid 07b2f2b7-8825-5c4e-a052-fcfedf3aeea1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{1baf6522-5f64-42c5-8267-b9fe2215bfbd};rc(Windows.Gaming.Input.Headset;{3fd156ef-6925-3fa8-9181-029c5223ae3b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Gaming.Input.IGameController
     argument Windows.Gaming.Input.Headset
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Gaming.Input.IGameController name=sender
+            in class type=Windows.Gaming.Input.Headset name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.System.UserChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IGameController, UserChangedEventArgs]
     guid cb753f2c-2f36-5a8f-adad-057beae73aa4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{1baf6522-5f64-42c5-8267-b9fe2215bfbd};rc(Windows.System.UserChangedEventArgs;{086459dc-18c6-48db-bc99-724fb9203ccc}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Gaming.Input.IGameController
     argument Windows.System.UserChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Gaming.Input.IGameController name=sender
+            in class type=Windows.System.UserChangedEventArgs name=args
 
 class Windows.Gaming.Input.UINavigationController python_type
     py UINavigationController
@@ -754,6 +1226,26 @@ class Windows.Devices.Haptics.SimpleHapticsController external
 
 class Windows.Devices.Power.BatteryReport external
     py winrt.windows.devices.power.BatteryReport
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor external
     py winrt.windows.gaming.input.forcefeedback.ForceFeedbackMotor

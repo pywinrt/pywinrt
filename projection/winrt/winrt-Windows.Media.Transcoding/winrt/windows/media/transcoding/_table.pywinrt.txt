@@ -2,15 +2,100 @@ format 4.0
 generator 0.0.0
 namespace Windows.Media.Transcoding
 
-interface Windows.Foundation.IAsyncActionWithProgress<System.Double> concrete
+delegate Windows.Foundation.AsyncActionProgressHandler<System.Double> concrete
+    py winrt.windows.foundation.AsyncActionProgressHandler[Double]
+    guid 44825c7c-0da9-5691-b2b4-914f231eeced
+    signature pinterface({6d844858-0cff-4590-ae89-95a5a5c8b4b8};f8)
+    base Windows.Foundation.AsyncActionProgressHandler
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=49 reverse=2
+            in parameterized type=Windows.Foundation.IAsyncActionWithProgress<System.Double> name=asyncInfo
+            in double name=progressInfo
+
+delegate Windows.Foundation.AsyncActionWithProgressCompletedHandler<System.Double> concrete
+    py winrt.windows.foundation.AsyncActionWithProgressCompletedHandler[Double]
+    guid 94d64ac6-4491-53ef-8be8-36481f3ff1e8
+    signature pinterface({9c029f91-cc84-44fd-ac26-0a6c4e555281};f8)
+    base Windows.Foundation.AsyncActionWithProgressCompletedHandler
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncActionWithProgress<System.Double> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Transcoding.PrepareTranscodeResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PrepareTranscodeResult]
+    guid a44d7d07-8f74-52ee-9f02-c2b244b4ff2a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Transcoding.PrepareTranscodeResult;{05f25dce-994f-4a34-9d68-97ccce1730d6}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Transcoding.PrepareTranscodeResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.PrepareTranscodeResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncActionWithProgress<System.Double> concrete awaitable
+    py winrt.windows.foundation._IAsyncActionWithProgress[Double]
     guid 4f1430a6-a825-56ca-b047-1a9bad52ba67
     signature pinterface({1f6db258-e803-48a1-9546-eb7353398884};f8)
+    base Windows.Foundation.IAsyncActionWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument System.Double
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncActionWithProgress<System.Double> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncActionProgressHandler<System.Double> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncActionWithProgress<System.Double> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncActionProgressHandler<System.Double> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncActionWithProgress<System.Double> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncActionWithProgressCompletedHandler<System.Double> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncActionWithProgress<System.Double> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncActionWithProgressCompletedHandler<System.Double> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncActionWithProgress<System.Double> shape=0 reverse=117 role=get_results
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.PrepareTranscodeResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.PrepareTranscodeResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PrepareTranscodeResult]
     guid f5f07c13-3047-5bab-8eb7-6e5d7d14afae
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Transcoding.PrepareTranscodeResult;{05f25dce-994f-4a34-9d68-97ccce1730d6}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Transcoding.PrepareTranscodeResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.PrepareTranscodeResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Transcoding.PrepareTranscodeResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.PrepareTranscodeResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Transcoding.PrepareTranscodeResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.PrepareTranscodeResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Transcoding.PrepareTranscodeResult return
 
 interface Windows.Media.Transcoding.IMediaTranscoder
     guid 190c99d2-a0aa-4d34-86bc-eed1b12c2f5b
@@ -115,6 +200,33 @@ enum Windows.Media.Transcoding.TranscodeFailureReason python_type
 
 class System.Double external
     py winrt.system.Double
+
+delegate Windows.Foundation.AsyncActionProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncActionProgressHandler
+    guid 6d844858-0cff-4590-ae89-95a5a5c8b4b8
+
+delegate Windows.Foundation.AsyncActionWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncActionWithProgressCompletedHandler
+    guid 9c029f91-cc84-44fd-ac26-0a6c4e555281
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncActionWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncActionWithProgress
+    guid 1f6db258-e803-48a1-9546-eb7353398884
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 interface Windows.Foundation.Collections.IPropertySet external
     py winrt.windows.foundation.collections._IPropertySet

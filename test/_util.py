@@ -17,15 +17,34 @@ def skip_without_projection() -> None:
     there is.
 
     A projection package is a table that ``winrt-runtime`` interprets, and the
-    interpreter is being built a piece at a time: it makes the types and calls
-    their non-generic members today, so what is still missing is parameterized
-    interfaces, arrays, delegates and events, and Python subclasses of
-    composable classes. Calling this before a module's imports keeps the suite
-    reporting skips rather than a wall of errors. Delete the call from a module
-    once the interpreter covers what it tests; ``test_projection.py`` is what
+    interpreter is being built a piece at a time: it makes the types, calls
+    their members and closes their parameterized interfaces today, so what is
+    still missing is arrays, delegates and events, Python subclasses of
+    composable classes, the numeric members of the ``Numerics`` structs and the
+    compiled interop modules. Calling this before a module's imports keeps the
+    suite reporting skips rather than a wall of errors. Delete the call from a
+    module once the interpreter covers what it tests; ``test_projection.py``
     covers the part that is already there.
     """
     raise unittest.SkipTest("winrt-runtime does not interpret this part of a table yet")
+
+
+def skip_without_delegates() -> None:
+    """
+    Skips the calling test because it needs a WinRT delegate implemented in
+    Python: an event handler, an async completion callback, or a Python object
+    passed where WinRT expects a collection. Nothing calls from WinRT into
+    Python yet, so the whole reverse direction is missing.
+    """
+    raise unittest.SkipTest("winrt-runtime does not implement delegates in Python yet")
+
+
+def skip_without_arrays() -> None:
+    """
+    Skips the calling test because it passes or receives a WinRT array, which
+    the interpreter does not convert yet.
+    """
+    raise unittest.SkipTest("winrt-runtime does not interpret array parameters yet")
 
 
 def async_test(test: Callable[..., Any]) -> Callable[..., None]:

@@ -2,25 +2,583 @@ format 4.0
 generator 0.0.0
 namespace Windows.Devices.Usb
 
-interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UInt32]
+    guid 9343b6e7-e3d2-5e4a-ab2d-2bce4919a6a4
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};u4)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Usb.UsbDevice> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UsbDevice]
+    guid 7331254f-6caf-587d-9c2a-018c66d312db
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Usb.UsbDevice;{5249b992-c456-44d5-ad5e-24f5a089f63b}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Usb.UsbDevice
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Usb.UsbDevice> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IBuffer]
+    guid 51c3d2fd-b8a1-5620-b746-7ee6d533aca3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IBuffer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UInt32]
     guid ef60385f-be78-584b-aaef-7829ada2b0de
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u4)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.UInt32
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=62 role=get_results
+            out uint32 return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Usb.UsbDevice> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Usb.UsbDevice> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UsbDevice]
     guid 2138c5ed-b71a-5166-9948-d55792748f5c
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Usb.UsbDevice;{5249b992-c456-44d5-ad5e-24f5a089f63b}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Usb.UsbDevice
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Usb.UsbDevice> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Usb.UsbDevice> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Usb.UsbDevice> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Usb.UsbDevice> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Usb.UsbDevice> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Usb.UsbDevice return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IBuffer]
     guid 3bee8834-b9a7-5a80-a746-5ef097227878
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IBuffer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IBuffer return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UsbBulkInEndpointDescriptor]
+    guid 101b1fd9-f1c9-5dda-9ad4-71176fa839b2
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Usb.UsbBulkInEndpointDescriptor;{3c6e4846-06cf-42a9-9dc2-971c1b14b6e3}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Usb.UsbBulkInEndpointDescriptor
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkInPipe> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UsbBulkInPipe]
+    guid 2201a671-42d2-508d-a848-64b5447083c8
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Usb.UsbBulkInPipe;{f01d2d3b-4548-4d50-b326-d82cdabe1220}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Usb.UsbBulkInPipe
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkInPipe> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInPipe> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UsbBulkOutEndpointDescriptor]
+    guid b80beb39-62b3-5f59-b3e7-882cc9c5b0c0
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Usb.UsbBulkOutEndpointDescriptor;{2820847a-ffee-4f60-9be1-956cac3ecb65}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Usb.UsbBulkOutEndpointDescriptor
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkOutPipe> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UsbBulkOutPipe]
+    guid 9824caba-5ca6-5c2d-80cf-1949026d7857
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Usb.UsbBulkOutPipe;{a8e9ee6e-0115-45aa-8b21-37b225bccee7}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Usb.UsbBulkOutPipe
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkOutPipe> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutPipe> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbDescriptor> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UsbDescriptor]
+    guid 989909a5-5a03-51fb-bd94-84da7bda8819
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Usb.UsbDescriptor;{0a89f216-5f9d-4874-8904-da9ad3f5528f}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Usb.UsbDescriptor
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbDescriptor> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterface> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UsbInterface]
+    guid f54037ed-92e9-590d-b904-3ad7bfa9a621
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Usb.UsbInterface;{a0322b95-7f47-48ab-a727-678c25be2112}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Usb.UsbInterface
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterface> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterface> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterfaceSetting> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UsbInterfaceSetting]
+    guid 1aaf5739-9c2c-533e-a0e9-d53fdb45d15d
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Usb.UsbInterfaceSetting;{1827bba7-8da7-4af7-8f4c-7f3032e781f5}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Usb.UsbInterfaceSetting
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterfaceSetting> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterfaceSetting> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UsbInterruptInEndpointDescriptor]
+    guid 8a7bac69-1f10-59c7-9837-72cfed7154a4
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Usb.UsbInterruptInEndpointDescriptor;{c0528967-c911-4c3a-86b2-419c2da89039}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Usb.UsbInterruptInEndpointDescriptor
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptInPipe> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UsbInterruptInPipe]
+    guid 39aef336-18aa-5be4-86d9-e332fe2632f3
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Usb.UsbInterruptInPipe;{fa007116-84d7-48c7-8a3f-4c0b235f2ea6}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Usb.UsbInterruptInPipe
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptInPipe> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInPipe> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UsbInterruptOutEndpointDescriptor]
+    guid 09393d62-2316-536b-8a10-7038884ab2a7
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor;{cc9fed81-10ca-4533-952d-9e278341e80f}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptOutPipe> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UsbInterruptOutPipe]
+    guid e61a011e-4abe-53f2-83b3-ed4a949d2e3f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Usb.UsbInterruptOutPipe;{e984c8a9-aaf9-49d0-b96c-f661ab4a7f95}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Usb.UsbInterruptOutPipe
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptOutPipe> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutPipe> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UsbBulkInEndpointDescriptor]
+    guid ea511030-89c4-503d-8caf-667f4230d2a9
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Usb.UsbBulkInEndpointDescriptor;{3c6e4846-06cf-42a9-9dc2-971c1b14b6e3}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Usb.UsbBulkInEndpointDescriptor
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Usb.UsbBulkInEndpointDescriptor return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Usb.UsbBulkInEndpointDescriptor name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInPipe> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UsbBulkInPipe]
+    guid d7af2c5b-528d-5cbb-a997-d830ade704c7
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Usb.UsbBulkInPipe;{f01d2d3b-4548-4d50-b326-d82cdabe1220}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Usb.UsbBulkInPipe
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInPipe> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Usb.UsbBulkInPipe return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInPipe> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInPipe> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Usb.UsbBulkInPipe name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInPipe> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UsbBulkOutEndpointDescriptor]
+    guid a8b89ab3-883d-5361-9903-f489cc62bea5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Usb.UsbBulkOutEndpointDescriptor;{2820847a-ffee-4f60-9be1-956cac3ecb65}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Usb.UsbBulkOutEndpointDescriptor
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Usb.UsbBulkOutEndpointDescriptor return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Usb.UsbBulkOutEndpointDescriptor name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutPipe> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UsbBulkOutPipe]
+    guid 46dd2f6a-573b-5c45-b168-9223038491dd
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Usb.UsbBulkOutPipe;{a8e9ee6e-0115-45aa-8b21-37b225bccee7}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Usb.UsbBulkOutPipe
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutPipe> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Usb.UsbBulkOutPipe return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutPipe> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutPipe> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Usb.UsbBulkOutPipe name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutPipe> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbDescriptor> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UsbDescriptor]
+    guid 521598ed-0167-528e-990d-52abb712f072
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Usb.UsbDescriptor;{0a89f216-5f9d-4874-8904-da9ad3f5528f}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Usb.UsbDescriptor
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbDescriptor> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Usb.UsbDescriptor return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbDescriptor> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbDescriptor> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Usb.UsbDescriptor name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbDescriptor> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterface> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UsbInterface]
+    guid 216b5a5f-63e3-5a9b-9c99-b09cbc0ff3b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Usb.UsbInterface;{a0322b95-7f47-48ab-a727-678c25be2112}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Usb.UsbInterface
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterface> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Usb.UsbInterface return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterface> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterface> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Usb.UsbInterface name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterface> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterfaceSetting> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UsbInterfaceSetting]
+    guid 71267ec7-5697-5dea-b2f8-14cf698ec0ad
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Usb.UsbInterfaceSetting;{1827bba7-8da7-4af7-8f4c-7f3032e781f5}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Usb.UsbInterfaceSetting
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterfaceSetting> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Usb.UsbInterfaceSetting return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterfaceSetting> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterfaceSetting> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Usb.UsbInterfaceSetting name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterfaceSetting> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UsbInterruptInEndpointDescriptor]
+    guid 6717500f-ec1c-5b12-bf33-0e3e3d244587
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Usb.UsbInterruptInEndpointDescriptor;{c0528967-c911-4c3a-86b2-419c2da89039}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Usb.UsbInterruptInEndpointDescriptor
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Usb.UsbInterruptInEndpointDescriptor return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Usb.UsbInterruptInEndpointDescriptor name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInPipe> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UsbInterruptInPipe]
+    guid e3a7b1c0-74f6-5292-a22a-672aa2b49985
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Usb.UsbInterruptInPipe;{fa007116-84d7-48c7-8a3f-4c0b235f2ea6}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Usb.UsbInterruptInPipe
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInPipe> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Usb.UsbInterruptInPipe return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInPipe> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInPipe> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Usb.UsbInterruptInPipe name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInPipe> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UsbInterruptOutEndpointDescriptor]
+    guid 4b6426db-db32-5b51-adad-04532ea94acd
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor;{cc9fed81-10ca-4533-952d-9e278341e80f}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutPipe> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UsbInterruptOutPipe]
+    guid cbd8d8a8-2286-5cbd-a6e4-962742ffd91a
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Usb.UsbInterruptOutPipe;{e984c8a9-aaf9-49d0-b96c-f661ab4a7f95}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Usb.UsbInterruptOutPipe
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutPipe> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Usb.UsbInterruptOutPipe return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutPipe> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutPipe> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Usb.UsbInterruptOutPipe name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutPipe> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Foundation.IReference<System.Byte> concrete
+    py winrt.windows.foundation._IReference[Byte]
     guid e5198cc8-2873-55f5-b0a1-84ff9e4aad62
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u1)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Byte
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Byte> shape=4 reverse=22 role=value
+            out uint8 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Devices.Usb.IUsbBulkInEndpointDescriptor
     guid 3c6e4846-06cf-42a9-9dc2-971c1b14b6e3
@@ -106,66 +664,325 @@ interface Windows.Devices.Usb.IUsbSetupPacket
 interface Windows.Devices.Usb.IUsbSetupPacketFactory
     guid c9257d50-1b2e-4a41-a2a7-338f0cef3c14
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UsbBulkInEndpointDescriptor]
     guid 9c69ac78-309e-5763-af26-9706ffa47ec0
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbBulkInEndpointDescriptor;{3c6e4846-06cf-42a9-9dc2-971c1b14b6e3}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkInEndpointDescriptor>
     argument Windows.Devices.Usb.UsbBulkInEndpointDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Usb.UsbBulkInEndpointDescriptor return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Usb.UsbBulkInEndpointDescriptor name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=117 reverse=66
+            in class type=Windows.Devices.Usb.UsbBulkInEndpointDescriptor name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInPipe> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInPipe> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UsbBulkInPipe]
     guid a93c84bc-6484-5959-b61a-703cc7115f6f
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbBulkInPipe;{f01d2d3b-4548-4d50-b326-d82cdabe1220}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkInPipe>
     argument Windows.Devices.Usb.UsbBulkInPipe
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInPipe> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkInPipe> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInPipe> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInPipe> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Usb.UsbBulkInPipe return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInPipe> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Usb.UsbBulkInPipe name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInPipe> shape=117 reverse=66
+            in class type=Windows.Devices.Usb.UsbBulkInPipe name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UsbBulkOutEndpointDescriptor]
     guid 22a53676-a3ea-5dcd-bb39-b28a5327c4a3
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbBulkOutEndpointDescriptor;{2820847a-ffee-4f60-9be1-956cac3ecb65}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor>
     argument Windows.Devices.Usb.UsbBulkOutEndpointDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Usb.UsbBulkOutEndpointDescriptor return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Usb.UsbBulkOutEndpointDescriptor name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=117 reverse=66
+            in class type=Windows.Devices.Usb.UsbBulkOutEndpointDescriptor name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutPipe> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutPipe> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UsbBulkOutPipe]
     guid 0a873512-15f1-5e8e-a72a-045cfd7a5e83
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbBulkOutPipe;{a8e9ee6e-0115-45aa-8b21-37b225bccee7}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkOutPipe>
     argument Windows.Devices.Usb.UsbBulkOutPipe
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutPipe> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbBulkOutPipe> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutPipe> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutPipe> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Usb.UsbBulkOutPipe return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutPipe> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Usb.UsbBulkOutPipe name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutPipe> shape=117 reverse=66
+            in class type=Windows.Devices.Usb.UsbBulkOutPipe name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UsbDescriptor]
     guid 5408baa2-291e-537a-b61f-137062f7ff7d
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbDescriptor;{0a89f216-5f9d-4874-8904-da9ad3f5528f}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbDescriptor>
     argument Windows.Devices.Usb.UsbDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Usb.UsbDescriptor return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Usb.UsbDescriptor name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> shape=117 reverse=66
+            in class type=Windows.Devices.Usb.UsbDescriptor name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterface> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterface> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UsbInterface]
     guid 9c69ec7f-2e42-58cd-a74a-f4974811134d
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbInterface;{a0322b95-7f47-48ab-a727-678c25be2112}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterface>
     argument Windows.Devices.Usb.UsbInterface
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterface> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterface> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterface> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterface> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Usb.UsbInterface return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterface> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Usb.UsbInterface name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterface> shape=117 reverse=66
+            in class type=Windows.Devices.Usb.UsbInterface name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterfaceSetting> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterfaceSetting> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UsbInterfaceSetting]
     guid 71194af7-77c2-54d5-a116-287f0b7fd53f
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbInterfaceSetting;{1827bba7-8da7-4af7-8f4c-7f3032e781f5}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterfaceSetting>
     argument Windows.Devices.Usb.UsbInterfaceSetting
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterfaceSetting> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterfaceSetting> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterfaceSetting> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterfaceSetting> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Usb.UsbInterfaceSetting return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterfaceSetting> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Usb.UsbInterfaceSetting name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterfaceSetting> shape=117 reverse=66
+            in class type=Windows.Devices.Usb.UsbInterfaceSetting name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UsbInterruptInEndpointDescriptor]
     guid 3fc7f890-218e-5057-904d-6387c591cc93
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbInterruptInEndpointDescriptor;{c0528967-c911-4c3a-86b2-419c2da89039}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor>
     argument Windows.Devices.Usb.UsbInterruptInEndpointDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Usb.UsbInterruptInEndpointDescriptor return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Usb.UsbInterruptInEndpointDescriptor name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=117 reverse=66
+            in class type=Windows.Devices.Usb.UsbInterruptInEndpointDescriptor name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInPipe> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInPipe> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UsbInterruptInPipe]
     guid 37469574-b4c5-5ba0-9616-894dd822ff5b
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbInterruptInPipe;{fa007116-84d7-48c7-8a3f-4c0b235f2ea6}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptInPipe>
     argument Windows.Devices.Usb.UsbInterruptInPipe
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInPipe> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptInPipe> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInPipe> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInPipe> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Usb.UsbInterruptInPipe return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInPipe> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Usb.UsbInterruptInPipe name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInPipe> shape=117 reverse=66
+            in class type=Windows.Devices.Usb.UsbInterruptInPipe name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UsbInterruptOutEndpointDescriptor]
     guid 984e7e15-c5ac-5140-a3c0-b583190085d7
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor;{cc9fed81-10ca-4533-952d-9e278341e80f}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor>
     argument Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=117 reverse=66
+            in class type=Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutPipe> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutPipe> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UsbInterruptOutPipe]
     guid 748196c8-83bf-5ec3-8d28-a3112b3ee3cc
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Usb.UsbInterruptOutPipe;{e984c8a9-aaf9-49d0-b96c-f661ab4a7f95}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptOutPipe>
     argument Windows.Devices.Usb.UsbInterruptOutPipe
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutPipe> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Usb.UsbInterruptOutPipe> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutPipe> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutPipe> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Usb.UsbInterruptOutPipe return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutPipe> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Usb.UsbInterruptOutPipe name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutPipe> shape=117 reverse=66
+            in class type=Windows.Devices.Usb.UsbInterruptOutPipe name=value
+            out uint32 name=index
+            out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Usb.UsbInterruptInPipe,Windows.Devices.Usb.UsbInterruptInEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[UsbInterruptInPipe, UsbInterruptInEventArgs]
     guid e6db9449-f36a-50f2-926c-2afd85c49f01
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Usb.UsbInterruptInPipe;{fa007116-84d7-48c7-8a3f-4c0b235f2ea6});rc(Windows.Devices.Usb.UsbInterruptInEventArgs;{b7b04092-1418-4936-8209-299cf5605583}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Usb.UsbInterruptInPipe
     argument Windows.Devices.Usb.UsbInterruptInEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Usb.UsbInterruptInPipe name=sender
+            in class type=Windows.Devices.Usb.UsbInterruptInEventArgs name=args
 
 class Windows.Devices.Usb.UsbBulkInEndpointDescriptor python_type
     py UsbBulkInEndpointDescriptor
@@ -354,7 +1171,7 @@ class Windows.Devices.Usb.UsbDevice python_type closeable
         get get_DeviceDescriptor slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbDevice shape=4 reverse=141
             out class type=Windows.Devices.Usb.UsbDeviceDescriptor return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
         method FromIdAsync slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceStatics shape=51 reverse=124 static
             in string name=deviceId
@@ -745,13 +1562,64 @@ class System.Byte external
 class System.UInt32 external
     py winrt.system.UInt32
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.Streams.IBuffer external
     py winrt.windows.storage.streams._IBuffer

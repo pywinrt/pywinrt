@@ -2,6 +2,17 @@ format 4.0
 generator 0.0.0
 namespace Windows.Security.ExchangeActiveSyncProvisioning
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[EasComplianceResults]
+    guid 24a4131a-ed31-5eff-972e-750b956404d0
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults;{463c299c-7f19-4c66-b403-cb45dd57a2b3}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation activatable python_type
     py EasClientDeviceInformation
     signature rc(Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation;{54dfd981-1968-4ca3-b958-e595d16505eb})
@@ -164,10 +175,34 @@ enum Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult 
     py EasRequireEncryptionResult
     signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult;i4)
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[EasComplianceResults]
     guid fc3a733a-7ded-5e92-a569-b43389ee8827
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults;{463c299c-7f19-4c66-b403-cb45dd57a2b3}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults return
 
 interface Windows.Security.ExchangeActiveSyncProvisioning.IEasClientDeviceInformation
     guid 54dfd981-1968-4ca3-b958-e595d16505eb
@@ -183,3 +218,18 @@ interface Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults
 
 interface Windows.Security.ExchangeActiveSyncProvisioning.IEasComplianceResults2
     guid 2fbe60c9-1aa8-47f5-88bb-cb3ef0bffb15
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2

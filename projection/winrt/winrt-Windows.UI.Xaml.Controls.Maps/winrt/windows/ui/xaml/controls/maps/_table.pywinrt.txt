@@ -2,6 +2,39 @@ format 4.0
 generator 0.0.0
 namespace Windows.UI.Xaml.Controls.Maps
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Controls.Maps.MapModel3D> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MapModel3D]
+    guid 60ef194b-dbe0-5911-b725-ecc5de298782
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.UI.Xaml.Controls.Maps.MapModel3D;{f8c541a1-ca27-4968-a2bf-9c20f06a0468}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.UI.Xaml.Controls.Maps.MapModel3D
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.MapModel3D> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StreetsidePanorama]
+    guid f6f3b17c-4527-5528-86aa-1cf1fb78a5eb
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.UI.Xaml.Controls.Maps.StreetsidePanorama;{6fe00fd8-ad60-4664-b539-b1069f16c5af}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.UI.Xaml.Controls.Maps.StreetsidePanorama
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource composable python_type
     py CustomMapTileDataSource
     signature rc(Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource;{65da384a-2db1-4be1-b155-3d0c9ecf4799})
@@ -58,20 +91,92 @@ class Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource composable python_type
         remove remove_UriRequested slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSource shape=26 reverse=167
             in event_token name=token
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.MapModel3D> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.MapModel3D> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MapModel3D]
     guid 0cf0240f-7f78-535b-850c-fe6231759064
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.UI.Xaml.Controls.Maps.MapModel3D;{f8c541a1-ca27-4968-a2bf-9c20f06a0468}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.UI.Xaml.Controls.Maps.MapModel3D
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.MapModel3D> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Controls.Maps.MapModel3D> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.MapModel3D> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Controls.Maps.MapModel3D> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.MapModel3D> shape=4 reverse=62 role=get_results
+            out class type=Windows.UI.Xaml.Controls.Maps.MapModel3D return
 
-interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StreetsidePanorama]
     guid 6ad8ea47-6670-51d8-a1db-33fe75491f0c
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.UI.Xaml.Controls.Maps.StreetsidePanorama;{6fe00fd8-ad60-4664-b539-b1069f16c5af}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.UI.Xaml.Controls.Maps.StreetsidePanorama
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> shape=4 reverse=62 role=get_results
+            out class type=Windows.UI.Xaml.Controls.Maps.StreetsidePanorama return
 
 interface Windows.UI.Xaml.Controls.Maps.ICustomMapTileDataSource
     guid 65da384a-2db1-4be1-b155-3d0c9ecf4799
@@ -85,15 +190,363 @@ interface Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSource
 interface Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSourceFactory
     guid 53b4b107-84dc-4291-89f8-6d0bb612a055
 
-interface Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopoint> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopath> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Geopath]
+    guid 246fcfbd-a881-5e8e-9908-c1b9ebdfec78
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Geolocation.Geopath;{e53fd7b9-2da4-4714-a652-de8593289898}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Geolocation.Geopath
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopath> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopath> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopoint> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Geopoint]
     guid e7617fc9-2cc7-5bd1-bc5a-f47260834ed8
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Geolocation.Geopoint;{6bfa00eb-e56e-49bb-9caf-cbaa78a8bcef}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Devices.Geolocation.Geopoint
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopoint> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapStyleSheet> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
+    guid fe2f3d47-5d47-5499-8374-430c7cda0204
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Maps.LocalSearch.LocalLocation> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[LocalLocation]
+    guid 5474eefb-60f4-58ac-89e2-6e83f79fa76c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.Maps.LocalSearch.LocalLocation;{bb0fe9ab-4502-4f2c-94a9-0d60de0e2163}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.Maps.LocalSearch.LocalLocation
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Maps.LocalSearch.LocalLocation> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.LocalSearch.LocalLocation> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapElement> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MapElement]
+    guid 81d25c25-a4b3-5d0d-92ab-26360c2a7fac
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Controls.Maps.MapElement;{d61fc4df-b245-47f2-9ac2-43c058b1c903}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Xaml.Controls.Maps.MapElement
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapElement> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapLayer> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MapLayer]
+    guid 508e2ce9-1984-5fc8-a491-62e8889539f4
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Controls.Maps.MapLayer;{6d0ff9c1-a14d-4f97-8f57-46715b57683a}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Xaml.Controls.Maps.MapLayer
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapLayer> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapRouteView> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MapRouteView]
+    guid 090ad4b3-8fce-502d-8665-18650c51bea9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Controls.Maps.MapRouteView;{740eaec5-bacc-41e1-a67e-dd6513832049}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Xaml.Controls.Maps.MapRouteView
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapRouteView> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapStyleSheet> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MapStyleSheet]
     guid 05483d88-841c-5a0e-b9c7-5d828d9f2aff
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Controls.Maps.MapStyleSheet;{ae54b2bf-8991-42ed-8d58-20473deede1d}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.UI.Xaml.Controls.Maps.MapStyleSheet
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapStyleSheet> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapStyleSheet> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapTileSource> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MapTileSource]
+    guid 6d8a73f7-abd7-56c4-99a7-06c1fa77dcd2
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Controls.Maps.MapTileSource;{88a76e4e-2fdf-4567-9255-1100519c8d62}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Xaml.Controls.Maps.MapTileSource
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapTileSource> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.DependencyObject> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DependencyObject]
+    guid f66c6bd3-55b4-5bbb-b82a-6d9ce383091a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.DependencyObject;{5c526665-f60e-4912-af59-5fe0680f089d}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Xaml.DependencyObject
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.DependencyObject> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.DependencyObject> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopath> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Geopath]
+    guid cf1d4402-4754-57e7-aae0-69ca42cbd8f2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Geolocation.Geopath;{e53fd7b9-2da4-4714-a652-de8593289898}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Geolocation.Geopath
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopath> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Geolocation.Geopath return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopath> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopath> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Geolocation.Geopath name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopath> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopoint> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Geopoint]
+    guid 88225b39-8be9-5c03-9714-8f1642d8a43f
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Geolocation.Geopoint;{6bfa00eb-e56e-49bb-9caf-cbaa78a8bcef}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Geolocation.Geopoint
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopoint> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Geolocation.Geopoint return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopoint> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopoint> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Geolocation.Geopoint name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopoint> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, Object]]
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Maps.LocalSearch.LocalLocation> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[LocalLocation]
+    guid a23c2e87-a8e7-568f-96a1-69e98f86b9d3
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.Maps.LocalSearch.LocalLocation;{bb0fe9ab-4502-4f2c-94a9-0d60de0e2163}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Maps.LocalSearch.LocalLocation
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.LocalSearch.LocalLocation> shape=4 reverse=22 role=current
+            out class type=Windows.Services.Maps.LocalSearch.LocalLocation return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.LocalSearch.LocalLocation> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.LocalSearch.LocalLocation> shape=117 reverse=101
+            fill_array class type=Windows.Services.Maps.LocalSearch.LocalLocation name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.LocalSearch.LocalLocation> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapElement> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MapElement]
+    guid f916b428-3b74-5ad4-9d97-1b0a387aecb5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Controls.Maps.MapElement;{d61fc4df-b245-47f2-9ac2-43c058b1c903}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.Controls.Maps.MapElement
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapElement> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Controls.Maps.MapElement return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapElement> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapElement> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapElement name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapElement> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapLayer> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MapLayer]
+    guid af2283ff-250e-56d1-96d4-9f78e164cbc6
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Controls.Maps.MapLayer;{6d0ff9c1-a14d-4f97-8f57-46715b57683a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.Controls.Maps.MapLayer
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Controls.Maps.MapLayer return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapLayer name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapRouteView> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MapRouteView]
+    guid af256095-4144-55a7-9139-89843b572db7
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Controls.Maps.MapRouteView;{740eaec5-bacc-41e1-a67e-dd6513832049}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.Controls.Maps.MapRouteView
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Controls.Maps.MapRouteView return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapRouteView name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapStyleSheet> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MapStyleSheet]
+    guid e6c727e5-6a18-5333-aa6a-266e8c8bdd51
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Controls.Maps.MapStyleSheet;{ae54b2bf-8991-42ed-8d58-20473deede1d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.Controls.Maps.MapStyleSheet
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapStyleSheet> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Controls.Maps.MapStyleSheet return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapStyleSheet> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapStyleSheet> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapStyleSheet name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapStyleSheet> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapTileSource> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MapTileSource]
+    guid e5c7eba6-7c75-50bc-8b36-2d8ca1fa538b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Controls.Maps.MapTileSource;{88a76e4e-2fdf-4567-9255-1100519c8d62}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.Controls.Maps.MapTileSource
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Controls.Maps.MapTileSource return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapTileSource name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.DependencyObject> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DependencyObject]
+    guid 29f8d454-905d-587e-b9d8-bfd418805a65
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.DependencyObject;{5c526665-f60e-4912-af59-5fe0680f089d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.DependencyObject
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.DependencyObject> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.DependencyObject return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.DependencyObject> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.DependencyObject> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.DependencyObject name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.DependencyObject> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
+    guid 09335560-6c6b-5a26-9348-97b781132b20
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43
+            out object return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+            out string return
 
 interface Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSource
     guid 616257b5-9108-4f12-8bf4-bb3c8f6274e5
@@ -101,11 +554,41 @@ interface Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSource
 interface Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSourceFactory
     guid c5cfe9fc-72ac-4839-8a0d-011f24693c79
 
-interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, String]
     guid f6d1f700-49c2-52ae-8154-826f9908773c
     signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     argument System.String
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=117 reverse=125 role=insert
+            in string name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=141 role=remove
+            in string name=key
 
 interface Windows.UI.Xaml.Controls.Maps.IMapActualCameraChangedEventArgs
     guid daa080da-b7f4-422c-a618-bbaa7c1d814c
@@ -419,21 +902,315 @@ interface Windows.UI.Xaml.Controls.Maps.IMapTileUriRequestedEventArgs
 interface Windows.UI.Xaml.Controls.Maps.IMapTileUriRequestedEventArgs2
     guid 2302185d-33b5-5a55-92f5-74a86a22efa6
 
-interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, Object]
     guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     argument System.String
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=24 role=lookup
+            in string name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, String]
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    argument System.String
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
 interface Windows.Foundation.IReference<System.Double> concrete
+    py winrt.windows.foundation._IReference[Double]
     guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Double
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Double> shape=4 reverse=22 role=value
+            out double return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.UI.Xaml.Thickness> concrete
+    py winrt.windows.foundation._IReference[Thickness]
     guid a19f7ba8-d8cd-5df2-ab44-fefd26644484
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.UI.Xaml.Thickness;f8;f8;f8;f8))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.UI.Xaml.Thickness
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.UI.Xaml.Thickness> shape=4 reverse=22 role=value
+            out struct type=Windows.UI.Xaml.Thickness return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.UI.Xaml.Controls.Maps.IStreetsideExperience
     guid a558aec9-e30c-46c8-8116-484691675558
@@ -447,45 +1224,513 @@ interface Windows.UI.Xaml.Controls.Maps.IStreetsidePanorama
 interface Windows.UI.Xaml.Controls.Maps.IStreetsidePanoramaStatics
     guid d3b47f69-54b3-4ec5-b2a0-4f8204576507
 
-interface Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Geopath]
     guid 7ca97e6d-6893-5672-a0c7-625c5090381e
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.Geolocation.Geopath;{e53fd7b9-2da4-4714-a652-de8593289898}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopath>
     argument Windows.Devices.Geolocation.Geopath
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=4 reverse=173
+            in class type=Windows.Devices.Geolocation.Geopath name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopath> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopath> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Geolocation.Geopath return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Geolocation.Geopath name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geopath> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=117 reverse=101
+            in class type=Windows.Devices.Geolocation.Geopath name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Devices.Geolocation.Geopath name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=51 reverse=211
+            pass_array class type=Windows.Devices.Geolocation.Geopath name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Devices.Geolocation.Geopath name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[MapElement]
     guid 02773f2d-bb17-56fd-96cc-89f1c47f9e11
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Controls.Maps.MapElement;{d61fc4df-b245-47f2-9ac2-43c058b1c903}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapElement>
     argument Windows.UI.Xaml.Controls.Maps.MapElement
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElement name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapElement> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Controls.Maps.MapElement return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapElement name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapElement> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElement name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElement name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Controls.Maps.MapElement name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElement name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[MapLayer]
     guid 62782500-a9cc-57f1-b81b-6ebcc9212245
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Controls.Maps.MapLayer;{6d0ff9c1-a14d-4f97-8f57-46715b57683a}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapLayer>
     argument Windows.UI.Xaml.Controls.Maps.MapLayer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Controls.Maps.MapLayer name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapLayer> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Controls.Maps.MapLayer return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapLayer name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapLayer> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Controls.Maps.MapLayer name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Controls.Maps.MapLayer name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Controls.Maps.MapLayer name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Controls.Maps.MapLayer name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[MapRouteView]
     guid 8ce513b4-0a7d-5553-b735-79cd5a7fee3f
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Controls.Maps.MapRouteView;{740eaec5-bacc-41e1-a67e-dd6513832049}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapRouteView>
     argument Windows.UI.Xaml.Controls.Maps.MapRouteView
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Controls.Maps.MapRouteView name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapRouteView> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Controls.Maps.MapRouteView return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapRouteView name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapRouteView> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Controls.Maps.MapRouteView name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Controls.Maps.MapRouteView name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Controls.Maps.MapRouteView name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Controls.Maps.MapRouteView name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[MapTileSource]
     guid 19f78a46-2c65-5f94-bf5b-963347a0a318
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Controls.Maps.MapTileSource;{88a76e4e-2fdf-4567-9255-1100519c8d62}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapTileSource>
     argument Windows.UI.Xaml.Controls.Maps.MapTileSource
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Controls.Maps.MapTileSource name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapTileSource> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Controls.Maps.MapTileSource return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapTileSource name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapTileSource> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Controls.Maps.MapTileSource name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Controls.Maps.MapTileSource name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Controls.Maps.MapTileSource name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Controls.Maps.MapTileSource name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[DependencyObject]
     guid 771b857e-ab5c-5db8-a021-397c92cdc44c
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.DependencyObject;{5c526665-f60e-4912-af59-5fe0680f089d}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.DependencyObject>
     argument Windows.UI.Xaml.DependencyObject
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.DependencyObject> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.DependencyObject> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.DependencyObject return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.DependencyObject name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.DependencyObject> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.DependencyObject name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.DependencyObject name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geopath> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Geopath]
+    guid a83321cb-1b54-5f68-9234-4a824d33e371
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Geolocation.Geopath;{e53fd7b9-2da4-4714-a652-de8593289898}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopath>
+    argument Windows.Devices.Geolocation.Geopath
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geopath> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geopath> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geopath> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geopath> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Geolocation.Geopath return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geopath> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Geolocation.Geopath name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geopath> shape=117 reverse=66
+            in class type=Windows.Devices.Geolocation.Geopath name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[LocalLocation]
     guid 619192f2-4f9d-5629-ab01-b18512503d73
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.LocalSearch.LocalLocation;{bb0fe9ab-4502-4f2c-94a9-0d60de0e2163}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.Maps.LocalSearch.LocalLocation>
     argument Windows.Services.Maps.LocalSearch.LocalLocation
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Maps.LocalSearch.LocalLocation> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.LocalSearch.LocalLocation> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.Maps.LocalSearch.LocalLocation return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.Maps.LocalSearch.LocalLocation name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> shape=117 reverse=66
+            in class type=Windows.Services.Maps.LocalSearch.LocalLocation name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapElement> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapElement> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MapElement]
     guid cec120d8-ea73-5aa3-914a-37dd2554f686
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Controls.Maps.MapElement;{d61fc4df-b245-47f2-9ac2-43c058b1c903}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapElement>
     argument Windows.UI.Xaml.Controls.Maps.MapElement
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapElement> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapElement> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapElement> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Controls.Maps.MapElement return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapElement> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapElement name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapElement> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElement name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapLayer> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MapLayer]
+    guid 963326b9-6770-52f1-b6c6-519441f873c3
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Controls.Maps.MapLayer;{6d0ff9c1-a14d-4f97-8f57-46715b57683a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapLayer>
+    argument Windows.UI.Xaml.Controls.Maps.MapLayer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapLayer> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Controls.Maps.MapLayer return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapLayer name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.Controls.Maps.MapLayer name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapRouteView> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MapRouteView]
+    guid bdbb45ea-0c73-56bc-a375-3f2a7beb6f2e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Controls.Maps.MapRouteView;{740eaec5-bacc-41e1-a67e-dd6513832049}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapRouteView>
+    argument Windows.UI.Xaml.Controls.Maps.MapRouteView
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapRouteView> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Controls.Maps.MapRouteView return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapRouteView name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.Controls.Maps.MapRouteView name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapTileSource> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MapTileSource]
+    guid de7aa182-8e17-5565-9a9d-94a4ff25364a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Controls.Maps.MapTileSource;{88a76e4e-2fdf-4567-9255-1100519c8d62}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapTileSource>
+    argument Windows.UI.Xaml.Controls.Maps.MapTileSource
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.Maps.MapTileSource> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Controls.Maps.MapTileSource return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Controls.Maps.MapTileSource name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.Controls.Maps.MapTileSource name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.DependencyObject> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[DependencyObject]
+    guid fe750d77-1307-5df2-a021-1c7a8d6b80ad
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.DependencyObject;{5c526665-f60e-4912-af59-5fe0680f089d}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.DependencyObject>
+    argument Windows.UI.Xaml.DependencyObject
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.DependencyObject> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.DependencyObject> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.DependencyObject> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.DependencyObject> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.DependencyObject return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.DependencyObject> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.DependencyObject name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.DependencyObject> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.DependencyObject name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource composable python_type
     py LocalMapTileDataSource
@@ -2778,166 +4023,328 @@ class Windows.UI.Xaml.Controls.Maps.StreetsidePanorama python_type
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource,Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CustomMapTileDataSource, MapTileBitmapRequestedEventArgs]
     guid 8d2d9655-2f82-5271-9e95-a2db39d872f0
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource;{65da384a-2db1-4be1-b155-3d0c9ecf4799});rc(Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs;{337f691d-9b02-4aa2-8b1e-cc4d91719bf3}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource
     argument Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource,Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[HttpMapTileDataSource, MapTileUriRequestedEventArgs]
     guid 4933a19a-00cc-5c21-a3df-b68f9939f6ef
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource;{9d03cb5c-fd79-4795-87be-7e54ca0b37d0});rc(Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs;{d2147b43-1bbf-4b98-8dd3-b7834e407e0d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource
     argument Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource,Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[LocalMapTileDataSource, MapTileUriRequestedEventArgs]
     guid 76752fc4-b240-502c-9098-622c6c36e6a3
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource;{616257b5-9108-4f12-8bf4-bb3c8f6274e5});rc(Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs;{d2147b43-1bbf-4b98-8dd3-b7834e407e0d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource
     argument Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, Object]
     guid f250dd93-e636-51ef-bc93-ee78d431a6bd
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapActualCameraChangedEventArgs]
     guid 1b536ae0-08b0-5c54-bb30-679e6a875d61
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs;{daa080da-b7f4-422c-a618-bbaa7c1d814c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapActualCameraChangingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapActualCameraChangingEventArgs]
     guid 78bfb71b-2d80-50e1-a2e9-e5667ff89ef2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapActualCameraChangingEventArgs;{6b0dbed6-93f7-4682-8de5-a47a1cc7a945}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapActualCameraChangingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapActualCameraChangingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapContextRequestedEventArgs]
     guid e5239641-ba1f-5d89-aae1-c7b499a47b0c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs;{fdd1b423-c961-4df2-bb57-82ee0f0bb591}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapControlBusinessLandmarkClickEventArgs]
     guid 3a9d75c2-a41b-5708-8c1b-8e7c26e857d0
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs;{5e464922-4a1a-4797-beb7-5cf7754cb867}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapControlBusinessLandmarkPointerEnteredEventArgs]
     guid fd7dabea-0014-5a30-9a59-bd4126a2ffb7
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs;{5e4081a6-ea98-4f95-8caf-5b42696ff504}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapControlBusinessLandmarkPointerExitedEventArgs]
     guid c4574b81-a192-5810-b0d9-cc99230fdcdc
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs;{2bb52caf-f24a-46d0-b463-65f719731057}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapControlBusinessLandmarkRightTappedEventArgs]
     guid e3634a54-05ed-5e39-9d8a-03857f0ba0e7
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs;{59ab8ae7-f184-4ab1-b0b0-35c8bf0654b2}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapControlTransitFeatureClickEventArgs]
     guid 3ec75af0-1679-53ff-bb0c-376b8c441980
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs;{76179969-b765-4622-b08a-3072745a4541}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapControlTransitFeaturePointerEnteredEventArgs]
     guid 166ea60b-ab70-580c-bb70-2f79ee214cea
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs;{73911a4e-ec4f-479e-94a1-36e081d0d897}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapControlTransitFeaturePointerExitedEventArgs]
     guid 7553fcf8-a4c2-5cc1-9a3c-f0b36b756068
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs;{6a11258d-448d-44e7-bc69-d13d497154e9}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapControlTransitFeatureRightTappedEventArgs]
     guid a18b47d7-6326-5fc1-8a40-88af91bb0589
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs;{aea1cc49-a729-4eae-a59a-3ec9a125a028}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapCustomExperienceChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapCustomExperienceChangedEventArgs]
     guid 272cf26f-18da-599e-896f-3bfbf6fb1326
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapCustomExperienceChangedEventArgs;{b9e6fb9b-8fc1-4042-ac34-a61b38bb7514}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapCustomExperienceChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapCustomExperienceChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapElementClickEventArgs]
     guid 4c7821a1-d570-597d-acc7-068853c4ab27
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs;{40168a11-d080-4519-99a1-3149fb8999d0}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapElementPointerEnteredEventArgs]
     guid ca2638e5-7c33-5b90-9b66-273731fc7091
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs;{ab85dd4e-91d7-4b31-8f0a-d390c7d3a2ef}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapElementPointerExitedEventArgs]
     guid f6a7bfd1-2c79-5191-b382-75b141d18846
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs;{c1a45af9-60c9-4679-9119-20abc75d931f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapInputEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapInputEventArgs]
     guid b92f6816-4d0a-52c2-9868-94b5c942007e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapInputEventArgs;{9fc503a0-a8a2-4394-92e9-2247764f2f49}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapInputEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapInputEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapRightTappedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapRightTappedEventArgs]
     guid efc52f2d-ad6b-59af-a0f0-2253d434414f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapRightTappedEventArgs;{20943171-6fe8-40a6-ad0e-297379b575a7}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapRightTappedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapRightTappedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapControl, MapTargetCameraChangedEventArgs]
     guid 2671c2dd-e212-5e43-80e2-ab6ff3f3086c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapControl;{42d0b851-5256-4747-9e6c-0d11e966141e});rc(Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs;{dbf00472-e953-4fa8-97d0-ea86359057cf}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapControl
     argument Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapControl name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapElementsLayer,Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapElementsLayer, MapElementsLayerClickEventArgs]
     guid d3ee3faa-6a6f-576a-9900-528e8eba9286
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapElementsLayer;{de79689a-01ef-46f4-ac60-7c200b552610});rc(Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs;{2ca7cf66-af1b-4c05-8c85-f74ae3d4677f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapElementsLayer
     argument Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElementsLayer name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapElementsLayer,Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapElementsLayer, MapElementsLayerContextRequestedEventArgs]
     guid d4c7eced-5053-5d3c-8cfa-fb19dbde4a3a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapElementsLayer;{de79689a-01ef-46f4-ac60-7c200b552610});rc(Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs;{da45d0b3-7a0e-4758-808b-3a637627eb0d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapElementsLayer
     argument Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElementsLayer name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapElementsLayer,Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapElementsLayer, MapElementsLayerPointerEnteredEventArgs]
     guid 3622cf53-117c-5605-b142-fe47d874e26b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapElementsLayer;{de79689a-01ef-46f4-ac60-7c200b552610});rc(Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs;{757fc032-4694-4404-8c89-348b6b76c5e6}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapElementsLayer
     argument Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElementsLayer name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapElementsLayer,Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapElementsLayer, MapElementsLayerPointerExitedEventArgs]
     guid d54471d2-03dd-5698-a92f-5fac8a5e7668
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapElementsLayer;{de79689a-01ef-46f4-ac60-7c200b552610});rc(Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs;{92f3c6ad-03ed-4c39-af20-2a07ee1ccea6}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapElementsLayer
     argument Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElementsLayer name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapScene,Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MapScene, MapTargetCameraChangedEventArgs]
     guid 766ed4a8-e810-5f78-bc96-9aff9f58cfca
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Controls.Maps.MapScene;{8bba10a9-50e7-482c-9789-c688b178ac24});rc(Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs;{dbf00472-e953-4fa8-97d0-ea86359057cf}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Controls.Maps.MapScene
     argument Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Controls.Maps.MapScene name=sender
+            in class type=Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs name=args
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -2963,11 +4370,75 @@ class Windows.Devices.Geolocation.Geopath external
 class Windows.Devices.Geolocation.Geopoint external
     py winrt.windows.devices.geolocation.Geopoint
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
 struct Windows.Foundation.Point external
     py winrt.windows.foundation.Point
 
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Foundation.Numerics.Vector3 external
     py winrt.windows.foundation.numerics.Vector3

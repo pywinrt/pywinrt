@@ -21,7 +21,7 @@ class Windows.UI.Composition.Core.CompositorController activatable python_type c
         remove remove_CommitNeeded slot=10 inputs=1 outputs=0 declaring=Windows.UI.Composition.Core.ICompositorController shape=26 reverse=134
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method commit
         method Commit slot=7 inputs=0 outputs=0 declaring=Windows.UI.Composition.Core.ICompositorController shape=0 reverse=37
     method ensure_previous_commit_completed_async
@@ -32,10 +32,16 @@ interface Windows.UI.Composition.Core.ICompositorController
     guid 2d75f35a-70a7-4395-ba2d-cef0b18399f9
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Composition.Core.CompositorController,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CompositorController, Object]
     guid e60c8424-3154-566e-9aa2-eec49fce004a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Composition.Core.CompositorController;{2d75f35a-70a7-4395-ba2d-cef0b18399f9});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Composition.Core.CompositorController
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Composition.Core.CompositorController name=sender
+            in object name=args
 
 class System.Object external
     py winrt.system.Object
@@ -47,6 +53,10 @@ interface Windows.Foundation.IAsyncAction external
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 class Windows.UI.Composition.Compositor external
     py winrt.windows.ui.composition.Compositor

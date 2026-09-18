@@ -2,6 +2,61 @@ format 4.0
 generator 0.0.0
 namespace Windows.Security.Authentication.Web.Core
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[FindAllAccountsResult]
+    guid 5de9ba5e-0ade-5344-9fe4-987f1d387ef7
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Authentication.Web.Core.FindAllAccountsResult;{a5812b5d-b72e-420c-86ab-aac0d7b7261f}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Web.Core.FindAllAccountsResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[WebAuthenticationAddAccountResult]
+    guid fe15f0e6-6520-5b5e-ae26-b52a506b980d
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult;{88fad03c-901d-5ffa-9259-701d3ca08ef2}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[WebTokenRequestResult]
+    guid deb54b22-70f2-55ab-97c0-6cbdc5ddb6f0
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Authentication.Web.Core.WebTokenRequestResult;{c12a8305-d1f8-4483-8d54-38fe292784ff}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Web.Core.WebTokenRequestResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Credentials.WebAccount> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[WebAccount]
+    guid 4bd6f1e5-ca89-5240-8f3d-7f1b54ae90a7
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Credentials.WebAccount;{69473eb2-8031-49be-80bb-96cb46d99aba}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Credentials.WebAccount
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Credentials.WebAccountProvider> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[WebAccountProvider]
+    guid 9477622b-1340-5574-81fc-5013581f57c9
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Credentials.WebAccountProvider;{29dcc8c3-7ab9-4a7c-a336-b942f9dbf7c7}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Credentials.WebAccountProvider
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Security.Authentication.Web.Core.FindAllAccountsResult python_type
     py FindAllAccountsResult
     signature rc(Windows.Security.Authentication.Web.Core.FindAllAccountsResult;{a5812b5d-b72e-420c-86ab-aac0d7b7261f})
@@ -21,54 +76,376 @@ enum Windows.Security.Authentication.Web.Core.FindAllWebAccountsStatus python_ty
     py FindAllWebAccountsStatus
     signature enum(Windows.Security.Authentication.Web.Core.FindAllWebAccountsStatus;i4)
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[FindAllAccountsResult]
     guid 9affb572-58c3-5c6c-9397-2b7704aa35c3
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Web.Core.FindAllAccountsResult;{a5812b5d-b72e-420c-86ab-aac0d7b7261f}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Web.Core.FindAllAccountsResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Authentication.Web.Core.FindAllAccountsResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[WebAuthenticationAddAccountResult]
     guid 63824a59-b4fa-5e89-ba3c-d44e532a29d8
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult;{88fad03c-901d-5ffa-9259-701d3ca08ef2}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[WebTokenRequestResult]
     guid 0a815852-7c44-5674-b3d2-fa2e4c1e46c9
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Web.Core.WebTokenRequestResult;{c12a8305-d1f8-4483-8d54-38fe292784ff}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Web.Core.WebTokenRequestResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Authentication.Web.Core.WebTokenRequestResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[WebAccount]
     guid acd76b54-297f-5a18-9143-20a309e2dfd3
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Credentials.WebAccount;{69473eb2-8031-49be-80bb-96cb46d99aba}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Credentials.WebAccount
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Credentials.WebAccount> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Credentials.WebAccount> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Credentials.WebAccount return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[WebAccountProvider]
     guid 88c66009-12f7-58e2-8dbe-6efc620c85ba
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Credentials.WebAccountProvider;{29dcc8c3-7ab9-4a7c-a336-b942f9dbf7c7}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Credentials.WebAccountProvider
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Credentials.WebAccountProvider> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Credentials.WebAccountProvider> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Credentials.WebAccountProvider return
 
 interface Windows.Security.Authentication.Web.Core.IFindAllAccountsResult
     guid a5812b5d-b72e-420c-86ab-aac0d7b7261f
 
-interface Windows.Foundation.Collections.IIterable<Windows.Security.Credentials.WebAccount> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Web.Core.WebTokenResponse> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WebTokenResponse]
+    guid 7e5bb7ec-bbd7-5575-9a61-f5815fa22a0e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Security.Authentication.Web.Core.WebTokenResponse;{67a7c5ca-83f6-44c6-a3b1-0eb69e41fa8a}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Security.Authentication.Web.Core.WebTokenResponse
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Web.Core.WebTokenResponse> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Core.WebTokenResponse> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Credentials.WebAccount> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WebAccount]
     guid cb15d439-a910-542a-89ed-7cfe67848a83
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Security.Credentials.WebAccount;{69473eb2-8031-49be-80bb-96cb46d99aba}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Security.Credentials.WebAccount
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Credentials.WebAccount> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Credentials.WebAccount> return
 
-interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Core.WebTokenResponse> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WebTokenResponse]
+    guid f080b0c9-a095-5b3a-a1dc-d17e7d2982c7
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Security.Authentication.Web.Core.WebTokenResponse;{67a7c5ca-83f6-44c6-a3b1-0eb69e41fa8a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Security.Authentication.Web.Core.WebTokenResponse
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Core.WebTokenResponse> shape=4 reverse=22 role=current
+            out class type=Windows.Security.Authentication.Web.Core.WebTokenResponse return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Core.WebTokenResponse> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Core.WebTokenResponse> shape=117 reverse=101
+            fill_array class type=Windows.Security.Authentication.Web.Core.WebTokenResponse name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Core.WebTokenResponse> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Security.Credentials.WebAccount> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WebAccount]
+    guid bfb82cca-aebc-567c-95d9-eba25c365faa
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Security.Credentials.WebAccount;{69473eb2-8031-49be-80bb-96cb46d99aba}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Security.Credentials.WebAccount
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Credentials.WebAccount> shape=4 reverse=22 role=current
+            out class type=Windows.Security.Credentials.WebAccount return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Credentials.WebAccount> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Credentials.WebAccount> shape=117 reverse=101
+            fill_array class type=Windows.Security.Credentials.WebAccount name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Credentials.WebAccount> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+            out string return
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, String]
     guid f6d1f700-49c2-52ae-8154-826f9908773c
     signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     argument System.String
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=117 reverse=125 role=insert
+            in string name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=141 role=remove
+            in string name=key
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Core.WebTokenResponse> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, String]
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    argument System.String
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Core.WebTokenResponse> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WebTokenResponse]
     guid 199e065c-8195-55da-9c10-8aeaf9ac1062
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Authentication.Web.Core.WebTokenResponse;{67a7c5ca-83f6-44c6-a3b1-0eb69e41fa8a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Web.Core.WebTokenResponse>
     argument Windows.Security.Authentication.Web.Core.WebTokenResponse
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Core.WebTokenResponse> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Web.Core.WebTokenResponse> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Core.WebTokenResponse> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Core.WebTokenResponse> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Security.Authentication.Web.Core.WebTokenResponse return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Core.WebTokenResponse> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Security.Authentication.Web.Core.WebTokenResponse name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Core.WebTokenResponse> shape=117 reverse=66
+            in class type=Windows.Security.Authentication.Web.Core.WebTokenResponse name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WebAccount]
     guid e0798d3d-2b4a-589a-ab12-02dccc158afc
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Credentials.WebAccount;{69473eb2-8031-49be-80bb-96cb46d99aba}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Security.Credentials.WebAccount>
     argument Windows.Security.Credentials.WebAccount
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Credentials.WebAccount> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Credentials.WebAccount> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Security.Credentials.WebAccount return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Security.Credentials.WebAccount name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> shape=117 reverse=66
+            in class type=Windows.Security.Credentials.WebAccount name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Security.Authentication.Web.Core.IWebAccountEventArgs
     guid 6fb7037d-424e-44ec-977c-ef2415462a5a
@@ -137,16 +514,28 @@ interface Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory
     guid ab6bf7f8-5450-4ef6-97f7-052b0431c0f0
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[WebAccountMonitor, Object]
     guid c8cb498d-e0da-52a1-abf9-7198c7f5cb42
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Security.Authentication.Web.Core.WebAccountMonitor;{7445f5fd-aa9d-4619-8d5d-c138a4ede3e5});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Security.Authentication.Web.Core.WebAccountMonitor
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Security.Authentication.Web.Core.WebAccountMonitor name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor,Windows.Security.Authentication.Web.Core.WebAccountEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WebAccountMonitor, WebAccountEventArgs]
     guid fa704f04-87b6-516b-9596-cd7cc092169b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Security.Authentication.Web.Core.WebAccountMonitor;{7445f5fd-aa9d-4619-8d5d-c138a4ede3e5});rc(Windows.Security.Authentication.Web.Core.WebAccountEventArgs;{6fb7037d-424e-44ec-977c-ef2415462a5a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Security.Authentication.Web.Core.WebAccountMonitor
     argument Windows.Security.Authentication.Web.Core.WebAccountEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Security.Authentication.Web.Core.WebAccountMonitor name=sender
+            in class type=Windows.Security.Authentication.Web.Core.WebAccountEventArgs name=args
 
 class Windows.Security.Authentication.Web.Core.WebAccountEventArgs python_type
     py WebAccountEventArgs
@@ -473,9 +862,52 @@ class System.Object external
 class System.String external
     py winrt.system.String
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Security.Credentials.WebAccount external
     py winrt.windows.security.credentials.WebAccount

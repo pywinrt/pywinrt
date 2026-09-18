@@ -158,6 +158,162 @@ class Windows.ApplicationModel.AppInstance python_type
     method unregister static
         method Unregister slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.IAppInstanceStatics shape=0 reverse=93 static
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.FullTrustProcessLaunchResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[FullTrustProcessLaunchResult]
+    guid c938b875-ac86-5946-a7e0-f2a147601ada
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.FullTrustProcessLaunchResult;{8917d888-edfb-515f-8e22-5ebceb69dfd9}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.FullTrustProcessLaunchResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.FullTrustProcessLaunchResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PackageCatalogAddOptionalPackageResult]
+    guid 6c5f9b5d-3c24-5087-ae15-6ab4942c4639
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult;{3bf10cd4-b4df-47b3-a963-e2fa832f7dd3}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PackageCatalogRemoveOptionalPackagesResult]
+    guid f168612c-6882-5c8c-a464-7ea25e269876
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult;{29d2f97b-d974-4e64-9359-22cadfd79828}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PackageCatalogRemoveResourcePackagesResult]
+    guid 142b78d7-5cc3-5b40-a58d-43a582ca83ea
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult;{ae719709-1a52-4321-87b3-e5a1a17981a7}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageContentGroup> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PackageContentGroup]
+    guid 2253dc38-9a1a-5364-9a3b-03a7da615499
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.PackageContentGroup;{8f62695d-120a-4798-b5e1-5800dda8f2e1}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.PackageContentGroup
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageContentGroup> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageUpdateAvailabilityResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PackageUpdateAvailabilityResult]
+    guid 4020c034-c762-5152-beef-f03471e885b9
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.PackageUpdateAvailabilityResult;{114e5009-199a-48a1-a079-313c45634a71}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.PackageUpdateAvailabilityResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageUpdateAvailabilityResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.StartupTask> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StartupTask]
+    guid 741f7697-2452-5c80-83c6-3b6f822b904c
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.StartupTask;{f75c23c8-b5f2-4f6c-88dd-36cb1d599d17}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.StartupTask
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTask> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.StartupTaskState> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StartupTaskState]
+    guid 70a0bf67-19e8-5a86-a32e-3c9863825a04
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.StartupTaskState;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.StartupTaskState
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTaskState> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVector[PackageContentGroup]]
+    guid 52465bf3-3ca6-5681-a7b4-91847757b5fd
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.PackageContentGroup;{8f62695d-120a-4798-b5e1-5800dda8f2e1})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[AppListEntry]]
+    guid 51c74372-9452-57ce-9270-762009fbfe4d
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Core.AppListEntry;{ef00f07f-2108-490a-877a-8a9f17c25fad})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[StartupTask]]
+    guid 15d40795-41f9-50d7-a39e-5390981af651
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.StartupTask;{f75c23c8-b5f2-4f6c-88dd-36cb1d599d17})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[PackageCatalogAddResourcePackageResult, PackageInstallProgress]
+    guid a58762e7-fcc2-5b31-945e-71c6c9bc516e
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.ApplicationModel.PackageCatalogAddResourcePackageResult;{9636ce0d-3e17-493f-aa08-ccec6fdef699});struct(Windows.ApplicationModel.PackageInstallProgress;u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.ApplicationModel.PackageCatalogAddResourcePackageResult
+    argument Windows.ApplicationModel.PackageInstallProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=72 reverse=14
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> name=asyncInfo
+            in struct type=Windows.ApplicationModel.PackageInstallProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[PackageCatalogAddResourcePackageResult, PackageInstallProgress]
+    guid 76fd3482-764c-5806-8758-035aefb6a548
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.ApplicationModel.PackageCatalogAddResourcePackageResult;{9636ce0d-3e17-493f-aa08-ccec6fdef699});struct(Windows.ApplicationModel.PackageInstallProgress;u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.ApplicationModel.PackageCatalogAddResourcePackageResult
+    argument Windows.ApplicationModel.PackageInstallProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.ApplicationModel.DesignMode static python_type
     py DesignMode
     factory Windows.ApplicationModel.IDesignModeStatics2
@@ -288,71 +444,388 @@ interface Windows.ApplicationModel.IAppInstance
 interface Windows.ApplicationModel.IAppInstanceStatics
     guid 9d11e77f-9ea6-47af-a6ec-46784c5ba254
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.FullTrustProcessLaunchResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.FullTrustProcessLaunchResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[FullTrustProcessLaunchResult]
     guid e37e376e-965e-5fff-a66f-18309b981ea5
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.FullTrustProcessLaunchResult;{8917d888-edfb-515f-8e22-5ebceb69dfd9}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.FullTrustProcessLaunchResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.FullTrustProcessLaunchResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.FullTrustProcessLaunchResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.FullTrustProcessLaunchResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.FullTrustProcessLaunchResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.FullTrustProcessLaunchResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.FullTrustProcessLaunchResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PackageCatalogAddOptionalPackageResult]
     guid 59b2497f-86eb-542f-bea6-1be53e93e13d
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult;{3bf10cd4-b4df-47b3-a963-e2fa832f7dd3}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PackageCatalogRemoveOptionalPackagesResult]
     guid cfc179aa-fb98-54ef-8ea8-64499347b7f7
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult;{29d2f97b-d974-4e64-9359-22cadfd79828}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PackageCatalogRemoveResourcePackagesResult]
     guid 342ee07c-8d6e-53a4-b746-c5b74bb61f6d
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult;{ae719709-1a52-4321-87b3-e5a1a17981a7}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageContentGroup> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageContentGroup> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PackageContentGroup]
     guid bbd292e3-db9f-5802-a488-40f156332c04
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.PackageContentGroup;{8f62695d-120a-4798-b5e1-5800dda8f2e1}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.PackageContentGroup
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageContentGroup> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageContentGroup> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.PackageContentGroup return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageUpdateAvailabilityResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageUpdateAvailabilityResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PackageUpdateAvailabilityResult]
     guid 010bd015-43ef-576c-be1e-bc38c5b6b66b
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.PackageUpdateAvailabilityResult;{114e5009-199a-48a1-a079-313c45634a71}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.PackageUpdateAvailabilityResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageUpdateAvailabilityResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageUpdateAvailabilityResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageUpdateAvailabilityResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageUpdateAvailabilityResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageUpdateAvailabilityResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.PackageUpdateAvailabilityResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTask> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTask> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StartupTask]
     guid cbec7a4e-a046-5330-873d-0fce228792fa
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.StartupTask;{f75c23c8-b5f2-4f6c-88dd-36cb1d599d17}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.StartupTask
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTask> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.StartupTask> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTask> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.StartupTask> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTask> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.StartupTask return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTaskState> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTaskState> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StartupTaskState]
     guid 5239a934-80e2-518f-b819-1f316f379a3f
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.StartupTaskState;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.StartupTaskState
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTaskState> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.StartupTaskState> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTaskState> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.StartupTaskState> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTaskState> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.StartupTaskState return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVector[PackageContentGroup]]
     guid 929e3c29-bf29-5594-bc63-67db43a539ea
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.PackageContentGroup;{8f62695d-120a-4798-b5e1-5800dda8f2e1})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[AppListEntry]]
     guid d3bcf8a0-3538-5dae-98d7-1f2ab88c3f01
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Core.AppListEntry;{ef00f07f-2108-490a-877a-8a9f17c25fad})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[StartupTask]]
     guid 16543165-5b65-5683-8a02-c385659158bd
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.StartupTask;{f75c23c8-b5f2-4f6c-88dd-36cb1d599d17})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask> return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[PackageCatalogAddResourcePackageResult, PackageInstallProgress]
     guid b147e038-cc1f-567f-b1f1-64d5d4003309
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.ApplicationModel.PackageCatalogAddResourcePackageResult;{9636ce0d-3e17-493f-aa08-ccec6fdef699});struct(Windows.ApplicationModel.PackageInstallProgress;u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.PackageCatalogAddResourcePackageResult
     argument Windows.ApplicationModel.PackageInstallProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> shape=4 reverse=121 role=get_results
+            out class type=Windows.ApplicationModel.PackageCatalogAddResourcePackageResult return
 
 interface Windows.ApplicationModel.IDesignModeStatics
     guid 2c3893cc-f81a-4e7a-b857-76a80887e185
@@ -383,15 +856,215 @@ interface Windows.ApplicationModel.IFullTrustProcessLauncherStatics
 interface Windows.ApplicationModel.IFullTrustProcessLauncherStatics2
     guid 8b8ed72f-b65c-56cf-a1a7-2bf77cbc6ea8
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.AppInstance> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AppInstance]
+    guid 2c28b4c9-6378-5382-a1a6-79bd6eed967a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.AppInstance;{675f2b47-f25f-4532-9fd6-3633e0634d01}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.AppInstance
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.AppInstance> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInstance> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Core.AppListEntry> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AppListEntry]
+    guid 86f4d4ef-d8fd-5fb5-807c-72da8fc9e544
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Core.AppListEntry;{ef00f07f-2108-490a-877a-8a9f17c25fad}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.Core.AppListEntry
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Core.AppListEntry> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.AppListEntry> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Package]
     guid 69ad6aa7-0c49-5f27-a5eb-ef4d59467b6d
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Package;{163c792f-bd75-413c-bf23-b1fe7b95d825}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.ApplicationModel.Package
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.PackageContentGroup> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PackageContentGroup]
+    guid d7dd1456-4805-5768-a25d-99641b096491
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.PackageContentGroup;{8f62695d-120a-4798-b5e1-5800dda8f2e1}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.PackageContentGroup
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageContentGroup> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.StartupTask> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StartupTask]
+    guid 61885ead-bf9e-5e9f-af04-6296b336930b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.StartupTask;{f75c23c8-b5f2-4f6c-88dd-36cb1d599d17}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.StartupTask
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.StartupTask> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.StartupTask> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Uri]
+    guid b0d63b78-78ad-5e31-b6d8-e32a0e16c447
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Uri
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInstance> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AppInstance]
+    guid 14c94628-7938-56d5-895a-8fc52ed3bb7e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.AppInstance;{675f2b47-f25f-4532-9fd6-3633e0634d01}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.AppInstance
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInstance> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.AppInstance return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInstance> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInstance> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.AppInstance name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInstance> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.AppListEntry> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AppListEntry]
+    guid b93e2028-50bc-599e-b3d9-427b61d26c01
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Core.AppListEntry;{ef00f07f-2108-490a-877a-8a9f17c25fad}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Core.AppListEntry
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.AppListEntry> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Core.AppListEntry return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.AppListEntry> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.AppListEntry> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.Core.AppListEntry name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.AppListEntry> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Package]
+    guid 0217f069-025c-5ee6-a87f-e782e3b623ae
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Package;{163c792f-bd75-413c-bf23-b1fe7b95d825}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Package
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Package return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.Package name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageContentGroup> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PackageContentGroup]
+    guid 5f23d323-28f5-560f-a40e-6f3827f82e9f
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.PackageContentGroup;{8f62695d-120a-4798-b5e1-5800dda8f2e1}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.PackageContentGroup
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.PackageContentGroup return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageContentGroup> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.PackageContentGroup name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.StartupTask> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StartupTask]
+    guid 14653598-9065-508e-b37b-44eb28d51cb7
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.StartupTask;{f75c23c8-b5f2-4f6c-88dd-36cb1d599d17}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.StartupTask
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.StartupTask> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.StartupTask return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.StartupTask> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.StartupTask> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.StartupTask name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.StartupTask> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Uri]
+    guid 1c157d0f-5efe-5cec-bbd6-0c6ce9af07a5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Uri
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=22 role=current
+            out class type=Windows.Foundation.Uri return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=117 reverse=101
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.ApplicationModel.ILeavingBackgroundEventArgs python_type
     py _ILeavingBackgroundEventArgs
@@ -516,9 +1189,132 @@ interface Windows.ApplicationModel.IPackageWithMetadata
     guid 95949780-1de9-40f2-b452-0de9f1910012
 
 interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    py winrt.windows.foundation._IReference[DateTime]
     guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.DateTime
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.DateTime> shape=4 reverse=22 role=value
+            out datetime return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.ApplicationModel.IStartupTask
     guid f75c23c8-b5f2-4f6c-88dd-36cb1d599d17
@@ -552,40 +1348,329 @@ interface Windows.ApplicationModel.ISuspendingOperation python_type
         method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ISuspendingOperation shape=4 reverse=22
             out class type=Windows.ApplicationModel.SuspendingDeferral return
 
-interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> concrete
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[AppInstance]
     guid 7ff85c5e-7752-5ef0-bf29-020648c199e4
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.AppInstance;{675f2b47-f25f-4532-9fd6-3633e0634d01}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.AppInstance>
     argument Windows.ApplicationModel.AppInstance
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=4 reverse=173
+            in class type=Windows.ApplicationModel.AppInstance name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.AppInstance> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInstance> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.AppInstance return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.AppInstance name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInstance> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=117 reverse=101
+            in class type=Windows.ApplicationModel.AppInstance name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.AppInstance name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=51 reverse=211
+            pass_array class type=Windows.ApplicationModel.AppInstance name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.AppInstance name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> concrete
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Package]
     guid d1bb509e-6989-5c69-b1ff-d1702fe8aca3
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Package;{163c792f-bd75-413c-bf23-b1fe7b95d825}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package>
     argument Windows.ApplicationModel.Package
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=4 reverse=173
+            in class type=Windows.ApplicationModel.Package name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Package return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Package name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=117 reverse=101
+            in class type=Windows.ApplicationModel.Package name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.Package name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=51 reverse=211
+            pass_array class type=Windows.ApplicationModel.Package name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.Package name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> concrete
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[PackageContentGroup]
     guid 29adc699-5848-5a98-a516-23feb0fa2c4b
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.PackageContentGroup;{8f62695d-120a-4798-b5e1-5800dda8f2e1}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.PackageContentGroup>
     argument Windows.ApplicationModel.PackageContentGroup
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=173
+            in class type=Windows.ApplicationModel.PackageContentGroup name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageContentGroup> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.PackageContentGroup return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.PackageContentGroup name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageContentGroup> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=117 reverse=101
+            in class type=Windows.ApplicationModel.PackageContentGroup name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.PackageContentGroup name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=51 reverse=211
+            pass_array class type=Windows.ApplicationModel.PackageContentGroup name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.PackageContentGroup name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInstance> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AppInstance]
+    guid d1864e26-b62b-5085-8e93-60cbb6eb20d1
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.AppInstance;{675f2b47-f25f-4532-9fd6-3633e0634d01}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.AppInstance>
+    argument Windows.ApplicationModel.AppInstance
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInstance> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.AppInstance> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInstance> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInstance> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.AppInstance return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInstance> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.AppInstance name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInstance> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.AppInstance name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AppListEntry]
     guid 920c8b92-d5ef-5899-8776-2ad97aca6e1d
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Core.AppListEntry;{ef00f07f-2108-490a-877a-8a9f17c25fad}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Core.AppListEntry>
     argument Windows.ApplicationModel.Core.AppListEntry
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Core.AppListEntry> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.AppListEntry> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Core.AppListEntry return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Core.AppListEntry name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Core.AppListEntry name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Package]
     guid 0263c4d4-195c-5dc5-a7ca-6806ceca420b
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Package;{163c792f-bd75-413c-bf23-b1fe7b95d825}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package>
     argument Windows.ApplicationModel.Package
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Package return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Package name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Package name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageContentGroup> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PackageContentGroup]
+    guid deae10f1-0546-5e61-bd3f-e05da30078ac
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.PackageContentGroup;{8f62695d-120a-4798-b5e1-5800dda8f2e1}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.PackageContentGroup>
+    argument Windows.ApplicationModel.PackageContentGroup
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.PackageContentGroup> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.PackageContentGroup> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageContentGroup> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.PackageContentGroup return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageContentGroup> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.PackageContentGroup name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageContentGroup> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.PackageContentGroup name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StartupTask]
     guid ea3b1b7a-5071-5986-88fc-912dbbf845fb
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.StartupTask;{f75c23c8-b5f2-4f6c-88dd-36cb1d599d17}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.StartupTask>
     argument Windows.ApplicationModel.StartupTask
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.StartupTask> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.StartupTask> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.StartupTask return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.StartupTask name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.StartupTask name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Uri]
     guid 4b8385bd-a2cd-5ff1-bf74-7ea580423e50
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri>
     argument Windows.Foundation.Uri
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Foundation.Uri return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=117 reverse=66
+            in class type=Windows.Foundation.Uri name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.ApplicationModel.LeavingBackgroundEventArgs python_type
     py LeavingBackgroundEventArgs
@@ -1233,40 +2318,76 @@ class Windows.ApplicationModel.SuspendingOperation python_type
             out class type=Windows.ApplicationModel.SuspendingDeferral return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageContentGroupStagingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PackageCatalog, PackageContentGroupStagingEventArgs]
     guid df206861-9d30-5739-88b2-97e0717cc5f0
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe});rc(Windows.ApplicationModel.PackageContentGroupStagingEventArgs;{3d7bc27e-6f27-446c-986e-d4733d4d9113}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.PackageCatalog
     argument Windows.ApplicationModel.PackageContentGroupStagingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.PackageCatalog name=sender
+            in class type=Windows.ApplicationModel.PackageContentGroupStagingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageInstallingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PackageCatalog, PackageInstallingEventArgs]
     guid a8a900c6-da0b-5bcc-a71a-be0b9265d87a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe});rc(Windows.ApplicationModel.PackageInstallingEventArgs;{97741eb7-ab7a-401a-8b61-eb0e7faff237}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.PackageCatalog
     argument Windows.ApplicationModel.PackageInstallingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.PackageCatalog name=sender
+            in class type=Windows.ApplicationModel.PackageInstallingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageStagingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PackageCatalog, PackageStagingEventArgs]
     guid 1726f52d-2b8c-524a-98c6-f2cf0893c0f2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe});rc(Windows.ApplicationModel.PackageStagingEventArgs;{1041682d-54e2-4f51-b828-9ef7046c210f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.PackageCatalog
     argument Windows.ApplicationModel.PackageStagingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.PackageCatalog name=sender
+            in class type=Windows.ApplicationModel.PackageStagingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageStatusChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PackageCatalog, PackageStatusChangedEventArgs]
     guid b32d7d63-cd0e-5c2e-a251-fb8d290824e4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe});rc(Windows.ApplicationModel.PackageStatusChangedEventArgs;{437d714d-bd80-4a70-bc50-f6e796509575}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.PackageCatalog
     argument Windows.ApplicationModel.PackageStatusChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.PackageCatalog name=sender
+            in class type=Windows.ApplicationModel.PackageStatusChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageUninstallingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PackageCatalog, PackageUninstallingEventArgs]
     guid bd636cf1-541f-53ea-8efc-e1604a395b1a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe});rc(Windows.ApplicationModel.PackageUninstallingEventArgs;{4443aa52-ab22-44cd-82bb-4ec9b827367a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.PackageCatalog
     argument Windows.ApplicationModel.PackageUninstallingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.PackageCatalog name=sender
+            in class type=Windows.ApplicationModel.PackageUninstallingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageUpdatingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PackageCatalog, PackageUpdatingEventArgs]
     guid c23e15f6-c618-522a-82ab-4fab36665ce5
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.PackageCatalog;{230a3751-9de3-4445-be74-91fb325abefe});rc(Windows.ApplicationModel.PackageUpdatingEventArgs;{cd7b4228-fd74-443e-b114-23e677b0e86f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.PackageCatalog
     argument Windows.ApplicationModel.PackageUpdatingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.PackageCatalog name=sender
+            in class type=Windows.ApplicationModel.PackageUpdatingEventArgs name=args
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -1281,6 +2402,21 @@ interface Windows.ApplicationModel.Activation.IActivatedEventArgs external
 class Windows.ApplicationModel.Core.AppListEntry external
     py winrt.windows.applicationmodel.core.AppListEntry
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
 
@@ -1291,11 +2427,60 @@ interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
 struct Windows.Foundation.Size external
     py winrt.windows.foundation.Size
 
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Storage.StorageFolder external
     py winrt.windows.storage.StorageFolder

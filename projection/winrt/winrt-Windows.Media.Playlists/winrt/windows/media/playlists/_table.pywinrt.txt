@@ -2,15 +2,115 @@ format 4.0
 generator 0.0.0
 namespace Windows.Media.Playlists
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Playlists.Playlist> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Playlists.Playlist> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Playlist]
+    guid 427deafd-b226-5ef0-9320-c9f325e37474
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Playlists.Playlist;{803736f5-cf44-4d97-83b3-7a089e9ab663}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Playlists.Playlist
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Playlists.Playlist> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StorageFile]
+    guid e521c894-2c26-5946-9e61-2b5e188d01ed
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.StorageFile
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Playlists.Playlist> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Playlist]
     guid 8ffb74ab-912f-5bc1-87fa-2865f673cbfc
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Playlists.Playlist;{803736f5-cf44-4d97-83b3-7a089e9ab663}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Playlists.Playlist
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Playlists.Playlist> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Playlists.Playlist> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Playlists.Playlist> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Playlists.Playlist> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Playlists.Playlist> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Playlists.Playlist return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StorageFile]
     guid 5e52f8ce-aced-5a42-95b4-f674dd84885e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.StorageFile
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> shape=4 reverse=62 role=get_results
+            out class type=Windows.Storage.StorageFile return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StorageFile]
+    guid 9ac00304-83ea-5688-87b6-ae38aab65d0b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Storage.StorageFile
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StorageFile]
+    guid 43e29f53-0298-55aa-a6c8-4edd323d9598
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Storage.StorageFile
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=4 reverse=22 role=current
+            out class type=Windows.Storage.StorageFile return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=117 reverse=101
+            fill_array class type=Windows.Storage.StorageFile name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Media.Playlists.IPlaylist
     guid 803736f5-cf44-4d97-83b3-7a089e9ab663
@@ -18,10 +118,85 @@ interface Windows.Media.Playlists.IPlaylist
 interface Windows.Media.Playlists.IPlaylistStatics
     guid c5c331cd-81f9-4ff3-95b9-70b6ff046b68
 
-interface Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[StorageFile]
     guid fcbc8b8b-6103-5b4e-ba00-4bc2cedb6a35
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile>
     argument Windows.Storage.StorageFile
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> shape=4 reverse=173
+            in class type=Windows.Storage.StorageFile name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Storage.StorageFile return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Storage.StorageFile name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> shape=117 reverse=101
+            in class type=Windows.Storage.StorageFile name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Storage.StorageFile name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> shape=51 reverse=211
+            pass_array class type=Windows.Storage.StorageFile name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Storage.StorageFile name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StorageFile]
+    guid 80646519-5e2a-595d-a8cd-2a24b4067f1b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile>
+    argument Windows.Storage.StorageFile
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Storage.StorageFile return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Storage.StorageFile name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=117 reverse=66
+            in class type=Windows.Storage.StorageFile name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Media.Playlists.Playlist activatable python_type
     py Playlist
@@ -59,9 +234,40 @@ enum Windows.Media.Playlists.PlaylistFormat python_type
     py PlaylistFormat
     signature enum(Windows.Media.Playlists.PlaylistFormat;i4)
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.IStorageFile external
     py winrt.windows.storage._IStorageFile

@@ -46,11 +46,76 @@ interface Windows.Devices.Adc.Provider.IAdcProvider python_type
         method GetControllers slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.Provider.IAdcProvider shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.Provider.IAdcControllerProvider> return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.Provider.IAdcControllerProvider> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Adc.Provider.IAdcControllerProvider> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IAdcControllerProvider]
+    guid 30047155-1f71-5223-8482-e5159d0137d0
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{be545828-816d-4de5-a048-aba06958aaa8})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Adc.Provider.IAdcControllerProvider
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Adc.Provider.IAdcControllerProvider> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.Provider.IAdcControllerProvider> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.Provider.IAdcControllerProvider> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IAdcControllerProvider]
+    guid b43acf15-a24a-5b00-b710-1737ba550a18
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{be545828-816d-4de5-a048-aba06958aaa8})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Adc.Provider.IAdcControllerProvider
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.Provider.IAdcControllerProvider> shape=4 reverse=22 role=current
+            out interface type=Windows.Devices.Adc.Provider.IAdcControllerProvider return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.Provider.IAdcControllerProvider> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.Provider.IAdcControllerProvider> shape=117 reverse=101
+            fill_array interface type=Windows.Devices.Adc.Provider.IAdcControllerProvider name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.Provider.IAdcControllerProvider> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.Provider.IAdcControllerProvider> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IAdcControllerProvider]
     guid 7c4789c0-8445-5757-aab7-659cbf50aaa7
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{be545828-816d-4de5-a048-aba06958aaa8})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Adc.Provider.IAdcControllerProvider>
     argument Windows.Devices.Adc.Provider.IAdcControllerProvider
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.Provider.IAdcControllerProvider> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Adc.Provider.IAdcControllerProvider> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.Provider.IAdcControllerProvider> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.Provider.IAdcControllerProvider> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Devices.Adc.Provider.IAdcControllerProvider return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.Provider.IAdcControllerProvider> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Devices.Adc.Provider.IAdcControllerProvider name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.Provider.IAdcControllerProvider> shape=117 reverse=66
+            in interface type=Windows.Devices.Adc.Provider.IAdcControllerProvider name=value
+            out uint32 name=index
+            out boolean return
 
 enum Windows.Devices.Adc.Provider.ProviderAdcChannelMode python_type
     py ProviderAdcChannelMode
     signature enum(Windows.Devices.Adc.Provider.ProviderAdcChannelMode;i4)
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

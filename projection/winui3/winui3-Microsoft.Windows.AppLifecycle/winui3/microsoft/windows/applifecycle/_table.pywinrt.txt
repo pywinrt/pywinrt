@@ -93,9 +93,15 @@ class Microsoft.Windows.AppLifecycle.AppInstance python_type
         method UnregisterKey slot=6 inputs=0 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=0 reverse=16
 
 delegate Windows.Foundation.EventHandler<Microsoft.Windows.AppLifecycle.AppActivationArguments> concrete
+    py winrt.windows.foundation.EventHandler[AppActivationArguments]
     guid 37d74b33-9510-5748-b33d-4676ee2b48a7
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Windows.AppLifecycle.AppActivationArguments;{14f99eaf-1580-5062-bdc8-d5d1c31138fb}))
+    base Windows.Foundation.EventHandler
     argument Microsoft.Windows.AppLifecycle.AppActivationArguments
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Microsoft.Windows.AppLifecycle.AppActivationArguments name=args
 
 enum Microsoft.Windows.AppLifecycle.ExtendedActivationKind python_type
     py ExtendedActivationKind
@@ -116,14 +122,139 @@ interface Microsoft.Windows.AppLifecycle.IAppInstanceStatics
 interface Microsoft.Windows.AppLifecycle.IAppInstanceStatics2
     guid fe9f1885-7160-5397-ba9b-5890b24fdc04
 
-interface Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.AppLifecycle.AppInstance> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AppInstance]
+    guid 46dd4ef2-c3a5-5a9f-b72d-8f0836be424a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.AppLifecycle.AppInstance;{75766ae4-0239-5a26-b9da-d5bfc75a4866}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.AppLifecycle.AppInstance
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AppLifecycle.AppInstance> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppLifecycle.AppInstance> return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppLifecycle.AppInstance> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AppInstance]
+    guid 58c4b850-cfd3-54c7-9568-cf76a017afae
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.AppLifecycle.AppInstance;{75766ae4-0239-5a26-b9da-d5bfc75a4866}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.AppLifecycle.AppInstance
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppLifecycle.AppInstance> shape=4 reverse=22 role=current
+            out class type=Microsoft.Windows.AppLifecycle.AppInstance return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppLifecycle.AppInstance> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppLifecycle.AppInstance> shape=117 reverse=101
+            fill_array class type=Microsoft.Windows.AppLifecycle.AppInstance name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppLifecycle.AppInstance> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[AppInstance]
     guid f37e92bb-b953-5d1e-ae0b-15e49c194c98
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.AppLifecycle.AppInstance;{75766ae4-0239-5a26-b9da-d5bfc75a4866}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.AppLifecycle.AppInstance>
     argument Microsoft.Windows.AppLifecycle.AppInstance
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> shape=4 reverse=173
+            in class type=Microsoft.Windows.AppLifecycle.AppInstance name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AppLifecycle.AppInstance> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppLifecycle.AppInstance> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.AppLifecycle.AppInstance return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.AppLifecycle.AppInstance name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AppLifecycle.AppInstance> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> shape=117 reverse=101
+            in class type=Microsoft.Windows.AppLifecycle.AppInstance name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.AppLifecycle.AppInstance name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> shape=51 reverse=211
+            pass_array class type=Microsoft.Windows.AppLifecycle.AppInstance name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.AppLifecycle.AppInstance name=value
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AppLifecycle.AppInstance> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AppInstance]
+    guid 1520072b-d6f2-5a95-988d-e6c4a6eb66a4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.AppLifecycle.AppInstance;{75766ae4-0239-5a26-b9da-d5bfc75a4866}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.AppLifecycle.AppInstance>
+    argument Microsoft.Windows.AppLifecycle.AppInstance
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AppLifecycle.AppInstance> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AppLifecycle.AppInstance> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppLifecycle.AppInstance> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AppLifecycle.AppInstance> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.AppLifecycle.AppInstance return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AppLifecycle.AppInstance> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.AppLifecycle.AppInstance name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AppLifecycle.AppInstance> shape=117 reverse=66
+            in class type=Microsoft.Windows.AppLifecycle.AppInstance name=value
+            out uint32 name=index
+            out boolean return
 
 enum Windows.ApplicationModel.Core.AppRestartFailureReason external
     py winrt.windows.applicationmodel.core.AppRestartFailureReason
 
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

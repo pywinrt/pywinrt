@@ -2,6 +2,61 @@ format 4.0
 generator 0.0.0
 namespace Windows.ApplicationModel.Store.Preview
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StorePreviewPurchaseResults]
+    guid b1ea16e7-8268-51ff-8129-dcefd493f35f
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults;{b0daaed1-d6c5-4e53-a043-fba0d8e61231}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[StorePreviewProductInfo]]
+    guid 167564b0-c6f5-5143-b66f-a6f9ca69e7a2
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo;{1937dbb3-6c01-4c9d-85cd-5babaac2b351})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[StoreSystemFeature]]
+    guid 7e7946ef-f8f0-53fd-9613-7261cb35daf4
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.Store.Preview.StoreSystemFeature;i4)))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[WebTokenRequestResult]
+    guid deb54b22-70f2-55ab-97c0-6cbdc5ddb6f0
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Authentication.Web.Core.WebTokenRequestResult;{c12a8305-d1f8-4483-8d54-38fe292784ff}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Web.Core.WebTokenRequestResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamReference> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IRandomAccessStreamReference]
+    guid 60847289-ea0b-5df6-89df-f2c62cba9693
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{33ee3134-1dd6-4e3a-8067-d1c162e8642b})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IRandomAccessStreamReference
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 enum Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadMode python_type
     py DeliveryOptimizationDownloadMode
     signature enum(Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadMode;i4)
@@ -26,30 +81,150 @@ class Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings python
         method GetCurrentSettings slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics shape=4 reverse=22 static
             out class type=Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StorePreviewPurchaseResults]
     guid 9aa2af80-0dcb-5ec1-8435-0b687ed374a5
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults;{b0daaed1-d6c5-4e53-a043-fba0d8e61231}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[StorePreviewProductInfo]]
     guid 49c36a66-3908-51b3-8402-eb8e94c68864
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo;{1937dbb3-6c01-4c9d-85cd-5babaac2b351})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[StoreSystemFeature]]
     guid b1713163-ee1b-5290-8316-f7ebb9d53163
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.Store.Preview.StoreSystemFeature;i4)))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[WebTokenRequestResult]
     guid 0a815852-7c44-5674-b3d2-fa2e4c1e46c9
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Web.Core.WebTokenRequestResult;{c12a8305-d1f8-4483-8d54-38fe292784ff}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Web.Core.WebTokenRequestResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Authentication.Web.Core.WebTokenRequestResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IRandomAccessStreamReference]
     guid 65178d50-e6a2-5d16-b244-65e9725e5a0c
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{33ee3134-1dd6-4e3a-8067-d1c162e8642b})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IRandomAccessStreamReference
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamReference> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamReference> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
 
 interface Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings
     guid 1810fda0-e853-565e-b874-7a8a7b9a0e0f
@@ -57,15 +232,223 @@ interface Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings
 interface Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics
     guid 5c817caf-aed5-5999-b4c9-8c60898bc4f3
 
-interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StorePreviewProductInfo]
+    guid a9cb4860-67d1-53c2-a621-3074b0344d49
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo;{1937dbb3-6c01-4c9d-85cd-5babaac2b351}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StorePreviewSkuInfo]
+    guid 2c0d85d9-0df7-5de6-962e-bc8f149faf19
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo;{81fd76e2-0b26-48d9-98ce-27461c669d6c}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StoreSystemFeature]
     guid 98a8577a-b128-5400-8d3d-58654eaaf957
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.ApplicationModel.Store.Preview.StoreSystemFeature;i4))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.ApplicationModel.Store.Preview.StoreSystemFeature
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StorePreviewProductInfo]
+    guid 3fb16dec-73f1-5cfa-80e6-67fa232d1bef
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo;{1937dbb3-6c01-4c9d-85cd-5babaac2b351}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StorePreviewSkuInfo]
+    guid b6f9b421-7f54-5d26-9c37-9f9d7ac893eb
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo;{81fd76e2-0b26-48d9-98ce-27461c669d6c}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StoreSystemFeature]
+    guid d0455b2d-d8aa-557e-89a3-63c33e8cee99
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.ApplicationModel.Store.Preview.StoreSystemFeature;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Store.Preview.StoreSystemFeature
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> shape=4 reverse=22 role=current
+            out enum32 type=Windows.ApplicationModel.Store.Preview.StoreSystemFeature return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> shape=117 reverse=101
+            fill_array enum32 type=Windows.ApplicationModel.Store.Preview.StoreSystemFeature name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Foundation.IReference<System.UInt32> concrete
+    py winrt.windows.foundation._IReference[UInt32]
     guid 513ef3af-e784-5325-a91e-97c2b8111cf3
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.UInt32
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.UInt32> shape=4 reverse=22 role=value
+            out uint32 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics
     guid 728f7fc0-8628-42ec-84a2-07780eb44d8b
@@ -97,20 +480,89 @@ interface Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults
 interface Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo
     guid 81fd76e2-0b26-48d9-98ce-27461c669d6c
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StorePreviewProductInfo]
     guid fcc6add5-dc28-500f-8e24-b22d1ab56aad
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo;{1937dbb3-6c01-4c9d-85cd-5babaac2b351}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>
     argument Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StorePreviewSkuInfo]
     guid 47418723-a671-5fdc-8647-68f7d8c31416
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo;{81fd76e2-0b26-48d9-98ce-27461c669d6c}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo>
     argument Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StoreSystemFeature]
     guid c8f90757-ebcf-5f2c-b918-6487105b0ca1
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.Store.Preview.StoreSystemFeature;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>
     argument Windows.ApplicationModel.Store.Preview.StoreSystemFeature
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.ApplicationModel.Store.Preview.StoreSystemFeature return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.ApplicationModel.Store.Preview.StoreSystemFeature name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> shape=117 reverse=66
+            in enum32 type=Windows.ApplicationModel.Store.Preview.StoreSystemFeature name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper
     guid 06a50525-e715-4123-9276-9d6f865ba55f
@@ -346,6 +798,53 @@ class Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper 
 
 class System.UInt32 external
     py winrt.system.UInt32
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Security.Authentication.Web.Core.WebTokenRequest external
     py winrt.windows.security.authentication.web.core.WebTokenRequest

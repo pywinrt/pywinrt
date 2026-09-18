@@ -552,63 +552,737 @@ interface Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerData
 interface Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerDataFactory
     guid c09b39f8-319a-441e-8de5-66a81e877a6c
 
+interface Windows.Foundation.Collections.IIterable<System.Guid> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Guid]
+    guid f4ca3045-5dd7-54be-982e-d88d8ca0876e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};g16)
+    base Windows.Foundation.Collections.IIterable
+    argument System.Guid
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Guid> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Guid> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[BluetoothLEAdvertisementBytePattern]
+    guid 1e3fadee-54ac-538b-8777-351afb78cb74
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern;{fbfad7f2-b9c5-4a08-bc51-502f8ef68a79}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[BluetoothLEAdvertisementDataSection]
+    guid db98b5d1-897e-59cc-b86a-7b8855ac98af
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection;{d7213314-3a43-40f9-b6f0-92bfefc34ae3}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[BluetoothLEManufacturerData]
+    guid 834a4cac-bb8b-5f0f-9f28-4dbc98c17907
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData;{912dba18-6963-4533-b061-4694dafb34e5}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> return
+
+interface Windows.Foundation.Collections.IIterator<System.Guid> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Guid]
+    guid d3d64048-82b3-53c7-9285-b0be18368482
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};g16)
+    base Windows.Foundation.Collections.IIterator
+    argument System.Guid
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Guid> shape=4 reverse=22 role=current
+            out guid return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Guid> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Guid> shape=117 reverse=101
+            fill_array guid name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Guid> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[BluetoothLEAdvertisementBytePattern]
+    guid b33e103a-1a61-5107-8813-c0e905c05486
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern;{fbfad7f2-b9c5-4a08-bc51-502f8ef68a79}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[BluetoothLEAdvertisementDataSection]
+    guid af5c0e81-788b-52d4-82a2-1ed28c66a05e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection;{d7213314-3a43-40f9-b6f0-92bfefc34ae3}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[BluetoothLEManufacturerData]
+    guid 12f158dd-7016-5338-ac5c-7d5503d73274
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData;{912dba18-6963-4533-b061-4694dafb34e5}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.Foundation.IReference<System.Int16> concrete
+    py winrt.windows.foundation._IReference[Int16]
     guid 6ec9e41b-6709-5647-9918-a1270110fc4e
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i2)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Int16
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Int16> shape=4 reverse=22 role=value
+            out int16 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFlags> concrete
+    py winrt.windows.foundation._IReference[BluetoothLEAdvertisementFlags]
     guid 91c0ba96-9e69-5b82-bf1d-83ab2a509c53
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFlags;u4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFlags
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFlags> shape=4 reverse=22 role=value
+            out enum_u32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFlags return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
-interface Windows.Foundation.Collections.IVector<System.Guid> concrete
+interface Windows.Foundation.Collections.IVector<System.Guid> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Guid]
     guid 482e676d-b913-5ec1-afa8-5f96922e94ae
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};g16)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.Guid>
     argument System.Guid
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=33 reverse=183
+            in guid name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Guid> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Guid> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out guid return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array guid name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Guid> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=177 reverse=115
+            in guid name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=68 reverse=152 role=insert_at
+            in uint32 name=index
+            in guid name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=51 reverse=211
+            pass_array guid name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=68 reverse=132 role=set_at
+            in uint32 name=index
+            in guid name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[BluetoothLEAdvertisementBytePattern]
     guid 8dd461b7-9775-5e82-a0a6-6627abd0d010
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern;{fbfad7f2-b9c5-4a08-bc51-502f8ef68a79}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern>
     argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=4 reverse=173
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=117 reverse=101
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=51 reverse=211
+            pass_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[BluetoothLEAdvertisementDataSection]
     guid b6f71ad2-e2cf-5d54-b6f1-90964ee5d4da
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection;{d7213314-3a43-40f9-b6f0-92bfefc34ae3}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection>
     argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=4 reverse=173
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=117 reverse=101
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=51 reverse=211
+            pass_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[BluetoothLEManufacturerData]
     guid 52d75b45-1d24-5eeb-babb-65effae45e46
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData;{912dba18-6963-4533-b061-4694dafb34e5}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData>
     argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=4 reverse=173
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=117 reverse=101
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=51 reverse=211
+            pass_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> concrete
+interface Windows.Foundation.Collections.IVectorView<System.Guid> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Guid]
+    guid 9520e64b-15b2-52a6-98ed-3191fa6cf68a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};g16)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Guid>
+    argument System.Guid
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Guid> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Guid> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out guid return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array guid name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=177 reverse=88
+            in guid name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[BluetoothLEAdvertisementBytePattern]
+    guid a7d9983a-a11f-572e-89fb-683ea429bcbc
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern;{fbfad7f2-b9c5-4a08-bc51-502f8ef68a79}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern>
+    argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=117 reverse=66
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[BluetoothLEAdvertisementDataSection]
     guid c4f2b8ea-11a8-5109-9013-4047e12c72e8
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection;{d7213314-3a43-40f9-b6f0-92bfefc34ae3}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection>
     argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=117 reverse=66
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[BluetoothLEManufacturerData]
     guid 78ab070e-ad7e-5912-a4f1-7be33e4560af
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData;{912dba18-6963-4533-b061-4694dafb34e5}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData>
     argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=117 reverse=66
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData name=value
+            out uint32 name=index
+            out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher,Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[BluetoothLEAdvertisementPublisher, BluetoothLEAdvertisementPublisherStatusChangedEventArgs]
     guid c2ffa4f1-5893-54a8-bd94-aa1198b05d07
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher;{cde820f9-d9fa-43d6-a264-ddd8b7da8b78});rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs;{09c2bd9f-2dff-4b23-86ee-0d14fb94aeae}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher
     argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher name=sender
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher,Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[BluetoothLEAdvertisementWatcher, BluetoothLEAdvertisementReceivedEventArgs]
     guid 90eb4eca-d465-5ea0-a61c-033c8c5ecef2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher;{a6ac336f-f3d3-4297-8d6c-c81ea6623f40});rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs;{27987ddf-e596-41be-8d43-9e6731d4a913}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher
     argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher name=sender
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher,Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[BluetoothLEAdvertisementWatcher, BluetoothLEAdvertisementWatcherStoppedEventArgs]
     guid 9936a4db-dc99-55c3-9e9b-bf4854bd9eab
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher;{a6ac336f-f3d3-4297-8d6c-c81ea6623f40});rc(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs;{dd40f84d-e7b9-43e3-9c04-0685d085fd8c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher
     argument Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher name=sender
+            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs name=args
 
 class System.Guid external
     py winrt.system.Guid
@@ -624,6 +1298,46 @@ enum Windows.Devices.Bluetooth.BluetoothError external
 
 class Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter external
     py winrt.windows.devices.bluetooth.BluetoothSignalStrengthFilter
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.Streams.IBuffer external
     py winrt.windows.storage.streams._IBuffer

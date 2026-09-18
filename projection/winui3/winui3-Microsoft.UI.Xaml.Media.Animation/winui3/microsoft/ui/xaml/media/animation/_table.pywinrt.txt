@@ -213,7 +213,7 @@ class Microsoft.UI.Xaml.Media.Animation.ColorKeyFrameCollection activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=173
@@ -221,10 +221,10 @@ class Microsoft.UI.Xaml.Media.Animation.ColorKeyFrameCollection activatable pyth
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame return
     method get_many
@@ -241,11 +241,11 @@ class Microsoft.UI.Xaml.Media.Animation.ColorKeyFrameCollection activatable pyth
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=0 reverse=185
@@ -253,7 +253,7 @@ class Microsoft.UI.Xaml.Media.Animation.ColorKeyFrameCollection activatable pyth
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=51 reverse=211
             pass_array class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame name=value
 
@@ -614,7 +614,7 @@ class Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrameCollection activatable pyt
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=173
@@ -622,10 +622,10 @@ class Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrameCollection activatable pyt
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame return
     method get_many
@@ -642,11 +642,11 @@ class Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrameCollection activatable pyt
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=0 reverse=185
@@ -654,7 +654,7 @@ class Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrameCollection activatable pyt
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=51 reverse=211
             pass_array class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame name=value
 
@@ -1013,9 +1013,15 @@ class Microsoft.UI.Xaml.Media.Animation.EntranceThemeTransition activatable pyth
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 class Microsoft.UI.Xaml.Media.Animation.ExponentialEase activatable python_type
     py ExponentialEase
@@ -1330,73 +1336,218 @@ interface Microsoft.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfigurat
 interface Microsoft.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfigurationFactory
     guid bc7a71b5-7cda-5bb7-967e-d6a031285a9c
 
-interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ColorKeyFrame]
     guid fe553349-5ac6-5f21-8dff-2b2403825107
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame;{02848c7e-c772-5f66-842b-fd494d0da669}))
+    base Windows.Foundation.Collections.IIterable
     argument Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> return
 
-interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DoubleKeyFrame]
     guid bd454020-1887-58b8-b1b9-2753c42b6f48
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame;{94c82ae6-ca62-5f52-934c-3e427e75d69a}))
+    base Windows.Foundation.Collections.IIterable
     argument Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> return
 
-interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ObjectKeyFrame]
     guid ffae3466-fb63-527d-8655-a8ccdd5539a6
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame;{c5a9f65b-fc69-5a88-a797-34f46d761381}))
+    base Windows.Foundation.Collections.IIterable
     argument Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> return
 
-interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PointKeyFrame]
     guid 04688e75-0154-5259-8bd1-8dbb68de65e5
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.Media.Animation.PointKeyFrame;{59d5c07d-a3a7-5450-9dfb-4b7e77d58f93}))
+    base Windows.Foundation.Collections.IIterable
     argument Microsoft.UI.Xaml.Media.Animation.PointKeyFrame
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> return
 
-interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Timeline> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Timeline> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Timeline]
     guid 89f87b00-a552-5e0a-9980-cd6a5370e20c
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.Media.Animation.Timeline;{d0f9b330-cc2a-5b05-9786-2da4c6584581}))
+    base Windows.Foundation.Collections.IIterable
     argument Microsoft.UI.Xaml.Media.Animation.Timeline
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Timeline> return
 
-interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Transition> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Transition> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Transition]
     guid 3ccaccb1-02dc-5456-922a-a264c80105b8
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.Media.Animation.Transition;{e5b71956-8e44-5a38-b41e-274d706102bf}))
+    base Windows.Foundation.Collections.IIterable
     argument Microsoft.UI.Xaml.Media.Animation.Transition
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Transition> return
 
-interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.UIElement> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.UIElement> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UIElement]
     guid 459bb954-42a3-5c74-8f87-42458f19aeaa
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.UIElement;{c3c01020-320c-5cf6-9d24-d396bbfa4d8b}))
+    base Windows.Foundation.Collections.IIterable
     argument Microsoft.UI.Xaml.UIElement
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.UIElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.UIElement> return
 
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> concrete
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ColorKeyFrame]
     guid 2b8a6b92-f1e3-5bc4-96d2-e4892d5cd93a
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame;{02848c7e-c772-5f66-842b-fd494d0da669}))
+    base Windows.Foundation.Collections.IIterator
     argument Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> concrete
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DoubleKeyFrame]
     guid 7b911c76-50e4-509f-98fa-d38b19f6e159
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame;{94c82ae6-ca62-5f52-934c-3e427e75d69a}))
+    base Windows.Foundation.Collections.IIterator
     argument Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> concrete
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ObjectKeyFrame]
     guid bcb7f7fd-21a4-5b86-8505-91a5aac95f31
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame;{c5a9f65b-fc69-5a88-a797-34f46d761381}))
+    base Windows.Foundation.Collections.IIterator
     argument Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> concrete
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PointKeyFrame]
     guid 8db0cfbf-9976-53a8-a99a-f4234080855d
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.Media.Animation.PointKeyFrame;{59d5c07d-a3a7-5450-9dfb-4b7e77d58f93}))
+    base Windows.Foundation.Collections.IIterator
     argument Microsoft.UI.Xaml.Media.Animation.PointKeyFrame
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Timeline> concrete
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Timeline> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Timeline]
     guid 85301b8e-275f-57f3-9344-cf0441c737aa
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.Media.Animation.Timeline;{d0f9b330-cc2a-5b05-9786-2da4c6584581}))
+    base Windows.Foundation.Collections.IIterator
     argument Microsoft.UI.Xaml.Media.Animation.Timeline
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.Media.Animation.Timeline return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Transition> concrete
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Transition> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Transition]
     guid 5cfd74c7-6e4a-5c7d-9370-2f81c62274f5
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.Media.Animation.Transition;{e5b71956-8e44-5a38-b41e-274d706102bf}))
+    base Windows.Foundation.Collections.IIterator
     argument Microsoft.UI.Xaml.Media.Animation.Transition
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.Media.Animation.Transition return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Transition> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.Transition name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.UIElement> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UIElement]
+    guid c5f188b0-c653-5209-909a-eb97ca691617
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.UIElement;{c3c01020-320c-5cf6-9d24-d396bbfa4d8b}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.UI.Xaml.UIElement
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.UIElement> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.UIElement return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.UIElement> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.UIElement> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.UIElement name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.UIElement> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Microsoft.UI.Xaml.Media.Animation.IKeySpline
     guid 130d8b2b-0b52-5253-881b-36ab48592e6b
@@ -1519,24 +1670,516 @@ interface Microsoft.UI.Xaml.Media.Animation.IQuinticEase
     guid dc2f05d5-a3ac-5dce-9b85-753a0c800fc2
 
 interface Windows.Foundation.IReference<System.Double> concrete
+    py winrt.windows.foundation._IReference[Double]
     guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Double
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Double> shape=4 reverse=22 role=value
+            out double return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Foundation.Point> concrete
+    py winrt.windows.foundation._IReference[Point]
     guid 84f14c22-a00a-5272-8d3d-82112e66df00
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.Point;f4;f4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.Point
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.Point> shape=4 reverse=22 role=value
+            out struct type=Windows.Foundation.Point return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    py winrt.windows.foundation._IReference[TimeSpan]
     guid 604d0c4c-91de-5c2a-935f-362f13eaf800
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.TimeSpan
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> shape=4 reverse=22 role=value
+            out timespan return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.UI.Color> concrete
+    py winrt.windows.foundation._IReference[Color]
     guid ab8e5d11-b0c1-5a21-95ae-f16bf3a37624
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.UI.Color;u1;u1;u1;u1))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.UI.Color
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.UI.Color> shape=4 reverse=22 role=value
+            out struct type=Windows.UI.Color return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Microsoft.UI.Xaml.Media.Animation.IReorderThemeTransition
     guid 0d5a0874-1df5-5379-b626-74721759438a
@@ -1634,65 +2277,485 @@ interface Microsoft.UI.Xaml.Media.Animation.ITransition
 interface Microsoft.UI.Xaml.Media.Animation.ITransitionFactory
     guid b7023e3b-bcd3-50ec-aacf-8cfcece25f17
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ColorKeyFrame]
     guid 8e452000-d3af-506f-9b09-3161753dfc94
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame;{02848c7e-c772-5f66-842b-fd494d0da669}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame>
     argument Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=173
+            in class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=117 reverse=101
+            in class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame name=value
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[DoubleKeyFrame]
     guid 0ff0eaee-9514-5010-9ac4-8f6aa6d294bc
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame;{94c82ae6-ca62-5f52-934c-3e427e75d69a}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame>
     argument Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=173
+            in class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=117 reverse=101
+            in class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame name=value
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ObjectKeyFrame]
     guid 95f26067-8cdf-5639-b4ab-04ca575457ce
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame;{c5a9f65b-fc69-5a88-a797-34f46d761381}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame>
     argument Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=173
+            in class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=117 reverse=101
+            in class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame name=value
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[PointKeyFrame]
     guid a577fe62-f0e0-5514-8f88-5ce74fd385f6
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Media.Animation.PointKeyFrame;{59d5c07d-a3a7-5450-9dfb-4b7e77d58f93}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame>
     argument Microsoft.UI.Xaml.Media.Animation.PointKeyFrame
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=173
+            in class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=117 reverse=101
+            in class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame name=value
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Timeline]
     guid 4107a612-6757-5552-a48b-2e3093230c49
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Media.Animation.Timeline;{d0f9b330-cc2a-5b05-9786-2da4c6584581}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Timeline>
     argument Microsoft.UI.Xaml.Media.Animation.Timeline
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=173
+            in class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Timeline> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Media.Animation.Timeline return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Timeline> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=117 reverse=101
+            in class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=value
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Transition]
     guid 030a9884-05db-57af-ae3b-4c77ffabfe57
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Media.Animation.Transition;{e5b71956-8e44-5a38-b41e-274d706102bf}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Transition>
     argument Microsoft.UI.Xaml.Media.Animation.Transition
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=173
+            in class type=Microsoft.UI.Xaml.Media.Animation.Transition name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Transition> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Media.Animation.Transition return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.Transition name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Transition> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=117 reverse=101
+            in class type=Microsoft.UI.Xaml.Media.Animation.Transition name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Media.Animation.Transition name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Xaml.Media.Animation.Transition name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Media.Animation.Transition name=value
 
-interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> concrete
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ColorKeyFrame]
     guid 7559d8a9-c9b3-5450-9a9b-d5ffba0ce27f
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame;{02848c7e-c772-5f66-842b-fd494d0da669}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame>
     argument Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> shape=117 reverse=66
+            in class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> concrete
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[DoubleKeyFrame]
     guid f8a1ab9d-cecd-5857-8eae-6e40daacd8bf
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame;{94c82ae6-ca62-5f52-934c-3e427e75d69a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame>
     argument Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=117 reverse=66
+            in class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> concrete
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ObjectKeyFrame]
     guid e5873499-ef10-52fc-93b3-c8f7b2a81220
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame;{c5a9f65b-fc69-5a88-a797-34f46d761381}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame>
     argument Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=117 reverse=66
+            in class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> concrete
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PointKeyFrame]
     guid d299bfa3-7087-518b-808e-eba14b2854f1
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Xaml.Media.Animation.PointKeyFrame;{59d5c07d-a3a7-5450-9dfb-4b7e77d58f93}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame>
     argument Microsoft.UI.Xaml.Media.Animation.PointKeyFrame
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=117 reverse=66
+            in class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Timeline> concrete
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Timeline> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Timeline]
     guid e30abc22-0631-5c17-a2cb-d1f7cd052515
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Xaml.Media.Animation.Timeline;{d0f9b330-cc2a-5b05-9786-2da4c6584581}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Timeline>
     argument Microsoft.UI.Xaml.Media.Animation.Timeline
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Timeline> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Media.Animation.Timeline return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=117 reverse=66
+            in class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Transition> concrete
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Transition> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Transition]
     guid 6fe2632e-3c2a-5087-bdbc-8bc51da7520b
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Xaml.Media.Animation.Transition;{e5b71956-8e44-5a38-b41e-274d706102bf}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Transition>
     argument Microsoft.UI.Xaml.Media.Animation.Transition
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Transition> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Transition> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Media.Animation.Transition return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Transition> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Media.Animation.Transition name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Transition> shape=117 reverse=66
+            in class type=Microsoft.UI.Xaml.Media.Animation.Transition name=value
+            out uint32 name=index
+            out boolean return
 
 class Microsoft.UI.Xaml.Media.Animation.KeySpline activatable python_type
     py KeySpline
@@ -1853,7 +2916,7 @@ class Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrameCollection activatable pyt
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=173
@@ -1861,10 +2924,10 @@ class Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrameCollection activatable pyt
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame return
     method get_many
@@ -1881,11 +2944,11 @@ class Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrameCollection activatable pyt
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=0 reverse=185
@@ -1893,7 +2956,7 @@ class Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrameCollection activatable pyt
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=51 reverse=211
             pass_array class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame name=value
 
@@ -2025,7 +3088,7 @@ class Microsoft.UI.Xaml.Media.Animation.PointKeyFrameCollection activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=173
@@ -2033,10 +3096,10 @@ class Microsoft.UI.Xaml.Media.Animation.PointKeyFrameCollection activatable pyth
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame return
     method get_many
@@ -2053,11 +3116,11 @@ class Microsoft.UI.Xaml.Media.Animation.PointKeyFrameCollection activatable pyth
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=0 reverse=185
@@ -2065,7 +3128,7 @@ class Microsoft.UI.Xaml.Media.Animation.PointKeyFrameCollection activatable pyth
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=51 reverse=211
             pass_array class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame name=value
 
@@ -2854,7 +3917,7 @@ class Microsoft.UI.Xaml.Media.Animation.TimelineCollection activatable python_ty
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=173
@@ -2862,10 +3925,10 @@ class Microsoft.UI.Xaml.Media.Animation.TimelineCollection activatable python_ty
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Timeline> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Media.Animation.Timeline return
     method get_many
@@ -2882,11 +3945,11 @@ class Microsoft.UI.Xaml.Media.Animation.TimelineCollection activatable python_ty
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=0 reverse=185
@@ -2894,7 +3957,7 @@ class Microsoft.UI.Xaml.Media.Animation.TimelineCollection activatable python_ty
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=51 reverse=211
             pass_array class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=value
 
@@ -2917,7 +3980,7 @@ class Microsoft.UI.Xaml.Media.Animation.TransitionCollection activatable python_
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=173
@@ -2925,10 +3988,10 @@ class Microsoft.UI.Xaml.Media.Animation.TransitionCollection activatable python_
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.Transition> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Media.Animation.Transition return
     method get_many
@@ -2945,11 +4008,11 @@ class Microsoft.UI.Xaml.Media.Animation.TransitionCollection activatable python_
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Media.Animation.Transition name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=0 reverse=185
@@ -2957,15 +4020,21 @@ class Microsoft.UI.Xaml.Media.Animation.TransitionCollection activatable python_
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=51 reverse=211
             pass_array class type=Microsoft.UI.Xaml.Media.Animation.Transition name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Media.Animation.Transition name=value
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[ConnectedAnimation, Object]
     guid d35b3375-a0ef-59ca-88cf-dc9b4e42953e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation;{a9c1c6ad-7670-589c-a608-9b5c01cec71f});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation name=sender
+            in object name=args
 
 class Microsoft.UI.Composition.CompositionEasingFunction external
     py winui3.microsoft.ui.composition.CompositionEasingFunction
@@ -3004,11 +4073,52 @@ class System.Double external
 class System.Object external
     py winrt.system.Object
 
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
 struct Windows.Foundation.Point external
     py winrt.windows.foundation.Point
 
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
 struct Windows.Foundation.TimeSpan external
     py winrt.windows.foundation.TimeSpan
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.UI.Color external
     py winrt.windows.ui.Color

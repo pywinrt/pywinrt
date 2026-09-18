@@ -5,28 +5,68 @@ namespace Windows.Data.Json
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IJsonValue]
     guid cb0492b6-4113-55cf-b2c5-99eb428ba493
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Data.Json.IJsonValue
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> return
 
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
     argument Windows.Foundation.Collections.IKeyValuePair<K,V>
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, IJsonValue]]
     guid dfabb6e1-0411-5a8f-aa87-354e7110f099
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IJsonValue]
     guid 189eb512-5a20-5ec6-9866-60af96f0d23b
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Data.Json.IJsonValue
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> shape=4 reverse=22 role=current
+            out interface type=Windows.Data.Json.IJsonValue return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> shape=117 reverse=101
+            fill_array interface type=Windows.Data.Json.IJsonValue name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, IJsonValue]]
     guid f948eac5-33eb-50f5-b5af-e7cecf0e4501
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e}))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Data.Json.IJsonArray
     guid 08c1ddb6-0cbd-4a9a-b5d3-2f852dc37e81
@@ -83,32 +123,161 @@ interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
     argument V
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, IJsonValue]
     guid 4deecc89-b0b8-5ee8-a51d-1c25ad9a5b01
     signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Windows.Data.Json.IJsonValue
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=43
+            out interface type=Windows.Data.Json.IJsonValue return
 
-interface Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> concrete
+interface Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, IJsonValue]
     guid c9d9a725-786b-5113-b4b7-9b61764c220b
     signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>>
     argument System.String
     argument Windows.Data.Json.IJsonValue
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=117 reverse=125 role=insert
+            in string name=key
+            in interface type=Windows.Data.Json.IJsonValue name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=51 reverse=24 role=lookup
+            in string name=key
+            out interface type=Windows.Data.Json.IJsonValue return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=141 role=remove
+            in string name=key
 
-interface Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, IJsonValue]
     guid eecd690c-1ff3-529f-923f-9b1c31fd3d0f
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>>
     argument System.String
     argument Windows.Data.Json.IJsonValue
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> shape=51 reverse=24 role=lookup
+            in string name=key
+            out interface type=Windows.Data.Json.IJsonValue return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> name=second
 
-interface Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[IJsonValue]
     guid d44662bc-dce3-59a8-9272-4b210f33908b
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue>
     argument Windows.Data.Json.IJsonValue
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=173
+            in interface type=Windows.Data.Json.IJsonValue name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Data.Json.IJsonValue return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Data.Json.IJsonValue name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Data.Json.IJsonValue> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=117 reverse=101
+            in interface type=Windows.Data.Json.IJsonValue name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in interface type=Windows.Data.Json.IJsonValue name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=211
+            pass_array interface type=Windows.Data.Json.IJsonValue name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in interface type=Windows.Data.Json.IJsonValue name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Data.Json.IJsonValue> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Data.Json.IJsonValue> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IJsonValue]
     guid cffabb0f-6bc4-5ff6-9b9e-7a9df6c687c8
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue>
     argument Windows.Data.Json.IJsonValue
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Json.IJsonValue> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Json.IJsonValue> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Data.Json.IJsonValue return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Json.IJsonValue> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Data.Json.IJsonValue name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Json.IJsonValue> shape=117 reverse=66
+            in interface type=Windows.Data.Json.IJsonValue name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Data.Json.JsonArray activatable python_type iterable sequence mutable_sequence stringable
     py JsonArray
@@ -128,7 +297,7 @@ class Windows.Data.Json.JsonArray activatable python_type iterable sequence muta
         get get_ValueType slot=6 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=22
             out enum32 type=Windows.Data.Json.JsonValueType return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=173
@@ -136,7 +305,7 @@ class Windows.Data.Json.JsonArray activatable python_type iterable sequence muta
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> return
     method get_array
         method GetArray slot=11 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=141
@@ -146,7 +315,7 @@ class Windows.Data.Json.JsonArray activatable python_type iterable sequence muta
             in uint32 name=index
             out class type=Windows.Data.Json.JsonArray return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out interface type=Windows.Data.Json.IJsonValue return
     method get_boolean
@@ -191,7 +360,7 @@ class Windows.Data.Json.JsonArray activatable python_type iterable sequence muta
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in interface type=Windows.Data.Json.IJsonValue name=value
     method parse static
@@ -199,7 +368,7 @@ class Windows.Data.Json.JsonArray activatable python_type iterable sequence muta
             in string name=input
             out class type=Windows.Data.Json.JsonArray return
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=0 reverse=185
@@ -207,14 +376,14 @@ class Windows.Data.Json.JsonArray activatable python_type iterable sequence muta
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=211
             pass_array interface type=Windows.Data.Json.IJsonValue name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in interface type=Windows.Data.Json.IJsonValue name=value
     method stringify
         method Stringify slot=7 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=43
             out string return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
         method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Data.Json.IJsonArrayStatics shape=117 reverse=45 static
@@ -253,12 +422,12 @@ class Windows.Data.Json.JsonObject activatable python_type iterable mapping muta
         get get_ValueType slot=6 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=22
             out enum32 type=Windows.Data.Json.JsonValueType return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=43 role=size
             out uint32 return
     method clear
         method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=0 reverse=159
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> return
     method get_array
         method GetArray slot=11 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=141
@@ -327,16 +496,16 @@ class Windows.Data.Json.JsonObject activatable python_type iterable mapping muta
         method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=99
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Data.Json.IJsonValue> return
     method has_key
-        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=51 reverse=65
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=51 reverse=65 role=has_key
             in string name=key
             out boolean return
     method insert
-        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=117 reverse=125
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=117 reverse=125 role=insert
             in string name=key
             in interface type=Windows.Data.Json.IJsonValue name=value
             out boolean return
     method lookup
-        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=51 reverse=24
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=51 reverse=24 role=lookup
             in string name=key
             out interface type=Windows.Data.Json.IJsonValue return
     method parse static
@@ -344,7 +513,7 @@ class Windows.Data.Json.JsonObject activatable python_type iterable mapping muta
             in string name=input
             out class type=Windows.Data.Json.JsonObject return
     method remove
-        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=141
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=141 role=remove
             in string name=key
     method set_named_value
         method SetNamedValue slot=7 inputs=2 outputs=0 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=44
@@ -354,7 +523,7 @@ class Windows.Data.Json.JsonObject activatable python_type iterable mapping muta
         method Stringify slot=7 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=43
             out string return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
         method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Data.Json.IJsonObjectStatics shape=117 reverse=45 static
@@ -411,7 +580,7 @@ class Windows.Data.Json.JsonValue python_type stringable
         method Stringify slot=7 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=43
             out string return
     method to_string
-        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22
+        method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
         method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Data.Json.IJsonValueStatics shape=117 reverse=45 static
@@ -435,3 +604,31 @@ class System.String external
 interface Windows.Foundation.IStringable external
     py winrt.windows.foundation._IStringable
     guid 96369f54-8eb6-48f0-abce-c1b211e627c3
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

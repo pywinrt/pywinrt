@@ -2,11 +2,244 @@ format 4.0
 generator 0.0.0
 namespace Windows.Web.Syndication
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> concrete
-    guid 92eaf151-415e-5f87-8095-781623c88998
-    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.Syndication.SyndicationFeed;{7ffe3cd2-5b66-4d62-8403-1bc10d910d6b});struct(Windows.Web.Syndication.RetrievalProgress;u4;u4))
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[SyndicationFeed, RetrievalProgress]
+    guid 1017bbe0-9d10-543e-8f03-885122a082f3
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.Web.Syndication.SyndicationFeed;{7ffe3cd2-5b66-4d62-8403-1bc10d910d6b});struct(Windows.Web.Syndication.RetrievalProgress;u4;u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
     argument Windows.Web.Syndication.SyndicationFeed
     argument Windows.Web.Syndication.RetrievalProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=71 reverse=13
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> name=asyncInfo
+            in struct type=Windows.Web.Syndication.RetrievalProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[SyndicationFeed, RetrievalProgress]
+    guid 0e3d7f70-4e8c-5260-a7e5-786e05bded99
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.Web.Syndication.SyndicationFeed;{7ffe3cd2-5b66-4d62-8403-1bc10d910d6b});struct(Windows.Web.Syndication.RetrievalProgress;u4;u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Web.Syndication.SyndicationFeed
+    argument Windows.Web.Syndication.RetrievalProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[SyndicationFeed, RetrievalProgress]
+    guid 92eaf151-415e-5f87-8095-781623c88998
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.Syndication.SyndicationFeed;{7ffe3cd2-5b66-4d62-8403-1bc10d910d6b});struct(Windows.Web.Syndication.RetrievalProgress;u4;u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Web.Syndication.SyndicationFeed
+    argument Windows.Web.Syndication.RetrievalProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> shape=4 reverse=121 role=get_results
+            out class type=Windows.Web.Syndication.SyndicationFeed return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.ISyndicationNode> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ISyndicationNode]
+    guid b486569a-72b3-57aa-9950-cea0b3e4fc58
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{753cef78-51f8-45c0-a9f5-f1719dec3fb2})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Web.Syndication.ISyndicationNode
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISyndicationNode> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationAttribute> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SyndicationAttribute]
+    guid 329eabe1-efcc-539e-96ba-f6a44f221dbd
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Syndication.SyndicationAttribute;{71e8f969-526e-4001-9a91-e84f83161ab1}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Web.Syndication.SyndicationAttribute
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationAttribute> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationCategory> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SyndicationCategory]
+    guid d151f7d1-eabd-5300-b55c-149eb289cc71
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Syndication.SyndicationCategory;{8715626f-0cba-4a7f-89ff-ecb5281423b6}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Web.Syndication.SyndicationCategory
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationCategory> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationCategory> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationItem> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SyndicationItem]
+    guid 55463eef-ecb8-59cd-8d6b-74daacbe7d19
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Syndication.SyndicationItem;{548db883-c384-45c1-8ae8-a378c4ec486c}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Web.Syndication.SyndicationItem
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationItem> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationLink> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SyndicationLink]
+    guid c6919f6a-66d9-556a-9632-87d39af14638
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Syndication.SyndicationLink;{27553abd-a10e-41b5-86bd-9759086eb0c5}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Web.Syndication.SyndicationLink
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationLink> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationLink> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationPerson> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SyndicationPerson]
+    guid e58e7844-eb34-5284-b09e-de6762d548ca
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Web.Syndication.SyndicationPerson;{fa1ee5da-a7c6-4517-a096-0143faf29327}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Web.Syndication.SyndicationPerson
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationPerson> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationPerson> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISyndicationNode> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ISyndicationNode]
+    guid 2dc8d9d6-0f44-5692-933e-f8902ab7fb94
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{753cef78-51f8-45c0-a9f5-f1719dec3fb2})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Web.Syndication.ISyndicationNode
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=22 role=current
+            out interface type=Windows.Web.Syndication.ISyndicationNode return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISyndicationNode> shape=117 reverse=101
+            fill_array interface type=Windows.Web.Syndication.ISyndicationNode name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationAttribute> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SyndicationAttribute]
+    guid a76fcde8-f86f-5b75-aa7d-5787467a319d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Syndication.SyndicationAttribute;{71e8f969-526e-4001-9a91-e84f83161ab1}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Web.Syndication.SyndicationAttribute
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=22 role=current
+            out class type=Windows.Web.Syndication.SyndicationAttribute return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationAttribute> shape=117 reverse=101
+            fill_array class type=Windows.Web.Syndication.SyndicationAttribute name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationCategory> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SyndicationCategory]
+    guid 2a9228fa-b088-5690-bb38-b7044e0b502b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Syndication.SyndicationCategory;{8715626f-0cba-4a7f-89ff-ecb5281423b6}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Web.Syndication.SyndicationCategory
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationCategory> shape=4 reverse=22 role=current
+            out class type=Windows.Web.Syndication.SyndicationCategory return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationCategory> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationCategory> shape=117 reverse=101
+            fill_array class type=Windows.Web.Syndication.SyndicationCategory name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationCategory> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationItem> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SyndicationItem]
+    guid d5692aa3-d785-5db4-ac5c-b3832082e629
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Syndication.SyndicationItem;{548db883-c384-45c1-8ae8-a378c4ec486c}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Web.Syndication.SyndicationItem
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationItem> shape=4 reverse=22 role=current
+            out class type=Windows.Web.Syndication.SyndicationItem return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationItem> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationItem> shape=117 reverse=101
+            fill_array class type=Windows.Web.Syndication.SyndicationItem name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationItem> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationLink> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SyndicationLink]
+    guid 901642b7-6ca4-5b57-b8f1-73208342ba4a
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Syndication.SyndicationLink;{27553abd-a10e-41b5-86bd-9759086eb0c5}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Web.Syndication.SyndicationLink
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationLink> shape=4 reverse=22 role=current
+            out class type=Windows.Web.Syndication.SyndicationLink return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationLink> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationLink> shape=117 reverse=101
+            fill_array class type=Windows.Web.Syndication.SyndicationLink name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationLink> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationPerson> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SyndicationPerson]
+    guid 1745e807-f209-5da6-8855-7f99e25eb1fc
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Web.Syndication.SyndicationPerson;{fa1ee5da-a7c6-4517-a096-0143faf29327}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Web.Syndication.SyndicationPerson
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationPerson> shape=4 reverse=22 role=current
+            out class type=Windows.Web.Syndication.SyndicationPerson return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationPerson> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationPerson> shape=117 reverse=101
+            fill_array class type=Windows.Web.Syndication.SyndicationPerson name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationPerson> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Web.Syndication.ISyndicationAttribute
     guid 71e8f969-526e-4001-9a91-e84f83161ab1
@@ -202,35 +435,485 @@ interface Windows.Web.Syndication.ISyndicationText python_type
 interface Windows.Web.Syndication.ISyndicationTextFactory
     guid ee7342f7-11c6-4b25-ab62-e596bd162946
 
-interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ISyndicationNode]
     guid f4508afa-9f02-5eb8-a389-14bbe5193ac0
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{753cef78-51f8-45c0-a9f5-f1719dec3fb2})
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.ISyndicationNode>
     argument Windows.Web.Syndication.ISyndicationNode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=173
+            in interface type=Windows.Web.Syndication.ISyndicationNode name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISyndicationNode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Web.Syndication.ISyndicationNode return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Web.Syndication.ISyndicationNode name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISyndicationNode> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=117 reverse=101
+            in interface type=Windows.Web.Syndication.ISyndicationNode name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in interface type=Windows.Web.Syndication.ISyndicationNode name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=51 reverse=211
+            pass_array interface type=Windows.Web.Syndication.ISyndicationNode name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in interface type=Windows.Web.Syndication.ISyndicationNode name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SyndicationAttribute]
     guid 2fe84e7b-2350-5941-94b5-a64677b585d1
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Syndication.SyndicationAttribute;{71e8f969-526e-4001-9a91-e84f83161ab1}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationAttribute>
     argument Windows.Web.Syndication.SyndicationAttribute
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=173
+            in class type=Windows.Web.Syndication.SyndicationAttribute name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationAttribute> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.Syndication.SyndicationAttribute return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Syndication.SyndicationAttribute name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationAttribute> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=117 reverse=101
+            in class type=Windows.Web.Syndication.SyndicationAttribute name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Web.Syndication.SyndicationAttribute name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=51 reverse=211
+            pass_array class type=Windows.Web.Syndication.SyndicationAttribute name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Web.Syndication.SyndicationAttribute name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SyndicationCategory]
     guid 72e456e4-0e52-52cb-b363-f3581327f033
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Syndication.SyndicationCategory;{8715626f-0cba-4a7f-89ff-ecb5281423b6}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationCategory>
     argument Windows.Web.Syndication.SyndicationCategory
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=4 reverse=173
+            in class type=Windows.Web.Syndication.SyndicationCategory name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationCategory> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationCategory> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.Syndication.SyndicationCategory return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Syndication.SyndicationCategory name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=117 reverse=101
+            in class type=Windows.Web.Syndication.SyndicationCategory name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Web.Syndication.SyndicationCategory name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=51 reverse=211
+            pass_array class type=Windows.Web.Syndication.SyndicationCategory name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Web.Syndication.SyndicationCategory name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SyndicationItem]
     guid aa01130b-4631-5117-8c48-dc21b0295096
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Syndication.SyndicationItem;{548db883-c384-45c1-8ae8-a378c4ec486c}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationItem>
     argument Windows.Web.Syndication.SyndicationItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=4 reverse=173
+            in class type=Windows.Web.Syndication.SyndicationItem name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.Syndication.SyndicationItem return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Syndication.SyndicationItem name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationItem> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=117 reverse=101
+            in class type=Windows.Web.Syndication.SyndicationItem name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Web.Syndication.SyndicationItem name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=51 reverse=211
+            pass_array class type=Windows.Web.Syndication.SyndicationItem name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Web.Syndication.SyndicationItem name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SyndicationLink]
     guid b8fb25a5-01c3-5207-814e-892b2b5343f7
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Syndication.SyndicationLink;{27553abd-a10e-41b5-86bd-9759086eb0c5}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationLink>
     argument Windows.Web.Syndication.SyndicationLink
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=4 reverse=173
+            in class type=Windows.Web.Syndication.SyndicationLink name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationLink> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationLink> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.Syndication.SyndicationLink return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Syndication.SyndicationLink name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationLink> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=117 reverse=101
+            in class type=Windows.Web.Syndication.SyndicationLink name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Web.Syndication.SyndicationLink name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=51 reverse=211
+            pass_array class type=Windows.Web.Syndication.SyndicationLink name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Web.Syndication.SyndicationLink name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SyndicationPerson]
     guid ab772cd6-8ce7-5db9-83ac-0db9e44a1b0c
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Web.Syndication.SyndicationPerson;{fa1ee5da-a7c6-4517-a096-0143faf29327}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationPerson>
     argument Windows.Web.Syndication.SyndicationPerson
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=4 reverse=173
+            in class type=Windows.Web.Syndication.SyndicationPerson name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationPerson> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationPerson> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.Syndication.SyndicationPerson return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Syndication.SyndicationPerson name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationPerson> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=117 reverse=101
+            in class type=Windows.Web.Syndication.SyndicationPerson name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Web.Syndication.SyndicationPerson name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=51 reverse=211
+            pass_array class type=Windows.Web.Syndication.SyndicationPerson name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Web.Syndication.SyndicationPerson name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISyndicationNode> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ISyndicationNode]
+    guid 6b4bd4a1-b4f6-5433-afd7-bd2e501a1041
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{753cef78-51f8-45c0-a9f5-f1719dec3fb2})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.ISyndicationNode>
+    argument Windows.Web.Syndication.ISyndicationNode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISyndicationNode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISyndicationNode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Web.Syndication.ISyndicationNode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISyndicationNode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Web.Syndication.ISyndicationNode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISyndicationNode> shape=117 reverse=66
+            in interface type=Windows.Web.Syndication.ISyndicationNode name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationAttribute> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SyndicationAttribute]
+    guid c1d6d1cc-69ce-5486-9f35-c87e13111387
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Syndication.SyndicationAttribute;{71e8f969-526e-4001-9a91-e84f83161ab1}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationAttribute>
+    argument Windows.Web.Syndication.SyndicationAttribute
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationAttribute> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationAttribute> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.Syndication.SyndicationAttribute return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationAttribute> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Syndication.SyndicationAttribute name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationAttribute> shape=117 reverse=66
+            in class type=Windows.Web.Syndication.SyndicationAttribute name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SyndicationCategory]
+    guid a1ac007c-9d94-552e-840e-139f109a9b88
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Syndication.SyndicationCategory;{8715626f-0cba-4a7f-89ff-ecb5281423b6}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationCategory>
+    argument Windows.Web.Syndication.SyndicationCategory
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationCategory> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationCategory> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.Syndication.SyndicationCategory return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Syndication.SyndicationCategory name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> shape=117 reverse=66
+            in class type=Windows.Web.Syndication.SyndicationCategory name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationItem> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SyndicationItem]
+    guid 9496279b-567e-5652-b942-f6fb70c34173
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Syndication.SyndicationItem;{548db883-c384-45c1-8ae8-a378c4ec486c}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationItem>
+    argument Windows.Web.Syndication.SyndicationItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.Syndication.SyndicationItem return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationItem> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Syndication.SyndicationItem name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationItem> shape=117 reverse=66
+            in class type=Windows.Web.Syndication.SyndicationItem name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationLink> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SyndicationLink]
+    guid eb8b7ff6-fa64-576a-8be4-a055f7a04a73
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Syndication.SyndicationLink;{27553abd-a10e-41b5-86bd-9759086eb0c5}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationLink>
+    argument Windows.Web.Syndication.SyndicationLink
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationLink> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationLink> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationLink> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationLink> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.Syndication.SyndicationLink return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationLink> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Syndication.SyndicationLink name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationLink> shape=117 reverse=66
+            in class type=Windows.Web.Syndication.SyndicationLink name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationPerson> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SyndicationPerson]
+    guid 0e450d3d-e750-5787-885b-488abc72b5b9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Syndication.SyndicationPerson;{fa1ee5da-a7c6-4517-a096-0143faf29327}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationPerson>
+    argument Windows.Web.Syndication.SyndicationPerson
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationPerson> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationPerson> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationPerson> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationPerson> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Web.Syndication.SyndicationPerson return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationPerson> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Web.Syndication.SyndicationPerson name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationPerson> shape=117 reverse=66
+            in class type=Windows.Web.Syndication.SyndicationPerson name=value
+            out uint32 name=index
+            out boolean return
 
 struct Windows.Web.Syndication.RetrievalProgress python_type
     py RetrievalProgress
@@ -1098,8 +1781,43 @@ struct Windows.Web.Syndication.TransferProgress python_type
 class Windows.Data.Xml.Dom.XmlDocument external
     py winrt.windows.data.xml.dom.XmlDocument
 
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Security.Credentials.PasswordCredential external
     py winrt.windows.security.credentials.PasswordCredential

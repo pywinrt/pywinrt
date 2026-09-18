@@ -2,28 +2,222 @@ format 4.0
 generator 0.0.0
 namespace Microsoft.Windows.AI.Text
 
-interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Text.LanguageModel> concrete
-    guid 172f62b5-1d49-535f-8c07-4ddd02066f36
-    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.AI.Text.LanguageModel;{6331c629-8c86-5bfe-8c4e-9ca5573cc14b}))
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Text.LanguageModel> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[LanguageModel]
+    guid 9be75163-9cd2-5a27-8f31-6d6beae7629a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Microsoft.Windows.AI.Text.LanguageModel;{6331c629-8c86-5bfe-8c4e-9ca5573cc14b}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
     argument Microsoft.Windows.AI.Text.LanguageModel
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Text.LanguageModel> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> concrete
-    guid 39c32af0-c9b4-595f-9e9b-c6c289ad9ea1
-    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.AIFeatureReadyResult;{936a78a6-c242-5937-9814-e512d4193a6d});f8)
+delegate Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[AIFeatureReadyResult, Double]
+    guid 5b37e602-8caa-581f-9ece-5dc72ab6ae7e
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Microsoft.Windows.AI.AIFeatureReadyResult;{936a78a6-c242-5937-9814-e512d4193a6d});f8)
+    base Windows.Foundation.AsyncOperationProgressHandler
     argument Microsoft.Windows.AI.AIFeatureReadyResult
     argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=49 reverse=2
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> name=asyncInfo
+            in double name=progressInfo
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> concrete
-    guid 5aec37a6-a5fa-5c0d-9da7-7614e0b4ed76
-    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.Text.LanguageModelResponseResult;{3a256fff-a426-5d3b-8e4b-3ac84162471e});string)
+delegate Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[LanguageModelResponseResult, String]
+    guid f4a5a68d-50cf-502d-84e5-f41c62830b58
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Microsoft.Windows.AI.Text.LanguageModelResponseResult;{3a256fff-a426-5d3b-8e4b-3ac84162471e});string)
+    base Windows.Foundation.AsyncOperationProgressHandler
     argument Microsoft.Windows.AI.Text.LanguageModelResponseResult
     argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> name=asyncInfo
+            in string name=progressInfo
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> concrete
-    guid cff503d4-0ecb-5924-acbf-796ca6c7d373
-    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.Text.TextToTableResponseResult;{391fbf11-59cd-575d-834a-9ef823116f98});string)
+delegate Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[TextToTableResponseResult, String]
+    guid 57351f20-f3a6-5410-8284-8c4ccbeee776
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Microsoft.Windows.AI.Text.TextToTableResponseResult;{391fbf11-59cd-575d-834a-9ef823116f98});string)
+    base Windows.Foundation.AsyncOperationProgressHandler
     argument Microsoft.Windows.AI.Text.TextToTableResponseResult
     argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> name=asyncInfo
+            in string name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[AIFeatureReadyResult, Double]
+    guid ceea7604-5166-549f-8844-03192865a975
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Microsoft.Windows.AI.AIFeatureReadyResult;{936a78a6-c242-5937-9814-e512d4193a6d});f8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Microsoft.Windows.AI.AIFeatureReadyResult
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[LanguageModelResponseResult, String]
+    guid f936a4d3-cdb2-5356-adc5-adb43b59a6bc
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Microsoft.Windows.AI.Text.LanguageModelResponseResult;{3a256fff-a426-5d3b-8e4b-3ac84162471e});string)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Microsoft.Windows.AI.Text.LanguageModelResponseResult
+    argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[TextToTableResponseResult, String]
+    guid 1fab5408-2f63-54cd-b5d1-80224a632477
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Microsoft.Windows.AI.Text.TextToTableResponseResult;{391fbf11-59cd-575d-834a-9ef823116f98});string)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Microsoft.Windows.AI.Text.TextToTableResponseResult
+    argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Text.LanguageModel> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[LanguageModel]
+    guid 172f62b5-1d49-535f-8c07-4ddd02066f36
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.AI.Text.LanguageModel;{6331c629-8c86-5bfe-8c4e-9ca5573cc14b}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.AI.Text.LanguageModel
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Text.LanguageModel> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Text.LanguageModel> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Text.LanguageModel> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Text.LanguageModel> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Text.LanguageModel> shape=4 reverse=62 role=get_results
+            out class type=Microsoft.Windows.AI.Text.LanguageModel return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[AIFeatureReadyResult, Double]
+    guid 39c32af0-c9b4-595f-9e9b-c6c289ad9ea1
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.AIFeatureReadyResult;{936a78a6-c242-5937-9814-e512d4193a6d});f8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.AI.AIFeatureReadyResult
+    argument System.Double
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> shape=4 reverse=121 role=get_results
+            out class type=Microsoft.Windows.AI.AIFeatureReadyResult return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[LanguageModelResponseResult, String]
+    guid 5aec37a6-a5fa-5c0d-9da7-7614e0b4ed76
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.Text.LanguageModelResponseResult;{3a256fff-a426-5d3b-8e4b-3ac84162471e});string)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.AI.Text.LanguageModelResponseResult
+    argument System.String
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> shape=4 reverse=121 role=get_results
+            out class type=Microsoft.Windows.AI.Text.LanguageModelResponseResult return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[TextToTableResponseResult, String]
+    guid cff503d4-0ecb-5924-acbf-796ca6c7d373
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.Text.TextToTableResponseResult;{391fbf11-59cd-575d-834a-9ef823116f98});string)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.AI.Text.TextToTableResponseResult
+    argument System.String
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> shape=4 reverse=121 role=get_results
+            out class type=Microsoft.Windows.AI.Text.TextToTableResponseResult return
 
 interface Microsoft.Windows.AI.Text.ILanguageModel
     guid 6331c629-8c86-5bfe-8c4e-9ca5573cc14b
@@ -72,7 +266,7 @@ class Microsoft.Windows.AI.Text.LanguageModel python_type closeable
     requires Windows.Foundation.IClosable
     factory Microsoft.Windows.AI.Text.ILanguageModelStatics
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_async static
         method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelStatics shape=4 reverse=62 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Text.LanguageModel> return
@@ -90,7 +284,7 @@ class Microsoft.Windows.AI.Text.LanguageModelContext python_type closeable
     requires Microsoft.Windows.AI.Text.ILanguageModelContext
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Microsoft.Windows.AI.Text.LanguageModelOptions activatable python_type
     py LanguageModelOptions
@@ -227,6 +421,33 @@ class System.Double external
 
 class System.String external
     py winrt.system.String
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable

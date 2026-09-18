@@ -600,6 +600,12 @@ namespace py::table
         return static_cast<member_kind>(flags() & member_flags::kind_mask);
     }
 
+    member_role member_view::role() const
+    {
+        return static_cast<member_role>(
+            (flags() & member_flags::role_mask) >> member_flags::role_shift);
+    }
+
     std::string_view member_view::winrt_name() const
     {
         return owner_->string(word(1));
@@ -874,6 +880,14 @@ namespace py::cpp::_winrt
 
             if (!set_item(
                     result.get(), "flags", PyLong_FromUnsignedLong(member.flags())))
+            {
+                return pyobj_handle{};
+            }
+
+            if (!set_item(
+                    result.get(),
+                    "role",
+                    PyLong_FromUnsignedLong(static_cast<uint32_t>(member.role()))))
             {
                 return pyobj_handle{};
             }

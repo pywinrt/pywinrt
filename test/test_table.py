@@ -35,9 +35,19 @@ CATEGORY_CLASS = 3
 CATEGORY_DELEGATE = 4
 
 TYPE_EXTERNAL = 1 << 3
+TYPE_PARAMETERIZED = 1 << 6
 TYPE_CONCRETE = 1 << 7
 TYPE_DEFAULT_ACTIVATABLE = 1 << 8
 TYPE_PYTHON_TYPE = 1 << 9
+TYPE_ITERABLE = 1 << 10
+TYPE_ITERATOR = 1 << 11
+TYPE_SEQUENCE = 1 << 12
+TYPE_MUTABLE_SEQUENCE = 1 << 13
+TYPE_MAPPING = 1 << 14
+TYPE_MUTABLE_MAPPING = 1 << 15
+TYPE_AWAITABLE = 1 << 16
+TYPE_CLOSEABLE = 1 << 17
+TYPE_STRINGABLE = 1 << 18
 
 GROUP_METHOD = 0
 GROUP_PROPERTY = 1
@@ -50,6 +60,44 @@ MEMBER_PROPERTY_GET = 1
 MEMBER_CONSTRUCTOR = 5
 
 NO_REF = 0xFFFFFFFF
+
+# The part a member plays in a Python protocol, in the free bits of its flags.
+ROLE_SIZE = 1
+ROLE_GET_AT = 2
+ROLE_SET_AT = 3
+ROLE_REMOVE_AT = 4
+ROLE_INSERT_AT = 5
+ROLE_FIRST = 6
+ROLE_CURRENT = 7
+ROLE_HAS_CURRENT = 8
+ROLE_MOVE_NEXT = 9
+ROLE_LOOKUP = 10
+ROLE_HAS_KEY = 11
+ROLE_INSERT = 12
+ROLE_REMOVE = 13
+ROLE_STATUS = 14
+ROLE_COMPLETED = 15
+ROLE_GET_RESULTS = 16
+ROLE_TO_STRING = 17
+ROLE_VALUE = 18
+ROLE_CLOSE = 19
+
+# The members each protocol calls, by the type flag that claims it.
+REQUIRED_ROLES = {
+    TYPE_SEQUENCE: {ROLE_SIZE, ROLE_GET_AT},
+    TYPE_MUTABLE_SEQUENCE: {ROLE_SET_AT, ROLE_INSERT_AT, ROLE_REMOVE_AT},
+    TYPE_MAPPING: {ROLE_SIZE, ROLE_LOOKUP, ROLE_HAS_KEY},
+    TYPE_MUTABLE_MAPPING: {ROLE_INSERT, ROLE_REMOVE},
+    TYPE_ITERATOR: {ROLE_CURRENT, ROLE_HAS_CURRENT, ROLE_MOVE_NEXT},
+    TYPE_AWAITABLE: {ROLE_STATUS, ROLE_COMPLETED, ROLE_GET_RESULTS},
+    TYPE_STRINGABLE: {ROLE_TO_STRING},
+    TYPE_CLOSEABLE: {ROLE_CLOSE},
+}
+
+# The type codes of the two parameterized interfaces a member can pass: a
+# concrete instance, and the IReference<T> that the projection unwraps.
+CODE_GENERIC = 26
+CODE_REFERENCE = 27
 
 # The first vtable slot after IUnknown's three and IInspectable's three.
 FIRST_INTERFACE_SLOT = 6
@@ -103,6 +151,13 @@ def defined(table: dict[str, Any]) -> dict[str, dict[str, Any]]:
 
 def groups(type_record: dict[str, Any]) -> dict[str, dict[str, Any]]:
     return {g["py_name"]: g for g in type_record["groups"]}
+
+
+def roles(type_record: dict[str, Any]) -> set[int]:
+    """The protocol roles the members of a type play, without the plain ones."""
+    return {
+        member["role"] for group in type_record["groups"] for member in group["members"]
+    } - {0}
 
 
 def pinterface_guid(signature: str) -> uuid.UUID:
@@ -378,6 +433,135 @@ class TestStructLayout(unittest.TestCase):
         self.assertEqual(
             [f["offset"] for f in nested["fields"]], [0, blittable["size"]]
         )
+
+
+class TestTableParameterizedTypes(unittest.TestCase):
+    """What a member of a concrete parameterized type is allowed to name."""
+
+    def test_a_concrete_type_names_no_type_without_arguments(self) -> None:
+        # A parameterized type with a type argument still standing in for a
+        # type has no IID and no members, so a parameter of one cannot be
+        # converted. The definition's own members may name one - they have no
+        # call shape either and are never callable - but anything that values
+        # exist of must not, and working that out means composing the type
+        # arguments along the whole chain of required interfaces rather than
+        # one level at a time.
+        unusable = []
+
+        for parts in (
+            ("test_winrt", "testcomponent"),
+            ("winrt", "windows", "foundation"),
+            ("winrt", "windows", "foundation", "collections"),
+            ("winrt", "windows", "data", "json"),
+        ):
+            table = read(*parts)
+            types = table["types"]
+
+            for type_record in types:
+                if (
+                    type_record["flags"] & TYPE_PARAMETERIZED
+                    and not type_record["flags"] & TYPE_CONCRETE
+                ):
+                    continue
+
+                for group in type_record["groups"]:
+                    for member in group["members"]:
+                        for param in member["params"]:
+                            if param["code"] not in (CODE_GENERIC, CODE_REFERENCE):
+                                continue
+
+                            if param["type"] == NO_REF:
+                                continue
+
+                            named = types[param["type"]]
+
+                            if named["flags"] & TYPE_CONCRETE:
+                                continue
+
+                            if not named["flags"] & TYPE_PARAMETERIZED:
+                                continue
+
+                            unusable.append(
+                                f"{type_record['name']}.{member['winrt_name']}"
+                                f" -> {named['namespace']}.{named['name']}"
+                            )
+
+        self.assertEqual(unusable, [])
+
+
+class TestTableProtocolRoles(unittest.TestCase):
+    """The members the Python protocols of a type call."""
+
+    tables = (
+        ("test_winrt", "testcomponent"),
+        ("winrt", "windows", "foundation"),
+        ("winrt", "windows", "foundation", "collections"),
+        ("winrt", "windows", "data", "json"),
+    )
+
+    def test_a_type_has_the_members_its_protocols_call(self) -> None:
+        # The type flags say which protocols a type implements and the member
+        # roles say which members those protocols call, so a type that claims
+        # one and does not name its members would have a slot with nothing to
+        # call - which is what a missing entry in the generator's table of
+        # roles would silently produce.
+        checked = 0
+
+        for parts in self.tables:
+            table = read(*parts)
+
+            for type_record in table["types"]:
+                if type_record["flags"] & TYPE_EXTERNAL:
+                    continue
+
+                required: set[int] = set()
+
+                for flag, needed in REQUIRED_ROLES.items():
+                    if type_record["flags"] & flag:
+                        required |= needed
+
+                # An IIterator is iterable without a First, because iter() on
+                # one hands back the iterator itself.
+                iterable = type_record["flags"] & TYPE_ITERABLE
+                iterator = type_record["flags"] & TYPE_ITERATOR
+
+                if iterable and not iterator:
+                    required.add(ROLE_FIRST)
+
+                if not required:
+                    continue
+
+                checked += 1
+
+                with self.subTest(type=type_record["name"]):
+                    self.assertEqual(required - roles(type_record), set())
+
+        self.assertGreater(checked, 0)
+
+    def test_a_concrete_type_has_the_roles_of_the_type_it_instantiates(self) -> None:
+        # A concrete instance carries its own members, substituted, so the
+        # roles have to survive that rather than be found again on the type
+        # arguments' side.
+        checked = 0
+
+        for parts in self.tables:
+            table = read(*parts)
+
+            for type_record in table["types"]:
+                if not type_record["flags"] & TYPE_CONCRETE:
+                    continue
+
+                definition = table["types"][type_record["base"]]
+
+                if definition["flags"] & TYPE_EXTERNAL:
+                    continue
+
+                checked += 1
+
+                with self.subTest(signature=type_record["signature"]):
+                    self.assertEqual(roles(type_record), roles(definition))
+
+        self.assertGreater(checked, 0)
 
 
 class TestTableGuids(unittest.TestCase):

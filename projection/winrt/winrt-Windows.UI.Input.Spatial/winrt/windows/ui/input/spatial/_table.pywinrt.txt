@@ -2,25 +2,371 @@ format 4.0
 generator 0.0.0
 namespace Windows.UI.Input.Spatial
 
-interface Windows.Foundation.IAsyncOperation<Windows.Perception.People.HandMeshObserver> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.People.HandMeshObserver> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[HandMeshObserver]
+    guid 75e7a8a7-b66d-5e6b-a060-eef7002d9e62
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Perception.People.HandMeshObserver;{85ae30cb-6fc3-55c4-a7b4-29e33896ca69}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Perception.People.HandMeshObserver
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.People.HandMeshObserver> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IRandomAccessStreamWithContentType]
+    guid 3dddecf4-1d39-58e8-83b1-dbed541c7f35
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{cc254827-4b3d-438f-9232-10c76bc7e038})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IRandomAccessStreamWithContentType
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Perception.People.HandMeshObserver> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[HandMeshObserver]
     guid 0bfeea40-9b97-5abf-af9e-2e6367a50bf8
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Perception.People.HandMeshObserver;{85ae30cb-6fc3-55c4-a7b4-29e33896ca69}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Perception.People.HandMeshObserver
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Perception.People.HandMeshObserver> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.People.HandMeshObserver> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Perception.People.HandMeshObserver> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.People.HandMeshObserver> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Perception.People.HandMeshObserver> shape=4 reverse=62 role=get_results
+            out class type=Windows.Perception.People.HandMeshObserver return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IRandomAccessStreamWithContentType]
     guid c4a57c5e-32b0-55b3-ad13-ce1c23041ed6
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{cc254827-4b3d-438f-9232-10c76bc7e038})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IRandomAccessStreamWithContentType
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamWithContentType> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.Spatial.SpatialInteractionSourceState> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SpatialInteractionSourceState]
+    guid 7ecce0f5-0874-506f-8d42-4c9519156407
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Input.Spatial.SpatialInteractionSourceState;{d5c475ef-4b63-37ec-98b9-9fc652b9d2f2}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Input.Spatial.SpatialInteractionSourceState
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Spatial.SpatialInteractionSourceState> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Spatial.SpatialInteractionSourceState> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Spatial.SpatialInteractionSourceState> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SpatialInteractionSourceState]
+    guid 23f50032-907e-5d73-bbdc-f7563de655c4
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Input.Spatial.SpatialInteractionSourceState;{d5c475ef-4b63-37ec-98b9-9fc652b9d2f2}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Input.Spatial.SpatialInteractionSourceState
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Spatial.SpatialInteractionSourceState> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Input.Spatial.SpatialInteractionSourceState return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Spatial.SpatialInteractionSourceState> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Spatial.SpatialInteractionSourceState> shape=117 reverse=101
+            fill_array class type=Windows.UI.Input.Spatial.SpatialInteractionSourceState name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Spatial.SpatialInteractionSourceState> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Foundation.IReference<Windows.Foundation.Numerics.Quaternion> concrete
+    py winrt.windows.foundation._IReference[Quaternion]
     guid b27004bb-c014-5dce-9a21-799c5a3c1461
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.Numerics.Quaternion;f4;f4;f4;f4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.Numerics.Quaternion
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.Numerics.Quaternion> shape=4 reverse=22 role=value
+            out struct type=Windows.Foundation.Numerics.Quaternion return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Foundation.Numerics.Vector3> concrete
+    py winrt.windows.foundation._IReference[Vector3]
     guid 1ee770ff-c954-59ca-a754-6199a9be282c
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.Numerics.Vector3
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.Numerics.Vector3> shape=4 reverse=22 role=value
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.UI.Input.Spatial.ISpatialGestureRecognizer
     guid 71605bcc-0c35-4673-adbd-cc04caa6ef45
@@ -160,10 +506,33 @@ interface Windows.UI.Input.Spatial.ISpatialRecognitionStartedEventArgs
 interface Windows.UI.Input.Spatial.ISpatialTappedEventArgs
     guid 296d83de-f444-4aa1-b2bf-9dc88d567da6
 
-interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Spatial.SpatialInteractionSourceState> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Spatial.SpatialInteractionSourceState> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SpatialInteractionSourceState]
     guid dfdcf091-6e3c-5e5b-a193-03acc414c921
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Input.Spatial.SpatialInteractionSourceState;{d5c475ef-4b63-37ec-98b9-9fc652b9d2f2}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Input.Spatial.SpatialInteractionSourceState>
     argument Windows.UI.Input.Spatial.SpatialInteractionSourceState
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Spatial.SpatialInteractionSourceState> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Spatial.SpatialInteractionSourceState> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Spatial.SpatialInteractionSourceState> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Spatial.SpatialInteractionSourceState> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Input.Spatial.SpatialInteractionSourceState return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Spatial.SpatialInteractionSourceState> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Input.Spatial.SpatialInteractionSourceState name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Spatial.SpatialInteractionSourceState> shape=117 reverse=66
+            in class type=Windows.UI.Input.Spatial.SpatialInteractionSourceState name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.UI.Input.Spatial.SpatialGestureRecognizer python_type
     py SpatialGestureRecognizer
@@ -811,106 +1180,253 @@ class Windows.UI.Input.Spatial.SpatialTappedEventArgs python_type
             out class type=Windows.UI.Input.Spatial.SpatialPointerPose return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialHoldCanceledEventArgs]
     guid 6a715963-c49f-5f3d-bfec-952700308860
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs;{5dfcb667-4caa-4093-8c35-b601a839f31b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialHoldCompletedEventArgs]
     guid e425d80e-8c18-5375-b600-1dd7a11dba5e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs;{3f64470b-4cfd-43da-8dc4-e64552173971}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialHoldStartedEventArgs]
     guid 7537dd12-02b8-5132-8ff7-90c80ef454d1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs;{8e343d79-acb6-4144-8615-2cfba8a3cb3f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialManipulationCanceledEventArgs]
     guid b92a6754-3946-5353-b8f9-2a07eb0e8886
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs;{2d40d1cb-e7da-4220-b0bf-819301674780}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialManipulationCompletedEventArgs]
     guid 10dac914-bea2-5d67-8607-dc470ea1dcd8
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs;{05086802-f301-4343-9250-2fbaa5f87a37}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialManipulationStartedEventArgs]
     guid a123252b-cfe8-5cfb-b61c-f2dc011eb12e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs;{a1d6bbce-42a5-377b-ada6-d28e3d384737}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialManipulationUpdatedEventArgs]
     guid cecbe023-3c49-530e-a010-8c0c3cbd3088
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs;{5f230b9b-60c6-4dc6-bdc9-9f4a6f15fe49}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialNavigationCanceledEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialNavigationCanceledEventArgs]
     guid 9947ea8e-eb4d-5f93-9fd9-2ade6470bc5d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialNavigationCanceledEventArgs;{ce503edc-e8a5-46f0-92d4-3c122b35112a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialNavigationCanceledEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialNavigationCanceledEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialNavigationCompletedEventArgs]
     guid f0d459df-ebd3-5388-b0a9-5f44bcd6f58f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs;{012e80b7-af3b-42c2-9e41-baaa0e721f3a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialNavigationStartedEventArgs]
     guid 5419cadc-2600-527b-9398-1744318d0618
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs;{754a348a-fb64-4656-8ebd-9deecaafe475}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialNavigationUpdatedEventArgs]
     guid a7216b90-c175-5a28-b500-a445f0751c5b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs;{9b713fd7-839d-4a74-8732-45466fc044b5}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialRecognitionEndedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialRecognitionEndedEventArgs]
     guid afa7fad7-3fd7-5c81-8802-195c523f6e7b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialRecognitionEndedEventArgs;{0e35f5cb-3f75-43f3-ac81-d1dc2df9b1fb}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialRecognitionEndedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialRecognitionEndedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialRecognitionStartedEventArgs]
     guid f2bd99d6-99fa-5599-a14a-1f7a7a92e3d7
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs;{24da128f-0008-4a6d-aa50-2a76f9cfb264}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialTappedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialTappedEventArgs]
     guid 630205a4-2f93-5022-b7b8-c43ed428498a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialGestureRecognizer;{71605bcc-0c35-4673-adbd-cc04caa6ef45});rc(Windows.UI.Input.Spatial.SpatialTappedEventArgs;{296d83de-f444-4aa1-b2bf-9dc88d567da6}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialGestureRecognizer
     argument Windows.UI.Input.Spatial.SpatialTappedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialTappedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialInteractionManager,Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialInteractionManager, SpatialInteractionDetectedEventArgs]
     guid 0f223f8f-f220-5388-8fe6-b3b7e7930987
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialInteractionManager;{32a64ea8-a15a-3995-b8bd-80513cb5adef});rc(Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs;{075878e4-5961-3b41-9dfb-cea5d89cc38a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialInteractionManager
     argument Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialInteractionManager name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialInteractionManager,Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialInteractionManager, SpatialInteractionSourceEventArgs]
     guid ae831d66-70f0-5371-866f-a3fc8b60e2d8
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.Spatial.SpatialInteractionManager;{32a64ea8-a15a-3995-b8bd-80513cb5adef});rc(Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs;{23b786cf-ec23-3979-b27c-eb0e12feb7c7}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.Spatial.SpatialInteractionManager
     argument Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.Spatial.SpatialInteractionManager name=sender
+            in class type=Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs name=args
 
 class Windows.Devices.Haptics.SimpleHapticsController external
     py winrt.windows.devices.haptics.SimpleHapticsController
 
 class Windows.Devices.Power.BatteryReport external
     py winrt.windows.devices.power.BatteryReport
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Foundation.Numerics.Quaternion external
     py winrt.windows.foundation.numerics.Quaternion

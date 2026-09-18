@@ -2,30 +2,225 @@ format 4.0
 generator 0.0.0
 namespace Windows.Security.Authentication.Identity.Core
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MicrosoftAccountMultiFactorGetSessionsResult]
+    guid cecbb0ca-0a27-57d4-a35d-4998f199dac9
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult;{4e23a9a0-e9fa-497a-95de-6d5747bf974c}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MicrosoftAccountMultiFactorOneTimeCodedInfo]
+    guid 02e84540-f4a1-589f-9360-a0502e6dc9c0
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo;{82ba264b-d87c-4668-a976-40cfae547d08}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MicrosoftAccountMultiFactorServiceResponse]
+    guid 8d7f8240-81cf-5896-95fa-e7b223f769f9
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo]
+    guid 6cc53e8c-d0e4-5ded-94f4-7c73b132d2a4
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;{aa7ec5fb-da3f-4088-a20d-5618afadb2e5}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MicrosoftAccountMultiFactorGetSessionsResult]
     guid 544cc4e9-a3da-5398-a308-e332a58961f6
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult;{4e23a9a0-e9fa-497a-95de-6d5747bf974c}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MicrosoftAccountMultiFactorOneTimeCodedInfo]
     guid ae63588e-1fc2-58a3-af36-6f67b8922be7
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo;{82ba264b-d87c-4668-a976-40cfae547d08}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]
     guid 05953b8e-5adb-51b9-a94a-ad030030b8e3
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo]
     guid 989f4c21-ef69-56ad-ba8c-e5d25a3c624e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;{aa7ec5fb-da3f-4088-a20d-5618afadb2e5}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo return
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MicrosoftAccountMultiFactorSessionInfo]
+    guid 85a662c8-8a5d-59a8-9f73-ee237393c55c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo;{5f7eabb4-a278-4635-b765-b494eb260af4}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MicrosoftAccountMultiFactorSessionInfo]
+    guid fd6d2ade-0fd3-5cd0-b86e-d24ad9a2092c
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo;{5f7eabb4-a278-4635-b765-b494eb260af4}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> shape=4 reverse=22 role=current
+            out class type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> shape=117 reverse=101
+            fill_array class type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager
     guid 0fd340a5-f574-4320-a08e-0a19a82322aa
@@ -45,15 +240,61 @@ interface Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFa
 interface Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
     guid aa7ec5fb-da3f-4088-a20d-5618afadb2e5
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MicrosoftAccountMultiFactorSessionInfo]
     guid 6abe486b-ea5e-5fda-9121-79d8a785c465
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo;{5f7eabb4-a278-4635-b765-b494eb260af4}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo>
     argument Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo> shape=117 reverse=66
+            in class type=Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager python_type
     py MicrosoftAccountMultiFactorAuthenticationManager
@@ -203,3 +444,30 @@ class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorU
 
 class System.String external
     py winrt.system.String
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

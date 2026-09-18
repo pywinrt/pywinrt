@@ -46,6 +46,28 @@ class Windows.Foundation.Diagnostics.AsyncCausalityTracer static python_type
             in uint64 name=operationId
             in enum32 type=Windows.Foundation.Diagnostics.CausalitySynchronousWork name=work
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Diagnostics.ErrorDetails> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ErrorDetails]
+    guid a6997f9d-7195-5972-8ecd-1c73aa5cb312
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Foundation.Diagnostics.ErrorDetails;{378cbb01-2cc9-428f-8c55-2c990d463e8f}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Diagnostics.ErrorDetails
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Diagnostics.ErrorDetails> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StorageFile]
+    guid e521c894-2c26-5946-9e61-2b5e188d01ed
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.StorageFile
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 enum Windows.Foundation.Diagnostics.CausalityRelation python_type
     py CausalityRelation
     signature enum(Windows.Foundation.Diagnostics.CausalityRelation;i4)
@@ -87,9 +109,15 @@ enum Windows.Foundation.Diagnostics.ErrorOptions python_type
     signature enum(Windows.Foundation.Diagnostics.ErrorOptions;u4)
 
 delegate Windows.Foundation.EventHandler<Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[TracingStatusChangedEventArgs]
     guid 2bf27008-2eb4-5675-b1cd-e9906cc5ce64
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs;{410b7711-ff3b-477f-9c9a-d2efda302dc3}))
+    base Windows.Foundation.EventHandler
     argument Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs name=args
 
 class Windows.Foundation.Diagnostics.FileLoggingSession python_type closeable
     py FileLoggingSession
@@ -118,7 +146,7 @@ class Windows.Foundation.Diagnostics.FileLoggingSession python_type closeable
             in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
             in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=maxLevel
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method close_and_save_to_file_async
         method CloseAndSaveToFileAsync slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=4 reverse=121
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
@@ -129,15 +157,63 @@ class Windows.Foundation.Diagnostics.FileLoggingSession python_type closeable
 interface Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics
     guid 50850b26-267e-451b-a890-ab6a370245ee
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Diagnostics.ErrorDetails> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Diagnostics.ErrorDetails> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ErrorDetails]
     guid 9b05106d-77e0-5c24-82b0-9b2dc8f79671
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Foundation.Diagnostics.ErrorDetails;{378cbb01-2cc9-428f-8c55-2c990d463e8f}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Diagnostics.ErrorDetails
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Diagnostics.ErrorDetails> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Diagnostics.ErrorDetails> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Diagnostics.ErrorDetails> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Diagnostics.ErrorDetails> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Diagnostics.ErrorDetails> shape=4 reverse=62 role=get_results
+            out class type=Windows.Foundation.Diagnostics.ErrorDetails return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StorageFile]
     guid 5e52f8ce-aced-5a42-95b4-f674dd84885e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.StorageFile
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> shape=4 reverse=62 role=get_results
+            out class type=Windows.Storage.StorageFile return
 
 interface Windows.Foundation.Diagnostics.IErrorDetails
     guid 378cbb01-2cc9-428f-8c55-2c990d463e8f
@@ -177,7 +253,7 @@ interface Windows.Foundation.Diagnostics.IFileLoggingSession python_type closeab
             in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
             in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=maxLevel
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method close_and_save_to_file_async
         method CloseAndSaveToFileAsync slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=4 reverse=121
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
@@ -221,7 +297,7 @@ interface Windows.Foundation.Diagnostics.ILoggingChannel python_type closeable
         remove remove_LoggingEnabled slot=14 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=26 reverse=192
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method log_message
         method LogMessage slot=9 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=4 reverse=99
             in string name=eventString
@@ -276,7 +352,7 @@ interface Windows.Foundation.Diagnostics.ILoggingSession python_type closeable
             in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
             in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=maxLevel
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method remove_logging_channel
         method RemoveLoggingChannel slot=10 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingSession shape=4 reverse=121
             in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
@@ -379,7 +455,7 @@ class Windows.Foundation.Diagnostics.LoggingActivity python_type closeable
         get get_Channel slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingActivity2 shape=4 reverse=22
             out class type=Windows.Foundation.Diagnostics.LoggingChannel return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method is_enabled
         method IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=4 reverse=22
             out boolean return
@@ -477,7 +553,7 @@ class Windows.Foundation.Diagnostics.LoggingChannel python_type closeable
         remove remove_LoggingEnabled slot=14 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=26 reverse=192
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method is_enabled
         method IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingTarget shape=4 reverse=22
             out boolean return
@@ -1130,7 +1206,7 @@ class Windows.Foundation.Diagnostics.LoggingSession python_type closeable
             in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
             in enum32 type=Windows.Foundation.Diagnostics.LoggingLevel name=maxLevel
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method remove_logging_channel
         method RemoveLoggingChannel slot=10 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingSession shape=4 reverse=121
             in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
@@ -1168,22 +1244,50 @@ class Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs python_type
             out enum32 type=Windows.Foundation.Diagnostics.CausalityTraceLevel return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Foundation.Diagnostics.IFileLoggingSession,Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[IFileLoggingSession, LogFileGeneratedEventArgs]
     guid 0c6563b0-9d8b-5b60-994b-dee1174d1efb
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{24c74216-fed2-404c-895f-1f9699cb02f7};rc(Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs;{269e976f-0d38-4c1a-b53f-b395d881df84}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Foundation.Diagnostics.IFileLoggingSession
     argument Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Foundation.Diagnostics.IFileLoggingSession name=sender
+            in class type=Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Foundation.Diagnostics.ILoggingChannel,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[ILoggingChannel, Object]
     guid 52c9c2a1-54a3-5ef9-9aff-014e7c454655
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{e9a50343-11d7-4f01-b5ca-cf495278c0a8};cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Foundation.Diagnostics.ILoggingChannel
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=sender
+            in object name=args
 
 class System.Object external
     py winrt.system.Object
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
@@ -1197,6 +1301,10 @@ struct Windows.Foundation.Rect external
 
 struct Windows.Foundation.Size external
     py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri

@@ -20,7 +20,7 @@ interface Windows.AI.ModelContextProtocol.IModelContextProtocolServer python_typ
         get get_Info slot=8 inputs=0 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolServer shape=4 reverse=62
             out class type=Windows.AI.ModelContextProtocol.ModelContextProtocolServerInfo return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_command_arguments
         method GetCommandArguments slot=7 inputs=0 outputs=1 declaring=Windows.AI.ModelContextProtocol.IModelContextProtocolServer shape=51 reverse=44
             receive_array string return

@@ -2,40 +2,286 @@ format 4.0
 generator 0.0.0
 namespace Windows.Security.Authentication.Identity.Provider
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[SecondaryAuthenticationFactorInfo]]
+    guid 06752d25-d43e-5d2e-a305-4e1576846fee
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo;{1e2ba861-8533-4fce-839b-ecb72410ac14})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SecondaryAuthenticationFactorAuthenticationResult]
+    guid 2547373d-9684-5e5b-a9b8-a6f90ce632ad
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult;{9cbb5987-ef6d-4bc2-bf49-4617515a0f9a}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SecondaryAuthenticationFactorAuthenticationStageInfo]
+    guid 7811d384-2eb8-58f1-afed-4b4b888f4357
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo;{56fec28b-e8aa-4c0f-8e4c-a559e73add88}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus]
+    guid 2294a212-9061-5e99-a226-a44ac8f8f4dd
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SecondaryAuthenticationFactorFinishAuthenticationStatus]
+    guid ae1d7146-3d91-50e3-8f13-613cf2801207
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SecondaryAuthenticationFactorRegistrationResult]
+    guid a04902e8-f830-50ea-89ea-96e2a6fb9453
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult;{a4fe35f0-ade3-4981-af6b-ec195921682a}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 delegate Windows.Foundation.EventHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs]
     guid 10409b3c-42e4-586f-84c1-803da23765af
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs;{d4a5ee56-7291-4073-bc1f-ccb8f5afdf96}))
+    base Windows.Foundation.EventHandler
     argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs name=args
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[SecondaryAuthenticationFactorInfo]]
     guid 47eb155b-abe0-55a5-9310-feb1dd57dca5
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo;{1e2ba861-8533-4fce-839b-ecb72410ac14})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SecondaryAuthenticationFactorAuthenticationResult]
     guid 18b0a73c-db59-5279-a76d-02416b2d90b6
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult;{9cbb5987-ef6d-4bc2-bf49-4617515a0f9a}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SecondaryAuthenticationFactorAuthenticationStageInfo]
     guid 864a2317-b440-5e9e-ae55-4550bb6307df
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo;{56fec28b-e8aa-4c0f-8e4c-a559e73add88}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus]
     guid 7f37ecea-e3e8-53fc-b0e5-7aa471970edd
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SecondaryAuthenticationFactorFinishAuthenticationStatus]
     guid 9159437a-4397-546e-be61-2ef161717e06
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SecondaryAuthenticationFactorRegistrationResult]
     guid 05da520c-aba4-584c-bc08-19c5389a70e2
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult;{a4fe35f0-ade3-4981-af6b-ec195921682a}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SecondaryAuthenticationFactorInfo]
+    guid 43b7bbe4-f096-53dd-8c16-1faa4b468c86
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo;{1e2ba861-8533-4fce-839b-ecb72410ac14}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SecondaryAuthenticationFactorInfo]
+    guid 0eedbda6-2de0-50af-abc4-46073245fb2d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo;{1e2ba861-8533-4fce-839b-ecb72410ac14}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> shape=4 reverse=22 role=current
+            out class type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> shape=117 reverse=101
+            fill_array class type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorAuthentication
     guid 020a16e5-6a25-40a3-8c00-50a023f619d1
@@ -70,10 +316,33 @@ interface Windows.Security.Authentication.Identity.Provider.ISecondaryAuthentica
 interface Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistrationStatics
     guid 1adf0f65-e3b7-4155-997f-b756ef65beba
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SecondaryAuthenticationFactorInfo]
     guid 63c2e57e-3b00-5752-8fa7-cb9cbe8fe088
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo;{1e2ba861-8533-4fce-839b-ecb72410ac14}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>
     argument Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> shape=117 reverse=66
+            in class type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication python_type
     py SecondaryAuthenticationFactorAuthentication
@@ -302,9 +571,40 @@ enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFa
     py SecondaryAuthenticationFactorRegistrationStatus
     signature enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationStatus;i4)
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.Streams.IBuffer external
     py winrt.windows.storage.streams._IBuffer

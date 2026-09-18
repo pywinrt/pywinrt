@@ -2,110 +2,1239 @@ format 4.0
 generator 0.0.0
 namespace Windows.Networking.Vpn
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[IVpnProfile]]
+    guid dac6dd72-a5d1-56d4-afc4-989f84dcb2b3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{7875b751-b0d7-43db-8a93-d3fe2479e56a}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Vpn.VpnCredential> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[VpnCredential]
+    guid 1c9c4504-4b75-57ea-837d-5338358bb762
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Networking.Vpn.VpnCredential;{b7e78af3-a46d-404b-8729-1832522853ac}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Networking.Vpn.VpnCredential
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Vpn.VpnManagementErrorStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[VpnManagementErrorStatus]
+    guid 31229f8c-709d-5017-8629-57ef1289e616
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Networking.Vpn.VpnManagementErrorStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Networking.Vpn.VpnManagementErrorStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[IVpnProfile]]
     guid 69d957be-045e-538f-98f6-1aa65cee244a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{7875b751-b0d7-43db-8a93-d3fe2479e56a}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[VpnCredential]
     guid 216a6f97-dba1-5f71-a14b-2818ad3c4c69
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Networking.Vpn.VpnCredential;{b7e78af3-a46d-404b-8729-1832522853ac}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Networking.Vpn.VpnCredential
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Vpn.VpnCredential> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Vpn.VpnCredential> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> shape=4 reverse=62 role=get_results
+            out class type=Windows.Networking.Vpn.VpnCredential return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[VpnManagementErrorStatus]
     guid e99b86dc-6b65-5f23-9419-90b55852f283
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Networking.Vpn.VpnManagementErrorStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Networking.Vpn.VpnManagementErrorStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Vpn.VpnManagementErrorStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Vpn.VpnManagementErrorStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Networking.Vpn.VpnManagementErrorStatus return
 
-interface Windows.Foundation.Collections.IIterable<System.Object> concrete
+interface Windows.Foundation.Collections.IIterable<System.Object> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Object]
     guid 092b849b-60b1-52be-a44a-6fe8e933cbe4
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IIterable
     argument System.Object
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Uri]
+    guid b0d63b78-78ad-5e31-b6d8-e32a0e16c447
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Uri
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[HostName]
     guid 9e5f3ed0-cf1c-5d38-832c-acea6164bf5c
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.HostName;{bf8ecaad-ed96-49a7-9084-d416cae88dcb}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Networking.HostName
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnPacketBuffer> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.IVpnCustomPrompt> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IVpnCustomPrompt]
+    guid 8bac695c-70cb-54d6-8606-af6e3a25e3a1
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{9b2ebe7b-87d5-433c-b4f6-eee6aa68a244})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.Vpn.IVpnCustomPrompt
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.IVpnCustomPrompt> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPrompt> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.IVpnCustomPromptElement> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IVpnCustomPromptElement]
+    guid 437d3693-00c4-50b4-989a-938f1016a230
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{73bd5638-6f04-404d-93dd-50a44924a38b})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.Vpn.IVpnCustomPromptElement
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.IVpnCustomPromptElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPromptElement> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.IVpnProfile> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IVpnProfile]
+    guid db35f6b1-f266-5c87-8862-9dd87d9df18f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{7875b751-b0d7-43db-8a93-d3fe2479e56a})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.Vpn.IVpnProfile
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.IVpnProfile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnProfile> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnAppId> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[VpnAppId]
+    guid 0e1e00aa-f93d-5dc7-9912-e07d1fa6bd67
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.Vpn.VpnAppId;{7b06a635-5c58-41d9-94a7-bfbcf1d8ca54}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.Vpn.VpnAppId
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnAppId> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnAppId> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnDomainNameInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[VpnDomainNameInfo]
+    guid 33abe488-be1a-558a-a9cf-b5330ab49f50
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.Vpn.VpnDomainNameInfo;{ad2eb82f-ea8e-4f7a-843e-1a87e32e1b9a}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.Vpn.VpnDomainNameInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnDomainNameInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnDomainNameInfo> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnNamespaceInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[VpnNamespaceInfo]
+    guid 17781d03-ddcf-553f-aba8-d2e8155cb6b8
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.Vpn.VpnNamespaceInfo;{30edfb43-444f-44c5-8167-a35a91f1af94}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.Vpn.VpnNamespaceInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnNamespaceInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnNamespaceInfo> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnPacketBuffer> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[VpnPacketBuffer]
     guid fa954f6e-30d7-50e0-9d43-dadb6c53e196
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.Vpn.VpnPacketBuffer;{c2f891fc-4d5c-4a63-b70d-4e307eacce55}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Networking.Vpn.VpnPacketBuffer
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnPacketBuffer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnPacketBuffer> return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnPacketBuffer> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnRoute> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[VpnRoute]
+    guid bbf498d5-b9ef-55f1-97b1-77a06639e4e2
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.Vpn.VpnRoute;{b5731b83-0969-4699-938e-7776db29cfb3}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.Vpn.VpnRoute
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnRoute> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnRoute> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnTrafficFilter> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[VpnTrafficFilter]
+    guid b6d4c853-77c9-52ca-9ce9-853add4554cf
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.Vpn.VpnTrafficFilter;{2f691b60-6c9f-47f5-ac36-bb1b042e2c50}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.Vpn.VpnTrafficFilter
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnTrafficFilter> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnTrafficFilter> return
+
+interface Windows.Foundation.Collections.IIterator<System.Object> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Object]
+    guid 44a94f2d-04f8-5091-b336-be7892dd10be
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IIterator
+    argument System.Object
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=22 role=current
+            out object return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=117 reverse=101
+            fill_array object name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Uri]
+    guid 1c157d0f-5efe-5cec-bbd6-0c6ce9af07a5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Uri
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=22 role=current
+            out class type=Windows.Foundation.Uri return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=117 reverse=101
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[HostName]
+    guid 557bf83c-a428-5dbd-a0fe-05f6ee543d45
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.HostName;{bf8ecaad-ed96-49a7-9084-d416cae88dcb}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.HostName
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.HostName return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=117 reverse=101
+            fill_array class type=Windows.Networking.HostName name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPrompt> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IVpnCustomPrompt]
+    guid 6fc7cfe8-1882-5ba1-8e5e-4c5e3a4fa86d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{9b2ebe7b-87d5-433c-b4f6-eee6aa68a244})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.Vpn.IVpnCustomPrompt
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPrompt> shape=4 reverse=22 role=current
+            out interface type=Windows.Networking.Vpn.IVpnCustomPrompt return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPrompt> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPrompt> shape=117 reverse=101
+            fill_array interface type=Windows.Networking.Vpn.IVpnCustomPrompt name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPrompt> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPromptElement> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IVpnCustomPromptElement]
+    guid ee23ff21-51ba-5cc4-9856-625c79c28080
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{73bd5638-6f04-404d-93dd-50a44924a38b})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.Vpn.IVpnCustomPromptElement
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPromptElement> shape=4 reverse=22 role=current
+            out interface type=Windows.Networking.Vpn.IVpnCustomPromptElement return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPromptElement> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPromptElement> shape=117 reverse=101
+            fill_array interface type=Windows.Networking.Vpn.IVpnCustomPromptElement name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPromptElement> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnProfile> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IVpnProfile]
+    guid 91ccb492-ec28-530b-b45e-c431744ca9b5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{7875b751-b0d7-43db-8a93-d3fe2479e56a})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.Vpn.IVpnProfile
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnProfile> shape=4 reverse=22 role=current
+            out interface type=Windows.Networking.Vpn.IVpnProfile return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnProfile> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnProfile> shape=117 reverse=101
+            fill_array interface type=Windows.Networking.Vpn.IVpnProfile name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnProfile> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnAppId> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[VpnAppId]
+    guid ec9298b0-8ca2-549c-bbe2-252823e70eef
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.Vpn.VpnAppId;{7b06a635-5c58-41d9-94a7-bfbcf1d8ca54}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.Vpn.VpnAppId
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnAppId> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.Vpn.VpnAppId return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnAppId> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnAppId> shape=117 reverse=101
+            fill_array class type=Windows.Networking.Vpn.VpnAppId name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnAppId> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnDomainNameInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[VpnDomainNameInfo]
+    guid 29f9008e-3e81-5c58-8a78-6be91abcc17d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.Vpn.VpnDomainNameInfo;{ad2eb82f-ea8e-4f7a-843e-1a87e32e1b9a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.Vpn.VpnDomainNameInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnDomainNameInfo> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.Vpn.VpnDomainNameInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnDomainNameInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnDomainNameInfo> shape=117 reverse=101
+            fill_array class type=Windows.Networking.Vpn.VpnDomainNameInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnDomainNameInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnNamespaceInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[VpnNamespaceInfo]
+    guid 91e28244-7555-594d-b54d-9c87095e79a2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.Vpn.VpnNamespaceInfo;{30edfb43-444f-44c5-8167-a35a91f1af94}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.Vpn.VpnNamespaceInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnNamespaceInfo> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.Vpn.VpnNamespaceInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnNamespaceInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnNamespaceInfo> shape=117 reverse=101
+            fill_array class type=Windows.Networking.Vpn.VpnNamespaceInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnNamespaceInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnPacketBuffer> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[VpnPacketBuffer]
     guid 04c88ba5-05e9-53b2-8524-df458d2a9179
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.Vpn.VpnPacketBuffer;{c2f891fc-4d5c-4a63-b70d-4e307eacce55}))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Networking.Vpn.VpnPacketBuffer
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnPacketBuffer> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.Vpn.VpnPacketBuffer return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnPacketBuffer> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnPacketBuffer> shape=117 reverse=101
+            fill_array class type=Windows.Networking.Vpn.VpnPacketBuffer name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnPacketBuffer> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IVector<System.String> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnRoute> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[VpnRoute]
+    guid 44f813ac-052f-514b-a776-aad37a64fdc6
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.Vpn.VpnRoute;{b5731b83-0969-4699-938e-7776db29cfb3}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.Vpn.VpnRoute
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnRoute> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.Vpn.VpnRoute return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnRoute> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnRoute> shape=117 reverse=101
+            fill_array class type=Windows.Networking.Vpn.VpnRoute name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnRoute> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnTrafficFilter> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[VpnTrafficFilter]
+    guid 8f37d5a0-5905-55bf-9c18-b9b3b544648b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.Vpn.VpnTrafficFilter;{2f691b60-6c9f-47f5-ac36-bb1b042e2c50}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.Vpn.VpnTrafficFilter
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnTrafficFilter> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.Vpn.VpnTrafficFilter return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnTrafficFilter> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnTrafficFilter> shape=117 reverse=101
+            fill_array class type=Windows.Networking.Vpn.VpnTrafficFilter name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnTrafficFilter> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
     guid 98b9acc1-4b56-532e-ac73-03d5291cca90
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Uri]
     guid 0d82bd8d-fe62-5d67-a7b9-7886dd75bc4e
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri>
     argument Windows.Foundation.Uri
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=4 reverse=173
+            in class type=Windows.Foundation.Uri name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Foundation.Uri return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=117 reverse=101
+            in class type=Windows.Foundation.Uri name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Foundation.Uri name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=51 reverse=211
+            pass_array class type=Windows.Foundation.Uri name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Foundation.Uri name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Networking.HostName> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Networking.HostName> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[HostName]
     guid 90c71c29-a9b5-5267-a5ad-8b756736317c
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.HostName;{bf8ecaad-ed96-49a7-9084-d416cae88dcb}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.HostName>
     argument Windows.Networking.HostName
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=4 reverse=173
+            in class type=Windows.Networking.HostName name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.HostName return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.HostName name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=117 reverse=101
+            in class type=Windows.Networking.HostName name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Networking.HostName name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=51 reverse=211
+            pass_array class type=Windows.Networking.HostName name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Networking.HostName name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[VpnAppId]
     guid 89097d58-edb8-5ad4-abc5-603f21dd4b15
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.Vpn.VpnAppId;{7b06a635-5c58-41d9-94a7-bfbcf1d8ca54}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnAppId>
     argument Windows.Networking.Vpn.VpnAppId
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=4 reverse=173
+            in class type=Windows.Networking.Vpn.VpnAppId name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnAppId> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnAppId> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.Vpn.VpnAppId return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.Vpn.VpnAppId name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnAppId> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=117 reverse=101
+            in class type=Windows.Networking.Vpn.VpnAppId name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Networking.Vpn.VpnAppId name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=51 reverse=211
+            pass_array class type=Windows.Networking.Vpn.VpnAppId name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Networking.Vpn.VpnAppId name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[VpnDomainNameInfo]
     guid 8179b6f2-7273-5ca3-a81b-53e902ca209b
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.Vpn.VpnDomainNameInfo;{ad2eb82f-ea8e-4f7a-843e-1a87e32e1b9a}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnDomainNameInfo>
     argument Windows.Networking.Vpn.VpnDomainNameInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=4 reverse=173
+            in class type=Windows.Networking.Vpn.VpnDomainNameInfo name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnDomainNameInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnDomainNameInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.Vpn.VpnDomainNameInfo return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.Vpn.VpnDomainNameInfo name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnDomainNameInfo> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=117 reverse=101
+            in class type=Windows.Networking.Vpn.VpnDomainNameInfo name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Networking.Vpn.VpnDomainNameInfo name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=51 reverse=211
+            pass_array class type=Windows.Networking.Vpn.VpnDomainNameInfo name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Networking.Vpn.VpnDomainNameInfo name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[VpnNamespaceInfo]
     guid 056bddf2-135d-542e-a322-36aa4ca0e60d
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.Vpn.VpnNamespaceInfo;{30edfb43-444f-44c5-8167-a35a91f1af94}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnNamespaceInfo>
     argument Windows.Networking.Vpn.VpnNamespaceInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=4 reverse=173
+            in class type=Windows.Networking.Vpn.VpnNamespaceInfo name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnNamespaceInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnNamespaceInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.Vpn.VpnNamespaceInfo return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.Vpn.VpnNamespaceInfo name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnNamespaceInfo> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=117 reverse=101
+            in class type=Windows.Networking.Vpn.VpnNamespaceInfo name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Networking.Vpn.VpnNamespaceInfo name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=51 reverse=211
+            pass_array class type=Windows.Networking.Vpn.VpnNamespaceInfo name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Networking.Vpn.VpnNamespaceInfo name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[VpnRoute]
     guid 5b026bd8-2cc5-5570-bde5-0db7c4331279
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.Vpn.VpnRoute;{b5731b83-0969-4699-938e-7776db29cfb3}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnRoute>
     argument Windows.Networking.Vpn.VpnRoute
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=4 reverse=173
+            in class type=Windows.Networking.Vpn.VpnRoute name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnRoute> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnRoute> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.Vpn.VpnRoute return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.Vpn.VpnRoute name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnRoute> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=117 reverse=101
+            in class type=Windows.Networking.Vpn.VpnRoute name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Networking.Vpn.VpnRoute name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=51 reverse=211
+            pass_array class type=Windows.Networking.Vpn.VpnRoute name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Networking.Vpn.VpnRoute name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[VpnTrafficFilter]
     guid 2a5b9ad8-f005-5f69-ad81-300642e7c667
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Networking.Vpn.VpnTrafficFilter;{2f691b60-6c9f-47f5-ac36-bb1b042e2c50}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnTrafficFilter>
     argument Windows.Networking.Vpn.VpnTrafficFilter
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=4 reverse=173
+            in class type=Windows.Networking.Vpn.VpnTrafficFilter name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnTrafficFilter> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnTrafficFilter> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.Vpn.VpnTrafficFilter return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.Vpn.VpnTrafficFilter name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnTrafficFilter> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=117 reverse=101
+            in class type=Windows.Networking.Vpn.VpnTrafficFilter name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Networking.Vpn.VpnTrafficFilter name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=51 reverse=211
+            pass_array class type=Windows.Networking.Vpn.VpnTrafficFilter name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Networking.Vpn.VpnTrafficFilter name=value
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Uri]
     guid 4b8385bd-a2cd-5ff1-bf74-7ea580423e50
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri>
     argument Windows.Foundation.Uri
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Foundation.Uri return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=117 reverse=66
+            in class type=Windows.Foundation.Uri name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[HostName]
     guid f4706ab1-55a3-5270-afb2-732988fe8227
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.HostName;{bf8ecaad-ed96-49a7-9084-d416cae88dcb}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.HostName>
     argument Windows.Networking.HostName
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.HostName return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.HostName name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=117 reverse=66
+            in class type=Windows.Networking.HostName name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPrompt> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPrompt> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IVpnCustomPrompt]
     guid 804449c2-3bc1-5cfe-8468-3bbece4a5cd7
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{9b2ebe7b-87d5-433c-b4f6-eee6aa68a244})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.IVpnCustomPrompt>
     argument Windows.Networking.Vpn.IVpnCustomPrompt
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPrompt> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.IVpnCustomPrompt> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPrompt> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPrompt> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Networking.Vpn.IVpnCustomPrompt return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPrompt> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Networking.Vpn.IVpnCustomPrompt name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPrompt> shape=117 reverse=66
+            in interface type=Windows.Networking.Vpn.IVpnCustomPrompt name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPromptElement> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPromptElement> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IVpnCustomPromptElement]
     guid 25eaf5eb-2f39-5b4d-bb6e-e652c7d00f6a
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{73bd5638-6f04-404d-93dd-50a44924a38b})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.IVpnCustomPromptElement>
     argument Windows.Networking.Vpn.IVpnCustomPromptElement
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPromptElement> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.IVpnCustomPromptElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnCustomPromptElement> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPromptElement> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Networking.Vpn.IVpnCustomPromptElement return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPromptElement> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Networking.Vpn.IVpnCustomPromptElement name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPromptElement> shape=117 reverse=66
+            in interface type=Windows.Networking.Vpn.IVpnCustomPromptElement name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IVpnProfile]
     guid f1dc8f7d-ca33-53fd-9d4c-40c51b5873ec
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{7875b751-b0d7-43db-8a93-d3fe2479e56a})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.IVpnProfile>
     argument Windows.Networking.Vpn.IVpnProfile
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.IVpnProfile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.IVpnProfile> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Networking.Vpn.IVpnProfile return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Networking.Vpn.IVpnProfile name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile> shape=117 reverse=66
+            in interface type=Windows.Networking.Vpn.IVpnProfile name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnAppId> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[VpnAppId]
+    guid faecbc50-da9a-5102-8229-1dd24e873d1f
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.Vpn.VpnAppId;{7b06a635-5c58-41d9-94a7-bfbcf1d8ca54}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnAppId>
+    argument Windows.Networking.Vpn.VpnAppId
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnAppId> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnAppId> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnAppId> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnAppId> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.Vpn.VpnAppId return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnAppId> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.Vpn.VpnAppId name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnAppId> shape=117 reverse=66
+            in class type=Windows.Networking.Vpn.VpnAppId name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnDomainNameInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[VpnDomainNameInfo]
+    guid d4772f57-2328-5c25-9a11-246da17e39d5
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.Vpn.VpnDomainNameInfo;{ad2eb82f-ea8e-4f7a-843e-1a87e32e1b9a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnDomainNameInfo>
+    argument Windows.Networking.Vpn.VpnDomainNameInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnDomainNameInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnDomainNameInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnDomainNameInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnDomainNameInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.Vpn.VpnDomainNameInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnDomainNameInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.Vpn.VpnDomainNameInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnDomainNameInfo> shape=117 reverse=66
+            in class type=Windows.Networking.Vpn.VpnDomainNameInfo name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnNamespaceInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[VpnNamespaceInfo]
+    guid c6ed05a9-4dc7-507d-9c92-7c78c2ef4786
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.Vpn.VpnNamespaceInfo;{30edfb43-444f-44c5-8167-a35a91f1af94}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnNamespaceInfo>
+    argument Windows.Networking.Vpn.VpnNamespaceInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnNamespaceInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnNamespaceInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnNamespaceInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnNamespaceInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.Vpn.VpnNamespaceInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnNamespaceInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.Vpn.VpnNamespaceInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnNamespaceInfo> shape=117 reverse=66
+            in class type=Windows.Networking.Vpn.VpnNamespaceInfo name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnRoute> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[VpnRoute]
+    guid 43701a74-e497-5559-a71b-11d0156fa839
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.Vpn.VpnRoute;{b5731b83-0969-4699-938e-7776db29cfb3}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnRoute>
+    argument Windows.Networking.Vpn.VpnRoute
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnRoute> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnRoute> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnRoute> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnRoute> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.Vpn.VpnRoute return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnRoute> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.Vpn.VpnRoute name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnRoute> shape=117 reverse=66
+            in class type=Windows.Networking.Vpn.VpnRoute name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnTrafficFilter> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[VpnTrafficFilter]
+    guid 75de1766-ee22-56e9-be99-2714065349e5
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.Vpn.VpnTrafficFilter;{2f691b60-6c9f-47f5-ac36-bb1b042e2c50}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnTrafficFilter>
+    argument Windows.Networking.Vpn.VpnTrafficFilter
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnTrafficFilter> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnTrafficFilter> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnTrafficFilter> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnTrafficFilter> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.Vpn.VpnTrafficFilter return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnTrafficFilter> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.Vpn.VpnTrafficFilter name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnTrafficFilter> shape=117 reverse=66
+            in class type=Windows.Networking.Vpn.VpnTrafficFilter name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Networking.Vpn.IVpnAppId
     guid 7b06a635-5c58-41d9-94a7-bfbcf1d8ca54
@@ -426,16 +1555,28 @@ interface Windows.Networking.Vpn.IVpnTrafficFilterFactory
     guid 480d41d5-7f99-474c-86ee-96df168318f1
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Vpn.VpnChannel,Windows.Networking.Vpn.VpnChannelActivityEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[VpnChannel, VpnChannelActivityEventArgs]
     guid 39907949-a8cc-5ce5-9e0a-06e3b2d31570
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Vpn.VpnChannel;{4ac78d07-d1a8-4303-a091-c8d2e0915bc3});rc(Windows.Networking.Vpn.VpnChannelActivityEventArgs;{a36c88f2-afdc-4775-855d-d4ac0a35fc55}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Networking.Vpn.VpnChannel
     argument Windows.Networking.Vpn.VpnChannelActivityEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Networking.Vpn.VpnChannel name=sender
+            in class type=Windows.Networking.Vpn.VpnChannelActivityEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Networking.Vpn.VpnChannel,Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[VpnChannel, VpnChannelActivityStateChangedArgs]
     guid 2cfcf1ba-bffc-5746-b868-2e45a46d2958
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Networking.Vpn.VpnChannel;{4ac78d07-d1a8-4303-a091-c8d2e0915bc3});rc(Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs;{3d750565-fdc0-4bbe-a23b-45fffc6d97a1}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Networking.Vpn.VpnChannel
     argument Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Networking.Vpn.VpnChannel name=sender
+            in class type=Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs name=args
 
 class Windows.Networking.Vpn.VpnAppId python_type
     py VpnAppId
@@ -1365,7 +2506,7 @@ class Windows.Networking.Vpn.VpnPacketBufferList python_type iterable
     method clear
         method Clear slot=10 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=0 reverse=117
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnPacketBuffer> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnPacketBuffer> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnPacketBuffer> return
     method remove_at_begin
         method RemoveAtBegin slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=99
@@ -1607,12 +2748,47 @@ interface Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser extern
 class Windows.ApplicationModel.Activation.SplashScreen external
     py winrt.windows.applicationmodel.activation.SplashScreen
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Foundation.Collections.ValueSet external
     py winrt.windows.foundation.collections.ValueSet

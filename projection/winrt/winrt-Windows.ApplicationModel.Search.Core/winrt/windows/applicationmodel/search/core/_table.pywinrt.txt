@@ -2,10 +2,97 @@ format 4.0
 generator 0.0.0
 namespace Windows.ApplicationModel.Search.Core
 
-interface Windows.Foundation.Collections.IObservableVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> concrete
+interface Windows.Foundation.Collections.IIterable<T> parameterized
+    argument T
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Search.Core.SearchSuggestion> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SearchSuggestion]
+    guid df956160-f155-5816-b38b-a2ff0629ba0e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Search.Core.SearchSuggestion;{5b5554b0-1527-437b-95c5-8d18d2b8af55}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.Search.Core.SearchSuggestion
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Search.Core.SearchSuggestion> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Search.Core.SearchSuggestion> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SearchSuggestion]
+    guid c3157582-f72f-513a-b089-6208188ec2b6
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Search.Core.SearchSuggestion;{5b5554b0-1527-437b-95c5-8d18d2b8af55}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Search.Core.SearchSuggestion
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Search.Core.SearchSuggestion return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IObservableVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IObservableVector[SearchSuggestion]
     guid e885956c-72c1-514f-ad9a-2943b880ae13
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};rc(Windows.ApplicationModel.Search.Core.SearchSuggestion;{5b5554b0-1527-437b-95c5-8d18d2b8af55}))
+    base Windows.Foundation.Collections.IObservableVector
+    requires Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion>
+    requires Windows.Foundation.Collections.IIterable<T>
     argument Windows.ApplicationModel.Search.Core.SearchSuggestion
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=43 role=size
+            out uint32 return
+    event vector_changed
+        add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=51 reverse=24
+            in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<Windows.ApplicationModel.Search.Core.SearchSuggestion> name=vhnd
+            out event_token return
+        remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=26 reverse=53
+            in event_token name=token
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=173
+            in class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Search.Core.SearchSuggestion> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Search.Core.SearchSuggestion return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Search.Core.SearchSuggestion> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=117 reverse=101
+            in class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=51 reverse=211
+            pass_array class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=value
 
 interface Windows.ApplicationModel.Search.Core.IRequestingFocusOnKeyboardInputEventArgs
     guid a1195f27-b1a7-41a2-879d-6a68687e5985
@@ -18,6 +105,86 @@ interface Windows.ApplicationModel.Search.Core.ISearchSuggestionManager
 
 interface Windows.ApplicationModel.Search.Core.ISearchSuggestionsRequestedEventArgs
     guid 6fd519e5-9e7e-4ab4-8be3-c76b1bd4344a
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SearchSuggestion]
+    guid 1cc36c46-19be-5d6b-a56d-047413252c69
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Search.Core.SearchSuggestion;{5b5554b0-1527-437b-95c5-8d18d2b8af55}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Search.Core.SearchSuggestion>
+    argument Windows.ApplicationModel.Search.Core.SearchSuggestion
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=173
+            in class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Search.Core.SearchSuggestion> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Search.Core.SearchSuggestion return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Search.Core.SearchSuggestion> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=117 reverse=101
+            in class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=51 reverse=211
+            pass_array class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Search.Core.SearchSuggestion> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SearchSuggestion]
+    guid 05ac2ec0-f0c8-5cad-b4f9-f985e0f79fe9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Search.Core.SearchSuggestion;{5b5554b0-1527-437b-95c5-8d18d2b8af55}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Search.Core.SearchSuggestion>
+    argument Windows.ApplicationModel.Search.Core.SearchSuggestion
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Search.Core.SearchSuggestion> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Search.Core.SearchSuggestion return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs python_type
     py RequestingFocusOnKeyboardInputEventArgs
@@ -126,17 +293,42 @@ class Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs p
         get get_Request slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionsRequestedEventArgs shape=4 reverse=99
             out class type=Windows.ApplicationModel.Search.SearchSuggestionsRequest return
 
+enum T parameterized
+
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.Core.SearchSuggestionManager,Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SearchSuggestionManager, RequestingFocusOnKeyboardInputEventArgs]
     guid bb198760-4739-5559-80e6-f0e1af5355fd
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Search.Core.SearchSuggestionManager;{3f0c50a1-cb9d-497b-b500-3c04ac959ad2});rc(Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs;{a1195f27-b1a7-41a2-879d-6a68687e5985}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Search.Core.SearchSuggestionManager
     argument Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Search.Core.SearchSuggestionManager name=sender
+            in class type=Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.Core.SearchSuggestionManager,Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SearchSuggestionManager, SearchSuggestionsRequestedEventArgs]
     guid 7e7f3cdf-80d9-5646-8743-ec1e38645d68
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Search.Core.SearchSuggestionManager;{3f0c50a1-cb9d-497b-b500-3c04ac959ad2});rc(Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs;{6fd519e5-9e7e-4ab4-8be3-c76b1bd4344a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Search.Core.SearchSuggestionManager
     argument Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Search.Core.SearchSuggestionManager name=sender
+            in class type=Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs name=args
+
+delegate Windows.Foundation.Collections.VectorChangedEventHandler<Windows.ApplicationModel.Search.Core.SearchSuggestion> concrete
+    py winrt.windows.foundation.collections.VectorChangedEventHandler[SearchSuggestion]
+    guid cb7b988b-468a-5eae-afe4-df8b005f80af
+    signature pinterface({0c051752-9fbf-4c70-aa0c-0e4c82d9a761};rc(Windows.ApplicationModel.Search.Core.SearchSuggestion;{5b5554b0-1527-437b-95c5-8d18d2b8af55}))
+    base Windows.Foundation.Collections.VectorChangedEventHandler
+    argument Windows.ApplicationModel.Search.Core.SearchSuggestion
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.Collections.IObservableVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> name=sender
+            in interface type=Windows.Foundation.Collections.IVectorChangedEventArgs name=event
 
 class Windows.ApplicationModel.Search.LocalContentSuggestionSettings external
     py winrt.windows.applicationmodel.search.LocalContentSuggestionSettings
@@ -146,6 +338,38 @@ class Windows.ApplicationModel.Search.SearchQueryLinguisticDetails external
 
 class Windows.ApplicationModel.Search.SearchSuggestionsRequest external
     py winrt.windows.applicationmodel.search.SearchSuggestionsRequest
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IObservableVector external parameterized
+    py winrt.windows.foundation.collections._IObservableVector
+    guid 5917eb53-50b4-4a0d-b309-65862b3f1dbc
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorChangedEventArgs external
+    py winrt.windows.foundation.collections._IVectorChangedEventArgs
+    guid 575933df-34fe-4480-af15-07691f3d5d9b
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+delegate Windows.Foundation.Collections.VectorChangedEventHandler external parameterized
+    py winrt.windows.foundation.collections.VectorChangedEventHandler
+    guid 0c051752-9fbf-4c70-aa0c-0e4c82d9a761
 
 interface Windows.Storage.Streams.IRandomAccessStreamReference external
     py winrt.windows.storage.streams._IRandomAccessStreamReference

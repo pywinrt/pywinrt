@@ -62,6 +62,28 @@ enum Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatu
     py AppCapabilityAccessStatus
     signature enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4)
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IMapView[String, AppCapabilityAccessStatus]]
+    guid bdf03ead-a75b-510c-87d2-5b5753bdf1bd
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4)))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[AppCapabilityAccessStatus]
+    guid 6ea0f2e9-bc97-58e8-a3a6-c829b9e5f2aa
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 interface Windows.Security.Authorization.AppCapabilityAccess.IAppCapability
     guid 4c49d915-8a2a-4295-9437-2df7c396aff4
 
@@ -74,35 +96,214 @@ interface Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityAcces
 interface Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics
     guid 7c353e2a-46ee-44e5-af3d-6ad3fc49bd22
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IMapView[String, AppCapabilityAccessStatus]]
     guid a66001f3-e332-531a-bf49-4edd3af88de7
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4)))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[AppCapabilityAccessStatus]
     guid 827caf42-5fe6-5b5b-84ce-c44834134d3d
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus return
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> concrete
-    guid 20366438-9fab-5c12-87eb-da867e383fe7
-    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4))
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, AppCapabilityAccessStatus]]
+    guid 62e88ad9-d63e-5173-baa2-bb4521c7e82a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, AppCapabilityAccessStatus]]
+    guid 4e97286e-7954-5b79-bea1-83af142e4fb2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, AppCapabilityAccessStatus]
+    guid c0538d02-01f7-51a1-99bd-3d148d055fa1
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=4 reverse=43
+            out enum32 type=Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus return
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, AppCapabilityAccessStatus]
+    guid 20366438-9fab-5c12-87eb-da867e383fe7
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>>
+    argument System.String
+    argument Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=51 reverse=24 role=lookup
+            in string name=key
+            out enum32 type=Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> name=second
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Security.Authorization.AppCapabilityAccess.AppCapability,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[AppCapability, AppCapabilityAccessChangedEventArgs]
     guid 6d923c95-7b83-5f59-8883-f44175284898
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Security.Authorization.AppCapabilityAccess.AppCapability;{4c49d915-8a2a-4295-9437-2df7c396aff4});rc(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessChangedEventArgs;{0a578d15-bdd7-457e-8cca-6f53bd2e5944}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Security.Authorization.AppCapabilityAccess.AppCapability
     argument Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Security.Authorization.AppCapabilityAccess.AppCapability name=sender
+            in class type=Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessChangedEventArgs name=args
 
 class System.String external
     py winrt.system.String
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
 
 class Windows.System.User external
     py winrt.windows.system.User

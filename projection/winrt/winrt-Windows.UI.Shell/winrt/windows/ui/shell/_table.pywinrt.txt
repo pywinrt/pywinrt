@@ -10,6 +10,17 @@ class Windows.UI.Shell.AdaptiveCardBuilder static python_type
             in string name=value
             out interface type=Windows.UI.Shell.IAdaptiveCard return
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.UI.Shell.FocusSession python_type
     py FocusSession
     signature rc(Windows.UI.Shell.FocusSession;{069fbab8-0e84-5f2f-8614-9b6544326277})
@@ -72,10 +83,34 @@ interface Windows.UI.Shell.IAdaptiveCardBuilderStatics python_type
             in string name=value
             out interface type=Windows.UI.Shell.IAdaptiveCard return
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
 interface Windows.UI.Shell.IFocusSession
     guid 069fbab8-0e84-5f2f-8614-9b6544326277
@@ -89,15 +124,35 @@ interface Windows.UI.Shell.IFocusSessionManagerStatics
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IIterable<Windows.UI.Shell.WindowTab> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Shell.WindowTab> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WindowTab]
     guid cf5a6d72-cc50-51b6-b34d-fdd7e59d33eb
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Shell.WindowTab;{551e776a-7928-4d60-bdd9-672b5a5758eb}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.UI.Shell.WindowTab
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Shell.WindowTab> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Shell.WindowTab> return
 
-interface Windows.Foundation.Collections.IIterator<Windows.UI.Shell.WindowTab> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Shell.WindowTab> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WindowTab]
     guid cadda39d-4148-5cbe-870b-c1ffaa000f16
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Shell.WindowTab;{551e776a-7928-4d60-bdd9-672b5a5758eb}))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.UI.Shell.WindowTab
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Shell.WindowTab> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Shell.WindowTab return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Shell.WindowTab> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Shell.WindowTab> shape=117 reverse=101
+            fill_array class type=Windows.UI.Shell.WindowTab name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Shell.WindowTab> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.UI.Shell.ISecurityAppManager
     guid 96ac500c-aed4-561d-bde8-953520343a2d
@@ -123,15 +178,85 @@ interface Windows.UI.Shell.ITaskbarManagerDesktopAppSupportStatics
 interface Windows.UI.Shell.ITaskbarManagerStatics
     guid db32ab74-de52-4fe6-b7b6-95ff9f8395df
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[WindowTab]
     guid d2ee7da1-079a-5571-ac1e-e0761baa92e7
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Shell.WindowTab;{551e776a-7928-4d60-bdd9-672b5a5758eb}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Shell.WindowTab>
     argument Windows.UI.Shell.WindowTab
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=4 reverse=173
+            in class type=Windows.UI.Shell.WindowTab name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Shell.WindowTab> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Shell.WindowTab> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Shell.WindowTab return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Shell.WindowTab name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Shell.WindowTab> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=117 reverse=101
+            in class type=Windows.UI.Shell.WindowTab name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Shell.WindowTab name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=51 reverse=211
+            pass_array class type=Windows.UI.Shell.WindowTab name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Shell.WindowTab name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.UI.Shell.WindowTab> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Shell.WindowTab> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WindowTab]
     guid a0a0bbd2-9503-516f-b079-d2b3a1842c0f
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Shell.WindowTab;{551e776a-7928-4d60-bdd9-672b5a5758eb}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Shell.WindowTab>
     argument Windows.UI.Shell.WindowTab
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Shell.WindowTab> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Shell.WindowTab> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Shell.WindowTab> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Shell.WindowTab> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Shell.WindowTab return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Shell.WindowTab> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Shell.WindowTab name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Shell.WindowTab> shape=117 reverse=66
+            in class type=Windows.UI.Shell.WindowTab name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.UI.Shell.IWindowTab
     guid 551e776a-7928-4d60-bdd9-672b5a5758eb
@@ -298,40 +423,76 @@ class Windows.UI.Shell.TaskbarManager python_type
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Shell.FocusSessionManager,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[FocusSessionManager, Object]
     guid 88ebdc98-220d-59cd-9cef-a34a27c36f98
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Shell.FocusSessionManager;{e7ffbaa9-d8be-5dbf-bac6-49364842e37e});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Shell.FocusSessionManager
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Shell.FocusSessionManager name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Shell.ShareWindowCommandSource,Windows.UI.Shell.ShareWindowCommandEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ShareWindowCommandSource, ShareWindowCommandEventArgs]
     guid e42513f4-d11b-511d-aedc-9f44ee28df04
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Shell.ShareWindowCommandSource;{cb3b7ae3-6b9c-561e-bccc-61e68e0abfef});rc(Windows.UI.Shell.ShareWindowCommandEventArgs;{4578dc09-a523-5756-a995-e4feb991fff0}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Shell.ShareWindowCommandSource
     argument Windows.UI.Shell.ShareWindowCommandEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Shell.ShareWindowCommandSource name=sender
+            in class type=Windows.UI.Shell.ShareWindowCommandEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabCloseRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WindowTabManager, WindowTabCloseRequestedEventArgs]
     guid 963aec04-63d6-5d5f-b18d-785ca3d6850b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Shell.WindowTabManager;{97b3c697-f43a-43e7-b3a2-e889a9835599});rc(Windows.UI.Shell.WindowTabCloseRequestedEventArgs;{477282e9-eec4-5882-9889-2dd64d0f9fb6}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Shell.WindowTabManager
     argument Windows.UI.Shell.WindowTabCloseRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Shell.WindowTabManager name=sender
+            in class type=Windows.UI.Shell.WindowTabCloseRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabSwitchRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WindowTabManager, WindowTabSwitchRequestedEventArgs]
     guid 92487ba4-93a1-5258-83a0-8bc055e89a25
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Shell.WindowTabManager;{97b3c697-f43a-43e7-b3a2-e889a9835599});rc(Windows.UI.Shell.WindowTabSwitchRequestedEventArgs;{7cbc421a-58a4-568b-a351-f8a947a5aad8}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Shell.WindowTabManager
     argument Windows.UI.Shell.WindowTabSwitchRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Shell.WindowTabManager name=sender
+            in class type=Windows.UI.Shell.WindowTabSwitchRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabTearOutRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WindowTabManager, WindowTabTearOutRequestedEventArgs]
     guid 9771fcc2-90a8-5353-8a7f-fc1ce40923cb
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Shell.WindowTabManager;{97b3c697-f43a-43e7-b3a2-e889a9835599});rc(Windows.UI.Shell.WindowTabTearOutRequestedEventArgs;{17d66659-5005-5ece-99af-566306e73642}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Shell.WindowTabManager
     argument Windows.UI.Shell.WindowTabTearOutRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Shell.WindowTabManager name=sender
+            in class type=Windows.UI.Shell.WindowTabTearOutRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WindowTabManager, WindowTabThumbnailRequestedEventArgs]
     guid f07b88f9-f897-5ce5-9d2a-54778447fbdb
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Shell.WindowTabManager;{97b3c697-f43a-43e7-b3a2-e889a9835599});rc(Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs;{2d558e54-9c4e-5abc-ab72-3350fb4937a0}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Shell.WindowTabManager
     argument Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Shell.WindowTabManager name=sender
+            in class type=Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs name=args
 
 class Windows.UI.Shell.WindowTab activatable python_type
     py WindowTab
@@ -387,7 +548,7 @@ class Windows.UI.Shell.WindowTabCollection python_type iterable sequence mutable
     requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Shell.WindowTab>
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=4 reverse=173
@@ -395,10 +556,10 @@ class Windows.UI.Shell.WindowTabCollection python_type iterable sequence mutable
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Shell.WindowTab> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Shell.WindowTab> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Shell.WindowTab> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Windows.UI.Shell.WindowTab return
     method get_many
@@ -415,7 +576,7 @@ class Windows.UI.Shell.WindowTabCollection python_type iterable sequence mutable
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Windows.UI.Shell.WindowTab name=value
     method move_tab
@@ -423,7 +584,7 @@ class Windows.UI.Shell.WindowTabCollection python_type iterable sequence mutable
             in class type=Windows.UI.Shell.WindowTab name=tab
             in uint32 name=index
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=0 reverse=185
@@ -431,7 +592,7 @@ class Windows.UI.Shell.WindowTabCollection python_type iterable sequence mutable
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=51 reverse=211
             pass_array class type=Windows.UI.Shell.WindowTab name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Windows.UI.Shell.WindowTab name=value
 
@@ -580,11 +741,46 @@ class System.Object external
 class Windows.ApplicationModel.Core.AppListEntry external
     py winrt.windows.applicationmodel.core.AppListEntry
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Graphics.Imaging.BitmapSize external
     py winrt.windows.graphics.imaging.BitmapSize

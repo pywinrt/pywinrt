@@ -178,22 +178,40 @@ interface Microsoft.UI.Dispatching.IDispatcherQueueTimer
     guid ad4d63fd-88fe-541f-ac11-bf2dc1ed2ce5
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[DispatcherQueue, DispatcherQueueShutdownStartingEventArgs]
     guid ecd63a61-4dbf-57bc-880c-a255dfe352c3
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Dispatching.DispatcherQueue;{f6ebf8fa-be1c-5bf6-a467-73da28738ae8});rc(Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs;{32519be5-072b-5660-a70e-8835c9b8157d}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Dispatching.DispatcherQueue
     argument Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Dispatching.DispatcherQueue name=sender
+            in class type=Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[DispatcherQueue, Object]
     guid 3bdaf5dd-3da4-5b44-adb3-6990540afac6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Dispatching.DispatcherQueue;{f6ebf8fa-be1c-5bf6-a467-73da28738ae8});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Dispatching.DispatcherQueue
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Dispatching.DispatcherQueue name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueueTimer,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[DispatcherQueueTimer, Object]
     guid 2182a2ac-7545-566a-984f-b10f07bab089
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Dispatching.DispatcherQueueTimer;{ad4d63fd-88fe-541f-ac11-bf2dc1ed2ce5});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Dispatching.DispatcherQueueTimer
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Dispatching.DispatcherQueueTimer name=sender
+            in object name=args
 
 class System.Object external
     py winrt.system.Object
@@ -204,3 +222,7 @@ class Windows.Foundation.Deferral external
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f

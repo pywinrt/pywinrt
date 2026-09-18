@@ -37,7 +37,7 @@ interface Test.Sample.IThing python_type stringable
     signature {30d5a829-7fa4-4026-83bb-d75bae4ea99e}
     requires Windows.Foundation.IClosable
     property size
-        get get_Size slot=6 inputs=0 outputs=1 declaring=Test.Sample.IThing shape=1
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Test.Sample.IThing shape=1 role=size
             out uint32 return
     method measure
         method Measure slot=7 inputs=2 outputs=1 declaring=Test.Sample.IThing shape=1
@@ -85,6 +85,8 @@ interface Windows.Foundation.Collections.IVector<Test.Sample.Thing> external con
 CATEGORY_STRUCT = 1
 CATEGORY_INTERFACE = 2
 CATEGORY_CLASS = 3
+
+MEMBER_ROLE_SIZE = 1
 
 TYPE_EXTERNAL = 1 << 3
 TYPE_CONCRETE = 1 << 7
@@ -175,7 +177,7 @@ class TestTextTable(unittest.TestCase):
         self.assertEqual(extent["size"], 16)
         self.assertEqual(extent["align"], 8)
 
-    def test_a_member_keeps_its_slot_and_its_shape(self) -> None:
+    def test_a_member_keeps_its_slot_its_shape_and_its_role(self) -> None:
         thing = types(read())["Test.Sample.IThing"]
         groups = {g["py_name"]: g for g in thing["groups"]}
         size = groups["size"]["members"][0]
@@ -184,6 +186,7 @@ class TestTextTable(unittest.TestCase):
         self.assertEqual(size["slot"], 6)
         self.assertEqual(size["forward_shape"], 1)
         self.assertEqual(size["reverse_shape"], NO_REF)
+        self.assertEqual(size["role"], MEMBER_ROLE_SIZE)
         self.assertEqual(size["in_count"], 0)
         self.assertEqual(size["out_count"], 1)
 

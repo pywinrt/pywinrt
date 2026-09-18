@@ -61,7 +61,7 @@ class Windows.UI.Xaml.Documents.BlockCollection python_type iterable sequence mu
     requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block>
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=173
@@ -69,10 +69,10 @@ class Windows.UI.Xaml.Documents.BlockCollection python_type iterable sequence mu
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Block> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Windows.UI.Xaml.Documents.Block return
     method get_many
@@ -89,11 +89,11 @@ class Windows.UI.Xaml.Documents.BlockCollection python_type iterable sequence mu
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Windows.UI.Xaml.Documents.Block name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=0 reverse=185
@@ -101,7 +101,7 @@ class Windows.UI.Xaml.Documents.BlockCollection python_type iterable sequence mu
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=211
             pass_array class type=Windows.UI.Xaml.Documents.Block name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Windows.UI.Xaml.Documents.Block name=value
 
@@ -307,7 +307,7 @@ class Windows.UI.Xaml.Documents.ContentLinkProviderCollection activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=173
@@ -315,10 +315,10 @@ class Windows.UI.Xaml.Documents.ContentLinkProviderCollection activatable python
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.ContentLinkProvider> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Windows.UI.Xaml.Documents.ContentLinkProvider return
     method get_many
@@ -335,11 +335,11 @@ class Windows.UI.Xaml.Documents.ContentLinkProviderCollection activatable python
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=0 reverse=185
@@ -347,7 +347,7 @@ class Windows.UI.Xaml.Documents.ContentLinkProviderCollection activatable python
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=211
             pass_array class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=value
 
@@ -701,35 +701,125 @@ interface Windows.UI.Xaml.Documents.IItalic
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Block]
     guid f7023b9a-e6d1-5e2d-8f41-b28c33323e04
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Documents.Block;{4bce0016-dd47-4350-8cb0-e171600ac896}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.UI.Xaml.Documents.Block
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Block> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.ContentLinkProvider> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.ContentLinkProvider> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ContentLinkProvider]
     guid 193a81bb-d85c-5cd3-a130-a1d08eaaf4be
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Documents.ContentLinkProvider;{730587fd-bfdc-4cb3-904d-b65ab339bbf5}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.UI.Xaml.Documents.ContentLinkProvider
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.ContentLinkProvider> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Inline]
     guid e1d2b910-18c2-5906-8f8a-d62a63f93f18
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Documents.Inline;{0c92712d-1bc9-4931-8cb1-1aeadf1cc685}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.UI.Xaml.Documents.Inline
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Inline> return
 
-interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Block> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.TextRange> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TextRange]
+    guid 2ad42fdb-56db-500b-8ea8-3d57edfadfc6
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.UI.Xaml.Documents.TextRange;i4;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Xaml.Documents.TextRange
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.TextRange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.TextRange> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Block> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Block]
     guid 798d518e-a9f8-5fc7-8ccc-2a49069aba05
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Documents.Block;{4bce0016-dd47-4350-8cb0-e171600ac896}))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.UI.Xaml.Documents.Block
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Block> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Documents.Block return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Block> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Block> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Documents.Block name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Block> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.ContentLinkProvider> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.ContentLinkProvider> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ContentLinkProvider]
     guid 63e9b404-2fc1-59b1-ab76-cdb9a4530c0d
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Documents.ContentLinkProvider;{730587fd-bfdc-4cb3-904d-b65ab339bbf5}))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.UI.Xaml.Documents.ContentLinkProvider
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Documents.ContentLinkProvider return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Inline> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Inline> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Inline]
     guid f80dc964-2542-5c6a-ba65-b04824b5ed75
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Documents.Inline;{0c92712d-1bc9-4931-8cb1-1aeadf1cc685}))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.UI.Xaml.Documents.Inline
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Documents.Inline return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Inline> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Documents.Inline name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.TextRange> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TextRange]
+    guid 71f63622-c0fe-5423-914e-d319d25bcc84
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.UI.Xaml.Documents.TextRange;i4;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.Documents.TextRange
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.TextRange> shape=4 reverse=22 role=current
+            out struct type=Windows.UI.Xaml.Documents.TextRange return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.TextRange> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.TextRange> shape=117 reverse=101
+            fill_array struct type=Windows.UI.Xaml.Documents.TextRange name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.TextRange> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.UI.Xaml.Documents.ILineBreak
     guid 645589c4-f769-41ed-895b-8a1b2fb31562
@@ -815,40 +905,325 @@ interface Windows.UI.Xaml.Documents.ITypographyStatics
 interface Windows.UI.Xaml.Documents.IUnderline
     guid a5fa8202-61c0-47d7-93ef-bc0b577c5f26
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Block]
     guid 3ee78a34-160e-50ff-b5aa-09f263a669f8
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Documents.Block;{4bce0016-dd47-4350-8cb0-e171600ac896}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block>
     argument Windows.UI.Xaml.Documents.Block
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Documents.Block name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Block> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Documents.Block return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Documents.Block name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Block> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Documents.Block name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Documents.Block name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Documents.Block name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Block> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Documents.Block name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ContentLinkProvider]
     guid e69ef1b6-2eb1-5e9c-bc41-b94d396281e4
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Documents.ContentLinkProvider;{730587fd-bfdc-4cb3-904d-b65ab339bbf5}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.ContentLinkProvider>
     argument Windows.UI.Xaml.Documents.ContentLinkProvider
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.ContentLinkProvider> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Documents.ContentLinkProvider return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.ContentLinkProvider> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Inline]
     guid 92ec9252-8ee3-55d6-84b4-30b635077778
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Documents.Inline;{0c92712d-1bc9-4931-8cb1-1aeadf1cc685}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline>
     argument Windows.UI.Xaml.Documents.Inline
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Documents.Inline name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Inline> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Documents.Inline return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Documents.Inline name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Inline> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Documents.Inline name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Documents.Inline name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Documents.Inline name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Documents.Inline name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[TextRange]
     guid ee9d4cda-0750-5c1f-93aa-59add8c1421b
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};struct(Windows.UI.Xaml.Documents.TextRange;i4;i4))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.TextRange>
     argument Windows.UI.Xaml.Documents.TextRange
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> shape=22 reverse=179
+            in struct type=Windows.UI.Xaml.Documents.TextRange name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.TextRange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.TextRange> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.UI.Xaml.Documents.TextRange return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array struct type=Windows.UI.Xaml.Documents.TextRange name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.TextRange> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> shape=162 reverse=108
+            in struct type=Windows.UI.Xaml.Documents.TextRange name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> shape=60 reverse=148 role=insert_at
+            in uint32 name=index
+            in struct type=Windows.UI.Xaml.Documents.TextRange name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> shape=51 reverse=211
+            pass_array struct type=Windows.UI.Xaml.Documents.TextRange name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.TextRange> shape=60 reverse=128 role=set_at
+            in uint32 name=index
+            in struct type=Windows.UI.Xaml.Documents.TextRange name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Block> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Block> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Block]
     guid 995f73c4-7cf8-5b59-a0fb-7e0c6477172e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Documents.Block;{4bce0016-dd47-4350-8cb0-e171600ac896}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block>
     argument Windows.UI.Xaml.Documents.Block
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Block> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Block> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Block> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Block> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Documents.Block return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Block> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Documents.Block name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Block> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.Documents.Block name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.ContentLinkProvider> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.ContentLinkProvider> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ContentLinkProvider]
     guid 6548aa5f-3fd4-5bea-9bd5-138b5bd899fe
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Documents.ContentLinkProvider;{730587fd-bfdc-4cb3-904d-b65ab339bbf5}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.ContentLinkProvider>
     argument Windows.UI.Xaml.Documents.ContentLinkProvider
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.ContentLinkProvider> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Documents.ContentLinkProvider return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.ContentLinkProvider> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.Documents.ContentLinkProvider name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Inline> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Inline> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Inline]
     guid c2dd082f-8cb4-51d6-b91b-7e2377780cee
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Documents.Inline;{0c92712d-1bc9-4931-8cb1-1aeadf1cc685}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline>
     argument Windows.UI.Xaml.Documents.Inline
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Inline> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Documents.Inline return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Inline> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Documents.Inline name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.Inline> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.Documents.Inline name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.TextRange> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TextRange]
+    guid c824d1d0-771a-5123-90cc-52281f0f287a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.UI.Xaml.Documents.TextRange;i4;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.TextRange>
+    argument Windows.UI.Xaml.Documents.TextRange
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.TextRange> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.TextRange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.TextRange> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.TextRange> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.UI.Xaml.Documents.TextRange return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.TextRange> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array struct type=Windows.UI.Xaml.Documents.TextRange name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Documents.TextRange> shape=162 reverse=79
+            in struct type=Windows.UI.Xaml.Documents.TextRange name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.UI.Xaml.Documents.Inline composable python_type
     py Inline
@@ -866,7 +1241,7 @@ class Windows.UI.Xaml.Documents.InlineCollection python_type iterable sequence m
     requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline>
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=173
@@ -874,10 +1249,10 @@ class Windows.UI.Xaml.Documents.InlineCollection python_type iterable sequence m
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Documents.Inline> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Windows.UI.Xaml.Documents.Inline return
     method get_many
@@ -894,11 +1269,11 @@ class Windows.UI.Xaml.Documents.InlineCollection python_type iterable sequence m
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Windows.UI.Xaml.Documents.Inline name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=0 reverse=185
@@ -906,7 +1281,7 @@ class Windows.UI.Xaml.Documents.InlineCollection python_type iterable sequence m
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=211
             pass_array class type=Windows.UI.Xaml.Documents.Inline name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Documents.Inline> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Windows.UI.Xaml.Documents.Inline name=value
 
@@ -1305,34 +1680,64 @@ struct Windows.UI.Xaml.Documents.TextRange python_type
     field length Length int32
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.ContentLink,Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ContentLink, ContentLinkInvokedEventArgs]
     guid 51ba1af0-354e-5868-b10b-8748e55a6370
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Documents.ContentLink;{6c60c3e1-528c-42f8-92be-34b8c68be304});rc(Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs;{546717c1-e8df-4593-9639-97595fdf8310}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Documents.ContentLink
     argument Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Documents.ContentLink name=sender
+            in class type=Windows.UI.Xaml.Documents.ContentLinkInvokedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.Hyperlink,Windows.UI.Xaml.Documents.HyperlinkClickEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Hyperlink, HyperlinkClickEventArgs]
     guid 5fead0d2-e657-5aef-a91b-7f52ead17fe3
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Documents.Hyperlink;{0fe2363b-14e9-4152-9e58-5aea5b21f08d});rc(Windows.UI.Xaml.Documents.HyperlinkClickEventArgs;{c755916b-7bdc-4be7-b373-9240a503d870}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Documents.Hyperlink
     argument Windows.UI.Xaml.Documents.HyperlinkClickEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Documents.Hyperlink name=sender
+            in class type=Windows.UI.Xaml.Documents.HyperlinkClickEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.TextElement,Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TextElement, AccessKeyDisplayDismissedEventArgs]
     guid a8c9544b-7078-5316-beb6-d9ec916ab88a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Documents.TextElement;{e83b0062-d776-4f92-baea-40e77d4791d5});rc(Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs;{8a610dc6-d72d-4ca8-9f66-556f35b513da}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Documents.TextElement
     argument Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Documents.TextElement name=sender
+            in class type=Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.TextElement,Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TextElement, AccessKeyDisplayRequestedEventArgs]
     guid 39ad7708-254e-560a-9e2e-73b1db31f935
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Documents.TextElement;{e83b0062-d776-4f92-baea-40e77d4791d5});rc(Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs;{0c079e55-13fe-4d03-a61d-e12f06567286}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Documents.TextElement
     argument Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Documents.TextElement name=sender
+            in class type=Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Documents.TextElement,Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TextElement, AccessKeyInvokedEventArgs]
     guid a72c6b01-2e3c-57b5-9ec4-948f6c6d930a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Documents.TextElement;{e83b0062-d776-4f92-baea-40e77d4791d5});rc(Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs;{cfe9cd97-c718-4091-b7dd-adf1c072b1e1}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Documents.TextElement
     argument Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Documents.TextElement name=sender
+            in class type=Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs name=args
 
 class Windows.UI.Xaml.Documents.Typography python_type
     py Typography
@@ -1831,8 +2236,28 @@ enum Windows.UI.Xaml.Documents.UnderlineStyle python_type
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
 
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 enum Windows.UI.Core.CoreCursorType external
     py winrt.windows.ui.core.CoreCursorType

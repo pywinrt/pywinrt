@@ -31,7 +31,7 @@ class Microsoft.Graphics.Imaging.ImageBuffer python_type closeable
         get get_RowStride slot=10 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=121
             out int32 return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method copy_to_byte_array
         method CopyToByteArray slot=11 inputs=1 outputs=0 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=51 reverse=144
             fill_array uint8 name=values

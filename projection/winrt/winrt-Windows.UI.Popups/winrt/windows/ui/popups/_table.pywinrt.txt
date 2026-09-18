@@ -2,10 +2,75 @@ format 4.0
 generator 0.0.0
 namespace Windows.UI.Popups
 
-interface Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Popups.IUICommand> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IUICommand]
+    guid dd33fd5b-a24d-5a44-91fe-dd6441770103
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.UI.Popups.IUICommand
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IUICommand]
     guid b8770535-6a4b-52b1-b578-f3cdc5007a1f
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.UI.Popups.IUICommand
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Popups.IUICommand> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Popups.IUICommand> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> shape=4 reverse=62 role=get_results
+            out interface type=Windows.UI.Popups.IUICommand return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Popups.IUICommand> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IUICommand]
+    guid e63de42b-53c3-5e07-90d3-98172d545412
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Popups.IUICommand
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Popups.IUICommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IUICommand]
+    guid f45db3d3-7299-57ce-a73e-297cf0af3083
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Popups.IUICommand
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> shape=4 reverse=22 role=current
+            out interface type=Windows.UI.Popups.IUICommand return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> shape=117 reverse=101
+            fill_array interface type=Windows.UI.Popups.IUICommand name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.UI.Popups.IMessageDialog
     guid 33f59b01-5325-43ab-9ab3-bdae440e4121
@@ -39,10 +104,85 @@ interface Windows.UI.Popups.IUICommand python_type
 interface Windows.UI.Popups.IUICommandFactory
     guid a21a8189-26b0-4676-ae94-54041bc125e8
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[IUICommand]
     guid 105139a1-dcb8-5f65-97ef-cb1bf0b75f9d
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Popups.IUICommand>
     argument Windows.UI.Popups.IUICommand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=4 reverse=173
+            in interface type=Windows.UI.Popups.IUICommand name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Popups.IUICommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.UI.Popups.IUICommand return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.UI.Popups.IUICommand name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Popups.IUICommand> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=117 reverse=101
+            in interface type=Windows.UI.Popups.IUICommand name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in interface type=Windows.UI.Popups.IUICommand name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=51 reverse=211
+            pass_array interface type=Windows.UI.Popups.IUICommand name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in interface type=Windows.UI.Popups.IUICommand name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Popups.IUICommand> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IUICommand]
+    guid ed1165e6-f377-5b00-8172-93c1bd04deb4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Popups.IUICommand>
+    argument Windows.UI.Popups.IUICommand
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Popups.IUICommand> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Popups.IUICommand> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Popups.IUICommand> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Popups.IUICommand> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.UI.Popups.IUICommand return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Popups.IUICommand> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.UI.Popups.IUICommand name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Popups.IUICommand> shape=117 reverse=66
+            in interface type=Windows.UI.Popups.IUICommand name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.UI.Popups.MessageDialog python_type
     py MessageDialog
@@ -192,8 +332,39 @@ class Windows.UI.Popups.UICommandSeparator activatable python_type
         put put_Id slot=11 inputs=1 outputs=0 declaring=Windows.UI.Popups.IUICommand shape=4 reverse=141
             in object name=value
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 struct Windows.Foundation.Point external
     py winrt.windows.foundation.Point
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

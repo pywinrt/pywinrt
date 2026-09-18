@@ -97,13 +97,23 @@ interface Windows.Media.AppBroadcasting.IAppBroadcastingUIStatics
     guid 55a8a79d-23cb-4579-9c34-886fe02c045a
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.AppBroadcasting.AppBroadcastingMonitor,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[AppBroadcastingMonitor, Object]
     guid dc64118b-04f9-5161-a7c0-e6a96070a8d1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.AppBroadcasting.AppBroadcastingMonitor;{00f95a68-8907-48a0-b8ef-24d208137542});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.AppBroadcasting.AppBroadcastingMonitor
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.AppBroadcasting.AppBroadcastingMonitor name=sender
+            in object name=args
 
 class System.Object external
     py winrt.system.Object
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 class Windows.System.User external
     py winrt.windows.system.User

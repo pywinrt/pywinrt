@@ -2,60 +2,465 @@ format 4.0
 generator 0.0.0
 namespace Windows.System.RemoteSystems
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystem> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[RemoteSystem]
+    guid 3a0b522d-98d0-5d34-ace6-2c7346613f1d
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.System.RemoteSystems.RemoteSystem;{ed5838cd-1e10-4a8c-b4a6-4e5fd6f97721}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.System.RemoteSystems.RemoteSystem
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystem> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystemAccessStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[RemoteSystemAccessStatus]
+    guid 543a221d-ef39-57f5-9741-b052dbc29249
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.System.RemoteSystems.RemoteSystemAccessStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.System.RemoteSystems.RemoteSystemAccessStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemAccessStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystemSessionCreationResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[RemoteSystemSessionCreationResult]
+    guid 6e72c549-73aa-5168-8560-c7236493b504
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.System.RemoteSystems.RemoteSystemSessionCreationResult;{a79812c2-37de-448c-8b83-a30aa3c4ead6}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.System.RemoteSystems.RemoteSystemSessionCreationResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionCreationResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystemSessionJoinResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[RemoteSystemSessionJoinResult]
+    guid 379adf35-4cb4-522f-91be-913b5690568f
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.System.RemoteSystems.RemoteSystemSessionJoinResult;{ce7b1f04-a03e-41a4-900b-1e79328c1267}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.System.RemoteSystems.RemoteSystemSessionJoinResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionJoinResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystem> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystem> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[RemoteSystem]
     guid 0d39f546-0eca-5236-a5ca-7e3660658462
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.System.RemoteSystems.RemoteSystem;{ed5838cd-1e10-4a8c-b4a6-4e5fd6f97721}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.System.RemoteSystems.RemoteSystem
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystem> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystem> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystem> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystem> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystem> shape=4 reverse=62 role=get_results
+            out class type=Windows.System.RemoteSystems.RemoteSystem return
 
-interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemAccessStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemAccessStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[RemoteSystemAccessStatus]
     guid d76da678-dd76-5460-8745-915b4410c905
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.System.RemoteSystems.RemoteSystemAccessStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.System.RemoteSystems.RemoteSystemAccessStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemAccessStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystemAccessStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemAccessStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystemAccessStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemAccessStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.System.RemoteSystems.RemoteSystemAccessStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionCreationResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionCreationResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[RemoteSystemSessionCreationResult]
     guid 90364bf5-d084-5f50-9729-82025326abef
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.System.RemoteSystems.RemoteSystemSessionCreationResult;{a79812c2-37de-448c-8b83-a30aa3c4ead6}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.System.RemoteSystems.RemoteSystemSessionCreationResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionCreationResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystemSessionCreationResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionCreationResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystemSessionCreationResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionCreationResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.System.RemoteSystems.RemoteSystemSessionCreationResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionJoinResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionJoinResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[RemoteSystemSessionJoinResult]
     guid c58dbd1e-e300-55a8-ada5-e25aaaa86667
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.System.RemoteSystems.RemoteSystemSessionJoinResult;{ce7b1f04-a03e-41a4-900b-1e79328c1267}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.System.RemoteSystems.RemoteSystemSessionJoinResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionJoinResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystemSessionJoinResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionJoinResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystemSessionJoinResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionJoinResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.System.RemoteSystems.RemoteSystemSessionJoinResult return
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.IRemoteSystemFilter> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[HostName]
+    guid 9e5f3ed0-cf1c-5d38-832c-acea6164bf5c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.HostName;{bf8ecaad-ed96-49a7-9084-d416cae88dcb}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.HostName
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.IRemoteSystemFilter> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IRemoteSystemFilter]
     guid 13966c92-a8de-50c0-b16b-00c2c48f5f37
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{4a3ba9e4-99eb-45eb-ba16-0367728ff374})
+    base Windows.Foundation.Collections.IIterable
     argument Windows.System.RemoteSystems.IRemoteSystemFilter
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.IRemoteSystemFilter> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.IRemoteSystemFilter> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.RemoteSystemSessionParticipant> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.RemoteSystemApp> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[RemoteSystemApp]
+    guid 4cfc1093-6de6-5d4d-8073-30e64b4dfa15
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.System.RemoteSystems.RemoteSystemApp;{80e5bcbd-d54d-41b1-9b16-6810a871ed4f}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.System.RemoteSystems.RemoteSystemApp
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.RemoteSystemApp> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemApp> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.RemoteSystemSessionParticipant> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[RemoteSystemSessionParticipant]
     guid 00189d10-16ec-5d1a-8369-4870c69e52b3
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.System.RemoteSystems.RemoteSystemSessionParticipant;{7e90058c-acf9-4729-8a17-44e7baed5dcc}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.System.RemoteSystems.RemoteSystemSessionParticipant
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.RemoteSystemSessionParticipant> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemSessionParticipant> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[HostName]
+    guid 557bf83c-a428-5dbd-a0fe-05f6ee543d45
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.HostName;{bf8ecaad-ed96-49a7-9084-d416cae88dcb}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.HostName
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.HostName return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=117 reverse=101
+            fill_array class type=Windows.Networking.HostName name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.IRemoteSystemFilter> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IRemoteSystemFilter]
+    guid 6a2c5aef-9f30-58ae-a6cb-9ac9c8092a41
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{4a3ba9e4-99eb-45eb-ba16-0367728ff374})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.System.RemoteSystems.IRemoteSystemFilter
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.IRemoteSystemFilter> shape=4 reverse=22 role=current
+            out interface type=Windows.System.RemoteSystems.IRemoteSystemFilter return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.IRemoteSystemFilter> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.IRemoteSystemFilter> shape=117 reverse=101
+            fill_array interface type=Windows.System.RemoteSystems.IRemoteSystemFilter name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.IRemoteSystemFilter> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemApp> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[RemoteSystemApp]
+    guid 8aa2049c-eaa5-534e-a144-5217499c739c
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.System.RemoteSystems.RemoteSystemApp;{80e5bcbd-d54d-41b1-9b16-6810a871ed4f}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.System.RemoteSystems.RemoteSystemApp
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemApp> shape=4 reverse=22 role=current
+            out class type=Windows.System.RemoteSystems.RemoteSystemApp return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemApp> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemApp> shape=117 reverse=101
+            fill_array class type=Windows.System.RemoteSystems.RemoteSystemApp name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemApp> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemSessionParticipant> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[RemoteSystemSessionParticipant]
+    guid 05fec44b-3dd9-5cf1-a100-bedc9233292d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.System.RemoteSystems.RemoteSystemSessionParticipant;{7e90058c-acf9-4729-8a17-44e7baed5dcc}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.System.RemoteSystems.RemoteSystemSessionParticipant
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemSessionParticipant> shape=4 reverse=22 role=current
+            out class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipant return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemSessionParticipant> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemSessionParticipant> shape=117 reverse=101
+            fill_array class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipant name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemSessionParticipant> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+            out string return
 
 interface Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics
     guid 8108e380-7f8a-44e4-92cd-03b6469b94a3
 
-interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, String]
     guid f6d1f700-49c2-52ae-8154-826f9908773c
     signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     argument System.String
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=117 reverse=125 role=insert
+            in string name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=141 role=remove
+            in string name=key
 
-interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, String]
     guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     argument System.String
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
 interface Windows.System.RemoteSystems.IRemoteSystem
     guid ed5838cd-1e10-4a8c-b4a6-4e5fd6f97721
@@ -260,20 +665,89 @@ interface Windows.System.RemoteSystems.IRemoteSystemWebAccountFilter
 interface Windows.System.RemoteSystems.IRemoteSystemWebAccountFilterFactory
     guid 348a2709-5f4d-5127-b4a7-bf99d5252b1b
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[HostName]
     guid f4706ab1-55a3-5270-afb2-732988fe8227
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.HostName;{bf8ecaad-ed96-49a7-9084-d416cae88dcb}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.HostName>
     argument Windows.Networking.HostName
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.HostName return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.HostName name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=117 reverse=66
+            in class type=Windows.Networking.HostName name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.System.RemoteSystems.RemoteSystemApp> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.System.RemoteSystems.RemoteSystemApp> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[RemoteSystemApp]
     guid 40011f82-e7e8-5a96-b767-399c6a4be101
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.RemoteSystems.RemoteSystemApp;{80e5bcbd-d54d-41b1-9b16-6810a871ed4f}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.RemoteSystemApp>
     argument Windows.System.RemoteSystems.RemoteSystemApp
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.RemoteSystems.RemoteSystemApp> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.RemoteSystemApp> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.RemoteSystems.RemoteSystemApp> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.RemoteSystems.RemoteSystemApp> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.System.RemoteSystems.RemoteSystemApp return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.RemoteSystems.RemoteSystemApp> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.System.RemoteSystems.RemoteSystemApp name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.RemoteSystems.RemoteSystemApp> shape=117 reverse=66
+            in class type=Windows.System.RemoteSystems.RemoteSystemApp name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.System.RemoteSystems.KnownRemoteSystemCapabilities static python_type
     py KnownRemoteSystemCapabilities
@@ -606,7 +1080,7 @@ class Windows.System.RemoteSystems.RemoteSystemSession python_type closeable
         remove remove_Disconnected slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=26 reverse=134
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_participant_watcher
         method CreateParticipantWatcher slot=11 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=4 reverse=141
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher return
@@ -1068,94 +1542,184 @@ class Windows.System.RemoteSystems.RemoteSystemWebAccountFilter python_type
             out class type=Windows.Security.Credentials.WebAccount return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSession,Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemSession, RemoteSystemSessionDisconnectedEventArgs]
     guid fba14773-5038-511a-95a3-4ba45349100a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemSession;{69476a01-9ada-490f-9549-d31cb14c9e95});rc(Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs;{de0bc69b-77c5-461c-8209-7c6c5d3111ab}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemSession
     argument Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemSession name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionController,Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemSessionController, RemoteSystemSessionJoinRequestedEventArgs]
     guid d8e04916-b452-5322-aec9-e3d4d581c772
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemSessionController;{e48b2dd2-6820-4867-b425-d89c0a3ef7ba});rc(Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs;{dbca4fc3-82b9-4816-9c24-e40e61774bd8}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemSessionController
     argument Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionController name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener,Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemSessionInvitationListener, RemoteSystemSessionInvitationReceivedEventArgs]
     guid 18a242bb-d338-56c4-9559-568d5c2c3e93
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener;{08f4003f-bc71-49e1-874a-31ddff9a27b9});rc(Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs;{5e964a2d-a10d-4edb-8dea-54d20ac19543}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener
     argument Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel,Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemSessionMessageChannel, RemoteSystemSessionValueSetReceivedEventArgs]
     guid c476232d-8c76-5ba6-99f5-14557484c20d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel;{9524d12a-73d9-4c10-b751-c26784437127});rc(Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs;{06f31785-2da5-4e58-a78f-9e8d0784ee25}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel
     argument Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemSessionParticipantWatcher, Object]
     guid d4cf5bda-cc7a-52ef-a256-c4b36163beec
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher;{dcdd02cc-aa87-4d79-b6cc-4459b3e92075});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher,Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemSessionParticipantWatcher, RemoteSystemSessionParticipantAddedEventArgs]
     guid 7d42fff3-fd21-5e15-b21a-75e1bbcd13c7
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher;{dcdd02cc-aa87-4d79-b6cc-4459b3e92075});rc(Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs;{d35a57d8-c9a1-4bb7-b6b0-79bb91adf93d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher
     argument Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher,Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemSessionParticipantWatcher, RemoteSystemSessionParticipantRemovedEventArgs]
     guid 73d7e8b3-7d44-50c8-afad-450de59fd0ae
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher;{dcdd02cc-aa87-4d79-b6cc-4459b3e92075});rc(Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs;{866ef088-de68-4abf-88a1-f90d16274192}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher
     argument Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionWatcher,Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemSessionWatcher, RemoteSystemSessionAddedEventArgs]
     guid 1b036c4f-6b8f-55d6-b6df-45e46a823b1d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemSessionWatcher;{8003e340-0c41-4a62-b6d7-bdbe2b19be2d});rc(Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs;{d585d754-bc97-4c39-99b4-beca76e04c3f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemSessionWatcher
     argument Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionWatcher name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionWatcher,Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemSessionWatcher, RemoteSystemSessionRemovedEventArgs]
     guid 1cbc54f0-0c9d-59cc-8055-5e017a317812
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemSessionWatcher;{8003e340-0c41-4a62-b6d7-bdbe2b19be2d});rc(Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs;{af82914e-39a1-4dea-9d63-43798d5bbbd0}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemSessionWatcher
     argument Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionWatcher name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionWatcher,Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemSessionWatcher, RemoteSystemSessionUpdatedEventArgs]
     guid 040f48b7-0d41-5aa2-85e8-6311666f0324
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemSessionWatcher;{8003e340-0c41-4a62-b6d7-bdbe2b19be2d});rc(Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs;{16875069-231e-4c91-8ec8-b3a39d9e55a3}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemSessionWatcher
     argument Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionWatcher name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemAddedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemWatcher, RemoteSystemAddedEventArgs]
     guid a9b98f4a-b63d-5d07-92bb-e2acb39455d1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemWatcher;{5d600c7e-2c07-48c5-889c-455d2b099771});rc(Windows.System.RemoteSystems.RemoteSystemAddedEventArgs;{8f39560f-e534-4697-8836-7abea151516e}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemWatcher
     argument Windows.System.RemoteSystems.RemoteSystemAddedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemWatcher name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemAddedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemEnumerationCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemWatcher, RemoteSystemEnumerationCompletedEventArgs]
     guid 42ae9d52-fd0d-5411-8c8c-d676a09767e9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemWatcher;{5d600c7e-2c07-48c5-889c-455d2b099771});rc(Windows.System.RemoteSystems.RemoteSystemEnumerationCompletedEventArgs;{c6e83d5f-4030-4354-a060-14f1b22c545d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemWatcher
     argument Windows.System.RemoteSystems.RemoteSystemEnumerationCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemWatcher name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemEnumerationCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemWatcher, RemoteSystemRemovedEventArgs]
     guid c290fb5a-3ed0-5858-af19-f85553cb96b8
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemWatcher;{5d600c7e-2c07-48c5-889c-455d2b099771});rc(Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs;{8b3d16bb-7306-49ea-b7df-67d5714cb013}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemWatcher
     argument Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemWatcher name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemWatcher, RemoteSystemUpdatedEventArgs]
     guid 88f9d23f-8946-5a1e-8da1-82c66982a6d2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemWatcher;{5d600c7e-2c07-48c5-889c-455d2b099771});rc(Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs;{7502ff0e-dbcb-4155-b4ca-b30a04f27627}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemWatcher
     argument Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemWatcher name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RemoteSystemWatcher, RemoteSystemWatcherErrorOccurredEventArgs]
     guid a4a023b4-567b-5d4b-a4c8-5ca4f886d3a3
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.RemoteSystems.RemoteSystemWatcher;{5d600c7e-2c07-48c5-889c-455d2b099771});rc(Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs;{74c5c6af-5114-4426-9216-20d81f8519ae}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.System.RemoteSystems.RemoteSystemWatcher
     argument Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.RemoteSystems.RemoteSystemWatcher name=sender
+            in class type=Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs name=args
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -1169,12 +1733,55 @@ class System.String external
 class Windows.ApplicationModel.AppService.AppServiceConnection external
     py winrt.windows.applicationmodel.appservice.AppServiceConnection
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Foundation.Collections.ValueSet external
     py winrt.windows.foundation.collections.ValueSet

@@ -1,7 +1,3 @@
-from test._util import skip_without_projection
-
-skip_without_projection()
-
 import asyncio
 import collections.abc
 import unittest
@@ -10,7 +6,7 @@ from typing import cast
 import winrt.windows.foundation.collections as wfc
 from winrt.system import Object, box_string, unbox_string
 
-from ._util import async_test
+from ._util import async_test, skip_without_delegates
 
 
 class TestCollectionsStringMap(unittest.TestCase):
@@ -86,6 +82,8 @@ class TestCollectionsStringMap(unittest.TestCase):
 
     @async_test
     async def test_string_map_changed_event(self):
+        skip_without_delegates()
+
         loop = asyncio.get_running_loop()
         future = loop.create_future()
 

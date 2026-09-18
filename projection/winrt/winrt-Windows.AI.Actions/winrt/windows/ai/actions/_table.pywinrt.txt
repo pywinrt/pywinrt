@@ -20,7 +20,7 @@ class Windows.AI.Actions.ActionEntity composable python_type closeable
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionEntity2 shape=4 reverse=22
             out string return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.AI.Actions.ActionEntityDisplayInfo python_type closeable
     py ActionEntityDisplayInfo
@@ -32,7 +32,7 @@ class Windows.AI.Actions.ActionEntityDisplayInfo python_type closeable
         get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionEntityDisplayInfo shape=4 reverse=22
             out string return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.AI.Actions.ActionEntityFactory composable python_type closeable
     py ActionEntityFactory
@@ -44,7 +44,7 @@ class Windows.AI.Actions.ActionEntityFactory composable python_type closeable
     requires Windows.Foundation.IClosable
     composable Windows.AI.Actions.IActionEntityFactoryFactory
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_contact_entity
         method CreateContactEntity slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory4 shape=51 reverse=44
             in class type=Windows.ApplicationModel.Contacts.Contact name=contact
@@ -108,7 +108,7 @@ class Windows.AI.Actions.ActionFeedback python_type closeable
         get get_FeedbackKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionFeedback shape=4 reverse=22
             out enum32 type=Windows.AI.Actions.ActionFeedbackKind return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 enum Windows.AI.Actions.ActionFeedbackKind python_type
     py ActionFeedbackKind
@@ -147,7 +147,7 @@ class Windows.AI.Actions.ActionInvocationContext python_type closeable
         get get_InvokerWindowId slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext2 shape=4 reverse=22
             out struct type=Windows.UI.WindowId return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_input_entities
         method GetInputEntities slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=51 reverse=65
             receive_array class type=Windows.AI.Actions.NamedActionEntity return
@@ -195,7 +195,7 @@ class Windows.AI.Actions.ActionInvocationHelpDetails python_type closeable
         put put_Description slot=11 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=141
             in string name=value
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 enum Windows.AI.Actions.ActionInvocationHelpKind python_type
     py ActionInvocationHelpKind
@@ -224,7 +224,7 @@ class Windows.AI.Actions.ActionRuntime composable python_type closeable
         get get_LatestSupportedSchemaVersion slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntime3 shape=4 reverse=62
             out uint32 return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_action_feedback
         method CreateActionFeedback slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime2 shape=51 reverse=24
             in enum32 type=Windows.AI.Actions.ActionFeedbackKind name=feedbackKind
@@ -382,7 +382,7 @@ class Windows.AI.Actions.NamedActionEntity python_type closeable
         put put_Entity slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.INamedActionEntity shape=4 reverse=99
             in class type=Windows.AI.Actions.ActionEntity name=value
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.AI.Actions.PhotoActionEntity python_type
     py PhotoActionEntity
@@ -476,7 +476,7 @@ class Windows.AI.Actions.StreamingTextActionEntityWriter python_type closeable
         get get_TextFormat slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntityWriter shape=4 reverse=43
             out enum32 type=Windows.AI.Actions.ActionEntityTextFormat return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method set_text
         method SetText slot=8 inputs=1 outputs=0 declaring=Windows.AI.Actions.IStreamingTextActionEntityWriter shape=4 reverse=62
             in string name=text
@@ -512,10 +512,16 @@ class Windows.AI.Actions.TextActionEntity python_type
             out enum32 type=Windows.AI.Actions.ActionEntityTextFormat return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.AI.Actions.StreamingTextActionEntity,Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[StreamingTextActionEntity, StreamingTextActionEntityTextChangedArgs]
     guid 9154a3ed-c383-5bdd-a8ae-fab2c13869d5
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.AI.Actions.StreamingTextActionEntity;{44cd8a16-abc9-5703-b4bf-6fe8b7a802fd});rc(Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs;{2c62011f-3e06-588b-a3bd-d726bd82fb13}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.AI.Actions.StreamingTextActionEntity
     argument Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.AI.Actions.StreamingTextActionEntity name=sender
+            in class type=Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs name=args
 
 class Windows.AI.Actions.Hosting.ActionCatalog external
     py winrt.windows.ai.actions.hosting.ActionCatalog
@@ -526,6 +532,10 @@ class Windows.ApplicationModel.Contacts.Contact external
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri

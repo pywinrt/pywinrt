@@ -1,6 +1,14 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
+include src/async.h
+include src/generics.h
+include src/interp.h
+include src/members.h
 include src/module_state.h
+include src/objects.h
+include src/protocols.h
 include src/shapes-generated.h
 include src/shapes.h
+include src/structs.h
 include src/table.h
+include src/types.h

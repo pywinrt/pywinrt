@@ -342,7 +342,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that adds new
      * APIs but otherwise doesn't break binary compatibility.
      */
-    const uint16_t runtime_abi_version_minor = 7;
+    const uint16_t runtime_abi_version_minor = 8;
 
     PyTypeObject* register_python_type(
         PyObject* module,
@@ -394,6 +394,25 @@ namespace py
         uint32_t timeout_ms,
         winrt::guid const& handler_iid,
         async_set_completed_fn set_completed) noexcept;
+
+    // ----- values a module names rather than compiles -------------------
+    //
+    // A projection is a table the runtime interprets, so a module that
+    // compiles against a WinRT type no longer shares generated code with the
+    // package that projects it: it names the type and lets the runtime do the
+    // rest. A type is named by the qualified Python name it is bound to, or,
+    // for a concrete parameterized interface, which is bound to nothing, by
+    // its WinRT signature.
+
+    PyObject* wrap_object(
+        winrt::Windows::Foundation::IInspectable const& value,
+        char const* qualified_name) noexcept;
+    PyObject* wrap_by_signature(
+        winrt::Windows::Foundation::IInspectable const& value,
+        char const* signature) noexcept;
+    bool unwrap_object(PyObject* obj, winrt::guid const& iid, void** result) noexcept;
+    PyObject* struct_to_python(PyTypeObject* type, void const* value) noexcept;
+    bool struct_from_python(PyTypeObject* type, PyObject* obj, void* out) noexcept;
 
     // ----- the Python-backed collection callbacks -------------------------
     //
@@ -521,6 +540,11 @@ namespace py
         /// rather than calls. It lives in the runtime and is never written by
         /// a module.
         const uint64_t* type_registry_epoch;
+        decltype(wrap_object)* wrap_object;
+        decltype(wrap_by_signature)* wrap_by_signature;
+        decltype(unwrap_object)* unwrap_object;
+        decltype(struct_to_python)* struct_to_python;
+        decltype(struct_from_python)* struct_from_python;
     };
 
 #ifndef PYWINRT_RUNTIME_MODULE
@@ -696,6 +720,42 @@ namespace py
     {
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->await_async);
         return (*PyWinRT_API->await_async)(obj);
+    }
+
+    inline PyObject* wrap_object(
+        winrt::Windows::Foundation::IInspectable const& value,
+        char const* qualified_name) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->wrap_object);
+        return (*PyWinRT_API->wrap_object)(value, qualified_name);
+    }
+
+    inline PyObject* wrap_by_signature(
+        winrt::Windows::Foundation::IInspectable const& value,
+        char const* signature) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->wrap_by_signature);
+        return (*PyWinRT_API->wrap_by_signature)(value, signature);
+    }
+
+    inline bool unwrap_object(
+        PyObject* obj, winrt::guid const& iid, void** result) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->unwrap_object);
+        return (*PyWinRT_API->unwrap_object)(obj, iid, result);
+    }
+
+    inline PyObject* struct_to_python(PyTypeObject* type, void const* value) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->struct_to_python);
+        return (*PyWinRT_API->struct_to_python)(type, value);
+    }
+
+    inline bool struct_from_python(
+        PyTypeObject* type, PyObject* obj, void* out) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->struct_from_python);
+        return (*PyWinRT_API->struct_from_python)(type, obj, out);
     }
 
     inline winrt::Windows::Storage::Streams::IBuffer convert_to_ibuffer(PyObject* obj)

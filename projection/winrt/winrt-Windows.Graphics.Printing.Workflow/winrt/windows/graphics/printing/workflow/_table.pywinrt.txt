@@ -2,42 +2,262 @@ format 4.0
 generator 0.0.0
 namespace Windows.Graphics.Printing.Workflow
 
-interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[WorkflowPrintTicket]
+    guid d486c08d-8e7c-5f8d-87ab-0df7ba06c5e3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket;{41d52285-35e8-448e-a8c5-e4b6a2cf826c}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PrintWorkflowUICompletionStatus]
+    guid 2cf68098-e07d-5362-a2ad-356551327df2
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[StorageFile]
+    guid e521c894-2c26-5946-9e61-2b5e188d01ed
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.StorageFile
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[WorkflowPrintTicket]
     guid 26aedf79-0659-5a5d-9acf-b4423eefdebb
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket;{41d52285-35e8-448e-a8c5-e4b6a2cf826c}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> shape=4 reverse=62 role=get_results
+            out class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PrintWorkflowUICompletionStatus]
     guid e4312e4b-c35d-5ccb-b290-72d0c4a808a6
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[StorageFile]
     guid 5e52f8ce-aced-5a42-95b4-f674dd84885e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Storage.StorageFile;{fa3f6186-4214-428c-a64c-14c9ac7315ea}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.StorageFile
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> shape=4 reverse=62 role=get_results
+            out class type=Windows.Storage.StorageFile return
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, IppAttributeValue]]
     guid 5dcf9ab4-ed4e-5648-8bfb-f626d5d7c505
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26})))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, IppAttributeValue]]
+    guid 8a501320-0647-58a4-8af8-8d63936ce48a
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, IppAttributeValue]
     guid ec09ead6-6117-5ae5-80e3-2d6bc7f9a955
     signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26}))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Windows.Devices.Printers.IppAttributeValue
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue> shape=4 reverse=43
+            out class type=Windows.Devices.Printers.IppAttributeValue return
 
-interface Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> concrete
+interface Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, IppAttributeValue]
     guid e7f72ba5-e881-550d-939b-f54cb31962e8
     signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26}))
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>>
     argument System.String
     argument Windows.Devices.Printers.IppAttributeValue
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> shape=117 reverse=125 role=insert
+            in string name=key
+            in class type=Windows.Devices.Printers.IppAttributeValue name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> shape=51 reverse=24 role=lookup
+            in string name=key
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> shape=4 reverse=141 role=remove
+            in string name=key
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, IppAttributeValue]
+    guid a2379f3e-0733-5491-98b8-08b3134ab23d
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>>
+    argument System.String
+    argument Windows.Devices.Printers.IppAttributeValue
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue> shape=51 reverse=24 role=lookup
+            in string name=key
+            out class type=Windows.Devices.Printers.IppAttributeValue return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue> name=second
 
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowBackgroundSession
     guid 5b7913ba-0c5e-528a-7458-86a46cbddc45
@@ -848,70 +1068,136 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs 
             out class type=Windows.Foundation.Deferral return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintWorkflowBackgroundSession, PrintWorkflowBackgroundSetupRequestedEventArgs]
     guid bb5c0591-4b11-511c-8ef3-1822cb71427c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession;{5b7913ba-0c5e-528a-7458-86a46cbddc45});rc(Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs;{43e97342-1750-59c9-61fb-383748a20362}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession name=sender
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintWorkflowBackgroundSession, PrintWorkflowSubmittedEventArgs]
     guid 9ec7b563-5044-5df3-98b5-3a5643fc59fe
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession;{5b7913ba-0c5e-528a-7458-86a46cbddc45});rc(Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs;{3add0a41-3794-5569-5c87-40e8ff720f83}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession name=sender
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintWorkflowForegroundSession, PrintWorkflowForegroundSetupRequestedEventArgs]
     guid d85b48f0-960b-5f65-98b1-5f9b09feb2f6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession;{c79b63d0-f8ec-4ceb-953a-c8876157dd33});rc(Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs;{bbe38247-9c1b-4dd3-9b2b-c80468d941b3}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession name=sender
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintWorkflowForegroundSession, PrintWorkflowXpsDataAvailableEventArgs]
     guid 6d38ab29-2bb3-5849-80cd-ece13a589d13
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession;{c79b63d0-f8ec-4ceb-953a-c8876157dd33});rc(Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs;{4d11c331-54d1-434e-be0e-82c5fa58e5b2}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession name=sender
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintWorkflowJobBackgroundSession, PrintWorkflowJobIssueDetectedEventArgs]
     guid 241e075c-dab5-5dd5-9f31-713910aa28fa
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession;{c5ec6ad8-20c9-5d51-8507-2734b46f96c5});rc(Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs;{de58a46e-e41e-550a-a9fb-4b1f93fb9d98}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession name=sender
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintWorkflowJobBackgroundSession, PrintWorkflowJobStartingEventArgs]
     guid 03d7ca7e-089d-5ff2-bae1-46d664f818af
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession;{c5ec6ad8-20c9-5d51-8507-2734b46f96c5});rc(Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs;{e3d99ba8-31ad-5e09-b0d7-601b97f161ad}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession name=sender
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintWorkflowJobBackgroundSession, PrintWorkflowPdlModificationRequestedEventArgs]
     guid c9a3b256-9f44-5cd5-a02e-7d5f52e8bd5d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession;{c5ec6ad8-20c9-5d51-8507-2734b46f96c5});rc(Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs;{1a339a61-2e13-5edd-a707-ceec61d7333b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession name=sender
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession,Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintWorkflowJobUISession, PrintWorkflowJobNotificationEventArgs]
     guid 91a4746d-7840-5f88-97d6-ee39c5afb6e0
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession;{00c8736b-7637-5687-a302-0f664d2aac65});rc(Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs;{0ae16fba-5398-5eba-b472-978650186a9a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession name=sender
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession,Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintWorkflowJobUISession, PrintWorkflowPdlDataAvailableEventArgs]
     guid 5a185747-96bc-50ea-8d97-5a7d9e1c93ef
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession;{00c8736b-7637-5687-a302-0f664d2aac65});rc(Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs;{d4ad6b50-1547-5991-a0ef-e2ee20211518}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession name=sender
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession,Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintWorkflowJobUISession, PrintWorkflowVirtualPrinterUIEventArgs]
     guid 8174fe97-12e1-5d8a-b02d-783dbd7e92a5
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession;{00c8736b-7637-5687-a302-0f664d2aac65});rc(Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs;{334dbbca-bf10-585f-b7e0-58c4aa43a03f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession name=sender
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession,Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintWorkflowVirtualPrinterSession, PrintWorkflowVirtualPrinterDataAvailableEventArgs]
     guid d307fc90-bb1d-54a1-8678-961d92337bcf
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession;{aa3926f2-8485-5c27-a016-9d39e3ba2614});rc(Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs;{6b7d5003-14a8-5d52-a428-07330fbab11f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession
     argument Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession name=sender
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs name=args
 
 class System.String external
     py winrt.system.String
@@ -942,12 +1228,51 @@ class Windows.Devices.Printers.IppPrintDevice external
 class Windows.Devices.Printers.IppSetAttributesResult external
     py winrt.windows.devices.printers.IppSetAttributesResult
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
 
 class Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket external
     py winrt.windows.graphics.printing.printticket.WorkflowPrintTicket

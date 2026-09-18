@@ -31,6 +31,28 @@ enum Windows.ApplicationModel.Core.AppRestartFailureReason python_type
     py AppRestartFailureReason
     signature enum(Windows.ApplicationModel.Core.AppRestartFailureReason;i4)
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Core.AppRestartFailureReason> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[AppRestartFailureReason]
+    guid dcec478a-9f27-5c5d-afdb-c91aee4f1f02
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.ApplicationModel.Core.AppRestartFailureReason;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Core.AppRestartFailureReason
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Core.AppRestartFailureReason> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.ApplicationModel.Core.CoreApplication static python_type
     py CoreApplication
     factory Windows.ApplicationModel.Core.ICoreImmersiveApplication3
@@ -217,34 +239,70 @@ class Windows.ApplicationModel.Core.CoreApplicationViewTitleBar python_type
             in event_token name=token
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 delegate Windows.Foundation.EventHandler<Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[BackgroundActivatedEventArgs]
     guid 49a07732-e7b8-5c5b-9de7-22e33cb97004
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs;{ab14bee0-e760-440e-a91c-44796de3a92d}))
+    base Windows.Foundation.EventHandler
     argument Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs name=args
 
 delegate Windows.Foundation.EventHandler<Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[UnhandledErrorDetectedEventArgs]
     guid f68bc421-6b54-559b-9cdd-489aad0bd41d
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs;{679ab78b-b336-4822-ac40-0d750f0b7a2b}))
+    base Windows.Foundation.EventHandler
     argument Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs name=args
 
 delegate Windows.Foundation.EventHandler<Windows.ApplicationModel.EnteredBackgroundEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[EnteredBackgroundEventArgs]
     guid e0739c32-fc14-5361-a8b3-0809699fbcbd
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.EnteredBackgroundEventArgs;{f722dcc2-9827-403d-aaed-ecca9ac17398}))
+    base Windows.Foundation.EventHandler
     argument Windows.ApplicationModel.EnteredBackgroundEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.ApplicationModel.EnteredBackgroundEventArgs name=args
 
 delegate Windows.Foundation.EventHandler<Windows.ApplicationModel.LeavingBackgroundEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[LeavingBackgroundEventArgs]
     guid 9b6171c2-abb2-5194-afc0-cef167c424eb
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.LeavingBackgroundEventArgs;{39c6ec9a-ae6e-46f9-a07a-cfc23f88733e}))
+    base Windows.Foundation.EventHandler
     argument Windows.ApplicationModel.LeavingBackgroundEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.ApplicationModel.LeavingBackgroundEventArgs name=args
 
 delegate Windows.Foundation.EventHandler<Windows.ApplicationModel.SuspendingEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[SuspendingEventArgs]
     guid 338579bf-1a35-5cc4-a622-a6f384fd892c
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.SuspendingEventArgs;{96061c05-2dba-4d08-b0bd-2b30a131c6aa}))
+    base Windows.Foundation.EventHandler
     argument Windows.ApplicationModel.SuspendingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.ApplicationModel.SuspendingEventArgs name=args
 
 class Windows.ApplicationModel.Core.HostedViewClosingEventArgs python_type
     py HostedViewClosingEventArgs
@@ -267,15 +325,63 @@ interface Windows.ApplicationModel.Core.IAppListEntry3
 interface Windows.ApplicationModel.Core.IAppListEntry4
     guid 2a131ed2-56f5-487c-8697-5166f3b33da0
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Core.AppRestartFailureReason> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Core.AppRestartFailureReason> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[AppRestartFailureReason]
     guid 0938905d-54c0-572f-8451-4bfd2b52edda
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.ApplicationModel.Core.AppRestartFailureReason;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.Core.AppRestartFailureReason
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Core.AppRestartFailureReason> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Core.AppRestartFailureReason> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Core.AppRestartFailureReason> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Core.AppRestartFailureReason> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Core.AppRestartFailureReason> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.ApplicationModel.Core.AppRestartFailureReason return
 
 interface Windows.ApplicationModel.Core.ICoreApplication
     guid 0aacf7a4-5e1d-49df-8034-fb6a68bc5ed1
@@ -359,34 +465,105 @@ interface Windows.ApplicationModel.Core.IFrameworkViewSource python_type
 interface Windows.ApplicationModel.Core.IHostedViewClosingEventArgs
     guid d238943c-b24e-4790-acb5-3e4243c4ff87
 
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Core.CoreApplicationView> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[CoreApplicationView]
+    guid 32bc12d1-2653-5a41-a55e-88a12af2026a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Core.CoreApplicationView;{638bb2db-451d-4661-b099-414f34ffb9f1}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.Core.CoreApplicationView
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Core.CoreApplicationView> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.CoreApplicationView> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.CoreApplicationView> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[CoreApplicationView]
+    guid 4f5f6944-264b-5868-809e-c7ac1ac5edad
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Core.CoreApplicationView;{638bb2db-451d-4661-b099-414f34ffb9f1}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Core.CoreApplicationView
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.CoreApplicationView> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Core.CoreApplicationView return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.CoreApplicationView> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.CoreApplicationView> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.Core.CoreApplicationView name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.CoreApplicationView> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.ApplicationModel.Core.IUnhandledError
     guid 9459b726-53b5-4686-9eaf-fa8162dc3980
 
 interface Windows.ApplicationModel.Core.IUnhandledErrorDetectedEventArgs
     guid 679ab78b-b336-4822-ac40-0d750f0b7a2b
 
-interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.CoreApplicationView> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.CoreApplicationView> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[CoreApplicationView]
     guid de9e16c4-1b7c-5126-b1d8-7cd04f13bd08
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Core.CoreApplicationView;{638bb2db-451d-4661-b099-414f34ffb9f1}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Core.CoreApplicationView>
     argument Windows.ApplicationModel.Core.CoreApplicationView
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.CoreApplicationView> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Core.CoreApplicationView> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Core.CoreApplicationView> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.CoreApplicationView> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Core.CoreApplicationView return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.CoreApplicationView> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Core.CoreApplicationView name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.CoreApplicationView> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.Core.CoreApplicationView name=value
+            out uint32 name=index
+            out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Core.CoreApplicationView,Windows.ApplicationModel.Activation.IActivatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreApplicationView, IActivatedEventArgs]
     guid cf193a96-eb13-5e3b-8bdf-87b6efae8339
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Core.CoreApplicationView;{638bb2db-451d-4661-b099-414f34ffb9f1});{cf651713-cd08-4fd8-b697-a281b6544e2e})
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Core.CoreApplicationView
     argument Windows.ApplicationModel.Activation.IActivatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Core.CoreApplicationView name=sender
+            in interface type=Windows.ApplicationModel.Activation.IActivatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Core.CoreApplicationView,Windows.ApplicationModel.Core.HostedViewClosingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreApplicationView, HostedViewClosingEventArgs]
     guid d9a3f433-9bcc-54d6-b3cf-7b01f026d4cd
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Core.CoreApplicationView;{638bb2db-451d-4661-b099-414f34ffb9f1});rc(Windows.ApplicationModel.Core.HostedViewClosingEventArgs;{d238943c-b24e-4790-acb5-3e4243c4ff87}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Core.CoreApplicationView
     argument Windows.ApplicationModel.Core.HostedViewClosingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Core.CoreApplicationView name=sender
+            in class type=Windows.ApplicationModel.Core.HostedViewClosingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Core.CoreApplicationViewTitleBar,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreApplicationViewTitleBar, Object]
     guid 28342e21-dad3-5e32-bae1-afe7b26c66fb
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Core.CoreApplicationViewTitleBar;{006d35e3-e1f1-431b-9508-29b96926ac53});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Core.CoreApplicationViewTitleBar
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Core.CoreApplicationViewTitleBar name=sender
+            in object name=args
 
 class Windows.ApplicationModel.Core.UnhandledError python_type
     py UnhandledError
@@ -436,16 +613,51 @@ interface Windows.ApplicationModel.Activation.IActivatedEventArgs external
     py winrt.windows.applicationmodel.activation._IActivatedEventArgs
     guid cf651713-cd08-4fd8-b697-a281b6544e2e
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 interface Windows.Foundation.IGetActivationFactory external
     py winrt.windows.foundation._IGetActivationFactory
     guid 4edb8ee2-96dd-49a7-94f7-4607ddab8e3c
 
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
 interface Windows.Foundation.Collections.IPropertySet external
     py winrt.windows.foundation.collections._IPropertySet
     guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.System.DispatcherQueue external
     py winrt.windows.system.DispatcherQueue

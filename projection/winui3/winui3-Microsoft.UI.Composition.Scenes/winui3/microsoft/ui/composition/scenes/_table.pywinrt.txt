@@ -2,15 +2,25 @@ format 4.0
 generator 0.0.0
 namespace Microsoft.UI.Composition.Scenes
 
-interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneComponent> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneComponent> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SceneComponent]
     guid 2685e472-2678-505f-943f-b18b1689891e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Composition.Scenes.SceneComponent;{f73361cb-8027-50e2-98ee-b2e3ea050a54}))
+    base Windows.Foundation.Collections.IIterable
     argument Microsoft.UI.Composition.Scenes.SceneComponent
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneComponent> return
 
-interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneNode> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneNode> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SceneNode]
     guid 9cc8ee93-c366-5810-ab51-3590047515f2
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Composition.Scenes.SceneNode;{a1bce140-79c2-59e6-9b68-63b1bab0e2a6}))
+    base Windows.Foundation.Collections.IIterable
     argument Microsoft.UI.Composition.Scenes.SceneNode
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneNode> return
 
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
@@ -18,47 +28,156 @@ interface Windows.Foundation.Collections.IIterable<T> parameterized
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
     argument Windows.Foundation.Collections.IKeyValuePair<K,V>
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, SceneAttributeSemantic]]
     guid d2e146d1-5e16-5c59-b07a-e253e65cc7e7
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;enum(Microsoft.UI.Composition.Scenes.SceneAttributeSemantic;i4)))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> return
 
-interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneComponent> concrete
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneComponent> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SceneComponent]
     guid 5bae5c3e-e6cc-5583-b768-b577456babe8
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Composition.Scenes.SceneComponent;{f73361cb-8027-50e2-98ee-b2e3ea050a54}))
+    base Windows.Foundation.Collections.IIterator
     argument Microsoft.UI.Composition.Scenes.SceneComponent
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Composition.Scenes.SceneComponent return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneComponent> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Composition.Scenes.SceneComponent name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneNode> concrete
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneNode> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SceneNode]
     guid 9f0ca077-4147-5aed-8819-a9149d2b234d
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Composition.Scenes.SceneNode;{a1bce140-79c2-59e6-9b68-63b1bab0e2a6}))
+    base Windows.Foundation.Collections.IIterator
     argument Microsoft.UI.Composition.Scenes.SceneNode
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Composition.Scenes.SceneNode return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneNode> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Composition.Scenes.SceneNode name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, SceneAttributeSemantic]]
     guid eb061e61-364d-546d-8b49-82c585464c00
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;enum(Microsoft.UI.Composition.Scenes.SceneAttributeSemantic;i4)))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
     argument K
     argument V
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, SceneAttributeSemantic]
     guid 109a063e-257f-5701-b780-e50bd9912b50
     signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;enum(Microsoft.UI.Composition.Scenes.SceneAttributeSemantic;i4))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Microsoft.UI.Composition.Scenes.SceneAttributeSemantic
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=43
+            out enum32 type=Microsoft.UI.Composition.Scenes.SceneAttributeSemantic return
 
-interface Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> concrete
+interface Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, SceneAttributeSemantic]
     guid e024c948-c902-5dd9-9768-ae332ae0be14
     signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;enum(Microsoft.UI.Composition.Scenes.SceneAttributeSemantic;i4))
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>>
     argument System.String
     argument Microsoft.UI.Composition.Scenes.SceneAttributeSemantic
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=117 reverse=125 role=insert
+            in string name=key
+            in enum32 type=Microsoft.UI.Composition.Scenes.SceneAttributeSemantic name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=51 reverse=24 role=lookup
+            in string name=key
+            out enum32 type=Microsoft.UI.Composition.Scenes.SceneAttributeSemantic return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=141 role=remove
+            in string name=key
 
-interface Windows.Foundation.Collections.IMapView<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, SceneAttributeSemantic]
     guid a0015c14-a54e-5da8-bd55-ac76ea838517
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;enum(Microsoft.UI.Composition.Scenes.SceneAttributeSemantic;i4))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>>
     argument System.String
     argument Microsoft.UI.Composition.Scenes.SceneAttributeSemantic
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=51 reverse=24 role=lookup
+            in string name=key
+            out enum32 type=Microsoft.UI.Composition.Scenes.SceneAttributeSemantic return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> name=second
 
 interface Microsoft.UI.Composition.Scenes.ISceneBoundingBox
     guid 39fb48e0-216a-5608-9186-6ba9f98b5c67
@@ -147,25 +266,165 @@ interface Microsoft.UI.Composition.Scenes.ISceneVisual
 interface Microsoft.UI.Composition.Scenes.ISceneVisualStatics
     guid 7b8da6d1-5bd8-5095-9264-e5572653ea07
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SceneComponent]
     guid 9c16c63a-f909-56c7-8778-d7ebc94808d9
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Composition.Scenes.SceneComponent;{f73361cb-8027-50e2-98ee-b2e3ea050a54}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneComponent>
     argument Microsoft.UI.Composition.Scenes.SceneComponent
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=173
+            in class type=Microsoft.UI.Composition.Scenes.SceneComponent name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneComponent> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Composition.Scenes.SceneComponent return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Composition.Scenes.SceneComponent name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneComponent> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=117 reverse=101
+            in class type=Microsoft.UI.Composition.Scenes.SceneComponent name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Composition.Scenes.SceneComponent name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Composition.Scenes.SceneComponent name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Composition.Scenes.SceneComponent name=value
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SceneNode]
     guid 15c6abb0-bf50-5a9b-8190-16b631f12705
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Composition.Scenes.SceneNode;{a1bce140-79c2-59e6-9b68-63b1bab0e2a6}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneNode>
     argument Microsoft.UI.Composition.Scenes.SceneNode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=173
+            in class type=Microsoft.UI.Composition.Scenes.SceneNode name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneNode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Composition.Scenes.SceneNode return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Composition.Scenes.SceneNode name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneNode> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=117 reverse=101
+            in class type=Microsoft.UI.Composition.Scenes.SceneNode name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Composition.Scenes.SceneNode name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Composition.Scenes.SceneNode name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Composition.Scenes.SceneNode name=value
 
-interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneComponent> concrete
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneComponent> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SceneComponent]
     guid 6817b7fd-1182-58b7-aa8a-110337639e4b
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Composition.Scenes.SceneComponent;{f73361cb-8027-50e2-98ee-b2e3ea050a54}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneComponent>
     argument Microsoft.UI.Composition.Scenes.SceneComponent
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneComponent> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneComponent> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Composition.Scenes.SceneComponent return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneComponent> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Composition.Scenes.SceneComponent name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneComponent> shape=117 reverse=66
+            in class type=Microsoft.UI.Composition.Scenes.SceneComponent name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneNode> concrete
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneNode> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SceneNode]
     guid be91d459-5f24-5044-bb9b-79787c1b3dfd
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Composition.Scenes.SceneNode;{a1bce140-79c2-59e6-9b68-63b1bab0e2a6}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneNode>
     argument Microsoft.UI.Composition.Scenes.SceneNode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneNode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneNode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Composition.Scenes.SceneNode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneNode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Composition.Scenes.SceneNode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneNode> shape=117 reverse=66
+            in class type=Microsoft.UI.Composition.Scenes.SceneNode name=value
+            out uint32 name=index
+            out boolean return
 
 enum K parameterized
 
@@ -220,7 +479,7 @@ class Microsoft.UI.Composition.Scenes.SceneComponentCollection python_type itera
     requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneComponent>
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=173
@@ -228,10 +487,10 @@ class Microsoft.UI.Composition.Scenes.SceneComponentCollection python_type itera
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneComponent> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Microsoft.UI.Composition.Scenes.SceneComponent return
     method get_many
@@ -248,11 +507,11 @@ class Microsoft.UI.Composition.Scenes.SceneComponentCollection python_type itera
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Microsoft.UI.Composition.Scenes.SceneComponent name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=0 reverse=185
@@ -260,7 +519,7 @@ class Microsoft.UI.Composition.Scenes.SceneComponentCollection python_type itera
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=51 reverse=211
             pass_array class type=Microsoft.UI.Composition.Scenes.SceneComponent name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Microsoft.UI.Composition.Scenes.SceneComponent name=value
 
@@ -319,31 +578,31 @@ class Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap python_type 
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>>
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=43 role=size
             out uint32 return
     method clear
         method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=0 reverse=159
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> return
     method get_view
         method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=99
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> return
     method has_key
-        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=51 reverse=65
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=51 reverse=65 role=has_key
             in string name=key
             out boolean return
     method insert
-        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=117 reverse=125
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=117 reverse=125 role=insert
             in string name=key
             in enum32 type=Microsoft.UI.Composition.Scenes.SceneAttributeSemantic name=value
             out boolean return
     method lookup
-        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=51 reverse=24
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=51 reverse=24 role=lookup
             in string name=key
             out enum32 type=Microsoft.UI.Composition.Scenes.SceneAttributeSemantic return
     method remove
-        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=141
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=141 role=remove
             in string name=key
 
 class Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent python_type
@@ -483,7 +742,7 @@ class Microsoft.UI.Composition.Scenes.SceneNodeCollection python_type iterable s
     requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneNode>
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=43 role=size
             out uint32 return
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=173
@@ -491,10 +750,10 @@ class Microsoft.UI.Composition.Scenes.SceneNodeCollection python_type iterable s
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneNode> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Microsoft.UI.Composition.Scenes.SceneNode return
     method get_many
@@ -511,11 +770,11 @@ class Microsoft.UI.Composition.Scenes.SceneNodeCollection python_type iterable s
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Microsoft.UI.Composition.Scenes.SceneNode name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=0 reverse=185
@@ -523,7 +782,7 @@ class Microsoft.UI.Composition.Scenes.SceneNodeCollection python_type iterable s
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=51 reverse=211
             pass_array class type=Microsoft.UI.Composition.Scenes.SceneNode name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Microsoft.UI.Composition.Scenes.SceneNode name=value
 
@@ -683,6 +942,34 @@ class System.String external
 
 class Windows.Foundation.MemoryBuffer external
     py winrt.windows.foundation.MemoryBuffer
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Foundation.Numerics.Quaternion external
     py winrt.windows.foundation.numerics.Quaternion

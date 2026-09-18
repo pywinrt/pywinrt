@@ -2,25 +2,323 @@ format 4.0
 generator 0.0.0
 namespace Windows.Devices.WiFiDirect
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.WiFiDirectDevice> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.WiFiDirect.WiFiDirectDevice> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[WiFiDirectDevice]
+    guid d34abe17-fb19-57be-bc41-0eb83dea151c
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.WiFiDirect.WiFiDirectDevice;{72deaaa8-72eb-4dae-8a28-8513355d2777}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.WiFiDirect.WiFiDirectDevice
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.WiFiDirectDevice> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.WiFiDirectDevice> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[WiFiDirectDevice]
     guid dad01b61-a82d-566c-ba82-224c11500669
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.WiFiDirect.WiFiDirectDevice;{72deaaa8-72eb-4dae-8a28-8513355d2777}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.WiFiDirect.WiFiDirectDevice
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.WiFiDirectDevice> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.WiFiDirect.WiFiDirectDevice> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.WiFiDirectDevice> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.WiFiDirect.WiFiDirectDevice> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.WiFiDirectDevice> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.WiFiDirect.WiFiDirectDevice return
 
-interface Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WiFiDirectConfigurationMethod]
+    guid 794f12da-2dc6-5277-82dc-b0781610537b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WiFiDirectInformationElement]
+    guid 19c1ca4e-9561-5253-96d9-dbaf28d47d89
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.WiFiDirect.WiFiDirectInformationElement;{affb72d6-76bb-497e-ac8b-dc72838bc309}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.WiFiDirect.WiFiDirectInformationElement
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Networking.EndpointPair> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[EndpointPair]
+    guid d7ec83c4-a17b-51bf-8997-aa33b9102dc9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Networking.EndpointPair;{33a0aa36-f8fa-4b30-b856-76517c3bd06d}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Networking.EndpointPair
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.EndpointPair> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.EndpointPair> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WiFiDirectConfigurationMethod]
+    guid 201940f9-a368-57f4-9ef2-3f64e243e0a4
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=117 reverse=101
+            fill_array enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WiFiDirectInformationElement]
+    guid cf806026-c915-553e-af3c-8da43871b693
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.WiFiDirect.WiFiDirectInformationElement;{affb72d6-76bb-497e-ac8b-dc72838bc309}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.WiFiDirect.WiFiDirectInformationElement
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=117 reverse=101
+            fill_array class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Networking.EndpointPair> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[EndpointPair]
+    guid c899ff9f-e6f5-5673-810c-04e2ff98704f
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Networking.EndpointPair;{33a0aa36-f8fa-4b30-b856-76517c3bd06d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Networking.EndpointPair
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.EndpointPair> shape=4 reverse=22 role=current
+            out class type=Windows.Networking.EndpointPair return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.EndpointPair> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.EndpointPair> shape=117 reverse=101
+            fill_array class type=Windows.Networking.EndpointPair name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.EndpointPair> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[WiFiDirectConfigurationMethod]
     guid 9b498bc0-b474-5587-b65c-e600965f8fd0
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod;i4))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod>
     argument Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=4 reverse=173
+            in enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=117 reverse=101
+            in enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=51 reverse=211
+            pass_array enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[WiFiDirectInformationElement]
     guid b8c55492-e4de-5ba7-8476-d3bab557cdd6
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.WiFiDirect.WiFiDirectInformationElement;{affb72d6-76bb-497e-ac8b-dc72838bc309}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.WiFiDirect.WiFiDirectInformationElement>
     argument Windows.Devices.WiFiDirect.WiFiDirectInformationElement
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=4 reverse=173
+            in class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=117 reverse=101
+            in class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=51 reverse=211
+            pass_array class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WiFiDirectConfigurationMethod]
+    guid 61a32670-04d3-551d-ad66-bd04e9ef5c78
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod>
+    argument Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=117 reverse=66
+            in enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WiFiDirectInformationElement]
+    guid 6dcffadb-04c5-535e-add4-1389b3be6eca
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.WiFiDirect.WiFiDirectInformationElement;{affb72d6-76bb-497e-ac8b-dc72838bc309}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.WiFiDirect.WiFiDirectInformationElement>
+    argument Windows.Devices.WiFiDirect.WiFiDirectInformationElement
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=117 reverse=66
+            in class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[EndpointPair]
     guid 8780a851-6d48-5006-9288-81f3d7045a96
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.EndpointPair;{33a0aa36-f8fa-4b30-b856-76517c3bd06d}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Networking.EndpointPair>
     argument Windows.Networking.EndpointPair
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.EndpointPair> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.EndpointPair> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Networking.EndpointPair return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Networking.EndpointPair name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> shape=117 reverse=66
+            in class type=Windows.Networking.EndpointPair name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement
     guid ab511a2d-2a06-49a1-a584-61435c7905a6
@@ -71,22 +369,40 @@ interface Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings
     guid a64fdbba-f2fd-4567-a91b-f5c2f5321057
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher,Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WiFiDirectAdvertisementPublisher, WiFiDirectAdvertisementPublisherStatusChangedEventArgs]
     guid de73cba7-370d-550c-b23a-53dd0b4e480d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher;{b35a2d1a-9b1f-45d9-925a-694d66df68ef});rc(Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs;{aafde53c-5481-46e6-90dd-32116518f192}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher
     argument Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher name=sender
+            in class type=Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.WiFiDirectConnectionListener,Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WiFiDirectConnectionListener, WiFiDirectConnectionRequestedEventArgs]
     guid d04b0403-1fe2-532f-8e47-4823a14e624f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.WiFiDirect.WiFiDirectConnectionListener;{699c1b0d-8d13-4ee9-b9ec-9c72f8251f7d});rc(Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs;{f99d20be-d38d-484f-8215-e7b65abf244c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.WiFiDirect.WiFiDirectConnectionListener
     argument Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.WiFiDirect.WiFiDirectConnectionListener name=sender
+            in class type=Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.WiFiDirectDevice,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[WiFiDirectDevice, Object]
     guid 9208929a-2a3c-50ad-aa08-a0a986edbabe
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.WiFiDirect.WiFiDirectDevice;{72deaaa8-72eb-4dae-8a28-8513355d2777});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.WiFiDirect.WiFiDirectDevice
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.WiFiDirect.WiFiDirectDevice name=sender
+            in object name=args
 
 class Windows.Devices.WiFiDirect.WiFiDirectAdvertisement python_type
     py WiFiDirectAdvertisement
@@ -219,7 +535,7 @@ class Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest python_type closeab
         get get_DeviceInformation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequest shape=4 reverse=22
             out class type=Windows.Devices.Enumeration.DeviceInformation return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs python_type
     py WiFiDirectConnectionRequestedEventArgs
@@ -255,7 +571,7 @@ class Windows.Devices.WiFiDirect.WiFiDirectDevice python_type closeable
         remove remove_ConnectionStatusChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=26 reverse=110
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics shape=51 reverse=44 static
             in string name=deviceId
@@ -353,9 +669,44 @@ interface Windows.Devices.Enumeration.IDevicePairingSettings external
     py winrt.windows.devices.enumeration._IDevicePairingSettings
     guid 482cb27c-83bb-420e-be51-6602b222de54
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Networking.EndpointPair external
     py winrt.windows.networking.EndpointPair

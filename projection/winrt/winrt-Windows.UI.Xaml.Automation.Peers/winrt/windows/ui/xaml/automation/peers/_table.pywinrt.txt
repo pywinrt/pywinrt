@@ -1254,10 +1254,95 @@ interface Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerFactory
 interface Windows.UI.Xaml.Automation.Peers.IItemsControlAutomationPeerOverrides2
     guid 361dc0e8-b56f-45e9-80fe-10a0fb0fe177
 
-interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeer> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeer> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AutomationPeer]
     guid 7f67a4e2-96e0-522b-8710-14c42d834f1e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Automation.Peers.AutomationPeer;{35aac87a-62ee-4d3e-a24c-2bc8432d68b7}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.UI.Xaml.Automation.Peers.AutomationPeer
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeer> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AutomationPeerAnnotation]
+    guid dd28ff94-d11e-5ae7-b819-6177c1599313
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation;{0c456061-52cf-43fa-82f8-07f137351e5a}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeer> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AutomationPeer]
+    guid 1f93cd7a-8075-5ba9-bc3e-b04a94e14bc0
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Automation.Peers.AutomationPeer;{35aac87a-62ee-4d3e-a24c-2bc8432d68b7}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.Automation.Peers.AutomationPeer
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AutomationPeerAnnotation]
+    guid 3b415733-48f2-58b0-9884-6f0d0e35dc1a
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation;{0c456061-52cf-43fa-82f8-07f137351e5a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.UI.Xaml.Automation.Peers.IListBoxAutomationPeer
     guid 8cd0d608-b402-4a6e-bd9a-343f8845eb32
@@ -1568,25 +1653,193 @@ interface Windows.UI.Xaml.Automation.Peers.ITreeViewListAutomationPeer
 interface Windows.UI.Xaml.Automation.Peers.ITreeViewListAutomationPeerFactory
     guid 00f597e2-f811-475a-bfe6-290fe707fa88
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[AutomationPeer]
     guid a8d8a409-9130-5e14-8426-0782aaf01608
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Automation.Peers.AutomationPeer;{35aac87a-62ee-4d3e-a24c-2bc8432d68b7}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeer>
     argument Windows.UI.Xaml.Automation.Peers.AutomationPeer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeer> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeer> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[AutomationPeerAnnotation]
     guid d353f885-4bf0-5dc2-878e-ec7a394ee880
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation;{0c456061-52cf-43fa-82f8-07f137351e5a}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation>
     argument Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation name=value
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeer> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeer> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AutomationPeer]
     guid b56a6076-19e2-50c1-930f-825bfc39635c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Automation.Peers.AutomationPeer;{35aac87a-62ee-4d3e-a24c-2bc8432d68b7}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeer>
     argument Windows.UI.Xaml.Automation.Peers.AutomationPeer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeer> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeer> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AutomationPeerAnnotation]
+    guid 00775c79-589b-5c36-ae72-2e7aab0270c6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation;{0c456061-52cf-43fa-82f8-07f137351e5a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation>
+    argument Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.Automation.Peers.AutomationPeerAnnotation name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.UI.Xaml.Automation.Peers.ImageAutomationPeer composable python_type
     py ImageAutomationPeer
@@ -2737,6 +2990,22 @@ struct Windows.Foundation.Point external
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.UI.Xaml.DependencyObject external
     py winrt.windows.ui.xaml.DependencyObject

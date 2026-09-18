@@ -102,6 +102,8 @@ namespace py::interp
         void* factory;
         char const* winrt_name;
         char const* iface_name;
+        /// The Python protocol this overload stands for, if any.
+        table::member_role role;
         uint16_t in_count;
         uint16_t out_count;
         uint16_t arg_count;
@@ -135,6 +137,51 @@ namespace py::interp
     };
 
     /**
+     * The members behind the Python protocols a type implements.
+     *
+     * A WinRT collection is a Python sequence or mapping, an IIterator is a
+     * Python iterator, and an async operation is awaitable, but WinRT spells
+     * each of those as ordinary members: len() is Size, v[i] is GetAt(i),
+     * iter(m) is First(). Which member stands for which operation is the role
+     * the table gives it, and it is looked up once, when the type is built, so
+     * that the slot that CPython calls has nothing left to find.
+     *
+     * A member is @c nullptr when the type does not have it, which is what
+     * tells a read-only collection from a mutable one.
+     */
+    struct protocol_members
+    {
+        // IVector<T> and IVectorView<T>, and IMap<K, V> and IMapView<K, V>,
+        // which both count the same way
+        member_desc* size;
+        member_desc* get_at;
+        member_desc* set_at;
+        member_desc* remove_at;
+        member_desc* insert_at;
+        // IIterable<T>
+        member_desc* first;
+        // IIterator<T>
+        member_desc* current;
+        member_desc* has_current;
+        member_desc* move_next;
+        // IMap<K, V> and IMapView<K, V>
+        member_desc* lookup;
+        member_desc* has_key;
+        member_desc* insert;
+        member_desc* remove;
+        // IAsyncInfo and the four async interfaces
+        member_desc* status;
+        member_desc* completed;
+        member_desc* get_results;
+        // IStringable
+        member_desc* to_string;
+        // IReference<T>, whose value is the whole of what it projects as
+        member_desc* value;
+        // IClosable
+        member_desc* close;
+    };
+
+    /**
      * What the runtime knows about one type in a table beyond what the table
      * says: the Python types built for it and the layout of its values.
      */
@@ -162,6 +209,13 @@ namespace py::interp
         /// The constructor group, or @c nullptr for a type that cannot be
         /// instantiated from Python.
         member_desc* constructor;
+        /// Every attribute of this type, contiguous in one block, which is
+        /// what the protocol slots are found in.
+        member_desc* members;
+        uint16_t member_count;
+        /// What the table's protocol flags come to: the members that the
+        /// Python slots of this type call.
+        protocol_members protocol;
 
         // structs only
         uint32_t size;

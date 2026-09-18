@@ -2,6 +2,28 @@ format 4.0
 generator 0.0.0
 namespace Windows.Services.Cortana
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Cortana.CortanaPermissionsChangeResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CortanaPermissionsChangeResult]
+    guid ec1c6586-5e0d-5bc0-b84f-20052c5ac7a9
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Services.Cortana.CortanaPermissionsChangeResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Services.Cortana.CortanaPermissionsChangeResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Cortana.CortanaPermissionsChangeResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Services.Cortana.CortanaActionableInsights python_type
     py CortanaActionableInsights
     signature rc(Windows.Services.Cortana.CortanaActionableInsights;{951ec6b1-fc83-586d-8b84-2452c8981625})
@@ -119,15 +141,63 @@ class Windows.Services.Cortana.CortanaSettings python_type
         method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaSettingsStatics shape=4 reverse=22 static deprecated
             out boolean return
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Cortana.CortanaPermissionsChangeResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Cortana.CortanaPermissionsChangeResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CortanaPermissionsChangeResult]
     guid 838a3dd0-f0a3-508f-846a-d3c19e4fe7a0
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Services.Cortana.CortanaPermissionsChangeResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Services.Cortana.CortanaPermissionsChangeResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Cortana.CortanaPermissionsChangeResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Cortana.CortanaPermissionsChangeResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Cortana.CortanaPermissionsChangeResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Cortana.CortanaPermissionsChangeResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Cortana.CortanaPermissionsChangeResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Services.Cortana.CortanaPermissionsChangeResult return
 
 interface Windows.Services.Cortana.ICortanaActionableInsights
     guid 951ec6b1-fc83-586d-8b84-2452c8981625
@@ -150,10 +220,35 @@ interface Windows.Services.Cortana.ICortanaSettings
 interface Windows.Services.Cortana.ICortanaSettingsStatics
     guid 8b2ccd7e-2ec0-446d-9285-33f07ce8ac04
 
-interface Windows.Foundation.Collections.IIterable<Windows.Services.Cortana.CortanaPermission> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Cortana.CortanaPermission> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[CortanaPermission]
     guid 36a12eae-2e24-5e07-bfd0-344a92990916
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Services.Cortana.CortanaPermission;i4))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Services.Cortana.CortanaPermission
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Cortana.CortanaPermission> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Cortana.CortanaPermission> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Cortana.CortanaPermission> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[CortanaPermission]
+    guid 0f1ac33c-511a-52e8-af09-d89f7004e8c5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Services.Cortana.CortanaPermission;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Cortana.CortanaPermission
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Cortana.CortanaPermission> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Services.Cortana.CortanaPermission return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Cortana.CortanaPermission> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Cortana.CortanaPermission> shape=117 reverse=101
+            fill_array enum32 type=Windows.Services.Cortana.CortanaPermission name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Cortana.CortanaPermission> shape=4 reverse=62 role=move_next
+            out boolean return
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -161,12 +256,35 @@ class System.Boolean external
 class Windows.ApplicationModel.DataTransfer.DataPackage external
     py winrt.windows.applicationmodel.datatransfer.DataPackage
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
 
 interface Windows.Storage.Streams.IRandomAccessStreamReference external
     py winrt.windows.storage.streams._IRandomAccessStreamReference

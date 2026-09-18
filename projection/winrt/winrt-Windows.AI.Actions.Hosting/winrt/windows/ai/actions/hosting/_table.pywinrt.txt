@@ -16,7 +16,7 @@ class Windows.AI.Actions.Hosting.ActionCatalog python_type closeable
         remove remove_Changed slot=8 inputs=1 outputs=0 declaring=Windows.AI.Actions.Hosting.IActionCatalog shape=26 reverse=82
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_actions_for_inputs
         method GetActionsForInputs slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionCatalog2 shape=195 reverse=26
             pass_array class type=Windows.AI.Actions.ActionEntity name=inputEntities
@@ -62,7 +62,7 @@ class Windows.AI.Actions.Hosting.ActionDefinition python_type closeable
         get get_PackageRelativeApplicationId slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition3 shape=4 reverse=22
             out string return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_inputs
         method GetInputs slot=10 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition shape=51 reverse=124
             receive_array class type=Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo return
@@ -90,7 +90,7 @@ class Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo python_type closea
         put put_Kind slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.Hosting.IActionEntityRegistrationInfo shape=4 reverse=99
             in enum32 type=Windows.AI.Actions.ActionEntityKind name=value
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.AI.Actions.Hosting.ActionInstance python_type
     py ActionInstance
@@ -130,7 +130,7 @@ class Windows.AI.Actions.Hosting.ActionOverload python_type closeable
         get get_DescriptionTemplate slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionOverload shape=4 reverse=22
             out string return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_inputs
         method GetInputs slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionOverload shape=51 reverse=44
             receive_array class type=Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo return
@@ -178,10 +178,16 @@ interface Windows.AI.Actions.Hosting.IActionOverload2
     guid 57ec9906-8231-5a9e-929f-bf39e952eb93
 
 delegate Windows.Foundation.TypedEventHandler<Windows.AI.Actions.Hosting.ActionCatalog,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[ActionCatalog, Object]
     guid 6fc189b6-f223-5959-8676-db86049c04d9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.AI.Actions.Hosting.ActionCatalog;{dbe7c537-66ea-5394-9085-4fc19d78375c});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.AI.Actions.Hosting.ActionCatalog
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.AI.Actions.Hosting.ActionCatalog name=sender
+            in object name=args
 
 class System.Object external
     py winrt.system.Object
@@ -205,6 +211,10 @@ interface Windows.Foundation.IAsyncAction external
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 struct Windows.UI.WindowId external
     py winrt.windows.ui.WindowId

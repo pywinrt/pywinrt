@@ -38,6 +38,17 @@ enum Windows.Media.Devices.AdvancedPhotoMode python_type
     py AdvancedPhotoMode
     signature enum(Windows.Media.Devices.AdvancedPhotoMode;i4)
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Devices.ModuleCommandResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ModuleCommandResult]
+    guid cb786404-f2e8-5e0b-bf12-39e31483cfae
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Devices.ModuleCommandResult;{520d1eb4-1374-4c7d-b1e4-39dcdf3eae4e}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Devices.ModuleCommandResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Devices.ModuleCommandResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Media.Devices.AudioDeviceController python_type
     py AudioDeviceController
     signature rc(Windows.Media.Devices.AudioDeviceController;{edd4a388-79c7-4f7c-90e8-ef934b21580a})
@@ -700,10 +711,34 @@ interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8
 interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9
     guid 8bdca95d-0255-51bc-a10d-5a169ec1625a
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Devices.ModuleCommandResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Devices.ModuleCommandResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ModuleCommandResult]
     guid 2e1f3d72-a58d-5b0a-b42d-3660c04cfeeb
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Devices.ModuleCommandResult;{520d1eb4-1374-4c7d-b1e4-39dcdf3eae4e}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Devices.ModuleCommandResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Devices.ModuleCommandResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Devices.ModuleCommandResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Devices.ModuleCommandResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Devices.ModuleCommandResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Devices.ModuleCommandResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Devices.ModuleCommandResult return
 
 interface Windows.Media.Devices.IAudioDeviceController
     guid edd4a388-79c7-4f7c-90e8-ef934b21580a
@@ -797,10 +832,485 @@ interface Windows.Media.Devices.IIsoSpeedControl
 interface Windows.Media.Devices.IIsoSpeedControl2
     guid 6f1578f2-6d77-4f8a-8c2f-6130b6395053
 
-interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.RegionOfInterest> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.AdvancedPhotoMode> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AdvancedPhotoMode]
+    guid 7d090784-70a9-570c-be82-0d0890318975
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Media.Devices.AdvancedPhotoMode;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.AdvancedPhotoMode
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.AdvancedPhotoMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AdvancedPhotoMode> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.AudioDeviceModule> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AudioDeviceModule]
+    guid 7eeb51c3-d70e-548a-85c2-3cf71b4a124c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Devices.AudioDeviceModule;{86cfac36-47c1-4b33-9852-8773ec4be123}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.AudioDeviceModule
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.AudioDeviceModule> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AudioDeviceModule> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.AutoFocusRange> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AutoFocusRange]
+    guid 751664c6-f8d6-50a3-ab80-137c6d908c55
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Media.Devices.AutoFocusRange;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.AutoFocusRange
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.AutoFocusRange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AutoFocusRange> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.CaptureSceneMode> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[CaptureSceneMode]
+    guid 16d26b98-2cbc-52f0-ab64-1723714418e9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Media.Devices.CaptureSceneMode;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.CaptureSceneMode
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.CaptureSceneMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.CaptureSceneMode> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.DigitalWindowCapability> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DigitalWindowCapability]
+    guid a4f28d49-fb50-5c0d-ba48-6695e4612500
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Devices.DigitalWindowCapability;{d78bad2c-f721-5244-a196-b56ccbec606c}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.DigitalWindowCapability
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.DigitalWindowCapability> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.DigitalWindowCapability> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.FocusMode> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[FocusMode]
+    guid 561bc21f-4ae2-580a-a216-0ad48f373a4c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Media.Devices.FocusMode;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.FocusMode
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.FocusMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusMode> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.FocusPreset> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[FocusPreset]
+    guid 26ba711b-3a32-5216-bc34-61ecafbebdc1
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Media.Devices.FocusPreset;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.FocusPreset
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.FocusPreset> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusPreset> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.HdrVideoMode> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[HdrVideoMode]
+    guid 1d9679a7-2d06-5294-ac67-f9cd3561dcb8
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Media.Devices.HdrVideoMode;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.HdrVideoMode
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.HdrVideoMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.HdrVideoMode> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.InfraredTorchMode> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[InfraredTorchMode]
+    guid 58a4b7b6-36c3-5541-b383-3690d7293c10
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Media.Devices.InfraredTorchMode;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.InfraredTorchMode
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.InfraredTorchMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.InfraredTorchMode> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.IsoSpeedPreset> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IsoSpeedPreset]
+    guid 94839abe-9712-545a-a94d-a567a3e8dfb7
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Media.Devices.IsoSpeedPreset;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.IsoSpeedPreset
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.IsoSpeedPreset> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.IsoSpeedPreset> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.ManualFocusDistance> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ManualFocusDistance]
+    guid cf8cbeb1-2a4c-522d-962f-84c31a598d68
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Media.Devices.ManualFocusDistance;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.ManualFocusDistance
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.ManualFocusDistance> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ManualFocusDistance> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.OpticalImageStabilizationMode> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[OpticalImageStabilizationMode]
+    guid 323d7734-94c2-544d-a560-56560fe68819
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Media.Devices.OpticalImageStabilizationMode;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.OpticalImageStabilizationMode
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.OpticalImageStabilizationMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.OpticalImageStabilizationMode> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.RegionOfInterest> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[RegionOfInterest]
     guid d73144c7-9d75-5dfb-8040-626202dcf454
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Devices.RegionOfInterest;{e5ecc834-ce66-4e05-a78f-cf391a5ec2d1}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Media.Devices.RegionOfInterest
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.RegionOfInterest> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.RegionOfInterest> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.VideoTemporalDenoisingMode> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[VideoTemporalDenoisingMode]
+    guid caf26629-ee84-5d4c-ae37-9dc4b26978eb
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Media.Devices.VideoTemporalDenoisingMode;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.VideoTemporalDenoisingMode
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.VideoTemporalDenoisingMode> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.ZoomTransitionMode> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ZoomTransitionMode]
+    guid db656915-8fac-5fb2-98e0-0e97421656c5
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Media.Devices.ZoomTransitionMode;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.ZoomTransitionMode
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.ZoomTransitionMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ZoomTransitionMode> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.MediaProperties.IMediaEncodingProperties> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IMediaEncodingProperties]
+    guid d7fc75d5-3492-5bbb-9b34-dac3e24e79d0
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{b4002af6-acd4-4e5a-a24b-5d7498a8b8c4})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.MediaProperties.IMediaEncodingProperties
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.IMediaEncodingProperties> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AdvancedPhotoMode> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AdvancedPhotoMode]
+    guid e6d0bc9d-e1cb-5ed0-8ede-7d037bcc2e07
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Media.Devices.AdvancedPhotoMode;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.AdvancedPhotoMode
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AdvancedPhotoMode> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Media.Devices.AdvancedPhotoMode return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AdvancedPhotoMode> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AdvancedPhotoMode> shape=117 reverse=101
+            fill_array enum32 type=Windows.Media.Devices.AdvancedPhotoMode name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AdvancedPhotoMode> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AudioDeviceModule> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AudioDeviceModule]
+    guid b4cbbfb7-9851-56c9-839d-a10a8b1bb234
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Devices.AudioDeviceModule;{86cfac36-47c1-4b33-9852-8773ec4be123}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.AudioDeviceModule
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AudioDeviceModule> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Devices.AudioDeviceModule return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AudioDeviceModule> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AudioDeviceModule> shape=117 reverse=101
+            fill_array class type=Windows.Media.Devices.AudioDeviceModule name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AudioDeviceModule> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AutoFocusRange> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AutoFocusRange]
+    guid 07489ac5-3c71-59c6-b7dc-7f21341c2f71
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Media.Devices.AutoFocusRange;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.AutoFocusRange
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AutoFocusRange> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Media.Devices.AutoFocusRange return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AutoFocusRange> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AutoFocusRange> shape=117 reverse=101
+            fill_array enum32 type=Windows.Media.Devices.AutoFocusRange name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AutoFocusRange> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.CaptureSceneMode> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[CaptureSceneMode]
+    guid aafa6d7a-2f7f-5dd7-aa0a-265731a2b3b3
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Media.Devices.CaptureSceneMode;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.CaptureSceneMode
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.CaptureSceneMode> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Media.Devices.CaptureSceneMode return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.CaptureSceneMode> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.CaptureSceneMode> shape=117 reverse=101
+            fill_array enum32 type=Windows.Media.Devices.CaptureSceneMode name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.CaptureSceneMode> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.DigitalWindowCapability> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DigitalWindowCapability]
+    guid d1780c06-073e-5075-99e2-e12649268c03
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Devices.DigitalWindowCapability;{d78bad2c-f721-5244-a196-b56ccbec606c}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.DigitalWindowCapability
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.DigitalWindowCapability> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Devices.DigitalWindowCapability return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.DigitalWindowCapability> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.DigitalWindowCapability> shape=117 reverse=101
+            fill_array class type=Windows.Media.Devices.DigitalWindowCapability name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.DigitalWindowCapability> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusMode> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[FocusMode]
+    guid f9a43cd4-b300-541f-af79-3de3400e16af
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Media.Devices.FocusMode;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.FocusMode
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusMode> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Media.Devices.FocusMode return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusMode> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusMode> shape=117 reverse=101
+            fill_array enum32 type=Windows.Media.Devices.FocusMode name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusMode> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusPreset> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[FocusPreset]
+    guid d3ebc8e9-f0c5-51c0-bb86-bdea0a6946fb
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Media.Devices.FocusPreset;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.FocusPreset
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusPreset> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Media.Devices.FocusPreset return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusPreset> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusPreset> shape=117 reverse=101
+            fill_array enum32 type=Windows.Media.Devices.FocusPreset name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusPreset> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.HdrVideoMode> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[HdrVideoMode]
+    guid 3db61d13-0f30-5d2d-99cb-30c7b9009878
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Media.Devices.HdrVideoMode;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.HdrVideoMode
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.HdrVideoMode> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Media.Devices.HdrVideoMode return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.HdrVideoMode> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.HdrVideoMode> shape=117 reverse=101
+            fill_array enum32 type=Windows.Media.Devices.HdrVideoMode name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.HdrVideoMode> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.InfraredTorchMode> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[InfraredTorchMode]
+    guid 42a9e83e-1786-57f4-906e-2f9b6f9f849a
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Media.Devices.InfraredTorchMode;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.InfraredTorchMode
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.InfraredTorchMode> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Media.Devices.InfraredTorchMode return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.InfraredTorchMode> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.InfraredTorchMode> shape=117 reverse=101
+            fill_array enum32 type=Windows.Media.Devices.InfraredTorchMode name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.InfraredTorchMode> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.IsoSpeedPreset> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IsoSpeedPreset]
+    guid 1b33af76-980b-5348-916a-793f61b555a0
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Media.Devices.IsoSpeedPreset;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.IsoSpeedPreset
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.IsoSpeedPreset> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Media.Devices.IsoSpeedPreset return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.IsoSpeedPreset> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.IsoSpeedPreset> shape=117 reverse=101
+            fill_array enum32 type=Windows.Media.Devices.IsoSpeedPreset name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.IsoSpeedPreset> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ManualFocusDistance> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ManualFocusDistance]
+    guid b02944e1-f649-511e-80dd-2e2b20379deb
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Media.Devices.ManualFocusDistance;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.ManualFocusDistance
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ManualFocusDistance> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Media.Devices.ManualFocusDistance return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ManualFocusDistance> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ManualFocusDistance> shape=117 reverse=101
+            fill_array enum32 type=Windows.Media.Devices.ManualFocusDistance name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ManualFocusDistance> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.OpticalImageStabilizationMode> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[OpticalImageStabilizationMode]
+    guid 4a165d46-cf19-5a03-bb54-63fc2b4ed39b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Media.Devices.OpticalImageStabilizationMode;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.OpticalImageStabilizationMode
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.OpticalImageStabilizationMode> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Media.Devices.OpticalImageStabilizationMode return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.OpticalImageStabilizationMode> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.OpticalImageStabilizationMode> shape=117 reverse=101
+            fill_array enum32 type=Windows.Media.Devices.OpticalImageStabilizationMode name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.OpticalImageStabilizationMode> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.RegionOfInterest> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[RegionOfInterest]
+    guid 8eb80e4e-9691-594f-8b3d-f52ecc0f7837
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Devices.RegionOfInterest;{e5ecc834-ce66-4e05-a78f-cf391a5ec2d1}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.RegionOfInterest
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.RegionOfInterest> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Devices.RegionOfInterest return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.RegionOfInterest> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.RegionOfInterest> shape=117 reverse=101
+            fill_array class type=Windows.Media.Devices.RegionOfInterest name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.RegionOfInterest> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.VideoTemporalDenoisingMode> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[VideoTemporalDenoisingMode]
+    guid 9b062552-e75c-515e-a2a4-1b081b640614
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Media.Devices.VideoTemporalDenoisingMode;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.VideoTemporalDenoisingMode
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Media.Devices.VideoTemporalDenoisingMode return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=117 reverse=101
+            fill_array enum32 type=Windows.Media.Devices.VideoTemporalDenoisingMode name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ZoomTransitionMode> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ZoomTransitionMode]
+    guid 80eb468a-fdc4-5c89-99b8-8d476264e211
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Media.Devices.ZoomTransitionMode;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.ZoomTransitionMode
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ZoomTransitionMode> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Media.Devices.ZoomTransitionMode return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ZoomTransitionMode> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ZoomTransitionMode> shape=117 reverse=101
+            fill_array enum32 type=Windows.Media.Devices.ZoomTransitionMode name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ZoomTransitionMode> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.IMediaEncodingProperties> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IMediaEncodingProperties]
+    guid 7c094aec-c8f3-5f49-99c7-b66d8414200e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{b4002af6-acd4-4e5a-a24b-5d7498a8b8c4})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.MediaProperties.IMediaEncodingProperties
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=4 reverse=22 role=current
+            out interface type=Windows.Media.MediaProperties.IMediaEncodingProperties return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=117 reverse=101
+            fill_array interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Media.Devices.IKeypadPressedEventArgs
     guid d3a43900-b4fa-49cd-9442-89af6568f601
@@ -854,14 +1364,260 @@ interface Windows.Media.Devices.IRedialRequestedEventArgs
     guid 7eb55209-76ab-4c31-b40e-4b58379d580c
 
 interface Windows.Foundation.IReference<System.UInt32> concrete
+    py winrt.windows.foundation._IReference[UInt32]
     guid 513ef3af-e784-5325-a91e-97c2b8111cf3
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.UInt32
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.UInt32> shape=4 reverse=22 role=value
+            out uint32 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Media.Devices.ManualFocusDistance> concrete
+    py winrt.windows.foundation._IReference[ManualFocusDistance]
     guid b0060b8a-1105-5ad4-963d-f6cf1905d349
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Media.Devices.ManualFocusDistance;i4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Media.Devices.ManualFocusDistance
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Media.Devices.ManualFocusDistance> shape=4 reverse=22 role=value
+            out enum32 type=Windows.Media.Devices.ManualFocusDistance return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Media.Devices.IRegionOfInterest
     guid e5ecc834-ce66-4e05-a78f-cf391a5ec2d1
@@ -878,80 +1634,425 @@ interface Windows.Media.Devices.ISceneModeControl
 interface Windows.Media.Devices.ITorchControl
     guid a6053665-8250-416c-919a-724296afa306
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AdvancedPhotoMode> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AdvancedPhotoMode> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AdvancedPhotoMode]
     guid d05843b6-03c8-523e-b6fb-1fcb03218a54
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.AdvancedPhotoMode;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.AdvancedPhotoMode>
     argument Windows.Media.Devices.AdvancedPhotoMode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AdvancedPhotoMode> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.AdvancedPhotoMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AdvancedPhotoMode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AdvancedPhotoMode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Media.Devices.AdvancedPhotoMode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AdvancedPhotoMode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Media.Devices.AdvancedPhotoMode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AdvancedPhotoMode> shape=117 reverse=66
+            in enum32 type=Windows.Media.Devices.AdvancedPhotoMode name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AudioDeviceModule> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AudioDeviceModule> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AudioDeviceModule]
     guid b9f55617-48ec-5ad7-95ca-33395284f28b
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Devices.AudioDeviceModule;{86cfac36-47c1-4b33-9852-8773ec4be123}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.AudioDeviceModule>
     argument Windows.Media.Devices.AudioDeviceModule
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AudioDeviceModule> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.AudioDeviceModule> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AudioDeviceModule> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AudioDeviceModule> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Devices.AudioDeviceModule return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AudioDeviceModule> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Devices.AudioDeviceModule name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AudioDeviceModule> shape=117 reverse=66
+            in class type=Windows.Media.Devices.AudioDeviceModule name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AutoFocusRange> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AutoFocusRange> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AutoFocusRange]
     guid 5df64825-c9e1-525f-9aeb-3c0f5f805f26
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.AutoFocusRange;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.AutoFocusRange>
     argument Windows.Media.Devices.AutoFocusRange
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AutoFocusRange> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.AutoFocusRange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AutoFocusRange> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AutoFocusRange> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Media.Devices.AutoFocusRange return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AutoFocusRange> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Media.Devices.AutoFocusRange name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AutoFocusRange> shape=117 reverse=66
+            in enum32 type=Windows.Media.Devices.AutoFocusRange name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.CaptureSceneMode> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.CaptureSceneMode> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[CaptureSceneMode]
     guid 9b915d69-e718-5b48-bb94-54bdf3737ea5
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.CaptureSceneMode;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.CaptureSceneMode>
     argument Windows.Media.Devices.CaptureSceneMode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.CaptureSceneMode> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.CaptureSceneMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.CaptureSceneMode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.CaptureSceneMode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Media.Devices.CaptureSceneMode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.CaptureSceneMode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Media.Devices.CaptureSceneMode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.CaptureSceneMode> shape=117 reverse=66
+            in enum32 type=Windows.Media.Devices.CaptureSceneMode name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.DigitalWindowCapability> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.DigitalWindowCapability> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[DigitalWindowCapability]
     guid 18cb0c91-2753-542f-a33a-e4f9410f923b
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Devices.DigitalWindowCapability;{d78bad2c-f721-5244-a196-b56ccbec606c}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.DigitalWindowCapability>
     argument Windows.Media.Devices.DigitalWindowCapability
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.DigitalWindowCapability> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.DigitalWindowCapability> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.DigitalWindowCapability> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.DigitalWindowCapability> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Devices.DigitalWindowCapability return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.DigitalWindowCapability> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Devices.DigitalWindowCapability name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.DigitalWindowCapability> shape=117 reverse=66
+            in class type=Windows.Media.Devices.DigitalWindowCapability name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusMode> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusMode> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[FocusMode]
     guid c877975c-f3c3-5b3d-93e4-5787be9b7f58
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.FocusMode;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.FocusMode>
     argument Windows.Media.Devices.FocusMode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusMode> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.FocusMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusMode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusMode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Media.Devices.FocusMode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusMode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Media.Devices.FocusMode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusMode> shape=117 reverse=66
+            in enum32 type=Windows.Media.Devices.FocusMode name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusPreset> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusPreset> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[FocusPreset]
     guid d8a495e3-d7d4-5e9f-a9c2-6b250655a2e0
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.FocusPreset;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.FocusPreset>
     argument Windows.Media.Devices.FocusPreset
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusPreset> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.FocusPreset> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusPreset> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusPreset> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Media.Devices.FocusPreset return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusPreset> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Media.Devices.FocusPreset name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusPreset> shape=117 reverse=66
+            in enum32 type=Windows.Media.Devices.FocusPreset name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVideoMode> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVideoMode> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[HdrVideoMode]
     guid ad0a4bbd-7630-53a4-aa9b-35a8c7d4958c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.HdrVideoMode;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.HdrVideoMode>
     argument Windows.Media.Devices.HdrVideoMode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVideoMode> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.HdrVideoMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.HdrVideoMode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVideoMode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Media.Devices.HdrVideoMode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVideoMode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Media.Devices.HdrVideoMode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVideoMode> shape=117 reverse=66
+            in enum32 type=Windows.Media.Devices.HdrVideoMode name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.InfraredTorchMode> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.InfraredTorchMode> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[InfraredTorchMode]
     guid b5af65de-bdf4-5155-b2b6-3139978e9c24
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.InfraredTorchMode;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.InfraredTorchMode>
     argument Windows.Media.Devices.InfraredTorchMode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.InfraredTorchMode> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.InfraredTorchMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.InfraredTorchMode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.InfraredTorchMode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Media.Devices.InfraredTorchMode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.InfraredTorchMode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Media.Devices.InfraredTorchMode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.InfraredTorchMode> shape=117 reverse=66
+            in enum32 type=Windows.Media.Devices.InfraredTorchMode name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.IsoSpeedPreset> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.IsoSpeedPreset> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IsoSpeedPreset]
     guid ef6c9fe3-06f9-5eff-98a8-917d9644c946
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.IsoSpeedPreset;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.IsoSpeedPreset>
     argument Windows.Media.Devices.IsoSpeedPreset
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.IsoSpeedPreset> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.IsoSpeedPreset> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.IsoSpeedPreset> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.IsoSpeedPreset> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Media.Devices.IsoSpeedPreset return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.IsoSpeedPreset> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Media.Devices.IsoSpeedPreset name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.IsoSpeedPreset> shape=117 reverse=66
+            in enum32 type=Windows.Media.Devices.IsoSpeedPreset name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ManualFocusDistance> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ManualFocusDistance> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ManualFocusDistance]
     guid 85f7663b-5467-5736-8d34-34395aa6d123
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.ManualFocusDistance;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.ManualFocusDistance>
     argument Windows.Media.Devices.ManualFocusDistance
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ManualFocusDistance> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.ManualFocusDistance> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ManualFocusDistance> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ManualFocusDistance> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Media.Devices.ManualFocusDistance return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ManualFocusDistance> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Media.Devices.ManualFocusDistance name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ManualFocusDistance> shape=117 reverse=66
+            in enum32 type=Windows.Media.Devices.ManualFocusDistance name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.OpticalImageStabilizationMode> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.OpticalImageStabilizationMode> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[OpticalImageStabilizationMode]
     guid 8c2658d8-acaa-5a80-b259-1ba0697c6138
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.OpticalImageStabilizationMode;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.OpticalImageStabilizationMode>
     argument Windows.Media.Devices.OpticalImageStabilizationMode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.OpticalImageStabilizationMode> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.OpticalImageStabilizationMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.OpticalImageStabilizationMode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.OpticalImageStabilizationMode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Media.Devices.OpticalImageStabilizationMode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.OpticalImageStabilizationMode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Media.Devices.OpticalImageStabilizationMode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.OpticalImageStabilizationMode> shape=117 reverse=66
+            in enum32 type=Windows.Media.Devices.OpticalImageStabilizationMode name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.VideoTemporalDenoisingMode> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.VideoTemporalDenoisingMode> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[VideoTemporalDenoisingMode]
     guid 094d5da9-91cc-55d8-b7b7-52e597156987
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.VideoTemporalDenoisingMode;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.VideoTemporalDenoisingMode>
     argument Windows.Media.Devices.VideoTemporalDenoisingMode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.VideoTemporalDenoisingMode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Media.Devices.VideoTemporalDenoisingMode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Media.Devices.VideoTemporalDenoisingMode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=117 reverse=66
+            in enum32 type=Windows.Media.Devices.VideoTemporalDenoisingMode name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ZoomTransitionMode> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ZoomTransitionMode> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ZoomTransitionMode]
     guid 4d556155-d021-5a46-9a1c-f401d61b8529
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Media.Devices.ZoomTransitionMode;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.ZoomTransitionMode>
     argument Windows.Media.Devices.ZoomTransitionMode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ZoomTransitionMode> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.ZoomTransitionMode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ZoomTransitionMode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ZoomTransitionMode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Media.Devices.ZoomTransitionMode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ZoomTransitionMode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Media.Devices.ZoomTransitionMode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ZoomTransitionMode> shape=117 reverse=66
+            in enum32 type=Windows.Media.Devices.ZoomTransitionMode name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.IMediaEncodingProperties> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.IMediaEncodingProperties> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IMediaEncodingProperties]
     guid 0f6c3b8b-5818-5cbf-bf26-6616bfc308c4
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{b4002af6-acd4-4e5a-a24b-5d7498a8b8c4})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.MediaProperties.IMediaEncodingProperties>
     argument Windows.Media.MediaProperties.IMediaEncodingProperties
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.IMediaEncodingProperties> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Media.MediaProperties.IMediaEncodingProperties return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=117 reverse=66
+            in interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Media.Devices.IVideoDeviceController
     guid 99555575-2e2e-40b8-b6c7-f82d10013210
@@ -1460,28 +2561,52 @@ class Windows.Media.Devices.TorchControl python_type
             out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<System.Object,Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Object, DefaultAudioCaptureDeviceChangedEventArgs]
     guid 97d07327-2c78-57bc-98e6-a24cd024cf5b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);rc(Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs;{110f882f-1c05-4657-a18e-47c9b69f07ab}))
+    base Windows.Foundation.TypedEventHandler
     argument System.Object
     argument Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<System.Object,Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Object, DefaultAudioRenderDeviceChangedEventArgs]
     guid fd732aca-dafc-5b7d-bf72-b560b78d260c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);rc(Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs;{110f882f-1c05-4657-a18e-47c9b69f07ab}))
+    base Windows.Foundation.TypedEventHandler
     argument System.Object
     argument Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Devices.AudioDeviceModulesManager,Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[AudioDeviceModulesManager, AudioDeviceModuleNotificationEventArgs]
     guid b2f6b1fd-7092-5724-b2ce-91b1176e80e1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Devices.AudioDeviceModulesManager;{6aa40c4d-960a-4d1c-b318-0022604547ed});rc(Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs;{e3e3ccaf-224c-48be-956b-9a13134e96e8}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Devices.AudioDeviceModulesManager
     argument Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Devices.AudioDeviceModulesManager name=sender
+            in class type=Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Devices.CameraOcclusionInfo,Windows.Media.Devices.CameraOcclusionStateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CameraOcclusionInfo, CameraOcclusionStateChangedEventArgs]
     guid 71561417-e06e-54e7-b25e-39213c4e65d6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Devices.CameraOcclusionInfo;{af6c4ad0-a84d-5db6-be58-a5da21cfe011});rc(Windows.Media.Devices.CameraOcclusionStateChangedEventArgs;{8512d848-c0de-57ca-a1ca-fb2c3d23df55}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Devices.CameraOcclusionInfo
     argument Windows.Media.Devices.CameraOcclusionStateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Devices.CameraOcclusionInfo name=sender
+            in class type=Windows.Media.Devices.CameraOcclusionStateChangedEventArgs name=args
 
 class Windows.Media.Devices.VideoDeviceController python_type
     py VideoDeviceController
@@ -1808,12 +2933,60 @@ class System.UInt32 external
 enum Windows.Devices.Enumeration.Panel external
     py winrt.windows.devices.enumeration.Panel
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 enum Windows.Media.Capture.MediaCaptureDeviceExclusiveControlReleaseMode external
     py winrt.windows.media.capture.MediaCaptureDeviceExclusiveControlReleaseMode

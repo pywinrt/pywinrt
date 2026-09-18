@@ -2,25 +2,165 @@ format 4.0
 generator 0.0.0
 namespace Windows.Security.DataProtection
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataBufferUnprotectResult> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.DataProtection.UserDataBufferUnprotectResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UserDataBufferUnprotectResult]
+    guid b7addeb1-3676-5199-a1fe-bd4f6023119f
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.DataProtection.UserDataBufferUnprotectResult;{8efd0e90-fa9a-46a4-a377-01cebf1e74d8}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.DataProtection.UserDataBufferUnprotectResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataBufferUnprotectResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UserDataStorageItemProtectionInfo]
+    guid aa8164da-d880-59f5-8093-664d052d74b5
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.DataProtection.UserDataStorageItemProtectionInfo;{5b6680f6-e87f-40a1-b19d-a6187a0c662f}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.DataProtection.UserDataStorageItemProtectionInfo
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UserDataStorageItemProtectionStatus]
+    guid 38402d5c-c584-52df-9aea-796867a66835
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Security.DataProtection.UserDataStorageItemProtectionStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.DataProtection.UserDataStorageItemProtectionStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IBuffer]
+    guid 51c3d2fd-b8a1-5620-b746-7ee6d533aca3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IBuffer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataBufferUnprotectResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UserDataBufferUnprotectResult]
     guid f876652d-ffe1-5c77-a691-2bdb404cfa6f
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.DataProtection.UserDataBufferUnprotectResult;{8efd0e90-fa9a-46a4-a377-01cebf1e74d8}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.DataProtection.UserDataBufferUnprotectResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataBufferUnprotectResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.DataProtection.UserDataBufferUnprotectResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataBufferUnprotectResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.DataProtection.UserDataBufferUnprotectResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataBufferUnprotectResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.DataProtection.UserDataBufferUnprotectResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UserDataStorageItemProtectionInfo]
     guid 28ff9352-5cb2-5f87-9f08-decacf4f59b3
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.DataProtection.UserDataStorageItemProtectionInfo;{5b6680f6-e87f-40a1-b19d-a6187a0c662f}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.DataProtection.UserDataStorageItemProtectionInfo
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.DataProtection.UserDataStorageItemProtectionInfo return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UserDataStorageItemProtectionStatus]
     guid e5c62dbd-e029-52e1-afd5-73f7a4223de6
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Security.DataProtection.UserDataStorageItemProtectionStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Security.DataProtection.UserDataStorageItemProtectionStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Security.DataProtection.UserDataStorageItemProtectionStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IBuffer]
     guid 3bee8834-b9a7-5a80-a746-5ef097227878
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IBuffer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IBuffer return
 
 interface Windows.Security.DataProtection.IUserDataAvailabilityStateChangedEventArgs
     guid a76582c9-06a2-4273-a803-834c9f87fbeb
@@ -38,10 +178,16 @@ interface Windows.Security.DataProtection.IUserDataStorageItemProtectionInfo
     guid 5b6680f6-e87f-40a1-b19d-a6187a0c662f
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Security.DataProtection.UserDataProtectionManager,Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[UserDataProtectionManager, UserDataAvailabilityStateChangedEventArgs]
     guid 82965140-a327-568e-878f-663c2ca7c562
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Security.DataProtection.UserDataProtectionManager;{1f13237d-b42e-4a88-9480-0f240924c876});rc(Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs;{a76582c9-06a2-4273-a803-834c9f87fbeb}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Security.DataProtection.UserDataProtectionManager
     argument Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Security.DataProtection.UserDataProtectionManager name=sender
+            in class type=Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs name=args
 
 enum Windows.Security.DataProtection.UserDataAvailability python_type
     py UserDataAvailability
@@ -127,8 +273,27 @@ enum Windows.Security.DataProtection.UserDataStorageItemProtectionStatus python_
     py UserDataStorageItemProtectionStatus
     signature enum(Windows.Security.DataProtection.UserDataStorageItemProtectionStatus;i4)
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 interface Windows.Storage.IStorageItem external
     py winrt.windows.storage._IStorageItem

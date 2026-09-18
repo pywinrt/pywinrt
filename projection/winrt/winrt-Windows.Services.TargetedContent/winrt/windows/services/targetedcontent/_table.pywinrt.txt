@@ -2,32 +2,573 @@ format 4.0
 generator 0.0.0
 namespace Windows.Services.TargetedContent
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentContainer> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.TargetedContent.TargetedContentContainer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[TargetedContentContainer]
+    guid 8fc6bc2a-26ce-50b5-97bb-fcc80ca0871d
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.TargetedContent.TargetedContentContainer;{bc2494c9-8837-47c2-850f-d79d64595926}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Services.TargetedContent.TargetedContentContainer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentContainer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.TargetedContent.TargetedContentSubscription> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[TargetedContentSubscription]
+    guid e4188c71-5a8e-57ec-b0de-1d314fb3e2cf
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.TargetedContent.TargetedContentSubscription;{882c2c49-c652-4c7a-acad-1f7fa2986c73}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Services.TargetedContent.TargetedContentSubscription
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentSubscription> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IRandomAccessStreamWithContentType]
+    guid 3dddecf4-1d39-58e8-83b1-dbed541c7f35
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{cc254827-4b3d-438f-9232-10c76bc7e038})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IRandomAccessStreamWithContentType
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentContainer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[TargetedContentContainer]
     guid e757e0fc-0136-5f63-97b8-6a96b8d0601e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.TargetedContent.TargetedContentContainer;{bc2494c9-8837-47c2-850f-d79d64595926}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Services.TargetedContent.TargetedContentContainer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentContainer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.TargetedContent.TargetedContentContainer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentContainer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.TargetedContent.TargetedContentContainer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentContainer> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.TargetedContent.TargetedContentContainer return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentSubscription> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentSubscription> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[TargetedContentSubscription]
     guid 46f16f4b-8ec1-5c4f-b1f5-a7e7acd63366
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.TargetedContent.TargetedContentSubscription;{882c2c49-c652-4c7a-acad-1f7fa2986c73}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Services.TargetedContent.TargetedContentSubscription
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentSubscription> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.TargetedContent.TargetedContentSubscription> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentSubscription> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.TargetedContent.TargetedContentSubscription> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentSubscription> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.TargetedContent.TargetedContentSubscription return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IRandomAccessStreamWithContentType]
     guid c4a57c5e-32b0-55b3-ad13-ce1c23041ed6
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{cc254827-4b3d-438f-9232-10c76bc7e038})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IRandomAccessStreamWithContentType
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamWithContentType> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType return
 
-interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
-    guid f6d1f700-49c2-52ae-8154-826f9908773c
-    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<System.Boolean> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Boolean]
+    guid 30160817-1d7d-54e9-99db-d7636266a476
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};b1)
+    base Windows.Foundation.Collections.IIterable
+    argument System.Boolean
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Boolean> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Boolean> return
+
+interface Windows.Foundation.Collections.IIterable<System.Double> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Double]
+    guid c738964e-9c64-5bce-b5ce-61e9a282ec4a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};f8)
+    base Windows.Foundation.Collections.IIterable
+    argument System.Double
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Double> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Double> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, TargetedContentValue]]
+    guid 45a020d8-fe49-5720-950b-3cceab655531
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Services.TargetedContent.TargetedContentValue;{aafde4b3-4215-4bf8-867f-43f04865f9bf})))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Uri]
+    guid b0d63b78-78ad-5e31-b6d8-e32a0e16c447
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Uri
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentAction> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TargetedContentAction]
+    guid cf05b497-3afd-5d00-859e-9fbd1a36d576
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.TargetedContent.TargetedContentAction;{d75b691e-6cd6-4ca0-9d8f-4728b0b7e6b6}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.TargetedContent.TargetedContentAction
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentAction> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentAction> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentCollection> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TargetedContentCollection]
+    guid 2049f813-37ee-5158-9996-709859f0ce49
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.TargetedContent.TargetedContentCollection;{2d4b66c5-f163-44ba-9f6e-e1a4c2bb559d}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.TargetedContent.TargetedContentCollection
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentCollection> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentCollection> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentFile> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TargetedContentFile]
+    guid 5f65d649-ccbd-5728-a85b-d3ff92fca962
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.TargetedContent.TargetedContentFile;{33ee3134-1dd6-4e3a-8067-d1c162e8642b}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.TargetedContent.TargetedContentFile
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentFile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentFile> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentImage> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TargetedContentImage]
+    guid efadb6bf-af18-5af9-a509-19881bc586f5
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.TargetedContent.TargetedContentImage;{a7a585d9-779f-4b1e-bbb1-8eaf53fbeab2}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.TargetedContent.TargetedContentImage
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentImage> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentImage> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentItem> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TargetedContentItem]
+    guid 03f38fb6-54e6-5bf1-913b-9510fec8be1f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.TargetedContent.TargetedContentItem;{38168dc4-276c-4c32-96ba-565c6e406e74}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.TargetedContent.TargetedContentItem
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentItem> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.Boolean> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Boolean]
+    guid 740a0296-a535-572a-bf0b-17c18ff71fe6
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};b1)
+    base Windows.Foundation.Collections.IIterator
+    argument System.Boolean
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Boolean> shape=4 reverse=22 role=current
+            out boolean return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Boolean> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Boolean> shape=117 reverse=101
+            fill_array boolean name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Boolean> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.Double> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Double]
+    guid 638a2cf4-f474-5318-9055-141cb909ac4b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};f8)
+    base Windows.Foundation.Collections.IIterator
+    argument System.Double
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Double> shape=4 reverse=22 role=current
+            out double return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Double> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Double> shape=117 reverse=101
+            fill_array double name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Double> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, TargetedContentValue]]
+    guid b97e682b-6e0a-5eea-b70b-25795b28e937
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Services.TargetedContent.TargetedContentValue;{aafde4b3-4215-4bf8-867f-43f04865f9bf})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Uri]
+    guid 1c157d0f-5efe-5cec-bbd6-0c6ce9af07a5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Uri
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=22 role=current
+            out class type=Windows.Foundation.Uri return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=117 reverse=101
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentAction> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TargetedContentAction]
+    guid 79656935-5813-5aa6-8e69-627a0d85088f
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.TargetedContent.TargetedContentAction;{d75b691e-6cd6-4ca0-9d8f-4728b0b7e6b6}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.TargetedContent.TargetedContentAction
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentAction> shape=4 reverse=22 role=current
+            out class type=Windows.Services.TargetedContent.TargetedContentAction return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentAction> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentAction> shape=117 reverse=101
+            fill_array class type=Windows.Services.TargetedContent.TargetedContentAction name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentAction> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentCollection> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TargetedContentCollection]
+    guid 6093b8fd-6d5d-53cd-b497-7b4540f10857
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.TargetedContent.TargetedContentCollection;{2d4b66c5-f163-44ba-9f6e-e1a4c2bb559d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.TargetedContent.TargetedContentCollection
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentCollection> shape=4 reverse=22 role=current
+            out class type=Windows.Services.TargetedContent.TargetedContentCollection return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentCollection> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentCollection> shape=117 reverse=101
+            fill_array class type=Windows.Services.TargetedContent.TargetedContentCollection name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentCollection> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentFile> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TargetedContentFile]
+    guid 6a957f20-ed25-5019-90e7-9890d4f912f2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.TargetedContent.TargetedContentFile;{33ee3134-1dd6-4e3a-8067-d1c162e8642b}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.TargetedContent.TargetedContentFile
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentFile> shape=4 reverse=22 role=current
+            out class type=Windows.Services.TargetedContent.TargetedContentFile return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentFile> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentFile> shape=117 reverse=101
+            fill_array class type=Windows.Services.TargetedContent.TargetedContentFile name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentFile> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentImage> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TargetedContentImage]
+    guid a807b298-9e2f-5673-bcf6-1e35feba0647
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.TargetedContent.TargetedContentImage;{a7a585d9-779f-4b1e-bbb1-8eaf53fbeab2}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.TargetedContent.TargetedContentImage
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentImage> shape=4 reverse=22 role=current
+            out class type=Windows.Services.TargetedContent.TargetedContentImage return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentImage> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentImage> shape=117 reverse=101
+            fill_array class type=Windows.Services.TargetedContent.TargetedContentImage name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentImage> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentItem> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TargetedContentItem]
+    guid 50109d8e-f711-5076-8309-e4e230ef7e85
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.TargetedContent.TargetedContentItem;{38168dc4-276c-4c32-96ba-565c6e406e74}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.TargetedContent.TargetedContentItem
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentItem> shape=4 reverse=22 role=current
+            out class type=Windows.Services.TargetedContent.TargetedContentItem return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentItem> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentItem> shape=117 reverse=101
+            fill_array class type=Windows.Services.TargetedContent.TargetedContentItem name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentItem> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+            out string return
 
-interface Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> concrete
-    guid 19a87e94-ab75-574f-a226-8726a0d8eb3e
-    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Services.TargetedContent.TargetedContentValue;{aafde4b3-4215-4bf8-867f-43f04865f9bf}))
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, TargetedContentValue]
+    guid 35cf9903-ade5-565d-a011-be3173d09215
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.Services.TargetedContent.TargetedContentValue;{aafde4b3-4215-4bf8-867f-43f04865f9bf}))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Windows.Services.TargetedContent.TargetedContentValue
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue> shape=4 reverse=43
+            out class type=Windows.Services.TargetedContent.TargetedContentValue return
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, String]
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    argument System.String
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=117 reverse=125 role=insert
+            in string name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=141 role=remove
+            in string name=key
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, String]
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    argument System.String
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, TargetedContentValue]
+    guid 19a87e94-ab75-574f-a226-8726a0d8eb3e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.Services.TargetedContent.TargetedContentValue;{aafde4b3-4215-4bf8-867f-43f04865f9bf}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>>
+    argument System.String
+    argument Windows.Services.TargetedContent.TargetedContentValue
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> shape=51 reverse=24 role=lookup
+            in string name=key
+            out class type=Windows.Services.TargetedContent.TargetedContentValue return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> name=second
 
 interface Windows.Services.TargetedContent.ITargetedContentAction
     guid d75b691e-6cd6-4ca0-9d8f-4728b0b7e6b6
@@ -74,55 +615,309 @@ interface Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics
 interface Windows.Services.TargetedContent.ITargetedContentValue
     guid aafde4b3-4215-4bf8-867f-43f04865f9bf
 
-interface Windows.Foundation.Collections.IVector<System.String> concrete
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
     guid 98b9acc1-4b56-532e-ac73-03d5291cca90
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<System.Boolean> concrete
+interface Windows.Foundation.Collections.IVectorView<System.Boolean> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Boolean]
     guid 243a09cb-6f40-56af-a442-fe81431fbef5
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};b1)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Boolean>
     argument System.Boolean
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Boolean> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Boolean> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Boolean> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Boolean> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Boolean> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array boolean name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Boolean> shape=117 reverse=66
+            in boolean name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<System.Double> concrete
+interface Windows.Foundation.Collections.IVectorView<System.Double> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Double]
     guid af7586a8-6b21-5f61-bff1-1b682293ad96
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};f8)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Double>
     argument System.Double
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Double> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Double> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out double return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array double name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=106 reverse=59
+            in double name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Uri]
     guid 4b8385bd-a2cd-5ff1-bf74-7ea580423e50
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri>
     argument Windows.Foundation.Uri
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Foundation.Uri return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=117 reverse=66
+            in class type=Windows.Foundation.Uri name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TargetedContentAction]
     guid 4299bd84-e44e-5fcb-a465-e1bd434a317c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.TargetedContent.TargetedContentAction;{d75b691e-6cd6-4ca0-9d8f-4728b0b7e6b6}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentAction>
     argument Windows.Services.TargetedContent.TargetedContentAction
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentAction> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentAction> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.TargetedContent.TargetedContentAction return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.TargetedContent.TargetedContentAction name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> shape=117 reverse=66
+            in class type=Windows.Services.TargetedContent.TargetedContentAction name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TargetedContentCollection]
     guid cea4c859-8736-5c75-bb83-a686bf7f7c6f
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.TargetedContent.TargetedContentCollection;{2d4b66c5-f163-44ba-9f6e-e1a4c2bb559d}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentCollection>
     argument Windows.Services.TargetedContent.TargetedContentCollection
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentCollection> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentCollection> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.TargetedContent.TargetedContentCollection return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.TargetedContent.TargetedContentCollection name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> shape=117 reverse=66
+            in class type=Windows.Services.TargetedContent.TargetedContentCollection name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TargetedContentFile]
     guid ec0d80cb-9a87-5f0b-b6df-2c09b6310177
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.TargetedContent.TargetedContentFile;{33ee3134-1dd6-4e3a-8067-d1c162e8642b}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentFile>
     argument Windows.Services.TargetedContent.TargetedContentFile
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentFile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentFile> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.TargetedContent.TargetedContentFile return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.TargetedContent.TargetedContentFile name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> shape=117 reverse=66
+            in class type=Windows.Services.TargetedContent.TargetedContentFile name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TargetedContentImage]
     guid f55ac7c6-168d-5010-84cf-36bf451ede38
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.TargetedContent.TargetedContentImage;{a7a585d9-779f-4b1e-bbb1-8eaf53fbeab2}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentImage>
     argument Windows.Services.TargetedContent.TargetedContentImage
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentImage> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentImage> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.TargetedContent.TargetedContentImage return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.TargetedContent.TargetedContentImage name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> shape=117 reverse=66
+            in class type=Windows.Services.TargetedContent.TargetedContentImage name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TargetedContentItem]
     guid 31e3ed33-8554-5496-86a4-d78392204c8f
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.TargetedContent.TargetedContentItem;{38168dc4-276c-4c32-96ba-565c6e406e74}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentItem>
     argument Windows.Services.TargetedContent.TargetedContentItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.TargetedContent.TargetedContentItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.TargetedContent.TargetedContentItem return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.TargetedContent.TargetedContentItem name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> shape=117 reverse=66
+            in class type=Windows.Services.TargetedContent.TargetedContentItem name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Services.TargetedContent.TargetedContentAction python_type
     py TargetedContentAction
@@ -432,22 +1227,40 @@ enum Windows.Services.TargetedContent.TargetedContentValueKind python_type
     signature enum(Windows.Services.TargetedContent.TargetedContentValueKind;i4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TargetedContentSubscription, TargetedContentAvailabilityChangedEventArgs]
     guid 99929904-138a-59ac-a11a-fe0042f0fd50
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.TargetedContent.TargetedContentSubscription;{882c2c49-c652-4c7a-acad-1f7fa2986c73});rc(Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs;{e0f59d26-5927-4450-965c-1ceb7becde65}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Services.TargetedContent.TargetedContentSubscription
     argument Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Services.TargetedContent.TargetedContentSubscription name=sender
+            in class type=Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TargetedContentSubscription, TargetedContentChangedEventArgs]
     guid ef11d751-9d56-580d-8a9f-51ae7e8036e3
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.TargetedContent.TargetedContentSubscription;{882c2c49-c652-4c7a-acad-1f7fa2986c73});rc(Windows.Services.TargetedContent.TargetedContentChangedEventArgs;{99d488c9-587e-4586-8ef7-b54ca9453a16}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Services.TargetedContent.TargetedContentSubscription
     argument Windows.Services.TargetedContent.TargetedContentChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Services.TargetedContent.TargetedContentSubscription name=sender
+            in class type=Windows.Services.TargetedContent.TargetedContentChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TargetedContentSubscription, TargetedContentStateChangedEventArgs]
     guid c4d5acbe-f65b-5fa4-9242-d2860de85d52
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.TargetedContent.TargetedContentSubscription;{882c2c49-c652-4c7a-acad-1f7fa2986c73});rc(Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs;{9a1cef3d-8073-4416-8df2-546835a6414f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Services.TargetedContent.TargetedContentSubscription
     argument Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Services.TargetedContent.TargetedContentSubscription name=sender
+            in class type=Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs name=args
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -458,6 +1271,13 @@ class System.Double external
 class System.String external
     py winrt.system.String
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
 
@@ -465,8 +1285,48 @@ interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.Streams.IRandomAccessStreamReference external
     py winrt.windows.storage.streams._IRandomAccessStreamReference

@@ -16,7 +16,7 @@ class Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview python_type 
     requires Windows.Foundation.IClosable
     factory Windows.UI.Input.Inking.Preview.IPalmRejectionDelayZonePreviewStatics
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_for_visual static
         method CreateForVisual slot=6 inputs=2 outputs=1 declaring=Windows.UI.Input.Inking.Preview.IPalmRejectionDelayZonePreviewStatics shape=130 static
             in class type=Windows.UI.Composition.Visual name=inputPanelVisual
