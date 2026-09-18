@@ -9,6 +9,8 @@
 #include "types.h"
 #include <winrt/base.h>
 
+#include <atomic>
+
 namespace py::cpp::_winrt
 {
     // BEGIN: class _winrt.IInspectable_Static:
@@ -619,6 +621,11 @@ namespace py::cpp::_winrt
         Py_CLEAR(state->to_uuid_func);
         Py_CLEAR(state->wrap_async_func);
 
+        // Nothing here takes the cache lock, and traverse and free do not
+        // either. The collector calls them with the world stopped on a
+        // free-threaded build, so a thread paused holding the lock would never
+        // let go of it.
+        //
         // The types a projection built hold descriptors that point back at it,
         // so letting go of them here is what breaks the cycle. The descriptors
         // themselves are freed with the state, below, because a type that
@@ -640,7 +647,7 @@ namespace py::cpp::_winrt
 
         // Modules memoize what they looked up here, and those memos are now
         // pointers to types nothing holds any more.
-        type_registry_epoch++;
+        std::atomic_ref{type_registry_epoch}.fetch_add(1, std::memory_order_relaxed);
 
         return 0;
     }
@@ -671,7 +678,7 @@ namespace py::cpp::_winrt
 
         std::destroy_at(&state->projections);
 
-        type_registry_epoch++;
+        std::atomic_ref{type_registry_epoch}.fetch_add(1, std::memory_order_relaxed);
     }
 
     // Not using a header file for thes because setuptools doesn't have a nice
@@ -823,7 +830,7 @@ namespace py::cpp::_winrt
         std::construct_at(&state->type_entries);
         std::construct_at(&state->generic_types);
 
-        type_registry_epoch++;
+        std::atomic_ref{type_registry_epoch}.fetch_add(1, std::memory_order_relaxed);
 
         py::pytype_handle inspectable_meta_type{py::register_python_type(
             module.get(), &IInspectable_Static_type_spec, nullptr, nullptr)};

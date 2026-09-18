@@ -46,6 +46,7 @@ namespace py::interp
                 return nullptr;
             }
 
+            py::cpp::_winrt::state_guard guard{s->cache_lock};
             auto const found = s->generic_types.find(signature);
 
             return found == s->generic_types.end() ? nullptr : found->second;
@@ -63,6 +64,7 @@ namespace py::interp
 
             try
             {
+                py::cpp::_winrt::state_guard guard{s->cache_lock};
                 s->generic_types[signature] = type;
             }
             catch (...)
