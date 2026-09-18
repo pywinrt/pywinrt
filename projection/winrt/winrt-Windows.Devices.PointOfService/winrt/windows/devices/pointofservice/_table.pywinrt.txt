@@ -2,6 +2,215 @@ format 4.0
 generator 0.0.0
 namespace Windows.Devices.PointOfService
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.String> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[String]
+    guid b79a741f-7fb5-50ae-9e99-911201ec3d41
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};string)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.String> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UInt32]
+    guid 9343b6e7-e3d2-5e4a-ab2d-2bce4919a6a4
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};u4)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.UInt32
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.BarcodeScanner> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[BarcodeScanner]
+    guid 8d8abf39-99dd-50a4-aa7c-2f7301b5ca9c
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.BarcodeScanner;{bea33e06-b264-4f03-a9c1-45b20f01134f}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.BarcodeScanner
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeScanner> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.BarcodeSymbologyAttributes> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[BarcodeSymbologyAttributes]
+    guid f8fc5a52-2f45-5e46-a82e-3da009573b5c
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.BarcodeSymbologyAttributes;{66413a78-ab7a-4ada-8ece-936014b2ead7}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.BarcodeSymbologyAttributes
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeSymbologyAttributes> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.CashDrawer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CashDrawer]
+    guid 57836710-f186-5636-891d-f8c5398ea6df
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.CashDrawer;{9f88f5c8-de54-4aee-a890-920bcbfe30fc}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.CashDrawer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.CashDrawer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ClaimedBarcodeScanner]
+    guid ff72ba2d-f3c4-5abe-bbce-53150449b637
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.ClaimedBarcodeScanner;{4a63b49c-8fa4-4332-bb26-945d11d81e0f}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.ClaimedBarcodeScanner
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedBarcodeScanner> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedCashDrawer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ClaimedCashDrawer]
+    guid e68c3736-fde7-5cfb-b22f-92119723e729
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.ClaimedCashDrawer;{ca3f99af-abb8-42c1-8a84-5c66512f5a75}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.ClaimedCashDrawer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedCashDrawer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedLineDisplay> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ClaimedLineDisplay]
+    guid 4e1a79f1-dff2-5b18-bebe-2aca010bbfcc
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.ClaimedLineDisplay;{120ac970-9a75-4acf-aae7-09972bcf8794}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.ClaimedLineDisplay
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedLineDisplay> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ClaimedMagneticStripeReader]
+    guid 946c2d64-22d4-552d-abfb-9eb341bd67f3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.ClaimedMagneticStripeReader;{475ca8f3-9417-48bc-b9d7-4163a7844c02}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.ClaimedMagneticStripeReader
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedPosPrinter> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ClaimedPosPrinter]
+    guid 01eb0dc3-3c30-5eea-9fce-efb398e0be34
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.ClaimedPosPrinter;{6d64ce0c-e03e-4b14-a38e-c28c34b86353}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.ClaimedPosPrinter
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedPosPrinter> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplay> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[LineDisplay]
+    guid b5c4d476-4f46-53c4-8a45-89dbe6d6f286
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.LineDisplay;{24f5df4e-3c99-44e2-b73f-e51be3637a8c}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.LineDisplay
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplay> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplayPowerStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[LineDisplayPowerStatus]
+    guid abba6d19-d81f-5d85-a900-66b96b6d2b32
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Devices.PointOfService.LineDisplayPowerStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.LineDisplayPowerStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayPowerStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplayStoredBitmap> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[LineDisplayStoredBitmap]
+    guid a576fa69-9988-5a23-844c-f8a69f48a429
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.LineDisplayStoredBitmap;{f621515b-d81e-43ba-bf1b-bcfa3c785ba0}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.LineDisplayStoredBitmap
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayStoredBitmap> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplayWindow> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[LineDisplayWindow]
+    guid e4d37b02-b65a-5aec-a219-d1e0b7f3f912
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.LineDisplayWindow;{d21feef4-2364-4be5-bee1-851680af4964}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.LineDisplayWindow
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayWindow> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.MagneticStripeReader> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MagneticStripeReader]
+    guid 32c55f7b-8ee3-555d-998b-78c98aa9627b
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.MagneticStripeReader;{1a92b015-47c3-468a-9333-0c6517574883}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.MagneticStripeReader
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.MagneticStripeReader> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.PosPrinter> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PosPrinter]
+    guid 5e8dbbc8-8b60-5881-8b6e-f699b4949dba
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.PointOfService.PosPrinter;{2a03c10e-9a19-4a01-994f-12dfad6adcbf}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.PointOfService.PosPrinter
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.PosPrinter> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.UInt32>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[UInt32]]
+    guid 55772f29-da64-5c87-871c-074337a84573
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<System.UInt32>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IBuffer]
+    guid 51c3d2fd-b8a1-5620-b746-7ee6d533aca3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IBuffer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Devices.PointOfService.BarcodeScanner python_type closeable
     py BarcodeScanner
     signature rc(Windows.Devices.PointOfService.BarcodeScanner;{bea33e06-b264-4f03-a9c1-45b20f01134f})
@@ -34,7 +243,7 @@ class Windows.Devices.PointOfService.BarcodeScanner python_type closeable
         method ClaimScannerAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IBarcodeScanner shape=4 reverse=62
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedBarcodeScanner> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IBarcodeScannerStatics shape=51 reverse=44 static
             in string name=deviceId
@@ -536,7 +745,7 @@ class Windows.Devices.PointOfService.CashDrawer python_type closeable
         method ClaimDrawerAsync slot=11 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawer shape=4 reverse=141
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedCashDrawer> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawerStatics shape=51 reverse=44 static
             in string name=deviceId
@@ -750,7 +959,7 @@ class Windows.Devices.PointOfService.ClaimedBarcodeScanner python_type closeable
         remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner4 shape=26 reverse=53
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_async
         method DisableAsync slot=13 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=4 reverse=173
             out interface type=Windows.Foundation.IAsyncAction return
@@ -834,7 +1043,7 @@ class Windows.Devices.PointOfService.ClaimedCashDrawer python_type closeable
         remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedCashDrawer2 shape=26 reverse=53
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_async
         method DisableAsync slot=12 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedCashDrawer shape=4 reverse=162
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -996,7 +1205,7 @@ class Windows.Devices.PointOfService.ClaimedLineDisplay python_type closeable
         method CheckPowerStatusAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedLineDisplay2 shape=4 reverse=62
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayPowerStatus> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
         method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedLineDisplayStatics shape=51 reverse=24 static
             in string name=deviceId
@@ -1137,7 +1346,7 @@ class Windows.Devices.PointOfService.ClaimedMagneticStripeReader python_type clo
             pass_array uint8 name=responseToken
             out interface type=Windows.Foundation.IAsyncAction return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method de_authenticate_device_async
         method DeAuthenticateDeviceAsync slot=25 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader shape=117
             pass_array uint8 name=responseToken
@@ -1229,7 +1438,7 @@ class Windows.Devices.PointOfService.ClaimedPosPrinter python_type closeable
         remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedPosPrinter2 shape=26 reverse=53
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_async
         method DisableAsync slot=19 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedPosPrinter shape=4 reverse=223
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -1432,109 +1641,577 @@ class Windows.Devices.PointOfService.ClaimedSlipPrinter python_type
             out boolean return
 
 delegate Windows.Foundation.EventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner> concrete
+    py winrt.windows.foundation.EventHandler[ClaimedBarcodeScanner]
     guid c0acd2ae-5b55-588d-811b-be33a4fdda57
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedBarcodeScanner;{4a63b49c-8fa4-4332-bb26-945d11d81e0f}))
+    base Windows.Foundation.EventHandler
     argument Windows.Devices.PointOfService.ClaimedBarcodeScanner
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Devices.PointOfService.ClaimedBarcodeScanner name=args
 
 delegate Windows.Foundation.EventHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> concrete
+    py winrt.windows.foundation.EventHandler[ClaimedMagneticStripeReader]
     guid 8006bf5d-0895-5b8c-808a-6bb8f26794fa
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedMagneticStripeReader;{475ca8f3-9417-48bc-b9d7-4163a7844c02}))
+    base Windows.Foundation.EventHandler
     argument Windows.Devices.PointOfService.ClaimedMagneticStripeReader
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Devices.PointOfService.ClaimedMagneticStripeReader name=args
 
-interface Windows.Foundation.IAsyncOperation<System.String> concrete
+interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[String]
     guid 3e1fe603-f897-5263-b328-0806426b8a79
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.String
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=62 role=get_results
+            out string return
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete
+interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UInt32]
     guid ef60385f-be78-584b-aaef-7829ada2b0de
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u4)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.UInt32
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt32> shape=4 reverse=62 role=get_results
+            out uint32 return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeScanner> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeScanner> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[BarcodeScanner]
     guid 616494dd-30a2-523f-b1a2-9a1174de3b17
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.BarcodeScanner;{bea33e06-b264-4f03-a9c1-45b20f01134f}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.BarcodeScanner
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeScanner> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.BarcodeScanner> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeScanner> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.BarcodeScanner> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeScanner> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.BarcodeScanner return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeSymbologyAttributes> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeSymbologyAttributes> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[BarcodeSymbologyAttributes]
     guid 461550ca-7bb3-5ade-a642-61b8fef2e35c
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.BarcodeSymbologyAttributes;{66413a78-ab7a-4ada-8ece-936014b2ead7}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.BarcodeSymbologyAttributes
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeSymbologyAttributes> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.BarcodeSymbologyAttributes> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeSymbologyAttributes> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.BarcodeSymbologyAttributes> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.BarcodeSymbologyAttributes> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.BarcodeSymbologyAttributes return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.CashDrawer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.CashDrawer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CashDrawer]
     guid 45007467-92f2-5bff-b191-aa5000fedd9e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.CashDrawer;{9f88f5c8-de54-4aee-a890-920bcbfe30fc}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.CashDrawer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.CashDrawer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.CashDrawer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.CashDrawer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.CashDrawer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.CashDrawer> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.CashDrawer return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedBarcodeScanner> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedBarcodeScanner> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ClaimedBarcodeScanner]
     guid c9704809-a0e2-5e1d-87cf-75a1d49d7bdb
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.ClaimedBarcodeScanner;{4a63b49c-8fa4-4332-bb26-945d11d81e0f}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.ClaimedBarcodeScanner
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedBarcodeScanner> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedBarcodeScanner> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedBarcodeScanner> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.ClaimedBarcodeScanner return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedCashDrawer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedCashDrawer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ClaimedCashDrawer]
     guid 9230e7aa-20a0-5752-9c20-4bf44934a87e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.ClaimedCashDrawer;{ca3f99af-abb8-42c1-8a84-5c66512f5a75}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.ClaimedCashDrawer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedCashDrawer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedCashDrawer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedCashDrawer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedCashDrawer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedCashDrawer> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.ClaimedCashDrawer return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedLineDisplay> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedLineDisplay> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ClaimedLineDisplay]
     guid 4bd0a904-1aaa-545a-8cbc-1d45c3e80e5e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.ClaimedLineDisplay;{120ac970-9a75-4acf-aae7-09972bcf8794}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.ClaimedLineDisplay
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedLineDisplay> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedLineDisplay> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedLineDisplay> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedLineDisplay> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedLineDisplay> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.ClaimedLineDisplay return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ClaimedMagneticStripeReader]
     guid 41630bd4-f45a-590d-8a4e-f70c9e49ad01
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.ClaimedMagneticStripeReader;{475ca8f3-9417-48bc-b9d7-4163a7844c02}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.ClaimedMagneticStripeReader
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.ClaimedMagneticStripeReader return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedPosPrinter> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedPosPrinter> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ClaimedPosPrinter]
     guid b4476f95-355a-503d-b844-1756c8cfda98
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.ClaimedPosPrinter;{6d64ce0c-e03e-4b14-a38e-c28c34b86353}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.ClaimedPosPrinter
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedPosPrinter> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedPosPrinter> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedPosPrinter> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedPosPrinter> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedPosPrinter> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.ClaimedPosPrinter return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplay> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplay> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[LineDisplay]
     guid 40ffdae9-e7c1-5c44-91b4-bd84ebf8539b
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.LineDisplay;{24f5df4e-3c99-44e2-b73f-e51be3637a8c}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.LineDisplay
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplay> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplay> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplay> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplay> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplay> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.LineDisplay return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayPowerStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayPowerStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[LineDisplayPowerStatus]
     guid 363eedcd-7922-5503-9009-1c631c9e3653
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.PointOfService.LineDisplayPowerStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.LineDisplayPowerStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayPowerStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplayPowerStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayPowerStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplayPowerStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayPowerStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Devices.PointOfService.LineDisplayPowerStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayStoredBitmap> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayStoredBitmap> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[LineDisplayStoredBitmap]
     guid dda5d77d-b7a1-541d-a480-3d46bed98e9d
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.LineDisplayStoredBitmap;{f621515b-d81e-43ba-bf1b-bcfa3c785ba0}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.LineDisplayStoredBitmap
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayStoredBitmap> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplayStoredBitmap> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayStoredBitmap> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplayStoredBitmap> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayStoredBitmap> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.LineDisplayStoredBitmap return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayWindow> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayWindow> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[LineDisplayWindow]
     guid 9755f05b-64cc-5051-8350-4acf1ffcbe58
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.LineDisplayWindow;{d21feef4-2364-4be5-bee1-851680af4964}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.LineDisplayWindow
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayWindow> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplayWindow> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayWindow> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplayWindow> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.LineDisplayWindow> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.LineDisplayWindow return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.MagneticStripeReader> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.MagneticStripeReader> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MagneticStripeReader]
     guid 93726e09-817c-5f33-bee4-090de7074f19
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.MagneticStripeReader;{1a92b015-47c3-468a-9333-0c6517574883}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.MagneticStripeReader
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.MagneticStripeReader> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.MagneticStripeReader> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.MagneticStripeReader> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.MagneticStripeReader> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.MagneticStripeReader> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.MagneticStripeReader return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.PosPrinter> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.PosPrinter> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PosPrinter]
     guid 024f77ce-51c3-5afc-9f30-24b3c0f3b25a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.PointOfService.PosPrinter;{2a03c10e-9a19-4a01-994f-12dfad6adcbf}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.PointOfService.PosPrinter
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.PosPrinter> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.PosPrinter> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.PosPrinter> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.PosPrinter> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.PosPrinter> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.PointOfService.PosPrinter return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[UInt32]]
     guid 52c56f3c-713a-5162-9e62-362ce7ed53be
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<System.UInt32>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.UInt32>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.UInt32>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IBuffer]
     guid 3bee8834-b9a7-5a80-a746-5ef097227878
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IBuffer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IBuffer return
 
 interface Windows.Devices.PointOfService.IBarcodeScanner
     guid bea33e06-b264-4f03-a9c1-45b20f01134f
@@ -1859,20 +2536,215 @@ interface Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities python_t
         get get_SupportedCharactersPerLine slot=18 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities shape=4 reverse=218
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<System.UInt32> concrete
+interface Windows.Foundation.Collections.IIterable<System.Int32> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Int32]
+    guid 81a643fb-f51c-5565-83c4-f96425777b66
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};i4)
+    base Windows.Foundation.Collections.IIterable
+    argument System.Int32
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Int32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Int32> return
+
+interface Windows.Foundation.Collections.IIterable<System.UInt32> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UInt32]
     guid 421d4b91-b13b-5f37-ae54-b5249bd80539
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};u4)
+    base Windows.Foundation.Collections.IIterable
     argument System.UInt32
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.UInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.UInt32> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.PointOfService.PosPrinterRotation> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PosPrinterRotation]
+    guid 1b1e4d8d-15f5-5802-9b23-8b75ce2a58c5
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Devices.PointOfService.PosPrinterRotation;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.PointOfService.PosPrinterRotation
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.PointOfService.PosPrinterRotation> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.PosPrinterRotation> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.PointOfService.SizeUInt32> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SizeUInt32]
+    guid 14f5a281-66ef-5299-aed1-96a1dc1e8416
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Devices.PointOfService.SizeUInt32;u4;u4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.PointOfService.SizeUInt32
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.PointOfService.SizeUInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.SizeUInt32> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
     guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Size> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Size]
+    guid c9df55c3-4d41-5e90-ba76-e89ed564446b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Foundation.Size;f4;f4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Size
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Size> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Size> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.Int32> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Int32]
+    guid bfea7f78-50c2-5f1d-a6ea-9e978d2699ff
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};i4)
+    base Windows.Foundation.Collections.IIterator
+    argument System.Int32
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=4 reverse=22 role=current
+            out int32 return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=117 reverse=101
+            fill_array int32 name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.UInt32> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UInt32]
+    guid f06a2739-9443-5ef0-b284-dc5aff3e7d10
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};u4)
+    base Windows.Foundation.Collections.IIterator
+    argument System.UInt32
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=22 role=current
+            out uint32 return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=117 reverse=101
+            fill_array uint32 name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.PosPrinterRotation> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PosPrinterRotation]
+    guid f687ef7c-b11e-56c3-9158-e6ba15bd521b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Devices.PointOfService.PosPrinterRotation;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.PointOfService.PosPrinterRotation
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.PosPrinterRotation> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Devices.PointOfService.PosPrinterRotation return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.PosPrinterRotation> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.PosPrinterRotation> shape=117 reverse=101
+            fill_array enum32 type=Windows.Devices.PointOfService.PosPrinterRotation name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.PosPrinterRotation> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.SizeUInt32> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SizeUInt32]
+    guid 29da18c1-80de-5bc5-8b82-28d63ca01e46
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Devices.PointOfService.SizeUInt32;u4;u4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.PointOfService.SizeUInt32
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.SizeUInt32> shape=4 reverse=22 role=current
+            out struct type=Windows.Devices.PointOfService.SizeUInt32 return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.SizeUInt32> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.SizeUInt32> shape=117 reverse=101
+            fill_array struct type=Windows.Devices.PointOfService.SizeUInt32 name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.SizeUInt32> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Size> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Size]
+    guid a3508ee0-3527-5144-894d-422eadef43d7
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Foundation.Size;f4;f4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Size
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Size> shape=4 reverse=22 role=current
+            out struct type=Windows.Foundation.Size return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Size> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Size> shape=117 reverse=101
+            fill_array struct type=Windows.Foundation.Size name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Size> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Devices.PointOfService.IJournalPrintJob
     guid 9f4f2864-f3f0-55d0-8c39-74cc91783eed
@@ -1884,10 +2756,18 @@ interface Windows.Devices.PointOfService.IJournalPrinterCapabilities2
     guid 03b0b645-33b8-533b-baaa-a4389283ab0a
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
     guid 60310303-49c5-52e6-abc6-a9b36eccc716
     signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+            out string return
 
 interface Windows.Devices.PointOfService.ILineDisplay
     guid 24f5df4e-3c99-44e2-b73f-e51be3637a8c
@@ -1973,11 +2853,32 @@ interface Windows.Devices.PointOfService.IMagneticStripeReaderTrackData
 interface Windows.Devices.PointOfService.IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs
     guid af0a5514-59cc-4a60-99e8-99a53dace5aa
 
-interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, String]
     guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     argument System.String
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
 interface Windows.Devices.PointOfService.IPosPrinter
     guid 2a03c10e-9a19-4a01-994f-12dfad6adcbf
@@ -2142,35 +3043,173 @@ interface Windows.Devices.PointOfService.IUnifiedPosErrorData
 interface Windows.Devices.PointOfService.IUnifiedPosErrorDataFactory
     guid 4b982551-1ffe-451b-a368-63e0ce465f5a
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete
+interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Int32]
     guid 8d720cdf-3934-5d3f-9a55-40e8063b086a
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};i4)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Int32>
     argument System.Int32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Int32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Int32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out int32 return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array int32 name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=117 reverse=66
+            in int32 name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete
+interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UInt32]
     guid e5ce1a07-8d33-5007-ba64-7d2508ccf85c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};u4)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.UInt32>
     argument System.UInt32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.UInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.UInt32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out uint32 return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array uint32 name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=117 reverse=66
+            in uint32 name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.PosPrinterRotation> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.PosPrinterRotation> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PosPrinterRotation]
     guid 6f694309-1082-5d84-a5ea-2faed6b6590e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.PointOfService.PosPrinterRotation;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.PointOfService.PosPrinterRotation>
     argument Windows.Devices.PointOfService.PosPrinterRotation
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.PosPrinterRotation> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.PointOfService.PosPrinterRotation> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.PosPrinterRotation> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.PosPrinterRotation> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.PointOfService.PosPrinterRotation return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.PosPrinterRotation> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.PointOfService.PosPrinterRotation name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.PosPrinterRotation> shape=117 reverse=66
+            in enum32 type=Windows.Devices.PointOfService.PosPrinterRotation name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.SizeUInt32> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.SizeUInt32> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SizeUInt32]
     guid 88668930-ae66-5dc9-b9a5-ccaba0735111
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Devices.PointOfService.SizeUInt32;u4;u4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.PointOfService.SizeUInt32>
     argument Windows.Devices.PointOfService.SizeUInt32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.SizeUInt32> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.PointOfService.SizeUInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.PointOfService.SizeUInt32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.SizeUInt32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Devices.PointOfService.SizeUInt32 return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.SizeUInt32> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Devices.PointOfService.SizeUInt32 name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.PointOfService.SizeUInt32> shape=181 reverse=90
+            in struct type=Windows.Devices.PointOfService.SizeUInt32 name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Size> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Size> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Size]
     guid cb5037fd-660b-51f5-9d28-87f40878268d
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Foundation.Size;f4;f4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Size>
     argument Windows.Foundation.Size
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Size> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Size> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Size> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Size> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Foundation.Size return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Size> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Foundation.Size name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Size> shape=151 reverse=75
+            in struct type=Windows.Foundation.Size name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Devices.PointOfService.JournalPrintJob python_type
     py JournalPrintJob
@@ -2303,7 +3342,7 @@ class Windows.Devices.PointOfService.LineDisplay python_type closeable
         method ClaimAsync slot=13 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.ILineDisplay shape=4 reverse=173
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedLineDisplay> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
         method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.ILineDisplayStatics shape=51 reverse=24 static
             in string name=deviceId
@@ -2618,7 +3657,7 @@ class Windows.Devices.PointOfService.LineDisplayWindow python_type closeable
         get get_Marquee slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.ILineDisplayWindow2 shape=4 reverse=43
             out class type=Windows.Devices.PointOfService.LineDisplayMarquee return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_character_at_cursor_async
         method ReadCharacterAtCursorAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.ILineDisplayWindow2 shape=4 reverse=62
             out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
@@ -2710,7 +3749,7 @@ class Windows.Devices.PointOfService.MagneticStripeReader python_type closeable
         method ClaimReaderAsync slot=11 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IMagneticStripeReader shape=4 reverse=141
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IMagneticStripeReaderStatics shape=51 reverse=44 static
             in string name=deviceId
@@ -3059,7 +4098,7 @@ class Windows.Devices.PointOfService.PosPrinter python_type closeable
         method ClaimPrinterAsync slot=11 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinter shape=4 reverse=141
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.ClaimedPosPrinter> return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinterStatics shape=51 reverse=44 static
             in string name=deviceId
@@ -3720,142 +4759,280 @@ class Windows.Devices.PointOfService.SlipPrinterCapabilities python_type
             out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.BarcodeScanner,Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[BarcodeScanner, BarcodeScannerStatusUpdatedEventArgs]
     guid cfc8a053-f611-521a-8ab0-a460e1f7164d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.BarcodeScanner;{bea33e06-b264-4f03-a9c1-45b20f01134f});rc(Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs;{355d8586-9c43-462b-a91a-816dc97f452c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.BarcodeScanner
     argument Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.BarcodeScanner name=sender
+            in class type=Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.CashDrawer,Windows.Devices.PointOfService.CashDrawerStatusUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CashDrawer, CashDrawerStatusUpdatedEventArgs]
     guid 64662ef4-cb0e-5c6f-a820-7d0a769554c9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.CashDrawer;{9f88f5c8-de54-4aee-a890-920bcbfe30fc});rc(Windows.Devices.PointOfService.CashDrawerStatusUpdatedEventArgs;{30aae98a-0d70-459c-9553-87e124c52488}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.CashDrawer
     argument Windows.Devices.PointOfService.CashDrawerStatusUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.CashDrawer name=sender
+            in class type=Windows.Devices.PointOfService.CashDrawerStatusUpdatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.CashDrawerCloseAlarm,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CashDrawerCloseAlarm, Object]
     guid c54fbda4-5e0b-54c3-94f2-83351e41c46f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.CashDrawerCloseAlarm;{6bf88cc7-6f63-430e-ab3b-95d75ffbe87f});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.CashDrawerCloseAlarm
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.CashDrawerCloseAlarm name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.CashDrawerEventSource,Windows.Devices.PointOfService.CashDrawerClosedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CashDrawerEventSource, CashDrawerClosedEventArgs]
     guid 81495aa4-4476-577f-bf88-7fe8a1286444
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.CashDrawerEventSource;{e006e46c-f2f9-442f-8dd6-06c10a4227ba});rc(Windows.Devices.PointOfService.CashDrawerClosedEventArgs;{69cb3bc1-147f-421c-9c23-090123bb786c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.CashDrawerEventSource
     argument Windows.Devices.PointOfService.CashDrawerClosedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.CashDrawerEventSource name=sender
+            in class type=Windows.Devices.PointOfService.CashDrawerClosedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.CashDrawerEventSource,Windows.Devices.PointOfService.CashDrawerOpenedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CashDrawerEventSource, CashDrawerOpenedEventArgs]
     guid 27648799-e7d5-5ce3-97ce-2f4110dd3298
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.CashDrawerEventSource;{e006e46c-f2f9-442f-8dd6-06c10a4227ba});rc(Windows.Devices.PointOfService.CashDrawerOpenedEventArgs;{69cb3bc1-147f-421c-9c23-090123bb786c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.CashDrawerEventSource
     argument Windows.Devices.PointOfService.CashDrawerOpenedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.CashDrawerEventSource name=sender
+            in class type=Windows.Devices.PointOfService.CashDrawerOpenedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner,Windows.Devices.PointOfService.BarcodeScannerDataReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedBarcodeScanner, BarcodeScannerDataReceivedEventArgs]
     guid 4f64e49a-bd8c-549d-970c-a5a250bd27ca
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedBarcodeScanner;{4a63b49c-8fa4-4332-bb26-945d11d81e0f});rc(Windows.Devices.PointOfService.BarcodeScannerDataReceivedEventArgs;{4234a7e2-ed97-467d-ad2b-01e44313a929}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedBarcodeScanner
     argument Windows.Devices.PointOfService.BarcodeScannerDataReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedBarcodeScanner name=sender
+            in class type=Windows.Devices.PointOfService.BarcodeScannerDataReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner,Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedBarcodeScanner, BarcodeScannerErrorOccurredEventArgs]
     guid ba42ff49-de12-5406-979e-06c45ca2d5a4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedBarcodeScanner;{4a63b49c-8fa4-4332-bb26-945d11d81e0f});rc(Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs;{2cd2602f-cf3a-4002-a75a-c5ec468f0a20}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedBarcodeScanner
     argument Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedBarcodeScanner name=sender
+            in class type=Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner,Windows.Devices.PointOfService.BarcodeScannerImagePreviewReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedBarcodeScanner, BarcodeScannerImagePreviewReceivedEventArgs]
     guid fba116af-2a39-516f-a579-cc3eaf36a34b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedBarcodeScanner;{4a63b49c-8fa4-4332-bb26-945d11d81e0f});rc(Windows.Devices.PointOfService.BarcodeScannerImagePreviewReceivedEventArgs;{f3b7de85-6e8b-434e-9f58-06ef26bc4baf}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedBarcodeScanner
     argument Windows.Devices.PointOfService.BarcodeScannerImagePreviewReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedBarcodeScanner name=sender
+            in class type=Windows.Devices.PointOfService.BarcodeScannerImagePreviewReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner,Windows.Devices.PointOfService.ClaimedBarcodeScannerClosedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedBarcodeScanner, ClaimedBarcodeScannerClosedEventArgs]
     guid 832b28d4-6f20-56d8-a9ab-818fbb922c78
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedBarcodeScanner;{4a63b49c-8fa4-4332-bb26-945d11d81e0f});rc(Windows.Devices.PointOfService.ClaimedBarcodeScannerClosedEventArgs;{cf7d5489-a22c-4c65-a901-88d77d833954}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedBarcodeScanner
     argument Windows.Devices.PointOfService.ClaimedBarcodeScannerClosedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedBarcodeScanner name=sender
+            in class type=Windows.Devices.PointOfService.ClaimedBarcodeScannerClosedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedCashDrawer,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedCashDrawer, Object]
     guid db886581-2462-5c81-880c-06112ca70012
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedCashDrawer;{ca3f99af-abb8-42c1-8a84-5c66512f5a75});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedCashDrawer
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedCashDrawer name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedCashDrawer,Windows.Devices.PointOfService.ClaimedCashDrawerClosedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedCashDrawer, ClaimedCashDrawerClosedEventArgs]
     guid b2e562de-ce59-52ee-96fc-dcb3773e8783
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedCashDrawer;{ca3f99af-abb8-42c1-8a84-5c66512f5a75});rc(Windows.Devices.PointOfService.ClaimedCashDrawerClosedEventArgs;{cc573f33-3f34-4c5c-baae-deadf16cd7fa}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedCashDrawer
     argument Windows.Devices.PointOfService.ClaimedCashDrawerClosedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedCashDrawer name=sender
+            in class type=Windows.Devices.PointOfService.ClaimedCashDrawerClosedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedLineDisplay,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedLineDisplay, Object]
     guid c997782b-46e9-5d92-ac84-ee9d7d073ab5
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedLineDisplay;{120ac970-9a75-4acf-aae7-09972bcf8794});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedLineDisplay
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedLineDisplay name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedLineDisplay,Windows.Devices.PointOfService.ClaimedLineDisplayClosedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedLineDisplay, ClaimedLineDisplayClosedEventArgs]
     guid 53ab62d6-b038-5261-a934-cc206f1756e6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedLineDisplay;{120ac970-9a75-4acf-aae7-09972bcf8794});rc(Windows.Devices.PointOfService.ClaimedLineDisplayClosedEventArgs;{f915f364-d3d5-4f10-b511-90939edfacd8}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedLineDisplay
     argument Windows.Devices.PointOfService.ClaimedLineDisplayClosedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedLineDisplay name=sender
+            in class type=Windows.Devices.PointOfService.ClaimedLineDisplayClosedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedLineDisplay,Windows.Devices.PointOfService.LineDisplayStatusUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedLineDisplay, LineDisplayStatusUpdatedEventArgs]
     guid 25d178ff-3069-536c-a0c2-88e0250e8a29
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedLineDisplay;{120ac970-9a75-4acf-aae7-09972bcf8794});rc(Windows.Devices.PointOfService.LineDisplayStatusUpdatedEventArgs;{ddd57c1a-86fb-4eba-93d1-6f5eda52b752}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedLineDisplay
     argument Windows.Devices.PointOfService.LineDisplayStatusUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedLineDisplay name=sender
+            in class type=Windows.Devices.PointOfService.LineDisplayStatusUpdatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader,Windows.Devices.PointOfService.ClaimedMagneticStripeReaderClosedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedMagneticStripeReader, ClaimedMagneticStripeReaderClosedEventArgs]
     guid 9132fe4d-a48a-5578-8e76-9ec03a62f94a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedMagneticStripeReader;{475ca8f3-9417-48bc-b9d7-4163a7844c02});rc(Windows.Devices.PointOfService.ClaimedMagneticStripeReaderClosedEventArgs;{14ada93a-adcd-4c80-acda-c3eaed2647e1}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedMagneticStripeReader
     argument Windows.Devices.PointOfService.ClaimedMagneticStripeReaderClosedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedMagneticStripeReader name=sender
+            in class type=Windows.Devices.PointOfService.ClaimedMagneticStripeReaderClosedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader,Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedMagneticStripeReader, MagneticStripeReaderAamvaCardDataReceivedEventArgs]
     guid 29e08f92-c3ab-57ea-aaba-789f792d7a46
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedMagneticStripeReader;{475ca8f3-9417-48bc-b9d7-4163a7844c02});rc(Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs;{0a4bbd51-c316-4910-87f3-7a62ba862d31}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedMagneticStripeReader
     argument Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedMagneticStripeReader name=sender
+            in class type=Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader,Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedMagneticStripeReader, MagneticStripeReaderBankCardDataReceivedEventArgs]
     guid 6a41d015-245e-51ba-bd6c-44775d70bfa2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedMagneticStripeReader;{475ca8f3-9417-48bc-b9d7-4163a7844c02});rc(Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs;{2e958823-a31a-4763-882c-23725e39b08e}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedMagneticStripeReader
     argument Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedMagneticStripeReader name=sender
+            in class type=Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader,Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedMagneticStripeReader, MagneticStripeReaderErrorOccurredEventArgs]
     guid 1464a1e6-9d92-547e-b4ac-f255ac85f950
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedMagneticStripeReader;{475ca8f3-9417-48bc-b9d7-4163a7844c02});rc(Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs;{1fedf95d-2c84-41ad-b778-f2356a789ab1}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedMagneticStripeReader
     argument Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedMagneticStripeReader name=sender
+            in class type=Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader,Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedMagneticStripeReader, MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs]
     guid 959124ba-ee44-560c-8183-61c6a2308d8f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedMagneticStripeReader;{475ca8f3-9417-48bc-b9d7-4163a7844c02});rc(Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs;{af0a5514-59cc-4a60-99e8-99a53dace5aa}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedMagneticStripeReader
     argument Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedMagneticStripeReader name=sender
+            in class type=Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedPosPrinter,Windows.Devices.PointOfService.ClaimedPosPrinterClosedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedPosPrinter, ClaimedPosPrinterClosedEventArgs]
     guid 5a2247b1-84ac-55f3-a26b-d37c551ad58e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedPosPrinter;{6d64ce0c-e03e-4b14-a38e-c28c34b86353});rc(Windows.Devices.PointOfService.ClaimedPosPrinterClosedEventArgs;{e2b7a27b-4d40-471d-92ed-63375b18c788}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedPosPrinter
     argument Windows.Devices.PointOfService.ClaimedPosPrinterClosedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedPosPrinter name=sender
+            in class type=Windows.Devices.PointOfService.ClaimedPosPrinterClosedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedPosPrinter,Windows.Devices.PointOfService.PosPrinterReleaseDeviceRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ClaimedPosPrinter, PosPrinterReleaseDeviceRequestedEventArgs]
     guid 31424f6f-cfeb-5031-8a95-bea59b09e584
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.ClaimedPosPrinter;{6d64ce0c-e03e-4b14-a38e-c28c34b86353});rc(Windows.Devices.PointOfService.PosPrinterReleaseDeviceRequestedEventArgs;{2bcba359-1cef-40b2-9ecb-f927f856ae3c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.ClaimedPosPrinter
     argument Windows.Devices.PointOfService.PosPrinterReleaseDeviceRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.ClaimedPosPrinter name=sender
+            in class type=Windows.Devices.PointOfService.PosPrinterReleaseDeviceRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.MagneticStripeReader,Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MagneticStripeReader, MagneticStripeReaderStatusUpdatedEventArgs]
     guid 722d8bfa-e10e-548d-af29-28dd906f6fc9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.MagneticStripeReader;{1a92b015-47c3-468a-9333-0c6517574883});rc(Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs;{09cc6bb0-3262-401d-9e8a-e80d6358906b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.MagneticStripeReader
     argument Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.MagneticStripeReader name=sender
+            in class type=Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.PosPrinter,Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PosPrinter, PosPrinterStatusUpdatedEventArgs]
     guid 20b0c66a-5f41-5a32-b45a-344f12e70a34
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.PointOfService.PosPrinter;{2a03c10e-9a19-4a01-994f-12dfad6adcbf});rc(Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs;{2edb87df-13a6-428d-ba81-b0e7c3e5a3cd}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.PointOfService.PosPrinter
     argument Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.PointOfService.PosPrinter name=sender
+            in class type=Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs name=args
 
 class Windows.Devices.PointOfService.UnifiedPosErrorData python_type
     py UnifiedPosErrorData
@@ -3914,9 +5091,28 @@ class System.String external
 class System.UInt32 external
     py winrt.system.UInt32
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
@@ -3930,6 +5126,30 @@ struct Windows.Foundation.Rect external
 
 struct Windows.Foundation.Size external
     py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Graphics.Imaging.BitmapFrame external
     py winrt.windows.graphics.imaging.BitmapFrame

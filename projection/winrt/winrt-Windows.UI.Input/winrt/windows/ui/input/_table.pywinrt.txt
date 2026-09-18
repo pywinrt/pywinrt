@@ -10,7 +10,7 @@ class Windows.UI.Input.AttachableInputObject composable python_type closeable
     requires Windows.Foundation.IClosable
     composable Windows.UI.Input.IAttachableInputObjectFactory
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 struct Windows.UI.Input.CrossSlideThresholds python_type
     py CrossSlideThresholds
@@ -396,10 +396,95 @@ interface Windows.UI.Input.IInputActivationListener
 interface Windows.UI.Input.IInputActivationListenerActivationChangedEventArgs
     guid 7699b465-1dcf-5791-b4b9-6cafbeed2056
 
-interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.RadialControllerSystemMenuItemKind> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PointerPoint]
+    guid f6f2cba6-7076-5b59-9631-f6ac32b57695
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Input.PointerPoint
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.RadialControllerMenuItem> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[RadialControllerMenuItem]
+    guid 1aa752b3-dc11-5bce-b2b9-cd1bf8f235be
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Input.RadialControllerMenuItem;{c80fc98d-ad0b-4c9c-8f2f-136a2373a6ba}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Input.RadialControllerMenuItem
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerMenuItem> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.RadialControllerSystemMenuItemKind> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[RadialControllerSystemMenuItemKind]
     guid 4516010f-fd98-5e1d-bf3f-aeaf79f1f3da
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.UI.Input.RadialControllerSystemMenuItemKind;i4))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.UI.Input.RadialControllerSystemMenuItemKind
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.RadialControllerSystemMenuItemKind> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerSystemMenuItemKind> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PointerPoint]
+    guid 721fe01c-5ad4-5262-b078-3ab345105db8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Input.PointerPoint
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Input.PointerPoint return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=117 reverse=101
+            fill_array class type=Windows.UI.Input.PointerPoint name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerMenuItem> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[RadialControllerMenuItem]
+    guid 5a773e24-d968-535e-969a-76ce3602a637
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Input.RadialControllerMenuItem;{c80fc98d-ad0b-4c9c-8f2f-136a2373a6ba}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Input.RadialControllerMenuItem
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Input.RadialControllerMenuItem return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerMenuItem> shape=117 reverse=101
+            fill_array class type=Windows.UI.Input.RadialControllerMenuItem name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerSystemMenuItemKind> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[RadialControllerSystemMenuItemKind]
+    guid 3fbc1858-a43e-54dc-b0e2-8b098bddacf6
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.UI.Input.RadialControllerSystemMenuItemKind;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Input.RadialControllerSystemMenuItemKind
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerSystemMenuItemKind> shape=4 reverse=22 role=current
+            out enum32 type=Windows.UI.Input.RadialControllerSystemMenuItemKind return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerSystemMenuItemKind> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerSystemMenuItemKind> shape=117 reverse=101
+            fill_array enum32 type=Windows.UI.Input.RadialControllerSystemMenuItemKind name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerSystemMenuItemKind> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.UI.Input.IKeyboardDeliveryInterceptor
     guid b4baf068-8f49-446c-8db5-8c0ffe85cc9e
@@ -554,9 +639,132 @@ interface Windows.UI.Input.IRadialControllerStatics
     guid faded0b7-b84c-4894-87aa-8f25aa5f288b
 
 interface Windows.Foundation.IReference<System.Single> concrete
+    py winrt.windows.foundation._IReference[Single]
     guid 719cc2ba-3e76-5def-9f1a-38d85a145ea8
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.Single
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Single> shape=4 reverse=22 role=value
+            out single return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.UI.Input.IRightTappedEventArgs
     guid 4cbf40bd-af7a-4a36-9476-b1dce141709a
@@ -594,15 +802,165 @@ interface Windows.UI.Input.ITouchpadGesturesControllerStatics
 interface Windows.UI.Input.ITouchpadGlobalActionEventArgs
     guid 6edad206-e4e3-5f39-9d13-8575e8e2a12b
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[PointerPoint]
     guid dfa655cf-fde7-5048-b4bf-c909231b7edb
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint>
     argument Windows.UI.Input.PointerPoint
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=173
+            in class type=Windows.UI.Input.PointerPoint name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Input.PointerPoint return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Input.PointerPoint name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=117 reverse=101
+            in class type=Windows.UI.Input.PointerPoint name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Input.PointerPoint name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=211
+            pass_array class type=Windows.UI.Input.PointerPoint name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Input.PointerPoint name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[RadialControllerMenuItem]
     guid bfde94e7-70f8-5cc0-98e2-8c0f8ce524ab
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Input.RadialControllerMenuItem;{c80fc98d-ad0b-4c9c-8f2f-136a2373a6ba}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Input.RadialControllerMenuItem>
     argument Windows.UI.Input.RadialControllerMenuItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=173
+            in class type=Windows.UI.Input.RadialControllerMenuItem name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerMenuItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Input.RadialControllerMenuItem return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Input.RadialControllerMenuItem name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.RadialControllerMenuItem> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=117 reverse=101
+            in class type=Windows.UI.Input.RadialControllerMenuItem name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Input.RadialControllerMenuItem name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=51 reverse=211
+            pass_array class type=Windows.UI.Input.RadialControllerMenuItem name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Input.RadialControllerMenuItem name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PointerPoint]
+    guid f0f57411-7786-5174-8752-4c5e834b6da2
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint>
+    argument Windows.UI.Input.PointerPoint
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Input.PointerPoint return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Input.PointerPoint name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=117 reverse=66
+            in class type=Windows.UI.Input.PointerPoint name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.RadialControllerMenuItem> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[RadialControllerMenuItem]
+    guid b91a7342-3fcb-512b-aef1-fda4712e5817
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Input.RadialControllerMenuItem;{c80fc98d-ad0b-4c9c-8f2f-136a2373a6ba}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Input.RadialControllerMenuItem>
+    argument Windows.UI.Input.RadialControllerMenuItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerMenuItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.RadialControllerMenuItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Input.RadialControllerMenuItem return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.RadialControllerMenuItem> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Input.RadialControllerMenuItem name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.RadialControllerMenuItem> shape=117 reverse=66
+            in class type=Windows.UI.Input.RadialControllerMenuItem name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.UI.Input.InputActivationListener python_type
     py InputActivationListener
@@ -1590,196 +1948,388 @@ enum Windows.UI.Input.TouchpadGlobalGestureKinds python_type
     signature enum(Windows.UI.Input.TouchpadGlobalGestureKinds;u4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.EdgeGesture,Windows.UI.Input.EdgeGestureEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[EdgeGesture, EdgeGestureEventArgs]
     guid b62d7f11-c7b1-5bf0-a347-3366252db4ce
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.EdgeGesture;{580d5292-2ab1-49aa-a7f0-33bd3f8df9f1});rc(Windows.UI.Input.EdgeGestureEventArgs;{44fa4a24-2d09-42e1-8b5e-368208796a4c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.EdgeGesture
     argument Windows.UI.Input.EdgeGestureEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.EdgeGesture name=sender
+            in class type=Windows.UI.Input.EdgeGestureEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.CrossSlidingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GestureRecognizer, CrossSlidingEventArgs]
     guid 1fc1eb70-0c26-5cf0-9e50-843a34083613
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.CrossSlidingEventArgs;{e9374738-6f88-41d9-8720-78e08e398349}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.GestureRecognizer
     argument Windows.UI.Input.CrossSlidingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.GestureRecognizer name=sender
+            in class type=Windows.UI.Input.CrossSlidingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.DraggingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GestureRecognizer, DraggingEventArgs]
     guid be7cca42-98dd-5d72-9e91-976113d7985e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.DraggingEventArgs;{1c905384-083c-4bd3-b559-179cddeb33ec}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.GestureRecognizer
     argument Windows.UI.Input.DraggingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.GestureRecognizer name=sender
+            in class type=Windows.UI.Input.DraggingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.HoldingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GestureRecognizer, HoldingEventArgs]
     guid 0027bdf5-6948-53f7-afbe-d4d8fe500feb
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.HoldingEventArgs;{2bf755c5-e799-41b4-bb40-242f40959b71}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.GestureRecognizer
     argument Windows.UI.Input.HoldingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.GestureRecognizer name=sender
+            in class type=Windows.UI.Input.HoldingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.ManipulationCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GestureRecognizer, ManipulationCompletedEventArgs]
     guid c24f5605-3059-52cc-bdf3-7098146d34d7
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.ManipulationCompletedEventArgs;{b34ab22b-d19b-46ff-9f38-dec7754bb9e7}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.GestureRecognizer
     argument Windows.UI.Input.ManipulationCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.GestureRecognizer name=sender
+            in class type=Windows.UI.Input.ManipulationCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.ManipulationInertiaStartingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GestureRecognizer, ManipulationInertiaStartingEventArgs]
     guid 350a72ab-34a5-5193-913d-3d4c5983842c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.ManipulationInertiaStartingEventArgs;{dd37a898-26bf-467a-9ce5-ccf3fb11371e}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.GestureRecognizer
     argument Windows.UI.Input.ManipulationInertiaStartingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.GestureRecognizer name=sender
+            in class type=Windows.UI.Input.ManipulationInertiaStartingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.ManipulationStartedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GestureRecognizer, ManipulationStartedEventArgs]
     guid 110d75c8-ba5e-5462-8b2d-4a1582574b61
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.ManipulationStartedEventArgs;{ddec873e-cfce-4932-8c1d-3c3d011a34c0}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.GestureRecognizer
     argument Windows.UI.Input.ManipulationStartedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.GestureRecognizer name=sender
+            in class type=Windows.UI.Input.ManipulationStartedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.ManipulationUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GestureRecognizer, ManipulationUpdatedEventArgs]
     guid eb5216f5-020a-5e40-9c4b-48912c690e2d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.ManipulationUpdatedEventArgs;{cb354ce5-abb8-4f9f-b3ce-8181aa61ad82}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.GestureRecognizer
     argument Windows.UI.Input.ManipulationUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.GestureRecognizer name=sender
+            in class type=Windows.UI.Input.ManipulationUpdatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.RightTappedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GestureRecognizer, RightTappedEventArgs]
     guid 8420d242-ba34-5b17-92f3-8f767f1d0de4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.RightTappedEventArgs;{4cbf40bd-af7a-4a36-9476-b1dce141709a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.GestureRecognizer
     argument Windows.UI.Input.RightTappedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.GestureRecognizer name=sender
+            in class type=Windows.UI.Input.RightTappedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer,Windows.UI.Input.TappedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[GestureRecognizer, TappedEventArgs]
     guid 27f3ad57-8994-5712-8b83-a93ba17c03c2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.GestureRecognizer;{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0});rc(Windows.UI.Input.TappedEventArgs;{cfa126e4-253a-4c3c-953b-395c37aed309}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.GestureRecognizer
     argument Windows.UI.Input.TappedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.GestureRecognizer name=sender
+            in class type=Windows.UI.Input.TappedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.InputActivationListener,Windows.UI.Input.InputActivationListenerActivationChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[InputActivationListener, InputActivationListenerActivationChangedEventArgs]
     guid 27256541-ca03-5192-bb2e-8ef1daf0bdeb
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.InputActivationListener;{5d6d4ed2-28c7-5ae3-aa74-c918a9f243ca});rc(Windows.UI.Input.InputActivationListenerActivationChangedEventArgs;{7699b465-1dcf-5791-b4b9-6cafbeed2056}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.InputActivationListener
     argument Windows.UI.Input.InputActivationListenerActivationChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.InputActivationListener name=sender
+            in class type=Windows.UI.Input.InputActivationListenerActivationChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.KeyboardDeliveryInterceptor,Windows.UI.Core.KeyEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[KeyboardDeliveryInterceptor, KeyEventArgs]
     guid 2c1caf11-9d6f-5e0f-a9ea-4c7c734d73d6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.KeyboardDeliveryInterceptor;{b4baf068-8f49-446c-8db5-8c0ffe85cc9e});rc(Windows.UI.Core.KeyEventArgs;{5ff5e930-2544-4a17-bd78-1f2fdebb106b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.KeyboardDeliveryInterceptor
     argument Windows.UI.Core.KeyEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.KeyboardDeliveryInterceptor name=sender
+            in class type=Windows.UI.Core.KeyEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.HoldingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PhysicalGestureRecognizer, HoldingEventArgs]
     guid adaa5f37-ba59-5c13-83e1-811a8c1c26ee
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.PhysicalGestureRecognizer;{79a29f4d-32a6-5aa5-a999-42b0b420c66d});rc(Windows.UI.Input.HoldingEventArgs;{2bf755c5-e799-41b4-bb40-242f40959b71}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.PhysicalGestureRecognizer
     argument Windows.UI.Input.HoldingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.PhysicalGestureRecognizer name=sender
+            in class type=Windows.UI.Input.HoldingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.ManipulationCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PhysicalGestureRecognizer, ManipulationCompletedEventArgs]
     guid 7577ec2c-6f2b-5de1-8dbb-205f02dc46e4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.PhysicalGestureRecognizer;{79a29f4d-32a6-5aa5-a999-42b0b420c66d});rc(Windows.UI.Input.ManipulationCompletedEventArgs;{b34ab22b-d19b-46ff-9f38-dec7754bb9e7}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.PhysicalGestureRecognizer
     argument Windows.UI.Input.ManipulationCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.PhysicalGestureRecognizer name=sender
+            in class type=Windows.UI.Input.ManipulationCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.ManipulationStartedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PhysicalGestureRecognizer, ManipulationStartedEventArgs]
     guid 80fefaa0-0335-5b09-8fe1-33854fe7e8c0
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.PhysicalGestureRecognizer;{79a29f4d-32a6-5aa5-a999-42b0b420c66d});rc(Windows.UI.Input.ManipulationStartedEventArgs;{ddec873e-cfce-4932-8c1d-3c3d011a34c0}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.PhysicalGestureRecognizer
     argument Windows.UI.Input.ManipulationStartedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.PhysicalGestureRecognizer name=sender
+            in class type=Windows.UI.Input.ManipulationStartedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.ManipulationUpdatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PhysicalGestureRecognizer, ManipulationUpdatedEventArgs]
     guid fd08d645-0934-5c84-a498-fe313030966d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.PhysicalGestureRecognizer;{79a29f4d-32a6-5aa5-a999-42b0b420c66d});rc(Windows.UI.Input.ManipulationUpdatedEventArgs;{cb354ce5-abb8-4f9f-b3ce-8181aa61ad82}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.PhysicalGestureRecognizer
     argument Windows.UI.Input.ManipulationUpdatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.PhysicalGestureRecognizer name=sender
+            in class type=Windows.UI.Input.ManipulationUpdatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.PhysicalGestureRecognizer,Windows.UI.Input.TappedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PhysicalGestureRecognizer, TappedEventArgs]
     guid dde6ff59-be05-528a-947c-da5db69f8e6a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.PhysicalGestureRecognizer;{79a29f4d-32a6-5aa5-a999-42b0b420c66d});rc(Windows.UI.Input.TappedEventArgs;{cfa126e4-253a-4c3c-953b-395c37aed309}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.PhysicalGestureRecognizer
     argument Windows.UI.Input.TappedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.PhysicalGestureRecognizer name=sender
+            in class type=Windows.UI.Input.TappedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[RadialController, Object]
     guid 5e0f93b1-c2f2-5351-82aa-6cf5f4c2d068
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.RadialController
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.RadialController name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonClickedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RadialController, RadialControllerButtonClickedEventArgs]
     guid d09d9fcc-edb8-56c0-856d-70e477a9ddf3
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerButtonClickedEventArgs;{206aa438-e651-11e5-bf62-2c27d7404e85}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.RadialController
     argument Windows.UI.Input.RadialControllerButtonClickedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.RadialController name=sender
+            in class type=Windows.UI.Input.RadialControllerButtonClickedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonHoldingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RadialController, RadialControllerButtonHoldingEventArgs]
     guid 4c44f2ff-3a4a-51ba-a01f-9f2002471f59
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerButtonHoldingEventArgs;{3d577eee-3cee-11e6-b535-001bdc06ab3b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.RadialController
     argument Windows.UI.Input.RadialControllerButtonHoldingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.RadialController name=sender
+            in class type=Windows.UI.Input.RadialControllerButtonHoldingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonPressedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RadialController, RadialControllerButtonPressedEventArgs]
     guid 660bee4a-4fed-5a62-aa5d-8113b477bc69
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerButtonPressedEventArgs;{3d577eed-4cee-11e6-b535-001bdc06ab3b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.RadialController
     argument Windows.UI.Input.RadialControllerButtonPressedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.RadialController name=sender
+            in class type=Windows.UI.Input.RadialControllerButtonPressedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonReleasedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RadialController, RadialControllerButtonReleasedEventArgs]
     guid c22ff62c-c642-5d50-9340-fe163122720c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerButtonReleasedEventArgs;{3d577eef-3cee-11e6-b535-001bdc06ab3b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.RadialController
     argument Windows.UI.Input.RadialControllerButtonReleasedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.RadialController name=sender
+            in class type=Windows.UI.Input.RadialControllerButtonReleasedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerControlAcquiredEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RadialController, RadialControllerControlAcquiredEventArgs]
     guid 4ec5f3fd-b217-5452-a2bd-9725ce9f6675
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerControlAcquiredEventArgs;{206aa439-e651-11e5-bf62-2c27d7404e85}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.RadialController
     argument Windows.UI.Input.RadialControllerControlAcquiredEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.RadialController name=sender
+            in class type=Windows.UI.Input.RadialControllerControlAcquiredEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerRotationChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RadialController, RadialControllerRotationChangedEventArgs]
     guid 8fe73ac9-8a36-5152-815d-03310ee8bf85
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerRotationChangedEventArgs;{206aa435-e651-11e5-bf62-2c27d7404e85}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.RadialController
     argument Windows.UI.Input.RadialControllerRotationChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.RadialController name=sender
+            in class type=Windows.UI.Input.RadialControllerRotationChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RadialController, RadialControllerScreenContactContinuedEventArgs]
     guid 30579e67-fb4f-5d38-83b4-9cb610090def
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs;{206aa437-e651-11e5-bf62-2c27d7404e85}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.RadialController
     argument Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.RadialController name=sender
+            in class type=Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerScreenContactStartedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RadialController, RadialControllerScreenContactStartedEventArgs]
     guid 1f2d584e-3ad8-5049-b451-3a44a102fa82
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialController;{3055d1c8-df51-43d4-b23b-0e1037467a09});rc(Windows.UI.Input.RadialControllerScreenContactStartedEventArgs;{206aa436-e651-11e5-bf62-2c27d7404e85}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.RadialController
     argument Windows.UI.Input.RadialControllerScreenContactStartedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.RadialController name=sender
+            in class type=Windows.UI.Input.RadialControllerScreenContactStartedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialControllerMenuItem,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[RadialControllerMenuItem, Object]
     guid 5c90d6fb-e4f8-5be2-8544-9de33f82c41a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.RadialControllerMenuItem;{c80fc98d-ad0b-4c9c-8f2f-136a2373a6ba});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.RadialControllerMenuItem
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.RadialControllerMenuItem name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController,Windows.UI.Input.SystemFunctionButtonEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SystemButtonEventController, SystemFunctionButtonEventArgs]
     guid b19c7b2a-a907-5297-8279-adba1140218d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.SystemButtonEventController;{59b893a9-73bc-52b5-ba41-82511b2cb46c});rc(Windows.UI.Input.SystemFunctionButtonEventArgs;{4833896f-80d1-5dd6-92a7-62a508ffef5a}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.SystemButtonEventController
     argument Windows.UI.Input.SystemFunctionButtonEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.SystemButtonEventController name=sender
+            in class type=Windows.UI.Input.SystemFunctionButtonEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController,Windows.UI.Input.SystemFunctionLockChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SystemButtonEventController, SystemFunctionLockChangedEventArgs]
     guid 52c14f10-ff66-5358-bbfe-022df20e79ea
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.SystemButtonEventController;{59b893a9-73bc-52b5-ba41-82511b2cb46c});rc(Windows.UI.Input.SystemFunctionLockChangedEventArgs;{cd040608-fcf9-585c-beab-f1d2eaf364ab}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.SystemButtonEventController
     argument Windows.UI.Input.SystemFunctionLockChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.SystemButtonEventController name=sender
+            in class type=Windows.UI.Input.SystemFunctionLockChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController,Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SystemButtonEventController, SystemFunctionLockIndicatorChangedEventArgs]
     guid e0846333-0428-5440-93d7-1829d3ca674f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.SystemButtonEventController;{59b893a9-73bc-52b5-ba41-82511b2cb46c});rc(Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs;{b212b94e-7a6f-58ae-b304-bae61d0371b9}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.SystemButtonEventController
     argument Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.SystemButtonEventController name=sender
+            in class type=Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.TouchpadGesturesController,Windows.UI.Core.PointerEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TouchpadGesturesController, PointerEventArgs]
     guid 0b05a28c-2064-5b06-94f3-324fb004ece0
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.TouchpadGesturesController;{28c13cdd-e068-549f-89c6-1a440c6fc327});rc(Windows.UI.Core.PointerEventArgs;{920d9cb1-a5fc-4a21-8c09-49dfe6ffe25f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.TouchpadGesturesController
     argument Windows.UI.Core.PointerEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.TouchpadGesturesController name=sender
+            in class type=Windows.UI.Core.PointerEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.TouchpadGesturesController,Windows.UI.Input.TouchpadGlobalActionEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TouchpadGesturesController, TouchpadGlobalActionEventArgs]
     guid 3fdb14d0-c3b2-576e-b900-aaa14e0ff77c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Input.TouchpadGesturesController;{28c13cdd-e068-549f-89c6-1a440c6fc327});rc(Windows.UI.Input.TouchpadGlobalActionEventArgs;{6edad206-e4e3-5f39-9d13-8575e8e2a12b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Input.TouchpadGesturesController
     argument Windows.UI.Input.TouchpadGlobalActionEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Input.TouchpadGesturesController name=sender
+            in class type=Windows.UI.Input.TouchpadGlobalActionEventArgs name=args
 
 class System.Object external
     py winrt.system.Object
@@ -1800,14 +2350,48 @@ interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
 
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
 struct Windows.Foundation.Point external
     py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
 
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Storage.Streams.RandomAccessStreamReference external
     py winrt.windows.storage.streams.RandomAccessStreamReference

@@ -102,6 +102,30 @@ class Microsoft.Windows.Management.Deployment.AddPackageOptions activatable pyth
         get get_RelatedPackageUris slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=141
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
 
+delegate Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[PackageDeploymentResult, PackageDeploymentProgress]
+    guid a365d7cc-d85a-507b-aa4a-8cfc2b58cb95
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Microsoft.Windows.Management.Deployment.PackageDeploymentResult;{d6b99601-18c2-599e-8bd1-40a9310ad263});struct(Microsoft.Windows.Management.Deployment.PackageDeploymentProgress;enum(Microsoft.Windows.Management.Deployment.PackageDeploymentProgressStatus;i4);f8))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Microsoft.Windows.Management.Deployment.PackageDeploymentResult
+    argument Microsoft.Windows.Management.Deployment.PackageDeploymentProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=314 reverse=387
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> name=asyncInfo
+            in struct type=Microsoft.Windows.Management.Deployment.PackageDeploymentProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[PackageDeploymentResult, PackageDeploymentProgress]
+    guid dba3c316-3afa-51e6-a85f-d1af460495e3
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Microsoft.Windows.Management.Deployment.PackageDeploymentResult;{d6b99601-18c2-599e-8bd1-40a9310ad263});struct(Microsoft.Windows.Management.Deployment.PackageDeploymentProgress;enum(Microsoft.Windows.Management.Deployment.PackageDeploymentProgressStatus;i4);f8))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Microsoft.Windows.Management.Deployment.PackageDeploymentResult
+    argument Microsoft.Windows.Management.Deployment.PackageDeploymentProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Microsoft.Windows.Management.Deployment.EnsureReadyOptions activatable python_type
     py EnsureReadyOptions
     signature rc(Microsoft.Windows.Management.Deployment.EnsureReadyOptions;{20102d03-ec44-5c2b-8fd6-1104dc99755d})
@@ -123,11 +147,40 @@ class Microsoft.Windows.Management.Deployment.EnsureReadyOptions activatable pyt
 interface Microsoft.Windows.Management.Deployment.IAddPackageOptions
     guid e3db7f39-f9d0-5884-bdef-6153b54574a3
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[PackageDeploymentResult, PackageDeploymentProgress]
     guid 446a127a-02de-5b73-ae01-993d4e6ef729
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.Management.Deployment.PackageDeploymentResult;{d6b99601-18c2-599e-8bd1-40a9310ad263});struct(Microsoft.Windows.Management.Deployment.PackageDeploymentProgress;enum(Microsoft.Windows.Management.Deployment.PackageDeploymentProgressStatus;i4);f8))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Microsoft.Windows.Management.Deployment.PackageDeploymentResult
     argument Microsoft.Windows.Management.Deployment.PackageDeploymentProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> shape=4 reverse=121 role=get_results
+            out class type=Microsoft.Windows.Management.Deployment.PackageDeploymentResult return
 
 interface Microsoft.Windows.Management.Deployment.IEnsureReadyOptions
     guid 20102d03-ec44-5c2b-8fd6-1104dc99755d
@@ -135,11 +188,262 @@ interface Microsoft.Windows.Management.Deployment.IEnsureReadyOptions
 interface Microsoft.Windows.Management.Deployment.IEnsureReadyOptions2
     guid eefa9259-b13a-50a3-919e-ae116d83c0da
 
-interface Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> concrete
-    guid 4c522071-01da-5f85-9d52-29952578a301
-    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});string)
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageSetItem> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PackageSetItem]
+    guid 45be2e06-b238-53c6-ad96-32558da5e19e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.Management.Deployment.PackageSetItem;{8f254e15-c371-550f-b4e8-3f0bb1ae375f}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.Management.Deployment.PackageSetItem
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItem> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PackageSetItemRuntimeDisposition]
+    guid 9f0e9c51-ad26-5814-a133-3c2fbd16f391
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition;{7a7f9f70-d416-5f83-a3cd-027bf3d2abfd}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageVolume> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PackageVolume]
+    guid 4b7be9cc-af65-50c9-9679-6dedd2ae9e4d
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{9c9710f4-795a-58b3-93f4-c991c4329c49}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.Management.Deployment.PackageVolume
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageVolume> return
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[Uri, String]]
+    guid 52129c53-b03d-59b3-a27e-b0385643e9fe
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Uri]
+    guid b0d63b78-78ad-5e31-b6d8-e32a0e16c447
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Uri
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItem> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PackageSetItem]
+    guid 74086841-814d-5f81-8ea4-0fac86b9ae28
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.Management.Deployment.PackageSetItem;{8f254e15-c371-550f-b4e8-3f0bb1ae375f}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.Management.Deployment.PackageSetItem
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=4 reverse=22 role=current
+            out class type=Microsoft.Windows.Management.Deployment.PackageSetItem return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=117 reverse=101
+            fill_array class type=Microsoft.Windows.Management.Deployment.PackageSetItem name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PackageSetItemRuntimeDisposition]
+    guid 2d49cffd-4c79-5c38-99a0-0336074e91d6
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition;{7a7f9f70-d416-5f83-a3cd-027bf3d2abfd}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=4 reverse=22 role=current
+            out class type=Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=117 reverse=101
+            fill_array class type=Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageVolume> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PackageVolume]
+    guid 9d883a1c-5ffa-5699-8327-ef5cd96c0291
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{9c9710f4-795a-58b3-93f4-c991c4329c49}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.Management.Deployment.PackageVolume
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=22 role=current
+            out class type=Microsoft.Windows.Management.Deployment.PackageVolume return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageVolume> shape=117 reverse=101
+            fill_array class type=Microsoft.Windows.Management.Deployment.PackageVolume name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[Uri, String]]
+    guid 0c11a982-9f05-557f-b3e8-3737b26830d1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Uri]
+    guid 1c157d0f-5efe-5cec-bbd6-0c6ce9af07a5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Uri
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=22 role=current
+            out class type=Windows.Foundation.Uri return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=117 reverse=101
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[Uri, String]
+    guid f1fe0d5e-8449-5479-875f-17daeb0027f0
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});string)
+    base Windows.Foundation.Collections.IKeyValuePair
     argument Windows.Foundation.Uri
     argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String> shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String> shape=4 reverse=43
+            out string return
+
+interface Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[Uri, String]
+    guid 4c522071-01da-5f85-9d52-29952578a301
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});string)
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>>
+    argument Windows.Foundation.Uri
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=51 reverse=65 role=has_key
+            in class type=Windows.Foundation.Uri name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=117 reverse=125 role=insert
+            in class type=Windows.Foundation.Uri name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=51 reverse=24 role=lookup
+            in class type=Windows.Foundation.Uri name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=4 reverse=141 role=remove
+            in class type=Windows.Foundation.Uri name=key
+
+interface Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[Uri, String]
+    guid 87530605-8bd4-5f0a-85f1-751e8bd20446
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>>
+    argument Windows.Foundation.Uri
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> shape=51 reverse=65 role=has_key
+            in class type=Windows.Foundation.Uri name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> shape=51 reverse=24 role=lookup
+            in class type=Windows.Foundation.Uri name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> name=second
 
 interface Microsoft.Windows.Management.Deployment.IPackageDeploymentManager
     guid f41717d8-5ab2-57ac-83cd-d0c48cc784cd
@@ -192,30 +496,405 @@ interface Microsoft.Windows.Management.Deployment.IRemovePackageOptions
 interface Microsoft.Windows.Management.Deployment.IStagePackageOptions
     guid 9b6b3203-fd7c-5ead-a9d6-ab2e8566be5e
 
-interface Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[PackageSetItem]
     guid 1a149ede-06c9-5179-aebc-42f8aefcd854
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.Management.Deployment.PackageSetItem;{8f254e15-c371-550f-b4e8-3f0bb1ae375f}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageSetItem>
     argument Microsoft.Windows.Management.Deployment.PackageSetItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=4 reverse=173
+            in class type=Microsoft.Windows.Management.Deployment.PackageSetItem name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.Management.Deployment.PackageSetItem return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.Management.Deployment.PackageSetItem name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageSetItem> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=117 reverse=101
+            in class type=Microsoft.Windows.Management.Deployment.PackageSetItem name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.Management.Deployment.PackageSetItem name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=51 reverse=211
+            pass_array class type=Microsoft.Windows.Management.Deployment.PackageSetItem name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.Management.Deployment.PackageSetItem name=value
 
-interface Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[PackageSetItemRuntimeDisposition]
     guid 27772c5b-2d44-5594-acd9-818907ab582c
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition;{7a7f9f70-d416-5f83-a3cd-027bf3d2abfd}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition>
     argument Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=4 reverse=173
+            in class type=Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=117 reverse=101
+            in class type=Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=51 reverse=211
+            pass_array class type=Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition name=value
 
-interface Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[PackageVolume]
     guid 2662562c-57ff-5dc0-af01-0e484793c9cc
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{9c9710f4-795a-58b3-93f4-c991c4329c49}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageVolume>
     argument Microsoft.Windows.Management.Deployment.PackageVolume
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=173
+            in class type=Microsoft.Windows.Management.Deployment.PackageVolume name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageVolume> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.Management.Deployment.PackageVolume return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.Management.Deployment.PackageVolume name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageVolume> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> shape=117 reverse=101
+            in class type=Microsoft.Windows.Management.Deployment.PackageVolume name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.Management.Deployment.PackageVolume name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> shape=51 reverse=211
+            pass_array class type=Microsoft.Windows.Management.Deployment.PackageVolume name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.Management.Deployment.PackageVolume name=value
 
-interface Windows.Foundation.Collections.IVector<System.String> concrete
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
     guid 98b9acc1-4b56-532e-ac73-03d5291cca90
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Uri]
     guid 0d82bd8d-fe62-5d67-a7b9-7886dd75bc4e
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri>
     argument Windows.Foundation.Uri
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=4 reverse=173
+            in class type=Windows.Foundation.Uri name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Foundation.Uri return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=117 reverse=101
+            in class type=Windows.Foundation.Uri name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Foundation.Uri name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=51 reverse=211
+            pass_array class type=Windows.Foundation.Uri name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Foundation.Uri name=value
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageSetItem> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PackageSetItem]
+    guid 8a350fa7-ca4b-57dc-9772-e824e3156aa7
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.Management.Deployment.PackageSetItem;{8f254e15-c371-550f-b4e8-3f0bb1ae375f}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageSetItem>
+    argument Microsoft.Windows.Management.Deployment.PackageSetItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.Management.Deployment.PackageSetItem return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.Management.Deployment.PackageSetItem name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageSetItem> shape=117 reverse=66
+            in class type=Microsoft.Windows.Management.Deployment.PackageSetItem name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PackageSetItemRuntimeDisposition]
+    guid c9fc469d-dd12-593c-b554-8aad5d1c6c45
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition;{7a7f9f70-d416-5f83-a3cd-027bf3d2abfd}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition>
+    argument Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> shape=117 reverse=66
+            in class type=Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageVolume> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PackageVolume]
+    guid 5368a870-6748-50bd-b2bd-e401ebb50bd8
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{9c9710f4-795a-58b3-93f4-c991c4329c49}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageVolume>
+    argument Microsoft.Windows.Management.Deployment.PackageVolume
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageVolume> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageVolume> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.Management.Deployment.PackageVolume return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageVolume> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.Management.Deployment.PackageVolume name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageVolume> shape=117 reverse=66
+            in class type=Microsoft.Windows.Management.Deployment.PackageVolume name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Uri]
+    guid 4b8385bd-a2cd-5ff1-bf74-7ea580423e50
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri>
+    argument Windows.Foundation.Uri
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Foundation.Uri return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=117 reverse=66
+            in class type=Windows.Foundation.Uri name=value
+            out uint32 name=index
+            out boolean return
 
 enum Microsoft.Windows.Management.Deployment.PackageDeploymentFeature python_type
     py PackageDeploymentFeature
@@ -835,5 +1514,52 @@ class System.String external
 struct Windows.ApplicationModel.PackageVersion external
     py winrt.windows.applicationmodel.PackageVersion
 
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

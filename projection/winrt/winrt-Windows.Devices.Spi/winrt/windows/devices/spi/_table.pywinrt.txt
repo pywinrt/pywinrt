@@ -2,20 +2,185 @@ format 4.0
 generator 0.0.0
 namespace Windows.Devices.Spi
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiController> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Spi.SpiController> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SpiController]
+    guid 5e94d949-a844-5b25-a3cc-afabeb18c1d2
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Spi.SpiController;{a8d3c829-9895-4159-a934-8741f1ee6d27}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Spi.SpiController
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiController> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Spi.SpiDevice> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SpiDevice]
+    guid a88a28ba-6966-55e7-8c81-7c65f74e39c0
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Spi.SpiDevice;{05d5356d-11b6-4d39-84d5-95dfb4c9f2ce}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Spi.SpiDevice
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiDevice> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[SpiController]]
+    guid c8afc9cb-6807-57ec-84c9-9f3dbc003450
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Spi.SpiController;{a8d3c829-9895-4159-a934-8741f1ee6d27})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiController> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SpiController]
     guid b6b0df6f-c097-5844-93bd-7821998fdb8e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Spi.SpiController;{a8d3c829-9895-4159-a934-8741f1ee6d27}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Spi.SpiController
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiController> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Spi.SpiController> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiController> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Spi.SpiController> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiController> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Spi.SpiController return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiDevice> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiDevice> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SpiDevice]
     guid feb8466a-878f-577b-bbca-89575cfc56e4
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Spi.SpiDevice;{05d5356d-11b6-4d39-84d5-95dfb4c9f2ce}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.Spi.SpiDevice
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiDevice> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Spi.SpiDevice> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiDevice> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Spi.SpiDevice> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Spi.SpiDevice> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Spi.SpiDevice return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[SpiController]]
     guid 89624331-f802-56f7-9b33-17c616ecbcfa
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Spi.SpiController;{a8d3c829-9895-4159-a934-8741f1ee6d27})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController> return
+
+interface Windows.Foundation.Collections.IIterable<System.Int32> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Int32]
+    guid 81a643fb-f51c-5565-83c4-f96425777b66
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};i4)
+    base Windows.Foundation.Collections.IIterable
+    argument System.Int32
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Int32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Int32> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Spi.SpiController> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SpiController]
+    guid 7b076938-dc1b-5368-9003-059291d37f35
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Spi.SpiController;{a8d3c829-9895-4159-a934-8741f1ee6d27}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Spi.SpiController
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Spi.SpiController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Spi.SpiController> return
+
+interface Windows.Foundation.Collections.IIterator<System.Int32> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Int32]
+    guid bfea7f78-50c2-5f1d-a6ea-9e978d2699ff
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};i4)
+    base Windows.Foundation.Collections.IIterator
+    argument System.Int32
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=4 reverse=22 role=current
+            out int32 return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=117 reverse=101
+            fill_array int32 name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Spi.SpiController> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SpiController]
+    guid fd7d5997-544c-5be9-b0fa-1d0efbfc4a03
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Spi.SpiController;{a8d3c829-9895-4159-a934-8741f1ee6d27}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Spi.SpiController
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Spi.SpiController> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Spi.SpiController return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Spi.SpiController> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Spi.SpiController> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Spi.SpiController name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Spi.SpiController> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Devices.Spi.ISpiBusInfo
     guid 9929444a-54f2-48c6-b952-9c32fc02c669
@@ -55,15 +220,61 @@ interface Windows.Devices.Spi.ISpiDeviceStatics python_type
             in string name=friendlyName
             out string return
 
-interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete
+interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Int32]
     guid 8d720cdf-3934-5d3f-9a55-40e8063b086a
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};i4)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Int32>
     argument System.Int32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Int32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Int32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out int32 return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array int32 name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=117 reverse=66
+            in int32 name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SpiController]
     guid 35fec489-44a2-5543-8a0c-b52e2f9cf87c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Spi.SpiController;{a8d3c829-9895-4159-a934-8741f1ee6d27}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Spi.SpiController>
     argument Windows.Devices.Spi.SpiController
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Spi.SpiController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Spi.SpiController> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Spi.SpiController return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Spi.SpiController name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController> shape=117 reverse=66
+            in class type=Windows.Devices.Spi.SpiController name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Devices.Spi.SpiBusInfo python_type
     py SpiBusInfo
@@ -151,7 +362,7 @@ class Windows.Devices.Spi.SpiDevice python_type closeable
         get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Spi.ISpiDevice shape=4 reverse=22
             out string return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
         method FromIdAsync slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Spi.ISpiDeviceStatics shape=117 reverse=101 static
             in string name=busId
@@ -197,6 +408,33 @@ interface Windows.Devices.Spi.Provider.ISpiProvider external
     py winrt.windows.devices.spi.provider._ISpiProvider
     guid 96b461e2-77d4-48ce-aaa0-75715a8362cf
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

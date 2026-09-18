@@ -2,6 +2,36 @@ format 4.0
 generator 0.0.0
 namespace Windows.ApplicationModel.SocialInfo
 
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SocialItemThumbnail]
+    guid 5d102c6d-92c3-59f3-b1dc-5986c56445a5
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.SocialInfo.SocialItemThumbnail;{5cbf831a-3f08-497f-917f-57e09d84b141}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.SocialInfo.SocialItemThumbnail
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SocialItemThumbnail]
+    guid fabcf39f-fd48-5550-8f47-a0f1573e1f53
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.SocialInfo.SocialItemThumbnail;{5cbf831a-3f08-497f-917f-57e09d84b141}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.SocialInfo.SocialItemThumbnail
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem
     guid 0b6a985a-d59d-40be-980c-488a2ab30a83
 
@@ -20,10 +50,85 @@ interface Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail
 interface Windows.ApplicationModel.SocialInfo.ISocialUserInfo
     guid 9e5e1bd1-90d0-4e1d-9554-844d46607f61
 
-interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> concrete
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SocialItemThumbnail]
     guid c210bbd7-2f56-5076-bb0e-b7497726cf95
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.SocialInfo.SocialItemThumbnail;{5cbf831a-3f08-497f-917f-57e09d84b141}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail>
     argument Windows.ApplicationModel.SocialInfo.SocialItemThumbnail
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=4 reverse=173
+            in class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=117 reverse=101
+            in class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=51 reverse=211
+            pass_array class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SocialItemThumbnail]
+    guid 9a3e6d46-e880-5deb-9006-92fe5c43ace1
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.SocialInfo.SocialItemThumbnail;{5cbf831a-3f08-497f-917f-57e09d84b141}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail>
+    argument Windows.ApplicationModel.SocialInfo.SocialItemThumbnail
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.ApplicationModel.SocialInfo.SocialFeedChildItem activatable python_type
     py SocialFeedChildItem
@@ -251,6 +356,22 @@ interface Windows.Foundation.IAsyncAction external
 
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Graphics.Imaging.BitmapSize external
     py winrt.windows.graphics.imaging.BitmapSize

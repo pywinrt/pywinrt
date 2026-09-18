@@ -2,15 +2,115 @@ format 4.0
 generator 0.0.0
 namespace Windows.Services.Maps.OfflineMaps
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[OfflineMapPackageQueryResult]
+    guid 8a4df3c9-2595-5bec-8ba1-c1d955f168c0
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult;{55585411-39e1-4e41-a4e1-5f4872bee199}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[OfflineMapPackageStartDownloadResult]
+    guid 8654a79e-c52f-5f98-af0a-522466c27246
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult;{d965b918-d4d6-4afe-9378-3ec71ef11c3d}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[OfflineMapPackageQueryResult]
     guid c01a663d-6d9b-5385-ae68-0a65a9544514
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult;{55585411-39e1-4e41-a4e1-5f4872bee199}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[OfflineMapPackageStartDownloadResult]
     guid 911272f7-f5aa-5393-94a1-e96adfad3da4
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult;{d965b918-d4d6-4afe-9378-3ec71ef11c3d}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[OfflineMapPackage]
+    guid 7522287c-0af2-586c-bb3f-457c07984a6f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Services.Maps.OfflineMaps.OfflineMapPackage;{a797673b-a5b5-4144-b525-e68c8862664b}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Services.Maps.OfflineMaps.OfflineMapPackage
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[OfflineMapPackage]
+    guid 750f4d37-3766-5842-a425-ccd9b8d80786
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Services.Maps.OfflineMaps.OfflineMapPackage;{a797673b-a5b5-4144-b525-e68c8862664b}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Services.Maps.OfflineMaps.OfflineMapPackage
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> shape=4 reverse=22 role=current
+            out class type=Windows.Services.Maps.OfflineMaps.OfflineMapPackage return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> shape=117 reverse=101
+            fill_array class type=Windows.Services.Maps.OfflineMaps.OfflineMapPackage name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Services.Maps.OfflineMaps.IOfflineMapPackage
     guid a797673b-a5b5-4144-b525-e68c8862664b
@@ -24,10 +124,33 @@ interface Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStartDownloadResul
 interface Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStatics
     guid 185e7922-a831-4ab0-941f-6998fa929285
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[OfflineMapPackage]
     guid 2522ebc2-bd9f-551b-b90e-6c28152958a0
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Services.Maps.OfflineMaps.OfflineMapPackage;{a797673b-a5b5-4144-b525-e68c8862664b}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Services.Maps.OfflineMaps.OfflineMapPackage>
     argument Windows.Services.Maps.OfflineMaps.OfflineMapPackage
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Services.Maps.OfflineMaps.OfflineMapPackage return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Services.Maps.OfflineMaps.OfflineMapPackage name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> shape=117 reverse=66
+            in class type=Windows.Services.Maps.OfflineMaps.OfflineMapPackage name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Services.Maps.OfflineMaps.OfflineMapPackage python_type
     py OfflineMapPackage
@@ -103,10 +226,16 @@ enum Windows.Services.Maps.OfflineMaps.OfflineMapPackageStatus python_type
     signature enum(Windows.Services.Maps.OfflineMaps.OfflineMapPackageStatus;i4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.Maps.OfflineMaps.OfflineMapPackage,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[OfflineMapPackage, Object]
     guid 2d2e0d20-826f-560c-b1c1-b4bd6fbf329a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Services.Maps.OfflineMaps.OfflineMapPackage;{a797673b-a5b5-4144-b525-e68c8862664b});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Services.Maps.OfflineMaps.OfflineMapPackage
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Services.Maps.OfflineMaps.OfflineMapPackage name=sender
+            in object name=args
 
 class System.Object external
     py winrt.system.Object
@@ -119,3 +248,34 @@ class Windows.Devices.Geolocation.Geocircle external
 
 class Windows.Devices.Geolocation.Geopoint external
     py winrt.windows.devices.geolocation.Geopoint
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

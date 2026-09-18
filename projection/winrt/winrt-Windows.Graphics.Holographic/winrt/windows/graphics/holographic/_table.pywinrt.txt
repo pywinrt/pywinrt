@@ -3,9 +3,15 @@ generator 0.0.0
 namespace Windows.Graphics.Holographic
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 struct Windows.Graphics.Holographic.HolographicAdapterId python_type
     py HolographicAdapterId
@@ -295,7 +301,7 @@ class Windows.Graphics.Holographic.HolographicFramePresentationMonitor python_ty
     requires Windows.Graphics.Holographic.IHolographicFramePresentationMonitor
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_reports deprecated
         method ReadReports slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFramePresentationMonitor shape=4 reverse=22 deprecated
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport> return
@@ -349,7 +355,7 @@ class Windows.Graphics.Holographic.HolographicFrameScanoutMonitor python_type cl
     requires Windows.Graphics.Holographic.IHolographicFrameScanoutMonitor
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_reports
         method ReadReports slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFrameScanoutMonitor shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> return
@@ -397,7 +403,7 @@ class Windows.Graphics.Holographic.HolographicQuadLayer python_type closeable
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicQuadLayer shape=4 reverse=43
             out struct type=Windows.Foundation.Size return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters python_type
     py HolographicQuadLayerUpdateParameters
@@ -710,68 +716,807 @@ interface Windows.Graphics.Holographic.IHolographicViewConfiguration
 interface Windows.Graphics.Holographic.IHolographicViewConfiguration2
     guid e241756e-e0d0-5019-9af5-1b165bc2f54e
 
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.DirectX.DirectXPixelFormat> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DirectXPixelFormat]
+    guid 3908f2c6-1aee-5129-b9a6-2a6e01d9507e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Graphics.DirectX.DirectXPixelFormat;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.DirectX.DirectXPixelFormat
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicCamera> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[HolographicCamera]
+    guid b2afd154-8db0-5bb2-ad7a-684afd479264
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Graphics.Holographic.HolographicCamera;{e4e98445-9bed-4980-9ba0-e87680d1cb74}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.Holographic.HolographicCamera
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicCamera> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCamera> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicCameraPose> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[HolographicCameraPose]
+    guid 92111aff-8dcc-538e-ae3d-31fd252a0ad5
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Graphics.Holographic.HolographicCameraPose;{0d7d7e30-12de-45bd-912b-c7f6561599d1}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.Holographic.HolographicCameraPose
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicCameraPose> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCameraPose> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[HolographicDepthReprojectionMethod]
+    guid 2803c19f-8082-52c0-aad1-68ab51ed287f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Graphics.Holographic.HolographicDepthReprojectionMethod;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.Holographic.HolographicDepthReprojectionMethod
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicFramePresentationReport> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[HolographicFramePresentationReport]
+    guid d0fe1cdf-33ad-5051-8c5b-ab9a2b2c24bf
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Graphics.Holographic.HolographicFramePresentationReport;{80baf614-f2f4-4c8a-8de3-065c78f6d5de}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.Holographic.HolographicFramePresentationReport
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicFramePresentationReport> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFramePresentationReport> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicFrameScanoutReport> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[HolographicFrameScanoutReport]
+    guid cfa9ea14-4803-5001-9eda-cb4ffcd270e9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Graphics.Holographic.HolographicFrameScanoutReport;{0ebbe606-03a0-5ca0-b46e-bba068d7233f}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.Holographic.HolographicFrameScanoutReport
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFrameScanoutReport> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicQuadLayer> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[HolographicQuadLayer]
+    guid 84744661-94de-5866-a15d-9efb19a99a54
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Graphics.Holographic.HolographicQuadLayer;{903460c9-c9d9-5d5c-41ac-a2d5ab0fd331}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.Holographic.HolographicQuadLayer
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicQuadLayer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicQuadLayer> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DirectXPixelFormat]
+    guid ea016190-ac80-5840-8f58-ff434c7b2907
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Graphics.DirectX.DirectXPixelFormat;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.DirectX.DirectXPixelFormat
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> shape=117 reverse=101
+            fill_array enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCamera> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[HolographicCamera]
+    guid 6acc8576-2fea-561d-84dd-4a1ab05fc7ed
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Graphics.Holographic.HolographicCamera;{e4e98445-9bed-4980-9ba0-e87680d1cb74}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.Holographic.HolographicCamera
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCamera> shape=4 reverse=22 role=current
+            out class type=Windows.Graphics.Holographic.HolographicCamera return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCamera> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCamera> shape=117 reverse=101
+            fill_array class type=Windows.Graphics.Holographic.HolographicCamera name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCamera> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCameraPose> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[HolographicCameraPose]
+    guid 93e27fb4-332b-591e-ae6b-6192fa0a1009
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Graphics.Holographic.HolographicCameraPose;{0d7d7e30-12de-45bd-912b-c7f6561599d1}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.Holographic.HolographicCameraPose
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCameraPose> shape=4 reverse=22 role=current
+            out class type=Windows.Graphics.Holographic.HolographicCameraPose return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCameraPose> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCameraPose> shape=117 reverse=101
+            fill_array class type=Windows.Graphics.Holographic.HolographicCameraPose name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCameraPose> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[HolographicDepthReprojectionMethod]
+    guid e2486838-8e17-52a2-b3b2-8db3de6412b7
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Graphics.Holographic.HolographicDepthReprojectionMethod;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.Holographic.HolographicDepthReprojectionMethod
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Graphics.Holographic.HolographicDepthReprojectionMethod return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> shape=117 reverse=101
+            fill_array enum32 type=Windows.Graphics.Holographic.HolographicDepthReprojectionMethod name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFramePresentationReport> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[HolographicFramePresentationReport]
+    guid f81cb835-d690-55d7-adfb-7b92b96e29a0
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Graphics.Holographic.HolographicFramePresentationReport;{80baf614-f2f4-4c8a-8de3-065c78f6d5de}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.Holographic.HolographicFramePresentationReport
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFramePresentationReport> shape=4 reverse=22 role=current
+            out class type=Windows.Graphics.Holographic.HolographicFramePresentationReport return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFramePresentationReport> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFramePresentationReport> shape=117 reverse=101
+            fill_array class type=Windows.Graphics.Holographic.HolographicFramePresentationReport name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFramePresentationReport> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFrameScanoutReport> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[HolographicFrameScanoutReport]
+    guid 6a7de579-05db-58f6-a371-97fd19922130
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Graphics.Holographic.HolographicFrameScanoutReport;{0ebbe606-03a0-5ca0-b46e-bba068d7233f}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.Holographic.HolographicFrameScanoutReport
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=4 reverse=22 role=current
+            out class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=117 reverse=101
+            fill_array class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicQuadLayer> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[HolographicQuadLayer]
+    guid 85765170-495b-541c-aef0-7492856de3df
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Graphics.Holographic.HolographicQuadLayer;{903460c9-c9d9-5d5c-41ac-a2d5ab0fd331}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.Holographic.HolographicQuadLayer
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicQuadLayer> shape=4 reverse=22 role=current
+            out class type=Windows.Graphics.Holographic.HolographicQuadLayer return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicQuadLayer> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicQuadLayer> shape=117 reverse=101
+            fill_array class type=Windows.Graphics.Holographic.HolographicQuadLayer name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicQuadLayer> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.Foundation.IReference<Windows.Graphics.Holographic.HolographicStereoTransform> concrete
+    py winrt.windows.foundation._IReference[HolographicStereoTransform]
     guid 6e67ce78-cc67-52c0-b635-991db0bff5ca
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Graphics.Holographic.HolographicStereoTransform;struct(Windows.Foundation.Numerics.Matrix4x4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4);struct(Windows.Foundation.Numerics.Matrix4x4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4;f4)))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Graphics.Holographic.HolographicStereoTransform
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Graphics.Holographic.HolographicStereoTransform> shape=4 reverse=22 role=value
+            out struct type=Windows.Graphics.Holographic.HolographicStereoTransform return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingFrustum> concrete
+    py winrt.windows.foundation._IReference[SpatialBoundingFrustum]
     guid f434face-0c36-5749-a8a0-0bb6ce78a614
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Perception.Spatial.SpatialBoundingFrustum;struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4);struct(Windows.Foundation.Numerics.Plane;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);f4)))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Perception.Spatial.SpatialBoundingFrustum
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingFrustum> shape=4 reverse=22 role=value
+            out struct type=Windows.Perception.Spatial.SpatialBoundingFrustum return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[HolographicFrameScanoutReport]
     guid a8081e2b-440d-53fc-a310-cf8a07ea0935
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Holographic.HolographicFrameScanoutReport;{0ebbe606-03a0-5ca0-b46e-bba068d7233f}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicFrameScanoutReport>
     argument Windows.Graphics.Holographic.HolographicFrameScanoutReport
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=4 reverse=173
+            in class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFrameScanoutReport> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFrameScanoutReport> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=117 reverse=101
+            in class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=51 reverse=211
+            pass_array class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[HolographicQuadLayer]
     guid da24dfcc-4c54-5193-921d-c685b57de559
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Graphics.Holographic.HolographicQuadLayer;{903460c9-c9d9-5d5c-41ac-a2d5ab0fd331}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicQuadLayer>
     argument Windows.Graphics.Holographic.HolographicQuadLayer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=4 reverse=173
+            in class type=Windows.Graphics.Holographic.HolographicQuadLayer name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicQuadLayer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicQuadLayer> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Graphics.Holographic.HolographicQuadLayer return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Graphics.Holographic.HolographicQuadLayer name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicQuadLayer> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=117 reverse=101
+            in class type=Windows.Graphics.Holographic.HolographicQuadLayer name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Graphics.Holographic.HolographicQuadLayer name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=51 reverse=211
+            pass_array class type=Windows.Graphics.Holographic.HolographicQuadLayer name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Graphics.Holographic.HolographicQuadLayer name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[DirectXPixelFormat]
     guid 1edda1c2-0f6e-516c-80b8-7687dcd1280e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Graphics.DirectX.DirectXPixelFormat;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.DirectX.DirectXPixelFormat>
     argument Windows.Graphics.DirectX.DirectXPixelFormat
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=117 reverse=66
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCamera> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCamera> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[HolographicCamera]
     guid 01d6c0ae-ada5-50b0-8562-41fb1205bb4a
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Holographic.HolographicCamera;{e4e98445-9bed-4980-9ba0-e87680d1cb74}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicCamera>
     argument Windows.Graphics.Holographic.HolographicCamera
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCamera> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicCamera> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCamera> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCamera> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Graphics.Holographic.HolographicCamera return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCamera> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Graphics.Holographic.HolographicCamera name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCamera> shape=117 reverse=66
+            in class type=Windows.Graphics.Holographic.HolographicCamera name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCameraPose> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCameraPose> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[HolographicCameraPose]
     guid 17c5dfb1-6e87-5a17-a791-ac07f8ee9292
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Holographic.HolographicCameraPose;{0d7d7e30-12de-45bd-912b-c7f6561599d1}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicCameraPose>
     argument Windows.Graphics.Holographic.HolographicCameraPose
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCameraPose> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicCameraPose> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCameraPose> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCameraPose> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Graphics.Holographic.HolographicCameraPose return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCameraPose> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Graphics.Holographic.HolographicCameraPose name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCameraPose> shape=117 reverse=66
+            in class type=Windows.Graphics.Holographic.HolographicCameraPose name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[HolographicDepthReprojectionMethod]
     guid 7ac6dc9e-ea0b-594a-b0ed-2d1764ec58e9
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Graphics.Holographic.HolographicDepthReprojectionMethod;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod>
     argument Windows.Graphics.Holographic.HolographicDepthReprojectionMethod
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Graphics.Holographic.HolographicDepthReprojectionMethod return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Graphics.Holographic.HolographicDepthReprojectionMethod name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> shape=117 reverse=66
+            in enum32 type=Windows.Graphics.Holographic.HolographicDepthReprojectionMethod name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[HolographicFramePresentationReport]
     guid 014f37ba-abc1-5d85-855e-ec053183a635
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Holographic.HolographicFramePresentationReport;{80baf614-f2f4-4c8a-8de3-065c78f6d5de}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicFramePresentationReport>
     argument Windows.Graphics.Holographic.HolographicFramePresentationReport
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicFramePresentationReport> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFramePresentationReport> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Graphics.Holographic.HolographicFramePresentationReport return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Graphics.Holographic.HolographicFramePresentationReport name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport> shape=117 reverse=66
+            in class type=Windows.Graphics.Holographic.HolographicFramePresentationReport name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFrameScanoutReport> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[HolographicFrameScanoutReport]
+    guid a127f0f1-fb53-50e2-8a98-0ecaea62e32b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Holographic.HolographicFrameScanoutReport;{0ebbe606-03a0-5ca0-b46e-bba068d7233f}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicFrameScanoutReport>
+    argument Windows.Graphics.Holographic.HolographicFrameScanoutReport
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFrameScanoutReport> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=117 reverse=66
+            in class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicQuadLayer> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[HolographicQuadLayer]
+    guid 1f51ecdf-cf2d-5b7e-aae9-d6628a518dbe
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Holographic.HolographicQuadLayer;{903460c9-c9d9-5d5c-41ac-a2d5ab0fd331}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicQuadLayer>
+    argument Windows.Graphics.Holographic.HolographicQuadLayer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicQuadLayer> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicQuadLayer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicQuadLayer> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicQuadLayer> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Graphics.Holographic.HolographicQuadLayer return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicQuadLayer> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Graphics.Holographic.HolographicQuadLayer name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicQuadLayer> shape=117 reverse=66
+            in class type=Windows.Graphics.Holographic.HolographicQuadLayer name=value
+            out uint32 name=index
+            out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Holographic.HolographicSpace,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[HolographicSpace, Object]
     guid 67aae2f2-42d8-5503-9131-deeb45a6ca03
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Holographic.HolographicSpace;{4380dba6-5e78-434f-807c-3433d1efe8b7});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Holographic.HolographicSpace
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Holographic.HolographicSpace name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Holographic.HolographicSpace,Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[HolographicSpace, HolographicSpaceCameraAddedEventArgs]
     guid 71d80b7c-1d27-5102-83d1-4f0efc7c9d6f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Holographic.HolographicSpace;{4380dba6-5e78-434f-807c-3433d1efe8b7});rc(Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs;{58f1da35-bbb3-3c8f-993d-6c80e7feb99f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Holographic.HolographicSpace
     argument Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Holographic.HolographicSpace name=sender
+            in class type=Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Holographic.HolographicSpace,Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[HolographicSpace, HolographicSpaceCameraRemovedEventArgs]
     guid db68cfc3-0874-502a-a3b9-2b1fe86c67be
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Holographic.HolographicSpace;{4380dba6-5e78-434f-807c-3433d1efe8b7});rc(Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs;{805444a8-f2ae-322e-8da9-836a0a95a4c1}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Graphics.Holographic.HolographicSpace
     argument Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Holographic.HolographicSpace name=sender
+            in class type=Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs name=args
 
 class System.Object external
     py winrt.system.Object
@@ -779,15 +1524,53 @@ class System.Object external
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
 
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
 
 struct Windows.Foundation.Size external
     py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Foundation.Numerics.Matrix4x4 external
     py winrt.windows.foundation.numerics.Matrix4x4

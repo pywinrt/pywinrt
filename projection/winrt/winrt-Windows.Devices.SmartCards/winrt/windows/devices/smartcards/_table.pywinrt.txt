@@ -2,6 +2,248 @@ format 4.0
 generator 0.0.0
 namespace Windows.Devices.SmartCards
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Guid> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Guid]
+    guid 5233899b-ba7e-504f-bb83-ceebac62decf
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};g16)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Guid
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Guid> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.String> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[String]
+    guid b79a741f-7fb5-50ae-9e99-911201ec3d41
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};string)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.String> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardActivationPolicyChangeResult]
+    guid 9528f94b-047b-5e2a-8fc0-7017f5daddff
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardAppletIdGroupRegistration]
+    guid 371045fb-4994-5413-89be-ba4e97ad82a0
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration;{df1208d1-31bb-5596-43b1-6d69a0257b3a}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardChallengeContext> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardChallengeContext]
+    guid 96b172f6-dedb-5f3e-af90-7b0f10219352
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.SmartCards.SmartCardChallengeContext;{192a5319-c9c4-4947-81cc-44794a61ef91}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardChallengeContext
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardChallengeContext> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardConnection> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardConnection]
+    guid c71f00e6-af26-5e5c-913d-0efeb7d08ef7
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.SmartCards.SmartCardConnection;{7edb991a-a81a-47bc-a649-156be6b7f231}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardConnection
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardConnection> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardCryptogramGenerator]
+    guid 25cc9462-46a1-50a6-ad14-9a9718372005
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.SmartCards.SmartCardCryptogramGenerator;{e39f587b-edd3-4e49-b594-0ff5e4d0c76f}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardCryptogramGenerator
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardCryptogramGeneratorOperationStatus]
+    guid c6c447c7-a60d-500a-9bfe-59f25c33e979
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult]
+    guid 45cffa0a-b354-50c3-8f24-3dd4f1677fbe
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult;{2798e029-d687-4c92-86c6-399e9a0ecb09}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult]
+    guid cd50ac04-e836-5525-9edb-066d6205a2a7
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult;{4e6a8a5c-9773-46c4-a32f-b1e543159e04}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult]
+    guid c960993d-b328-5e86-b0a3-25f09f7e45df
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult;{8c7ce857-a7e7-489d-b9d6-368061515012}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardCryptogramMaterialPossessionProof]
+    guid caf2474e-8810-5b17-95d6-81758ae51985
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof;{e5b9ab8c-a141-4135-9add-b0d2e3aa1fc9}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardCryptogramStorageKeyInfo]
+    guid 3f34e667-0a36-5414-88ab-6371d1b3b07e
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo;{77b0f00d-b097-4f61-a26a-9561639c9c3a}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardEmulator> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardEmulator]
+    guid 4982e406-052c-5782-a57d-54f9f44f8412
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.SmartCards.SmartCardEmulator;{dfb906b2-875e-47e5-8077-e8bff1b1c6fb}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardEmulator
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardEmulator> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardProvisioning> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardProvisioning]
+    guid 7a2e58dc-22ee-5cb8-83cc-a7a61b9dcd2c
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.SmartCards.SmartCardProvisioning;{19eeedbd-1fab-477c-b712-1a2c5af1fd6e}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardProvisioning
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardProvisioning> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardReader> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardReader]
+    guid 20d3244d-375a-5f7d-8944-164fdfed4239
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.SmartCards.SmartCardReader;{1074b4e0-54c2-4df0-817a-14c14378f06c}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardReader
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReader> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardReaderStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardReaderStatus]
+    guid 3d7e6ea9-e739-555c-9c02-07396c5321f5
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Devices.SmartCards.SmartCardReaderStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardReaderStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReaderStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SmartCardStatus]
+    guid bdaf4a41-3b4a-56b0-aeec-fee71cc7f328
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Devices.SmartCards.SmartCardStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.SmartCards.SmartCardStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[SmartCard]]
+    guid bfea3fad-411e-5721-88f5-92c9b9fbbe14
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCard;{1b718871-6434-43f4-b55a-6a29623870aa})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[SmartCardAppletIdGroupRegistration]]
+    guid dddeb324-2853-5e3c-a4d9-1ca8c577c02e
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration;{df1208d1-31bb-5596-43b1-6d69a0257b3a})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IBuffer]
+    guid 51c3d2fd-b8a1-5620-b746-7ee6d533aca3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IBuffer
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Devices.SmartCards.CardAddedEventArgs python_type
     py CardAddedEventArgs
     signature rc(Windows.Devices.SmartCards.CardAddedEventArgs;{18bbef98-f18b-4dd3-b118-dfb2c8e23cc6})
@@ -20,115 +262,643 @@ class Windows.Devices.SmartCards.CardRemovedEventArgs python_type
         get get_SmartCard slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ICardRemovedEventArgs shape=4 reverse=22
             out class type=Windows.Devices.SmartCards.SmartCard return
 
-interface Windows.Foundation.IAsyncOperation<System.Guid> concrete
+interface Windows.Foundation.IAsyncOperation<System.Guid> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Guid]
     guid 6607bc41-294b-5975-9c3f-4b49836d0916
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};g16)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Guid
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Guid> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Guid> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Guid> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Guid> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Guid> shape=4 reverse=62 role=get_results
+            out guid return
 
-interface Windows.Foundation.IAsyncOperation<System.String> concrete
+interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[String]
     guid 3e1fe603-f897-5263-b328-0806426b8a79
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.String
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=62 role=get_results
+            out string return
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardActivationPolicyChangeResult]
     guid b8f15d35-2f3d-53aa-b5c6-faca4c7ff16e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardAppletIdGroupRegistration]
     guid d8030032-5f3c-50e8-91b8-691c454609e8
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration;{df1208d1-31bb-5596-43b1-6d69a0257b3a}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardChallengeContext> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardChallengeContext> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardChallengeContext]
     guid 1c650663-3f68-599b-b9d4-c350f13ee4e4
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardChallengeContext;{192a5319-c9c4-4947-81cc-44794a61ef91}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardChallengeContext
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardChallengeContext> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardChallengeContext> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardChallengeContext> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardChallengeContext> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardChallengeContext> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.SmartCards.SmartCardChallengeContext return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardConnection> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardConnection> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardConnection]
     guid 779bbc5b-a75c-5988-978f-34dbc629d576
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardConnection;{7edb991a-a81a-47bc-a649-156be6b7f231}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardConnection
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardConnection> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardConnection> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardConnection> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardConnection> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardConnection> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.SmartCards.SmartCardConnection return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardCryptogramGenerator]
     guid 5dfde47d-9770-5f44-a983-f2fee430768e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardCryptogramGenerator;{e39f587b-edd3-4e49-b594-0ff5e4d0c76f}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardCryptogramGenerator
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramGenerator return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardCryptogramGeneratorOperationStatus]
     guid f5b0e1b0-57a7-5ab3-aeaa-d6b635257866
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult]
     guid 001a0095-2adc-54c2-8594-3a36ba16fd86
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult;{2798e029-d687-4c92-86c6-399e9a0ecb09}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult]
     guid 2cab81a8-3c29-50d1-9761-5f3927c96dca
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult;{4e6a8a5c-9773-46c4-a32f-b1e543159e04}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult]
     guid 8110f6e1-3520-5cd2-bab5-0831185d2c2e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult;{8c7ce857-a7e7-489d-b9d6-368061515012}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardCryptogramMaterialPossessionProof]
     guid 6f2eea36-de40-55b4-90c3-255673f71b2e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof;{e5b9ab8c-a141-4135-9add-b0d2e3aa1fc9}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardCryptogramStorageKeyInfo]
     guid 2187f5a4-691c-50e1-bf4f-ddedc3e684b8
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo;{77b0f00d-b097-4f61-a26a-9561639c9c3a}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardEmulator> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardEmulator> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardEmulator]
     guid 1dd898f0-c825-5bf3-9564-4708932f955f
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardEmulator;{dfb906b2-875e-47e5-8077-e8bff1b1c6fb}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardEmulator
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardEmulator> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardEmulator> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardEmulator> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardEmulator> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardEmulator> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.SmartCards.SmartCardEmulator return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardProvisioning> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardProvisioning> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardProvisioning]
     guid 6184fc80-b752-5ce8-a136-f57174bb9309
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardProvisioning;{19eeedbd-1fab-477c-b712-1a2c5af1fd6e}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardProvisioning
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardProvisioning> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardProvisioning> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardProvisioning> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardProvisioning> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardProvisioning> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.SmartCards.SmartCardProvisioning return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReader> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReader> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardReader]
     guid 036a830d-bbca-5cb9-977f-b29ea3042149
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.SmartCards.SmartCardReader;{1074b4e0-54c2-4df0-817a-14c14378f06c}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardReader
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReader> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardReader> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReader> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardReader> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReader> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.SmartCards.SmartCardReader return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReaderStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReaderStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardReaderStatus]
     guid 5ae402fa-1f22-5570-a0c8-b2320adedb81
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.SmartCards.SmartCardReaderStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardReaderStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReaderStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardReaderStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReaderStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardReaderStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardReaderStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Devices.SmartCards.SmartCardReaderStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SmartCardStatus]
     guid e2223376-8cf6-51bd-9907-1344aa665e5d
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Devices.SmartCards.SmartCardStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Devices.SmartCards.SmartCardStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCardStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Devices.SmartCards.SmartCardStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[SmartCard]]
     guid 3b2691b2-fc5e-59ff-8c6f-e6dd29a967fc
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCard;{1b718871-6434-43f4-b55a-6a29623870aa})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[SmartCardAppletIdGroupRegistration]]
     guid 045e34b9-f153-5920-99de-ed912ea38b1a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration;{df1208d1-31bb-5596-43b1-6d69a0257b3a})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IBuffer]
     guid 3bee8834-b9a7-5a80-a746-5ef097227878
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Storage.Streams.IBuffer
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IBuffer return
 
 interface Windows.Devices.SmartCards.ICardAddedEventArgs
     guid 18bbef98-f18b-4dd3-b118-dfb2c8e23cc6
@@ -136,23 +906,526 @@ interface Windows.Devices.SmartCards.ICardAddedEventArgs
 interface Windows.Devices.SmartCards.ICardRemovedEventArgs
     guid 15331aaf-22d7-4945-afc9-03b46f42a6cd
 
-interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCard> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmartCard]
+    guid a32c5202-d113-535f-880e-50f3e5121ef8
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.SmartCards.SmartCard;{1b718871-6434-43f4-b55a-6a29623870aa}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.SmartCards.SmartCard
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCard> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCard> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmartCardAppletIdGroupRegistration]
+    guid 4d153aad-915c-59c9-98b9-a97bf3a570ad
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration;{df1208d1-31bb-5596-43b1-6d69a0257b3a}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmartCardAutomaticResponseApdu]
     guid db52d376-027e-5270-a457-fb8b4ae8958c
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu;{52152bab-c63e-4531-a857-d756d99b986a}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmartCardCryptogramAlgorithm]
+    guid 8e0de0e9-0742-559e-9b1b-460268622c1f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmartCardCryptogramMaterialCharacteristics]
+    guid 92058349-b443-52d8-8e46-9cf3815dd15a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics;{fc9ac5cc-c1d7-4153-923b-a2d43c6c8d49}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmartCardCryptogramMaterialPackageCharacteristics]
+    guid ab1dac61-1bd9-54a6-b407-1dc4e5b1a197
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics;{ffb58e1f-0692-4c47-93cf-34d91f9dcd00}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmartCardCryptogramMaterialPackageConfirmationResponseFormat]
+    guid c40c4451-4ebb-5635-9c7d-33c8c5d37a09
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmartCardCryptogramMaterialPackageFormat]
+    guid 3e241acc-1745-57ce-9368-21ba2130c3c1
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmartCardCryptogramMaterialType]
+    guid 2d379f84-389c-5809-a2c6-919b47caab88
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialType;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialType
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmartCardCryptogramPlacementStep]
     guid 234ab631-ed5f-51bc-8a8a-d5f3495f32de
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep;{947b03eb-8342-4792-a2e5-925636378a53}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmartCardCryptogramStorageKeyCapabilities]
+    guid 983619f1-45b9-5557-9800-eaa2bca6da57
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities;u4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SmartCardCryptogramStorageKeyCharacteristics]
+    guid 16d5cc89-2f6a-5779-8ef8-2d5a20078150
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics;{8552546e-4457-4825-b464-635471a39f5c}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IBuffer> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IBuffer]
+    guid 902972bf-a984-5443-b1c5-2f04a99e1fca
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Storage.Streams.IBuffer
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IBuffer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IBuffer> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCard> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmartCard]
+    guid 86b29903-916e-5817-bc96-df324475e31a
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.SmartCards.SmartCard;{1b718871-6434-43f4-b55a-6a29623870aa}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.SmartCards.SmartCard
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCard> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.SmartCards.SmartCard return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCard> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCard> shape=117 reverse=101
+            fill_array class type=Windows.Devices.SmartCards.SmartCard name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCard> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmartCardAppletIdGroupRegistration]
+    guid d3777a61-2106-505f-bcfa-b3cc8e1412e1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration;{df1208d1-31bb-5596-43b1-6d69a0257b3a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=117 reverse=101
+            fill_array class type=Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmartCardAutomaticResponseApdu]
+    guid 78eb5c52-9dd2-5e35-a868-f64919eba6b6
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu;{52152bab-c63e-4531-a857-d756d99b986a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu> shape=117 reverse=101
+            fill_array class type=Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmartCardCryptogramAlgorithm]
+    guid 4f1e0492-dab2-53c3-b5fb-c4b4373b1ec2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> shape=117 reverse=101
+            fill_array enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmartCardCryptogramMaterialCharacteristics]
+    guid e2a912a1-6133-571c-b0a9-2aaab283a07a
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics;{fc9ac5cc-c1d7-4153-923b-a2d43c6c8d49}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> shape=117 reverse=101
+            fill_array class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmartCardCryptogramMaterialPackageCharacteristics]
+    guid b78e40b2-70f0-5e34-aa8c-ca75a1b3b1bf
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics;{ffb58e1f-0692-4c47-93cf-34d91f9dcd00}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> shape=117 reverse=101
+            fill_array class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmartCardCryptogramMaterialPackageConfirmationResponseFormat]
+    guid 9d1091ae-be37-5be7-8edf-60c5164880b6
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> shape=117 reverse=101
+            fill_array enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmartCardCryptogramMaterialPackageFormat]
+    guid 7bf75a02-ee7e-513a-80f8-f7d8f004c907
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> shape=117 reverse=101
+            fill_array enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmartCardCryptogramMaterialType]
+    guid 97e1414d-439a-5dc2-81fc-d988e32c8dab
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialType;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialType
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialType return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> shape=117 reverse=101
+            fill_array enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialType name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmartCardCryptogramPlacementStep]
+    guid 81a62a70-8acd-598c-8d0a-a27d23e6cb1e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep;{947b03eb-8342-4792-a2e5-925636378a53}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> shape=117 reverse=101
+            fill_array class type=Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmartCardCryptogramStorageKeyCapabilities]
+    guid c858d7a0-c54e-513c-a097-a42fd3d569af
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities;u4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> shape=4 reverse=22 role=current
+            out enum_u32 type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> shape=117 reverse=101
+            fill_array enum_u32 type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SmartCardCryptogramStorageKeyCharacteristics]
+    guid c65f0917-372c-5157-80e2-2cfbd65e8fea
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics;{8552546e-4457-4825-b464-635471a39f5c}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> shape=117 reverse=101
+            fill_array class type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IBuffer> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IBuffer]
+    guid afee38e0-f882-5f10-9655-1fc98cc8cce5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Storage.Streams.IBuffer
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IBuffer> shape=4 reverse=22 role=current
+            out interface type=Windows.Storage.Streams.IBuffer return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IBuffer> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IBuffer> shape=117 reverse=101
+            fill_array interface type=Windows.Storage.Streams.IBuffer name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IBuffer> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Devices.SmartCards.IKnownSmartCardAppletIds
     guid 7b04d8d8-95b4-4c88-8cea-411e55511efc
 
 interface Windows.Foundation.IReference<System.UInt32> concrete
+    py winrt.windows.foundation._IReference[UInt32]
     guid 513ef3af-e784-5325-a91e-97c2b8111cf3
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.UInt32
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.UInt32> shape=4 reverse=22 role=value
+            out uint32 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Devices.SmartCards.ISmartCard
     guid 1b718871-6434-43f4-b55a-6a29623870aa
@@ -304,60 +1577,365 @@ interface Windows.Devices.SmartCards.ISmartCardTriggerDetails2
 interface Windows.Devices.SmartCards.ISmartCardTriggerDetails3
     guid b3e2c27d-18c6-4ba8-8376-ef03d4912666
 
-interface Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[IBuffer]
     guid 308fe894-cc06-5007-bc85-cbe94ac1a70c
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IBuffer>
     argument Windows.Storage.Streams.IBuffer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=4 reverse=173
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IBuffer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IBuffer> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Storage.Streams.IBuffer name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IBuffer> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=117 reverse=101
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=51 reverse=211
+            pass_array interface type=Windows.Storage.Streams.IBuffer name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in interface type=Windows.Storage.Streams.IBuffer name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmartCard]
     guid 4bee6991-3508-5f03-a2f4-90a5ddb26bd8
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCard;{1b718871-6434-43f4-b55a-6a29623870aa}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCard>
     argument Windows.Devices.SmartCards.SmartCard
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCard> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCard> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.SmartCards.SmartCard return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.SmartCards.SmartCard name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard> shape=117 reverse=66
+            in class type=Windows.Devices.SmartCards.SmartCard name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmartCardAppletIdGroupRegistration]
     guid b24324ba-192b-568b-81cf-9ac383406ed9
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration;{df1208d1-31bb-5596-43b1-6d69a0257b3a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>
     argument Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=117 reverse=66
+            in class type=Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmartCardCryptogramAlgorithm]
     guid a9df831c-c22b-5d30-a86c-5a31fe192433
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm>
     argument Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> shape=117 reverse=66
+            in enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmartCardCryptogramMaterialCharacteristics]
     guid 6e5e4447-1552-591b-afa0-387b26b7ac93
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics;{fc9ac5cc-c1d7-4153-923b-a2d43c6c8d49}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics>
     argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> shape=117 reverse=66
+            in class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmartCardCryptogramMaterialPackageCharacteristics]
     guid 94d937e9-0edc-5dad-a3ad-b2eb5ab88671
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics;{ffb58e1f-0692-4c47-93cf-34d91f9dcd00}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics>
     argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> shape=117 reverse=66
+            in class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmartCardCryptogramMaterialPackageConfirmationResponseFormat]
     guid 3a4176a2-d221-5a9f-a4c2-a5b8736da2d8
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat>
     argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> shape=117 reverse=66
+            in enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmartCardCryptogramMaterialPackageFormat]
     guid b7cce3f2-9889-586c-beb1-68feddb7cb15
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat>
     argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> shape=117 reverse=66
+            in enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmartCardCryptogramMaterialType]
     guid 394bc0cc-c621-5ba3-b4f0-712fcf591392
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialType;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType>
     argument Windows.Devices.SmartCards.SmartCardCryptogramMaterialType
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialType return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialType name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> shape=117 reverse=66
+            in enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialType name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmartCardCryptogramStorageKeyCapabilities]
     guid 9c0dfca0-4b62-56a8-8af3-8376898a15bc
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities;u4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities>
     argument Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum_u32 type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum_u32 type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> shape=117 reverse=66
+            in enum_u32 type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SmartCardCryptogramStorageKeyCharacteristics]
     guid f14872b9-7f4c-58f8-8bfa-af767f58971a
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics;{8552546e-4457-4825-b464-635471a39f5c}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics>
     argument Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> shape=117 reverse=66
+            in class type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IBuffer> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IBuffer]
+    guid fd944562-11d6-5eab-bd72-701993b68fac
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{905a0fe0-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IBuffer>
+    argument Windows.Storage.Streams.IBuffer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IBuffer> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.Streams.IBuffer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IBuffer> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IBuffer> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IBuffer> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Storage.Streams.IBuffer name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IBuffer> shape=117 reverse=66
+            in interface type=Windows.Storage.Streams.IBuffer name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Devices.SmartCards.KnownSmartCardAppletIds static python_type
     py KnownSmartCardAppletIds
@@ -566,7 +2144,7 @@ class Windows.Devices.SmartCards.SmartCardChallengeContext python_type closeable
             in interface type=Windows.Storage.Streams.IBuffer name=newAdministrativeKey
             out interface type=Windows.Foundation.IAsyncAction return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method provision_async
         method ProvisionAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardChallengeContext shape=117 reverse=66
             in interface type=Windows.Storage.Streams.IBuffer name=response
@@ -589,7 +2167,7 @@ class Windows.Devices.SmartCards.SmartCardConnection python_type closeable
     requires Windows.Devices.SmartCards.ISmartCardConnection
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method transmit_async
         method TransmitAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardConnection shape=51 reverse=24
             in interface type=Windows.Storage.Streams.IBuffer name=command
@@ -1315,28 +2893,52 @@ enum Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior python_type
     signature enum(Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior;i4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardEmulator,Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SmartCardEmulator, SmartCardEmulatorApduReceivedEventArgs]
     guid 146f9403-42f4-59a2-a85a-8294af3e3e78
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.SmartCards.SmartCardEmulator;{dfb906b2-875e-47e5-8077-e8bff1b1c6fb});rc(Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs;{d55d1576-69d2-5333-5b5f-f8c0d6e9f09f}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.SmartCards.SmartCardEmulator
     argument Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.SmartCards.SmartCardEmulator name=sender
+            in class type=Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardEmulator,Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SmartCardEmulator, SmartCardEmulatorConnectionDeactivatedEventArgs]
     guid cb9840cb-cc46-5c37-ab00-dd23d77b263b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.SmartCards.SmartCardEmulator;{dfb906b2-875e-47e5-8077-e8bff1b1c6fb});rc(Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs;{2186d8d3-c5eb-5262-43df-62a0a1b55557}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.SmartCards.SmartCardEmulator
     argument Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.SmartCards.SmartCardEmulator name=sender
+            in class type=Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardReader,Windows.Devices.SmartCards.CardAddedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SmartCardReader, CardAddedEventArgs]
     guid d36f2db9-5674-5f74-9f69-3cdc4559999f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.SmartCards.SmartCardReader;{1074b4e0-54c2-4df0-817a-14c14378f06c});rc(Windows.Devices.SmartCards.CardAddedEventArgs;{18bbef98-f18b-4dd3-b118-dfb2c8e23cc6}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.SmartCards.SmartCardReader
     argument Windows.Devices.SmartCards.CardAddedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.SmartCards.SmartCardReader name=sender
+            in class type=Windows.Devices.SmartCards.CardAddedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardReader,Windows.Devices.SmartCards.CardRemovedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SmartCardReader, CardRemovedEventArgs]
     guid 69da07c6-b266-5a1c-937c-d82b4a8232c6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.SmartCards.SmartCardReader;{1074b4e0-54c2-4df0-817a-14c14378f06c});rc(Windows.Devices.SmartCards.CardRemovedEventArgs;{15331aaf-22d7-4945-afc9-03b46f42a6cd}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.SmartCards.SmartCardReader
     argument Windows.Devices.SmartCards.CardRemovedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.SmartCards.SmartCardReader name=sender
+            in class type=Windows.Devices.SmartCards.CardRemovedEventArgs name=args
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -1350,13 +2952,68 @@ class System.String external
 class System.UInt32 external
     py winrt.system.UInt32
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Foundation.Collections.ValueSet external
     py winrt.windows.foundation.collections.ValueSet

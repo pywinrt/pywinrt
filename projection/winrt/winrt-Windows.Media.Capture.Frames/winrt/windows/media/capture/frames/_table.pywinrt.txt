@@ -2,6 +2,72 @@ format 4.0
 generator 0.0.0
 namespace Windows.Media.Capture.Frames
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[MediaFrameSourceGroup]]
+    guid cff78a64-bd44-5638-af2f-540c23b322e7
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Capture.Frames.MediaFrameSourceGroup;{7f605b87-4832-4b5f-ae3d-412faab37d34})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MediaFrameReaderStartStatus]
+    guid 9f49b2e5-2f68-5c58-8d8b-12176ff6ea50
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Media.Capture.Frames.MediaFrameReaderStartStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Capture.Frames.MediaFrameReaderStartStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MediaFrameSourceGetPropertyResult]
+    guid d0577f0d-ce46-5c47-8f7c-4ae5626cc76d
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult;{088616c2-3a64-4bd5-bd2b-e7c898d2f37a}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameSourceGroup> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MediaFrameSourceGroup]
+    guid adf10eeb-9fc5-553b-9164-294246992a2a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Capture.Frames.MediaFrameSourceGroup;{7f605b87-4832-4b5f-ae3d-412faab37d34}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Capture.Frames.MediaFrameSourceGroup
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGroup> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MediaFrameSourceSetPropertyStatus]
+    guid f613663a-c685-5dc0-b133-60d94303a6e3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MultiSourceMediaFrameReaderStartStatus]
+    guid 18eef24a-3332-5fee-a0f0-72ceed330645
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Media.Capture.Frames.AudioMediaFrame python_type
     py AudioMediaFrame
     signature rc(Windows.Media.Capture.Frames.AudioMediaFrame;{a3a9feff-8021-441b-9a46-e7f0137b7981})
@@ -68,35 +134,179 @@ class Windows.Media.Capture.Frames.DepthMediaFrameFormat python_type
         get get_VideoFormat slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IDepthMediaFrameFormat shape=4 reverse=22
             out class type=Windows.Media.Capture.Frames.VideoMediaFrameFormat return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[MediaFrameSourceGroup]]
     guid a795889f-6d49-5687-aabe-f2fc6237fa1a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Capture.Frames.MediaFrameSourceGroup;{7f605b87-4832-4b5f-ae3d-412faab37d34})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MediaFrameReaderStartStatus]
     guid db8e251a-adc6-5753-8784-c44b4d7c5b07
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Media.Capture.Frames.MediaFrameReaderStartStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Capture.Frames.MediaFrameReaderStartStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Media.Capture.Frames.MediaFrameReaderStartStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MediaFrameSourceGetPropertyResult]
     guid 80003979-4986-52a7-b227-ae6be4d2b5cd
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult;{088616c2-3a64-4bd5-bd2b-e7c898d2f37a}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGroup> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGroup> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MediaFrameSourceGroup]
     guid f3256a87-b1cf-5943-b664-9f19367d2779
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Capture.Frames.MediaFrameSourceGroup;{7f605b87-4832-4b5f-ae3d-412faab37d34}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Capture.Frames.MediaFrameSourceGroup
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameSourceGroup> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameSourceGroup> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Capture.Frames.MediaFrameSourceGroup return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MediaFrameSourceSetPropertyStatus]
     guid a1507c16-5f84-586e-8ca9-224f37e0e0de
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MultiSourceMediaFrameReaderStartStatus]
     guid a242b952-76aa-54e5-a13b-a8707c1098e1
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus return
 
 interface Windows.Media.Capture.Frames.IAudioMediaFrame
     guid a3a9feff-8021-441b-9a46-e7f0137b7981
@@ -116,11 +326,196 @@ interface Windows.Media.Capture.Frames.IDepthMediaFrameFormat
 interface Windows.Media.Capture.Frames.IInfraredMediaFrame
     guid 3fd13503-004b-4f0e-91ac-465299b41658
 
-interface Windows.Foundation.Collections.IMapView<System.Guid,System.Object> concrete
-    guid e4d2c732-bbc1-5ef4-869f-5007ceb55f6e
-    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;cinterface(IInspectable))
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[Guid, Object]]
+    guid f3b20528-e3b3-5331-b2d0-0c2623aee785
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameFormat> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MediaFrameFormat]
+    guid 1f029a27-1123-538a-9261-8a380e12bac6
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Capture.Frames.MediaFrameFormat;{71902b4e-b279-4a97-a9db-bd5a2fb78f39}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Capture.Frames.MediaFrameFormat
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameFormat> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameSourceGroup> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MediaFrameSourceGroup]
+    guid d0b71deb-76e8-5833-9623-2b1e1a8e1b72
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Capture.Frames.MediaFrameSourceGroup;{7f605b87-4832-4b5f-ae3d-412faab37d34}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Capture.Frames.MediaFrameSourceGroup
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceGroup> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameSourceInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MediaFrameSourceInfo]
+    guid 2e29c5b0-6aa9-50f2-91a4-5b67a5598f2e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Capture.Frames.MediaFrameSourceInfo;{87bdc9cd-4601-408f-91cf-038318cd0af3}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Capture.Frames.MediaFrameSourceInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameSourceInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceInfo> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MediaCaptureVideoProfileMediaDescription]
+    guid 0895e56d-fe1f-5364-ab67-c597d8970b89
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription;{8012afef-b691-49ff-83f2-c1e76eaaea1b}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[Guid, Object]]
+    guid 4f25059a-0b9a-5f25-9b9e-4b9f1d22ff65
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameFormat> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MediaFrameFormat]
+    guid 83a0cfaa-6546-5a63-8cd7-f62152a75d27
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Capture.Frames.MediaFrameFormat;{71902b4e-b279-4a97-a9db-bd5a2fb78f39}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Capture.Frames.MediaFrameFormat
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameFormat> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Capture.Frames.MediaFrameFormat return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameFormat> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameFormat> shape=117 reverse=101
+            fill_array class type=Windows.Media.Capture.Frames.MediaFrameFormat name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameFormat> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceGroup> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MediaFrameSourceGroup]
+    guid dc0c1f9a-b748-5cfa-9b42-a3a8fe37281a
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Capture.Frames.MediaFrameSourceGroup;{7f605b87-4832-4b5f-ae3d-412faab37d34}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Capture.Frames.MediaFrameSourceGroup
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Capture.Frames.MediaFrameSourceGroup return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=117 reverse=101
+            fill_array class type=Windows.Media.Capture.Frames.MediaFrameSourceGroup name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MediaFrameSourceInfo]
+    guid 443c60d8-208e-5399-bc44-edc6fef02293
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Capture.Frames.MediaFrameSourceInfo;{87bdc9cd-4601-408f-91cf-038318cd0af3}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Capture.Frames.MediaFrameSourceInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceInfo> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Capture.Frames.MediaFrameSourceInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceInfo> shape=117 reverse=101
+            fill_array class type=Windows.Media.Capture.Frames.MediaFrameSourceInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MediaCaptureVideoProfileMediaDescription]
+    guid b3e8378f-710c-5126-a6c9-8f489f63e15e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription;{8012afef-b691-49ff-83f2-c1e76eaaea1b}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> shape=117 reverse=101
+            fill_array class type=Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[Guid, Object]
+    guid 3bda1540-d089-5a1a-8f0d-94eba8068e58
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.Guid
     argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=22
+            out guid return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=43
+            out object return
+
+interface Windows.Foundation.Collections.IMapView<System.Guid,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[Guid, Object]
+    guid e4d2c732-bbc1-5ef4-869f-5007ceb55f6e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>>
+    argument System.Guid
+    argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=94 reverse=87 role=has_key
+            in guid name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=94 reverse=35 role=lookup
+            in guid name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> name=second
 
 interface Windows.Media.Capture.Frames.IMediaFrameArrivedEventArgs
     guid 0b430add-a490-4435-ada1-9affd55239f7
@@ -189,34 +584,372 @@ interface Windows.Media.Capture.Frames.IMultiSourceMediaFrameReference
     guid 21964b1a-7fe2-44d6-92e5-298e6d2810e9
 
 interface Windows.Foundation.IReference<System.UInt32> concrete
+    py winrt.windows.foundation._IReference[UInt32]
     guid 513ef3af-e784-5325-a91e-97c2b8111cf3
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.UInt32
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.UInt32> shape=4 reverse=22 role=value
+            out uint32 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    py winrt.windows.foundation._IReference[TimeSpan]
     guid 604d0c4c-91de-5c2a-935f-362f13eaf800
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.TimeSpan
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> shape=4 reverse=22 role=value
+            out timespan return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameFormat> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameFormat> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MediaFrameFormat]
     guid bae2547d-3fae-55cd-b209-45c3b5b2f816
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Capture.Frames.MediaFrameFormat;{71902b4e-b279-4a97-a9db-bd5a2fb78f39}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameFormat>
     argument Windows.Media.Capture.Frames.MediaFrameFormat
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameFormat> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameFormat> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameFormat> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Capture.Frames.MediaFrameFormat return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameFormat> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Capture.Frames.MediaFrameFormat name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameFormat> shape=117 reverse=66
+            in class type=Windows.Media.Capture.Frames.MediaFrameFormat name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MediaFrameSourceGroup]
     guid d01148ae-cccd-56eb-b2b4-a7d2acce14ec
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Capture.Frames.MediaFrameSourceGroup;{7f605b87-4832-4b5f-ae3d-412faab37d34}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameSourceGroup>
     argument Windows.Media.Capture.Frames.MediaFrameSourceGroup
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceGroup> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Capture.Frames.MediaFrameSourceGroup return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Capture.Frames.MediaFrameSourceGroup name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup> shape=117 reverse=66
+            in class type=Windows.Media.Capture.Frames.MediaFrameSourceGroup name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceInfo> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MediaFrameSourceInfo]
     guid dbdb7946-9b30-51d0-9c8c-c7105af690e0
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Capture.Frames.MediaFrameSourceInfo;{87bdc9cd-4601-408f-91cf-038318cd0af3}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameSourceInfo>
     argument Windows.Media.Capture.Frames.MediaFrameSourceInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameSourceInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.Frames.MediaFrameSourceInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Capture.Frames.MediaFrameSourceInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Capture.Frames.MediaFrameSourceInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceInfo> shape=117 reverse=66
+            in class type=Windows.Media.Capture.Frames.MediaFrameSourceInfo name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MediaCaptureVideoProfileMediaDescription]
     guid 726c7c8c-789e-5fcb-b31f-f9d9d4a3ac42
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription;{8012afef-b691-49ff-83f2-c1e76eaaea1b}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription>
     argument Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> shape=117 reverse=66
+            in class type=Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.Media.Capture.Frames.IVideoMediaFrame
     guid 00dd4ccb-32bd-4fe1-a013-7cc13cf5dbcf
@@ -289,7 +1022,7 @@ class Windows.Media.Capture.Frames.MediaFrameReader python_type closeable
         remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Media.Capture.Frames.IMediaFrameReader shape=26 reverse=53
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method start_async
         method StartAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReader shape=4 reverse=99
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> return
@@ -343,7 +1076,7 @@ class Windows.Media.Capture.Frames.MediaFrameReference python_type closeable
         get get_AudioMediaFrame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReference2 shape=4 reverse=22
             out class type=Windows.Media.Capture.Frames.AudioMediaFrame return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.Media.Capture.Frames.MediaFrameSource python_type
     py MediaFrameSource
@@ -528,7 +1261,7 @@ class Windows.Media.Capture.Frames.MultiSourceMediaFrameReader python_type close
         remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader shape=26 reverse=53
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method start_async
         method StartAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader shape=4 reverse=99
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> return
@@ -550,29 +1283,47 @@ class Windows.Media.Capture.Frames.MultiSourceMediaFrameReference python_type cl
     requires Windows.Media.Capture.Frames.IMultiSourceMediaFrameReference
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method try_get_frame_reference_by_source_id
         method TryGetFrameReferenceBySourceId slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReference shape=51 reverse=24
             in string name=sourceId
             out class type=Windows.Media.Capture.Frames.MediaFrameReference return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Frames.MediaFrameReader,Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaFrameReader, MediaFrameArrivedEventArgs]
     guid d3dd49cb-8d25-591a-80f7-8363d5c03ec9
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Capture.Frames.MediaFrameReader;{e4c94395-2028-48ed-90b0-d1c1b162e24c});rc(Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs;{0b430add-a490-4435-ada1-9affd55239f7}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Capture.Frames.MediaFrameReader
     argument Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Capture.Frames.MediaFrameReader name=sender
+            in class type=Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Frames.MediaFrameSource,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaFrameSource, Object]
     guid c7e61aa7-4716-5514-a913-ef1796b98dbd
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Capture.Frames.MediaFrameSource;{d6782953-90db-46a8-8add-2aa884a8d253});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Capture.Frames.MediaFrameSource
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Capture.Frames.MediaFrameSource name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Frames.MultiSourceMediaFrameReader,Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MultiSourceMediaFrameReader, MultiSourceMediaFrameArrivedEventArgs]
     guid 82b1ad4d-9887-56f4-9a9e-3ab18b02198c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Capture.Frames.MultiSourceMediaFrameReader;{8d144402-f763-488d-98f2-b437bcf075e7});rc(Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs;{63115e01-cf51-48fd-aab0-6d693eb48127}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Capture.Frames.MultiSourceMediaFrameReader
     argument Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Capture.Frames.MultiSourceMediaFrameReader name=sender
+            in class type=Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs name=args
 
 class Windows.Media.Capture.Frames.VideoMediaFrame python_type
     py VideoMediaFrame
@@ -637,16 +1388,75 @@ class Windows.Devices.Enumeration.DeviceInformation external
 enum Windows.Devices.Enumeration.Panel external
     py winrt.windows.devices.enumeration.Panel
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
 
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
 struct Windows.Foundation.TimeSpan external
     py winrt.windows.foundation.TimeSpan
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface external
     py winrt.windows.graphics.directx.direct3d11._IDirect3DSurface

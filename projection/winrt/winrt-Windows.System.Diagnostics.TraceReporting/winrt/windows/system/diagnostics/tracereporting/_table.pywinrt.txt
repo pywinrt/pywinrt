@@ -2,11 +2,136 @@ format 4.0
 generator 0.0.0
 namespace Windows.System.Diagnostics.TraceReporting
 
-interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.Guid> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Guid]
+    guid f4ca3045-5dd7-54be-982e-d88d8ca0876e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};g16)
+    base Windows.Foundation.Collections.IIterable
+    argument System.Guid
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Guid> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Guid> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PlatformDiagnosticTraceInfo]
+    guid ecb0c107-c97b-52fe-a5e6-a33e93493769
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo;{f870ed97-d597-4bf7-88dc-cf5c7dc2a1d2}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> return
+
+interface Windows.Foundation.Collections.IIterator<System.Guid> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Guid]
+    guid d3d64048-82b3-53c7-9285-b0be18368482
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};g16)
+    base Windows.Foundation.Collections.IIterator
+    argument System.Guid
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Guid> shape=4 reverse=22 role=current
+            out guid return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Guid> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Guid> shape=117 reverse=101
+            fill_array guid name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Guid> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PlatformDiagnosticTraceInfo]
+    guid 1af4598d-98bb-5e51-842b-cf691925b6c2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo;{f870ed97-d597-4bf7-88dc-cf5c7dc2a1d2}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> shape=4 reverse=22 role=current
+            out class type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> shape=117 reverse=101
+            fill_array class type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+            out string return
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, String]
     guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     argument System.String
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
 interface Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics
     guid c1145cfa-9292-4267-890a-9ea3ed072312
@@ -17,15 +142,61 @@ interface Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo
 interface Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo
     guid 3d4d5e2d-01d8-4768-8554-1eb1ca610986
 
-interface Windows.Foundation.Collections.IVectorView<System.Guid> concrete
+interface Windows.Foundation.Collections.IVectorView<System.Guid> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Guid]
     guid 9520e64b-15b2-52a6-98ed-3191fa6cf68a
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};g16)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Guid>
     argument System.Guid
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Guid> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Guid> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out guid return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array guid name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=177 reverse=88
+            in guid name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PlatformDiagnosticTraceInfo]
     guid 8f1b3397-4dc3-5b72-91fa-0fdc915d950c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo;{f870ed97-d597-4bf7-88dc-cf5c7dc2a1d2}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo>
     argument Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> shape=117 reverse=66
+            in class type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo name=value
+            out uint32 name=index
+            out boolean return
 
 enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState python_type
     py PlatformDiagnosticActionState
@@ -140,3 +311,23 @@ class System.Guid external
 
 class System.String external
     py winrt.system.String
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

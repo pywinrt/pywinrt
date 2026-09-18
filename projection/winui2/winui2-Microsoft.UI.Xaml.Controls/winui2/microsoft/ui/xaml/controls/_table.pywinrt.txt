@@ -195,6 +195,17 @@ class Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer composable python_type
     method stop
         method Stop slot=25 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualPlayer shape=0
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.String> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[String]
+    guid b79a741f-7fb5-50ae-9e99-911201ec3d41
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};string)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.String> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Microsoft.UI.Xaml.Controls.BackdropMaterial composable python_type
     py BackdropMaterial
     signature rc(Microsoft.UI.Xaml.Controls.BackdropMaterial;{00d918aa-9b55-5841-9af5-637de7982ea7})
@@ -828,7 +839,7 @@ interface Microsoft.UI.Xaml.Controls.IAnimatedVisual python_type closeable
         get get_Size slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisual shape=4 reverse=43
             out struct type=Windows.Foundation.Numerics.Vector2 return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 interface Microsoft.UI.Xaml.Controls.IAnimatedVisual2 python_type closeable
     py _IAnimatedVisual2
@@ -846,7 +857,7 @@ interface Microsoft.UI.Xaml.Controls.IAnimatedVisual2 python_type closeable
         get get_Size slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisual shape=4 reverse=43
             out struct type=Windows.Foundation.Numerics.Vector2 return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_animations
         method CreateAnimations slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisual2 shape=0 reverse=16
     method destroy_animations
@@ -906,10 +917,34 @@ interface Microsoft.UI.Xaml.Controls.IAnimatedVisualSource3 python_type
             in boolean name=createAnimations
             out interface type=Microsoft.UI.Xaml.Controls.IAnimatedVisual2 return
 
-interface Windows.Foundation.IAsyncOperation<System.String> concrete
+interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[String]
     guid 3e1fe603-f897-5263-b328-0806426b8a79
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.String
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=62 role=get_results
+            out string return
 
 interface Microsoft.UI.Xaml.Controls.IBackdropMaterial
     guid 00d918aa-9b55-5841-9af5-637de7982ea7
@@ -1144,18 +1179,278 @@ interface Microsoft.UI.Xaml.Controls.IItemsSourceView
 interface Microsoft.UI.Xaml.Controls.IItemsSourceViewFactory
     guid aadc6fdd-eb00-5e58-b95d-120f891d733f
 
-interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.SwipeItem> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.MenuBarItem> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MenuBarItem]
+    guid 4677548d-2c6c-5393-8c0d-2a98d94862be
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.Controls.MenuBarItem;{9caa4261-3a0c-5a59-8cfe-391744c3f815}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.UI.Xaml.Controls.MenuBarItem
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.MenuBarItem> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.SwipeItem> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SwipeItem]
     guid cb998d28-c540-597b-ad5e-3f430a7211f1
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.Controls.SwipeItem;{560fe6c5-109f-5866-b02e-31e4fa930ed0}))
+    base Windows.Foundation.Collections.IIterable
     argument Microsoft.UI.Xaml.Controls.SwipeItem
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.SwipeItem> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.TreeViewNode> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TreeViewNode]
+    guid 81cb52ce-e34f-5d1f-a118-fa3675d2105a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.Controls.TreeViewNode;{00378a74-790b-5328-8afa-7d65e22da426}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.UI.Xaml.Controls.TreeViewNode
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.TreeViewNode> return
+
+interface Windows.Foundation.Collections.IIterable<System.Object> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Object]
+    guid 092b849b-60b1-52be-a44a-6fe8e933cbe4
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IIterable
+    argument System.Object
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+
+interface Windows.Foundation.Collections.IIterable<System.Int32> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Int32]
+    guid 81a643fb-f51c-5565-83c4-f96425777b66
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};i4)
+    base Windows.Foundation.Collections.IIterable
+    argument System.Int32
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Int32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Int32> return
 
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.SwipeItem> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Double]]
+    guid 822b22ef-209f-56aa-a4c3-dc0113b25e4c
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;f8))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.ICommandBarElement> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ICommandBarElement]
+    guid d4c5a8e7-0d5e-5922-a7b4-59b5e634d335
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{67918e1b-f2d5-44d1-8b84-92b87f80a350})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Xaml.Controls.ICommandBarElement
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.ICommandBarElement> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MenuFlyoutItemBase]
+    guid 0bb14d64-cc9a-58ae-b881-73fe0ecb99eb
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Controls.MenuFlyoutItemBase;{f9b56047-8da6-4730-9208-144125c6b396}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Xaml.Controls.MenuFlyoutItemBase
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.UIElement> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[UIElement]
+    guid 42e26ae1-d357-57e8-bb48-f75c9ff69d91
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.UIElement;{676d0be9-b65c-41c6-ba40-58cf87f201c1}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Xaml.UIElement
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.UIElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.UIElement> return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.MenuBarItem> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MenuBarItem]
+    guid 7b4e3615-3a5c-5158-ba29-15890becd3b0
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.Controls.MenuBarItem;{9caa4261-3a0c-5a59-8cfe-391744c3f815}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.UI.Xaml.Controls.MenuBarItem
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.Controls.MenuBarItem return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.Controls.MenuBarItem name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.SwipeItem> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SwipeItem]
     guid 3012e997-ab4b-5857-81a2-94a2128c8d83
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.Controls.SwipeItem;{560fe6c5-109f-5866-b02e-31e4fa930ed0}))
+    base Windows.Foundation.Collections.IIterator
     argument Microsoft.UI.Xaml.Controls.SwipeItem
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.Controls.SwipeItem return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.SwipeItem> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.Controls.SwipeItem name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.TreeViewNode> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TreeViewNode]
+    guid 6e1c3355-54fa-5222-9351-d812c5694d59
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.Controls.TreeViewNode;{00378a74-790b-5328-8afa-7d65e22da426}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.UI.Xaml.Controls.TreeViewNode
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.Controls.TreeViewNode return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.Controls.TreeViewNode name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.Object> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Object]
+    guid 44a94f2d-04f8-5091-b336-be7892dd10be
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IIterator
+    argument System.Object
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=22 role=current
+            out object return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=117 reverse=101
+            fill_array object name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.Int32> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Int32]
+    guid bfea7f78-50c2-5f1d-a6ea-9e978d2699ff
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};i4)
+    base Windows.Foundation.Collections.IIterator
+    argument System.Int32
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=4 reverse=22 role=current
+            out int32 return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=117 reverse=101
+            fill_array int32 name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int32> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, Double]]
+    guid 4e32fe35-df21-5ef4-ba75-7e351d69cf7e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;f8))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.ICommandBarElement> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ICommandBarElement]
+    guid cddb0380-e9d7-5264-ab5c-d72b642874c9
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{67918e1b-f2d5-44d1-8b84-92b87f80a350})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.Controls.ICommandBarElement
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=22 role=current
+            out interface type=Windows.UI.Xaml.Controls.ICommandBarElement return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.ICommandBarElement> shape=117 reverse=101
+            fill_array interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MenuFlyoutItemBase]
+    guid 2a8a81ef-f351-50a7-bcdc-8368df215280
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Controls.MenuFlyoutItemBase;{f9b56047-8da6-4730-9208-144125c6b396}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.Controls.MenuFlyoutItemBase
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.UIElement> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[UIElement]
+    guid 1d1f9d60-d53b-57f7-b144-8f7c487846e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.UIElement;{676d0be9-b65c-41c6-ba40-58cf87f201c1}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.UIElement
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.UIElement> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.UIElement return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.UIElement> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.UIElement> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.UIElement name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.UIElement> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Microsoft.UI.Xaml.Controls.IKeyIndexMapping python_type
     py _IKeyIndexMapping
@@ -1169,6 +1464,20 @@ interface Microsoft.UI.Xaml.Controls.IKeyIndexMapping python_type
         method KeyFromIndex slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IKeyIndexMapping shape=51 reverse=24
             in int32 name=index
             out string return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, Double]
+    guid f3f8b9b7-456e-5a34-93a8-fbc5c63e9f0a
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;f8)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.Double
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double> shape=4 reverse=43
+            out double return
 
 interface Microsoft.UI.Xaml.Controls.ILayout
     guid 24e50c1c-9c51-5144-9ddc-3f500191c262
@@ -1188,11 +1497,32 @@ interface Microsoft.UI.Xaml.Controls.ILayoutFactory
 interface Microsoft.UI.Xaml.Controls.ILayoutProtected
     guid e46ff416-741e-5176-a1d4-5718d2342243
 
-interface Windows.Foundation.Collections.IMapView<System.String,System.Double> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,System.Double> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, Double]
     guid d18743cf-94d6-54ac-9da2-f4755fa8e4f2
     signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;f8)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>>
     argument System.String
     argument System.Double
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Double> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Double> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Double> shape=51 reverse=24 role=lookup
+            in string name=key
+            out double return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Double> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Double> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Double> name=second
 
 interface Microsoft.UI.Xaml.Controls.IMenuBar
     guid ba97f337-8f1e-5141-b53f-e77a8ba3ebbd
@@ -1350,10 +1680,64 @@ interface Microsoft.UI.Xaml.Controls.INumberBoxStatics
 interface Microsoft.UI.Xaml.Controls.INumberBoxValueChangedEventArgs
     guid c66cf16e-7c8a-532e-9d23-058c1c98dd50
 
-interface Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Controls.ICommandBarElement> concrete
+interface Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Controls.ICommandBarElement> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IObservableVector[ICommandBarElement]
     guid d5644006-717d-512d-8785-b48c17e73468
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};{67918e1b-f2d5-44d1-8b84-92b87f80a350})
+    base Windows.Foundation.Collections.IObservableVector
+    requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement>
+    requires Windows.Foundation.Collections.IIterable<T>
     argument Windows.UI.Xaml.Controls.ICommandBarElement
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=43 role=size
+            out uint32 return
+    event vector_changed
+        add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=51 reverse=24
+            in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<Windows.UI.Xaml.Controls.ICommandBarElement> name=vhnd
+            out event_token return
+        remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=26 reverse=53
+            in event_token name=token
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=173
+            in interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.ICommandBarElement> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.UI.Xaml.Controls.ICommandBarElement return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.ICommandBarElement> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=117 reverse=101
+            in interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=51 reverse=211
+            pass_array interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=value
 
 interface Microsoft.UI.Xaml.Controls.IParallaxView
     guid 692e1e53-4231-5de0-acb4-859e494dab73
@@ -1479,9 +1863,132 @@ interface Microsoft.UI.Xaml.Controls.IRatingItemInfoFactory
     guid 61f13480-cd0c-556a-b532-a0cf53e3cda0
 
 interface Windows.Foundation.IReference<Windows.UI.Color> concrete
+    py winrt.windows.foundation._IReference[Color]
     guid ab8e5d11-b0c1-5a21-95ae-f16bf3a37624
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.UI.Color;u1;u1;u1;u1))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.UI.Color
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.UI.Color> shape=4 reverse=22 role=value
+            out struct type=Windows.UI.Color return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Microsoft.UI.Xaml.Controls.IRefreshContainer
     guid 1c9778e8-a427-5f86-9d5e-02db9b2c4093
@@ -1759,50 +2266,593 @@ interface Microsoft.UI.Xaml.Controls.IUniformGridLayoutFactory
 interface Microsoft.UI.Xaml.Controls.IUniformGridLayoutStatics
     guid e1059bce-59d9-52c9-8c0d-c5fb86e833a1
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[MenuBarItem]
     guid ef83f4ba-0b73-51d5-b13b-89a2b156ad9a
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Controls.MenuBarItem;{9caa4261-3a0c-5a59-8cfe-391744c3f815}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.MenuBarItem>
     argument Microsoft.UI.Xaml.Controls.MenuBarItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=4 reverse=173
+            in class type=Microsoft.UI.Xaml.Controls.MenuBarItem name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.MenuBarItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Controls.MenuBarItem return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Controls.MenuBarItem name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.MenuBarItem> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=117 reverse=101
+            in class type=Microsoft.UI.Xaml.Controls.MenuBarItem name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Controls.MenuBarItem name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Xaml.Controls.MenuBarItem name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Controls.MenuBarItem name=value
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SwipeItem]
     guid ab950182-48c1-55dd-be0e-cf8b8fb6b77c
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Controls.SwipeItem;{560fe6c5-109f-5866-b02e-31e4fa930ed0}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.SwipeItem>
     argument Microsoft.UI.Xaml.Controls.SwipeItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=173
+            in class type=Microsoft.UI.Xaml.Controls.SwipeItem name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.SwipeItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Controls.SwipeItem return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Controls.SwipeItem name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.SwipeItem> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=117 reverse=101
+            in class type=Microsoft.UI.Xaml.Controls.SwipeItem name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Controls.SwipeItem name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Xaml.Controls.SwipeItem name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Controls.SwipeItem name=value
 
-interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> concrete
+interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[TreeViewNode]
     guid fb11ab97-9ea3-5e29-977b-3ce47dac68de
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Controls.TreeViewNode;{00378a74-790b-5328-8afa-7d65e22da426}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.TreeViewNode>
     argument Microsoft.UI.Xaml.Controls.TreeViewNode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=4 reverse=173
+            in class type=Microsoft.UI.Xaml.Controls.TreeViewNode name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.TreeViewNode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Controls.TreeViewNode return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Controls.TreeViewNode name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.TreeViewNode> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=117 reverse=101
+            in class type=Microsoft.UI.Xaml.Controls.TreeViewNode name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Controls.TreeViewNode name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=51 reverse=211
+            pass_array class type=Microsoft.UI.Xaml.Controls.TreeViewNode name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.UI.Xaml.Controls.TreeViewNode name=value
 
-interface Windows.Foundation.Collections.IVector<System.Object> concrete
+interface Windows.Foundation.Collections.IVector<System.Object> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Object]
     guid b32bdca4-5e52-5b27-bc5d-d66a1a268c2a
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.Object>
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=173
+            in object name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out object return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array object name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=117 reverse=101
+            in object name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in object name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=211
+            pass_array object name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in object name=value
 
-interface Windows.Foundation.Collections.IVector<System.Int32> concrete
+interface Windows.Foundation.Collections.IVector<System.Int32> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Int32]
     guid b939af5b-b45d-5489-9149-61442c1905fe
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};i4)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.Int32>
     argument System.Int32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=4 reverse=173
+            in int32 name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Int32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Int32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out int32 return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array int32 name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int32> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=117 reverse=101
+            in int32 name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in int32 name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=51 reverse=211
+            pass_array int32 name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in int32 name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ICommandBarElement]
+    guid 18ad7c66-a127-550f-8325-8cf1789176c1
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{67918e1b-f2d5-44d1-8b84-92b87f80a350})
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.ICommandBarElement>
+    argument Windows.UI.Xaml.Controls.ICommandBarElement
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=173
+            in interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.ICommandBarElement> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.UI.Xaml.Controls.ICommandBarElement return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.ICommandBarElement> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=117 reverse=101
+            in interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=51 reverse=211
+            pass_array interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=value
+
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[MenuFlyoutItemBase]
     guid f7f1c37b-b4df-5128-a476-fc8399bc10af
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Controls.MenuFlyoutItemBase;{f9b56047-8da6-4730-9208-144125c6b396}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.MenuFlyoutItemBase>
     argument Windows.UI.Xaml.Controls.MenuFlyoutItemBase
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase name=value
 
-interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.SwipeItem> concrete
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.MenuBarItem> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MenuBarItem]
+    guid a4463045-855a-5851-8777-3a1a0a538639
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Xaml.Controls.MenuBarItem;{9caa4261-3a0c-5a59-8cfe-391744c3f815}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.MenuBarItem>
+    argument Microsoft.UI.Xaml.Controls.MenuBarItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.MenuBarItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Controls.MenuBarItem return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Controls.MenuBarItem name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.MenuBarItem> shape=117 reverse=66
+            in class type=Microsoft.UI.Xaml.Controls.MenuBarItem name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.SwipeItem> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SwipeItem]
     guid 3ceaebc7-2d46-5530-85f0-a1b36233e99a
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Xaml.Controls.SwipeItem;{560fe6c5-109f-5866-b02e-31e4fa930ed0}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.SwipeItem>
     argument Microsoft.UI.Xaml.Controls.SwipeItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.SwipeItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.SwipeItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Controls.SwipeItem return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.SwipeItem> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Controls.SwipeItem name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.SwipeItem> shape=117 reverse=66
+            in class type=Microsoft.UI.Xaml.Controls.SwipeItem name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<System.Object> concrete
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.TreeViewNode> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TreeViewNode]
+    guid f3c71a15-7999-5201-83e7-e019d76277cb
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Xaml.Controls.TreeViewNode;{00378a74-790b-5328-8afa-7d65e22da426}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.TreeViewNode>
+    argument Microsoft.UI.Xaml.Controls.TreeViewNode
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.TreeViewNode> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Controls.TreeViewNode return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Controls.TreeViewNode name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.TreeViewNode> shape=117 reverse=66
+            in class type=Microsoft.UI.Xaml.Controls.TreeViewNode name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.Object> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Object]
     guid a6487363-b074-5c60-ab16-866dce4ee54d
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Object>
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out object return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array object name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=117 reverse=66
+            in object name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.UIElement> concrete
+interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Int32]
+    guid 8d720cdf-3934-5d3f-9a55-40e8063b086a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};i4)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Int32>
+    argument System.Int32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Int32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Int32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out int32 return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array int32 name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=117 reverse=66
+            in int32 name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.ICommandBarElement> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ICommandBarElement]
+    guid a38e89ec-f1a4-5d7b-97c3-8aefb64a5f43
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{67918e1b-f2d5-44d1-8b84-92b87f80a350})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.ICommandBarElement>
+    argument Windows.UI.Xaml.Controls.ICommandBarElement
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.ICommandBarElement> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.ICommandBarElement> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.UI.Xaml.Controls.ICommandBarElement return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.ICommandBarElement> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.ICommandBarElement> shape=117 reverse=66
+            in interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MenuFlyoutItemBase]
+    guid a59e9e24-f5a6-5272-a97b-7dd01a3efdd0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Controls.MenuFlyoutItemBase;{f9b56047-8da6-4730-9208-144125c6b396}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.MenuFlyoutItemBase>
+    argument Windows.UI.Xaml.Controls.MenuFlyoutItemBase
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.MenuFlyoutItemBase> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.Controls.MenuFlyoutItemBase name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.UIElement> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[UIElement]
     guid f3864c10-14a4-5516-b1d9-63b6579429b1
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.UIElement;{676d0be9-b65c-41c6-ba40-58cf87f201c1}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.UIElement>
     argument Windows.UI.Xaml.UIElement
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.UIElement> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.UIElement> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.UIElement> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.UIElement> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.UIElement return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.UIElement> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.UIElement name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.UIElement> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.UIElement name=value
+            out uint32 name=index
+            out boolean return
 
 interface Microsoft.UI.Xaml.Controls.IVirtualizingLayout
     guid 54857ce0-b9e6-51a3-bfa8-dcd8ee306d5c
@@ -4708,7 +5758,7 @@ class Microsoft.UI.Xaml.Controls.SwipeItems composable python_type iterable sequ
         put put_Mode slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ISwipeItems shape=4 reverse=43
             in enum32 type=Microsoft.UI.Xaml.Controls.SwipeMode name=value
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=43 role=size
             out uint32 return
     property mode_property static
         get get_ModeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISwipeItemsStatics shape=4 reverse=22 static
@@ -4719,10 +5769,10 @@ class Microsoft.UI.Xaml.Controls.SwipeItems composable python_type iterable sequ
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Controls.SwipeItem> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Controls.SwipeItem return
     method get_many
@@ -4739,11 +5789,11 @@ class Microsoft.UI.Xaml.Controls.SwipeItems composable python_type iterable sequ
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Controls.SwipeItem name=value
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=0 reverse=185
@@ -4751,7 +5801,7 @@ class Microsoft.UI.Xaml.Controls.SwipeItems composable python_type iterable sequ
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=51 reverse=211
             pass_array class type=Microsoft.UI.Xaml.Controls.SwipeItem name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.Controls.SwipeItem name=value
 
@@ -6035,304 +7085,604 @@ enum Microsoft.UI.Xaml.Controls.TwoPaneViewWideModeConfiguration python_type
     signature enum(Microsoft.UI.Xaml.Controls.TwoPaneViewWideModeConfiguration;i4)
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.BreadcrumbBar,Microsoft.UI.Xaml.Controls.BreadcrumbBarItemClickedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[BreadcrumbBar, BreadcrumbBarItemClickedEventArgs]
     guid 6cb13a38-f812-5123-9a9b-55df094531ef
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.BreadcrumbBar;{2e47b7d6-5fbd-54c7-b0b1-ceff4a19c744});rc(Microsoft.UI.Xaml.Controls.BreadcrumbBarItemClickedEventArgs;{1ceea503-365e-580d-bcd4-e9ad0248f6b5}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.BreadcrumbBar
     argument Microsoft.UI.Xaml.Controls.BreadcrumbBarItemClickedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.BreadcrumbBar name=sender
+            in class type=Microsoft.UI.Xaml.Controls.BreadcrumbBarItemClickedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ColorPicker,Microsoft.UI.Xaml.Controls.ColorChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ColorPicker, ColorChangedEventArgs]
     guid aa939f73-b4c3-5d22-8769-e6735aa593fc
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.ColorPicker;{ae72b24b-f93f-5a19-8ce4-a18b73c3356d});rc(Microsoft.UI.Xaml.Controls.ColorChangedEventArgs;{148d57a2-b1cb-5f5d-b6b5-512805d71761}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.ColorPicker
     argument Microsoft.UI.Xaml.Controls.ColorChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.ColorPicker name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ColorChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Expander,Microsoft.UI.Xaml.Controls.ExpanderCollapsedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Expander, ExpanderCollapsedEventArgs]
     guid 5d49d571-a91f-59e1-8610-793c5e3861bd
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Expander;{cd1d4ede-8d39-5bef-a735-9fdf6038e86b});rc(Microsoft.UI.Xaml.Controls.ExpanderCollapsedEventArgs;{968a6870-7426-535e-a526-279e6eedecd0}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Expander
     argument Microsoft.UI.Xaml.Controls.ExpanderCollapsedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Expander name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ExpanderCollapsedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Expander,Microsoft.UI.Xaml.Controls.ExpanderExpandingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Expander, ExpanderExpandingEventArgs]
     guid 4ff76f10-8d60-5a9c-b734-8a72d0b0bbad
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Expander;{cd1d4ede-8d39-5bef-a735-9fdf6038e86b});rc(Microsoft.UI.Xaml.Controls.ExpanderExpandingEventArgs;{433f2e36-19e7-579c-b4ce-9ce5d510d001}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Expander
     argument Microsoft.UI.Xaml.Controls.ExpanderExpandingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Expander name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ExpanderExpandingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[IDynamicAnimatedVisualSource, Object]
     guid 6980444b-361b-5cca-8f43-7017eded498b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{ab00e5cf-1be6-559c-ad5b-0253bb17c0f7};cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.InfoBar,Microsoft.UI.Xaml.Controls.InfoBarClosedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[InfoBar, InfoBarClosedEventArgs]
     guid 8032b71d-eda5-5ec8-ac5d-7dd8ce36e8c1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.InfoBar;{273ffde8-9324-55b7-9ffe-7d995a8af56b});rc(Microsoft.UI.Xaml.Controls.InfoBarClosedEventArgs;{593af0b3-bded-53da-8f56-80ed3c64322c}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.InfoBar
     argument Microsoft.UI.Xaml.Controls.InfoBarClosedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.InfoBar name=sender
+            in class type=Microsoft.UI.Xaml.Controls.InfoBarClosedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.InfoBar,Microsoft.UI.Xaml.Controls.InfoBarClosingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[InfoBar, InfoBarClosingEventArgs]
     guid f6f16645-e963-563a-b132-7cf2d85edb20
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.InfoBar;{273ffde8-9324-55b7-9ffe-7d995a8af56b});rc(Microsoft.UI.Xaml.Controls.InfoBarClosingEventArgs;{062d01d6-61af-5435-8c4b-c51106583b5b}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.InfoBar
     argument Microsoft.UI.Xaml.Controls.InfoBarClosingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.InfoBar name=sender
+            in class type=Microsoft.UI.Xaml.Controls.InfoBarClosingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.InfoBar,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[InfoBar, Object]
     guid 77bc8307-08fa-5137-8082-eea6daaca2d4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.InfoBar;{273ffde8-9324-55b7-9ffe-7d995a8af56b});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.InfoBar
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.InfoBar name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ItemsRepeater,Microsoft.UI.Xaml.Controls.ItemsRepeaterElementClearingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ItemsRepeater, ItemsRepeaterElementClearingEventArgs]
     guid 06d60977-87c1-52e0-a515-9c33af421479
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.ItemsRepeater;{0bd894f2-edfc-5ddf-a166-2db14bbfdf35});rc(Microsoft.UI.Xaml.Controls.ItemsRepeaterElementClearingEventArgs;{1e30b4c7-f1bc-5a6f-8a5b-8c54adac5f80}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.ItemsRepeater
     argument Microsoft.UI.Xaml.Controls.ItemsRepeaterElementClearingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.ItemsRepeater name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ItemsRepeaterElementClearingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ItemsRepeater,Microsoft.UI.Xaml.Controls.ItemsRepeaterElementIndexChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ItemsRepeater, ItemsRepeaterElementIndexChangedEventArgs]
     guid 53392db6-0c05-56d4-a3b6-419f38f80303
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.ItemsRepeater;{0bd894f2-edfc-5ddf-a166-2db14bbfdf35});rc(Microsoft.UI.Xaml.Controls.ItemsRepeaterElementIndexChangedEventArgs;{995ee1fd-e2c3-5fe3-9443-a95a3fad5a9f}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.ItemsRepeater
     argument Microsoft.UI.Xaml.Controls.ItemsRepeaterElementIndexChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.ItemsRepeater name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ItemsRepeaterElementIndexChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ItemsRepeater,Microsoft.UI.Xaml.Controls.ItemsRepeaterElementPreparedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ItemsRepeater, ItemsRepeaterElementPreparedEventArgs]
     guid bff1d7b9-e056-5155-a21c-6a50a118f69c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.ItemsRepeater;{0bd894f2-edfc-5ddf-a166-2db14bbfdf35});rc(Microsoft.UI.Xaml.Controls.ItemsRepeaterElementPreparedEventArgs;{a56d3912-ee00-560e-8d3e-0edfd8d56691}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.ItemsRepeater
     argument Microsoft.UI.Xaml.Controls.ItemsRepeaterElementPreparedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.ItemsRepeater name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ItemsRepeaterElementPreparedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Layout,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[Layout, Object]
     guid 38efeef8-0b6d-5875-ab47-410bf781c683
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.Layout;{24e50c1c-9c51-5144-9ddc-3f500191c262});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.Layout
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.Layout name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[NavigationView, NavigationViewBackRequestedEventArgs]
     guid 20b468f8-8f3d-5c17-9e5f-fe3157add18a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.NavigationView;{b00eb54c-9174-5d84-9678-56c98016e689});rc(Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs;{ae752207-bd1b-5afa-a872-e9bbaeea0ede}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.NavigationView
     argument Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.NavigationView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewDisplayModeChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[NavigationView, NavigationViewDisplayModeChangedEventArgs]
     guid f6c58fc1-87ef-5aee-8b64-ffc218ad4c02
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.NavigationView;{b00eb54c-9174-5d84-9678-56c98016e689});rc(Microsoft.UI.Xaml.Controls.NavigationViewDisplayModeChangedEventArgs;{58dcf1ea-9e56-522c-b3f8-34bd55ecaca4}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.NavigationView
     argument Microsoft.UI.Xaml.Controls.NavigationViewDisplayModeChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.NavigationView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.NavigationViewDisplayModeChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewItemCollapsedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[NavigationView, NavigationViewItemCollapsedEventArgs]
     guid 8f4e0175-55ae-57c9-afa5-a049481deb18
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.NavigationView;{b00eb54c-9174-5d84-9678-56c98016e689});rc(Microsoft.UI.Xaml.Controls.NavigationViewItemCollapsedEventArgs;{b546f6a1-c66f-5ded-b5d7-bed0a26197e3}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.NavigationView
     argument Microsoft.UI.Xaml.Controls.NavigationViewItemCollapsedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.NavigationView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.NavigationViewItemCollapsedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewItemExpandingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[NavigationView, NavigationViewItemExpandingEventArgs]
     guid 056e0daf-6810-5a0c-afd7-1d5012c9592f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.NavigationView;{b00eb54c-9174-5d84-9678-56c98016e689});rc(Microsoft.UI.Xaml.Controls.NavigationViewItemExpandingEventArgs;{6f0941be-e991-52f8-8315-f08389497976}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.NavigationView
     argument Microsoft.UI.Xaml.Controls.NavigationViewItemExpandingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.NavigationView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.NavigationViewItemExpandingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[NavigationView, NavigationViewItemInvokedEventArgs]
     guid 2359ff15-06c1-59a0-8400-f84ffe96967d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.NavigationView;{b00eb54c-9174-5d84-9678-56c98016e689});rc(Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs;{074cebaa-5d05-547b-8cd6-d19ac2d9bb3b}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.NavigationView
     argument Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.NavigationView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[NavigationView, NavigationViewPaneClosingEventArgs]
     guid 6a33a12d-aa1e-54e4-9210-203a3e51c7b6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.NavigationView;{b00eb54c-9174-5d84-9678-56c98016e689});rc(Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs;{e8643304-6db4-5af5-bac2-62733ca037da}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.NavigationView
     argument Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.NavigationView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[NavigationView, NavigationViewSelectionChangedEventArgs]
     guid 4fcd29b6-37f2-501f-b873-6bfa622420c2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.NavigationView;{b00eb54c-9174-5d84-9678-56c98016e689});rc(Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs;{14a064a5-c79d-5f63-ac6e-1c313fe63566}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.NavigationView
     argument Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.NavigationView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[NavigationView, Object]
     guid 8e351ddb-fdf7-5d7c-820b-efd4682d3898
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.NavigationView;{b00eb54c-9174-5d84-9678-56c98016e689});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.NavigationView
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.NavigationView name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NumberBox,Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[NumberBox, NumberBoxValueChangedEventArgs]
     guid 2ec03ba4-bb68-5920-934f-37383306eeb4
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.NumberBox;{22c43a67-d393-56a9-801a-2dea91877de6});rc(Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs;{c66cf16e-7c8a-532e-9d23-058c1c98dd50}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.NumberBox
     argument Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.NumberBox name=sender
+            in class type=Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.PipsPager,Microsoft.UI.Xaml.Controls.PipsPagerSelectedIndexChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PipsPager, PipsPagerSelectedIndexChangedEventArgs]
     guid 2cd0610e-7a38-5069-9158-fa7b0bd7b231
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.PipsPager;{db89f276-c9d8-5bc2-b9ad-ab8ef33ed8e1});rc(Microsoft.UI.Xaml.Controls.PipsPagerSelectedIndexChangedEventArgs;{6c2ce4fc-bf52-5ca6-9da4-b0bd5b928d97}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.PipsPager
     argument Microsoft.UI.Xaml.Controls.PipsPagerSelectedIndexChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.PipsPager name=sender
+            in class type=Microsoft.UI.Xaml.Controls.PipsPagerSelectedIndexChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.RatingControl,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[RatingControl, Object]
     guid 6c2283d0-ae0f-5742-b99a-6fca61ef564d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.RatingControl;{5488193b-ea4b-52c6-8544-c063219bcd90});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.RatingControl
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.RatingControl name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.RefreshContainer,Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RefreshContainer, RefreshRequestedEventArgs]
     guid c50a5295-fe75-556c-9470-c3ff7e38047e
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.RefreshContainer;{1c9778e8-a427-5f86-9d5e-02db9b2c4093});rc(Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs;{ed97a956-6019-5329-9312-f885b5c774cd}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.RefreshContainer
     argument Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.RefreshContainer name=sender
+            in class type=Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.RefreshVisualizer,Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RefreshVisualizer, RefreshRequestedEventArgs]
     guid 75d8360f-159d-5de3-88f7-f891bbe3e6d2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.RefreshVisualizer;{a000afd1-d2fc-5391-b421-ee5c975ac945});rc(Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs;{ed97a956-6019-5329-9312-f885b5c774cd}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.RefreshVisualizer
     argument Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.RefreshVisualizer name=sender
+            in class type=Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.RefreshVisualizer,Microsoft.UI.Xaml.Controls.RefreshStateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[RefreshVisualizer, RefreshStateChangedEventArgs]
     guid 29da6a1d-d82c-5fec-9d74-cc4b23fb1fa7
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.RefreshVisualizer;{a000afd1-d2fc-5391-b421-ee5c975ac945});rc(Microsoft.UI.Xaml.Controls.RefreshStateChangedEventArgs;{7be897ce-17c4-5fdf-b441-c6ef3301e0f6}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.RefreshVisualizer
     argument Microsoft.UI.Xaml.Controls.RefreshStateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.RefreshVisualizer name=sender
+            in class type=Microsoft.UI.Xaml.Controls.RefreshStateChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.SplitButton,Microsoft.UI.Xaml.Controls.SplitButtonClickEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SplitButton, SplitButtonClickEventArgs]
     guid de316e28-2721-53ff-974f-1b3f0444a69b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.SplitButton;{8b09006a-6241-594f-93e4-8bf051d7ba8f});rc(Microsoft.UI.Xaml.Controls.SplitButtonClickEventArgs;{6af896c2-e65a-5998-9c82-2af8f3e0741f}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.SplitButton
     argument Microsoft.UI.Xaml.Controls.SplitButtonClickEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.SplitButton name=sender
+            in class type=Microsoft.UI.Xaml.Controls.SplitButtonClickEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.SwipeItem,Microsoft.UI.Xaml.Controls.SwipeItemInvokedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[SwipeItem, SwipeItemInvokedEventArgs]
     guid a8187dcb-8753-589e-8160-7f103e05a6b7
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.SwipeItem;{560fe6c5-109f-5866-b02e-31e4fa930ed0});rc(Microsoft.UI.Xaml.Controls.SwipeItemInvokedEventArgs;{7bf51c95-53a2-5a0d-bb32-2b4b1f7d2f20}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.SwipeItem
     argument Microsoft.UI.Xaml.Controls.SwipeItemInvokedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.SwipeItem name=sender
+            in class type=Microsoft.UI.Xaml.Controls.SwipeItemInvokedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TabView, TabViewTabCloseRequestedEventArgs]
     guid d7c6e5a9-c999-55e1-85b3-624802ff55ae
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TabView;{6aa787ab-5a30-5ea2-be5b-aed868381756});rc(Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs;{d56ab9b2-e264-5c7e-a1cb-e41a16a6c6c6}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TabView
     argument Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TabView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabDragCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TabView, TabViewTabDragCompletedEventArgs]
     guid 9b77c0d4-6e01-5224-aba4-96f3486388e8
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TabView;{6aa787ab-5a30-5ea2-be5b-aed868381756});rc(Microsoft.UI.Xaml.Controls.TabViewTabDragCompletedEventArgs;{791fc623-c8f6-5102-81bd-1869cde82284}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TabView
     argument Microsoft.UI.Xaml.Controls.TabViewTabDragCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TabView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.TabViewTabDragCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TabView, TabViewTabDragStartingEventArgs]
     guid f05f2589-bba6-5bea-92cf-6cfa14b6df08
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TabView;{6aa787ab-5a30-5ea2-be5b-aed868381756});rc(Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs;{97682812-1a7b-53fd-8b4e-c2f70d2ad250}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TabView
     argument Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TabView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabDroppedOutsideEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TabView, TabViewTabDroppedOutsideEventArgs]
     guid b09dd9dd-f9dd-5d8c-a0c1-dac9c7281b80
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TabView;{6aa787ab-5a30-5ea2-be5b-aed868381756});rc(Microsoft.UI.Xaml.Controls.TabViewTabDroppedOutsideEventArgs;{1f1f4d5d-0fb1-51ab-b66f-f7a322bf2d13}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TabView
     argument Microsoft.UI.Xaml.Controls.TabViewTabDroppedOutsideEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TabView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.TabViewTabDroppedOutsideEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabView,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[TabView, Object]
     guid a6c5a31f-cfa3-5d2a-ab4b-619ebed9f7bc
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TabView;{6aa787ab-5a30-5ea2-be5b-aed868381756});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TabView
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TabView name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabView,Windows.Foundation.Collections.IVectorChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TabView, IVectorChangedEventArgs]
     guid 361fbc7f-658c-59c6-a7bb-672cdc8cb8f3
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TabView;{6aa787ab-5a30-5ea2-be5b-aed868381756});{575933df-34fe-4480-af15-07691f3d5d9b})
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TabView
     argument Windows.Foundation.Collections.IVectorChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TabView name=sender
+            in interface type=Windows.Foundation.Collections.IVectorChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabViewItem,Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TabViewItem, TabViewTabCloseRequestedEventArgs]
     guid 2bf9dab2-0973-5b5f-8ba9-30e6fa518f63
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TabViewItem;{291f3e98-4f17-5021-94f0-6a5b304312b6});rc(Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs;{d56ab9b2-e264-5c7e-a1cb-e41a16a6c6c6}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TabViewItem
     argument Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TabViewItem name=sender
+            in class type=Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TeachingTip,Microsoft.UI.Xaml.Controls.TeachingTipClosedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TeachingTip, TeachingTipClosedEventArgs]
     guid 6ffab8c5-5b32-5ca0-8506-f2ae081e3494
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TeachingTip;{5b200440-4fcc-5fdb-b418-b5797b0874ad});rc(Microsoft.UI.Xaml.Controls.TeachingTipClosedEventArgs;{2536f506-4038-59db-9e35-a9252fb5adb2}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TeachingTip
     argument Microsoft.UI.Xaml.Controls.TeachingTipClosedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TeachingTip name=sender
+            in class type=Microsoft.UI.Xaml.Controls.TeachingTipClosedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TeachingTip,Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TeachingTip, TeachingTipClosingEventArgs]
     guid 22a88119-3d2b-5945-ad19-29008baefc85
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TeachingTip;{5b200440-4fcc-5fdb-b418-b5797b0874ad});rc(Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs;{16f53512-3c55-5636-a856-229d9768d64e}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TeachingTip
     argument Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TeachingTip name=sender
+            in class type=Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TeachingTip,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[TeachingTip, Object]
     guid 615e7e6f-e5a0-525e-81b4-ceefcc06f7d2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TeachingTip;{5b200440-4fcc-5fdb-b418-b5797b0874ad});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TeachingTip
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TeachingTip name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ToggleSplitButton,Microsoft.UI.Xaml.Controls.ToggleSplitButtonIsCheckedChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ToggleSplitButton, ToggleSplitButtonIsCheckedChangedEventArgs]
     guid 81b28e20-a1b7-5f3f-bc21-9db6faa0c549
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.ToggleSplitButton;{5c0f247b-bd00-5509-88a8-b09007ae22b0});rc(Microsoft.UI.Xaml.Controls.ToggleSplitButtonIsCheckedChangedEventArgs;{6cab1e15-c017-5760-828b-dafc21d54eb2}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.ToggleSplitButton
     argument Microsoft.UI.Xaml.Controls.ToggleSplitButtonIsCheckedChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.ToggleSplitButton name=sender
+            in class type=Microsoft.UI.Xaml.Controls.ToggleSplitButtonIsCheckedChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewCollapsedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TreeView, TreeViewCollapsedEventArgs]
     guid 611c2f44-fc2f-5f3d-994e-177b9a58ab90
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TreeView;{1bef9af4-712c-50ef-9bb4-881b975232ab});rc(Microsoft.UI.Xaml.Controls.TreeViewCollapsedEventArgs;{8ee00b59-42c6-5d73-809f-68710088e5a5}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TreeView
     argument Microsoft.UI.Xaml.Controls.TreeViewCollapsedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TreeView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.TreeViewCollapsedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewDragItemsCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TreeView, TreeViewDragItemsCompletedEventArgs]
     guid 50e97f51-c92f-5883-b0ad-ab89fbc48dea
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TreeView;{1bef9af4-712c-50ef-9bb4-881b975232ab});rc(Microsoft.UI.Xaml.Controls.TreeViewDragItemsCompletedEventArgs;{e5b8547e-f839-55db-9c26-2a95f57a60dc}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TreeView
     argument Microsoft.UI.Xaml.Controls.TreeViewDragItemsCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TreeView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.TreeViewDragItemsCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewDragItemsStartingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TreeView, TreeViewDragItemsStartingEventArgs]
     guid b9576817-00ed-5519-acff-6b99e68132a1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TreeView;{1bef9af4-712c-50ef-9bb4-881b975232ab});rc(Microsoft.UI.Xaml.Controls.TreeViewDragItemsStartingEventArgs;{1b6c4ffc-cd32-5e06-b782-df9f077546c7}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TreeView
     argument Microsoft.UI.Xaml.Controls.TreeViewDragItemsStartingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TreeView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.TreeViewDragItemsStartingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewExpandingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TreeView, TreeViewExpandingEventArgs]
     guid 795f0a25-75b8-5ee4-9689-e40d37c76c29
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TreeView;{1bef9af4-712c-50ef-9bb4-881b975232ab});rc(Microsoft.UI.Xaml.Controls.TreeViewExpandingEventArgs;{bd769ef7-cadc-5334-93ad-c9bbe820643d}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TreeView
     argument Microsoft.UI.Xaml.Controls.TreeViewExpandingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TreeView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.TreeViewExpandingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewItemInvokedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TreeView, TreeViewItemInvokedEventArgs]
     guid ce45103a-c707-5934-8e39-f049b985a27d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TreeView;{1bef9af4-712c-50ef-9bb4-881b975232ab});rc(Microsoft.UI.Xaml.Controls.TreeViewItemInvokedEventArgs;{1a05853c-b101-542c-9a1e-775a044c4652}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TreeView
     argument Microsoft.UI.Xaml.Controls.TreeViewItemInvokedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TreeView name=sender
+            in class type=Microsoft.UI.Xaml.Controls.TreeViewItemInvokedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TwoPaneView,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[TwoPaneView, Object]
     guid c9207175-ea29-5478-a0db-9775e09631ec
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.TwoPaneView;{85edc585-1481-5477-bb12-2a18a32b834e});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.TwoPaneView
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.TwoPaneView name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.UI.Xaml.Controls.CoreWebView2InitializedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WebView2, CoreWebView2InitializedEventArgs]
     guid de9063e7-c25c-5c92-a33f-7447609c6da2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.WebView2;{04c2c789-3936-542f-8706-87b199a73feb});rc(Microsoft.UI.Xaml.Controls.CoreWebView2InitializedEventArgs;{ee59d277-8b2e-57ab-8631-91d27b12ebd9}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.WebView2
     argument Microsoft.UI.Xaml.Controls.CoreWebView2InitializedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.WebView2 name=sender
+            in class type=Microsoft.UI.Xaml.Controls.CoreWebView2InitializedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WebView2, CoreWebView2NavigationCompletedEventArgs]
     guid 5e861b52-e348-56d2-8433-39d932204099
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.WebView2;{04c2c789-3936-542f-8706-87b199a73feb});rc(Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs;{4865e238-036a-5664-95a3-447ec44cf498}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.WebView2
     argument Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.WebView2 name=sender
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WebView2, CoreWebView2NavigationStartingEventArgs]
     guid 95c56c3a-8e19-52de-8298-bb63f265b8ee
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.WebView2;{04c2c789-3936-542f-8706-87b199a73feb});rc(Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs;{548d23d3-fea3-5616-bd05-ae08066c86d3}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.WebView2
     argument Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.WebView2 name=sender
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WebView2, CoreWebView2ProcessFailedEventArgs]
     guid c1884243-b0e3-5d11-8cb6-11963ff4fb7b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.WebView2;{04c2c789-3936-542f-8706-87b199a73feb});rc(Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs;{25a8f8c9-d944-539d-afa3-24172b48ef47}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.WebView2
     argument Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.WebView2 name=sender
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[WebView2, CoreWebView2WebMessageReceivedEventArgs]
     guid 5b01b45e-8577-5b50-b86a-90277155b0b2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Controls.WebView2;{04c2c789-3936-542f-8706-87b199a73feb});rc(Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs;{eb066159-b725-5d5b-adc8-f5d7b9290304}))
+    base Windows.Foundation.TypedEventHandler
     argument Microsoft.UI.Xaml.Controls.WebView2
     argument Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.UI.Xaml.Controls.WebView2 name=sender
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs name=args
 
 class Microsoft.UI.Xaml.Controls.UniformGridLayout composable python_type
     py UniformGridLayout
@@ -6419,6 +7769,17 @@ enum Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsJustification python_type
 enum Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch python_type
     py UniformGridLayoutItemsStretch
     signature enum(Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch;i4)
+
+delegate Windows.Foundation.Collections.VectorChangedEventHandler<Windows.UI.Xaml.Controls.ICommandBarElement> concrete
+    py winrt.windows.foundation.collections.VectorChangedEventHandler[ICommandBarElement]
+    guid 20b884e1-c1da-5332-b801-4f1c21744ac8
+    signature pinterface({0c051752-9fbf-4c70-aa0c-0e4c82d9a761};{67918e1b-f2d5-44d1-8b84-92b87f80a350})
+    base Windows.Foundation.Collections.VectorChangedEventHandler
+    argument Windows.UI.Xaml.Controls.ICommandBarElement
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Controls.ICommandBarElement> name=sender
+            in interface type=Windows.Foundation.Collections.IVectorChangedEventArgs name=event
 
 class Microsoft.UI.Xaml.Controls.VirtualizingLayout composable python_type
     py VirtualizingLayout
@@ -6667,6 +8028,13 @@ class Windows.ApplicationModel.DataTransfer.DataPackage external
 enum Windows.ApplicationModel.DataTransfer.DataPackageOperation external
     py winrt.windows.applicationmodel.datatransfer.DataPackageOperation
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
 
@@ -6674,12 +8042,31 @@ interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
 
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
 
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
 struct Windows.Foundation.Point external
     py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
@@ -6687,12 +8074,48 @@ struct Windows.Foundation.Rect external
 struct Windows.Foundation.Size external
     py winrt.windows.foundation.Size
 
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IObservableVector external parameterized
+    py winrt.windows.foundation.collections._IObservableVector
+    guid 5917eb53-50b4-4a0d-b309-65862b3f1dbc
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
 
 interface Windows.Foundation.Collections.IVectorChangedEventArgs external
     py winrt.windows.foundation.collections._IVectorChangedEventArgs
     guid 575933df-34fe-4480-af15-07691f3d5d9b
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+delegate Windows.Foundation.Collections.VectorChangedEventHandler external parameterized
+    py winrt.windows.foundation.collections.VectorChangedEventHandler
+    guid 0c051752-9fbf-4c70-aa0c-0e4c82d9a761
 
 struct Windows.Foundation.Numerics.Vector2 external
     py winrt.windows.foundation.numerics.Vector2

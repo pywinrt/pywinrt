@@ -2,52 +2,435 @@ format 4.0
 generator 0.0.0
 namespace Windows.ApplicationModel.VoiceCommands
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommand> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommand> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[VoiceCommand]
+    guid 1024f849-b4a1-52e6-b771-6d2f08c30e63
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommand;{936f5273-ec82-42a6-a55c-d2d79ec6f920}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommand
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommand> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[VoiceCommandConfirmationResult]
+    guid f5244cb8-f912-50c9-b218-d7a0403971aa
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult;{a022593e-8221-4526-b083-840972262247}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[VoiceCommandDisambiguationResult]
+    guid 46b96890-2942-5564-82d8-31a4851bd7b8
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult;{ecc68cfe-c9ac-45df-a8ea-feea08ef9c5e}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommand> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[VoiceCommand]
     guid 815f1854-4d79-570d-9b57-5b47e282cd66
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommand;{936f5273-ec82-42a6-a55c-d2d79ec6f920}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.VoiceCommands.VoiceCommand
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommand> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommand> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommand> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommand> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommand> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommand return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[VoiceCommandConfirmationResult]
     guid 3b39db5f-d2a4-5d88-851f-e9a0ea0d947e
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult;{a022593e-8221-4526-b083-840972262247}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult return
 
-interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[VoiceCommandDisambiguationResult]
     guid b03d44c8-060f-5b98-953a-fd1eb1d46abc
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult;{ecc68cfe-c9ac-45df-a8ea-feea08ef9c5e}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult return
 
-interface Windows.Foundation.Collections.IIterable<System.String> concrete
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
     guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
     argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[VoiceCommandContentTile]
     guid bd13249b-8099-5573-bf74-7457796e92e5
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile;{3eefe9f0-b8c7-4c76-a0de-1607895ee327}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> return
 
-interface Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> concrete
-    guid 4c1168f0-a0b2-5312-b99a-471abd334e85
-    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition;{7972aad0-0974-4979-984b-cb8959cd61ae}))
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, VoiceCommandDefinition]]
+    guid 67693dd1-ac45-5ef3-9ba6-4d78709d9ee0
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition;{7972aad0-0974-4979-984b-cb8959cd61ae})))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, IVectorView[String]]]
+    guid a4cd6151-2cc1-56f1-9014-df6ba3410beb
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[VoiceCommandContentTile]
+    guid 968d589c-0710-52f0-85ed-112fac4cff35
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile;{3eefe9f0-b8c7-4c76-a0de-1607895ee327}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=117 reverse=101
+            fill_array class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, VoiceCommandDefinition]]
+    guid 91fbb58b-fb9c-5165-a1bf-815d2767300d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition;{7972aad0-0974-4979-984b-cb8959cd61ae})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, IVectorView[String]]]
+    guid 643b6d83-457e-5a43-800f-b0449f91d96b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, VoiceCommandDefinition]
+    guid a932bfda-2ce5-5012-ae83-f397976e4a86
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition;{7972aad0-0974-4979-984b-cb8959cd61ae}))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> shape=4 reverse=43
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition return
 
-interface Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> concrete
-    guid 2843d34f-d3e5-5fca-9fdc-b568dd5c1e64
-    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, IVectorView[String]]
+    guid bcde03ad-ea71-5077-a961-1c0ecff57202
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.String
     argument Windows.Foundation.Collections.IVectorView<System.String>
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
-interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> concrete
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, VoiceCommandDefinition]
+    guid 4c1168f0-a0b2-5312-b99a-471abd334e85
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition;{7972aad0-0974-4979-984b-cb8959cd61ae}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>>
+    argument System.String
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> shape=51 reverse=24 role=lookup
+            in string name=key
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> name=second
+
+interface Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, IVectorView[String]]
+    guid 2843d34f-d3e5-5fca-9fdc-b568dd5c1e64
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>>
+    argument System.String
+    argument Windows.Foundation.Collections.IVectorView<System.String>
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Foundation.Collections.IVectorView<System.String>>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> shape=51 reverse=24 role=lookup
+            in string name=key
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> name=second
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[VoiceCommandContentTile]
     guid e45fe700-ea08-5172-b88c-c4b3e048c3e8
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile;{3eefe9f0-b8c7-4c76-a0de-1607895ee327}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile>
     argument Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=4 reverse=173
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=117 reverse=101
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=51 reverse=211
+            pass_array class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile name=value
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[VoiceCommandContentTile]
+    guid cb2c6693-1fc9-5b95-99b5-7239679619b9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile;{3eefe9f0-b8c7-4c76-a0de-1607895ee327}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile>
+    argument Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> shape=117 reverse=66
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.ApplicationModel.VoiceCommands.IVoiceCommand
     guid 936f5273-ec82-42a6-a55c-d2d79ec6f920
@@ -86,10 +469,16 @@ interface Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage
     guid 674eb3c0-44f6-4f07-b979-4c723fc08597
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection,Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[VoiceCommandServiceConnection, VoiceCommandCompletedEventArgs]
     guid 780a6352-b400-5767-993b-90875710d937
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection;{d894bb9f-21da-44a4-98a2-fb131920a9cc});rc(Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs;{c85e675d-fe42-432c-9907-09df9fcf64e8}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection
     argument Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection name=sender
+            in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs name=args
 
 class Windows.ApplicationModel.VoiceCommands.VoiceCommand python_type
     py VoiceCommand
@@ -336,9 +725,52 @@ class System.String external
 class Windows.ApplicationModel.AppService.AppServiceTriggerDetails external
     py winrt.windows.applicationmodel.appservice.AppServiceTriggerDetails
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 class Windows.Globalization.Language external
     py winrt.windows.globalization.Language

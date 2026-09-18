@@ -11,10 +11,6 @@ that is not the one this interpreter's ``isinstance`` knows about - so it is
 checked here.
 """
 
-from test._util import skip_without_projection
-
-skip_without_projection()
-
 import unittest
 import uuid
 

@@ -2,6 +2,11 @@
 BasedOnStyle: Microsoft
 UseTab: Never
 IndentWidth: 4
+# .gitattributes checks every file out with LF, so say so rather than letting
+# clang-format infer the ending from whatever the file happens to hold: an
+# editor or a script that wrote CRLF once would otherwise have every later
+# reformat keep it.
+LineEnding: LF
 ---
 Language: Cpp
 Standard: c++20

@@ -54,10 +54,13 @@ where = ["python"]
 RUNTIME_MANIFEST_IN = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
+include src/async.h
+include src/generics.h
 include src/interp.h
 include src/members.h
 include src/module_state.h
 include src/objects.h
+include src/protocols.h
 include src/shapes-generated.h
 include src/shapes.h
 include src/structs.h
@@ -666,9 +669,11 @@ write_project_files(
         "src/collections.cpp",
         "src/compose.cpp",
         "src/errors.cpp",
+        "src/generics.cpp",
         "src/interp.cpp",
         "src/members.cpp",
         "src/objects.cpp",
+        "src/protocols.cpp",
         "src/runtime.cpp",
         "src/shapes.cpp",
         "src/structs.cpp",

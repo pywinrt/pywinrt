@@ -2,6 +2,17 @@ format 4.0
 generator 0.0.0
 namespace Microsoft.UI.Xaml.Data
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[LoadMoreItemsResult]
+    guid 8806a4d7-81d6-50f6-9128-52a9534febe1
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};struct(Microsoft.UI.Xaml.Data.LoadMoreItemsResult;u4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Microsoft.UI.Xaml.Data.LoadMoreItemsResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Microsoft.UI.Xaml.Data.Binding composable python_type
     py Binding
     signature rc(Microsoft.UI.Xaml.Data.Binding;{501ea0e8-edd4-59de-8845-76af2eabbe00})
@@ -214,19 +225,55 @@ class Microsoft.UI.Xaml.Data.DataErrorsChangedEventArgs python_type
             in string name=value
 
 delegate Windows.Foundation.EventHandler<Microsoft.UI.Xaml.Data.DataErrorsChangedEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[DataErrorsChangedEventArgs]
     guid aba7f52e-2991-5bcd-bcb8-24145b8f2649
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.UI.Xaml.Data.DataErrorsChangedEventArgs;{d026dd64-5f26-5f15-a86a-0dec8a431796}))
+    base Windows.Foundation.EventHandler
     argument Microsoft.UI.Xaml.Data.DataErrorsChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Microsoft.UI.Xaml.Data.DataErrorsChangedEventArgs name=args
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
-interface Windows.Foundation.IAsyncOperation<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> concrete
+interface Windows.Foundation.IAsyncOperation<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[LoadMoreItemsResult]
     guid 87c6d0a7-9748-5f9c-b359-1e12759cf3ce
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};struct(Microsoft.UI.Xaml.Data.LoadMoreItemsResult;u4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Microsoft.UI.Xaml.Data.LoadMoreItemsResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> shape=4 reverse=62 role=get_results
+            out struct type=Microsoft.UI.Xaml.Data.LoadMoreItemsResult return
 
 interface Microsoft.UI.Xaml.Data.IBinding
     guid 501ea0e8-edd4-59de-8845-76af2eabbe00
@@ -286,7 +333,7 @@ interface Microsoft.UI.Xaml.Data.ICollectionView python_type iterable sequence m
         get get_IsCurrentBeforeFirst slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionView shape=4 reverse=99
             out boolean return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=43 role=size
             out uint32 return
     event current_changed
         add add_CurrentChanged slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionView shape=51 reverse=163
@@ -302,7 +349,7 @@ interface Microsoft.UI.Xaml.Data.ICollectionView python_type iterable sequence m
             in event_token name=token
     event vector_changed
         add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<System.Object> shape=51 reverse=24
-            in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<T> name=vhnd
+            in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<System.Object> name=vhnd
             out event_token return
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<System.Object> shape=26 reverse=53
             in event_token name=token
@@ -312,10 +359,10 @@ interface Microsoft.UI.Xaml.Data.ICollectionView python_type iterable sequence m
     method clear
         method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=0 reverse=193
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22
-            out parameterized type=Windows.Foundation.Collections.IIterator<T> return
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out object return
     method get_many
@@ -325,14 +372,14 @@ interface Microsoft.UI.Xaml.Data.ICollectionView python_type iterable sequence m
             out uint32 return
     method get_view
         method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=62
-            out parameterized type=Windows.Foundation.Collections.IVectorView<T> return
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
     method index_of
         method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=117 reverse=101
             in object name=value
             out uint32 name=index
             out boolean return
     method insert_at
-        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=144
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=144 role=insert_at
             in uint32 name=index
             in object name=value
     method load_more_items_async
@@ -360,7 +407,7 @@ interface Microsoft.UI.Xaml.Data.ICollectionView python_type iterable sequence m
         method MoveCurrentToPrevious slot=21 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionView shape=4 reverse=232
             out boolean return
     method remove_at
-        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=162
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
         method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=0 reverse=185
@@ -368,7 +415,7 @@ interface Microsoft.UI.Xaml.Data.ICollectionView python_type iterable sequence m
         method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=211
             pass_array object name=items
     method set_at
-        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=124
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=124 role=set_at
             in uint32 name=index
             in object name=value
 
@@ -476,22 +523,74 @@ interface Microsoft.UI.Xaml.Data.IItemsRangeInfo python_type closeable
     signature {b8376d08-85fb-563b-8273-39ef2d138256}
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method ranges_changed
         method RangesChanged slot=6 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Data.IItemsRangeInfo shape=51 reverse=24
             in class type=Microsoft.UI.Xaml.Data.ItemIndexRange name=visibleRange
             in parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Data.ItemIndexRange> name=trackedItems
 
-interface Windows.Foundation.Collections.IIterable<System.Object> concrete
+interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Data.ItemIndexRange> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ItemIndexRange]
+    guid 6f328b92-1eb5-54df-b756-e8d9fd9abea5
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.UI.Xaml.Data.ItemIndexRange;{eba09846-2554-5b86-ac17-614f05105fa2}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.UI.Xaml.Data.ItemIndexRange
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Data.ItemIndexRange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Data.ItemIndexRange> return
+
+interface Windows.Foundation.Collections.IIterable<System.Object> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Object]
     guid 092b849b-60b1-52be-a44a-6fe8e933cbe4
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IIterable
     argument System.Object
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
 
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IIterator<T> parameterized
-    argument T
+interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Data.ItemIndexRange> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ItemIndexRange]
+    guid 8cbc4e1b-9d17-5fec-bbb0-0b25601a4e2d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.UI.Xaml.Data.ItemIndexRange;{eba09846-2554-5b86-ac17-614f05105fa2}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.UI.Xaml.Data.ItemIndexRange
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Data.ItemIndexRange> shape=4 reverse=22 role=current
+            out class type=Microsoft.UI.Xaml.Data.ItemIndexRange return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Data.ItemIndexRange> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Data.ItemIndexRange> shape=117 reverse=101
+            fill_array class type=Microsoft.UI.Xaml.Data.ItemIndexRange name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Data.ItemIndexRange> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.Object> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Object]
+    guid 44a94f2d-04f8-5091-b336-be7892dd10be
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IIterator
+    argument System.Object
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=22 role=current
+            out object return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=117 reverse=101
+            fill_array object name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Microsoft.UI.Xaml.Data.INotifyDataErrorInfo python_type
     py _INotifyDataErrorInfo
@@ -522,10 +621,64 @@ interface Microsoft.UI.Xaml.Data.INotifyPropertyChanged python_type
         remove remove_PropertyChanged slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.INotifyPropertyChanged shape=26 reverse=53
             in event_token name=token
 
-interface Windows.Foundation.Collections.IObservableVector<System.Object> concrete
+interface Windows.Foundation.Collections.IObservableVector<System.Object> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IObservableVector[Object]
     guid 7b81c56a-0985-518d-baa9-0da9ae009f65
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IObservableVector
+    requires Windows.Foundation.Collections.IVector<System.Object>
+    requires Windows.Foundation.Collections.IIterable<T>
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    event vector_changed
+        add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<System.Object> shape=51 reverse=24
+            in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<System.Object> name=vhnd
+            out event_token return
+        remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<System.Object> shape=26 reverse=53
+            in event_token name=token
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=173
+            in object name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out object return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array object name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=117 reverse=101
+            in object name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in object name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=211
+            pass_array object name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in object name=value
 
 interface Microsoft.UI.Xaml.Data.IPropertyChangedEventArgs
     guid 63d0c952-396b-54f4-af8c-ba8724a427bf
@@ -588,21 +741,116 @@ interface Microsoft.UI.Xaml.Data.IValueConverter python_type
             in string name=language
             out object return
 
-interface Windows.Foundation.Collections.IVector<System.Object> concrete
+interface Windows.Foundation.Collections.IVector<System.Object> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Object]
     guid b32bdca4-5e52-5b27-bc5d-d66a1a268c2a
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.Object>
     argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=173
+            in object name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out object return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array object name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=117 reverse=101
+            in object name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in object name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=211
+            pass_array object name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in object name=value
 
 interface Windows.Foundation.Collections.IVector<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Data.ItemIndexRange> concrete
+interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Data.ItemIndexRange> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ItemIndexRange]
     guid 465af292-d97c-5407-9cbe-6d35d67a030f
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.UI.Xaml.Data.ItemIndexRange;{eba09846-2554-5b86-ac17-614f05105fa2}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Data.ItemIndexRange>
     argument Microsoft.UI.Xaml.Data.ItemIndexRange
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Data.ItemIndexRange> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Data.ItemIndexRange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Data.ItemIndexRange> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Data.ItemIndexRange> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.UI.Xaml.Data.ItemIndexRange return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Data.ItemIndexRange> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.UI.Xaml.Data.ItemIndexRange name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Data.ItemIndexRange> shape=117 reverse=66
+            in class type=Microsoft.UI.Xaml.Data.ItemIndexRange name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<T> parameterized
-    argument T
+interface Windows.Foundation.Collections.IVectorView<System.Object> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Object]
+    guid a6487363-b074-5c60-ab16-866dce4ee54d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Object>
+    argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out object return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array object name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=117 reverse=66
+            in object name=value
+            out uint32 name=index
+            out boolean return
 
 class Microsoft.UI.Xaml.Data.ItemIndexRange composable python_type
     py ItemIndexRange
@@ -685,8 +933,16 @@ enum Microsoft.UI.Xaml.Data.UpdateSourceTrigger python_type
     py UpdateSourceTrigger
     signature enum(Microsoft.UI.Xaml.Data.UpdateSourceTrigger;i4)
 
-delegate Windows.Foundation.Collections.VectorChangedEventHandler<T> parameterized
-    argument T
+delegate Windows.Foundation.Collections.VectorChangedEventHandler<System.Object> concrete
+    py winrt.windows.foundation.collections.VectorChangedEventHandler[Object]
+    guid b423a801-d35e-56b9-813b-00889536cb98
+    signature pinterface({0c051752-9fbf-4c70-aa0c-0e4c82d9a761};cinterface(IInspectable))
+    base Windows.Foundation.Collections.VectorChangedEventHandler
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.Collections.IObservableVector<System.Object> name=sender
+            in interface type=Windows.Foundation.Collections.IVectorChangedEventArgs name=event
 
 class Microsoft.UI.Xaml.DependencyObject external
     py winui3.microsoft.ui.xaml.DependencyObject
@@ -700,9 +956,56 @@ class Microsoft.UI.Xaml.PropertyPath external
 class System.Object external
     py winrt.system.Object
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IObservableVector external parameterized
+    py winrt.windows.foundation.collections._IObservableVector
+    guid 5917eb53-50b4-4a0d-b309-65862b3f1dbc
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorChangedEventArgs external
+    py winrt.windows.foundation.collections._IVectorChangedEventArgs
+    guid 575933df-34fe-4480-af15-07691f3d5d9b
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+delegate Windows.Foundation.Collections.VectorChangedEventHandler external parameterized
+    py winrt.windows.foundation.collections.VectorChangedEventHandler
+    guid 0c051752-9fbf-4c70-aa0c-0e4c82d9a761
 
 struct Windows.UI.Xaml.Interop.TypeName external
     py winrt.windows.ui.xaml.interop.TypeName

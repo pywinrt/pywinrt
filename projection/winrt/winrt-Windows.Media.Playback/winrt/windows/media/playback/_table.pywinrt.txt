@@ -53,9 +53,15 @@ class Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs python_typ
             out enum32 type=Windows.Media.Playback.MediaPlaybackItemChangedReason return
 
 delegate Windows.Foundation.EventHandler<Windows.Media.Playback.MediaPlayerDataReceivedEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[MediaPlayerDataReceivedEventArgs]
     guid 078fc818-19f5-5b8a-ac82-25193bea56ee
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlayerDataReceivedEventArgs;{c75a9405-c801-412a-835b-83fc0e622a8e}))
+    base Windows.Foundation.EventHandler
     argument Windows.Media.Playback.MediaPlayerDataReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.Media.Playback.MediaPlayerDataReceivedEventArgs name=args
 
 enum Windows.Media.Playback.FailedMediaStreamKind python_type
     py FailedMediaStreamKind
@@ -73,50 +79,215 @@ interface Windows.Media.Playback.ICurrentMediaPlaybackItemChangedEventArgs2
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AudioTrack]
     guid b3be50a8-9856-5656-ab6d-cd58f9de0a4f
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.AudioTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Media.Core.AudioTrack
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioTrack> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TimedMetadataTrack]
     guid 150a4454-03bb-5dd1-8153-6a600e851f71
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Media.Core.TimedMetadataTrack
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[VideoTrack]
     guid 84413442-a2e3-5e0f-936d-bc40b0fb2dcd
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Core.VideoTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Media.Core.VideoTrack
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoTrack> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaPlaybackItem> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Media.MediaTimeRange> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MediaTimeRange]
+    guid 268204e2-9d52-5e7b-a54b-869c63defc8e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Media.MediaTimeRange;struct(Windows.Foundation.TimeSpan;i8);struct(Windows.Foundation.TimeSpan;i8)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.MediaTimeRange
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.MediaTimeRange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.MediaTimeRange> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaBreak> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MediaBreak]
+    guid 04f000ec-c727-5dc0-9f7c-245c75c92f2f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Playback.MediaBreak;{714be270-0def-4ebc-a489-6b34930e1558}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Playback.MediaBreak
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaBreak> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaBreak> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaPlaybackItem> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MediaPlaybackItem]
     guid 8b8ab4a4-0253-56e9-a232-94e335aefa8f
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Playback.MediaPlaybackItem;{047097d2-e4af-48ab-b283-6929e674ece2}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Media.Playback.MediaPlaybackItem
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaPlaybackItem> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Media.Playback.PlaybackMediaMarker> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Playback.PlaybackMediaMarker> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PlaybackMediaMarker]
     guid deeccfe9-6c01-576f-95f2-93515ae40ebf
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Playback.PlaybackMediaMarker;{c4d22f5c-3c1c-4444-b6b9-778b0422d41a}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Media.Playback.PlaybackMediaMarker
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Playback.PlaybackMediaMarker> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.PlaybackMediaMarker> return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioTrack> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioTrack> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AudioTrack]
     guid 138064ef-8693-5303-8a75-eba494d06342
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Core.AudioTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7}))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Media.Core.AudioTrack
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioTrack> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Core.AudioTrack return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioTrack> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioTrack> shape=117 reverse=101
+            fill_array class type=Windows.Media.Core.AudioTrack name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioTrack> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TimedMetadataTrack]
     guid 859354e5-077b-5d53-b297-1a07b97f09c3
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07}))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Media.Core.TimedMetadataTrack
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Core.TimedMetadataTrack return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=101
+            fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoTrack> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoTrack> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[VideoTrack]
     guid a7c8d22c-b59d-5d7a-8d70-67f898a0b877
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Core.VideoTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7}))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Media.Core.VideoTrack
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoTrack> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Core.VideoTrack return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoTrack> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoTrack> shape=117 reverse=101
+            fill_array class type=Windows.Media.Core.VideoTrack name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoTrack> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Media.Playback.PlaybackMediaMarker> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Media.MediaTimeRange> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MediaTimeRange]
+    guid 29b8d190-5e46-5873-afc0-8f2f40fbe8fd
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Media.MediaTimeRange;struct(Windows.Foundation.TimeSpan;i8);struct(Windows.Foundation.TimeSpan;i8)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.MediaTimeRange
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaTimeRange> shape=4 reverse=22 role=current
+            out struct type=Windows.Media.MediaTimeRange return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaTimeRange> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaTimeRange> shape=117 reverse=101
+            fill_array struct type=Windows.Media.MediaTimeRange name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaTimeRange> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaBreak> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MediaBreak]
+    guid 9efd8746-f93c-524f-9f95-4b598acf8d25
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Playback.MediaBreak;{714be270-0def-4ebc-a489-6b34930e1558}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Playback.MediaBreak
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaBreak> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Playback.MediaBreak return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaBreak> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaBreak> shape=117 reverse=101
+            fill_array class type=Windows.Media.Playback.MediaBreak name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaBreak> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaPlaybackItem> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MediaPlaybackItem]
+    guid ab074059-8c08-53e7-9654-02d2598fff55
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Playback.MediaPlaybackItem;{047097d2-e4af-48ab-b283-6929e674ece2}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Playback.MediaPlaybackItem
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaPlaybackItem> shape=117 reverse=101
+            fill_array class type=Windows.Media.Playback.MediaPlaybackItem name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Playback.PlaybackMediaMarker> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PlaybackMediaMarker]
     guid 28607d6b-daa4-5eef-9f81-cc08a8297182
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Playback.PlaybackMediaMarker;{c4d22f5c-3c1c-4444-b6b9-778b0422d41a}))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Media.Playback.PlaybackMediaMarker
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.PlaybackMediaMarker> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Playback.PlaybackMediaMarker return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.PlaybackMediaMarker> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.PlaybackMediaMarker> shape=117 reverse=101
+            fill_array class type=Windows.Media.Playback.PlaybackMediaMarker name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.PlaybackMediaMarker> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Media.Playback.IMediaBreak
     guid 714be270-0def-4ebc-a489-6b34930e1558
@@ -299,10 +470,64 @@ interface Windows.Media.Playback.IMediaPlayerSource2
 interface Windows.Media.Playback.IMediaPlayerSurface
     guid 0ed653bc-b736-49c3-830b-764a3845313a
 
-interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Playback.MediaPlaybackItem> concrete
+interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Playback.MediaPlaybackItem> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IObservableVector[MediaPlaybackItem]
     guid fabf4843-39eb-5c3d-a12b-fca189b46e8e
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};rc(Windows.Media.Playback.MediaPlaybackItem;{047097d2-e4af-48ab-b283-6929e674ece2}))
+    base Windows.Foundation.Collections.IObservableVector
+    requires Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem>
+    requires Windows.Foundation.Collections.IIterable<T>
     argument Windows.Media.Playback.MediaPlaybackItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=43 role=size
+            out uint32 return
+    event vector_changed
+        add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<Windows.Media.Playback.MediaPlaybackItem> shape=51 reverse=24
+            in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<Windows.Media.Playback.MediaPlaybackItem> name=vhnd
+            out event_token return
+        remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<Windows.Media.Playback.MediaPlaybackItem> shape=26 reverse=53
+            in event_token name=token
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=173
+            in class type=Windows.Media.Playback.MediaPlaybackItem name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaPlaybackItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Playback.MediaPlaybackItem name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaPlaybackItem> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=117 reverse=101
+            in class type=Windows.Media.Playback.MediaPlaybackItem name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Media.Playback.MediaPlaybackItem name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=51 reverse=211
+            pass_array class type=Windows.Media.Playback.MediaPlaybackItem name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Media.Playback.MediaPlaybackItem name=value
 
 interface Windows.Media.Playback.IPlaybackMediaMarker
     guid c4d22f5c-3c1c-4444-b6b9-778b0422d41a
@@ -317,47 +542,483 @@ interface Windows.Media.Playback.IPlaybackMediaMarkerSequence
     guid f2810cee-638b-46cf-8817-1d111fe9d8c4
 
 interface Windows.Foundation.IReference<System.UInt32> concrete
+    py winrt.windows.foundation._IReference[UInt32]
     guid 513ef3af-e784-5325-a91e-97c2b8111cf3
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument System.UInt32
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.UInt32> shape=4 reverse=22 role=value
+            out uint32 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    py winrt.windows.foundation._IReference[TimeSpan]
     guid 604d0c4c-91de-5c2a-935f-362f13eaf800
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Foundation.TimeSpan
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> shape=4 reverse=22 role=value
+            out timespan return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Media.Playback.ITimedMetadataPresentationModeChangedEventArgs
     guid d1636099-65df-45ae-8cef-dc0b53fdc2bb
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[MediaPlaybackItem]
+    guid e1504f46-c4a6-5a29-8fc9-a934d12d7242
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Playback.MediaPlaybackItem;{047097d2-e4af-48ab-b283-6929e674ece2}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaPlaybackItem>
+    argument Windows.Media.Playback.MediaPlaybackItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=173
+            in class type=Windows.Media.Playback.MediaPlaybackItem name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaPlaybackItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Playback.MediaPlaybackItem name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaPlaybackItem> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=117 reverse=101
+            in class type=Windows.Media.Playback.MediaPlaybackItem name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Media.Playback.MediaPlaybackItem name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=51 reverse=211
+            pass_array class type=Windows.Media.Playback.MediaPlaybackItem name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Playback.MediaPlaybackItem> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Media.Playback.MediaPlaybackItem name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AudioTrack]
     guid e71ffa4a-14a7-5068-891c-6e717af8bf8d
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.AudioTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack>
     argument Windows.Media.Core.AudioTrack
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioTrack> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Core.AudioTrack return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.AudioTrack name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=117 reverse=66
+            in class type=Windows.Media.Core.AudioTrack name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TimedMetadataTrack]
     guid 0313ae7a-2803-5d45-b5a1-a0fc5cd55e7c
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack>
     argument Windows.Media.Core.TimedMetadataTrack
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Core.TimedMetadataTrack return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=66
+            in class type=Windows.Media.Core.TimedMetadataTrack name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[VideoTrack]
     guid 200c6224-0b43-54fb-995f-fd8688bf24de
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.VideoTrack;{03e1fafc-c931-491a-b46b-c10ee8c256b7}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack>
     argument Windows.Media.Core.VideoTrack
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoTrack> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Core.VideoTrack return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Core.VideoTrack name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=117 reverse=66
+            in class type=Windows.Media.Core.VideoTrack name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRange> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRange> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MediaTimeRange]
     guid 2628205b-a57a-5179-92e6-9b6e13cb8d0d
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Media.MediaTimeRange;struct(Windows.Foundation.TimeSpan;i8);struct(Windows.Foundation.TimeSpan;i8)))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.MediaTimeRange>
     argument Windows.Media.MediaTimeRange
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRange> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.MediaTimeRange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.MediaTimeRange> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRange> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Media.MediaTimeRange return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRange> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Media.MediaTimeRange name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaTimeRange> shape=168 reverse=81
+            in struct type=Windows.Media.MediaTimeRange name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaBreak> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaBreak> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MediaBreak]
     guid c296f3f9-1268-59a2-b7c3-2f588ed4a017
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Playback.MediaBreak;{714be270-0def-4ebc-a489-6b34930e1558}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaBreak>
     argument Windows.Media.Playback.MediaBreak
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaBreak> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaBreak> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaBreak> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaBreak> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Playback.MediaBreak return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaBreak> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Playback.MediaBreak name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaBreak> shape=117 reverse=66
+            in class type=Windows.Media.Playback.MediaBreak name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaPlaybackItem> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaPlaybackItem> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MediaPlaybackItem]
     guid b6a4c9fe-c73d-5eba-b5ab-6f8deaca30b9
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Playback.MediaPlaybackItem;{047097d2-e4af-48ab-b283-6929e674ece2}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaPlaybackItem>
     argument Windows.Media.Playback.MediaPlaybackItem
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Playback.MediaPlaybackItem> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.MediaPlaybackItem> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaPlaybackItem> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Playback.MediaPlaybackItem return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaPlaybackItem> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Playback.MediaPlaybackItem name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Playback.MediaPlaybackItem> shape=117 reverse=66
+            in class type=Windows.Media.Playback.MediaPlaybackItem name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Media.Playback.MediaBreak python_type
     py MediaBreak
@@ -549,7 +1210,7 @@ class Windows.Media.Playback.MediaPlaybackAudioTrackList python_type iterable se
     requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack>
     requires Windows.Media.Core.ISingleSelectMediaTrackList
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=4 reverse=43 role=size
             out uint32 return
     property selected_index
         get get_SelectedIndex slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=4 reverse=99
@@ -563,10 +1224,10 @@ class Windows.Media.Playback.MediaPlaybackAudioTrackList python_type iterable se
         remove remove_SelectedIndexChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=26 reverse=53
             in event_token name=token
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioTrack> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioTrack> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioTrack> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Windows.Media.Core.AudioTrack return
     method get_many
@@ -1310,7 +1971,7 @@ class Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList python_type ite
     requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack>
     requires Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=43 role=size
             out uint32 return
     event presentation_mode_changed
         add add_PresentationModeChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList shape=51 reverse=24
@@ -1319,10 +1980,10 @@ class Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList python_type ite
         remove remove_PresentationModeChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlaybackTimedMetadataTrackList shape=26 reverse=53
             in event_token name=token
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Windows.Media.Core.TimedMetadataTrack return
     method get_many
@@ -1353,7 +2014,7 @@ class Windows.Media.Playback.MediaPlaybackVideoTrackList python_type iterable se
     requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack>
     requires Windows.Media.Core.ISingleSelectMediaTrackList
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=4 reverse=43 role=size
             out uint32 return
     property selected_index
         get get_SelectedIndex slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=4 reverse=99
@@ -1367,10 +2028,10 @@ class Windows.Media.Playback.MediaPlaybackVideoTrackList python_type iterable se
         remove remove_SelectedIndexChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=26 reverse=53
             in event_token name=token
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoTrack> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoTrack> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoTrack> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Windows.Media.Core.VideoTrack return
     method get_many
@@ -1619,7 +2280,7 @@ class Windows.Media.Playback.MediaPlayer activatable python_type closeable
             in boolean name=effectOptional
             in interface type=Windows.Foundation.Collections.IPropertySet name=effectConfiguration
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method copy_frame_to_stereoscopic_video_surfaces
         method CopyFrameToStereoscopicVideoSurfaces slot=12 inputs=2 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer5 shape=51 reverse=163
             in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=destinationLeftEye
@@ -1736,7 +2397,7 @@ class Windows.Media.Playback.MediaPlayerSurface python_type closeable
         get get_MediaPlayer slot=8 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaPlayerSurface shape=4 reverse=62
             out class type=Windows.Media.Playback.MediaPlayer return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 class Windows.Media.Playback.PlaybackMediaMarker python_type
     py PlaybackMediaMarker
@@ -1784,7 +2445,7 @@ class Windows.Media.Playback.PlaybackMediaMarkerSequence python_type iterable
     method clear
         method Clear slot=8 inputs=0 outputs=0 declaring=Windows.Media.Playback.IPlaybackMediaMarkerSequence shape=0 reverse=55
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Playback.PlaybackMediaMarker> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Playback.PlaybackMediaMarker> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Playback.PlaybackMediaMarker> return
     method insert
         method Insert slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IPlaybackMediaMarkerSequence shape=4 reverse=43
@@ -1820,166 +2481,339 @@ enum Windows.Media.Playback.TimedMetadataTrackPresentationMode python_type
     signature enum(Windows.Media.Playback.TimedMetadataTrackPresentationMode;i4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Core.ISingleSelectMediaTrackList,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[ISingleSelectMediaTrackList, Object]
     guid 21eb6e39-728a-56a9-8dce-062ba4c81bf5
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{77206f1f-c34f-494f-8077-2bad9ff4ecf1};cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Core.ISingleSelectMediaTrackList
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.Media.Core.ISingleSelectMediaTrackList name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakManager,Windows.Media.Playback.MediaBreakEndedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaBreakManager, MediaBreakEndedEventArgs]
     guid 04afafa9-d83a-5ccb-8cab-82c9d92a19ab
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaBreakManager;{a854ddb1-feb4-4d9b-9d97-0fdbe58e5e39});rc(Windows.Media.Playback.MediaBreakEndedEventArgs;{32b93276-1c5d-4fee-8732-236dc3a88580}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaBreakManager
     argument Windows.Media.Playback.MediaBreakEndedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaBreakManager name=sender
+            in class type=Windows.Media.Playback.MediaBreakEndedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakManager,Windows.Media.Playback.MediaBreakSeekedOverEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaBreakManager, MediaBreakSeekedOverEventArgs]
     guid a6954c30-99dc-5f84-b482-7d0692c0277b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaBreakManager;{a854ddb1-feb4-4d9b-9d97-0fdbe58e5e39});rc(Windows.Media.Playback.MediaBreakSeekedOverEventArgs;{e5aa6746-0606-4492-b9d3-c3c8fde0a4ea}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaBreakManager
     argument Windows.Media.Playback.MediaBreakSeekedOverEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaBreakManager name=sender
+            in class type=Windows.Media.Playback.MediaBreakSeekedOverEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakManager,Windows.Media.Playback.MediaBreakSkippedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaBreakManager, MediaBreakSkippedEventArgs]
     guid c530fa5d-1a56-582a-a254-1b1ae17b8d2d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaBreakManager;{a854ddb1-feb4-4d9b-9d97-0fdbe58e5e39});rc(Windows.Media.Playback.MediaBreakSkippedEventArgs;{6ee94c05-2f54-4a3e-a3ab-24c3b270b4a3}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaBreakManager
     argument Windows.Media.Playback.MediaBreakSkippedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaBreakManager name=sender
+            in class type=Windows.Media.Playback.MediaBreakSkippedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakManager,Windows.Media.Playback.MediaBreakStartedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaBreakManager, MediaBreakStartedEventArgs]
     guid 4bf2cca1-cd9d-5d88-9e47-1881201bb72d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaBreakManager;{a854ddb1-feb4-4d9b-9d97-0fdbe58e5e39});rc(Windows.Media.Playback.MediaBreakStartedEventArgs;{a87efe71-dfd4-454a-956e-0a4a648395f8}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaBreakManager
     argument Windows.Media.Playback.MediaBreakStartedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaBreakManager name=sender
+            in class type=Windows.Media.Playback.MediaBreakStartedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaBreakSchedule,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaBreakSchedule, Object]
     guid 3c57acbf-ca07-586a-8adb-8047dc9165a6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaBreakSchedule;{a19a5813-98b6-41d8-83da-f971d22b7bba});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaBreakSchedule
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaBreakSchedule name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackCommandManager, MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs]
     guid 824845b8-c5df-560b-a722-c15b25d4463a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs;{3d6f4f23-5230-4411-a0e9-bad94c2a045c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackCommandManager
     argument Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManager name=sender
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackCommandManager, MediaPlaybackCommandManagerFastForwardReceivedEventArgs]
     guid d7cd6ce3-516f-5b34-beaf-3ee90b622872
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs;{30f064d9-b491-4d0a-bc21-3098bd1332e9}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackCommandManager
     argument Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManager name=sender
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackCommandManager, MediaPlaybackCommandManagerNextReceivedEventArgs]
     guid ce41af40-93a6-52bf-9cad-4d5fffd10ee0
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs;{e1504433-a2b0-45d4-b9de-5f42ac14a839}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackCommandManager
     argument Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManager name=sender
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackCommandManager, MediaPlaybackCommandManagerPauseReceivedEventArgs]
     guid 79eb2ad3-0781-5f64-b0cd-31e1145d109f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs;{5ceccd1c-c25c-4221-b16c-c3c98ce012d6}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackCommandManager
     argument Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManager name=sender
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackCommandManager, MediaPlaybackCommandManagerPlayReceivedEventArgs]
     guid 76d59f7c-edf3-5dde-9529-6f806bdb1fcb
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs;{9af0004e-578b-4c56-a006-16159d888a48}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackCommandManager
     argument Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManager name=sender
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackCommandManager, MediaPlaybackCommandManagerPositionReceivedEventArgs]
     guid d863b1c4-7442-53c4-94d2-20d8973df585
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs;{5591a754-d627-4bdd-a90d-86a015b24902}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackCommandManager
     argument Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManager name=sender
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackCommandManager, MediaPlaybackCommandManagerPreviousReceivedEventArgs]
     guid 25726db4-8913-5967-90eb-10f09f30dd33
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs;{525e3081-4632-4f76-99b1-d771623f6287}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackCommandManager
     argument Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManager name=sender
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackCommandManager, MediaPlaybackCommandManagerRateReceivedEventArgs]
     guid 3f8a8ea1-ff9a-5613-9846-33799f6b8c8a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs;{18ea3939-4a16-4169-8b05-3eb9f5ff78eb}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackCommandManager
     argument Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManager name=sender
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackCommandManager, MediaPlaybackCommandManagerRewindReceivedEventArgs]
     guid 3c37e026-8d0b-5d73-a650-9f18abbc353d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs;{9f085947-a3c0-425d-aaef-97ba7898b141}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackCommandManager
     argument Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManager name=sender
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackCommandManager, MediaPlaybackCommandManagerShuffleReceivedEventArgs]
     guid 6c972f91-f626-5799-ba86-5e941f0202c8
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManager;{5acee5a6-5cb6-4a5a-8521-cc86b1c1ed37});rc(Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs;{50a05cef-63ee-4a96-b7b5-fee08b9ff90c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackCommandManager
     argument Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManager name=sender
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackCommandManagerCommandBehavior, Object]
     guid 2675973a-eb2d-56a1-82a0-340b0ff041e6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior;{786c1e78-ce78-4a10-afd6-843fcbb90c2e});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackItem,Windows.Foundation.Collections.IVectorChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackItem, IVectorChangedEventArgs]
     guid 2dd51918-4525-5be5-a6c1-409bc72863a6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackItem;{047097d2-e4af-48ab-b283-6929e674ece2});{575933df-34fe-4480-af15-07691f3d5d9b})
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackItem
     argument Windows.Foundation.Collections.IVectorChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackItem name=sender
+            in interface type=Windows.Foundation.Collections.IVectorChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackList,Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackList, CurrentMediaPlaybackItemChangedEventArgs]
     guid 404c5f9d-250d-5f8c-9627-6b4105c32d09
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackList;{7f77ee9c-dc42-4e26-a98d-7850df8ec925});rc(Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs;{1743a892-5c43-4a15-967a-572d2d0f26c6}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackList
     argument Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackList name=sender
+            in class type=Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackList,Windows.Media.Playback.MediaPlaybackItemFailedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackList, MediaPlaybackItemFailedEventArgs]
     guid 23319e7d-34b1-57b7-97e5-844948ba4719
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackList;{7f77ee9c-dc42-4e26-a98d-7850df8ec925});rc(Windows.Media.Playback.MediaPlaybackItemFailedEventArgs;{7703134a-e9a7-47c3-862c-c656d30683d4}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackList
     argument Windows.Media.Playback.MediaPlaybackItemFailedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackList name=sender
+            in class type=Windows.Media.Playback.MediaPlaybackItemFailedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackList,Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackList, MediaPlaybackItemOpenedEventArgs]
     guid 6732bbef-3311-5f83-9c9d-82a5cf3cd82a
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackList;{7f77ee9c-dc42-4e26-a98d-7850df8ec925});rc(Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs;{cbd9bd82-3037-4fbe-ae8f-39fc39edf4ef}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackList
     argument Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackList name=sender
+            in class type=Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackSession,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackSession, Object]
     guid 7c70f38d-2aa1-5522-a6d6-34b52b988ae7
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackSession;{c32b683d-0407-41ba-8946-8b345a5a5435});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackSession
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackSession name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList,Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlaybackTimedMetadataTrackList, TimedMetadataPresentationModeChangedEventArgs]
     guid 40213c85-bf23-5f78-b9c4-e03f3be2b41c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07})));rc(Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs;{d1636099-65df-45ae-8cef-dc0b53fdc2bb}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList
     argument Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList name=sender
+            in class type=Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlayer, Object]
     guid f1a6a51e-d078-5c40-ba3f-348870ba5c87
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlayer;{381a83cb-6fff-499b-8d64-2885dfc1249e});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlayer
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlayer name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,Windows.Media.Playback.MediaPlayerFailedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlayer, MediaPlayerFailedEventArgs]
     guid 362c45a7-3a0a-5e27-99ce-cff6d1b770e1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlayer;{381a83cb-6fff-499b-8d64-2885dfc1249e});rc(Windows.Media.Playback.MediaPlayerFailedEventArgs;{2744e9b9-a7e3-4f16-bac4-7914ebc08301}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlayer
     argument Windows.Media.Playback.MediaPlayerFailedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlayer name=sender
+            in class type=Windows.Media.Playback.MediaPlayerFailedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,Windows.Media.Playback.MediaPlayerRateChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlayer, MediaPlayerRateChangedEventArgs]
     guid ba51d31a-5688-5d4d-af42-122070b1eefa
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlayer;{381a83cb-6fff-499b-8d64-2885dfc1249e});rc(Windows.Media.Playback.MediaPlayerRateChangedEventArgs;{40600d58-3b61-4bb2-989f-fc65608b6cab}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlayer
     argument Windows.Media.Playback.MediaPlayerRateChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlayer name=sender
+            in class type=Windows.Media.Playback.MediaPlayerRateChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Playback.MediaPlayer,Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MediaPlayer, PlaybackMediaMarkerReachedEventArgs]
     guid 67a4f43c-c254-57f0-a39d-a475a342d21d
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Playback.MediaPlayer;{381a83cb-6fff-499b-8d64-2885dfc1249e});rc(Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs;{578cd1b9-90e2-4e60-abc4-8740b01f6196}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Playback.MediaPlayer
     argument Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Playback.MediaPlayer name=sender
+            in class type=Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs name=args
+
+delegate Windows.Foundation.Collections.VectorChangedEventHandler<Windows.Media.Playback.MediaPlaybackItem> concrete
+    py winrt.windows.foundation.collections.VectorChangedEventHandler[MediaPlaybackItem]
+    guid 891bddde-6bf3-5d1f-80ab-5a342a16a0bb
+    signature pinterface({0c051752-9fbf-4c70-aa0c-0e4c82d9a761};rc(Windows.Media.Playback.MediaPlaybackItem;{047097d2-e4af-48ab-b283-6929e674ece2}))
+    base Windows.Foundation.Collections.VectorChangedEventHandler
+    argument Windows.Media.Playback.MediaPlaybackItem
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.Collections.IObservableVector<Windows.Media.Playback.MediaPlaybackItem> name=sender
+            in interface type=Windows.Foundation.Collections.IVectorChangedEventArgs name=event
 
 class System.Object external
     py winrt.system.Object
@@ -1993,9 +2827,27 @@ class Windows.Devices.Enumeration.DeviceInformation external
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
 
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
@@ -2006,19 +2858,47 @@ struct Windows.Foundation.Size external
 struct Windows.Foundation.TimeSpan external
     py winrt.windows.foundation.TimeSpan
 
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IObservableVector external parameterized
+    py winrt.windows.foundation.collections._IObservableVector
+    guid 5917eb53-50b4-4a0d-b309-65862b3f1dbc
 
 interface Windows.Foundation.Collections.IPropertySet external
     py winrt.windows.foundation.collections._IPropertySet
     guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
 
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
 interface Windows.Foundation.Collections.IVectorChangedEventArgs external
     py winrt.windows.foundation.collections._IVectorChangedEventArgs
     guid 575933df-34fe-4480-af15-07691f3d5d9b
 
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
 class Windows.Foundation.Collections.ValueSet external
     py winrt.windows.foundation.collections.ValueSet
+
+delegate Windows.Foundation.Collections.VectorChangedEventHandler external parameterized
+    py winrt.windows.foundation.collections.VectorChangedEventHandler
+    guid 0c051752-9fbf-4c70-aa0c-0e4c82d9a761
 
 struct Windows.Foundation.Numerics.Quaternion external
     py winrt.windows.foundation.numerics.Quaternion

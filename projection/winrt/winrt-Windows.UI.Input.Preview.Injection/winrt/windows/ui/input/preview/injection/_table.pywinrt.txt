@@ -32,20 +32,95 @@ interface Windows.UI.Input.Preview.Injection.IInputInjectorStatics
 interface Windows.UI.Input.Preview.Injection.IInputInjectorStatics2
     guid a4db38fb-dd8c-414f-95ea-f87ef4c0ae6c
 
-interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[InjectedInputKeyboardInfo]
     guid 15d6330f-9c97-5705-b677-872585664fb5
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo;{4b46d140-2b6a-5ffa-7eae-bd077b052acd}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[InjectedInputMouseInfo]
     guid 6c34e5bd-0fa4-5244-89fb-04bfd480ecd8
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo;{96f56e6b-e47a-5cf4-418d-8a5fb9670c7d}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[InjectedInputTouchInfo]
     guid ac5fac0b-82a0-5436-9284-e7db0bf4e615
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo;{224fd1df-43e8-5ef5-510a-69ca8c9b4c28}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[InjectedInputKeyboardInfo]
+    guid 500e5efe-3bc1-5d9b-bcfc-c1f439505f12
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo;{4b46d140-2b6a-5ffa-7eae-bd077b052acd}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo> shape=117 reverse=101
+            fill_array class type=Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[InjectedInputMouseInfo]
+    guid 9604d1d9-1744-5bd3-b5b9-d47b9434facb
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo;{96f56e6b-e47a-5cf4-418d-8a5fb9670c7d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo> shape=117 reverse=101
+            fill_array class type=Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[InjectedInputTouchInfo]
+    guid 4bc92e92-d32e-597a-ae24-b38861c5fb08
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo;{224fd1df-43e8-5ef5-510a-69ca8c9b4c28}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo> shape=117 reverse=101
+            fill_array class type=Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo> shape=4 reverse=62 role=move_next
+            out boolean return
 
 enum Windows.UI.Input.Preview.Injection.InjectedInputButtonChangeKind python_type
     py InjectedInputButtonChangeKind
@@ -337,6 +412,14 @@ class Windows.UI.Input.Preview.Injection.InputInjector python_type
         method UninitializePenInjection slot=13 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=0 reverse=169
     method uninitialize_touch_injection
         method UninitializeTouchInjection slot=10 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=0 reverse=117
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
 
 enum Windows.Gaming.Input.GamepadButtons external
     py winrt.windows.gaming.input.GamepadButtons

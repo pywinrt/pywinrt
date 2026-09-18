@@ -169,19 +169,41 @@ class Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEve
             out class type=Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extensions.Print3DWorkflow,Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Print3DWorkflow, Print3DWorkflowPrintRequestedEventArgs]
     guid 5f4c6603-5512-59aa-8d96-b1389d8b5796
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Printers.Extensions.Print3DWorkflow;{c56f74bd-3669-4a66-ab42-c8151930cd34});rc(Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs;{19f8c858-5ac8-4b55-8a5f-e61567dafb4d}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Printers.Extensions.Print3DWorkflow
     argument Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Printers.Extensions.Print3DWorkflow name=sender
+            in class type=Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extensions.Print3DWorkflow,Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[Print3DWorkflow, Print3DWorkflowPrinterChangedEventArgs]
     guid b4b5ddc2-1a74-5905-9fc5-ddaae9a3ab93
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Printers.Extensions.Print3DWorkflow;{c56f74bd-3669-4a66-ab42-c8151930cd34});rc(Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs;{45226402-95fc-4847-93b3-134dbf5c60f7}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Printers.Extensions.Print3DWorkflow
     argument Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Printers.Extensions.Print3DWorkflow name=sender
+            in class type=Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extensions.PrintTaskConfiguration,Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintTaskConfiguration, PrintTaskConfigurationSaveRequestedEventArgs]
     guid 0363f57a-b7a2-5e20-a156-253423e7ee40
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Printers.Extensions.PrintTaskConfiguration;{e3c22451-3aa4-4885-9240-311f5f8fbe9d});rc(Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs;{e06c2879-0d61-4938-91d0-96a45bee8479}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Printers.Extensions.PrintTaskConfiguration
     argument Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Printers.Extensions.PrintTaskConfiguration name=sender
+            in class type=Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f

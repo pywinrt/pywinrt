@@ -61,6 +61,17 @@ class Windows.UI.Xaml.Input.AccessKeyManager python_type
     method exit_display_mode static
         method ExitDisplayMode slot=9 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics shape=0 reverse=93 static
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Input.FocusMovementResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[FocusMovementResult]
+    guid 1ba9fb88-fc3d-5a5d-ae84-a745cfb4397b
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.UI.Xaml.Input.FocusMovementResult;{06dfead3-c2ae-44bb-bfab-9c73de8407a4}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.UI.Xaml.Input.FocusMovementResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Input.FocusMovementResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs python_type
     py CanExecuteRequestedEventArgs
     signature rc(Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs;{c8e75256-1950-505d-993b-75907ef96830})
@@ -145,29 +156,59 @@ class Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs activatable python_type
             out struct type=Windows.Foundation.Point return
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 delegate Windows.Foundation.EventHandler<Windows.UI.Xaml.Input.FocusManagerGotFocusEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[FocusManagerGotFocusEventArgs]
     guid 76001564-62e8-5a20-bd3d-695cf5a8ad69
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Input.FocusManagerGotFocusEventArgs;{97aa5d83-535b-507a-868e-62b706f06b61}))
+    base Windows.Foundation.EventHandler
     argument Windows.UI.Xaml.Input.FocusManagerGotFocusEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Xaml.Input.FocusManagerGotFocusEventArgs name=args
 
 delegate Windows.Foundation.EventHandler<Windows.UI.Xaml.Input.FocusManagerLostFocusEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[FocusManagerLostFocusEventArgs]
     guid 27ab0a3b-68b4-5dd3-86c1-cb0c8c2f3919
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Input.FocusManagerLostFocusEventArgs;{3e157e7a-9578-5cd3-aaa8-051b3d391978}))
+    base Windows.Foundation.EventHandler
     argument Windows.UI.Xaml.Input.FocusManagerLostFocusEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Xaml.Input.FocusManagerLostFocusEventArgs name=args
 
 delegate Windows.Foundation.EventHandler<Windows.UI.Xaml.Input.GettingFocusEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[GettingFocusEventArgs]
     guid 2efa05aa-bdc0-518d-8276-49a629efa642
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Input.GettingFocusEventArgs;{fa05b9ce-c67c-4be8-8fd4-c44d67877e0d}))
+    base Windows.Foundation.EventHandler
     argument Windows.UI.Xaml.Input.GettingFocusEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Xaml.Input.GettingFocusEventArgs name=args
 
 delegate Windows.Foundation.EventHandler<Windows.UI.Xaml.Input.LosingFocusEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[LosingFocusEventArgs]
     guid b17a4f5f-1e9f-5de1-ab5d-6f58df7d0e47
     signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Input.LosingFocusEventArgs;{f9f683c7-d789-472b-aa93-6d4105e6dabe}))
+    base Windows.Foundation.EventHandler
     argument Windows.UI.Xaml.Input.LosingFocusEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.UI.Xaml.Input.LosingFocusEventArgs name=args
 
 class Windows.UI.Xaml.Input.ExecuteRequestedEventArgs python_type
     py ExecuteRequestedEventArgs
@@ -436,10 +477,34 @@ interface Windows.UI.Xaml.Input.IAccessKeyManagerStatics
 interface Windows.UI.Xaml.Input.IAccessKeyManagerStatics2
     guid 962bb594-2ab3-47c5-954b-7092f355f797
 
-interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Input.FocusMovementResult> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Input.FocusMovementResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[FocusMovementResult]
     guid 0ea4496b-37de-5e58-8b0d-2c3990c4cbb2
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.UI.Xaml.Input.FocusMovementResult;{06dfead3-c2ae-44bb-bfab-9c73de8407a4}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.UI.Xaml.Input.FocusMovementResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Input.FocusMovementResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Input.FocusMovementResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Input.FocusMovementResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Input.FocusMovementResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Input.FocusMovementResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.UI.Xaml.Input.FocusMovementResult return
 
 interface Windows.UI.Xaml.Input.ICanExecuteRequestedEventArgs
     guid c8e75256-1950-505d-993b-75907ef96830
@@ -540,6 +605,96 @@ interface Windows.UI.Xaml.Input.IInputScopeName
 interface Windows.UI.Xaml.Input.IInputScopeNameFactory
     guid 4a40bb52-4bd7-4e54-8617-1cda8a1eda7f
 
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PointerPoint]
+    guid f6f2cba6-7076-5b59-9631-f6ac32b57695
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Input.PointerPoint
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Input.InputScopeName> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[InputScopeName]
+    guid 81416296-95d0-5100-b59b-bea1c27d2002
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Input.InputScopeName;{fd3e6997-08fb-4cba-a021-792d7589fd5a}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Xaml.Input.InputScopeName
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Input.InputScopeName> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.InputScopeName> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Input.KeyboardAccelerator> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[KeyboardAccelerator]
+    guid af1e5ff1-d518-5521-b40e-6f524d04c129
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Xaml.Input.KeyboardAccelerator;{92e6181e-19ae-465a-9b3c-a71ee9ea7420}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Xaml.Input.KeyboardAccelerator
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.KeyboardAccelerator> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PointerPoint]
+    guid 721fe01c-5ad4-5262-b078-3ab345105db8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Input.PointerPoint
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Input.PointerPoint return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=117 reverse=101
+            fill_array class type=Windows.UI.Input.PointerPoint name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.InputScopeName> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[InputScopeName]
+    guid 7ac16ff4-5857-5001-b87f-327093f68392
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Input.InputScopeName;{fd3e6997-08fb-4cba-a021-792d7589fd5a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.Input.InputScopeName
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.InputScopeName> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Input.InputScopeName return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.InputScopeName> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.InputScopeName> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Input.InputScopeName name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.InputScopeName> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.KeyboardAccelerator> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[KeyboardAccelerator]
+    guid 8b6ac198-eaa0-50e6-9a35-32dfdf1f59e1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Xaml.Input.KeyboardAccelerator;{92e6181e-19ae-465a-9b3c-a71ee9ea7420}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Xaml.Input.KeyboardAccelerator
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Xaml.Input.KeyboardAccelerator return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=117 reverse=101
+            fill_array class type=Windows.UI.Xaml.Input.KeyboardAccelerator name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.UI.Xaml.Input.IKeyRoutedEventArgs
     guid d4cd3dfe-4079-42e9-a39a-3095d3f049c6
 
@@ -630,20 +785,245 @@ interface Windows.UI.Xaml.Input.IStandardUICommandStatics
 interface Windows.UI.Xaml.Input.ITappedRoutedEventArgs
     guid a099e6be-e624-459a-bb1d-e05c73e2cc66
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[PointerPoint]
     guid dfa655cf-fde7-5048-b4bf-c909231b7edb
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint>
     argument Windows.UI.Input.PointerPoint
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=173
+            in class type=Windows.UI.Input.PointerPoint name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Input.PointerPoint return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Input.PointerPoint name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=117 reverse=101
+            in class type=Windows.UI.Input.PointerPoint name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Input.PointerPoint name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=211
+            pass_array class type=Windows.UI.Input.PointerPoint name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Input.PointerPoint name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[InputScopeName]
     guid 703fe123-d766-562f-b210-1980bb2a0d33
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Input.InputScopeName;{fd3e6997-08fb-4cba-a021-792d7589fd5a}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Input.InputScopeName>
     argument Windows.UI.Xaml.Input.InputScopeName
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Input.InputScopeName name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Input.InputScopeName> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.InputScopeName> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Input.InputScopeName return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Input.InputScopeName name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Input.InputScopeName> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Input.InputScopeName name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Input.InputScopeName name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Input.InputScopeName name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Input.InputScopeName name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> concrete
+interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[KeyboardAccelerator]
     guid e4927feb-1e4a-5be3-bda3-62cf4e520258
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Input.KeyboardAccelerator;{92e6181e-19ae-465a-9b3c-a71ee9ea7420}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Input.KeyboardAccelerator>
     argument Windows.UI.Xaml.Input.KeyboardAccelerator
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=4 reverse=173
+            in class type=Windows.UI.Xaml.Input.KeyboardAccelerator name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.KeyboardAccelerator> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Input.KeyboardAccelerator return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Input.KeyboardAccelerator name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Input.KeyboardAccelerator> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=117 reverse=101
+            in class type=Windows.UI.Xaml.Input.KeyboardAccelerator name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Input.KeyboardAccelerator name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=51 reverse=211
+            pass_array class type=Windows.UI.Xaml.Input.KeyboardAccelerator name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.UI.Xaml.Input.KeyboardAccelerator name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PointerPoint]
+    guid f0f57411-7786-5174-8752-4c5e834b6da2
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Input.PointerPoint;{e995317d-7296-42d9-8233-c5be73b74a4a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint>
+    argument Windows.UI.Input.PointerPoint
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Input.PointerPoint return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Input.PointerPoint name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=117 reverse=66
+            in class type=Windows.UI.Input.PointerPoint name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Input.InputScopeName> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[InputScopeName]
+    guid fcd65a82-5328-53bc-a884-c209aafabf78
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Input.InputScopeName;{fd3e6997-08fb-4cba-a021-792d7589fd5a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Input.InputScopeName>
+    argument Windows.UI.Xaml.Input.InputScopeName
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Input.InputScopeName> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Input.InputScopeName> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.InputScopeName> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Input.InputScopeName> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Input.InputScopeName return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Input.InputScopeName> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Input.InputScopeName name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Input.InputScopeName> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.Input.InputScopeName name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Input.KeyboardAccelerator> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[KeyboardAccelerator]
+    guid 4d5e3d08-e27c-5d05-a1dc-9885a51c3721
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Xaml.Input.KeyboardAccelerator;{92e6181e-19ae-465a-9b3c-a71ee9ea7420}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Input.KeyboardAccelerator>
+    argument Windows.UI.Xaml.Input.KeyboardAccelerator
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Input.KeyboardAccelerator> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Xaml.Input.KeyboardAccelerator return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Xaml.Input.KeyboardAccelerator name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Input.KeyboardAccelerator> shape=117 reverse=66
+            in class type=Windows.UI.Xaml.Input.KeyboardAccelerator name=value
+            out uint32 name=index
+            out boolean return
 
 interface Windows.UI.Xaml.Input.IXamlUICommand
     guid 8494f8d4-ead1-5f01-ad2e-a8cad4f9dc0e
@@ -1342,28 +1722,52 @@ class Windows.UI.Xaml.Input.TappedRoutedEventArgs activatable python_type
             out struct type=Windows.Foundation.Point return
 
 delegate Windows.Foundation.TypedEventHandler<System.Object,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[Object, Object]
     guid c7e65ce2-fad5-5e3b-9c58-186ca8c1dd57
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable);cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument System.Object
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Input.KeyboardAccelerator,Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[KeyboardAccelerator, KeyboardAcceleratorInvokedEventArgs]
     guid f763f3ae-b1eb-5592-a091-d508f32b0b2c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Input.KeyboardAccelerator;{92e6181e-19ae-465a-9b3c-a71ee9ea7420});rc(Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs;{c00b03f2-04e7-4415-b17d-d76b9490de2b}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Input.KeyboardAccelerator
     argument Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Input.KeyboardAccelerator name=sender
+            in class type=Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Input.XamlUICommand,Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[XamlUICommand, CanExecuteRequestedEventArgs]
     guid bc9f083e-f27f-51e3-847e-620e047b4a0c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Input.XamlUICommand;{8494f8d4-ead1-5f01-ad2e-a8cad4f9dc0e});rc(Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs;{c8e75256-1950-505d-993b-75907ef96830}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Input.XamlUICommand
     argument Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Input.XamlUICommand name=sender
+            in class type=Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Input.XamlUICommand,Windows.UI.Xaml.Input.ExecuteRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[XamlUICommand, ExecuteRequestedEventArgs]
     guid 35fb4834-1b34-541c-bd97-e6c60be9b4fb
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Xaml.Input.XamlUICommand;{8494f8d4-ead1-5f01-ad2e-a8cad4f9dc0e});rc(Windows.UI.Xaml.Input.ExecuteRequestedEventArgs;{e07fa734-a0b6-5755-9e87-24f54cca9372}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.UI.Xaml.Input.XamlUICommand
     argument Windows.UI.Xaml.Input.ExecuteRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Xaml.Input.XamlUICommand name=sender
+            in class type=Windows.UI.Xaml.Input.ExecuteRequestedEventArgs name=args
 
 enum Windows.UI.Xaml.Input.XYFocusKeyboardNavigationMode python_type
     py XYFocusKeyboardNavigationMode
@@ -1471,11 +1875,50 @@ class System.Object external
 enum Windows.Devices.Input.PointerDeviceType external
     py winrt.windows.devices.input.PointerDeviceType
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 struct Windows.Foundation.Point external
     py winrt.windows.foundation.Point
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 enum Windows.System.VirtualKey external
     py winrt.windows.system.VirtualKey

@@ -30,7 +30,7 @@ interface Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice python_type closea
     signature {a37624ab-8d5f-4650-9d3e-9eae3d9bc670}
     requires Windows.Foundation.IClosable
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method trim
         method Trim slot=6 inputs=0 outputs=0 declaring=Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice shape=0 reverse=16
 
@@ -43,7 +43,7 @@ interface Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface python_type close
         get get_Description slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface shape=4 reverse=22
             out struct type=Windows.Graphics.DirectX.Direct3D11.Direct3DSurfaceDescription return
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable

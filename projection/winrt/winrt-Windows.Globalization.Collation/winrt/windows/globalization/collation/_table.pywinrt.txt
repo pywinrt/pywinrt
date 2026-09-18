@@ -31,13 +31,13 @@ class Windows.Globalization.Collation.CharacterGroupings activatable python_type
             in string name=language
             out class type=Windows.Globalization.Collation.CharacterGroupings return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping> shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping> shape=4 reverse=43 role=size
             out uint32 return
     method first
-        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Globalization.Collation.CharacterGrouping> shape=4 reverse=22
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Globalization.Collation.CharacterGrouping> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Globalization.Collation.CharacterGrouping> return
     method get_at
-        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping> shape=51 reverse=24
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping> shape=51 reverse=24 role=get_at
             in uint32 name=index
             out class type=Windows.Globalization.Collation.CharacterGrouping return
     method get_many
@@ -67,19 +67,74 @@ interface Windows.Globalization.Collation.ICharacterGroupingsFactory
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T
 
-interface Windows.Foundation.Collections.IIterable<Windows.Globalization.Collation.CharacterGrouping> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Globalization.Collation.CharacterGrouping> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[CharacterGrouping]
     guid 82e3abf0-06e3-5609-ba39-c51eb2f5fae6
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Globalization.Collation.CharacterGrouping;{fae761bb-805d-4bb0-95bb-c1f7c3e8eb8e}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Globalization.Collation.CharacterGrouping
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Globalization.Collation.CharacterGrouping> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Globalization.Collation.CharacterGrouping> return
 
-interface Windows.Foundation.Collections.IIterator<Windows.Globalization.Collation.CharacterGrouping> concrete
+interface Windows.Foundation.Collections.IIterator<Windows.Globalization.Collation.CharacterGrouping> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[CharacterGrouping]
     guid 57e89bbc-9220-5df2-844b-ddfe6605db5f
     signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Globalization.Collation.CharacterGrouping;{fae761bb-805d-4bb0-95bb-c1f7c3e8eb8e}))
+    base Windows.Foundation.Collections.IIterator
     argument Windows.Globalization.Collation.CharacterGrouping
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Globalization.Collation.CharacterGrouping> shape=4 reverse=22 role=current
+            out class type=Windows.Globalization.Collation.CharacterGrouping return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Globalization.Collation.CharacterGrouping> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Globalization.Collation.CharacterGrouping> shape=117 reverse=101
+            fill_array class type=Windows.Globalization.Collation.CharacterGrouping name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Globalization.Collation.CharacterGrouping> shape=4 reverse=62 role=move_next
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[CharacterGrouping]
     guid f7cf5a4a-2b7a-5bc9-a0c4-9dce07ff61c9
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Globalization.Collation.CharacterGrouping;{fae761bb-805d-4bb0-95bb-c1f7c3e8eb8e}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Globalization.Collation.CharacterGrouping>
     argument Windows.Globalization.Collation.CharacterGrouping
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Globalization.Collation.CharacterGrouping> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Globalization.Collation.CharacterGrouping> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Globalization.Collation.CharacterGrouping return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Globalization.Collation.CharacterGrouping name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping> shape=117 reverse=66
+            in class type=Windows.Globalization.Collation.CharacterGrouping name=value
+            out uint32 name=index
+            out boolean return
 
 enum T parameterized
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

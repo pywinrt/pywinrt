@@ -2,6 +2,61 @@ format 4.0
 generator 0.0.0
 namespace Windows.Media.Casting
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.String> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[String]
+    guid b79a741f-7fb5-50ae-9e99-911201ec3d41
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};string)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.String
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.String> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Casting.CastingConnectionErrorStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CastingConnectionErrorStatus]
+    guid 7216a94a-a10a-5763-8e96-bf33c582ed92
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Media.Casting.CastingConnectionErrorStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Casting.CastingConnectionErrorStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnectionErrorStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Casting.CastingDevice> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CastingDevice]
+    guid f0c69b9e-14cb-510a-8ef0-7e86d771baaf
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Casting.CastingDevice;{de721c83-4a43-4ad1-a6d2-2492a796c3f2}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Casting.CastingDevice
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingDevice> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Casting.CastingPlaybackTypes> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CastingPlaybackTypes]
+    guid b55e550c-dfa8-50be-be8f-5d42c9dac120
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Media.Casting.CastingPlaybackTypes;u4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Casting.CastingPlaybackTypes
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingPlaybackTypes> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Media.Casting.CastingConnection python_type closeable
     py CastingConnection
     signature rc(Windows.Media.Casting.CastingConnection;{cd951653-c2f1-4498-8b78-5fb4cd3640dd})
@@ -32,7 +87,7 @@ class Windows.Media.Casting.CastingConnection python_type closeable
         remove remove_StateChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingConnection shape=26 reverse=156
             in event_token name=token
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disconnect_async
         method DisconnectAsync slot=15 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4 reverse=194
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnectionErrorStatus> return
@@ -182,30 +237,150 @@ class Windows.Media.Casting.CastingSource python_type
         put put_PreferredSourceUri slot=7 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingSource shape=4 reverse=43
             in class type=Windows.Foundation.Uri name=value
 
-interface Windows.Foundation.IAsyncOperation<System.String> concrete
+interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[String]
     guid 3e1fe603-f897-5263-b328-0806426b8a79
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};string)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.String
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.String> shape=4 reverse=62 role=get_results
+            out string return
 
-interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
     guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnectionErrorStatus> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnectionErrorStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CastingConnectionErrorStatus]
     guid 25c821bc-deb8-5850-8af2-d3ac35426bd2
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Media.Casting.CastingConnectionErrorStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Casting.CastingConnectionErrorStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnectionErrorStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Casting.CastingConnectionErrorStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnectionErrorStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Casting.CastingConnectionErrorStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnectionErrorStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Media.Casting.CastingConnectionErrorStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingDevice> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingDevice> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CastingDevice]
     guid 1b4ee058-4c69-5e70-8834-c1d171cc1b22
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Casting.CastingDevice;{de721c83-4a43-4ad1-a6d2-2492a796c3f2}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Casting.CastingDevice
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingDevice> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Casting.CastingDevice> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingDevice> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Casting.CastingDevice> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingDevice> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Casting.CastingDevice return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingPlaybackTypes> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingPlaybackTypes> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CastingPlaybackTypes]
     guid dff10e53-4c5e-5dba-9269-cd61881bb8b3
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Media.Casting.CastingPlaybackTypes;u4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Casting.CastingPlaybackTypes
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingPlaybackTypes> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Casting.CastingPlaybackTypes> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingPlaybackTypes> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Casting.CastingPlaybackTypes> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingPlaybackTypes> shape=4 reverse=62 role=get_results
+            out enum_u32 type=Windows.Media.Casting.CastingPlaybackTypes return
 
 interface Windows.Media.Casting.ICastingConnection
     guid cd951653-c2f1-4498-8b78-5fb4cd3640dd
@@ -231,34 +406,163 @@ interface Windows.Media.Casting.ICastingDeviceStatics
 interface Windows.Media.Casting.ICastingSource
     guid f429ea72-3467-47e6-a027-522923e9d727
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Casting.CastingSource> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[CastingSource]
+    guid 1abb2cc9-46a2-58b1-91aa-28699d66d1ab
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Casting.CastingSource;{f429ea72-3467-47e6-a027-522923e9d727}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Casting.CastingSource
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Casting.CastingSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Casting.CastingSource> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Casting.CastingSource> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[CastingSource]
+    guid 3f6c93e9-cc77-5ef4-b2b7-25cfcfc09720
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Casting.CastingSource;{f429ea72-3467-47e6-a027-522923e9d727}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Casting.CastingSource
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Casting.CastingSource> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Casting.CastingSource return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Casting.CastingSource> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Casting.CastingSource> shape=117 reverse=101
+            fill_array class type=Windows.Media.Casting.CastingSource name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Casting.CastingSource> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[CastingSource]
     guid c2e3dea8-92e0-50af-9c93-83b3e86b73b4
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Casting.CastingSource;{f429ea72-3467-47e6-a027-522923e9d727}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Casting.CastingSource>
     argument Windows.Media.Casting.CastingSource
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> shape=4 reverse=173
+            in class type=Windows.Media.Casting.CastingSource name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Casting.CastingSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Casting.CastingSource> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Casting.CastingSource return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Casting.CastingSource name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Casting.CastingSource> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> shape=117 reverse=101
+            in class type=Windows.Media.Casting.CastingSource name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Media.Casting.CastingSource name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> shape=51 reverse=211
+            pass_array class type=Windows.Media.Casting.CastingSource name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Media.Casting.CastingSource name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Casting.CastingSource> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[CastingSource]
+    guid 7828da61-dea4-5485-b27a-8f78e0472402
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Casting.CastingSource;{f429ea72-3467-47e6-a027-522923e9d727}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Casting.CastingSource>
+    argument Windows.Media.Casting.CastingSource
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Casting.CastingSource> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Casting.CastingSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Casting.CastingSource> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Casting.CastingSource> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Casting.CastingSource return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Casting.CastingSource> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Casting.CastingSource name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Casting.CastingSource> shape=117 reverse=66
+            in class type=Windows.Media.Casting.CastingSource name=value
+            out uint32 name=index
+            out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingConnection,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CastingConnection, Object]
     guid f1576170-9b08-5a9b-87d2-c1ac47bc6681
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Casting.CastingConnection;{cd951653-c2f1-4498-8b78-5fb4cd3640dd});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Casting.CastingConnection
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Casting.CastingConnection name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingConnection,Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CastingConnection, CastingConnectionErrorOccurredEventArgs]
     guid 78afbbd0-9811-5f0e-9566-47c3e8cdd929
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Casting.CastingConnection;{cd951653-c2f1-4498-8b78-5fb4cd3640dd});rc(Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs;{a7fb3c69-8719-4f00-81fb-961863c79a32}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Casting.CastingConnection
     argument Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Casting.CastingConnection name=sender
+            in class type=Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingDevicePicker,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CastingDevicePicker, Object]
     guid a64b972b-aa63-5c61-9cde-cd6ffea8a247
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Casting.CastingDevicePicker;{dcd39924-0591-49be-aacb-4b82ee756a95});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Casting.CastingDevicePicker
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Casting.CastingDevicePicker name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingDevicePicker,Windows.Media.Casting.CastingDeviceSelectedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CastingDevicePicker, CastingDeviceSelectedEventArgs]
     guid b3655b33-c4ad-5f4c-a187-b2e4c770a16b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Media.Casting.CastingDevicePicker;{dcd39924-0591-49be-aacb-4b82ee756a95});rc(Windows.Media.Casting.CastingDeviceSelectedEventArgs;{dc439e86-dd57-4d0d-9400-af45e4fb3663}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Media.Casting.CastingDevicePicker
     argument Windows.Media.Casting.CastingDeviceSelectedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Media.Casting.CastingDevicePicker name=sender
+            in class type=Windows.Media.Casting.CastingDeviceSelectedEventArgs name=args
 
 class System.Boolean external
     py winrt.system.Boolean
@@ -275,6 +579,21 @@ class Windows.Devices.Enumeration.DeviceInformation external
 class Windows.Devices.Enumeration.DevicePickerAppearance external
     py winrt.windows.devices.enumeration.DevicePickerAppearance
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
@@ -282,8 +601,28 @@ interface Windows.Foundation.IClosable external
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
 
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.Streams.IRandomAccessStreamWithContentType external
     py winrt.windows.storage.streams._IRandomAccessStreamWithContentType

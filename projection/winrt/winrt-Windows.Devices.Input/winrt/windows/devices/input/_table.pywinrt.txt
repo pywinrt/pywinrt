@@ -2,6 +2,66 @@ format 4.0
 generator 0.0.0
 namespace Windows.Devices.Input
 
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Input.PointerDevice> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PointerDevice]
+    guid ad26662c-845b-5c6d-aeaa-406f48c21ae9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Input.PointerDevice;{93c9bafc-ebcb-467e-82c6-276feae36b5a}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Input.PointerDevice
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Input.PointerDevice> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDevice> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Input.PointerDeviceUsage> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PointerDeviceUsage]
+    guid 592d6618-eaab-5a79-a47a-c7fc0b749a4e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Devices.Input.PointerDeviceUsage;u4;u4;i4;i4;i4;i4;u4;f4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Input.PointerDeviceUsage
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Input.PointerDeviceUsage> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDeviceUsage> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDevice> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PointerDevice]
+    guid de94641c-7960-5fcd-abe8-d6ba609ef7d3
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Input.PointerDevice;{93c9bafc-ebcb-467e-82c6-276feae36b5a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Input.PointerDevice
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDevice> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Input.PointerDevice return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDevice> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDevice> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Input.PointerDevice name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDevice> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDeviceUsage> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PointerDeviceUsage]
+    guid 9ab2160d-11ef-5eca-8dd9-3e13aa4e5f99
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Devices.Input.PointerDeviceUsage;u4;u4;i4;i4;i4;i4;u4;f4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Input.PointerDeviceUsage
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDeviceUsage> shape=4 reverse=22 role=current
+            out struct type=Windows.Devices.Input.PointerDeviceUsage return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDeviceUsage> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDeviceUsage> shape=117 reverse=101
+            fill_array struct type=Windows.Devices.Input.PointerDeviceUsage name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDeviceUsage> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.Devices.Input.IKeyboardCapabilities
     guid 3a3f9b56-6798-4bbc-833e-0f34b17c65ff
 
@@ -65,15 +125,61 @@ interface Windows.Devices.Input.IPointerDeviceStatics
 interface Windows.Devices.Input.ITouchCapabilities
     guid 20dd55f9-13f1-46c8-9285-2c05fa3eda6f
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDevice> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDevice> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PointerDevice]
     guid cf5674f1-9808-5a2b-80b8-5684ed0ea816
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Input.PointerDevice;{93c9bafc-ebcb-467e-82c6-276feae36b5a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Input.PointerDevice>
     argument Windows.Devices.Input.PointerDevice
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDevice> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Input.PointerDevice> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDevice> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDevice> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Input.PointerDevice return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDevice> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Input.PointerDevice name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDevice> shape=117 reverse=66
+            in class type=Windows.Devices.Input.PointerDevice name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDeviceUsage> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDeviceUsage> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PointerDeviceUsage]
     guid 8e5a2c7e-3830-50d5-92ba-3163c89cbbd0
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Devices.Input.PointerDeviceUsage;u4;u4;i4;i4;i4;i4;u4;f4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Input.PointerDeviceUsage>
     argument Windows.Devices.Input.PointerDeviceUsage
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDeviceUsage> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Input.PointerDeviceUsage> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Input.PointerDeviceUsage> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDeviceUsage> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Devices.Input.PointerDeviceUsage return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDeviceUsage> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Devices.Input.PointerDeviceUsage name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDeviceUsage> shape=180 reverse=89
+            in struct type=Windows.Devices.Input.PointerDeviceUsage name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Devices.Input.KeyboardCapabilities activatable python_type
     py KeyboardCapabilities
@@ -326,52 +432,100 @@ class Windows.Devices.Input.TouchCapabilities activatable python_type
             out int32 return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.MouseDevice,Windows.Devices.Input.MouseEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[MouseDevice, MouseEventArgs]
     guid 5d72e594-28e4-5895-a34b-ea910f70fdbb
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.MouseDevice;{88edf458-f2c8-49f4-be1f-c256b388bc11});rc(Windows.Devices.Input.MouseEventArgs;{f625aa5d-2354-4cc7-9230-96941c969fde}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Input.MouseDevice
     argument Windows.Devices.Input.MouseEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Input.MouseDevice name=sender
+            in class type=Windows.Devices.Input.MouseEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[PenButtonListener, Object]
     guid 0a0ee5ed-041b-5569-b4a4-a1e58f1343a2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenButtonListener;{8245c376-1ee3-53f7-b1f7-8334a16f2815});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Input.PenButtonListener
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Input.PenButtonListener name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonClickedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PenButtonListener, PenTailButtonClickedEventArgs]
     guid 2eda7109-f1c9-5f26-a054-3d25062cc0de
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenButtonListener;{8245c376-1ee3-53f7-b1f7-8334a16f2815});rc(Windows.Devices.Input.PenTailButtonClickedEventArgs;{5d2fb7b6-6ad3-5d3e-ab29-05ea2410e390}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Input.PenButtonListener
     argument Windows.Devices.Input.PenTailButtonClickedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Input.PenButtonListener name=sender
+            in class type=Windows.Devices.Input.PenTailButtonClickedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PenButtonListener, PenTailButtonDoubleClickedEventArgs]
     guid e6e58d94-6f7b-593f-81f0-033150b4432c
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenButtonListener;{8245c376-1ee3-53f7-b1f7-8334a16f2815});rc(Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs;{846321a2-618a-5478-b04c-b358231da4a7}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Input.PenButtonListener
     argument Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Input.PenButtonListener name=sender
+            in class type=Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonLongPressedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PenButtonListener, PenTailButtonLongPressedEventArgs]
     guid ca6dab1f-20d6-52b0-94ce-6dcc75a1a984
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenButtonListener;{8245c376-1ee3-53f7-b1f7-8334a16f2815});rc(Windows.Devices.Input.PenTailButtonLongPressedEventArgs;{f37c606e-c60a-5f42-b818-a53112406c13}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Input.PenButtonListener
     argument Windows.Devices.Input.PenTailButtonLongPressedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Input.PenButtonListener name=sender
+            in class type=Windows.Devices.Input.PenTailButtonLongPressedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenDockListener,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[PenDockListener, Object]
     guid 7ceae82f-499a-5b31-a1d8-3b11c53c7871
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenDockListener;{759f4d90-1dc0-55cb-ad18-b9101456f592});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Input.PenDockListener
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Input.PenDockListener name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenDockListener,Windows.Devices.Input.PenDockedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PenDockListener, PenDockedEventArgs]
     guid 19786a6c-8e23-5de7-a773-e711a5a068c5
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenDockListener;{759f4d90-1dc0-55cb-ad18-b9101456f592});rc(Windows.Devices.Input.PenDockedEventArgs;{fd4277c6-ca63-5d4e-9ed3-a28a54521c8c}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Input.PenDockListener
     argument Windows.Devices.Input.PenDockedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Input.PenDockListener name=sender
+            in class type=Windows.Devices.Input.PenDockedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenDockListener,Windows.Devices.Input.PenUndockedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PenDockListener, PenUndockedEventArgs]
     guid 51dba508-3194-5c91-a2e7-f94637e75a13
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Input.PenDockListener;{759f4d90-1dc0-55cb-ad18-b9101456f592});rc(Windows.Devices.Input.PenUndockedEventArgs;{ccd09150-261b-59e6-a5d4-c1964cd03feb}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Input.PenDockListener
     argument Windows.Devices.Input.PenUndockedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Input.PenDockListener name=sender
+            in class type=Windows.Devices.Input.PenUndockedEventArgs name=args
 
 class System.Object external
     py winrt.system.Object
@@ -381,3 +535,19 @@ class Windows.Devices.Haptics.SimpleHapticsController external
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

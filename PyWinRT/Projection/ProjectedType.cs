@@ -448,7 +448,11 @@ class ProjectedType
         return resolved;
     }
 
-    private static TypeReference SubstituteGenericArgs(
+    /// <summary>
+    /// Replaces every generic parameter in <paramref name="type"/> that
+    /// <paramref name="map"/> names with the type argument it stands for.
+    /// </summary>
+    public static TypeReference SubstituteGenericArgs(
         TypeReference type,
         IReadOnlyDictionary<GenericParameter, TypeReference> map
     )

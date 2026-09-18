@@ -131,22 +131,40 @@ class Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOp
             in boolean name=value
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[NotesWindowManagerPreview, Object]
     guid 6f2755fb-6c33-543c-9ab4-de486bc7bfe2
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview;{dc2ac23e-4850-4f13-9cc7-ff487efdfcde});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[NotesWindowManagerPreview, NotePlacementChangedPreviewEventArgs]
     guid a28af2c7-4012-5999-a322-5236b30d995f
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview;{dc2ac23e-4850-4f13-9cc7-ff487efdfcde});rc(Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs;{491d57b7-f780-4e7f-a939-9a4caf965214}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview
     argument Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview name=sender
+            in class type=Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[NotesWindowManagerPreview, NoteVisibilityChangedPreviewEventArgs]
     guid 16d825c8-5271-51c8-a00f-0cfb1b029ab6
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview;{dc2ac23e-4850-4f13-9cc7-ff487efdfcde});rc(Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs;{0e34649e-3815-4ff6-83b3-a14d17120e24}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview
     argument Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview name=sender
+            in class type=Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs name=args
 
 class System.Object external
     py winrt.system.Object
@@ -157,6 +175,10 @@ interface Windows.Foundation.IAsyncAction external
 
 struct Windows.Foundation.Size external
     py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 class Windows.Graphics.Imaging.SoftwareBitmap external
     py winrt.windows.graphics.imaging.SoftwareBitmap

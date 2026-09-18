@@ -2,6 +2,39 @@ format 4.0
 generator 0.0.0
 namespace Windows.Media.FaceAnalysis
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVector[DetectedFace]]
+    guid b0a53153-2015-58b3-9dd0-bdf291b856b2
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.FaceAnalysis.DetectedFace;{8200d454-66bc-34df-9410-e89400195414})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.FaceAnalysis.FaceDetector> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[FaceDetector]
+    guid 3224aec6-e785-5066-976f-79dd081b75a9
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.FaceAnalysis.FaceDetector;{16b672dc-fe6f-3117-8d95-c3f04d51630c}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.FaceAnalysis.FaceDetector
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceDetector> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.FaceAnalysis.FaceTracker> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[FaceTracker]
+    guid 57d5163d-9e80-59d2-9366-d2b5248b2724
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.FaceAnalysis.FaceTracker;{6ba67d8c-a841-4420-93e6-2420a1884fcf}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.FaceAnalysis.FaceTracker
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceTracker> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Media.FaceAnalysis.DetectedFace python_type
     py DetectedFace
     signature rc(Windows.Media.FaceAnalysis.DetectedFace;{8200d454-66bc-34df-9410-e89400195414})
@@ -83,20 +116,92 @@ class Windows.Media.FaceAnalysis.FaceTracker python_type
             in class type=Windows.Media.VideoFrame name=videoFrame
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVector[DetectedFace]]
     guid 37f1d7dc-a1a4-5a94-b33b-74205a65a1ed
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.FaceAnalysis.DetectedFace;{8200d454-66bc-34df-9410-e89400195414})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceDetector> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceDetector> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[FaceDetector]
     guid c0141cd2-7a65-514c-bfc4-b49e991f03eb
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.FaceAnalysis.FaceDetector;{16b672dc-fe6f-3117-8d95-c3f04d51630c}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.FaceAnalysis.FaceDetector
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceDetector> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.FaceAnalysis.FaceDetector> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceDetector> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.FaceAnalysis.FaceDetector> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceDetector> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.FaceAnalysis.FaceDetector return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceTracker> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceTracker> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[FaceTracker]
     guid 7f32c680-e37e-539a-8993-2abbea71afda
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.FaceAnalysis.FaceTracker;{6ba67d8c-a841-4420-93e6-2420a1884fcf}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.FaceAnalysis.FaceTracker
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceTracker> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.FaceAnalysis.FaceTracker> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceTracker> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.FaceAnalysis.FaceTracker> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.FaceAnalysis.FaceTracker> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.FaceAnalysis.FaceTracker return
 
 interface Windows.Media.FaceAnalysis.IDetectedFace
     guid 8200d454-66bc-34df-9410-e89400195414
@@ -113,15 +218,204 @@ interface Windows.Media.FaceAnalysis.IFaceTracker
 interface Windows.Media.FaceAnalysis.IFaceTrackerStatics
     guid e9629198-1801-3fa5-932e-31d767af6c4d
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Imaging.BitmapPixelFormat> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[BitmapPixelFormat]
+    guid e924d9ed-a13e-5bdb-9ed8-65a1474dc274
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Graphics.Imaging.BitmapPixelFormat;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.Imaging.BitmapPixelFormat
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Imaging.BitmapPixelFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.BitmapPixelFormat> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.FaceAnalysis.DetectedFace> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DetectedFace]
+    guid 25347323-3556-5cbb-9855-2b5856437f4d
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.FaceAnalysis.DetectedFace;{8200d454-66bc-34df-9410-e89400195414}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.FaceAnalysis.DetectedFace
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.FaceAnalysis.DetectedFace> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.FaceAnalysis.DetectedFace> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.BitmapPixelFormat> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[BitmapPixelFormat]
+    guid 7fc2e293-1084-5d45-b8b8-93e10692bcc8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Graphics.Imaging.BitmapPixelFormat;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.Imaging.BitmapPixelFormat
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.BitmapPixelFormat> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.BitmapPixelFormat> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.BitmapPixelFormat> shape=117 reverse=101
+            fill_array enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.BitmapPixelFormat> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.FaceAnalysis.DetectedFace> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DetectedFace]
+    guid a0cf090e-0340-531f-898b-c21eafb9f4ae
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.FaceAnalysis.DetectedFace;{8200d454-66bc-34df-9410-e89400195414}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.FaceAnalysis.DetectedFace
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.FaceAnalysis.DetectedFace> shape=4 reverse=22 role=current
+            out class type=Windows.Media.FaceAnalysis.DetectedFace return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.FaceAnalysis.DetectedFace> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.FaceAnalysis.DetectedFace> shape=117 reverse=101
+            fill_array class type=Windows.Media.FaceAnalysis.DetectedFace name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.FaceAnalysis.DetectedFace> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[DetectedFace]
     guid 0dfd8e09-73f2-505c-a796-a8f031b4ede0
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.FaceAnalysis.DetectedFace;{8200d454-66bc-34df-9410-e89400195414}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.FaceAnalysis.DetectedFace>
     argument Windows.Media.FaceAnalysis.DetectedFace
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=4 reverse=173
+            in class type=Windows.Media.FaceAnalysis.DetectedFace name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.FaceAnalysis.DetectedFace> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.FaceAnalysis.DetectedFace> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.FaceAnalysis.DetectedFace return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.FaceAnalysis.DetectedFace name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=117 reverse=101
+            in class type=Windows.Media.FaceAnalysis.DetectedFace name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Media.FaceAnalysis.DetectedFace name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=51 reverse=211
+            pass_array class type=Windows.Media.FaceAnalysis.DetectedFace name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Media.FaceAnalysis.DetectedFace name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[BitmapPixelFormat]
     guid 76ac4bc2-c19c-559c-b287-1694c0dc3a0d
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Graphics.Imaging.BitmapPixelFormat;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.Imaging.BitmapPixelFormat>
     argument Windows.Graphics.Imaging.BitmapPixelFormat
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Imaging.BitmapPixelFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.BitmapPixelFormat> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> shape=117 reverse=66
+            in enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[DetectedFace]
+    guid 39ef4411-0618-5b8d-8ea2-81c637f823f8
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.FaceAnalysis.DetectedFace;{8200d454-66bc-34df-9410-e89400195414}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.FaceAnalysis.DetectedFace>
+    argument Windows.Media.FaceAnalysis.DetectedFace
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.FaceAnalysis.DetectedFace> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.FaceAnalysis.DetectedFace> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.FaceAnalysis.DetectedFace return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.FaceAnalysis.DetectedFace name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> shape=117 reverse=66
+            in class type=Windows.Media.FaceAnalysis.DetectedFace name=value
+            out uint32 name=index
+            out boolean return
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Graphics.Imaging.BitmapBounds external
     py winrt.windows.graphics.imaging.BitmapBounds

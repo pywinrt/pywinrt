@@ -43,7 +43,7 @@ class Windows.System.RemoteDesktop.Input.RemoteTextConnection python_type closea
         put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection shape=4 reverse=43
             in boolean name=value
     method close
-        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method register_thread
         method RegisterThread slot=8 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection shape=4 reverse=62
             in uint32 name=threadId

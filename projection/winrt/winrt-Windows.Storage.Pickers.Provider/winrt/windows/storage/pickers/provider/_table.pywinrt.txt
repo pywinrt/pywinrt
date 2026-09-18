@@ -112,6 +112,36 @@ interface Windows.Storage.Pickers.Provider.IFileRemovedEventArgs
 interface Windows.Storage.Pickers.Provider.IFileSavePickerUI
     guid 9656c1e7-3e56-43cc-8a39-33c73d9d542b
 
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.Storage.Pickers.Provider.IPickerClosingDeferral
     guid 7af7f71e-1a67-4a31-ae80-e907708a619b
 
@@ -130,10 +160,33 @@ interface Windows.Storage.Pickers.Provider.ITargetFileRequestDeferral
 interface Windows.Storage.Pickers.Provider.ITargetFileRequestedEventArgs
     guid b163dbc1-1b51-4c89-a591-0fd40b3c57c9
 
-interface Windows.Foundation.Collections.IVectorView<System.String> concrete
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
     guid 2f13c006-a03a-5f69-b090-75a43e33423e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+            in string name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Storage.Pickers.Provider.PickerClosingDeferral python_type
     py PickerClosingDeferral
@@ -203,34 +256,74 @@ class Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs python_type
             out class type=Windows.Storage.Pickers.Provider.TargetFileRequest return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileOpenPickerUI,Windows.Storage.Pickers.Provider.FileRemovedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[FileOpenPickerUI, FileRemovedEventArgs]
     guid f1fb2939-695b-5f56-841a-a52a7d148572
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Storage.Pickers.Provider.FileOpenPickerUI;{dda45a10-f9d4-40c4-8af5-c5b6b5a61d1d});rc(Windows.Storage.Pickers.Provider.FileRemovedEventArgs;{13043da7-7fca-4c2b-9eca-6890f9f00185}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Storage.Pickers.Provider.FileOpenPickerUI
     argument Windows.Storage.Pickers.Provider.FileRemovedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Storage.Pickers.Provider.FileOpenPickerUI name=sender
+            in class type=Windows.Storage.Pickers.Provider.FileRemovedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileOpenPickerUI,Windows.Storage.Pickers.Provider.PickerClosingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[FileOpenPickerUI, PickerClosingEventArgs]
     guid 2b06bdac-983b-5552-b5c9-b0990a2db3a1
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Storage.Pickers.Provider.FileOpenPickerUI;{dda45a10-f9d4-40c4-8af5-c5b6b5a61d1d});rc(Windows.Storage.Pickers.Provider.PickerClosingEventArgs;{7e59f224-b332-4f12-8b9f-a8c2f06b32cd}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Storage.Pickers.Provider.FileOpenPickerUI
     argument Windows.Storage.Pickers.Provider.PickerClosingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Storage.Pickers.Provider.FileOpenPickerUI name=sender
+            in class type=Windows.Storage.Pickers.Provider.PickerClosingEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileSavePickerUI,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[FileSavePickerUI, Object]
     guid f1e6a632-f97f-54d9-9e1b-a714edc3ff06
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Storage.Pickers.Provider.FileSavePickerUI;{9656c1e7-3e56-43cc-8a39-33c73d9d542b});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Storage.Pickers.Provider.FileSavePickerUI
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Storage.Pickers.Provider.FileSavePickerUI name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileSavePickerUI,Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[FileSavePickerUI, TargetFileRequestedEventArgs]
     guid d3e1f8c7-45c5-5249-b336-a111bfaa985b
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Storage.Pickers.Provider.FileSavePickerUI;{9656c1e7-3e56-43cc-8a39-33c73d9d542b});rc(Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs;{b163dbc1-1b51-4c89-a591-0fd40b3c57c9}))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Storage.Pickers.Provider.FileSavePickerUI
     argument Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Storage.Pickers.Provider.FileSavePickerUI name=sender
+            in class type=Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs name=args
 
 class System.Object external
     py winrt.system.Object
 
 class System.String external
     py winrt.system.String
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Storage.IStorageFile external
     py winrt.windows.storage._IStorageFile

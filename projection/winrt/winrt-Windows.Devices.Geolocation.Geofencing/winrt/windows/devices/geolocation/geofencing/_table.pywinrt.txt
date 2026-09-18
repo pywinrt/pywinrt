@@ -136,25 +136,189 @@ interface Windows.Devices.Geolocation.Geofencing.IGeofenceMonitorStatics
 interface Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport
     guid 9a243c18-2464-4c89-be05-b3ffff5babc5
 
-interface Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geofencing.Geofence> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Geofence]
+    guid ce697733-595c-51c0-ad5f-324af5cdf2dd
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Geolocation.Geofencing.Geofence;{9c090823-edb8-47e0-8245-5bf61d321f2d}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Geolocation.Geofencing.Geofence
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geofencing.Geofence> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.Geofence> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[GeofenceStateChangeReport]
+    guid 76f50b4e-7aa7-565b-aada-b0c1cc144ed0
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport;{9a243c18-2464-4c89-be05-b3ffff5babc5}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.Geofence> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Geofence]
+    guid e7a9e144-202d-5708-a9bd-e3dc0e14df46
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Geolocation.Geofencing.Geofence;{9c090823-edb8-47e0-8245-5bf61d321f2d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Geolocation.Geofencing.Geofence
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.Geofence> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Geolocation.Geofencing.Geofence return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.Geofence> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.Geofence> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Geolocation.Geofencing.Geofence name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.Geofence> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[GeofenceStateChangeReport]
+    guid eaff2de4-6650-544a-b7ac-6d5b819d4698
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport;{9a243c18-2464-4c89-be05-b3ffff5babc5}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> shape=117 reverse=101
+            fill_array class type=Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Geofence]
     guid 096dc936-5f66-5c6e-95ce-ef5541fbf4c4
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Devices.Geolocation.Geofencing.Geofence;{9c090823-edb8-47e0-8245-5bf61d321f2d}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geofencing.Geofence>
     argument Windows.Devices.Geolocation.Geofencing.Geofence
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> shape=4 reverse=173
+            in class type=Windows.Devices.Geolocation.Geofencing.Geofence name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geofencing.Geofence> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.Geofence> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Geolocation.Geofencing.Geofence return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Geolocation.Geofencing.Geofence name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.Geofence> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> shape=117 reverse=101
+            in class type=Windows.Devices.Geolocation.Geofencing.Geofence name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Devices.Geolocation.Geofencing.Geofence name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> shape=51 reverse=211
+            pass_array class type=Windows.Devices.Geolocation.Geofencing.Geofence name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Devices.Geolocation.Geofencing.Geofence name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.Geofence> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Geofence]
+    guid d8039aca-1a45-5d13-8cfd-4900c22b8ef1
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Geolocation.Geofencing.Geofence;{9c090823-edb8-47e0-8245-5bf61d321f2d}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geofencing.Geofence>
+    argument Windows.Devices.Geolocation.Geofencing.Geofence
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.Geofence> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geofencing.Geofence> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.Geofence> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.Geofence> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Geolocation.Geofencing.Geofence return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.Geofence> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Geolocation.Geofencing.Geofence name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.Geofence> shape=117 reverse=66
+            in class type=Windows.Devices.Geolocation.Geofencing.Geofence name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[GeofenceStateChangeReport]
     guid ea91593d-ecf4-5041-86f2-837a282c4d94
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport;{9a243c18-2464-4c89-be05-b3ffff5babc5}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport>
     argument Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> shape=117 reverse=66
+            in class type=Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport name=value
+            out uint32 name=index
+            out boolean return
 
 enum Windows.Devices.Geolocation.Geofencing.MonitoredGeofenceStates python_type
     py MonitoredGeofenceStates
     signature enum(Windows.Devices.Geolocation.Geofencing.MonitoredGeofenceStates;u4)
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Geolocation.Geofencing.GeofenceMonitor,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[GeofenceMonitor, Object]
     guid ecc5af2c-e47a-59ce-86be-9c3066fe26f7
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Devices.Geolocation.Geofencing.GeofenceMonitor;{4c0f5f78-1c1f-4621-bbbd-833b92247226});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Devices.Geolocation.Geofencing.GeofenceMonitor
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Devices.Geolocation.Geofencing.GeofenceMonitor name=sender
+            in object name=args
 
 class System.Object external
     py winrt.system.Object
@@ -165,3 +329,23 @@ class Windows.Devices.Geolocation.Geoposition external
 interface Windows.Devices.Geolocation.IGeoshape external
     py winrt.windows.devices.geolocation._IGeoshape
     guid c99ca2af-c729-43c1-8fab-d6dec914df7e
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

@@ -2,31 +2,344 @@ format 4.0
 generator 0.0.0
 namespace Windows.Perception.Spatial.Surfaces
 
-interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> concrete
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SpatialPerceptionAccessStatus]
+    guid 6ced54c8-7689-525a-80e1-956a9d85cd83
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Perception.Spatial.SpatialPerceptionAccessStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Perception.Spatial.SpatialPerceptionAccessStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[SpatialSurfaceMesh]
+    guid 4680f7f6-44c5-5fc6-8d51-d6962915fa23
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh;{108f57d9-df0d-3950-a0fd-f972c77c27b4}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SpatialPerceptionAccessStatus]
     guid b425d126-1069-563f-a863-44a30a8f071d
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Perception.Spatial.SpatialPerceptionAccessStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Perception.Spatial.SpatialPerceptionAccessStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Perception.Spatial.SpatialPerceptionAccessStatus return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[SpatialSurfaceMesh]
     guid f5938fad-a8a1-5f7e-9440-bdb781ad26b6
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh;{108f57d9-df0d-3950-a0fd-f972c77c27b4}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> shape=4 reverse=62 role=get_results
+            out class type=Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Perception.Spatial.SpatialBoundingVolume> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[Guid, SpatialSurfaceInfo]]
+    guid 868757d1-be21-51d9-8dee-a958b9deec71
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo;{f8e9ebe7-39b7-3962-bb03-57f56e1fb0a1})))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.DirectX.DirectXPixelFormat> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[DirectXPixelFormat]
+    guid 3908f2c6-1aee-5129-b9a6-2a6e01d9507e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Graphics.DirectX.DirectXPixelFormat;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.DirectX.DirectXPixelFormat
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Perception.Spatial.SpatialBoundingVolume> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SpatialBoundingVolume]
     guid 89e8f1ee-3a2a-5b69-a786-cddcf7456a3a
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Perception.Spatial.SpatialBoundingVolume;{fb2065da-68c3-33df-b7af-4c787207999c}))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Perception.Spatial.SpatialBoundingVolume
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Perception.Spatial.SpatialBoundingVolume> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Perception.Spatial.SpatialBoundingVolume> return
 
-interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> concrete
-    guid eaa722b9-2859-593d-bb66-0c538e415e71
-    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo;{f8e9ebe7-39b7-3962-bb03-57f56e1fb0a1}))
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[Guid, SpatialSurfaceInfo]]
+    guid 6d328390-f279-5f39-9682-bba0cd81489b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo;{f8e9ebe7-39b7-3962-bb03-57f56e1fb0a1})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[DirectXPixelFormat]
+    guid ea016190-ac80-5840-8f58-ff434c7b2907
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Graphics.DirectX.DirectXPixelFormat;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.DirectX.DirectXPixelFormat
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> shape=117 reverse=101
+            fill_array enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Perception.Spatial.SpatialBoundingVolume> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SpatialBoundingVolume]
+    guid eb8385c5-0775-5415-8f76-327e6e388ac5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Perception.Spatial.SpatialBoundingVolume;{fb2065da-68c3-33df-b7af-4c787207999c}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Perception.Spatial.SpatialBoundingVolume
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Perception.Spatial.SpatialBoundingVolume> shape=4 reverse=22 role=current
+            out class type=Windows.Perception.Spatial.SpatialBoundingVolume return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Perception.Spatial.SpatialBoundingVolume> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Perception.Spatial.SpatialBoundingVolume> shape=117 reverse=101
+            fill_array class type=Windows.Perception.Spatial.SpatialBoundingVolume name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Perception.Spatial.SpatialBoundingVolume> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[Guid, SpatialSurfaceInfo]
+    guid a6bdf94a-2697-5ff2-89dc-a17cecdcda6c
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};g16;rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo;{f8e9ebe7-39b7-3962-bb03-57f56e1fb0a1}))
+    base Windows.Foundation.Collections.IKeyValuePair
     argument System.Guid
     argument Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> shape=4 reverse=22
+            out guid return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> shape=4 reverse=43
+            out class type=Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo return
+
+interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[Guid, SpatialSurfaceInfo]
+    guid eaa722b9-2859-593d-bb66-0c538e415e71
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};g16;rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo;{f8e9ebe7-39b7-3962-bb03-57f56e1fb0a1}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>>
+    argument System.Guid
+    argument Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> shape=94 reverse=87 role=has_key
+            in guid name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> shape=94 reverse=35 role=lookup
+            in guid name=key
+            out class type=Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> name=second
 
 interface Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingOrientedBox> concrete
+    py winrt.windows.foundation._IReference[SpatialBoundingOrientedBox]
     guid 09f88309-9f81-5207-bdb2-abef926db18f
     signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Perception.Spatial.SpatialBoundingOrientedBox;struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);struct(Windows.Foundation.Numerics.Vector3;f4;f4;f4);struct(Windows.Foundation.Numerics.Quaternion;f4;f4;f4;f4)))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
     argument Windows.Perception.Spatial.SpatialBoundingOrientedBox
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialBoundingOrientedBox> shape=4 reverse=22 role=value
+            out struct type=Windows.Perception.Spatial.SpatialBoundingOrientedBox return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 interface Windows.Perception.Spatial.Surfaces.ISpatialSurfaceInfo
     guid f8e9ebe7-39b7-3962-bb03-57f56e1fb0a1
@@ -52,10 +365,33 @@ interface Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics
 interface Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics2
     guid 0f534261-c55d-4e6b-a895-a19de69a42e3
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[DirectXPixelFormat]
     guid 1edda1c2-0f6e-516c-80b8-7687dcd1280e
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Graphics.DirectX.DirectXPixelFormat;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.DirectX.DirectXPixelFormat>
     argument Windows.Graphics.DirectX.DirectXPixelFormat
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=117 reverse=66
+            in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo python_type
     py SpatialSurfaceInfo
@@ -195,16 +531,81 @@ class Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver activatable pyt
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Perception.Spatial.SpatialBoundingVolume> name=bounds
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[SpatialSurfaceObserver, Object]
     guid 8b31274a-7693-52be-9014-b0f5f65a3539
     signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver;{10b69819-ddca-3483-ac3a-748fe8c86df5});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
     argument Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver
     argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver name=sender
+            in object name=args
 
 class System.Guid external
     py winrt.system.Guid
 
 class System.Object external
     py winrt.system.Object
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 struct Windows.Foundation.Numerics.Vector3 external
     py winrt.windows.foundation.numerics.Vector3

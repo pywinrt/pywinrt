@@ -2,6 +2,85 @@ format 4.0
 generator 0.0.0
 namespace Windows.Media.Editing
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[ImageStream]]
+    guid 6683d49c-9fd5-5b08-899f-e2d7dc5cf9c4
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Imaging.ImageStream;{cc254827-4b3d-438f-9232-10c76bc7e038})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Imaging.ImageStream> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ImageStream]
+    guid 29bb8288-4462-516e-a675-8c9235c42994
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Graphics.Imaging.ImageStream;{cc254827-4b3d-438f-9232-10c76bc7e038}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Graphics.Imaging.ImageStream
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.ImageStream> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Editing.BackgroundAudioTrack> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[BackgroundAudioTrack]
+    guid b8830bc7-188b-5c25-a3bb-959052bcb740
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Editing.BackgroundAudioTrack;{4b91b3bd-9e21-4266-a9c2-67dd011a2357}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Editing.BackgroundAudioTrack
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.BackgroundAudioTrack> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Editing.MediaClip> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MediaClip]
+    guid 60cde3bc-119f-50a8-9ccb-9ea57ea96bfd
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Editing.MediaClip;{53f25366-5fba-3ea4-8693-24761811140a}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Editing.MediaClip
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaClip> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Editing.MediaComposition> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[MediaComposition]
+    guid edd253f8-4ebd-56e5-9592-3c09375ebdc4
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Media.Editing.MediaComposition;{2e06e605-dc71-41d6-b837-2d2bc14a2947}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Media.Editing.MediaComposition
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaComposition> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[TranscodeFailureReason, Double]
+    guid 009c6245-0e59-53b0-9fd2-d250e45a00a3
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};enum(Windows.Media.Transcoding.TranscodeFailureReason;i4);f8)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Media.Transcoding.TranscodeFailureReason
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=49 reverse=2
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> name=asyncInfo
+            in double name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[TranscodeFailureReason, Double]
+    guid 080f1890-4fca-5165-a989-4b07da8e0b53
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};enum(Windows.Media.Transcoding.TranscodeFailureReason;i4);f8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Media.Transcoding.TranscodeFailureReason
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 class Windows.Media.Editing.BackgroundAudioTrack python_type
     py BackgroundAudioTrack
     signature rc(Windows.Media.Editing.BackgroundAudioTrack;{4b91b3bd-9e21-4266-a9c2-67dd011a2357})
@@ -64,36 +143,185 @@ class Windows.Media.Editing.EmbeddedAudioTrack python_type
         method GetAudioEncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IEmbeddedAudioTrack shape=4 reverse=22
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[ImageStream]]
     guid a58d867e-beef-5f17-b7cf-e4c87be22ee4
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Imaging.ImageStream;{cc254827-4b3d-438f-9232-10c76bc7e038})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream> return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.ImageStream> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.ImageStream> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ImageStream]
     guid 684165be-0011-56d6-bebf-430016d51b7a
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Graphics.Imaging.ImageStream;{cc254827-4b3d-438f-9232-10c76bc7e038}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Graphics.Imaging.ImageStream
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.ImageStream> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Imaging.ImageStream> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.ImageStream> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Imaging.ImageStream> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.ImageStream> shape=4 reverse=62 role=get_results
+            out class type=Windows.Graphics.Imaging.ImageStream return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Editing.BackgroundAudioTrack> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Editing.BackgroundAudioTrack> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[BackgroundAudioTrack]
     guid 493dc898-6076-55f5-ab84-ccf973ac0397
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Editing.BackgroundAudioTrack;{4b91b3bd-9e21-4266-a9c2-67dd011a2357}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Editing.BackgroundAudioTrack
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Editing.BackgroundAudioTrack> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Editing.BackgroundAudioTrack> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Editing.BackgroundAudioTrack return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaClip> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaClip> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MediaClip]
     guid b5e699dd-b6f1-51c0-b752-e02fa0068d79
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Editing.MediaClip;{53f25366-5fba-3ea4-8693-24761811140a}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Editing.MediaClip
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaClip> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Editing.MediaClip> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaClip> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Editing.MediaClip> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaClip> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Editing.MediaClip return
 
-interface Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaComposition> concrete
+interface Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaComposition> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[MediaComposition]
     guid e170e898-d11f-5054-ab13-1080a4807636
     signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Media.Editing.MediaComposition;{2e06e605-dc71-41d6-b837-2d2bc14a2947}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Editing.MediaComposition
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaComposition> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Editing.MediaComposition> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaComposition> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Editing.MediaComposition> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaComposition> shape=4 reverse=62 role=get_results
+            out class type=Windows.Media.Editing.MediaComposition return
 
-interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> concrete
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[TranscodeFailureReason, Double]
     guid 272eec20-4b64-5d53-a644-f9917b3d19d8
     signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};enum(Windows.Media.Transcoding.TranscodeFailureReason;i4);f8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
     argument Windows.Media.Transcoding.TranscodeFailureReason
     argument System.Double
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> shape=4 reverse=121 role=get_results
+            out enum32 type=Windows.Media.Transcoding.TranscodeFailureReason return
 
 interface Windows.Media.Editing.IBackgroundAudioTrack
     guid 4b91b3bd-9e21-4266-a9c2-67dd011a2357
@@ -104,16 +332,382 @@ interface Windows.Media.Editing.IBackgroundAudioTrackStatics
 interface Windows.Media.Editing.IEmbeddedAudioTrack
     guid 55ee5a7a-2d30-3fba-a190-4f1a6454f88f
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.TimeSpan> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.TimeSpan> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TimeSpan]
     guid e9f78726-829a-5f67-8d19-95ef154b7742
     signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Foundation.TimeSpan;i8))
+    base Windows.Foundation.Collections.IIterable
     argument Windows.Foundation.TimeSpan
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.TimeSpan> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> return
 
-interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Imaging.ImageStream> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ImageStream]
+    guid 034ea0c4-c20e-5c0c-ba31-64212f28e650
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Graphics.Imaging.ImageStream;{cc254827-4b3d-438f-9232-10c76bc7e038}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.Imaging.ImageStream
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Imaging.ImageStream> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.ImageStream> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Editing.BackgroundAudioTrack> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[BackgroundAudioTrack]
+    guid 3fc05ba2-30f6-5219-9047-1197ffae8dba
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Editing.BackgroundAudioTrack;{4b91b3bd-9e21-4266-a9c2-67dd011a2357}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Editing.BackgroundAudioTrack
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.BackgroundAudioTrack> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Editing.EmbeddedAudioTrack> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[EmbeddedAudioTrack]
+    guid 32fabed0-e1e6-578e-86e5-b4e6abeb22d6
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Editing.EmbeddedAudioTrack;{55ee5a7a-2d30-3fba-a190-4f1a6454f88f}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Editing.EmbeddedAudioTrack
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.EmbeddedAudioTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.EmbeddedAudioTrack> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaClip> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MediaClip]
+    guid ff2e9b5c-26d0-575d-a3eb-7d938bd16f17
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Editing.MediaClip;{53f25366-5fba-3ea4-8693-24761811140a}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Editing.MediaClip
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaClip> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaClip> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlay> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MediaOverlay]
+    guid efcda247-a1fb-51dc-a776-e3e06695fb36
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Editing.MediaOverlay;{a902ae5d-7869-4830-8ab1-94dc01c05fa4}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Editing.MediaOverlay
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlay> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlay> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlayLayer> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MediaOverlayLayer]
+    guid 7d2312d0-f3a2-5091-8a5e-41832e632c08
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Editing.MediaOverlayLayer;{a6d9ba57-eeda-46c6-bbe5-e398c84168ac}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Editing.MediaOverlayLayer
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlayLayer> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IAudioEffectDefinition]
+    guid 607a20bf-32b4-5b8e-a793-3024f8d3582a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{e4d7f974-7d80-4f73-9089-e31c9db9c294})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Effects.IAudioEffectDefinition
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IVideoEffectDefinition> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IVideoEffectDefinition]
+    guid eb567f6f-b014-513d-99cd-f16c226c3c41
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{39f38cf0-8d0f-4f3e-84fc-2d46a5297943})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Effects.IVideoEffectDefinition
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoEffectDefinition> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TimeSpan]
+    guid 67e9eadb-324b-5661-a405-ded8445b1eea
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Foundation.TimeSpan;i8))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.TimeSpan
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=4 reverse=22 role=current
+            out timespan return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=117 reverse=101
+            fill_array timespan name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.ImageStream> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ImageStream]
+    guid 4a10752d-6b1a-5fec-a59c-70389bf162a2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Graphics.Imaging.ImageStream;{cc254827-4b3d-438f-9232-10c76bc7e038}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.Imaging.ImageStream
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.ImageStream> shape=4 reverse=22 role=current
+            out class type=Windows.Graphics.Imaging.ImageStream return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.ImageStream> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.ImageStream> shape=117 reverse=101
+            fill_array class type=Windows.Graphics.Imaging.ImageStream name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.ImageStream> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Editing.BackgroundAudioTrack> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[BackgroundAudioTrack]
+    guid 18b0f692-8635-577a-9efa-cb904770d6e5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Editing.BackgroundAudioTrack;{4b91b3bd-9e21-4266-a9c2-67dd011a2357}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Editing.BackgroundAudioTrack
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Editing.BackgroundAudioTrack return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.BackgroundAudioTrack> shape=117 reverse=101
+            fill_array class type=Windows.Media.Editing.BackgroundAudioTrack name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Editing.EmbeddedAudioTrack> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[EmbeddedAudioTrack]
+    guid c9fa7f51-b52c-578e-99f9-012cd5641247
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Editing.EmbeddedAudioTrack;{55ee5a7a-2d30-3fba-a190-4f1a6454f88f}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Editing.EmbeddedAudioTrack
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.EmbeddedAudioTrack> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Editing.EmbeddedAudioTrack return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.EmbeddedAudioTrack> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.EmbeddedAudioTrack> shape=117 reverse=101
+            fill_array class type=Windows.Media.Editing.EmbeddedAudioTrack name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.EmbeddedAudioTrack> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaClip> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MediaClip]
+    guid 2dfd20b2-06d8-577d-ab06-771e0414fc00
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Editing.MediaClip;{53f25366-5fba-3ea4-8693-24761811140a}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Editing.MediaClip
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaClip> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Editing.MediaClip return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaClip> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaClip> shape=117 reverse=101
+            fill_array class type=Windows.Media.Editing.MediaClip name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaClip> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlay> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MediaOverlay]
+    guid 351f6f24-4a92-56d6-a187-faeae748e0c7
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Editing.MediaOverlay;{a902ae5d-7869-4830-8ab1-94dc01c05fa4}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Editing.MediaOverlay
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlay> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Editing.MediaOverlay return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlay> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlay> shape=117 reverse=101
+            fill_array class type=Windows.Media.Editing.MediaOverlay name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlay> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlayLayer> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MediaOverlayLayer]
+    guid ca401ed8-63d2-525a-80bb-e494900c4ce6
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Editing.MediaOverlayLayer;{a6d9ba57-eeda-46c6-bbe5-e398c84168ac}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Editing.MediaOverlayLayer
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Editing.MediaOverlayLayer return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlayLayer> shape=117 reverse=101
+            fill_array class type=Windows.Media.Editing.MediaOverlayLayer name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IAudioEffectDefinition]
+    guid ec0f39fc-6959-5423-9e1a-f7cb8e845ca1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{e4d7f974-7d80-4f73-9089-e31c9db9c294})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Effects.IAudioEffectDefinition
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=22 role=current
+            out interface type=Windows.Media.Effects.IAudioEffectDefinition return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=101
+            fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoEffectDefinition> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IVideoEffectDefinition]
+    guid 9d82379d-4958-558e-a155-3a809bb16c04
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{39f38cf0-8d0f-4f3e-84fc-2d46a5297943})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Effects.IVideoEffectDefinition
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=22 role=current
+            out interface type=Windows.Media.Effects.IVideoEffectDefinition return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoEffectDefinition> shape=117 reverse=101
+            fill_array interface type=Windows.Media.Effects.IVideoEffectDefinition name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+            out string return
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, String]
     guid f6d1f700-49c2-52ae-8154-826f9908773c
     signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     argument System.String
     argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=117 reverse=125 role=insert
+            in string name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=141 role=remove
+            in string name=key
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, String]
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    argument System.String
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
 interface Windows.Media.Editing.IMediaClip
     guid 53f25366-5fba-3ea4-8693-24761811140a
@@ -145,45 +739,541 @@ interface Windows.Media.Editing.IMediaOverlayLayer
 interface Windows.Media.Editing.IMediaOverlayLayerFactory
     guid 947cb473-a39e-4362-abbf-9f8b5070a062
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[BackgroundAudioTrack]
     guid 56d62145-6978-5eba-83c9-fc4ad6d443bf
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Editing.BackgroundAudioTrack;{4b91b3bd-9e21-4266-a9c2-67dd011a2357}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Editing.BackgroundAudioTrack>
     argument Windows.Media.Editing.BackgroundAudioTrack
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=173
+            in class type=Windows.Media.Editing.BackgroundAudioTrack name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.BackgroundAudioTrack> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Editing.BackgroundAudioTrack return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Editing.BackgroundAudioTrack name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.BackgroundAudioTrack> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=117 reverse=101
+            in class type=Windows.Media.Editing.BackgroundAudioTrack name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Media.Editing.BackgroundAudioTrack name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=51 reverse=211
+            pass_array class type=Windows.Media.Editing.BackgroundAudioTrack name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Media.Editing.BackgroundAudioTrack name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[MediaClip]
     guid e805688e-3508-57f3-bf95-617f2d7a6f1a
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Editing.MediaClip;{53f25366-5fba-3ea4-8693-24761811140a}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaClip>
     argument Windows.Media.Editing.MediaClip
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=4 reverse=173
+            in class type=Windows.Media.Editing.MediaClip name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaClip> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaClip> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Editing.MediaClip return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Editing.MediaClip name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaClip> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=117 reverse=101
+            in class type=Windows.Media.Editing.MediaClip name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Media.Editing.MediaClip name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=51 reverse=211
+            pass_array class type=Windows.Media.Editing.MediaClip name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Media.Editing.MediaClip name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[MediaOverlay]
     guid 5b913ec8-ed52-5b2c-a710-52c6e7ab3cb2
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Editing.MediaOverlay;{a902ae5d-7869-4830-8ab1-94dc01c05fa4}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlay>
     argument Windows.Media.Editing.MediaOverlay
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=4 reverse=173
+            in class type=Windows.Media.Editing.MediaOverlay name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlay> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlay> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Editing.MediaOverlay return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Editing.MediaOverlay name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlay> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=117 reverse=101
+            in class type=Windows.Media.Editing.MediaOverlay name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Media.Editing.MediaOverlay name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=51 reverse=211
+            pass_array class type=Windows.Media.Editing.MediaOverlay name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Media.Editing.MediaOverlay name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[MediaOverlayLayer]
     guid 6564eb2c-2210-5dfc-a84c-266c4349c2c6
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Editing.MediaOverlayLayer;{a6d9ba57-eeda-46c6-bbe5-e398c84168ac}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlayLayer>
     argument Windows.Media.Editing.MediaOverlayLayer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=173
+            in class type=Windows.Media.Editing.MediaOverlayLayer name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlayLayer> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Editing.MediaOverlayLayer return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Editing.MediaOverlayLayer name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlayLayer> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=117 reverse=101
+            in class type=Windows.Media.Editing.MediaOverlayLayer name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Media.Editing.MediaOverlayLayer name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=51 reverse=211
+            pass_array class type=Windows.Media.Editing.MediaOverlayLayer name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Media.Editing.MediaOverlayLayer name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[IAudioEffectDefinition]
     guid 2828a982-d849-5fc9-84ce-f9a4b3b4d341
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{e4d7f974-7d80-4f73-9089-e31c9db9c294})
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition>
     argument Windows.Media.Effects.IAudioEffectDefinition
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=173
+            in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Media.Effects.IAudioEffectDefinition return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=101
+            in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=211
+            pass_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
 
-interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> concrete
+interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[IVideoEffectDefinition]
     guid 7ca161ed-e201-5615-aacc-25348564f0b3
     signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};{39f38cf0-8d0f-4f3e-84fc-2d46a5297943})
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IVideoEffectDefinition>
     argument Windows.Media.Effects.IVideoEffectDefinition
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=173
+            in interface type=Windows.Media.Effects.IVideoEffectDefinition name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=0 reverse=193
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoEffectDefinition> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Media.Effects.IVideoEffectDefinition return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=195 reverse=205
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Media.Effects.IVideoEffectDefinition name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVideoEffectDefinition> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=117 reverse=101
+            in interface type=Windows.Media.Effects.IVideoEffectDefinition name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in interface type=Windows.Media.Effects.IVideoEffectDefinition name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=0 reverse=185
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=51 reverse=211
+            pass_array interface type=Windows.Media.Effects.IVideoEffectDefinition name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in interface type=Windows.Media.Effects.IVideoEffectDefinition name=value
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ImageStream]
     guid ab10f3e5-2a3e-5f81-b5e8-8ddddc23cca2
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Graphics.Imaging.ImageStream;{cc254827-4b3d-438f-9232-10c76bc7e038}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.Imaging.ImageStream>
     argument Windows.Graphics.Imaging.ImageStream
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Imaging.ImageStream> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.ImageStream> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Graphics.Imaging.ImageStream return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Graphics.Imaging.ImageStream name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream> shape=117 reverse=66
+            in class type=Windows.Graphics.Imaging.ImageStream name=value
+            out uint32 name=index
+            out boolean return
 
-interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> concrete
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.BackgroundAudioTrack> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[BackgroundAudioTrack]
+    guid 7fe52e32-867c-52a3-b3b7-d4dd4d573794
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Editing.BackgroundAudioTrack;{4b91b3bd-9e21-4266-a9c2-67dd011a2357}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Editing.BackgroundAudioTrack>
+    argument Windows.Media.Editing.BackgroundAudioTrack
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.BackgroundAudioTrack> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.BackgroundAudioTrack> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Editing.BackgroundAudioTrack return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.BackgroundAudioTrack> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Editing.BackgroundAudioTrack name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.BackgroundAudioTrack> shape=117 reverse=66
+            in class type=Windows.Media.Editing.BackgroundAudioTrack name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[EmbeddedAudioTrack]
     guid 63d85bd5-4365-5e56-9e40-e7cd3051aebf
     signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Editing.EmbeddedAudioTrack;{55ee5a7a-2d30-3fba-a190-4f1a6454f88f}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Editing.EmbeddedAudioTrack>
     argument Windows.Media.Editing.EmbeddedAudioTrack
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.EmbeddedAudioTrack> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.EmbeddedAudioTrack> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Editing.EmbeddedAudioTrack return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Editing.EmbeddedAudioTrack name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> shape=117 reverse=66
+            in class type=Windows.Media.Editing.EmbeddedAudioTrack name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaClip> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MediaClip]
+    guid eabf18a6-f438-53b0-be3c-af21e67bc8c7
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Editing.MediaClip;{53f25366-5fba-3ea4-8693-24761811140a}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaClip>
+    argument Windows.Media.Editing.MediaClip
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaClip> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaClip> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaClip> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaClip> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Editing.MediaClip return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaClip> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Editing.MediaClip name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaClip> shape=117 reverse=66
+            in class type=Windows.Media.Editing.MediaClip name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlay> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MediaOverlay]
+    guid 6bba8a56-2f18-5a68-83cd-9aa9d7f8f757
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Editing.MediaOverlay;{a902ae5d-7869-4830-8ab1-94dc01c05fa4}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlay>
+    argument Windows.Media.Editing.MediaOverlay
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlay> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlay> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlay> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlay> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Editing.MediaOverlay return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlay> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Editing.MediaOverlay name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlay> shape=117 reverse=66
+            in class type=Windows.Media.Editing.MediaOverlay name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlayLayer> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MediaOverlayLayer]
+    guid 8bcc3ff4-6139-52c1-9669-53da5033185e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Editing.MediaOverlayLayer;{a6d9ba57-eeda-46c6-bbe5-e398c84168ac}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlayLayer>
+    argument Windows.Media.Editing.MediaOverlayLayer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlayLayer> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlayLayer> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Editing.MediaOverlayLayer return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlayLayer> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Editing.MediaOverlayLayer name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlayLayer> shape=117 reverse=66
+            in class type=Windows.Media.Editing.MediaOverlayLayer name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IAudioEffectDefinition]
+    guid de9e6a7f-d28e-5ef1-916a-efa880b489d1
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{e4d7f974-7d80-4f73-9089-e31c9db9c294})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition>
+    argument Windows.Media.Effects.IAudioEffectDefinition
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Media.Effects.IAudioEffectDefinition return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=66
+            in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVideoEffectDefinition> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IVideoEffectDefinition]
+    guid a44b4f8e-7ca3-53b1-b68b-098baf45c73e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{39f38cf0-8d0f-4f3e-84fc-2d46a5297943})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IVideoEffectDefinition>
+    argument Windows.Media.Effects.IVideoEffectDefinition
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoEffectDefinition> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVideoEffectDefinition> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Media.Effects.IVideoEffectDefinition return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVideoEffectDefinition> shape=195 reverse=102
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Media.Effects.IVideoEffectDefinition name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVideoEffectDefinition> shape=117 reverse=66
+            in interface type=Windows.Media.Effects.IVideoEffectDefinition name=value
+            out uint32 name=index
+            out boolean return
 
 class Windows.Media.Editing.MediaClip python_type
     py MediaClip
@@ -419,15 +1509,70 @@ class System.Double external
 class System.String external
     py winrt.system.String
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
     guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect
 
 struct Windows.Foundation.TimeSpan external
     py winrt.windows.foundation.TimeSpan
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
 
 interface Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface external
     py winrt.windows.graphics.directx.direct3d11._IDirect3DSurface
