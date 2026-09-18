@@ -20,3 +20,6 @@ BreakBeforeBinaryOperators: true
 BreakStringLiterals: false
 AlwaysBreakTemplateDeclarations: Yes
 SortIncludes: false
+# These expand to a declaration that already ends in a semicolon, so without
+# this the next member is folded onto the same line as the macro.
+StatementMacros: [PyObject_HEAD, PyObject_VAR_HEAD]
