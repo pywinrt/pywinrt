@@ -1,0 +1,629 @@
+// A Python object that implements WinRT interfaces.
+//
+// One COM object stands for the Python object and holds a tearoff per
+// interface it implements, each with a vtable of its own: the six entries
+// every WinRT interface starts with, and then one reverse trampoline per
+// method, chosen by the shape the generator recorded. The vtable belongs to
+// the interface's table entry rather than to any one object, the same way a
+// delegate's does.
+//
+// The reference between the two objects is one way. WinRT holds the Python
+// object and Python holds nothing back, because a Python object never sees
+// the COM object that stands for it - it is made when the object is passed to
+// WinRT and let go of when WinRT is done with it. That is what makes this the
+// simple half of the pair; compose.cpp has the other, where the two objects
+// refer to each other and the reference has to toggle.
+
+#include <Python.h>
+
+#define PYWINRT_RUNTIME_MODULE
+#include <pywinrt/base.h>
+
+#include "callbacks.h"
+#include "implements.h"
+#include "interp.h"
+#include "types.h"
+
+namespace py::interp
+{
+    namespace
+    {
+        struct implements_object;
+
+        /**
+         * One interface of the object, which is what a WinRT caller that
+         * asked for that interface holds.
+         */
+        struct tearoff final : shapes::reverse_target
+        {
+            shapes::com_head head;
+            /// Borrowed: the object owns its tearoffs and outlives them.
+            implements_object* owner;
+            type_entry* info;
+
+            int32_t invoke(uint16_t slot, void* args) noexcept override;
+        };
+
+        /**
+         * The WinRT object that stands for a Python object.
+         */
+        struct implements_object final : shapes::reverse_target
+        {
+            /// IInspectable, which is also what IUnknown and IAgileObject
+            /// answer with.
+            shapes::com_head head;
+            /// py::IPywinrtObject, which is how a value that comes back to
+            /// Python is recognised as having started there.
+            shapes::com_head py_head;
+            std::atomic<uint32_t> references{1};
+            PyObject* obj;
+            std::vector<std::unique_ptr<tearoff>> tearoffs;
+
+            int32_t invoke(uint16_t slot, void* args) noexcept override;
+        };
+
+        implements_object* object_of(void* self) noexcept
+        {
+            return static_cast<implements_object*>(
+                static_cast<shapes::com_head*>(self)->target);
+        }
+
+        uint32_t __stdcall object_add_ref(void* self) noexcept
+        {
+            return ++object_of(self)->references;
+        }
+
+        uint32_t __stdcall object_release(void* self) noexcept
+        {
+            auto* const owner = object_of(self);
+
+            auto const remaining = --owner->references;
+            if (remaining != 0)
+            {
+                return remaining;
+            }
+
+            {
+                // WinRT lets go of the object on whatever thread it happens
+                // to be on, and letting go of the Python object can run a
+                // finalizer.
+                auto gil = ensure_gil();
+                Py_CLEAR(owner->obj);
+            }
+
+            delete owner;
+
+            return 0;
+        }
+
+        int32_t __stdcall object_query_interface(
+            void* self, winrt::guid const& id, void** object) noexcept
+        {
+            auto* const owner = object_of(self);
+
+            if (id == winrt::guid_of<winrt::Windows::Foundation::IUnknown>()
+                || id == winrt::guid_of<winrt::Windows::Foundation::IInspectable>()
+                || id == winrt::guid_of<winrt::impl::IAgileObject>())
+            {
+                *object = &owner->head;
+                object_add_ref(self);
+
+                return 0;
+            }
+
+            if (id == winrt::guid_of<py::IPywinrtObject>())
+            {
+                *object = &owner->py_head;
+                object_add_ref(self);
+
+                return 0;
+            }
+
+            if (id == winrt::guid_of<winrt::impl::IMarshal>())
+            {
+                return winrt::impl::make_marshaler(
+                    reinterpret_cast<winrt::impl::unknown_abi*>(&owner->head), object);
+            }
+
+            for (auto const& iface : owner->tearoffs)
+            {
+                if (id == *static_cast<winrt::guid const*>(iface->info->guid))
+                {
+                    *object = &iface->head;
+                    object_add_ref(self);
+
+                    return 0;
+                }
+            }
+
+            *object = nullptr;
+
+            return winrt::impl::error_no_interface;
+        }
+
+        int32_t __stdcall object_get_iids(
+            void* self, uint32_t* count, winrt::guid** array) noexcept
+        {
+            auto* const owner = object_of(self);
+            auto const size = owner->tearoffs.size();
+
+            *count = 0;
+            *array = nullptr;
+
+            if (size == 0)
+            {
+                return 0;
+            }
+
+            auto* const iids
+                = static_cast<winrt::guid*>(CoTaskMemAlloc(size * sizeof(winrt::guid)));
+            if (!iids)
+            {
+                return winrt::impl::error_bad_alloc;
+            }
+
+            for (size_t i = 0; i < size; i++)
+            {
+                iids[i]
+                    = *static_cast<winrt::guid const*>(owner->tearoffs[i]->info->guid);
+            }
+
+            *count = static_cast<uint32_t>(size);
+            *array = iids;
+
+            return 0;
+        }
+
+        int32_t __stdcall object_get_runtime_class_name(
+            void* self, void** name) noexcept
+        {
+            auto* const owner = object_of(self);
+
+            // C++/WinRT answers with the name of the first interface for an
+            // object that is not a runtime class, and so does this. What a
+            // Python subclass of a composable class answers is the composable
+            // one's business.
+            auto const first = owner->tearoffs.empty()
+                                   ? "Windows.Foundation.IInspectable"
+                                   : owner->tearoffs.front()->info->winrt_name;
+
+            try
+            {
+                *name = winrt::detach_abi(winrt::to_hstring(first));
+            }
+            catch (...)
+            {
+                *name = nullptr;
+                return winrt::to_hresult();
+            }
+
+            return 0;
+        }
+
+        int32_t __stdcall object_get_trust_level(
+            void* /*self*/, int32_t* level) noexcept
+        {
+            *level = 0;
+
+            return 0;
+        }
+
+        int32_t __stdcall object_get_py_object(void* self, PyObject*& result) noexcept
+        {
+            auto gil = ensure_gil();
+
+            result = Py_NewRef(object_of(self)->obj);
+
+            return 0;
+        }
+
+        int32_t __stdcall object_get_composable_inner(
+            void* /*self*/,
+            winrt::Windows::Foundation::IInspectable& /*inner*/) noexcept
+        {
+            // Only a Python subclass of a composable class has an inner
+            // object; an object that merely implements interfaces has
+            // nothing behind it.
+            return winrt::impl::error_not_implemented;
+        }
+
+        /**
+         * IInspectable, which is what a Python object that implements
+         * interfaces is when nothing has asked for one of them yet.
+         */
+        shapes::vtable_entry const inspectable_vtable[]
+            = {reinterpret_cast<shapes::vtable_entry>(&object_query_interface),
+               reinterpret_cast<shapes::vtable_entry>(&object_add_ref),
+               reinterpret_cast<shapes::vtable_entry>(&object_release),
+               reinterpret_cast<shapes::vtable_entry>(&object_get_iids),
+               reinterpret_cast<shapes::vtable_entry>(&object_get_runtime_class_name),
+               reinterpret_cast<shapes::vtable_entry>(&object_get_trust_level)};
+
+        shapes::vtable_entry const pywinrt_object_vtable[]
+            = {reinterpret_cast<shapes::vtable_entry>(&object_query_interface),
+               reinterpret_cast<shapes::vtable_entry>(&object_add_ref),
+               reinterpret_cast<shapes::vtable_entry>(&object_release),
+               reinterpret_cast<shapes::vtable_entry>(&object_get_py_object),
+               reinterpret_cast<shapes::vtable_entry>(&object_get_composable_inner)};
+
+        // ----- the tearoffs ------------------------------------------------
+
+        tearoff* tearoff_of(void* self) noexcept
+        {
+            return static_cast<tearoff*>(static_cast<shapes::com_head*>(self)->target);
+        }
+
+        int32_t __stdcall tearoff_query_interface(
+            void* self, winrt::guid const& id, void** object) noexcept
+        {
+            return object_query_interface(&tearoff_of(self)->owner->head, id, object);
+        }
+
+        uint32_t __stdcall tearoff_add_ref(void* self) noexcept
+        {
+            return object_add_ref(&tearoff_of(self)->owner->head);
+        }
+
+        uint32_t __stdcall tearoff_release(void* self) noexcept
+        {
+            return object_release(&tearoff_of(self)->owner->head);
+        }
+
+        int32_t __stdcall tearoff_get_iids(
+            void* self, uint32_t* count, winrt::guid** array) noexcept
+        {
+            return object_get_iids(&tearoff_of(self)->owner->head, count, array);
+        }
+
+        int32_t __stdcall tearoff_get_runtime_class_name(
+            void* self, void** name) noexcept
+        {
+            return object_get_runtime_class_name(&tearoff_of(self)->owner->head, name);
+        }
+
+        int32_t __stdcall tearoff_get_trust_level(void* self, int32_t* level) noexcept
+        {
+            return object_get_trust_level(&tearoff_of(self)->owner->head, level);
+        }
+
+        int32_t tearoff::invoke(uint16_t slot, void* args) noexcept
+        {
+            auto const& entry = info->reverse->slots[slot];
+
+            if (!entry.member)
+            {
+                return winrt::impl::error_not_implemented;
+            }
+
+            auto gil = ensure_gil();
+
+            return call_python(
+                *entry.member, *entry.overload, owner->obj, entry.op, args);
+        }
+
+        int32_t implements_object::invoke(uint16_t /*slot*/, void* /*args*/) noexcept
+        {
+            // The object's own two vtables are IInspectable's and
+            // IPywinrtObject's, and every entry of both is a function of its
+            // own above, so no trampoline ever dispatches here.
+            return winrt::impl::error_not_implemented;
+        }
+
+        // ----- assembling one interface's vtable ---------------------------
+
+        /**
+         * Which Python operation the member at @p slot comes down to.
+         */
+        python_op operation_of(member_desc const& member, uint16_t index) noexcept
+        {
+            if (member.kind != table::group_kind::property)
+            {
+                // A method, and an event, whose two halves the projection
+                // spells as the methods add_x() and remove_x().
+                return python_op::call_method;
+            }
+
+            // A property group holds its getter first and its setter, if
+            // there is one, second.
+            return index == 0 ? python_op::get_attribute : python_op::set_attribute;
+        }
+
+        /**
+         * Builds the vtable that a Python implementation of @p entry's
+         * interface is called through, once per interface.
+         */
+        bool ensure_interface_vtable(type_entry& entry)
+        {
+            if (entry.reverse)
+            {
+                return true;
+            }
+
+            if (!entry.guid)
+            {
+                PyErr_Format(
+                    PyExc_NotImplementedError,
+                    "'%s' has no IID, so Python cannot implement it",
+                    entry.winrt_name);
+                return false;
+            }
+
+            auto const record = entry.owner->table->type(entry.index);
+
+            auto reverse = std::make_unique<reverse_vtable>();
+
+            reverse->entries = {
+                reinterpret_cast<shapes::vtable_entry>(&tearoff_query_interface),
+                reinterpret_cast<shapes::vtable_entry>(&tearoff_add_ref),
+                reinterpret_cast<shapes::vtable_entry>(&tearoff_release),
+                reinterpret_cast<shapes::vtable_entry>(&tearoff_get_iids),
+                reinterpret_cast<shapes::vtable_entry>(&tearoff_get_runtime_class_name),
+                reinterpret_cast<shapes::vtable_entry>(&tearoff_get_trust_level)};
+
+            // An interface's own vtable holds only its own methods: the ones
+            // it inherits are reached through a vtable of their own, so a
+            // record lists them - the wrapper type has to bind them all - at
+            // slots that are this interface's slots for something else.
+            for (uint32_t i = 0; i < record.group_count(); i++)
+            {
+                auto const group = record.group(i);
+
+                for (uint32_t j = 0; j < group.member_count(); j++)
+                {
+                    auto const member = group.member(j);
+
+                    if (member.declaring() != entry.index)
+                    {
+                        continue;
+                    }
+
+                    auto const shape = get_reverse_shape(member.reverse_shape());
+                    if (!shape)
+                    {
+                        // Refusing the whole interface rather than leaving one
+                        // entry out: a vtable with a hole in it is a crash
+                        // waiting for the caller that reaches for it.
+                        PyErr_Format(
+                            PyExc_NotImplementedError,
+                            "'%s' cannot be implemented in Python because "
+                            "'%s' has a signature this winrt-runtime has no "
+                            "callback for",
+                            entry.winrt_name,
+                            member.winrt_name().data());
+                        return false;
+                    }
+
+                    if (shape->slot >= reverse->entries.size())
+                    {
+                        reverse->entries.resize(shape->slot + 1);
+                    }
+
+                    reverse->entries[shape->slot] = shape->entry;
+                }
+            }
+
+            for (size_t slot = 0; slot < reverse->entries.size(); slot++)
+            {
+                if (!reverse->entries[slot])
+                {
+                    PyErr_Format(
+                        PyExc_ImportError,
+                        "'%s' names no member for vtable slot %zu",
+                        entry.winrt_name,
+                        slot);
+                    return false;
+                }
+            }
+
+            reverse->slots.resize(reverse->entries.size());
+
+            for (uint16_t i = 0; i < entry.member_count; i++)
+            {
+                auto& member = entry.members[i];
+
+                for (uint16_t j = 0; j < member.count; j++)
+                {
+                    auto& overload = member.overloads[j];
+
+                    // The same filter as above, read off the descriptor: an
+                    // interface an object is already holding needs no query,
+                    // so a member with one named is one this interface
+                    // inherited.
+                    if (overload.iface)
+                    {
+                        continue;
+                    }
+
+                    if (overload.slot >= reverse->slots.size())
+                    {
+                        PyErr_Format(
+                            PyExc_ImportError,
+                            "'%s' says '%s' is in vtable slot %u, which it does "
+                            "not have",
+                            entry.winrt_name,
+                            overload.winrt_name,
+                            overload.slot);
+                        return false;
+                    }
+
+                    reverse->slots[overload.slot]
+                        = {&member, &overload, operation_of(member, j)};
+                }
+            }
+
+            entry.reverse = std::move(reverse);
+
+            return true;
+        }
+
+        /**
+         * The interface @p type is the abstract type of, or @c nullptr.
+         *
+         * Every projected interface has two Python types: the wrapper a value
+         * of it comes back as, bound to the underscored name, and the
+         * abstract type a Python implementation derives from, bound to the
+         * public one. Only the second says anything about what the object
+         * behind it can answer.
+         */
+        type_entry* interface_of(PyTypeObject* type) noexcept
+        {
+            auto* const entry = get_type_entry(type);
+
+            return entry && entry->implements == type ? entry : nullptr;
+        }
+
+        /**
+         * Every interface @p type implements, and everything those require,
+         * in the order to try them.
+         */
+        bool collect_interfaces(PyTypeObject* type, std::vector<type_entry*>& found)
+        {
+            auto* const mro = type->tp_mro;
+            if (!mro)
+            {
+                return true;
+            }
+
+            auto const add = [&found](type_entry* entry)
+            {
+                if (std::find(found.begin(), found.end(), entry) == found.end())
+                {
+                    found.push_back(entry);
+                }
+            };
+
+            for (Py_ssize_t i = 0; i < PyTuple_GET_SIZE(mro); i++)
+            {
+                auto* const base = PyTuple_GET_ITEM(mro, i);
+                if (!PyType_Check(base))
+                {
+                    continue;
+                }
+
+                auto* const entry = interface_of(reinterpret_cast<PyTypeObject*>(base));
+                if (!entry)
+                {
+                    continue;
+                }
+
+                add(entry);
+
+                // An interface lists what it requires transitively, and an
+                // object that answers one has to answer all of them.
+                auto const required
+                    = entry->owner->table->type(entry->index).interfaces();
+
+                for (uint32_t j = 0; j < required.size(); j++)
+                {
+                    type_entry* cache{};
+
+                    auto* const other = resolve(*entry->owner, required[j], cache);
+                    if (!other)
+                    {
+                        return false;
+                    }
+
+                    add(other);
+                }
+            }
+
+            return true;
+        }
+    } // namespace
+
+    /**
+     * Whether @p type derives from the abstract type of any projected
+     * interface, which is how a Python class says it implements one.
+     */
+    bool implements_interfaces(PyTypeObject* type) noexcept
+    {
+        auto* const mro = type->tp_mro;
+        if (!mro)
+        {
+            return false;
+        }
+
+        for (Py_ssize_t i = 0; i < PyTuple_GET_SIZE(mro); i++)
+        {
+            auto* const base = PyTuple_GET_ITEM(mro, i);
+
+            if (PyType_Check(base)
+                && interface_of(reinterpret_cast<PyTypeObject*>(base)))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * The @p iid interface of the WinRT object that stands for @p obj, with
+     * one reference on it.
+     *
+     * A new object is made for each call, because a Python object holds no
+     * reference back to one and so has nowhere to keep it. Two of them are
+     * therefore not equal to each other, which is what a Python subclass of a
+     * composable class - where the pair does refer to each other both ways -
+     * will not do.
+     *
+     * @throws python_exception if @p obj implements no interface that answers
+     * @p iid.
+     */
+    void* make_implements_object(PyObject* obj, void const* iid)
+    {
+        std::vector<type_entry*> interfaces;
+
+        if (!collect_interfaces(Py_TYPE(obj), interfaces))
+        {
+            throw python_exception();
+        }
+
+        for (auto* const entry : interfaces)
+        {
+            if (!ensure_interface_vtable(*entry))
+            {
+                throw python_exception();
+            }
+        }
+
+        auto owner = std::make_unique<implements_object>();
+
+        owner->head.vtable = inspectable_vtable;
+        owner->head.target = owner.get();
+        owner->py_head.vtable = pywinrt_object_vtable;
+        owner->py_head.target = owner.get();
+        owner->obj = Py_NewRef(obj);
+
+        for (auto* const entry : interfaces)
+        {
+            auto iface = std::make_unique<tearoff>();
+
+            iface->head.vtable = entry->reverse->entries.data();
+            iface->head.target = iface.get();
+            iface->owner = owner.get();
+            iface->info = entry;
+
+            owner->tearoffs.push_back(std::move(iface));
+        }
+
+        void* result{};
+
+        auto const hr = object_query_interface(
+            &owner->head,
+            iid ? *static_cast<winrt::guid const*>(iid)
+                : winrt::guid_of<winrt::Windows::Foundation::IInspectable>(),
+            &result);
+
+        // The object holds the only reference to itself until a caller takes
+        // one, so letting go of it here is what gives it back.
+        object_release(&owner.release()->head);
+
+        if (hr != 0)
+        {
+            winrt::check_hresult(hr);
+        }
+
+        return result;
+    }
+} // namespace py::interp

@@ -81,6 +81,20 @@ for i in range({ITEMS}):
 """
 )
 
+# a callable that echoes what it is given, for the delegate case, and an event
+# handler that does nothing
+ECHO = (
+    TESTS
+    + """
+echo = lambda a: (a, a)
+"""
+)
+
+HANDLER = """
+override = tc.Override()
+handler = lambda sender, args: None
+"""
+
 # a Python list and a Python dict for the cases that hand one to WinRT, which
 # wraps rather than copies it and then calls back into Python per element
 PY_COLLECTIONS = (
@@ -168,6 +182,20 @@ CASES = (
         1,
         STRUCTS,
         "tests.param13(fields, blittable)",
+    ),
+    # the other direction: a Python callable handed to WinRT as a delegate.
+    # Param7Call() takes one, invokes it once with an integer and checks what
+    # comes back, so this prices building the delegate, one call from WinRT
+    # into Python, and the conversions each way.
+    Case("delegate invoked once", 100_000, 1, ECHO, "tests.param7_call(echo)"),
+    # an event handler added and taken off again, which is the delegate
+    # above plus what an event source does with one
+    Case(
+        "event add and remove",
+        100_000,
+        1,
+        HANDLER,
+        "override.remove_overridable_called(override.add_overridable_called(handler))",
     ),
     # get() on an operation that completed before the timing started, so this
     # is the wait machinery and the result conversion without any waiting
