@@ -238,7 +238,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete iter
             in uint32 name=index
             out int32 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array int32 name=items
             out uint32 return
@@ -266,7 +266,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiCont
             in uint32 name=index
             out class type=Windows.Devices.Spi.SpiController return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.SpiController> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Spi.SpiController name=items
             out uint32 return

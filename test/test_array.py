@@ -1,14 +1,19 @@
-from test._util import skip_without_projection
-
-skip_without_projection()
-
+import array as stdlib_array
 import datetime
 import sys
 import unittest
 import uuid
 
+import test_winrt.testcomponent as tc
 from winrt.system import Array, Object
-from winrt.windows.foundation import IPropertyValue, Point, Rect, Size, Uri
+from winrt.windows.foundation import (
+    IPropertyValue,
+    IStringable,
+    Point,
+    Rect,
+    Size,
+    Uri,
+)
 
 is_64bits = sys.maxsize > 2**32
 pointer_size = 8 if is_64bits else 4
@@ -362,3 +367,169 @@ class TestWinRTArray(unittest.TestCase):
 
         self.assertEqual(a.count(5), 1)
         self.assertEqual(a.index(5), 5)
+
+
+#: One value of each element type an ArrayN member of the test component
+#: takes, with the winrt.system.Array type argument that spells it. Every
+#: ArrayN member does the same thing with them: it fills the array it is lent
+#: from the array it is passed, and hands the same values back as an output
+#: and as the return value.
+ARRAY_MEMBERS = [
+    ("array1", "?", [True, False, True]),
+    ("array2", "B", [1, 2, 3]),
+    ("array3", "H", [1, 2, 3]),
+    ("array4", "I", [1, 2, 3]),
+    ("array5", "Q", [1, 2, 3]),
+    ("array6", "h", [-1, 2, -3]),
+    ("array7", "i", [-1, 2, -3]),
+    ("array8", "q", [-1, 2, -3]),
+    ("array9", "f", [1.5, 2.5, 3.5]),
+    ("array10", "d", [1.5, 2.5, 3.5]),
+    ("array11", "u", ["A", "B", "\u1234"]),
+    ("array12", str, ["one", "two", "three"]),
+]
+
+
+def blittable(seed: int) -> tc.Blittable:
+    return tc.Blittable(
+        seed,
+        seed + 1,
+        seed + 2,
+        seed + 3,
+        seed + 4,
+        seed + 5,
+        seed + 6,
+        seed + 7.5,
+        seed + 8.5,
+        uuid.UUID(int=seed),
+    )
+
+
+def non_blittable(seed: int) -> tc.NonBlittable:
+    return tc.NonBlittable(seed % 2 == 0, chr(ord("a") + seed), f"value {seed}", seed)
+
+
+def nested(seed: int) -> tc.Nested:
+    return tc.Nested(blittable(seed), non_blittable(seed))
+
+
+class TestArrayParameters(unittest.TestCase):
+    """
+    The three WinRT array parameter categories, in both directions.
+
+    Every ArrayN member of the test component takes one array to read and one
+    to fill and hands back two more, so one member per element type covers a
+    passed, a lent and two received arrays at once. ArrayNCall runs the same
+    member the other way round, with the test component as the caller and a
+    Python callable as the delegate.
+    """
+
+    def setUp(self) -> None:
+        self.tests = tc.TestRunner.make_tests()
+
+    def check_forward(self, name: str, element, values: list) -> None:
+        passed = Array(element, values)
+        lent = Array(element, len(values))
+
+        returned, received = getattr(self.tests, name)(passed, lent)
+
+        self.assertEqual(list(lent), values)
+        self.assertEqual(list(received), values)
+        self.assertEqual(list(returned), values)
+
+    def check_reverse(self, name: str, element, values: list) -> None:
+        seen = []
+
+        def handler(passed, lent):
+            seen.append((list(passed), len(lent)))
+
+            for index, value in enumerate(passed):
+                lent[index] = value
+
+            return Array(element, list(passed)), Array(element, list(passed))
+
+        getattr(self.tests, f"{name}_call")(handler)
+
+        # The test component checks what the handler filled and handed back,
+        # so getting this far is the assertion. What it passes is its own.
+        self.assertEqual(len(seen), 1)
+        self.assertEqual(seen[0][1], len(seen[0][0]))
+
+    def test_fundamental_types(self):
+        for name, element, values in ARRAY_MEMBERS:
+            with self.subTest(member=name):
+                self.check_forward(name, element, values)
+                self.check_reverse(name, element, values)
+
+    def test_blittable_struct(self):
+        values = [blittable(1), blittable(2)]
+        self.check_forward("array13", tc.Blittable, values)
+        self.check_reverse("array13", tc.Blittable, values)
+
+    def test_non_blittable_struct(self):
+        values = [non_blittable(1), non_blittable(2)]
+        self.check_forward("array14", tc.NonBlittable, values)
+        self.check_reverse("array14", tc.NonBlittable, values)
+
+    def test_nested_struct(self):
+        values = [nested(1), nested(2)]
+        self.check_forward("array15", tc.Nested, values)
+        self.check_reverse("array15", tc.Nested, values)
+
+    def test_interface(self):
+        passed = Array(IStringable, [IStringable._from(Uri("https://example.com"))])
+        lent = Array(IStringable, 1)
+
+        returned, received = self.tests.array16(passed, lent)
+
+        for array in (lent, received, returned):
+            self.assertEqual([str(value) for value in array], ["https://example.com/"])
+
+    def test_interface_reverse(self):
+        seen = []
+
+        def handler(passed, lent):
+            seen.append([str(value) for value in passed])
+
+            for index, value in enumerate(passed):
+                lent[index] = value
+
+            return Array(IStringable, list(passed)), Array(IStringable, list(passed))
+
+        self.tests.array16_call(handler)
+
+        self.assertEqual(len(seen), 1)
+
+    def test_lent_array_is_taken_back(self):
+        kept = []
+
+        def handler(passed, lent):
+            kept.append(lent)
+
+            for index, value in enumerate(passed):
+                lent[index] = value
+
+            return Array("?", list(passed)), Array("?", list(passed))
+
+        self.tests.array1_call(handler)
+
+        # A lent array is the caller's own elements, and the call it was lent
+        # for is over.
+        self.assertEqual(len(kept[0]), 0)
+
+    def test_passed_array_must_hold_the_declared_element(self):
+        with self.assertRaises(BufferError):
+            self.tests.array7(Array("h", [1, 2]), Array("i", 2))
+
+    def test_lent_array_must_be_writable(self):
+        with self.assertRaises(BufferError):
+            self.tests.array2(bytes([1, 2]), bytes(2))
+
+    def test_any_buffer_of_the_right_shape(self):
+        lent = stdlib_array.array("i", [0, 0, 0])
+
+        returned, received = self.tests.array7(stdlib_array.array("i", [1, 2, 3]), lent)
+
+        self.assertEqual(list(lent), [1, 2, 3])
+        self.assertEqual(list(received), [1, 2, 3])
+        self.assertEqual(list(returned), [1, 2, 3])

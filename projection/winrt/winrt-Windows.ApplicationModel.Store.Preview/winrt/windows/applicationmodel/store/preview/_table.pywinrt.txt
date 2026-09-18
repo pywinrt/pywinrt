@@ -498,7 +498,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.St
             in uint32 name=index
             out class type=Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo name=items
             out uint32 return
@@ -526,7 +526,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.St
             in uint32 name=index
             out class type=Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo name=items
             out uint32 return
@@ -554,7 +554,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.St
             in uint32 name=index
             out enum32 type=Windows.ApplicationModel.Store.Preview.StoreSystemFeature return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.ApplicationModel.Store.Preview.StoreSystemFeature name=items
             out uint32 return

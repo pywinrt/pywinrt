@@ -334,7 +334,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentica
             in uint32 name=index
             out class type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo name=items
             out uint32 return

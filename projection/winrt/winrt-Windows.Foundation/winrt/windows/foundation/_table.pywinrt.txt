@@ -776,7 +776,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwForm
             in uint32 name=index
             out interface type=Windows.Foundation.IWwwFormUrlDecoderEntry return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Foundation.IWwwFormUrlDecoderEntry name=items
             out uint32 return
@@ -1150,7 +1150,7 @@ class Windows.Foundation.WwwFormUrlDecoder python_type iterable sequence
             in string name=name
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Foundation.IWwwFormUrlDecoderEntry name=items
             out uint32 return

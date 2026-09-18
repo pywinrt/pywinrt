@@ -102,6 +102,7 @@ ROLES = (
     "to_string",
     "value",
     "close",
+    "get_many",
 )
 
 PARAM_CATEGORIES = ("in", "out", "pass_array", "fill_array", "receive_array")

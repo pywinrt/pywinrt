@@ -4615,7 +4615,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.Web.WebView2.Core.Cor
             in uint32 name=index
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem name=items
             out uint32 return
@@ -4667,7 +4667,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.Web.WebView2.Core.Cor
             in uint32 name=index
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration name=items
             out uint32 return
@@ -4719,7 +4719,7 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -4766,7 +4766,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core
             in uint32 name=index
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension name=items
             out uint32 return
@@ -4794,7 +4794,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core
             in uint32 name=index
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate name=items
             out uint32 return
@@ -4822,7 +4822,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core
             in uint32 name=index
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem name=items
             out uint32 return
@@ -4850,7 +4850,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core
             in uint32 name=index
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2Cookie return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2Cookie> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2Cookie> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2Cookie name=items
             out uint32 return
@@ -4878,7 +4878,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core
             in uint32 name=index
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration name=items
             out uint32 return
@@ -4906,7 +4906,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core
             in uint32 name=index
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo name=items
             out uint32 return
@@ -4934,7 +4934,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core
             in uint32 name=index
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting name=items
             out uint32 return
@@ -4962,7 +4962,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core
             in uint32 name=index
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo name=items
             out uint32 return
@@ -4990,7 +4990,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core
             in uint32 name=index
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo name=items
             out uint32 return
@@ -5018,7 +5018,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Object> concrete ite
             in uint32 name=index
             out object return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array object name=items
             out uint32 return
@@ -5046,7 +5046,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -5074,7 +5074,7 @@ interface Windows.Foundation.Collections.IVectorView<System.UInt64> concrete ite
             in uint32 name=index
             out uint64 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt64> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt64> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array uint64 name=items
             out uint32 return
@@ -5102,7 +5102,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Rect> co
             in uint32 name=index
             out struct type=Windows.Foundation.Rect return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Rect> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Rect> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Foundation.Rect name=items
             out uint32 return

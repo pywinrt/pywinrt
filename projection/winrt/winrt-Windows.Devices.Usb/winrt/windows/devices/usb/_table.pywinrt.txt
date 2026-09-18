@@ -682,7 +682,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulk
             in uint32 name=index
             out class type=Windows.Devices.Usb.UsbBulkInEndpointDescriptor return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Usb.UsbBulkInEndpointDescriptor name=items
             out uint32 return
@@ -710,7 +710,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulk
             in uint32 name=index
             out class type=Windows.Devices.Usb.UsbBulkInPipe return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInPipe> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInPipe> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Usb.UsbBulkInPipe name=items
             out uint32 return
@@ -738,7 +738,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulk
             in uint32 name=index
             out class type=Windows.Devices.Usb.UsbBulkOutEndpointDescriptor return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Usb.UsbBulkOutEndpointDescriptor name=items
             out uint32 return
@@ -766,7 +766,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulk
             in uint32 name=index
             out class type=Windows.Devices.Usb.UsbBulkOutPipe return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutPipe> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutPipe> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Usb.UsbBulkOutPipe name=items
             out uint32 return
@@ -794,7 +794,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDesc
             in uint32 name=index
             out class type=Windows.Devices.Usb.UsbDescriptor return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Usb.UsbDescriptor name=items
             out uint32 return
@@ -822,7 +822,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInte
             in uint32 name=index
             out class type=Windows.Devices.Usb.UsbInterface return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterface> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterface> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Usb.UsbInterface name=items
             out uint32 return
@@ -850,7 +850,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInte
             in uint32 name=index
             out class type=Windows.Devices.Usb.UsbInterfaceSetting return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterfaceSetting> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterfaceSetting> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Usb.UsbInterfaceSetting name=items
             out uint32 return
@@ -878,7 +878,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInte
             in uint32 name=index
             out class type=Windows.Devices.Usb.UsbInterruptInEndpointDescriptor return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Usb.UsbInterruptInEndpointDescriptor name=items
             out uint32 return
@@ -906,7 +906,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInte
             in uint32 name=index
             out class type=Windows.Devices.Usb.UsbInterruptInPipe return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInPipe> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInPipe> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Usb.UsbInterruptInPipe name=items
             out uint32 return
@@ -934,7 +934,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInte
             in uint32 name=index
             out class type=Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor name=items
             out uint32 return
@@ -962,7 +962,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInte
             in uint32 name=index
             out class type=Windows.Devices.Usb.UsbInterruptOutPipe return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutPipe> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutPipe> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Usb.UsbInterruptOutPipe name=items
             out uint32 return

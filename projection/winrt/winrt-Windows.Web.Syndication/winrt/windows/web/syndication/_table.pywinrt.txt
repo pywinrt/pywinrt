@@ -458,7 +458,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndic
             in uint32 name=index
             out interface type=Windows.Web.Syndication.ISyndicationNode return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Web.Syndication.ISyndicationNode name=items
             out uint32 return
@@ -510,7 +510,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.Syndica
             in uint32 name=index
             out class type=Windows.Web.Syndication.SyndicationAttribute return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Syndication.SyndicationAttribute name=items
             out uint32 return
@@ -562,7 +562,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.Syndica
             in uint32 name=index
             out class type=Windows.Web.Syndication.SyndicationCategory return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationCategory> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Syndication.SyndicationCategory name=items
             out uint32 return
@@ -614,7 +614,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.Syndica
             in uint32 name=index
             out class type=Windows.Web.Syndication.SyndicationItem return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationItem> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Syndication.SyndicationItem name=items
             out uint32 return
@@ -666,7 +666,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.Syndica
             in uint32 name=index
             out class type=Windows.Web.Syndication.SyndicationLink return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationLink> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Syndication.SyndicationLink name=items
             out uint32 return
@@ -718,7 +718,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.Syndica
             in uint32 name=index
             out class type=Windows.Web.Syndication.SyndicationPerson return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationPerson> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Syndication.SyndicationPerson name=items
             out uint32 return
@@ -765,7 +765,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISy
             in uint32 name=index
             out interface type=Windows.Web.Syndication.ISyndicationNode return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISyndicationNode> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISyndicationNode> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Web.Syndication.ISyndicationNode name=items
             out uint32 return
@@ -793,7 +793,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.Syn
             in uint32 name=index
             out class type=Windows.Web.Syndication.SyndicationAttribute return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationAttribute> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationAttribute> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Syndication.SyndicationAttribute name=items
             out uint32 return
@@ -821,7 +821,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.Syn
             in uint32 name=index
             out class type=Windows.Web.Syndication.SyndicationCategory return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Syndication.SyndicationCategory name=items
             out uint32 return
@@ -849,7 +849,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.Syn
             in uint32 name=index
             out class type=Windows.Web.Syndication.SyndicationItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Syndication.SyndicationItem name=items
             out uint32 return
@@ -877,7 +877,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.Syn
             in uint32 name=index
             out class type=Windows.Web.Syndication.SyndicationLink return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationLink> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationLink> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Syndication.SyndicationLink name=items
             out uint32 return
@@ -905,7 +905,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.Syn
             in uint32 name=index
             out class type=Windows.Web.Syndication.SyndicationPerson return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationPerson> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationPerson> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Syndication.SyndicationPerson name=items
             out uint32 return

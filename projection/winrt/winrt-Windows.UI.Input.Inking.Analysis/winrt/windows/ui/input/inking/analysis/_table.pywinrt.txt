@@ -274,7 +274,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -302,7 +302,7 @@ interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete ite
             in uint32 name=index
             out uint32 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array uint32 name=items
             out uint32 return
@@ -330,7 +330,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> c
             in uint32 name=index
             out struct type=Windows.Foundation.Point return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Foundation.Point name=items
             out uint32 return
@@ -358,7 +358,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Ana
             in uint32 name=index
             out interface type=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode name=items
             out uint32 return

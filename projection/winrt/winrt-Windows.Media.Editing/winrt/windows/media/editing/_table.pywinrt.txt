@@ -762,7 +762,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.Backgroun
             in uint32 name=index
             out class type=Windows.Media.Editing.BackgroundAudioTrack return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Editing.BackgroundAudioTrack name=items
             out uint32 return
@@ -814,7 +814,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip
             in uint32 name=index
             out class type=Windows.Media.Editing.MediaClip return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Editing.MediaClip name=items
             out uint32 return
@@ -866,7 +866,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOver
             in uint32 name=index
             out class type=Windows.Media.Editing.MediaOverlay return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Editing.MediaOverlay name=items
             out uint32 return
@@ -918,7 +918,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOver
             in uint32 name=index
             out class type=Windows.Media.Editing.MediaOverlayLayer return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Editing.MediaOverlayLayer name=items
             out uint32 return
@@ -970,7 +970,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEff
             in uint32 name=index
             out interface type=Windows.Media.Effects.IAudioEffectDefinition return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
             out uint32 return
@@ -1022,7 +1022,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEff
             in uint32 name=index
             out interface type=Windows.Media.Effects.IVideoEffectDefinition return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Media.Effects.IVideoEffectDefinition name=items
             out uint32 return
@@ -1069,7 +1069,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.Im
             in uint32 name=index
             out class type=Windows.Graphics.Imaging.ImageStream return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Imaging.ImageStream name=items
             out uint32 return
@@ -1097,7 +1097,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.Backg
             in uint32 name=index
             out class type=Windows.Media.Editing.BackgroundAudioTrack return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.BackgroundAudioTrack> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.BackgroundAudioTrack> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Editing.BackgroundAudioTrack name=items
             out uint32 return
@@ -1125,7 +1125,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.Embed
             in uint32 name=index
             out class type=Windows.Media.Editing.EmbeddedAudioTrack return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Editing.EmbeddedAudioTrack name=items
             out uint32 return
@@ -1153,7 +1153,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.Media
             in uint32 name=index
             out class type=Windows.Media.Editing.MediaClip return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaClip> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaClip> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Editing.MediaClip name=items
             out uint32 return
@@ -1181,7 +1181,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.Media
             in uint32 name=index
             out class type=Windows.Media.Editing.MediaOverlay return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlay> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlay> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Editing.MediaOverlay name=items
             out uint32 return
@@ -1209,7 +1209,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.Media
             in uint32 name=index
             out class type=Windows.Media.Editing.MediaOverlayLayer return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlayLayer> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlayLayer> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Editing.MediaOverlayLayer name=items
             out uint32 return
@@ -1237,7 +1237,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudi
             in uint32 name=index
             out interface type=Windows.Media.Effects.IAudioEffectDefinition return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
             out uint32 return
@@ -1265,7 +1265,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVide
             in uint32 name=index
             out interface type=Windows.Media.Effects.IVideoEffectDefinition return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVideoEffectDefinition> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVideoEffectDefinition> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Media.Effects.IVideoEffectDefinition name=items
             out uint32 return

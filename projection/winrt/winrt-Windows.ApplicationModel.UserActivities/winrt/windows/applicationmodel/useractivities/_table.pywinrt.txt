@@ -364,7 +364,7 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserAc
             in uint32 name=index
             out class type=Windows.ApplicationModel.UserActivities.UserActivity return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivity> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivity> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.UserActivities.UserActivity name=items
             out uint32 return
@@ -416,7 +416,7 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserAc
             in uint32 name=index
             out class type=Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem name=items
             out uint32 return
@@ -463,7 +463,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Us
             in uint32 name=index
             out class type=Windows.ApplicationModel.UserActivities.UserActivity return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserActivities.UserActivity> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserActivities.UserActivity> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.UserActivities.UserActivity name=items
             out uint32 return
@@ -491,7 +491,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Us
             in uint32 name=index
             out class type=Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem name=items
             out uint32 return

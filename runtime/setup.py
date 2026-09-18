@@ -37,6 +37,7 @@ setup(
                 "src/_winrt_array.cpp",
                 "src/_winrt_box.cpp",
                 "src/_winrt_buffer.cpp",
+                "src/arrays.cpp",
                 "src/async.cpp",
                 "src/callbacks.cpp",
                 "src/collections.cpp",

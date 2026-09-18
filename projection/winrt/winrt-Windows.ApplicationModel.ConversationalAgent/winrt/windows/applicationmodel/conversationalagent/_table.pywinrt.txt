@@ -1761,7 +1761,7 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -1808,7 +1808,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -1836,7 +1836,7 @@ interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete ite
             in uint32 name=index
             out uint32 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array uint32 name=items
             out uint32 return
@@ -1864,7 +1864,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             in uint32 name=index
             out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration name=items
             out uint32 return
@@ -1892,7 +1892,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             in uint32 name=index
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat name=items
             out uint32 return
@@ -1920,7 +1920,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             in uint32 name=index
             out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector name=items
             out uint32 return
@@ -1948,7 +1948,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             in uint32 name=index
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState name=items
             out uint32 return
@@ -1976,7 +1976,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             in uint32 name=index
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind name=items
             out uint32 return
@@ -2004,7 +2004,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             in uint32 name=index
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind name=items
             out uint32 return

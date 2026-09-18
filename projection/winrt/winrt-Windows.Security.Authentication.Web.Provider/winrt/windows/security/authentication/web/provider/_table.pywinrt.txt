@@ -456,7 +456,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Security.Authentication
             in uint32 name=index
             out class type=Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse name=items
             out uint32 return
@@ -508,7 +508,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> co
             in uint32 name=index
             out class type=Windows.Web.Http.HttpCookie return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.HttpCookie name=items
             out uint32 return
@@ -555,7 +555,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentica
             in uint32 name=index
             out class type=Windows.Security.Authentication.Web.Provider.WebAccountClientView return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Provider.WebAccountClientView> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Provider.WebAccountClientView> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Security.Authentication.Web.Provider.WebAccountClientView name=items
             out uint32 return
@@ -583,7 +583,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentica
             in uint32 name=index
             out class type=Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse name=items
             out uint32 return
@@ -611,7 +611,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Security.Credential
             in uint32 name=index
             out class type=Windows.Security.Credentials.WebAccount return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Security.Credentials.WebAccount name=items
             out uint32 return
@@ -639,7 +639,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie
             in uint32 name=index
             out class type=Windows.Web.Http.HttpCookie return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.HttpCookie name=items
             out uint32 return

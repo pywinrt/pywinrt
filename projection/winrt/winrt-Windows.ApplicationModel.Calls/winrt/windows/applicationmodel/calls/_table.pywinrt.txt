@@ -1199,7 +1199,7 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -1246,7 +1246,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -1274,7 +1274,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Ca
             in uint32 name=index
             out class type=Windows.ApplicationModel.Calls.PhoneCall return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Calls.PhoneCall> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Calls.PhoneCall> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.Calls.PhoneCall name=items
             out uint32 return
@@ -1302,7 +1302,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Ca
             in uint32 name=index
             out class type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntry return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Calls.PhoneCallHistoryEntry> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Calls.PhoneCallHistoryEntry> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntry name=items
             out uint32 return

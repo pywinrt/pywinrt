@@ -383,7 +383,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Di
             in uint32 name=index
             out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=items
             out uint32 return

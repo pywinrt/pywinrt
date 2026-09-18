@@ -118,6 +118,7 @@ set(WINRT_RUNTIME_SOURCES
     "${WINRT_RUNTIME_SRC_PATH}/_winrt_array.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/_winrt_box.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/_winrt_buffer.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/arrays.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/async.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/callbacks.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/collections.cpp"

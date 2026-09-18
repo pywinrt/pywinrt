@@ -698,7 +698,7 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -745,7 +745,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -773,7 +773,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Ap
             in uint32 name=index
             out class type=Windows.ApplicationModel.Appointments.AppointmentCalendar return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentCalendar> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentCalendar> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.Appointments.AppointmentCalendar name=items
             out uint32 return
@@ -801,7 +801,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             in uint32 name=index
             out class type=Windows.ApplicationModel.Contacts.ContactAnnotationList return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.Contacts.ContactAnnotationList name=items
             out uint32 return
@@ -829,7 +829,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             in uint32 name=index
             out class type=Windows.ApplicationModel.Contacts.ContactGroup return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactGroup> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactGroup> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.Contacts.ContactGroup name=items
             out uint32 return
@@ -857,7 +857,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             in uint32 name=index
             out class type=Windows.ApplicationModel.Contacts.ContactList return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.Contacts.ContactList name=items
             out uint32 return
@@ -885,7 +885,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Em
             in uint32 name=index
             out class type=Windows.ApplicationModel.Email.EmailMailbox return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailbox> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailMailbox> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.Email.EmailMailbox name=items
             out uint32 return
@@ -913,7 +913,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Us
             in uint32 name=index
             out class type=Windows.ApplicationModel.UserDataAccounts.UserDataAccount return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.UserDataAccounts.UserDataAccount name=items
             out uint32 return
@@ -941,7 +941,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Us
             in uint32 name=index
             out class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskList return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskList name=items
             out uint32 return

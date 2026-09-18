@@ -4,7 +4,6 @@ import unittest
 import winrt.windows.data.json as wdj
 from winrt.system import Array
 
-from ._util import skip_without_arrays
 
 
 class TestJson(unittest.TestCase):
@@ -31,8 +30,6 @@ class TestJson(unittest.TestCase):
             self.assertEqual(v.get_number(), x + 1)
 
     def test_JsonArray_seq_subscript(self):
-        skip_without_arrays()
-
         a = wdj.JsonArray.parse("[1,2,3,4,5]")
         self.assertEqual([v.get_number() for v in a[1:-1]], [2, 3, 4])
 
@@ -80,8 +77,6 @@ class TestJson(unittest.TestCase):
             self.assertEqual(a.get_number_at(x), x + 1)
 
     def test_JsonArray_replace_all(self):
-        skip_without_arrays()
-
         a = wdj.JsonArray.parse("[1,2,3,4,5]")
         self.assertEqual(a.size, 5)
         a.replace_all(Array(wdj.IJsonValue, [wdj.JsonValue.parse("7")]))
@@ -171,8 +166,6 @@ class TestJson(unittest.TestCase):
         self.assertEqual(v.value_type, wdj.JsonValueType.OBJECT)
 
     def test_JsonArray_get_many(self):
-        skip_without_arrays()
-
         a = wdj.JsonArray.parse('[null, true, 42, "spam", [1,2,3], {"scene":24}]')
         items = Array(wdj.IJsonValue, 5)
         count = a.get_many(3, items)

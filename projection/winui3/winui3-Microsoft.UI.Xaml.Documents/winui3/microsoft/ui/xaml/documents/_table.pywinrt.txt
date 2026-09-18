@@ -74,7 +74,7 @@ class Microsoft.UI.Xaml.Documents.BlockCollection python_type iterable sequence 
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Documents.Block return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Block> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Block> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Documents.Block name=items
             out uint32 return
@@ -569,7 +569,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Blo
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Documents.Block return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Block> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Block> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Documents.Block name=items
             out uint32 return
@@ -621,7 +621,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Inl
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Documents.Inline return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Inline> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Inline> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Documents.Inline name=items
             out uint32 return
@@ -673,7 +673,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Tex
             in uint32 name=index
             out struct type=Microsoft.UI.Xaml.Documents.TextRange return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.TextRange> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.TextRange> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Microsoft.UI.Xaml.Documents.TextRange name=items
             out uint32 return
@@ -720,7 +720,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Documents
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Documents.Block return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Documents.Block> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Documents.Block> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Documents.Block name=items
             out uint32 return
@@ -748,7 +748,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Documents
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Documents.Inline return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Documents.Inline> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Documents.Inline> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Documents.Inline name=items
             out uint32 return
@@ -776,7 +776,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Documents
             in uint32 name=index
             out struct type=Microsoft.UI.Xaml.Documents.TextRange return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Documents.TextRange> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Documents.TextRange> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Microsoft.UI.Xaml.Documents.TextRange name=items
             out uint32 return
@@ -817,7 +817,7 @@ class Microsoft.UI.Xaml.Documents.InlineCollection python_type iterable sequence
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Documents.Inline return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Inline> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Inline> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Documents.Inline name=items
             out uint32 return

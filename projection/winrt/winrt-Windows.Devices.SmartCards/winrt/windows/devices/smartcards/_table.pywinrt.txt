@@ -1600,7 +1600,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer
             in uint32 name=index
             out interface type=Windows.Storage.Streams.IBuffer return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Storage.Streams.IBuffer name=items
             out uint32 return
@@ -1647,7 +1647,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.
             in uint32 name=index
             out class type=Windows.Devices.SmartCards.SmartCard return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.SmartCards.SmartCard name=items
             out uint32 return
@@ -1675,7 +1675,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.
             in uint32 name=index
             out class type=Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration name=items
             out uint32 return
@@ -1703,7 +1703,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.
             in uint32 name=index
             out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm name=items
             out uint32 return
@@ -1731,7 +1731,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.
             in uint32 name=index
             out class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialCharacteristics name=items
             out uint32 return
@@ -1759,7 +1759,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.
             in uint32 name=index
             out class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristics name=items
             out uint32 return
@@ -1787,7 +1787,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.
             in uint32 name=index
             out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat name=items
             out uint32 return
@@ -1815,7 +1815,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.
             in uint32 name=index
             out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat name=items
             out uint32 return
@@ -1843,7 +1843,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.
             in uint32 name=index
             out enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialType return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramMaterialType> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Devices.SmartCards.SmartCardCryptogramMaterialType name=items
             out uint32 return
@@ -1871,7 +1871,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.
             in uint32 name=index
             out enum_u32 type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum_u32 type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities name=items
             out uint32 return
@@ -1899,7 +1899,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.
             in uint32 name=index
             out class type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics name=items
             out uint32 return
@@ -1927,7 +1927,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IBu
             in uint32 name=index
             out interface type=Windows.Storage.Streams.IBuffer return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IBuffer> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Streams.IBuffer> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Storage.Streams.IBuffer name=items
             out uint32 return

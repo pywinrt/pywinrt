@@ -291,7 +291,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.
             in uint32 name=index
             out class type=Windows.UI.ApplicationSettings.CredentialCommand return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.ApplicationSettings.CredentialCommand name=items
             out uint32 return
@@ -343,7 +343,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.
             in uint32 name=index
             out class type=Windows.UI.ApplicationSettings.SettingsCommand return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.ApplicationSettings.SettingsCommand name=items
             out uint32 return
@@ -395,7 +395,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.
             in uint32 name=index
             out class type=Windows.UI.ApplicationSettings.WebAccountCommand return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.ApplicationSettings.WebAccountCommand name=items
             out uint32 return
@@ -447,7 +447,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.
             in uint32 name=index
             out class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=items
             out uint32 return
@@ -494,7 +494,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSetti
             in uint32 name=index
             out class type=Windows.UI.ApplicationSettings.CredentialCommand return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.CredentialCommand> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.CredentialCommand> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.ApplicationSettings.CredentialCommand name=items
             out uint32 return
@@ -522,7 +522,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSetti
             in uint32 name=index
             out class type=Windows.UI.ApplicationSettings.SettingsCommand return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.SettingsCommand> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.SettingsCommand> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.ApplicationSettings.SettingsCommand name=items
             out uint32 return
@@ -550,7 +550,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSetti
             in uint32 name=index
             out class type=Windows.UI.ApplicationSettings.WebAccountCommand return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountCommand> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountCommand> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.ApplicationSettings.WebAccountCommand name=items
             out uint32 return
@@ -578,7 +578,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSetti
             in uint32 name=index
             out class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ApplicationSettings.WebAccountProviderCommand> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=items
             out uint32 return

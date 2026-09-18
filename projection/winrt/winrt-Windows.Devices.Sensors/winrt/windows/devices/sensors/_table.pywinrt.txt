@@ -3587,7 +3587,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.Activit
             in uint32 name=index
             out enum32 type=Windows.Devices.Sensors.ActivityType return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
             out uint32 return
@@ -3634,7 +3634,7 @@ interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete ite
             in uint32 name=index
             out uint32 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array uint32 name=items
             out uint32 return
@@ -3662,7 +3662,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Act
             in uint32 name=index
             out class type=Windows.Devices.Sensors.ActivitySensorReading return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Sensors.ActivitySensorReading name=items
             out uint32 return
@@ -3690,7 +3690,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Act
             in uint32 name=index
             out class type=Windows.Devices.Sensors.ActivitySensorReadingChangeReport return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Sensors.ActivitySensorReadingChangeReport name=items
             out uint32 return
@@ -3718,7 +3718,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Act
             in uint32 name=index
             out enum32 type=Windows.Devices.Sensors.ActivityType return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
             out uint32 return
@@ -3746,7 +3746,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Det
             in uint32 name=index
             out class type=Windows.Devices.Sensors.DetectedPerson return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.DetectedPerson> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.DetectedPerson> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Sensors.DetectedPerson name=items
             out uint32 return
@@ -3774,7 +3774,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Ped
             in uint32 name=index
             out class type=Windows.Devices.Sensors.PedometerReading return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Sensors.PedometerReading name=items
             out uint32 return
@@ -3802,7 +3802,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Pro
             in uint32 name=index
             out class type=Windows.Devices.Sensors.ProximitySensorReading return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ProximitySensorReading> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ProximitySensorReading> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Sensors.ProximitySensorReading name=items
             out uint32 return
@@ -3830,7 +3830,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan
             in uint32 name=index
             out timespan return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array timespan name=items
             out uint32 return

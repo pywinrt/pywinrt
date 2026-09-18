@@ -1080,7 +1080,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Notifications.Notifi
             in uint32 name=index
             out class type=Windows.UI.Notifications.NotificationBinding return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Notifications.NotificationBinding> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Notifications.NotificationBinding> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Notifications.NotificationBinding name=items
             out uint32 return
@@ -1127,7 +1127,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.Ad
             in uint32 name=index
             out class type=Windows.UI.Notifications.AdaptiveNotificationText return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.AdaptiveNotificationText> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.AdaptiveNotificationText> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Notifications.AdaptiveNotificationText name=items
             out uint32 return
@@ -1155,7 +1155,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.No
             in uint32 name=index
             out class type=Windows.UI.Notifications.NotificationBinding return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.NotificationBinding> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.NotificationBinding> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Notifications.NotificationBinding name=items
             out uint32 return
@@ -1183,7 +1183,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.Sc
             in uint32 name=index
             out class type=Windows.UI.Notifications.ScheduledTileNotification return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ScheduledTileNotification> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ScheduledTileNotification> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Notifications.ScheduledTileNotification name=items
             out uint32 return
@@ -1211,7 +1211,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.Sc
             in uint32 name=index
             out class type=Windows.UI.Notifications.ScheduledToastNotification return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ScheduledToastNotification> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ScheduledToastNotification> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Notifications.ScheduledToastNotification name=items
             out uint32 return
@@ -1239,7 +1239,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.To
             in uint32 name=index
             out class type=Windows.UI.Notifications.ToastCollection return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ToastCollection> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ToastCollection> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Notifications.ToastCollection name=items
             out uint32 return
@@ -1267,7 +1267,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.To
             in uint32 name=index
             out class type=Windows.UI.Notifications.ToastNotification return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ToastNotification> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ToastNotification> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Notifications.ToastNotification name=items
             out uint32 return

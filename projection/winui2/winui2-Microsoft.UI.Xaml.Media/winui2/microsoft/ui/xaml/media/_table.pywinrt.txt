@@ -148,7 +148,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Media
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.GradientStop return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientStop> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientStop> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.GradientStop name=items
             out uint32 return
@@ -358,7 +358,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientS
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.GradientStop return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientStop> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientStop> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.GradientStop name=items
             out uint32 return
@@ -405,7 +405,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Gradi
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.GradientStop return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.GradientStop> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.GradientStop> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.GradientStop name=items
             out uint32 return

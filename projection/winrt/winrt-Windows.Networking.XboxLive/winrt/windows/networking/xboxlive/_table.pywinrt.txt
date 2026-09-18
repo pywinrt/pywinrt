@@ -245,7 +245,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.Xbo
             in uint32 name=index
             out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=items
             out uint32 return
@@ -297,7 +297,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.Xbo
             in uint32 name=index
             out enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=items
             out uint32 return
@@ -344,7 +344,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive
             in uint32 name=index
             out class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveDeviceAddress> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.XboxLive.XboxLiveDeviceAddress name=items
             out uint32 return
@@ -372,7 +372,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive
             in uint32 name=index
             out class type=Windows.Networking.XboxLive.XboxLiveEndpointPair return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPair> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPair> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.XboxLive.XboxLiveEndpointPair name=items
             out uint32 return
@@ -400,7 +400,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive
             in uint32 name=index
             out class type=Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate name=items
             out uint32 return
@@ -428,7 +428,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive
             in uint32 name=index
             out enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric name=items
             out uint32 return
@@ -456,7 +456,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive
             in uint32 name=index
             out class type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult name=items
             out uint32 return
@@ -484,7 +484,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive
             in uint32 name=index
             out class type=Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult name=items
             out uint32 return

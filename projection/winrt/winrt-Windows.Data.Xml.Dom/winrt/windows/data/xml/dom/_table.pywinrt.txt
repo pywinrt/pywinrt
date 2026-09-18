@@ -330,7 +330,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNo
             in uint32 name=index
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Data.Xml.Dom.IXmlNode name=items
             out uint32 return
@@ -1987,7 +1987,7 @@ class Windows.Data.Xml.Dom.XmlNamedNodeMap python_type iterable sequence
             in uint32 name=index
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Data.Xml.Dom.IXmlNode name=items
             out uint32 return
@@ -2049,7 +2049,7 @@ class Windows.Data.Xml.Dom.XmlNodeList python_type iterable sequence
             in uint32 name=index
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Data.Xml.Dom.IXmlNode name=items
             out uint32 return

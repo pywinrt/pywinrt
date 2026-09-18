@@ -477,7 +477,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Management.Setup.Deploy
             in uint32 name=index
             out class type=Windows.Management.Setup.DeploymentWorkload return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Setup.DeploymentWorkload> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Setup.DeploymentWorkload> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Management.Setup.DeploymentWorkload name=items
             out uint32 return
@@ -529,7 +529,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Management.Setup.Deploy
             in uint32 name=index
             out class type=Windows.Management.Setup.DeploymentWorkloadBatch return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Setup.DeploymentWorkloadBatch> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Setup.DeploymentWorkloadBatch> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Management.Setup.DeploymentWorkloadBatch name=items
             out uint32 return
@@ -576,7 +576,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Management.Setup.De
             in uint32 name=index
             out class type=Windows.Management.Setup.DeploymentWorkload return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Setup.DeploymentWorkload> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Setup.DeploymentWorkload> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Management.Setup.DeploymentWorkload name=items
             out uint32 return
@@ -604,7 +604,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Management.Setup.De
             in uint32 name=index
             out class type=Windows.Management.Setup.DeploymentWorkloadBatch return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Setup.DeploymentWorkloadBatch> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Setup.DeploymentWorkloadBatch> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Management.Setup.DeploymentWorkloadBatch name=items
             out uint32 return

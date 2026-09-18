@@ -301,7 +301,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.Dete
             in uint32 name=index
             out class type=Windows.Media.FaceAnalysis.DetectedFace return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.FaceAnalysis.DetectedFace> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.FaceAnalysis.DetectedFace name=items
             out uint32 return
@@ -348,7 +348,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.Bi
             in uint32 name=index
             out enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=items
             out uint32 return
@@ -376,7 +376,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.
             in uint32 name=index
             out class type=Windows.Media.FaceAnalysis.DetectedFace return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.FaceAnalysis.DetectedFace name=items
             out uint32 return

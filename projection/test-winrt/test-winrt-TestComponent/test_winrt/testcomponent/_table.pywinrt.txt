@@ -1743,7 +1743,7 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -1795,7 +1795,7 @@ interface Windows.Foundation.Collections.IVector<System.Int32> concrete iterable
             in uint32 name=index
             out int32 return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array int32 name=items
             out uint32 return
@@ -1847,7 +1847,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Foundation.IStringable>
             in uint32 name=index
             out interface type=Windows.Foundation.IStringable return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.IStringable> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.IStringable> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Foundation.IStringable name=items
             out uint32 return
@@ -1894,7 +1894,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Object> concrete ite
             in uint32 name=index
             out object return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array object name=items
             out uint32 return
@@ -1922,7 +1922,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -1950,7 +1950,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Boolean> concrete it
             in uint32 name=index
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Boolean> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Boolean> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array boolean name=items
             out uint32 return
@@ -1978,7 +1978,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete iter
             in uint32 name=index
             out int32 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array int32 name=items
             out uint32 return
@@ -2006,7 +2006,7 @@ interface Windows.Foundation.Collections.IVectorView<TestComponent.Blittable> co
             in uint32 name=index
             out struct type=TestComponent.Blittable return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<TestComponent.Blittable> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<TestComponent.Blittable> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=TestComponent.Blittable name=items
             out uint32 return
@@ -2034,7 +2034,7 @@ interface Windows.Foundation.Collections.IVectorView<TestComponent.Class> concre
             in uint32 name=index
             out class type=TestComponent.Class return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<TestComponent.Class> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<TestComponent.Class> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=TestComponent.Class name=items
             out uint32 return
@@ -2062,7 +2062,7 @@ interface Windows.Foundation.Collections.IVectorView<TestComponent.Composable> c
             in uint32 name=index
             out class type=TestComponent.Composable return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<TestComponent.Composable> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<TestComponent.Composable> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=TestComponent.Composable name=items
             out uint32 return
@@ -2090,7 +2090,7 @@ interface Windows.Foundation.Collections.IVectorView<TestComponent.IRequiredOne>
             in uint32 name=index
             out interface type=TestComponent.IRequiredOne return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<TestComponent.IRequiredOne> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<TestComponent.IRequiredOne> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=TestComponent.IRequiredOne name=items
             out uint32 return
@@ -2118,7 +2118,7 @@ interface Windows.Foundation.Collections.IVectorView<TestComponent.NonBlittable>
             in uint32 name=index
             out struct type=TestComponent.NonBlittable return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<TestComponent.NonBlittable> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<TestComponent.NonBlittable> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=TestComponent.NonBlittable name=items
             out uint32 return
@@ -2146,7 +2146,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.IStringa
             in uint32 name=index
             out interface type=Windows.Foundation.IStringable return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IStringable> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.IStringable> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Foundation.IStringable name=items
             out uint32 return

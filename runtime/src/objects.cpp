@@ -11,6 +11,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "arrays.h"
 #include "implements.h"
 #include "interp.h"
 #include "members.h"
@@ -112,18 +113,6 @@ namespace py::interp
         return result;
     }
 
-    /**
-     * _assign_array_(): says what a winrt.system.Array holds. Every projected
-     * type carries it, a struct as much as a class, because an array of any of
-     * them can be made. Nothing interprets an array yet, so for now it says so,
-     * and it moves to the file that does when there is one.
-     */
-    PyObject* type_assign_array(PyObject* /*cls*/, PyObject* /*arg*/) noexcept
-    {
-        PyErr_SetString(PyExc_NotImplementedError, "arrays are not interpreted yet");
-        return nullptr;
-    }
-
     namespace
     {
         /**
@@ -213,13 +202,6 @@ namespace py::interp
             }
 
             return convert_guid(*static_cast<winrt::guid const*>(info->guid));
-        }
-
-        PyObject* type_assign_array(PyObject* /*cls*/, PyObject* /*arg*/) noexcept
-        {
-            PyErr_SetString(
-                PyExc_NotImplementedError, "arrays are not interpreted yet");
-            return nullptr;
         }
 
         /**

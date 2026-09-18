@@ -519,7 +519,7 @@ class Windows.Web.Http.HttpCookieCollection python_type iterable sequence
             in uint32 name=index
             out class type=Windows.Web.Http.HttpCookie return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.HttpCookie name=items
             out uint32 return
@@ -2190,7 +2190,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptograp
             in uint32 name=index
             out class type=Windows.Security.Cryptography.Certificates.Certificate return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Security.Cryptography.Certificates.Certificate name=items
             out uint32 return
@@ -2218,7 +2218,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptograp
             in uint32 name=index
             out enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=items
             out uint32 return
@@ -2246,7 +2246,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie
             in uint32 name=index
             out class type=Windows.Web.Http.HttpCookie return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Web.Http.HttpCookie name=items
             out uint32 return

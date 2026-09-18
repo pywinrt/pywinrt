@@ -1486,7 +1486,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.Ti
             in uint32 name=index
             out class type=Windows.Media.Core.TimedMetadataTrack return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
             out uint32 return
@@ -1545,7 +1545,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.Ti
             in uint32 name=index
             out class type=Windows.Media.Core.TimedTextSource return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedTextSource name=items
             out uint32 return
@@ -2336,7 +2336,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadat
             in uint32 name=index
             out class type=Windows.Media.Core.TimedMetadataTrack return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
             out uint32 return
@@ -2388,7 +2388,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLin
             in uint32 name=index
             out class type=Windows.Media.Core.TimedTextLine return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedTextLine name=items
             out uint32 return
@@ -2440,7 +2440,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSou
             in uint32 name=index
             out class type=Windows.Media.Core.TimedTextSource return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedTextSource name=items
             out uint32 return
@@ -2492,7 +2492,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSub
             in uint32 name=index
             out class type=Windows.Media.Core.TimedTextSubformat return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedTextSubformat name=items
             out uint32 return
@@ -2539,7 +2539,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -2567,7 +2567,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.Bi
             in uint32 name=index
             out enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=items
             out uint32 return
@@ -2595,7 +2595,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.CodecInf
             in uint32 name=index
             out class type=Windows.Media.Core.CodecInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.CodecInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.CodecInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.CodecInfo name=items
             out uint32 return
@@ -2623,7 +2623,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.IMediaCu
             in uint32 name=index
             out interface type=Windows.Media.Core.IMediaCue return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.IMediaCue> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.IMediaCue> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Media.Core.IMediaCue name=items
             out uint32 return
@@ -2651,7 +2651,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseSourc
             in uint32 name=index
             out class type=Windows.Media.Core.MseSourceBuffer return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseSourceBuffer> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseSourceBuffer> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.MseSourceBuffer name=items
             out uint32 return
@@ -2679,7 +2679,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseTimeR
             in uint32 name=index
             out struct type=Windows.Media.Core.MseTimeRange return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseTimeRange> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseTimeRange> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Media.Core.MseTimeRange name=items
             out uint32 return
@@ -2707,7 +2707,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMet
             in uint32 name=index
             out class type=Windows.Media.Core.TimedMetadataTrack return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
             out uint32 return
@@ -2735,7 +2735,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTex
             in uint32 name=index
             out class type=Windows.Media.Core.TimedTextLine return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextLine> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextLine> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedTextLine name=items
             out uint32 return
@@ -2763,7 +2763,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTex
             in uint32 name=index
             out class type=Windows.Media.Core.TimedTextSource return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextSource> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextSource> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedTextSource name=items
             out uint32 return
@@ -2791,7 +2791,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTex
             in uint32 name=index
             out class type=Windows.Media.Core.TimedTextSubformat return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextSubformat> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextSubformat> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Core.TimedTextSubformat name=items
             out uint32 return
@@ -2819,7 +2819,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.
             in uint32 name=index
             out class type=Windows.Media.Devices.Core.FrameController return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.FrameController> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.FrameController> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Devices.Core.FrameController name=items
             out uint32 return
@@ -2847,7 +2847,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.
             in uint32 name=index
             out class type=Windows.Media.FaceAnalysis.DetectedFace return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.FaceAnalysis.DetectedFace name=items
             out uint32 return

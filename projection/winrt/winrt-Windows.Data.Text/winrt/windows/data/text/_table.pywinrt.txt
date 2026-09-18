@@ -387,7 +387,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -415,7 +415,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.Alternate
             in uint32 name=index
             out class type=Windows.Data.Text.AlternateWordForm return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.AlternateWordForm> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.AlternateWordForm> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Data.Text.AlternateWordForm name=items
             out uint32 return
@@ -443,7 +443,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.Selectabl
             in uint32 name=index
             out class type=Windows.Data.Text.SelectableWordSegment return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.SelectableWordSegment> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.SelectableWordSegment> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Data.Text.SelectableWordSegment name=items
             out uint32 return
@@ -471,7 +471,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhone
             in uint32 name=index
             out class type=Windows.Data.Text.TextPhoneme return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Data.Text.TextPhoneme name=items
             out uint32 return
@@ -499,7 +499,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegme
             in uint32 name=index
             out struct type=Windows.Data.Text.TextSegment return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Data.Text.TextSegment name=items
             out uint32 return
@@ -527,7 +527,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegme
             in uint32 name=index
             out class type=Windows.Data.Text.WordSegment return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegment> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegment> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Data.Text.WordSegment name=items
             out uint32 return

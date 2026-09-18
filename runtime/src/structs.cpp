@@ -15,6 +15,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "arrays.h"
 #include "generics.h"
 #include "interp.h"
 #include "objects.h"

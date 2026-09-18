@@ -1247,7 +1247,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geo
             in uint32 name=index
             out class type=Windows.Devices.Geolocation.Geopath return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geopath> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Geolocation.Geopath name=items
             out uint32 return
@@ -1299,7 +1299,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.M
             in uint32 name=index
             out class type=Windows.UI.Xaml.Controls.Maps.MapElement return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapElement> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Controls.Maps.MapElement name=items
             out uint32 return
@@ -1351,7 +1351,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.M
             in uint32 name=index
             out class type=Windows.UI.Xaml.Controls.Maps.MapLayer return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Controls.Maps.MapLayer name=items
             out uint32 return
@@ -1403,7 +1403,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.M
             in uint32 name=index
             out class type=Windows.UI.Xaml.Controls.Maps.MapRouteView return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Controls.Maps.MapRouteView name=items
             out uint32 return
@@ -1455,7 +1455,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.M
             in uint32 name=index
             out class type=Windows.UI.Xaml.Controls.Maps.MapTileSource return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Controls.Maps.MapTileSource name=items
             out uint32 return
@@ -1507,7 +1507,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObjec
             in uint32 name=index
             out class type=Windows.UI.Xaml.DependencyObject return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.DependencyObject name=items
             out uint32 return
@@ -1554,7 +1554,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation
             in uint32 name=index
             out class type=Windows.Devices.Geolocation.Geopath return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geopath> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geopath> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Geolocation.Geopath name=items
             out uint32 return
@@ -1582,7 +1582,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Local
             in uint32 name=index
             out class type=Windows.Services.Maps.LocalSearch.LocalLocation return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.Maps.LocalSearch.LocalLocation name=items
             out uint32 return
@@ -1610,7 +1610,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Ma
             in uint32 name=index
             out class type=Windows.UI.Xaml.Controls.Maps.MapElement return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapElement> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapElement> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Controls.Maps.MapElement name=items
             out uint32 return
@@ -1638,7 +1638,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Ma
             in uint32 name=index
             out class type=Windows.UI.Xaml.Controls.Maps.MapLayer return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapLayer> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Controls.Maps.MapLayer name=items
             out uint32 return
@@ -1666,7 +1666,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Ma
             in uint32 name=index
             out class type=Windows.UI.Xaml.Controls.Maps.MapRouteView return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapRouteView> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Controls.Maps.MapRouteView name=items
             out uint32 return
@@ -1694,7 +1694,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Ma
             in uint32 name=index
             out class type=Windows.UI.Xaml.Controls.Maps.MapTileSource return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Maps.MapTileSource> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Controls.Maps.MapTileSource name=items
             out uint32 return
@@ -1722,7 +1722,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.DependencyO
             in uint32 name=index
             out class type=Windows.UI.Xaml.DependencyObject return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.DependencyObject> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.DependencyObject> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.DependencyObject name=items
             out uint32 return

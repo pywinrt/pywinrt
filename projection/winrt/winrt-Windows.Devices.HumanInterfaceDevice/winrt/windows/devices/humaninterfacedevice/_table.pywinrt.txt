@@ -698,7 +698,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterf
             in uint32 name=index
             out class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControl return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidBooleanControl> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidBooleanControl> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControl name=items
             out uint32 return
@@ -726,7 +726,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterf
             in uint32 name=index
             out class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription name=items
             out uint32 return
@@ -754,7 +754,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterf
             in uint32 name=index
             out class type=Windows.Devices.HumanInterfaceDevice.HidCollection return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidCollection> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidCollection> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.HumanInterfaceDevice.HidCollection name=items
             out uint32 return
@@ -782,7 +782,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterf
             in uint32 name=index
             out class type=Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription name=items
             out uint32 return

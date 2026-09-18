@@ -141,7 +141,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.Provide
             in uint32 name=index
             out interface type=Windows.Devices.Spi.Provider.ISpiControllerProvider return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.Provider.ISpiControllerProvider> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Spi.Provider.ISpiControllerProvider> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Devices.Spi.Provider.ISpiControllerProvider name=items
             out uint32 return

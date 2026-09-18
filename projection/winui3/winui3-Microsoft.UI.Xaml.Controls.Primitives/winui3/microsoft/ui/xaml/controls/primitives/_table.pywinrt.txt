@@ -2684,7 +2684,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Prim
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase name=items
             out uint32 return
@@ -2736,7 +2736,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Prim
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase name=items
             out uint32 return
@@ -2788,7 +2788,7 @@ interface Windows.Foundation.Collections.IVector<System.Object> concrete iterabl
             in uint32 name=index
             out object return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array object name=items
             out uint32 return
@@ -2835,7 +2835,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Controls.Primitives.ScrollSnapPointBase name=items
             out uint32 return
@@ -2863,7 +2863,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Controls.Primitives.ZoomSnapPointBase name=items
             out uint32 return
@@ -2891,7 +2891,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Object> concrete ite
             in uint32 name=index
             out object return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array object name=items
             out uint32 return
@@ -2919,7 +2919,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Single> concrete ite
             in uint32 name=index
             out single return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Single> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Single> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array single name=items
             out uint32 return

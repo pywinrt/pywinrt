@@ -434,7 +434,7 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -486,7 +486,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition
             in uint32 name=index
             out interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint name=items
             out uint32 return
@@ -533,7 +533,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -561,7 +561,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Globalization.Langu
             in uint32 name=index
             out class type=Windows.Globalization.Language return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Globalization.Language name=items
             out uint32 return
@@ -589,7 +589,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecogni
             in uint32 name=index
             out interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint name=items
             out uint32 return
@@ -617,7 +617,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecogni
             in uint32 name=index
             out class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechRecognition.SpeechRecognitionResult> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult name=items
             out uint32 return

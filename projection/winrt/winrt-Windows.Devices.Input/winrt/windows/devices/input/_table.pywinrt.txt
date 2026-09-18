@@ -143,7 +143,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.Point
             in uint32 name=index
             out class type=Windows.Devices.Input.PointerDevice return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDevice> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDevice> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Input.PointerDevice name=items
             out uint32 return
@@ -171,7 +171,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.Point
             in uint32 name=index
             out struct type=Windows.Devices.Input.PointerDeviceUsage return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDeviceUsage> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDeviceUsage> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Devices.Input.PointerDeviceUsage name=items
             out uint32 return

@@ -201,7 +201,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> con
             in uint32 name=index
             out class type=Windows.UI.Shell.WindowTab return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Shell.WindowTab name=items
             out uint32 return
@@ -248,7 +248,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Shell.WindowTab>
             in uint32 name=index
             out class type=Windows.UI.Shell.WindowTab return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Shell.WindowTab> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Shell.WindowTab> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Shell.WindowTab name=items
             out uint32 return
@@ -563,7 +563,7 @@ class Windows.UI.Shell.WindowTabCollection python_type iterable sequence mutable
             in uint32 name=index
             out class type=Windows.UI.Shell.WindowTab return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Shell.WindowTab name=items
             out uint32 return

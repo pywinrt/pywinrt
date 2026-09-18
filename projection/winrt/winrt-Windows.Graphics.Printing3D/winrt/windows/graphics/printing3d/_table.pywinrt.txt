@@ -1051,7 +1051,7 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -1103,7 +1103,7 @@ interface Windows.Foundation.Collections.IVector<System.Double> concrete iterabl
             in uint32 name=index
             out double return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array double name=items
             out uint32 return
@@ -1155,7 +1155,7 @@ interface Windows.Foundation.Collections.IVector<System.UInt32> concrete iterabl
             in uint32 name=index
             out uint32 return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array uint32 name=items
             out uint32 return
@@ -1207,7 +1207,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DBaseMaterial return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DBaseMaterial name=items
             out uint32 return
@@ -1259,7 +1259,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup name=items
             out uint32 return
@@ -1311,7 +1311,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DColorMaterial return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DColorMaterial name=items
             out uint32 return
@@ -1363,7 +1363,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DColorMaterialGroup return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DColorMaterialGroup name=items
             out uint32 return
@@ -1415,7 +1415,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DComponent return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DComponent name=items
             out uint32 return
@@ -1467,7 +1467,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DComponentWithMatrix return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DComponentWithMatrix name=items
             out uint32 return
@@ -1519,7 +1519,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterial return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterial name=items
             out uint32 return
@@ -1571,7 +1571,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup name=items
             out uint32 return
@@ -1623,7 +1623,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DMesh return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMesh name=items
             out uint32 return
@@ -1675,7 +1675,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DModelTexture return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DModelTexture name=items
             out uint32 return
@@ -1727,7 +1727,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial name=items
             out uint32 return
@@ -1779,7 +1779,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup name=items
             out uint32 return
@@ -1831,7 +1831,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial name=items
             out uint32 return
@@ -1883,7 +1883,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup name=items
             out uint32 return
@@ -1935,7 +1935,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DTextureResource return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTextureResource name=items
             out uint32 return
@@ -1982,7 +1982,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -2010,7 +2010,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Double> concrete ite
             in uint32 name=index
             out double return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array double name=items
             out uint32 return
@@ -2038,7 +2038,7 @@ interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete ite
             in uint32 name=index
             out uint32 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array uint32 name=items
             out uint32 return
@@ -2066,7 +2066,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DBaseMaterial return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DBaseMaterial name=items
             out uint32 return
@@ -2094,7 +2094,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup name=items
             out uint32 return
@@ -2122,7 +2122,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DColorMaterial return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DColorMaterial name=items
             out uint32 return
@@ -2150,7 +2150,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DColorMaterialGroup return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DColorMaterialGroup name=items
             out uint32 return
@@ -2178,7 +2178,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DComponent return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DComponent> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DComponent> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DComponent name=items
             out uint32 return
@@ -2206,7 +2206,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DComponentWithMatrix return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DComponentWithMatrix name=items
             out uint32 return
@@ -2234,7 +2234,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterial return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterial name=items
             out uint32 return
@@ -2262,7 +2262,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup name=items
             out uint32 return
@@ -2290,7 +2290,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DMesh return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMesh> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMesh> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMesh name=items
             out uint32 return
@@ -2318,7 +2318,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DModelTexture return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DModelTexture name=items
             out uint32 return
@@ -2346,7 +2346,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial name=items
             out uint32 return
@@ -2374,7 +2374,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup name=items
             out uint32 return
@@ -2402,7 +2402,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial name=items
             out uint32 return
@@ -2430,7 +2430,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup name=items
             out uint32 return
@@ -2458,7 +2458,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             in uint32 name=index
             out class type=Windows.Graphics.Printing3D.Printing3DTextureResource return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTextureResource name=items
             out uint32 return

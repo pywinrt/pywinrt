@@ -2039,7 +2039,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.Activit
             in uint32 name=index
             out enum32 type=Windows.Devices.Sensors.ActivityType return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
             out uint32 return
@@ -2086,7 +2086,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Act
             in uint32 name=index
             out enum32 type=Windows.Devices.Sensors.ActivityType return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
             out uint32 return

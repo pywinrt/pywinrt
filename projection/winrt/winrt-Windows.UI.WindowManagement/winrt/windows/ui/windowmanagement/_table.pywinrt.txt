@@ -824,7 +824,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Composition.IVisualE
             in uint32 name=index
             out interface type=Windows.UI.Composition.IVisualElement return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Composition.IVisualElement> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Composition.IVisualElement> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.UI.Composition.IVisualElement name=items
             out uint32 return
@@ -871,7 +871,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Composition.IVis
             in uint32 name=index
             out interface type=Windows.UI.Composition.IVisualElement return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Composition.IVisualElement> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Composition.IVisualElement> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.UI.Composition.IVisualElement name=items
             out uint32 return
@@ -899,7 +899,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.WindowId> concre
             in uint32 name=index
             out struct type=Windows.UI.WindowId return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowId> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowId> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.UI.WindowId name=items
             out uint32 return
@@ -927,7 +927,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement
             in uint32 name=index
             out class type=Windows.UI.WindowManagement.AppWindowTitleBarOcclusion return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.AppWindowTitleBarOcclusion> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.AppWindowTitleBarOcclusion> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.WindowManagement.AppWindowTitleBarOcclusion name=items
             out uint32 return
@@ -955,7 +955,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement
             in uint32 name=index
             out class type=Windows.UI.WindowManagement.DisplayRegion return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.DisplayRegion> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.DisplayRegion> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.WindowManagement.DisplayRegion name=items
             out uint32 return
@@ -983,7 +983,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement
             in uint32 name=index
             out class type=Windows.UI.WindowManagement.WindowingEnvironment return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.WindowingEnvironment> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.WindowingEnvironment> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.WindowManagement.WindowingEnvironment name=items
             out uint32 return

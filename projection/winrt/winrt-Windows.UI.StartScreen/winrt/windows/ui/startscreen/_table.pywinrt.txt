@@ -421,7 +421,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpList
             in uint32 name=index
             out class type=Windows.UI.StartScreen.JumpListItem return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.StartScreen.JumpListItem name=items
             out uint32 return
@@ -468,7 +468,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.Jump
             in uint32 name=index
             out class type=Windows.UI.StartScreen.JumpListItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.JumpListItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.JumpListItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.StartScreen.JumpListItem name=items
             out uint32 return
@@ -496,7 +496,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.Seco
             in uint32 name=index
             out class type=Windows.UI.StartScreen.SecondaryTile return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTile> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTile> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.StartScreen.SecondaryTile name=items
             out uint32 return
@@ -524,7 +524,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.Seco
             in uint32 name=index
             out class type=Windows.UI.StartScreen.SecondaryTileVisualElements return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTileVisualElements> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTileVisualElements> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.StartScreen.SecondaryTileVisualElements name=items
             out uint32 return

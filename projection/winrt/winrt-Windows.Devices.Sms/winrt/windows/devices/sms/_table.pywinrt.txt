@@ -1004,7 +1004,7 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -1056,7 +1056,7 @@ interface Windows.Foundation.Collections.IVector<System.Int32> concrete iterable
             in uint32 name=index
             out int32 return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Int32> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array int32 name=items
             out uint32 return
@@ -1108,7 +1108,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcas
             in uint32 name=index
             out enum32 type=Windows.Devices.Sms.SmsBroadcastType return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Devices.Sms.SmsBroadcastType name=items
             out uint32 return
@@ -1160,7 +1160,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRu
             in uint32 name=index
             out class type=Windows.Devices.Sms.SmsFilterRule return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Sms.SmsFilterRule name=items
             out uint32 return
@@ -1207,7 +1207,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -1235,7 +1235,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete iter
             in uint32 name=index
             out int32 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array int32 name=items
             out uint32 return
@@ -1263,7 +1263,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBin
             in uint32 name=index
             out interface type=Windows.Devices.Sms.ISmsBinaryMessage return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Devices.Sms.ISmsBinaryMessage name=items
             out uint32 return
@@ -1291,7 +1291,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMes
             in uint32 name=index
             out interface type=Windows.Devices.Sms.ISmsMessage return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Devices.Sms.ISmsMessage name=items
             out uint32 return
@@ -1319,7 +1319,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsBroa
             in uint32 name=index
             out enum32 type=Windows.Devices.Sms.SmsBroadcastType return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsBroadcastType> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsBroadcastType> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Devices.Sms.SmsBroadcastType name=items
             out uint32 return
@@ -1347,7 +1347,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsFilt
             in uint32 name=index
             out class type=Windows.Devices.Sms.SmsFilterRule return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsFilterRule> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsFilterRule> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Sms.SmsFilterRule name=items
             out uint32 return
@@ -1375,7 +1375,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsMess
             in uint32 name=index
             out class type=Windows.Devices.Sms.SmsMessageRegistration return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsMessageRegistration> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsMessageRegistration> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Sms.SmsMessageRegistration name=items
             out uint32 return

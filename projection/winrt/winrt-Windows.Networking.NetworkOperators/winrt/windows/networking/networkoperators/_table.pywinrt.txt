@@ -2710,7 +2710,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -2738,7 +2738,7 @@ interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete ite
             in uint32 name=index
             out uint32 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array uint32 name=items
             out uint32 return
@@ -2766,7 +2766,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             in uint32 name=index
             out class type=Windows.Networking.Connectivity.ConnectionProfile return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Connectivity.ConnectionProfile name=items
             out uint32 return
@@ -2794,7 +2794,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName
             in uint32 name=index
             out class type=Windows.Networking.HostName return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.HostName name=items
             out uint32 return
@@ -2822,7 +2822,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.ESimDiscoverEvent return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimDiscoverEvent> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimDiscoverEvent> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.ESimDiscoverEvent name=items
             out uint32 return
@@ -2850,7 +2850,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.ESimProfile return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimProfile> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimProfile> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.ESimProfile name=items
             out uint32 return
@@ -2878,7 +2878,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar name=items
             out uint32 return
@@ -2906,7 +2906,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandCellCdma return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellCdma> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellCdma> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellCdma name=items
             out uint32 return
@@ -2934,7 +2934,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandCellGsm return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellGsm> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellGsm> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellGsm name=items
             out uint32 return
@@ -2962,7 +2962,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandCellLte return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellLte> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellLte> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellLte name=items
             out uint32 return
@@ -2990,7 +2990,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandCellNR return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellNR name=items
             out uint32 return
@@ -3018,7 +3018,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma name=items
             out uint32 return
@@ -3046,7 +3046,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandCellUmts return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellUmts> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellUmts> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellUmts name=items
             out uint32 return
@@ -3074,7 +3074,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation name=items
             out uint32 return
@@ -3102,7 +3102,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange name=items
             out uint32 return
@@ -3130,7 +3130,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange name=items
             out uint32 return
@@ -3158,7 +3158,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out enum32 type=Windows.Networking.NetworkOperators.MobileBroadbandPinType return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandPinType> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandPinType> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Networking.NetworkOperators.MobileBroadbandPinType name=items
             out uint32 return
@@ -3186,7 +3186,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange name=items
             out uint32 return
@@ -3214,7 +3214,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo name=items
             out uint32 return
@@ -3242,7 +3242,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.MobileBroadbandUiccApp return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandUiccApp> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandUiccApp> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandUiccApp name=items
             out uint32 return
@@ -3270,7 +3270,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             in uint32 name=index
             out class type=Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient name=items
             out uint32 return

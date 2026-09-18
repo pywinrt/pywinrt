@@ -293,7 +293,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Globalization.Langu
             in uint32 name=index
             out class type=Windows.Globalization.Language return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Globalization.Language name=items
             out uint32 return
@@ -321,7 +321,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrLine> 
             in uint32 name=index
             out class type=Windows.Media.Ocr.OcrLine return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrLine> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrLine> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Ocr.OcrLine name=items
             out uint32 return
@@ -349,7 +349,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrWord> 
             in uint32 name=index
             out class type=Windows.Media.Ocr.OcrWord return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrWord> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrWord> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Ocr.OcrWord name=items
             out uint32 return

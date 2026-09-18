@@ -189,6 +189,7 @@ namespace py::table
         to_string = 17,
         value = 18,
         close = 19,
+        get_many = 20,
     };
 
     enum class param_category : uint32_t

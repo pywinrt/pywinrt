@@ -535,7 +535,7 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -587,7 +587,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> concret
             in uint32 name=index
             out class type=Windows.Foundation.Uri return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Foundation.Uri name=items
             out uint32 return
@@ -639,7 +639,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Networking.HostName> co
             in uint32 name=index
             out class type=Windows.Networking.HostName return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.HostName name=items
             out uint32 return
@@ -691,7 +691,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId
             in uint32 name=index
             out class type=Windows.Networking.Vpn.VpnAppId return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnAppId> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Vpn.VpnAppId name=items
             out uint32 return
@@ -743,7 +743,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomai
             in uint32 name=index
             out class type=Windows.Networking.Vpn.VpnDomainNameInfo return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Vpn.VpnDomainNameInfo name=items
             out uint32 return
@@ -795,7 +795,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNames
             in uint32 name=index
             out class type=Windows.Networking.Vpn.VpnNamespaceInfo return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Vpn.VpnNamespaceInfo name=items
             out uint32 return
@@ -847,7 +847,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute
             in uint32 name=index
             out class type=Windows.Networking.Vpn.VpnRoute return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Vpn.VpnRoute name=items
             out uint32 return
@@ -899,7 +899,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTraff
             in uint32 name=index
             out class type=Windows.Networking.Vpn.VpnTrafficFilter return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Vpn.VpnTrafficFilter name=items
             out uint32 return
@@ -946,7 +946,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -974,7 +974,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> con
             in uint32 name=index
             out class type=Windows.Foundation.Uri return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Foundation.Uri name=items
             out uint32 return
@@ -1002,7 +1002,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName
             in uint32 name=index
             out class type=Windows.Networking.HostName return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.HostName name=items
             out uint32 return
@@ -1030,7 +1030,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpn
             in uint32 name=index
             out interface type=Windows.Networking.Vpn.IVpnCustomPrompt return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPrompt> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPrompt> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Networking.Vpn.IVpnCustomPrompt name=items
             out uint32 return
@@ -1058,7 +1058,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpn
             in uint32 name=index
             out interface type=Windows.Networking.Vpn.IVpnCustomPromptElement return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPromptElement> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPromptElement> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Networking.Vpn.IVpnCustomPromptElement name=items
             out uint32 return
@@ -1086,7 +1086,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpn
             in uint32 name=index
             out interface type=Windows.Networking.Vpn.IVpnProfile return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Networking.Vpn.IVpnProfile name=items
             out uint32 return
@@ -1114,7 +1114,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnA
             in uint32 name=index
             out class type=Windows.Networking.Vpn.VpnAppId return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnAppId> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnAppId> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Vpn.VpnAppId name=items
             out uint32 return
@@ -1142,7 +1142,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnD
             in uint32 name=index
             out class type=Windows.Networking.Vpn.VpnDomainNameInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnDomainNameInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnDomainNameInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Vpn.VpnDomainNameInfo name=items
             out uint32 return
@@ -1170,7 +1170,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnN
             in uint32 name=index
             out class type=Windows.Networking.Vpn.VpnNamespaceInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnNamespaceInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnNamespaceInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Vpn.VpnNamespaceInfo name=items
             out uint32 return
@@ -1198,7 +1198,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnR
             in uint32 name=index
             out class type=Windows.Networking.Vpn.VpnRoute return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnRoute> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnRoute> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Vpn.VpnRoute name=items
             out uint32 return
@@ -1226,7 +1226,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnT
             in uint32 name=index
             out class type=Windows.Networking.Vpn.VpnTrafficFilter return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnTrafficFilter> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.VpnTrafficFilter> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.Vpn.VpnTrafficFilter name=items
             out uint32 return

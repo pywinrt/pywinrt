@@ -228,7 +228,7 @@ class Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection activatable python
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.ColorKeyFrame return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.ColorKeyFrame> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.ColorKeyFrame> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.ColorKeyFrame name=items
             out uint32 return
@@ -631,7 +631,7 @@ class Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection activatable pytho
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.DoubleKeyFrame return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.DoubleKeyFrame name=items
             out uint32 return
@@ -2318,7 +2318,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.ColorKeyFrame return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.ColorKeyFrame> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.ColorKeyFrame> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.ColorKeyFrame name=items
             out uint32 return
@@ -2370,7 +2370,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.DoubleKeyFrame return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.DoubleKeyFrame name=items
             out uint32 return
@@ -2422,7 +2422,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.ObjectKeyFrame return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.ObjectKeyFrame name=items
             out uint32 return
@@ -2474,7 +2474,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.PointKeyFrame return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.PointKeyFrame> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.PointKeyFrame> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.PointKeyFrame name=items
             out uint32 return
@@ -2526,7 +2526,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.Timeline return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.Timeline> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.Timeline> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.Timeline name=items
             out uint32 return
@@ -2578,7 +2578,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.Transition return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.Transition> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.Transition> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.Transition name=items
             out uint32 return
@@ -2625,7 +2625,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Anima
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.ColorKeyFrame return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Animation.ColorKeyFrame> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Animation.ColorKeyFrame> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.ColorKeyFrame name=items
             out uint32 return
@@ -2653,7 +2653,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Anima
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.DoubleKeyFrame return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.DoubleKeyFrame name=items
             out uint32 return
@@ -2681,7 +2681,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Anima
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.ObjectKeyFrame return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.ObjectKeyFrame name=items
             out uint32 return
@@ -2709,7 +2709,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Anima
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.PointKeyFrame return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Animation.PointKeyFrame> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Animation.PointKeyFrame> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.PointKeyFrame name=items
             out uint32 return
@@ -2737,7 +2737,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Anima
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.Timeline return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Animation.Timeline> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Animation.Timeline> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.Timeline name=items
             out uint32 return
@@ -2765,7 +2765,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Anima
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.Transition return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Animation.Transition> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Animation.Transition> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.Transition name=items
             out uint32 return
@@ -2949,7 +2949,7 @@ class Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection activatable pytho
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.ObjectKeyFrame return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.ObjectKeyFrame> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.ObjectKeyFrame name=items
             out uint32 return
@@ -3121,7 +3121,7 @@ class Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection activatable python
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.PointKeyFrame return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.PointKeyFrame> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.PointKeyFrame> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.PointKeyFrame name=items
             out uint32 return
@@ -3952,7 +3952,7 @@ class Windows.UI.Xaml.Media.Animation.TimelineCollection activatable python_type
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.Timeline return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.Timeline> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.Timeline> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.Timeline name=items
             out uint32 return
@@ -4015,7 +4015,7 @@ class Windows.UI.Xaml.Media.Animation.TransitionCollection activatable python_ty
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Animation.Transition return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.Transition> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Animation.Transition> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Animation.Transition name=items
             out uint32 return

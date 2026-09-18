@@ -962,7 +962,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -990,7 +990,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
             in uint32 name=index
             out class type=Windows.Media.Import.PhotoImportItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Import.PhotoImportItem name=items
             out uint32 return
@@ -1018,7 +1018,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
             in uint32 name=index
             out class type=Windows.Media.Import.PhotoImportOperation return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportOperation> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportOperation> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Import.PhotoImportOperation name=items
             out uint32 return
@@ -1046,7 +1046,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
             in uint32 name=index
             out class type=Windows.Media.Import.PhotoImportSidecar return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportSidecar> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportSidecar> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Import.PhotoImportSidecar name=items
             out uint32 return
@@ -1074,7 +1074,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
             in uint32 name=index
             out class type=Windows.Media.Import.PhotoImportSource return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportSource> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportSource> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Import.PhotoImportSource name=items
             out uint32 return
@@ -1102,7 +1102,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
             in uint32 name=index
             out class type=Windows.Media.Import.PhotoImportStorageMedium return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportStorageMedium> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportStorageMedium> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Import.PhotoImportStorageMedium name=items
             out uint32 return
@@ -1130,7 +1130,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
             in uint32 name=index
             out class type=Windows.Media.Import.PhotoImportVideoSegment return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportVideoSegment> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportVideoSegment> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Import.PhotoImportVideoSegment name=items
             out uint32 return
