@@ -279,7 +279,7 @@ namespace py::cpp::_winrt
 
     struct MappingIter_object
     {
-        PyObject_HEAD;
+        PyObject_HEAD
         PyObject* _iter;
         PyObject* _key;
     };

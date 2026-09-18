@@ -50,7 +50,7 @@ namespace py
     template<typename T>
     struct winrt_struct_wrapper
     {
-        PyObject_HEAD;
+        PyObject_HEAD
         T obj{};
     };
 
@@ -62,7 +62,7 @@ namespace py
     template<typename T>
     struct winrt_wrapper
     {
-        PyObject_HEAD;
+        PyObject_HEAD
         /** The winrt object instance. */
         T obj{};
         static_assert(std::is_base_of_v<winrt::Windows::Foundation::IUnknown, T>);

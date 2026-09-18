@@ -10,7 +10,7 @@ namespace py::cpp::_winrt
      */
     struct Array
     {
-        PyObject_HEAD;
+        PyObject_HEAD
         std::unique_ptr<py::Array> array;
     };
 
