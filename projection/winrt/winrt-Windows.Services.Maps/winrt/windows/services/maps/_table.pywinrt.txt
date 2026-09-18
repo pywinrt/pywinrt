@@ -686,7 +686,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Maneu
             in uint32 name=index
             out class type=Windows.Services.Maps.ManeuverWarning return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.ManeuverWarning> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.ManeuverWarning> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.Maps.ManeuverWarning name=items
             out uint32 return
@@ -714,7 +714,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapLo
             in uint32 name=index
             out class type=Windows.Services.Maps.MapLocation return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapLocation> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapLocation> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.Maps.MapLocation name=items
             out uint32 return
@@ -742,7 +742,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRo
             in uint32 name=index
             out class type=Windows.Services.Maps.MapRoute return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRoute> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRoute> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.Maps.MapRoute name=items
             out uint32 return
@@ -770,7 +770,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRo
             in uint32 name=index
             out class type=Windows.Services.Maps.MapRouteLeg return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRouteLeg> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRouteLeg> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.Maps.MapRouteLeg name=items
             out uint32 return
@@ -798,7 +798,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRo
             in uint32 name=index
             out class type=Windows.Services.Maps.MapRouteManeuver return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRouteManeuver> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.MapRouteManeuver> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.Maps.MapRouteManeuver name=items
             out uint32 return

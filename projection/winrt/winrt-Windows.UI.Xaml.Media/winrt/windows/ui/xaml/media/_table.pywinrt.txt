@@ -252,7 +252,7 @@ class Windows.UI.Xaml.Media.BrushCollection activatable python_type iterable seq
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Brush return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Brush> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Brush> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Brush name=items
             out uint32 return
@@ -432,7 +432,7 @@ class Windows.UI.Xaml.Media.DoubleCollection activatable python_type iterable se
             in uint32 name=index
             out double return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array double name=items
             out uint32 return
@@ -637,7 +637,7 @@ class Windows.UI.Xaml.Media.GeometryCollection activatable python_type iterable 
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Geometry return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Geometry> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Geometry> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Geometry name=items
             out uint32 return
@@ -791,7 +791,7 @@ class Windows.UI.Xaml.Media.GradientStopCollection activatable python_type itera
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.GradientStop return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientStop> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientStop> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.GradientStop name=items
             out uint32 return
@@ -1655,7 +1655,7 @@ interface Windows.Foundation.Collections.IVector<System.Double> concrete iterabl
             in uint32 name=index
             out double return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array double name=items
             out uint32 return
@@ -1707,7 +1707,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Foundation.Point> concr
             in uint32 name=index
             out struct type=Windows.Foundation.Point return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Point> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Point> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Foundation.Point name=items
             out uint32 return
@@ -1759,7 +1759,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Brush> co
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Brush return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Brush> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Brush> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Brush name=items
             out uint32 return
@@ -1811,7 +1811,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Geometry>
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Geometry return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Geometry> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Geometry> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Geometry name=items
             out uint32 return
@@ -1863,7 +1863,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientS
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.GradientStop return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientStop> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientStop> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.GradientStop name=items
             out uint32 return
@@ -1915,7 +1915,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathFigur
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.PathFigure return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathFigure> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathFigure> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.PathFigure name=items
             out uint32 return
@@ -1967,7 +1967,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathSegme
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.PathSegment return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathSegment> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathSegment> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.PathSegment name=items
             out uint32 return
@@ -2019,7 +2019,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.TimelineM
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.TimelineMarker return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.TimelineMarker> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.TimelineMarker> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.TimelineMarker name=items
             out uint32 return
@@ -2071,7 +2071,7 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Transform
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Transform return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Transform> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Transform> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Transform name=items
             out uint32 return
@@ -2118,7 +2118,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Double> concrete ite
             in uint32 name=index
             out double return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array double name=items
             out uint32 return
@@ -2146,7 +2146,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> c
             in uint32 name=index
             out struct type=Windows.Foundation.Point return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Foundation.Point name=items
             out uint32 return
@@ -2174,7 +2174,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Pr
             in uint32 name=index
             out class type=Windows.UI.Xaml.Controls.Primitives.Popup return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Primitives.Popup> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Primitives.Popup> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Controls.Primitives.Popup name=items
             out uint32 return
@@ -2202,7 +2202,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Brush
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Brush return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Brush> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Brush> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Brush name=items
             out uint32 return
@@ -2230,7 +2230,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Geome
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Geometry return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Geometry> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Geometry> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Geometry name=items
             out uint32 return
@@ -2258,7 +2258,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Gradi
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.GradientStop return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.GradientStop> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.GradientStop> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.GradientStop name=items
             out uint32 return
@@ -2286,7 +2286,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.PathF
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.PathFigure return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.PathFigure> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.PathFigure> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.PathFigure name=items
             out uint32 return
@@ -2314,7 +2314,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.PathS
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.PathSegment return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.PathSegment> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.PathSegment> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.PathSegment name=items
             out uint32 return
@@ -2342,7 +2342,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Timel
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.TimelineMarker return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.TimelineMarker> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.TimelineMarker> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.TimelineMarker name=items
             out uint32 return
@@ -2370,7 +2370,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Trans
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Transform return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Transform> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Media.Transform> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Transform name=items
             out uint32 return
@@ -2779,7 +2779,7 @@ class Windows.UI.Xaml.Media.PathFigureCollection activatable python_type iterabl
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.PathFigure return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathFigure> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathFigure> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.PathFigure name=items
             out uint32 return
@@ -2869,7 +2869,7 @@ class Windows.UI.Xaml.Media.PathSegmentCollection activatable python_type iterab
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.PathSegment return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathSegment> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathSegment> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.PathSegment name=items
             out uint32 return
@@ -3045,7 +3045,7 @@ class Windows.UI.Xaml.Media.PointCollection activatable python_type iterable seq
             in uint32 name=index
             out struct type=Windows.Foundation.Point return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Point> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Point> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Foundation.Point name=items
             out uint32 return
@@ -3581,7 +3581,7 @@ class Windows.UI.Xaml.Media.TimelineMarkerCollection activatable python_type ite
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.TimelineMarker return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.TimelineMarker> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.TimelineMarker> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.TimelineMarker name=items
             out uint32 return
@@ -3668,7 +3668,7 @@ class Windows.UI.Xaml.Media.TransformCollection activatable python_type iterable
             in uint32 name=index
             out class type=Windows.UI.Xaml.Media.Transform return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Transform> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Transform> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Xaml.Media.Transform name=items
             out uint32 return

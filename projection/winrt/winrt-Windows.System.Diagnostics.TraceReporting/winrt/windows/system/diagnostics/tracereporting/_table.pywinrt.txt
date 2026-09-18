@@ -160,7 +160,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Guid> concrete itera
             in uint32 name=index
             out guid return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array guid name=items
             out uint32 return
@@ -188,7 +188,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.
             in uint32 name=index
             out class type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo name=items
             out uint32 return

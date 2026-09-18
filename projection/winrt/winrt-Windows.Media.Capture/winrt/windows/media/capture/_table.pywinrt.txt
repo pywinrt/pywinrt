@@ -4389,7 +4389,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.AppBr
             in uint32 name=index
             out class type=Windows.Media.Capture.AppBroadcastPlugIn return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.AppBroadcastPlugIn> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.AppBroadcastPlugIn> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Capture.AppBroadcastPlugIn name=items
             out uint32 return
@@ -4417,7 +4417,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frame
             in uint32 name=index
             out class type=Windows.Media.Capture.Frames.MediaFrameSourceInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Capture.Frames.MediaFrameSourceInfo name=items
             out uint32 return
@@ -4445,7 +4445,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Media
             in uint32 name=index
             out class type=Windows.Media.Capture.MediaCaptureVideoProfile return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfile> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfile> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Capture.MediaCaptureVideoProfile name=items
             out uint32 return
@@ -4473,7 +4473,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Media
             in uint32 name=index
             out class type=Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription name=items
             out uint32 return

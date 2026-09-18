@@ -400,7 +400,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Local
             in uint32 name=index
             out class type=Windows.Services.Maps.LocalSearch.LocalLocation return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.Maps.LocalSearch.LocalLocation name=items
             out uint32 return
@@ -428,7 +428,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.Local
             in uint32 name=index
             out class type=Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem name=items
             out uint32 return

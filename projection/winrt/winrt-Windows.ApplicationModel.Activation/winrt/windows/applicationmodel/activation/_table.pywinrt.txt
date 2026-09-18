@@ -2078,7 +2078,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageIte
             in uint32 name=index
             out interface type=Windows.Storage.IStorageItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Storage.IStorageItem name=items
             out uint32 return
@@ -2106,7 +2106,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile
             in uint32 name=index
             out class type=Windows.Storage.StorageFile return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Storage.StorageFile name=items
             out uint32 return
@@ -2134,7 +2134,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.Sh
             in uint32 name=index
             out class type=Windows.UI.Notifications.ShownTileNotification return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ShownTileNotification> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ShownTileNotification> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.UI.Notifications.ShownTileNotification name=items
             out uint32 return

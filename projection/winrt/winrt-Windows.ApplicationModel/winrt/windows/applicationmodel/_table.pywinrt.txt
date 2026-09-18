@@ -1371,7 +1371,7 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppIns
             in uint32 name=index
             out class type=Windows.ApplicationModel.AppInstance return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.AppInstance> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.AppInstance name=items
             out uint32 return
@@ -1423,7 +1423,7 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Packag
             in uint32 name=index
             out class type=Windows.ApplicationModel.Package return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.Package name=items
             out uint32 return
@@ -1475,7 +1475,7 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Packag
             in uint32 name=index
             out class type=Windows.ApplicationModel.PackageContentGroup return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.PackageContentGroup name=items
             out uint32 return
@@ -1522,7 +1522,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Ap
             in uint32 name=index
             out class type=Windows.ApplicationModel.AppInstance return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInstance> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInstance> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.AppInstance name=items
             out uint32 return
@@ -1550,7 +1550,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             in uint32 name=index
             out class type=Windows.ApplicationModel.Core.AppListEntry return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.Core.AppListEntry name=items
             out uint32 return
@@ -1578,7 +1578,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Pa
             in uint32 name=index
             out class type=Windows.ApplicationModel.Package return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.Package name=items
             out uint32 return
@@ -1606,7 +1606,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Pa
             in uint32 name=index
             out class type=Windows.ApplicationModel.PackageContentGroup return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageContentGroup> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageContentGroup> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.PackageContentGroup name=items
             out uint32 return
@@ -1634,7 +1634,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.St
             in uint32 name=index
             out class type=Windows.ApplicationModel.StartupTask return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.ApplicationModel.StartupTask name=items
             out uint32 return
@@ -1662,7 +1662,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> con
             in uint32 name=index
             out class type=Windows.Foundation.Uri return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Foundation.Uri name=items
             out uint32 return

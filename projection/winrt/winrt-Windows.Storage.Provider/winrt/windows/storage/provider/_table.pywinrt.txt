@@ -929,7 +929,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Storage.Provider.IStora
             in uint32 name=index
             out interface type=Windows.Storage.Provider.IStorageProviderUICommand return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.IStorageProviderUICommand> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.IStorageProviderUICommand> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Storage.Provider.IStorageProviderUICommand name=items
             out uint32 return
@@ -981,7 +981,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Storage.Provider.Storag
             in uint32 name=index
             out class type=Windows.Storage.Provider.StorageProviderFileTypeInfo return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.StorageProviderFileTypeInfo> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.StorageProviderFileTypeInfo> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Storage.Provider.StorageProviderFileTypeInfo name=items
             out uint32 return
@@ -1033,7 +1033,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Storage.Provider.Storag
             in uint32 name=index
             out class type=Windows.Storage.Provider.StorageProviderItemPropertyDefinition return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.StorageProviderItemPropertyDefinition> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.StorageProviderItemPropertyDefinition> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Storage.Provider.StorageProviderItemPropertyDefinition name=items
             out uint32 return
@@ -1085,7 +1085,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Storage.Provider.Storag
             in uint32 name=index
             out class type=Windows.Storage.Provider.StorageProviderKnownFolderEntry return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.StorageProviderKnownFolderEntry> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.StorageProviderKnownFolderEntry> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Storage.Provider.StorageProviderKnownFolderEntry name=items
             out uint32 return
@@ -1132,7 +1132,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Guid> concrete itera
             in uint32 name=index
             out guid return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array guid name=items
             out uint32 return
@@ -1160,7 +1160,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -1188,7 +1188,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageIte
             in uint32 name=index
             out interface type=Windows.Storage.IStorageItem return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Storage.IStorageItem name=items
             out uint32 return
@@ -1216,7 +1216,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.IS
             in uint32 name=index
             out interface type=Windows.Storage.Provider.IStorageProviderUICommand return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.IStorageProviderUICommand> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.IStorageProviderUICommand> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.Storage.Provider.IStorageProviderUICommand name=items
             out uint32 return
@@ -1244,7 +1244,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.St
             in uint32 name=index
             out class type=Windows.Storage.Provider.StorageProviderFileTypeInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderFileTypeInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderFileTypeInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Storage.Provider.StorageProviderFileTypeInfo name=items
             out uint32 return
@@ -1272,7 +1272,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.St
             in uint32 name=index
             out class type=Windows.Storage.Provider.StorageProviderItemPropertyDefinition return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderItemPropertyDefinition> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderItemPropertyDefinition> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Storage.Provider.StorageProviderItemPropertyDefinition name=items
             out uint32 return
@@ -1300,7 +1300,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.St
             in uint32 name=index
             out class type=Windows.Storage.Provider.StorageProviderKnownFolderEntry return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderKnownFolderEntry> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderKnownFolderEntry> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Storage.Provider.StorageProviderKnownFolderEntry name=items
             out uint32 return
@@ -1328,7 +1328,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.St
             in uint32 name=index
             out class type=Windows.Storage.Provider.StorageProviderSyncRootInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderSyncRootInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderSyncRootInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Storage.Provider.StorageProviderSyncRootInfo name=items
             out uint32 return
@@ -1356,7 +1356,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.Sort
             in uint32 name=index
             out struct type=Windows.Storage.Search.SortEntry return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.SortEntry> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.SortEntry> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Storage.Search.SortEntry name=items
             out uint32 return

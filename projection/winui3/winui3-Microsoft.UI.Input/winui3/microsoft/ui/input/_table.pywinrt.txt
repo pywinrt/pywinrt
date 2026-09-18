@@ -768,7 +768,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Input.PointerPoint
             in uint32 name=index
             out class type=Microsoft.UI.Input.PointerPoint return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Input.PointerPoint> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Input.PointerPoint> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Input.PointerPoint name=items
             out uint32 return
@@ -815,7 +815,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Input.PointerP
             in uint32 name=index
             out class type=Microsoft.UI.Input.PointerPoint return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Input.PointerPoint> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Input.PointerPoint> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Input.PointerPoint name=items
             out uint32 return

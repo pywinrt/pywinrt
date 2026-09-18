@@ -896,7 +896,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Automation.Au
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Automation.AutomationAnnotation return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Automation.AutomationAnnotation> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Automation.AutomationAnnotation> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Automation.AutomationAnnotation name=items
             out uint32 return
@@ -948,7 +948,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.DependencyObj
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.DependencyObject return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.DependencyObject> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.DependencyObject> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.DependencyObject name=items
             out uint32 return
@@ -1000,7 +1000,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.UIElement> co
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.UIElement return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.UIElement> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.UIElement> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.UIElement name=items
             out uint32 return
@@ -1047,7 +1047,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Automatio
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.Automation.AutomationAnnotation return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Automation.AutomationAnnotation> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Automation.AutomationAnnotation> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.Automation.AutomationAnnotation name=items
             out uint32 return
@@ -1075,7 +1075,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Dependenc
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.DependencyObject return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.DependencyObject> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.DependencyObject> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.DependencyObject name=items
             out uint32 return
@@ -1103,7 +1103,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.UIElement
             in uint32 name=index
             out class type=Microsoft.UI.Xaml.UIElement return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.UIElement> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.UIElement> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Xaml.UIElement name=items
             out uint32 return

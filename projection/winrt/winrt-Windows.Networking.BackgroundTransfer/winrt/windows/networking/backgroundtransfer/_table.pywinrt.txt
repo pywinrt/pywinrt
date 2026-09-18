@@ -1514,7 +1514,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> concret
             in uint32 name=index
             out class type=Windows.Foundation.Uri return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Foundation.Uri name=items
             out uint32 return
@@ -1566,7 +1566,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Networking.BackgroundTr
             in uint32 name=index
             out struct type=Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange name=items
             out uint32 return
@@ -1618,7 +1618,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.WebErrorStatus> con
             in uint32 name=index
             out enum32 type=Windows.Web.WebErrorStatus return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.WebErrorStatus> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.WebErrorStatus> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Web.WebErrorStatus name=items
             out uint32 return
@@ -1665,7 +1665,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> con
             in uint32 name=index
             out class type=Windows.Foundation.Uri return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Foundation.Uri name=items
             out uint32 return
@@ -1693,7 +1693,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Backgrou
             in uint32 name=index
             out struct type=Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array struct type=Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange name=items
             out uint32 return
@@ -1721,7 +1721,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Backgrou
             in uint32 name=index
             out class type=Windows.Networking.BackgroundTransfer.DownloadOperation return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.DownloadOperation> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.DownloadOperation> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.BackgroundTransfer.DownloadOperation name=items
             out uint32 return
@@ -1749,7 +1749,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Backgrou
             in uint32 name=index
             out class type=Windows.Networking.BackgroundTransfer.UploadOperation return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.UploadOperation> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.UploadOperation> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.BackgroundTransfer.UploadOperation name=items
             out uint32 return
@@ -1777,7 +1777,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.WebErrorStatus>
             in uint32 name=index
             out enum32 type=Windows.Web.WebErrorStatus return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.WebErrorStatus> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.WebErrorStatus> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Web.WebErrorStatus name=items
             out uint32 return

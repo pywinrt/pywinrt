@@ -2703,7 +2703,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Gener
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat name=items
             out uint32 return
@@ -2750,7 +2750,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.G
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic name=items
             out uint32 return
@@ -2778,7 +2778,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.G
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult name=items
             out uint32 return
@@ -2806,7 +2806,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.G
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor name=items
             out uint32 return
@@ -2834,7 +2834,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.G
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService name=items
             out uint32 return
@@ -2862,7 +2862,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.G
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic name=items
             out uint32 return
@@ -2890,7 +2890,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.G
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor name=items
             out uint32 return
@@ -2918,7 +2918,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.G
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat name=items
             out uint32 return
@@ -2946,7 +2946,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.G
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient name=items
             out uint32 return

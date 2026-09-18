@@ -14,6 +14,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "arrays.h"
 #include "interp.h"
 #include "members.h"
 #include "module_state.h"
@@ -384,7 +385,13 @@ namespace py::interp
                     return false;
                 }
 
-                if (slot >= overload.shape->count)
+                // An array is two arguments - the count and the elements -
+                // and everything else is one.
+                auto const is_array = arg.category != table::param_category::in
+                                      && arg.category != table::param_category::out;
+                auto const slots = is_array ? 2u : 1u;
+
+                if (slot + slots > overload.shape->count)
                 {
                     PyErr_Format(
                         PyExc_ImportError,
@@ -394,17 +401,30 @@ namespace py::interp
                 }
 
                 arg.offset = overload.shape->offsets[slot];
-                slot += arg.category == table::param_category::in
-                                || arg.category == table::param_category::out
-                            ? 1
-                            : 2;
+
+                if (is_array)
+                {
+                    arg.data_offset = overload.shape->offsets[slot + 1];
+                }
+
+                slot += slots;
 
                 if (!needs_storage(arg))
                 {
                     continue;
                 }
 
-                if (arg.code == table::type_code::struct_)
+                uint32_t size{};
+                uint32_t align{};
+
+                if (arg.category == table::param_category::receive_array)
+                {
+                    // Only the count and the pointer are received here; the
+                    // elements are the callee's to allocate.
+                    size = sizeof(array_out);
+                    align = alignof(array_out);
+                }
+                else if (arg.code == table::type_code::struct_)
                 {
                     // A struct from a package that has not been imported yet
                     // cannot be measured here, so the whole block is laid out
@@ -412,13 +432,17 @@ namespace py::interp
                     measured = false;
                     continue;
                 }
+                else
+                {
+                    auto const layout = table::get_value_layout(arg.code);
+                    size = layout.size;
+                    align = layout.align;
+                }
 
-                auto const layout = table::get_value_layout(arg.code);
-
-                cursor = align_up(cursor, layout.align);
+                cursor = align_up(cursor, align);
                 arg.out_offset = static_cast<uint16_t>(cursor);
-                cursor += layout.size;
-                widest = std::max(widest, layout.align);
+                cursor += size;
+                widest = std::max(widest, align);
             }
 
             overload.prepared = measured;

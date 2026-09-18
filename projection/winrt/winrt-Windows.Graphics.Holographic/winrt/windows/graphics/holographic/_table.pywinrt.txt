@@ -1205,7 +1205,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.Ho
             in uint32 name=index
             out class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport name=items
             out uint32 return
@@ -1257,7 +1257,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.Ho
             in uint32 name=index
             out class type=Windows.Graphics.Holographic.HolographicQuadLayer return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Holographic.HolographicQuadLayer name=items
             out uint32 return
@@ -1304,7 +1304,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Di
             in uint32 name=index
             out enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=items
             out uint32 return
@@ -1332,7 +1332,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographi
             in uint32 name=index
             out class type=Windows.Graphics.Holographic.HolographicCamera return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCamera> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCamera> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Holographic.HolographicCamera name=items
             out uint32 return
@@ -1360,7 +1360,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographi
             in uint32 name=index
             out class type=Windows.Graphics.Holographic.HolographicCameraPose return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCameraPose> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicCameraPose> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Holographic.HolographicCameraPose name=items
             out uint32 return
@@ -1388,7 +1388,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographi
             in uint32 name=index
             out enum32 type=Windows.Graphics.Holographic.HolographicDepthReprojectionMethod return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicDepthReprojectionMethod> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Graphics.Holographic.HolographicDepthReprojectionMethod name=items
             out uint32 return
@@ -1416,7 +1416,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographi
             in uint32 name=index
             out class type=Windows.Graphics.Holographic.HolographicFramePresentationReport return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Holographic.HolographicFramePresentationReport name=items
             out uint32 return
@@ -1444,7 +1444,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographi
             in uint32 name=index
             out class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFrameScanoutReport> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Holographic.HolographicFrameScanoutReport name=items
             out uint32 return
@@ -1472,7 +1472,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographi
             in uint32 name=index
             out class type=Windows.Graphics.Holographic.HolographicQuadLayer return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicQuadLayer> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicQuadLayer> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Graphics.Holographic.HolographicQuadLayer name=items
             out uint32 return

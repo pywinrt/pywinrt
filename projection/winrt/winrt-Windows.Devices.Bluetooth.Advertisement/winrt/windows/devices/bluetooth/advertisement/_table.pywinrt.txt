@@ -951,7 +951,7 @@ interface Windows.Foundation.Collections.IVector<System.Guid> concrete iterable 
             in uint32 name=index
             out guid return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Guid> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array guid name=items
             out uint32 return
@@ -1003,7 +1003,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Adver
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern name=items
             out uint32 return
@@ -1055,7 +1055,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Adver
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection name=items
             out uint32 return
@@ -1107,7 +1107,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Adver
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData name=items
             out uint32 return
@@ -1154,7 +1154,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Guid> concrete itera
             in uint32 name=index
             out guid return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array guid name=items
             out uint32 return
@@ -1182,7 +1182,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.A
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern name=items
             out uint32 return
@@ -1210,7 +1210,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.A
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection name=items
             out uint32 return
@@ -1238,7 +1238,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.A
             in uint32 name=index
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData name=items
             out uint32 return

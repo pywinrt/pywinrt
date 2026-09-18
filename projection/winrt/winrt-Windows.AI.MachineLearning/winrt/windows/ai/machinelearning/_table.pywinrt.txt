@@ -870,7 +870,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in uint32 name=index
             out string return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array string name=items
             out uint32 return
@@ -898,7 +898,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Boolean> concrete it
             in uint32 name=index
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Boolean> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Boolean> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array boolean name=items
             out uint32 return
@@ -926,7 +926,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Byte> concrete itera
             in uint32 name=index
             out uint8 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Byte> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Byte> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array uint8 name=items
             out uint32 return
@@ -954,7 +954,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Double> concrete ite
             in uint32 name=index
             out double return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array double name=items
             out uint32 return
@@ -982,7 +982,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Int16> concrete iter
             in uint32 name=index
             out int16 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int16> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int16> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array int16 name=items
             out uint32 return
@@ -1010,7 +1010,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Int32> concrete iter
             in uint32 name=index
             out int32 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int32> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array int32 name=items
             out uint32 return
@@ -1038,7 +1038,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Int64> concrete iter
             in uint32 name=index
             out int64 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int64> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Int64> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array int64 name=items
             out uint32 return
@@ -1066,7 +1066,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Single> concrete ite
             in uint32 name=index
             out single return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Single> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Single> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array single name=items
             out uint32 return
@@ -1094,7 +1094,7 @@ interface Windows.Foundation.Collections.IVectorView<System.UInt16> concrete ite
             in uint32 name=index
             out uint16 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt16> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt16> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array uint16 name=items
             out uint32 return
@@ -1122,7 +1122,7 @@ interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete ite
             in uint32 name=index
             out uint32 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array uint32 name=items
             out uint32 return
@@ -1150,7 +1150,7 @@ interface Windows.Foundation.Collections.IVectorView<System.UInt64> concrete ite
             in uint32 name=index
             out uint64 return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt64> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.UInt64> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array uint64 name=items
             out uint32 return
@@ -1178,7 +1178,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.AI.MachineLearning.
             in uint32 name=index
             out interface type=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.AI.MachineLearning.ILearningModelFeatureDescriptor> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.AI.MachineLearning.ILearningModelFeatureDescriptor> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array interface type=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor name=items
             out uint32 return

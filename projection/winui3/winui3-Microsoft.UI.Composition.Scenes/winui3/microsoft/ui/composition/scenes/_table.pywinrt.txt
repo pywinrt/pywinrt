@@ -289,7 +289,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes
             in uint32 name=index
             out class type=Microsoft.UI.Composition.Scenes.SceneComponent return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Composition.Scenes.SceneComponent name=items
             out uint32 return
@@ -341,7 +341,7 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes
             in uint32 name=index
             out class type=Microsoft.UI.Composition.Scenes.SceneNode return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Composition.Scenes.SceneNode name=items
             out uint32 return
@@ -388,7 +388,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Sc
             in uint32 name=index
             out class type=Microsoft.UI.Composition.Scenes.SceneComponent return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneComponent> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneComponent> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Composition.Scenes.SceneComponent name=items
             out uint32 return
@@ -416,7 +416,7 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Sc
             in uint32 name=index
             out class type=Microsoft.UI.Composition.Scenes.SceneNode return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneNode> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Scenes.SceneNode> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Composition.Scenes.SceneNode name=items
             out uint32 return
@@ -494,7 +494,7 @@ class Microsoft.UI.Composition.Scenes.SceneComponentCollection python_type itera
             in uint32 name=index
             out class type=Microsoft.UI.Composition.Scenes.SceneComponent return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Composition.Scenes.SceneComponent name=items
             out uint32 return
@@ -757,7 +757,7 @@ class Microsoft.UI.Composition.Scenes.SceneNodeCollection python_type iterable s
             in uint32 name=index
             out class type=Microsoft.UI.Composition.Scenes.SceneNode return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Microsoft.UI.Composition.Scenes.SceneNode name=items
             out uint32 return

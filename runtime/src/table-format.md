@@ -399,6 +399,7 @@ behind:
 | 17 | `to_string` | `IStringable` |
 | 18 | `value` | `IReference<T>` |
 | 19 | `close` | `IClosable` |
+| 20 | `get_many` | `IVector<T>`, `IVectorView<T>` |
 
 The type flags say which protocols a type implements and the roles say which
 members those protocols call, so the two are written together. A name would
@@ -442,6 +443,15 @@ passing one where a pointer is expected corrupts the stack. On x64 a struct
 too wide for a register is passed as a pointer to a copy either way, which is
 why getting this wrong is invisible there. Every other category is a pointer
 already, so only an input carries the bit.
+
+The three array categories are one parameter record and two ABI arguments, a
+count and a pointer to the elements, and they differ in who owns those
+elements. A `pass_array` lends the callee elements to read; a `fill_array`
+lends it elements to write, so what it writes has to reach the caller's own
+memory rather than a copy of it; a `receive_array` is an output, and its two
+arguments are pointers the callee stores a count and a freshly allocated
+buffer through, which the caller then frees. The type code names the element,
+not the array.
 
 An implicit parameter is one the projection fills in itself. A composable
 factory takes two of them after the constructor's own arguments - the outer

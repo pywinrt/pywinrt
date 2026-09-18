@@ -1675,7 +1675,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Cor
             in uint32 name=index
             out class type=Windows.Devices.Display.Core.DisplayAdapter return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayAdapter> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayAdapter> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Display.Core.DisplayAdapter name=items
             out uint32 return
@@ -1703,7 +1703,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Cor
             in uint32 name=index
             out class type=Windows.Devices.Display.Core.DisplayModeInfo return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayModeInfo> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayModeInfo> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Display.Core.DisplayModeInfo name=items
             out uint32 return
@@ -1731,7 +1731,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Cor
             in uint32 name=index
             out class type=Windows.Devices.Display.Core.DisplayPath return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayPath> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayPath> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Display.Core.DisplayPath name=items
             out uint32 return
@@ -1759,7 +1759,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Cor
             in uint32 name=index
             out class type=Windows.Devices.Display.Core.DisplayTarget return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayTarget> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayTarget> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Display.Core.DisplayTarget name=items
             out uint32 return
@@ -1787,7 +1787,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Cor
             in uint32 name=index
             out class type=Windows.Devices.Display.Core.DisplayView return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayView> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayView> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.Display.Core.DisplayView name=items
             out uint32 return

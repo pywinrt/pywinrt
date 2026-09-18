@@ -16,6 +16,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "arrays.h"
 #include "delegates.h"
 #include "generics.h"
 #include "interp.h"
@@ -40,6 +41,13 @@ namespace py::interp
          * widest member takes seventeen.
          */
         constexpr size_t inline_cleanup = 20;
+
+        /**
+         * How many array arguments one call can borrow a Python buffer for.
+         * The census says the widest member of any metadata the tree projects
+         * passes or lends three.
+         */
+        constexpr size_t max_buffers = 4;
 
         /**
          * Something an argument conversion allocated that has to be given back
@@ -101,6 +109,11 @@ namespace py::interp
 
             ~call_frame()
             {
+                for (size_t i = 0; i < buffer_count; i++)
+                {
+                    PyBuffer_Release(&buffers[i]);
+                }
+
                 for (size_t i = 0; i < cleanup_count; i++)
                 {
                     auto const& entry = cleanup[i];
@@ -126,6 +139,26 @@ namespace py::interp
                 cleanup[cleanup_count++] = {what, value, info};
             }
 
+            /**
+             * A Py_buffer to borrow an array argument into, released when the
+             * call is over.
+             *
+             * @returns @c nullptr with a Python error set when the member
+             * passes more arrays than a frame holds.
+             */
+            Py_buffer* borrow() noexcept
+            {
+                if (buffer_count == max_buffers)
+                {
+                    PyErr_SetString(
+                        PyExc_NotImplementedError,
+                        "the member passes more arrays than one call can borrow");
+                    return nullptr;
+                }
+
+                return &buffers[buffer_count++];
+            }
+
             uint8_t* args;
             uint8_t* out;
 
@@ -136,6 +169,9 @@ namespace py::interp
             std::vector<cleanup_entry> overflow;
             cleanup_entry* cleanup;
             size_t cleanup_count{};
+            // Filled in by borrow(), so only the count needs initialising.
+            Py_buffer buffers[max_buffers];
+            size_t buffer_count{};
         };
 
         void store_widened(uint8_t* buffer, uint16_t offset, uintptr_t value) noexcept
@@ -738,10 +774,11 @@ namespace py::interp
     }
 
     /**
-     * Releases an output that was received but never converted, which is what a
-     * failure part way through the outputs leaves behind.
+     * Releases a value that was received but never converted, which is what a
+     * failure part way through the outputs leaves behind, and what an element
+     * of a WinRT array is when the array goes away.
      */
-    static void release_out(arg_desc const& arg, void* storage) noexcept
+    void release_value(arg_desc const& arg, void* storage) noexcept
     {
         switch (arg.code)
         {
@@ -771,6 +808,36 @@ namespace py::interp
     }
 
     /**
+     * Converts one of the values a call handed back, which is a value in
+     * storage of its own or a whole array the callee allocated.
+     */
+    static PyObject* convert_result(
+        projection& owner, arg_desc& arg, uint8_t* out) noexcept
+    {
+        if (arg.category == table::param_category::receive_array)
+        {
+            return array_take_python(
+                owner, arg, *reinterpret_cast<array_out*>(out + arg.out_offset));
+        }
+
+        return convert_out(owner, arg, out + arg.out_offset);
+    }
+
+    /**
+     * Releases an output that was received but never converted.
+     */
+    static void release_output(arg_desc& arg, uint8_t* out) noexcept
+    {
+        if (arg.category == table::param_category::receive_array)
+        {
+            release_array(arg, *reinterpret_cast<array_out*>(out + arg.out_offset));
+            return;
+        }
+
+        release_value(arg, out + arg.out_offset);
+    }
+
+    /**
      * Lays out the block of storage a call's outputs are received into.
      *
      * An output whose type is a struct from a package that had not been
@@ -793,7 +860,15 @@ namespace py::interp
             uint32_t size{};
             uint32_t align{};
 
-            if (arg.code == table::type_code::struct_)
+            if (arg.category == table::param_category::receive_array)
+            {
+                // The count and the elements, which the two array slots point
+                // at; what the elements are does not change what receives
+                // them.
+                size = sizeof(array_out);
+                align = alignof(array_out);
+            }
+            else if (arg.code == table::type_code::struct_)
             {
                 auto const info = resolve(owner, arg.type, arg.info);
                 if (!info)
@@ -993,10 +1068,30 @@ namespace py::interp
                     continue;
                 }
 
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "array parameters are not interpreted yet");
-                throw python_exception();
+                if (arg.category == table::param_category::receive_array)
+                {
+                    point_at_array_output(
+                        arg,
+                        *reinterpret_cast<array_out*>(frame.out + arg.out_offset),
+                        frame.args);
+                    continue;
+                }
+
+                // A passed or a lent array: the callee reads, and for a lent
+                // one writes, the memory the Python object exports, so it is
+                // borrowed for as long as the call lasts rather than copied.
+                auto* const view = frame.borrow();
+
+                if (!view)
+                {
+                    throw python_exception();
+                }
+
+                if (!borrow_array_argument(
+                        *member.owner, arg, args[next_arg++], view, frame.args))
+                {
+                    throw python_exception();
+                }
             }
 
             auto const vtable = *reinterpret_cast<void* const* const*>(instance);
@@ -1043,10 +1138,10 @@ namespace py::interp
                 {
                     for (uint16_t i = 0; i < overload.arg_count; i++)
                     {
-                        auto const& arg = overload.args[i];
-                        if (arg.category == table::param_category::out)
+                        auto& arg = overload.args[i];
+                        if (is_output(arg))
                         {
-                            release_out(arg, frame.out + arg.out_offset);
+                            release_output(arg, frame.out);
                         }
                     }
 
@@ -1064,7 +1159,7 @@ namespace py::interp
                 {
                     auto const& arg = overload.args[i];
 
-                    if (arg.category == table::param_category::out && arg.is_return)
+                    if (is_output(arg) && arg.is_return)
                     {
                         next_out = 1;
                         break;
@@ -1075,7 +1170,7 @@ namespace py::interp
             for (uint16_t i = 0; i < overload.arg_count; i++)
             {
                 auto& arg = overload.args[i];
-                if (arg.category != table::param_category::out)
+                if (!is_output(arg))
                 {
                     continue;
                 }
@@ -1092,17 +1187,16 @@ namespace py::interp
                     continue;
                 }
 
-                pyobj_handle value{
-                    convert_out(*member.owner, arg, frame.out + arg.out_offset)};
+                pyobj_handle value{convert_result(*member.owner, arg, frame.out)};
                 if (!value)
                 {
                     // Whatever has not been converted yet is still owned here.
                     for (uint16_t j = i + 1; j < overload.arg_count; j++)
                     {
-                        auto const& rest = overload.args[j];
-                        if (rest.category == table::param_category::out)
+                        auto& rest = overload.args[j];
+                        if (is_output(rest))
                         {
-                            release_out(rest, frame.out + rest.out_offset);
+                            release_output(rest, frame.out);
                         }
                     }
 

@@ -155,7 +155,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFi
             in uint32 name=index
             out enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod name=items
             out uint32 return
@@ -207,7 +207,7 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFi
             in uint32 name=index
             out class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement return
     method get_many
-        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=195 reverse=205
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=195 reverse=205 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement name=items
             out uint32 return
@@ -254,7 +254,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.
             in uint32 name=index
             out enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod name=items
             out uint32 return
@@ -282,7 +282,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.
             in uint32 name=index
             out class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Devices.WiFiDirect.WiFiDirectInformationElement name=items
             out uint32 return
@@ -310,7 +310,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Endpoint
             in uint32 name=index
             out class type=Windows.Networking.EndpointPair return
     method get_many
-        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> shape=195 reverse=102
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> shape=195 reverse=102 role=get_many
             in uint32 name=startIndex
             fill_array class type=Windows.Networking.EndpointPair name=items
             out uint32 return

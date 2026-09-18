@@ -17,6 +17,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "arrays.h"
 #include "callbacks.h"
 #include "delegates.h"
 #include "generics.h"
@@ -34,6 +35,13 @@ namespace py::interp
          * seventeen.
          */
         constexpr uint16_t max_args = 20;
+
+        /**
+         * How many arrays one call from WinRT can lend a Python
+         * implementation. The census says the widest member of any metadata
+         * the tree projects passes or lends three.
+         */
+        constexpr uint16_t max_arrays = 4;
 
         template<typename T>
         T load(void const* storage) noexcept
@@ -60,14 +68,43 @@ namespace py::interp
 
             ~python_args()
             {
+                // Before the references, because taking an array back leaves
+                // the object that was lent it empty rather than freeing it.
+                for (uint16_t i = 0; i < lent_count; i++)
+                {
+                    take_back_array(*lent[i]);
+                }
+
                 for (uint16_t i = 0; i < count; i++)
                 {
                     Py_DECREF(values[i]);
                 }
             }
 
+            /**
+             * Remembers an array the caller lent, so that the call gives it
+             * back however it ends.
+             */
+            void add_lent(table_array* array)
+            {
+                if (lent_count == max_arrays)
+                {
+                    take_back_array(*array);
+
+                    throw winrt::hresult_not_implemented(
+                        L"the callback lends more arrays than the runtime takes back");
+                }
+
+                lent[lent_count++] = array;
+            }
+
             PyObject* values[max_args]{};
             uint16_t count{};
+            /// The arrays a WinRT caller lent, which stop being anything the
+            /// moment this call returns. Filled in as they are lent, so only
+            /// the count needs initialising.
+            table_array* lent[max_arrays];
+            uint16_t lent_count{};
         };
 
         /**
@@ -93,11 +130,27 @@ namespace py::interp
             {
                 auto& arg = overload.args[i];
 
-                if (arg.category != table::param_category::in
-                    && arg.category != table::param_category::out)
+                if (arg.category == table::param_category::pass_array
+                    || arg.category == table::param_category::fill_array)
                 {
-                    throw winrt::hresult_not_implemented(
-                        L"array parameters are not interpreted yet");
+                    table_array* lent{};
+
+                    in.values[in.count]
+                        = array_argument_to_python(*member.owner, arg, buffer, lent);
+
+                    if (!in.values[in.count])
+                    {
+                        throw python_exception();
+                    }
+
+                    in.count++;
+
+                    if (lent)
+                    {
+                        in.add_lent(lent);
+                    }
+
+                    continue;
                 }
 
                 if (arg.category != table::param_category::in || arg.is_implicit)
@@ -162,7 +215,7 @@ namespace py::interp
             {
                 auto const& arg = overload.args[i];
 
-                if (arg.category == table::param_category::out && arg.is_return)
+                if (is_output(arg) && arg.is_return)
                 {
                     next = 1;
                     break;
@@ -173,7 +226,7 @@ namespace py::interp
             {
                 auto& arg = overload.args[i];
 
-                if (arg.category != table::param_category::out || arg.is_implicit)
+                if (!is_output(arg) || arg.is_implicit)
                 {
                     continue;
                 }
@@ -182,6 +235,12 @@ namespace py::interp
                     = overload.out_count == 1
                           ? result
                           : PyTuple_GET_ITEM(result, arg.is_return ? 0 : next++);
+
+                if (arg.category == table::param_category::receive_array)
+                {
+                    array_result_to_abi(*member.owner, arg, value, buffer);
+                    continue;
+                }
 
                 if (auto* const storage = load<void*>(buffer + arg.offset))
                 {
