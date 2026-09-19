@@ -9,6 +9,10 @@
 //
 // The Python side is immutable, as it has always been: the fields are read
 // only and __replace__() makes a new value.
+//
+// Two structs are not laid out at all. An HRESULT and an event token hold one
+// integer each and are projected as subclasses of int, so the value is the
+// integer and all that is built for them is the type.
 
 #include <Python.h>
 
@@ -1031,6 +1035,40 @@ namespace py::interp
             slots};
 
         pytype_handle type{register_python_type(proj.module, &spec, nullptr, nullptr)};
+        if (!type)
+        {
+            return false;
+        }
+
+        entry.py_type = type.detach();
+
+        return remember(entry, entry.py_type);
+    }
+
+    /**
+     * Creates the Python type of a WinRT struct that is one integer, which is
+     * a subclass of int rather than a wrapper with a field in it.
+     *
+     * Nothing else about the record is read: the value is the integer, so
+     * there is no layout to work out, no field to read and nothing to give
+     * back. What the type is for is what a stub and isinstance() need - an
+     * HRESULT told apart from a count - and the name its field had, which
+     * __init__.py keeps as a deprecated property of it.
+     */
+    bool make_integer_type(projection& proj, type_entry& entry)
+    {
+        PyType_Slot slots[] = {{}};
+
+        PyType_Spec spec{entry.tp_name.c_str(), 0, 0, Py_TPFLAGS_DEFAULT, slots};
+
+        pyobj_handle bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(&PyLong_Type))};
+        if (!bases)
+        {
+            return false;
+        }
+
+        pytype_handle type{
+            register_python_type(proj.module, &spec, bases.get(), nullptr)};
         if (!type)
         {
             return false;

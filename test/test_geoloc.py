@@ -58,7 +58,7 @@ class TestGeolocation(unittest.TestCase):
             elif status == wf.AsyncStatus.CANCELED:
                 op_future.cancel()
             elif status == wf.AsyncStatus.ERROR:
-                op_future.set_exception(OSError(operation.error_code.value))
+                op_future.set_exception(OSError(operation.error_code))
 
         locator = wdg.Geolocator()
 

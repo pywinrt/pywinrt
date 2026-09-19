@@ -148,7 +148,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -177,7 +177,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaF
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -206,7 +206,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaF
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -235,7 +235,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaF
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameSourceGroup> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -264,7 +264,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaF
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -293,7 +293,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MultiS
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1018,9 +1018,9 @@ class Windows.Media.Capture.Frames.MediaFrameReader python_type closeable
     event frame_arrived
         add add_FrameArrived slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameReader shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Frames.MediaFrameReader,Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Media.Capture.Frames.IMediaFrameReader shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method start_async
@@ -1098,9 +1098,9 @@ class Windows.Media.Capture.Frames.MediaFrameSource python_type
     event format_changed
         add add_FormatChanged slot=11 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSource shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Frames.MediaFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FormatChanged slot=12 inputs=1 outputs=0 declaring=Windows.Media.Capture.Frames.IMediaFrameSource shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method set_format_async
         method SetFormatAsync slot=10 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMediaFrameSource shape=51 reverse=124
             in class type=Windows.Media.Capture.Frames.MediaFrameFormat name=format
@@ -1257,9 +1257,9 @@ class Windows.Media.Capture.Frames.MultiSourceMediaFrameReader python_type close
     event frame_arrived
         add add_FrameArrived slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Frames.MultiSourceMediaFrameReader,Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Media.Capture.Frames.IMultiSourceMediaFrameReader shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method start_async
@@ -1394,6 +1394,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

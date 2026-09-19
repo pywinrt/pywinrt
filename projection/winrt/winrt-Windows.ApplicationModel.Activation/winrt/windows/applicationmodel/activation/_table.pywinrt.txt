@@ -2613,9 +2613,9 @@ class Windows.ApplicationModel.Activation.SplashScreen python_type
     event dismissed
         add add_Dismissed slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Activation.ISplashScreen shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Activation.SplashScreen,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Dismissed slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Activation.ISplashScreen shape=26 reverse=82
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
 
 class Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs python_type
     py StartupTaskActivatedEventArgs
@@ -2862,6 +2862,9 @@ struct Windows.Foundation.DateTime external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IPropertyValue external
     py winrt.windows.foundation._IPropertyValue

@@ -62,15 +62,15 @@ class Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem pytho
     event completed
         add add_Completed slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Completed slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event status_changed
         add add_StatusChanged slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusChanged slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method cancel
         method Cancel slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem shape=0 reverse=137
         method Cancel slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem2 shape=4 reverse=22
@@ -123,15 +123,15 @@ class Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager ac
     event item_completed
         add add_ItemCompleted slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager,Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ItemCompleted slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event item_status_changed
         add add_ItemStatusChanged slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager,Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ItemStatusChanged slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method cancel
         method Cancel slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallManager shape=4 reverse=43
             in string name=productId
@@ -458,7 +458,7 @@ class Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus pyt
             out uint64 return
     property error_code
         get get_ErrorCode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus shape=4 reverse=121
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property install_state
         get get_InstallState slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallStatus shape=4 reverse=22
             out enum32 type=Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallState return
@@ -656,7 +656,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -685,7 +685,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Prev
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -714,7 +714,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Prev
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -743,7 +743,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -858,6 +858,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

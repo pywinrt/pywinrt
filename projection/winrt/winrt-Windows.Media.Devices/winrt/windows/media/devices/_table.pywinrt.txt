@@ -133,9 +133,9 @@ class Windows.Media.Devices.AudioDeviceModulesManager python_type
     event module_notification_received
         add add_ModuleNotificationReceived slot=6 inputs=1 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModulesManager shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Devices.AudioDeviceModulesManager,Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ModuleNotificationReceived slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.IAudioDeviceModulesManager shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_all
         method FindAll slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.IAudioDeviceModulesManager shape=4 reverse=99
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AudioDeviceModule> return
@@ -164,39 +164,39 @@ class Windows.Media.Devices.CallControl python_type
     event answer_requested
         add add_AnswerRequested slot=11 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=51 reverse=144
             in delegate type=Windows.Media.Devices.CallControlEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AnswerRequested slot=12 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event audio_transfer_requested
         add add_AudioTransferRequested slot=21 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=51 reverse=233
             in delegate type=Windows.Media.Devices.CallControlEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AudioTransferRequested slot=22 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=26 reverse=400
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event dial_requested
         add add_DialRequested slot=15 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=51 reverse=196
             in delegate type=Windows.Media.Devices.DialRequestedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DialRequested slot=16 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event hang_up_requested
         add add_HangUpRequested slot=13 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=51 reverse=174
             in delegate type=Windows.Media.Devices.CallControlEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HangUpRequested slot=14 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event keypad_pressed
         add add_KeypadPressed slot=19 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=51 reverse=224
             in delegate type=Windows.Media.Devices.KeypadPressedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_KeypadPressed slot=20 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=26 reverse=399
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event redial_requested
         add add_RedialRequested slot=17 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICallControl shape=51 reverse=211
             in delegate type=Windows.Media.Devices.RedialRequestedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RedialRequested slot=18 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method end_call
         method EndCall slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICallControl shape=3
             in uint64 name=callToken
@@ -235,9 +235,9 @@ class Windows.Media.Devices.CameraOcclusionInfo python_type
     event state_changed
         add add_StateChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Devices.ICameraOcclusionInfo shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Devices.CameraOcclusionInfo,Windows.Media.Devices.CameraOcclusionStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.ICameraOcclusionInfo shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_state
         method GetState slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.ICameraOcclusionInfo shape=4 reverse=22
             out class type=Windows.Media.Devices.CameraOcclusionState return
@@ -725,7 +725,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Devices.ModuleCommand
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Devices.ModuleCommandResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2277,15 +2277,15 @@ class Windows.Media.Devices.MediaDevice static python_type
     event default_audio_capture_device_changed static
         add add_DefaultAudioCaptureDeviceChanged slot=11 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=51 reverse=144 static
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DefaultAudioCaptureDeviceChanged slot=12 inputs=1 outputs=0 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=26 reverse=167 static
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event default_audio_render_device_changed static
         add add_DefaultAudioRenderDeviceChanged slot=13 inputs=1 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=51 reverse=174 static
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DefaultAudioRenderDeviceChanged slot=14 inputs=1 outputs=0 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=26 reverse=192 static
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_audio_capture_selector static
         method GetAudioCaptureSelector slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.IMediaDeviceStatics shape=4 reverse=22 static
             out string return
@@ -2939,6 +2939,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

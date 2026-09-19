@@ -202,7 +202,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Security.Authentication.O
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Security.Authentication.OAuth.AuthRequestResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -231,7 +231,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Security.Authentication.O
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Security.Authentication.OAuth.TokenRequestResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -509,7 +509,7 @@ class Microsoft.Security.Authentication.OAuth.TokenFailure python_type
             out string return
     property error_code
         get get_ErrorCode slot=7 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenFailure shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property error_description
         get get_ErrorDescription slot=9 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenFailure shape=4 reverse=99
             out string return
@@ -654,6 +654,9 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

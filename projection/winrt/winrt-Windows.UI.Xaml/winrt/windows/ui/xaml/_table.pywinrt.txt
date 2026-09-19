@@ -84,33 +84,33 @@ class Windows.UI.Xaml.Application composable python_type
     event resuming
         add add_Resuming slot=15 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IApplication shape=51 reverse=196
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Resuming slot=16 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IApplication shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event suspending
         add add_Suspending slot=13 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IApplication shape=51 reverse=174
             in delegate type=Windows.UI.Xaml.SuspendingEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Suspending slot=14 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IApplication shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event unhandled_exception
         add add_UnhandledException slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IApplication shape=51 reverse=144
             in delegate type=Windows.UI.Xaml.UnhandledExceptionEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UnhandledException slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IApplication shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event entered_background
         add add_EnteredBackground slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IApplication2 shape=51 reverse=163
             in delegate type=Windows.UI.Xaml.EnteredBackgroundEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnteredBackground slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IApplication2 shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event leaving_background
         add add_LeavingBackground slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IApplication2 shape=51 reverse=124
             in delegate type=Windows.UI.Xaml.LeavingBackgroundEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LeavingBackground slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IApplication2 shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method exit
         method Exit slot=17 inputs=0 outputs=0 declaring=Windows.UI.Xaml.IApplication shape=0 reverse=209
     method load_component static
@@ -608,9 +608,9 @@ class Windows.UI.Xaml.DebugSettings python_type
     event binding_failed
         add add_BindingFailed slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IDebugSettings shape=51 reverse=163
             in delegate type=Windows.UI.Xaml.BindingFailedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BindingFailed slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IDebugSettings shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.DependencyObject composable python_type
     py DependencyObject
@@ -673,9 +673,9 @@ class Windows.UI.Xaml.DependencyObjectCollection composable python_type iterable
     event vector_changed
         add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.DependencyObject> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<Windows.UI.Xaml.DependencyObject> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.DependencyObject> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=4 reverse=173 role=append
             in class type=Windows.UI.Xaml.DependencyObject name=value
@@ -801,9 +801,9 @@ class Windows.UI.Xaml.DispatcherTimer composable python_type
     event tick
         add add_Tick slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IDispatcherTimer shape=51 reverse=100
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Tick slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IDispatcherTimer shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=11 inputs=0 outputs=0 declaring=Windows.UI.Xaml.IDispatcherTimer shape=0 reverse=137
     method stop
@@ -1475,51 +1475,51 @@ class Windows.UI.Xaml.FrameworkElement composable python_type
     event layout_updated
         add add_LayoutUpdated slot=49 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IFrameworkElement shape=51 reverse=348
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LayoutUpdated slot=50 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IFrameworkElement shape=26 reverse=353
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event loaded
         add add_Loaded slot=43 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IFrameworkElement shape=51 reverse=323
             in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Loaded slot=44 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IFrameworkElement shape=26 reverse=328
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event size_changed
         add add_SizeChanged slot=47 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IFrameworkElement shape=51 reverse=340
             in delegate type=Windows.UI.Xaml.SizeChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SizeChanged slot=48 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IFrameworkElement shape=26 reverse=346
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event unloaded
         add add_Unloaded slot=45 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IFrameworkElement shape=51 reverse=331
             in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Unloaded slot=46 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IFrameworkElement shape=26 reverse=337
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event data_context_changed
         add add_DataContextChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IFrameworkElement2 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.FrameworkElement,Windows.UI.Xaml.DataContextChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DataContextChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IFrameworkElement2 shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event loading
         add add_Loading slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IFrameworkElement3 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.FrameworkElement,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Loading slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IFrameworkElement3 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event actual_theme_changed
         add add_ActualThemeChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IFrameworkElement6 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.FrameworkElement,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ActualThemeChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IFrameworkElement6 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event effective_viewport_changed
         add add_EffectiveViewportChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IFrameworkElement7 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.FrameworkElement,Windows.UI.Xaml.EffectiveViewportChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EffectiveViewportChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IFrameworkElement7 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method _arrange_override
         method ArrangeOverride slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IFrameworkElementOverrides shape=79 reverse=51 overridable
             in struct type=Windows.Foundation.Size name=finalSize
@@ -1694,7 +1694,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransf
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.DataTransfer.DataPackageOperation> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2536,9 +2536,9 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Depen
     event vector_changed
         add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.DependencyObject> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<Windows.UI.Xaml.DependencyObject> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.DependencyObject> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.DependencyObject> shape=4 reverse=173 role=append
             in class type=Windows.UI.Xaml.DependencyObject name=value
@@ -5522,243 +5522,243 @@ class Windows.UI.Xaml.UIElement composable python_type
     event double_tapped
         add add_DoubleTapped slot=75 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.DoubleTappedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DoubleTapped slot=76 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event drag_enter
         add add_DragEnter slot=49 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51 reverse=348
             in delegate type=Windows.UI.Xaml.DragEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DragEnter slot=50 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26 reverse=353
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event drag_leave
         add add_DragLeave slot=51 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51 reverse=356
             in delegate type=Windows.UI.Xaml.DragEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DragLeave slot=52 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26 reverse=362
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event drag_over
         add add_DragOver slot=53 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51 reverse=365
             in delegate type=Windows.UI.Xaml.DragEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DragOver slot=54 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26 reverse=370
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event drop
         add add_Drop slot=55 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51 reverse=371
             in delegate type=Windows.UI.Xaml.DragEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Drop slot=56 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26 reverse=374
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event got_focus
         add add_GotFocus slot=45 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51 reverse=331
             in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GotFocus slot=46 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26 reverse=337
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event holding
         add add_Holding slot=77 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.HoldingEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Holding slot=78 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event key_down
         add add_KeyDown slot=43 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51 reverse=323
             in delegate type=Windows.UI.Xaml.Input.KeyEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_KeyDown slot=44 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26 reverse=328
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event key_up
         add add_KeyUp slot=41 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51 reverse=317
             in delegate type=Windows.UI.Xaml.Input.KeyEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_KeyUp slot=42 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26 reverse=321
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event lost_focus
         add add_LostFocus slot=47 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51 reverse=340
             in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LostFocus slot=48 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26 reverse=346
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_completed
         add add_ManipulationCompleted slot=89 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.ManipulationCompletedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ManipulationCompleted slot=90 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_delta
         add add_ManipulationDelta slot=87 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.ManipulationDeltaEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ManipulationDelta slot=88 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_inertia_starting
         add add_ManipulationInertiaStarting slot=83 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.ManipulationInertiaStartingEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ManipulationInertiaStarting slot=84 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_started
         add add_ManipulationStarted slot=85 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.ManipulationStartedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ManipulationStarted slot=86 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_starting
         add add_ManipulationStarting slot=81 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.ManipulationStartingEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ManipulationStarting slot=82 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_canceled
         add add_PointerCanceled slot=69 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.PointerEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerCanceled slot=70 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_capture_lost
         add add_PointerCaptureLost slot=67 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.PointerEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerCaptureLost slot=68 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_entered
         add add_PointerEntered slot=63 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.PointerEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerEntered slot=64 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_exited
         add add_PointerExited slot=65 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.PointerEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerExited slot=66 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_moved
         add add_PointerMoved slot=59 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51 reverse=379
             in delegate type=Windows.UI.Xaml.Input.PointerEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerMoved slot=60 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26 reverse=380
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_pressed
         add add_PointerPressed slot=57 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51 reverse=375
             in delegate type=Windows.UI.Xaml.Input.PointerEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerPressed slot=58 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26 reverse=378
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_released
         add add_PointerReleased slot=61 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51 reverse=381
             in delegate type=Windows.UI.Xaml.Input.PointerEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerReleased slot=62 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26 reverse=382
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_wheel_changed
         add add_PointerWheelChanged slot=71 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.PointerEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerWheelChanged slot=72 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event right_tapped
         add add_RightTapped slot=79 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.RightTappedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RightTapped slot=80 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tapped
         add add_Tapped slot=73 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement shape=51
             in delegate type=Windows.UI.Xaml.Input.TappedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Tapped slot=74 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event drag_starting
         add add_DragStarting slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement3 shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.DragStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DragStarting slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement3 shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event drop_completed
         add add_DropCompleted slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement3 shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.DropCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DropCompleted slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement3 shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event access_key_display_dismissed
         add add_AccessKeyDisplayDismissed slot=22 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement4 shape=51 reverse=238
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccessKeyDisplayDismissed slot=23 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement4 shape=26 reverse=245
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event access_key_display_requested
         add add_AccessKeyDisplayRequested slot=20 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement4 shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccessKeyDisplayRequested slot=21 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement4 shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event access_key_invoked
         add add_AccessKeyInvoked slot=24 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement4 shape=51 reverse=248
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccessKeyInvoked slot=25 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement4 shape=26 reverse=254
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event context_canceled
         add add_ContextCanceled slot=18 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement4 shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.RoutedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContextCanceled slot=19 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement4 shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event context_requested
         add add_ContextRequested slot=16 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement4 shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.ContextRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContextRequested slot=17 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement4 shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event getting_focus
         add add_GettingFocus slot=27 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement5 shape=51 reverse=260
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.GettingFocusEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GettingFocus slot=28 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement5 shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event losing_focus
         add add_LosingFocus slot=29 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement5 shape=51 reverse=267
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.LosingFocusEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LosingFocus slot=30 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement5 shape=26 reverse=272
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event no_focus_candidate_found
         add add_NoFocusCandidateFound slot=31 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement5 shape=51 reverse=274
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.NoFocusCandidateFoundEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NoFocusCandidateFound slot=32 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement5 shape=26 reverse=283
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event character_received
         add add_CharacterReceived slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement7 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.CharacterReceivedRoutedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CharacterReceived slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement7 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event preview_key_down
         add add_PreviewKeyDown slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement7 shape=51 reverse=144
             in delegate type=Windows.UI.Xaml.Input.KeyEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PreviewKeyDown slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement7 shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event preview_key_up
         add add_PreviewKeyUp slot=13 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement7 shape=51 reverse=174
             in delegate type=Windows.UI.Xaml.Input.KeyEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PreviewKeyUp slot=14 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement7 shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event process_keyboard_accelerators
         add add_ProcessKeyboardAccelerators slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement7 shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ProcessKeyboardAccelerators slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement7 shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event bring_into_view_requested
         add add_BringIntoViewRequested slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IUIElement8 shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.UIElement,Windows.UI.Xaml.BringIntoViewRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BringIntoViewRequested slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement8 shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_handler
         method AddHandler slot=96 inputs=3 outputs=0 declaring=Windows.UI.Xaml.IUIElement shape=117 reverse=481
             in class type=Windows.UI.Xaml.RoutedEvent name=routedEvent
@@ -5922,7 +5922,7 @@ class Windows.UI.Xaml.UnhandledExceptionEventArgs python_type
             in boolean name=value
     property exception
         get get_Exception slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUnhandledExceptionEventArgs shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property message
         get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUnhandledExceptionEventArgs shape=4 reverse=43
             out string return
@@ -6065,15 +6065,15 @@ class Windows.UI.Xaml.VisualStateGroup activatable python_type
     event current_state_changed
         add add_CurrentStateChanged slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IVisualStateGroup shape=51 reverse=124
             in delegate type=Windows.UI.Xaml.VisualStateChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CurrentStateChanged slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IVisualStateGroup shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event current_state_changing
         add add_CurrentStateChanging slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IVisualStateGroup shape=51 reverse=163
             in delegate type=Windows.UI.Xaml.VisualStateChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CurrentStateChanging slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IVisualStateGroup shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.VisualStateManager composable python_type
     py VisualStateManager
@@ -6210,27 +6210,27 @@ class Windows.UI.Xaml.Window python_type
     event activated
         add add_Activated slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IWindow shape=51 reverse=163
             in delegate type=Windows.UI.Xaml.WindowActivatedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Activated slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IWindow shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=14 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IWindow shape=51 reverse=187
             in delegate type=Windows.UI.Xaml.WindowClosedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IWindow shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event size_changed
         add add_SizeChanged slot=16 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IWindow shape=51 reverse=203
             in delegate type=Windows.UI.Xaml.WindowSizeChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SizeChanged slot=17 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IWindow shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event visibility_changed
         add add_VisibilityChanged slot=18 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IWindow shape=51 reverse=219
             in delegate type=Windows.UI.Xaml.WindowVisibilityChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VisibilityChanged slot=19 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IWindow shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method activate
         method Activate slot=20 inputs=0 outputs=0 declaring=Windows.UI.Xaml.IWindow shape=0 reverse=227
     method close
@@ -6307,9 +6307,9 @@ class Windows.UI.Xaml.XamlRoot python_type
     event changed
         add add_Changed slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.IXamlRoot shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.XamlRoot,Windows.UI.Xaml.XamlRootChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Changed slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IXamlRoot shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.XamlRootChangedEventArgs python_type
     py XamlRootChangedEventArgs
@@ -6390,6 +6390,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

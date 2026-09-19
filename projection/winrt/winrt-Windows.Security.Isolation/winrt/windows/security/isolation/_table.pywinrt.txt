@@ -139,7 +139,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -168,7 +168,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.Isolated
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -197,7 +197,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.Isolated
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -226,7 +226,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.Isolated
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -255,7 +255,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.Isolated
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -284,7 +284,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.Isolated
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -319,7 +319,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -354,7 +354,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolat
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -875,7 +875,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult python_t
             out class type=Windows.Security.Isolation.IsolatedWindowsEnvironment return
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult shape=4 reverse=43 deprecated
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult shape=4 reverse=22 deprecated
             out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus return
@@ -933,7 +933,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult pyth
     requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult shape=4 reverse=43 deprecated
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property file
         get get_File slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult shape=4 reverse=62 deprecated
             out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentFile return
@@ -1061,7 +1061,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResu
     requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult shape=4 reverse=43 deprecated
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult shape=4 reverse=22 deprecated
             out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationStatus return
@@ -1077,7 +1077,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult pyt
     requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult shape=4 reverse=43 deprecated
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult shape=4 reverse=22 deprecated
             out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageStatus return
@@ -1135,7 +1135,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult pytho
     requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult shape=4 reverse=43 deprecated
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property file
         get get_File slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult shape=4 reverse=62 deprecated
             out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentFile return
@@ -1168,7 +1168,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult pyt
     requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult shape=4 reverse=43 deprecated
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult shape=4 reverse=22 deprecated
             out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderStatus return
@@ -1188,7 +1188,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult py
     requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult shape=4 reverse=43 deprecated
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property process
         get get_Process slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult shape=4 reverse=62 deprecated
             out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess return
@@ -1285,6 +1285,9 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external 
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

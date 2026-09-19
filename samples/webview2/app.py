@@ -52,8 +52,8 @@ from winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap impor
 def check_initialized(sender: WebView2, args: CoreWebView2InitializedEventArgs):
     # This can be useful debugging issues when the WebView2 control fails to
     # initialize (in which case, it will appear as empty black box).
-    if args.exception.value:
-        print("Initialization failed", WinError(args.exception.value))
+    if args.exception:
+        print("Initialization failed", WinError(args.exception))
 
 
 _XAML = """
@@ -106,9 +106,7 @@ class App(Application, IXamlMetadataProvider):
 
         def on_env(op: IAsyncOperation[CoreWebView2Environment], status: AsyncStatus):
             if status == AsyncStatus.ERROR:
-                print(
-                    "create_with_options_async failed:", WinError(op.error_code.value)
-                )
+                print("create_with_options_async failed:", WinError(op.error_code))
                 return
 
             if status != AsyncStatus.COMPLETED:
@@ -122,7 +120,7 @@ class App(Application, IXamlMetadataProvider):
                 if status == AsyncStatus.ERROR:
                     print(
                         "ensure_core_webview2_async failed:",
-                        WinError(op.error_code.value),
+                        WinError(op.error_code),
                     )
                     return
 

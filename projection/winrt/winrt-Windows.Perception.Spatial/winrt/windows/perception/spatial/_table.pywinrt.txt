@@ -93,7 +93,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -122,7 +122,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMap
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,Windows.Perception.Spatial.SpatialAnchor>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -151,7 +151,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialA
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.Spatial.SpatialAnchorExportSufficiency> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -180,7 +180,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialA
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.Spatial.SpatialAnchorStore> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -209,7 +209,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialP
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -238,7 +238,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialS
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Perception.Spatial.SpatialStageFrameOfReference> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -689,9 +689,9 @@ class Windows.Perception.Spatial.SpatialAnchor python_type
     event raw_coordinate_system_adjusted
         add add_RawCoordinateSystemAdjusted slot=8 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchor shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialAnchor,Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RawCoordinateSystemAdjusted slot=9 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialAnchor shape=26 reverse=110
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method try_create_relative_to static
         method TryCreateRelativeTo slot=6 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorStatics shape=51 reverse=24 static
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
@@ -953,27 +953,27 @@ class Windows.Perception.Spatial.SpatialEntityWatcher python_type
     event added
         add add_Added slot=7 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher,Windows.Perception.Spatial.SpatialEntityAddedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Added slot=8 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
         add add_EnumerationCompleted slot=13 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=14 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
         add add_Removed slot=11 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher,Windows.Perception.Spatial.SpatialEntityRemovedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Removed slot=12 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
         add add_Updated slot=9 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialEntityWatcher,Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Updated slot=10 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=15 inputs=0 outputs=0 declaring=Windows.Perception.Spatial.ISpatialEntityWatcher shape=0 reverse=193
     method stop
@@ -1030,15 +1030,15 @@ class Windows.Perception.Spatial.SpatialLocator python_type
     event locatability_changed
         add add_LocatabilityChanged slot=7 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialLocator,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LocatabilityChanged slot=8 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialLocator shape=26 reverse=82
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event positional_tracking_deactivating
         add add_PositionalTrackingDeactivating slot=9 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Perception.Spatial.SpatialLocator,Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PositionalTrackingDeactivating slot=10 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialLocator shape=26 reverse=134
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method create_attached_frame_of_reference_at_current_heading
         method CreateAttachedFrameOfReferenceAtCurrentHeading slot=12 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialLocator shape=4 reverse=162
             out class type=Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference return
@@ -1155,9 +1155,9 @@ class Windows.Perception.Spatial.SpatialStageFrameOfReference python_type
     event current_changed static
         add add_CurrentChanged slot=7 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialStageFrameOfReferenceStatics shape=51 reverse=44 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CurrentChanged slot=8 inputs=1 outputs=0 declaring=Windows.Perception.Spatial.ISpatialStageFrameOfReferenceStatics shape=26 reverse=82 static
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_coordinate_system_at_current_location
         method GetCoordinateSystemAtCurrentLocation slot=9 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialStageFrameOfReference shape=51 reverse=100
             in class type=Windows.Perception.Spatial.SpatialLocator name=locator
@@ -1285,6 +1285,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

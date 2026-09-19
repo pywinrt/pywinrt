@@ -79,7 +79,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -108,7 +108,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.ContentRestrictions.C
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.ContentRestrictions.ContentAccessRestrictionLevel> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -137,7 +137,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.ContentRestrictions.C
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -463,9 +463,9 @@ class Windows.Media.ContentRestrictions.RatedContentRestrictions activatable pyt
     event restrictions_changed
         add add_RestrictionsChanged slot=9 inputs=1 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=51 reverse=100
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RestrictionsChanged slot=10 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_browse_policy_async
         method GetBrowsePolicyAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=4 reverse=22
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy> return
@@ -500,6 +500,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

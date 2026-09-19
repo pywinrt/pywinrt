@@ -60,7 +60,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -89,7 +89,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.Print3DDev
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Printers.Print3DDevice> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -118,7 +118,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.VirtualPri
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Printers.VirtualPrinterInstallationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -147,7 +147,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAcce
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamWithContentType> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1723,7 +1723,7 @@ class Windows.Devices.Printers.IppAttributeError python_type
     requires Windows.Devices.Printers.IIppAttributeError
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeError shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property reason
         get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeError shape=4 reverse=22
             out enum32 type=Windows.Devices.Printers.IppAttributeErrorReason return
@@ -2263,7 +2263,7 @@ class Windows.Devices.Printers.VirtualPrinterInstallationResult python_type
     requires Windows.Devices.Printers.IVirtualPrinterInstallationResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IVirtualPrinterInstallationResult shape=4 reverse=22
             out enum32 type=Windows.Devices.Printers.VirtualPrinterInstallationStatus return
@@ -2350,6 +2350,9 @@ enum Windows.Foundation.AsyncStatus external
 
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

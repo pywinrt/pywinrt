@@ -27,27 +27,27 @@ class Microsoft.UI.Dispatching.DispatcherQueue python_type
     event shutdown_completed
         add add_ShutdownCompleted slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ShutdownCompleted slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event shutdown_starting
         add add_ShutdownStarting slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ShutdownStarting slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_shutdown_completed
         add add_FrameworkShutdownCompleted slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameworkShutdownCompleted slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_shutdown_starting
         add add_FrameworkShutdownStarting slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameworkShutdownStarting slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_timer
         method CreateTimer slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=4 reverse=22
             out class type=Microsoft.UI.Dispatching.DispatcherQueueTimer return
@@ -135,9 +135,9 @@ class Microsoft.UI.Dispatching.DispatcherQueueTimer python_type
     event tick
         add add_Tick slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueueTimer,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Tick slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=11 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=0 reverse=137
     method stop
@@ -218,6 +218,9 @@ class System.Object external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

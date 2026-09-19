@@ -138,9 +138,9 @@ class Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum composable python_type
     event color_changed
         add add_ColorChanged slot=26 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=51 reverse=256
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum,Microsoft.UI.Xaml.Controls.ColorChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ColorChanged slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=26 reverse=262
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout composable python_type
     py ColumnMajorUniformToLargestGridLayout
@@ -687,6 +687,9 @@ class Microsoft.UI.Xaml.Controls.InfoBadge external
 
 class Microsoft.UI.Xaml.Controls.NonVirtualizingLayout external
     py winui2.microsoft.ui.xaml.controls.NonVirtualizingLayout
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect

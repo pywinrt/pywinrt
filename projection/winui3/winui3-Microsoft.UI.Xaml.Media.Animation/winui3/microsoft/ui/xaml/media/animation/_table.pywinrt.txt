@@ -305,9 +305,9 @@ class Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation python_type
     event completed
         add add_Completed slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method cancel
         method Cancel slot=14 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=0 reverse=185
     method set_animation_component
@@ -3902,9 +3902,9 @@ class Microsoft.UI.Xaml.Media.Animation.Timeline composable python_type
     event completed
         add add_Completed slot=18 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=51 reverse=219
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Completed slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Xaml.Media.Animation.TimelineCollection activatable python_type iterable sequence mutable_sequence
     py TimelineCollection
@@ -4076,6 +4076,9 @@ class System.Object external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IPropertyValue external
     py winrt.windows.foundation._IPropertyValue

@@ -228,9 +228,9 @@ class Windows.Media.Audio.AudioEffectsPackConfiguration python_type
     event status_changed
         add add_StatusChanged slot=9 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfiguration shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioEffectsPackConfiguration,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusChanged slot=10 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioEffectsPackConfiguration shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_device_id static
         method GetForDeviceId slot=6 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfigurationStatics shape=117 reverse=25 static
             in string name=effectsPackId
@@ -309,9 +309,9 @@ class Windows.Media.Audio.AudioFileInputNode python_type closeable
     event file_completed
         add add_FileCompleted slot=18 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioFileInputNode,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FileCompleted slot=19 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFileInputNode shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_outgoing_connection
         method AddOutgoingConnection slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioInputNode shape=4 reverse=43
             in interface type=Windows.Media.Audio.IAudioNode name=destination
@@ -441,15 +441,15 @@ class Windows.Media.Audio.AudioFrameInputNode python_type closeable
     event audio_frame_completed
         add add_AudioFrameCompleted slot=11 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioFrameInputNode,Windows.Media.Audio.AudioFrameCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AudioFrameCompleted slot=12 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event quantum_started
         add add_QuantumStarted slot=13 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioFrameInputNode,Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_QuantumStarted slot=14 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_frame
         method AddFrame slot=8 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=4 reverse=62
             in class type=Windows.Media.AudioFrame name=frame
@@ -550,21 +550,21 @@ class Windows.Media.Audio.AudioGraph python_type closeable
     event quantum_processed
         add add_QuantumProcessed slot=24 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51 reverse=248
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioGraph,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_QuantumProcessed slot=25 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=26 reverse=254
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event quantum_started
         add add_QuantumStarted slot=22 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51 reverse=238
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioGraph,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_QuantumStarted slot=23 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=26 reverse=245
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event unrecoverable_error_occurred
         add add_UnrecoverableErrorOccurred slot=26 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51 reverse=256
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioGraph,Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UnrecoverableErrorOccurred slot=27 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=26 reverse=262
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_async static
@@ -939,9 +939,9 @@ class Windows.Media.Audio.AudioPlaybackConnection python_type closeable
     event state_changed
         add add_StateChanged slot=12 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioPlaybackConnection,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_device_selector static
@@ -970,7 +970,7 @@ class Windows.Media.Audio.AudioPlaybackConnectionOpenResult python_type
     requires Windows.Media.Audio.IAudioPlaybackConnectionOpenResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnectionOpenResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnectionOpenResult shape=4 reverse=22
             out enum32 type=Windows.Media.Audio.AudioPlaybackConnectionOpenResultStatus return
@@ -995,9 +995,9 @@ class Windows.Media.Audio.AudioStateMonitor python_type
     event sound_level_changed
         add add_SoundLevelChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitor shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioStateMonitor,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SoundLevelChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioStateMonitor shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_for_capture_monitoring static
         method CreateForCaptureMonitoring slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=4 reverse=121 static
             out class type=Windows.Media.Audio.AudioStateMonitor return
@@ -1097,7 +1097,7 @@ class Windows.Media.Audio.CreateAudioDeviceInputNodeResult python_type
             out enum32 type=Windows.Media.Audio.AudioDeviceNodeCreationStatus return
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceInputNodeResult2 shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Audio.CreateAudioDeviceOutputNodeResult python_type
     py CreateAudioDeviceOutputNodeResult
@@ -1113,7 +1113,7 @@ class Windows.Media.Audio.CreateAudioDeviceOutputNodeResult python_type
             out enum32 type=Windows.Media.Audio.AudioDeviceNodeCreationStatus return
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult2 shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Audio.CreateAudioFileInputNodeResult python_type
     py CreateAudioFileInputNodeResult
@@ -1129,7 +1129,7 @@ class Windows.Media.Audio.CreateAudioFileInputNodeResult python_type
             out enum32 type=Windows.Media.Audio.AudioFileNodeCreationStatus return
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileInputNodeResult2 shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Audio.CreateAudioFileOutputNodeResult python_type
     py CreateAudioFileOutputNodeResult
@@ -1145,7 +1145,7 @@ class Windows.Media.Audio.CreateAudioFileOutputNodeResult python_type
             out enum32 type=Windows.Media.Audio.AudioFileNodeCreationStatus return
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileOutputNodeResult2 shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Audio.CreateAudioGraphResult python_type
     py CreateAudioGraphResult
@@ -1161,7 +1161,7 @@ class Windows.Media.Audio.CreateAudioGraphResult python_type
             out enum32 type=Windows.Media.Audio.AudioGraphCreationStatus return
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioGraphResult2 shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult python_type
     py CreateMediaSourceAudioInputNodeResult
@@ -1177,7 +1177,7 @@ class Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult python_type
             out enum32 type=Windows.Media.Audio.MediaSourceAudioInputNodeCreationStatus return
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult2 shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Audio.EchoEffectDefinition python_type
     py EchoEffectDefinition
@@ -1277,7 +1277,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioPlaybackCo
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.AudioPlaybackConnectionOpenResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1306,7 +1306,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDevi
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1335,7 +1335,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDevi
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1364,7 +1364,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFile
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioFileInputNodeResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1393,7 +1393,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFile
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioFileOutputNodeResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1422,7 +1422,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioGrap
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateAudioGraphResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1451,7 +1451,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateMediaSour
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1480,7 +1480,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.SetDefaultSpati
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1509,7 +1509,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.Transcode
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Transcoding.TranscodeFailureReason> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2466,9 +2466,9 @@ class Windows.Media.Audio.MediaSourceAudioInputNode python_type closeable
     event media_source_completed
         add add_MediaSourceCompleted slot=18 inputs=1 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.MediaSourceAudioInputNode,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MediaSourceCompleted slot=19 inputs=1 outputs=0 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_outgoing_connection
         method AddOutgoingConnection slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioInputNode shape=4 reverse=43
             in interface type=Windows.Media.Audio.IAudioNode name=destination
@@ -2675,9 +2675,9 @@ class Windows.Media.Audio.SpatialAudioDeviceConfiguration python_type
     event configuration_changed
         add add_ConfigurationChanged slot=12 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.SpatialAudioDeviceConfiguration,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ConfigurationChanged slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_device_id static
         method GetForDeviceId slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfigurationStatics shape=51 reverse=24 static
             in string name=deviceId
@@ -2879,6 +2879,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

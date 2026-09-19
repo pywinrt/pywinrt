@@ -412,21 +412,21 @@ class Windows.Media.PlayTo.PlayToConnection python_type
     event error
         add add_Error slot=11 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnection shape=51 reverse=144 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToConnection,Windows.Media.PlayTo.PlayToConnectionErrorEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Error slot=12 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToConnection shape=26 reverse=167 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event state_changed
         add add_StateChanged slot=7 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnection shape=51 reverse=44 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToConnection,Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=8 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToConnection shape=26 reverse=82 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event transferred
         add add_Transferred slot=9 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnection shape=51 reverse=100 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToConnection,Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Transferred slot=10 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToConnection shape=26 reverse=134 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Windows.Media.PlayTo.PlayToConnectionError python_type
     py PlayToConnectionError
@@ -486,15 +486,15 @@ class Windows.Media.PlayTo.PlayToManager python_type
     event source_requested
         add add_SourceRequested slot=6 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToManager shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToManager,Windows.Media.PlayTo.PlayToSourceRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceRequested slot=7 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToManager shape=26 reverse=53 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_selected
         add add_SourceSelected slot=8 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToManager shape=51 reverse=65 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToManager,Windows.Media.PlayTo.PlayToSourceSelectedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceSelected slot=9 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToManager shape=26 reverse=110 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static deprecated
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToManagerStatics shape=4 reverse=22 static deprecated
             out class type=Windows.Media.PlayTo.PlayToManager return
@@ -535,57 +535,57 @@ class Windows.Media.PlayTo.PlayToReceiver activatable python_type
     event current_time_change_requested
         add add_CurrentTimeChangeRequested slot=14 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CurrentTimeChangeRequested slot=15 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event mute_change_requested
         add add_MuteChangeRequested slot=16 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,Windows.Media.PlayTo.MuteChangeRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MuteChangeRequested slot=17 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pause_requested
         add add_PauseRequested slot=8 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PauseRequested slot=9 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event play_requested
         add add_PlayRequested slot=6 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PlayRequested slot=7 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event playback_rate_change_requested
         add add_PlaybackRateChangeRequested slot=12 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PlaybackRateChangeRequested slot=13 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_change_requested
         add add_SourceChangeRequested slot=10 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,Windows.Media.PlayTo.SourceChangeRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceChangeRequested slot=11 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stop_requested
         add add_StopRequested slot=22 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=238
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StopRequested slot=23 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=245
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event time_update_requested
         add add_TimeUpdateRequested slot=20 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TimeUpdateRequested slot=21 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event volume_change_requested
         add add_VolumeChangeRequested slot=18 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,Windows.Media.PlayTo.VolumeChangeRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VolumeChangeRequested slot=19 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method notify_duration_change
         method NotifyDurationChange slot=28 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26
             in timespan name=duration
@@ -897,6 +897,9 @@ class System.UInt32 external
 
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

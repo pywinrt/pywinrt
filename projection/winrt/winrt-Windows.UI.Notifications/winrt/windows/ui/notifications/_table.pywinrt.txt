@@ -190,7 +190,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ToastCollection>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -219,7 +219,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.UI.Notifications.ToastColle
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Notifications.ToastCollection> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -248,7 +248,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.UI.Notifications.ToastNotif
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Notifications.ToastNotificationHistory> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -277,7 +277,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.UI.Notifications.ToastNotif
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Notifications.ToastNotifier> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1886,7 +1886,7 @@ class Windows.UI.Notifications.ToastFailedEventArgs python_type
     requires Windows.UI.Notifications.IToastFailedEventArgs
     property error_code
         get get_ErrorCode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastFailedEventArgs shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 enum Windows.UI.Notifications.ToastHistoryChangedType python_type
     py ToastHistoryChangedType
@@ -1957,21 +1957,21 @@ class Windows.UI.Notifications.ToastNotification python_type
     event activated
         add add_Activated slot=11 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Activated slot=12 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event dismissed
         add add_Dismissed slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,Windows.UI.Notifications.ToastDismissedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Dismissed slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event failed
         add add_Failed slot=13 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,Windows.UI.Notifications.ToastFailedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Failed slot=14 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Notifications.ToastNotificationActionTriggerDetail python_type
     py ToastNotificationActionTriggerDetail
@@ -2080,9 +2080,9 @@ class Windows.UI.Notifications.ToastNotificationManagerForUser python_type
     event notification_mode_changed
         add add_NotificationModeChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser3 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotificationManagerForUser,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NotificationModeChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser3 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_toast_notifier
         method CreateToastNotifier slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser shape=4 reverse=22
             out class type=Windows.UI.Notifications.ToastNotifier return
@@ -2125,9 +2125,9 @@ class Windows.UI.Notifications.ToastNotifier python_type
     event scheduled_toast_notification_showing
         add add_ScheduledToastNotificationShowing slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotifier3 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotifier,Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ScheduledToastNotificationShowing slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotifier3 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_to_schedule
         method AddToSchedule slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotifier shape=4 reverse=99
             in class type=Windows.UI.Notifications.ScheduledToastNotification name=scheduledToast
@@ -2276,6 +2276,12 @@ struct Windows.Foundation.DateTime external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

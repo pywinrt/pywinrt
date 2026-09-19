@@ -479,7 +479,7 @@ interface Windows.Foundation.IAsyncActionWithProgress<System.Int32> concrete awa
             in delegate type=Windows.Foundation.AsyncActionWithProgressCompletedHandler<System.Int32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -507,7 +507,7 @@ interface Windows.Foundation.IAsyncOperation<System.Int32> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Int32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -542,7 +542,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<System.Int32,System.Int
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.Int32,System.Int32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1206,15 +1206,15 @@ interface TestComponent.ITests python_type
     event event1
         add add_Event1 slot=90 inputs=1 outputs=1 declaring=TestComponent.ITests shape=51 reverse=475
             in delegate type=Windows.Foundation.EventHandler<System.Int32> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Event1 slot=91 inputs=1 outputs=0 declaring=TestComponent.ITests shape=26 reverse=476
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event event2
         add add_Event2 slot=92 inputs=1 outputs=1 declaring=TestComponent.ITests shape=51 reverse=477
             in delegate type=Windows.Foundation.TypedEventHandler<TestComponent.ITests,System.Int32> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Event2 slot=93 inputs=1 outputs=0 declaring=TestComponent.ITests shape=26 reverse=478
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method array1
         method Array1 slot=38 inputs=2 outputs=2 declaring=TestComponent.ITests shape=286 reverse=424
             pass_array boolean name=a
@@ -2218,15 +2218,15 @@ class TestComponent.Override composable python_type
     event overridable_called
         add add_OverridableCalled slot=10 inputs=1 outputs=1 declaring=TestComponent.IOverride shape=51 reverse=124
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OverridableCalled slot=11 inputs=1 outputs=0 declaring=TestComponent.IOverride shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event protected_called
         add add_ProtectedCalled slot=7 inputs=1 outputs=1 declaring=TestComponent.IOverride shape=51 reverse=44
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ProtectedCalled slot=8 inputs=1 outputs=0 declaring=TestComponent.IOverride shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method call_overridable
         method CallOverridable slot=9 inputs=0 outputs=0 declaring=TestComponent.IOverride shape=0 reverse=93
     method call_protected
@@ -2527,6 +2527,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

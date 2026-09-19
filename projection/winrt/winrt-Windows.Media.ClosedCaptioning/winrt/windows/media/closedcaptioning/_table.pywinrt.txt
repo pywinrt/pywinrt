@@ -57,9 +57,9 @@ class Windows.Media.ClosedCaptioning.ClosedCaptionProperties static python_type
     event properties_changed static
         add add_PropertiesChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2 shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PropertiesChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2 shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Windows.Media.ClosedCaptioning.ClosedCaptionSize python_type
     py ClosedCaptionSize
@@ -92,6 +92,9 @@ class System.Object external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 struct Windows.UI.Color external
     py winrt.windows.ui.Color

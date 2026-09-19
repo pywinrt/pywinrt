@@ -322,6 +322,7 @@ Type flags, and the words the text writes them as:
 | 18 | `stringable` | implements `IStringable` |
 | 19 | `buffer` | supports the buffer protocol |
 | 20 | `buffer_length` | the buffer length is `Length` rather than `Capacity` |
+| 21 | `integer` | a struct that is one integer, projected as a subclass of `int` |
 
 ### Group record, 16 bytes
 
@@ -537,6 +538,13 @@ The one thing to be careful of is that none of this may be derived from how a
 field is converted to or from Python. The width a converter asks for in a local
 variable - an `int` to parse a boolean into, say - is not the width of the
 field. The type code is the only thing that says how wide a field is.
+
+Two structs are not laid out at all. `Windows.Foundation.HResult` and
+`Windows.Foundation.EventRegistrationToken` hold one integer each and are
+projected as subclasses of `int`, so their records carry the `integer` flag and
+a reader builds no wrapper for them. Their codes - `hresult` and `event_token`
+- are the integer on the ABI and name the type the same way `enum32` does, so a
+value of one is built by calling that type with the integer.
 
 ## Validation
 

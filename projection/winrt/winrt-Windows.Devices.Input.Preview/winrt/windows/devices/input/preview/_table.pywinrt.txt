@@ -65,27 +65,27 @@ class Windows.Devices.Input.Preview.GazeDeviceWatcherPreview python_type
     event added
         add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeDeviceWatcherPreview,Windows.Devices.Input.Preview.GazeDeviceWatcherAddedPreviewEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
         add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeDeviceWatcherPreview,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
         add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeDeviceWatcherPreview,Windows.Devices.Input.Preview.GazeDeviceWatcherRemovedPreviewEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
         add add_Updated slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeDeviceWatcherPreview,Windows.Devices.Input.Preview.GazeDeviceWatcherUpdatedPreviewEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Updated slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=14 inputs=0 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=0 reverse=185
     method stop
@@ -146,21 +146,21 @@ class Windows.Devices.Input.Preview.GazeInputSourcePreview python_type
     event gaze_entered
         add add_GazeEntered slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeInputSourcePreview,Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GazeEntered slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event gaze_exited
         add add_GazeExited slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeInputSourcePreview,Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GazeExited slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event gaze_moved
         add add_GazeMoved slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeInputSourcePreview,Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GazeMoved slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_watcher static
         method CreateWatcher slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreviewStatics shape=4 reverse=43 static
             out class type=Windows.Devices.Input.Preview.GazeDeviceWatcherPreview return
@@ -220,7 +220,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -727,6 +727,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

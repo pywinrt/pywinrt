@@ -378,9 +378,9 @@ interface Windows.Foundation.Collections.IObservableMap<System.String,System.Obj
     event map_changed
         add add_MapChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.Object> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.MapChangedEventHandler<System.String,System.Object> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.Object> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear
         method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159 role=clear
     method first
@@ -421,9 +421,9 @@ interface Windows.Foundation.Collections.IObservableMap<System.String,System.Str
     event map_changed
         add add_MapChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.String> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.MapChangedEventHandler<System.String,System.String> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.String> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear
         method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159 role=clear
     method first
@@ -460,9 +460,9 @@ interface Windows.Foundation.Collections.IObservableMap parameterized python_typ
     event map_changed
         add add_MapChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableMap shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.MapChangedEventHandler<K,V> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear
         method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<K,V> shape=0 reverse=159 role=clear
     method first
@@ -502,9 +502,9 @@ interface Windows.Foundation.Collections.IObservableVector parameterized python_
     event vector_changed
         add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<T> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<T> role=append
             in object name=value
@@ -562,9 +562,9 @@ interface Windows.Foundation.Collections.IPropertySet python_type iterable mappi
     event map_changed
         add add_MapChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.Object> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.MapChangedEventHandler<System.String,System.Object> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.Object> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear
         method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159 role=clear
     method first
@@ -738,9 +738,9 @@ class Windows.Foundation.Collections.PropertySet activatable python_type iterabl
     event map_changed
         add add_MapChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.Object> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.MapChangedEventHandler<System.String,System.Object> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.Object> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear
         method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159 role=clear
     method first
@@ -784,9 +784,9 @@ class Windows.Foundation.Collections.StringMap activatable python_type iterable 
     event map_changed
         add add_MapChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.String> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.MapChangedEventHandler<System.String,System.String> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.String> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear
         method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159 role=clear
     method first
@@ -835,9 +835,9 @@ class Windows.Foundation.Collections.ValueSet activatable python_type iterable m
     event map_changed
         add add_MapChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.Object> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.MapChangedEventHandler<System.String,System.Object> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.Object> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear
         method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159 role=clear
     method first
@@ -879,3 +879,6 @@ class System.Object external
 
 class System.String external
     py winrt.system.String
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken

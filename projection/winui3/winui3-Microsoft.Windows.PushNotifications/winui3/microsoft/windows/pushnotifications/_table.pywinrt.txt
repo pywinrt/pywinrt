@@ -46,7 +46,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.PushN
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -104,7 +104,7 @@ class Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult py
             out class type=Microsoft.Windows.PushNotifications.PushNotificationChannel return
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationCreateChannelResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationCreateChannelResult shape=4 reverse=62
             out enum32 type=Microsoft.Windows.PushNotifications.PushNotificationChannelStatus return
@@ -113,7 +113,7 @@ struct Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus p
     py PushNotificationCreateChannelStatus
     signature struct(Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus;enum(Microsoft.Windows.PushNotifications.PushNotificationChannelStatus;i4);struct(Windows.Foundation.HResult;i4);u4)
     field status status enum32 type=Microsoft.Windows.PushNotifications.PushNotificationChannelStatus
-    field extended_error extendedError hresult
+    field extended_error extendedError hresult type=Windows.Foundation.HResult
     field retry_count retryCount uint32
 
 class Microsoft.Windows.PushNotifications.PushNotificationManager python_type
@@ -128,9 +128,9 @@ class Microsoft.Windows.PushNotifications.PushNotificationManager python_type
     event push_received
         add add_PushReceived slot=10 inputs=1 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationManager shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.PushNotifications.PushNotificationManager,Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PushReceived slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.PushNotifications.IPushNotificationManager shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_channel_async
         method CreateChannelAsync slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationManager shape=94
             in guid name=remoteId
@@ -156,9 +156,9 @@ class Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs pyth
     event canceled
         add add_Canceled slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationReceivedEventArgs shape=51 reverse=65
             in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Canceled slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.PushNotifications.IPushNotificationReceivedEventArgs shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_deferral
         method GetDeferral slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=43
             out class type=Windows.ApplicationModel.Background.BackgroundTaskDeferral return
@@ -192,6 +192,12 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external 
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

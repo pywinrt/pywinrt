@@ -48,15 +48,15 @@ class Windows.Devices.Sensors.Accelerometer python_type
     event reading_changed
         add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Accelerometer,Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAccelerometer shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event shaken
         add add_Shaken slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Accelerometer,Windows.Devices.Sensors.AccelerometerShakenEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Shaken slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAccelerometer shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometerStatics3 shape=51 reverse=24 static
             in string name=deviceId
@@ -167,9 +167,9 @@ class Windows.Devices.Sensors.ActivitySensor python_type
     event reading_changed
         add add_ReadingChanged slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensor shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.ActivitySensor,Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IActivitySensor shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IActivitySensorStatics shape=51 reverse=65 static
             in string name=deviceId
@@ -282,9 +282,9 @@ class Windows.Devices.Sensors.Altimeter python_type
     event reading_changed
         add add_ReadingChanged slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IAltimeter shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Altimeter,Windows.Devices.Sensors.AltimeterReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IAltimeter shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_current_reading
         method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAltimeter shape=4 reverse=22
             out class type=Windows.Devices.Sensors.AltimeterReading return
@@ -563,9 +563,9 @@ class Windows.Devices.Sensors.Barometer python_type
     event reading_changed
         add add_ReadingChanged slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IBarometer shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Barometer,Windows.Devices.Sensors.BarometerReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IBarometer shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IBarometerStatics2 shape=51 reverse=24 static
             in string name=deviceId
@@ -660,9 +660,9 @@ class Windows.Devices.Sensors.Compass python_type
     event reading_changed
         add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.ICompass shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Compass,Windows.Devices.Sensors.CompassReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ICompass shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.ICompassStatics2 shape=51 reverse=44 static
             in string name=deviceId
@@ -796,9 +796,9 @@ class Windows.Devices.Sensors.Gyrometer python_type
     event reading_changed
         add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IGyrometer shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Gyrometer,Windows.Devices.Sensors.GyrometerReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IGyrometer shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IGyrometerStatics2 shape=51 reverse=44 static
             in string name=deviceId
@@ -930,9 +930,9 @@ class Windows.Devices.Sensors.HingeAngleSensor python_type
     event reading_changed
         add add_ReadingChanged slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleSensor shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.HingeAngleSensor,Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHingeAngleSensor shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHingeAngleSensorStatics shape=51 reverse=100 static
             in string name=deviceId
@@ -1040,9 +1040,9 @@ class Windows.Devices.Sensors.HumanPresenceSensor python_type
     event reading_changed
         add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.HumanPresenceSensor,Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSensor shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id static
         method FromId slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensorStatics2 shape=51 reverse=24 static
             in string name=sensorId
@@ -1205,9 +1205,9 @@ class Windows.Devices.Sensors.HumanPresenceSettings python_type
     event settings_changed static
         add add_SettingsChanged slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettingsStatics shape=51 reverse=174 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SettingsChanged slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IHumanPresenceSettingsStatics shape=26 reverse=192 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_current_settings static
         method GetCurrentSettings slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSettingsStatics shape=4 reverse=43 static
             out class type=Windows.Devices.Sensors.HumanPresenceSettings return
@@ -1328,7 +1328,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Acceleromet
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Accelerometer> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1357,7 +1357,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySen
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.ActivitySensor> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1386,7 +1386,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.ActivitySen
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.ActivitySensorReading> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1415,7 +1415,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Barometer> 
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Barometer> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1444,7 +1444,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Compass> co
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Compass> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1473,7 +1473,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Gyrometer> 
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Gyrometer> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1502,7 +1502,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleR
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HingeAngleReading> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1531,7 +1531,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleS
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HingeAngleSensor> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1560,7 +1560,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresen
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HumanPresenceFeatures> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1589,7 +1589,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresen
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HumanPresenceSensor> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1618,7 +1618,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresen
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.HumanPresenceSettings> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1647,7 +1647,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Inclinomete
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Inclinometer> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1676,7 +1676,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.LightSensor
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.LightSensor> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1705,7 +1705,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Magnetomete
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Magnetometer> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1734,7 +1734,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Orientation
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.OrientationSensor> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1763,7 +1763,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Pedometer> 
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.Pedometer> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1792,7 +1792,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.SimpleOrien
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sensors.SimpleOrientationSensor> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1821,7 +1821,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1850,7 +1850,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3889,9 +3889,9 @@ class Windows.Devices.Sensors.Inclinometer python_type
     event reading_changed
         add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IInclinometer shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Inclinometer,Windows.Devices.Sensors.InclinometerReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IInclinometer shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IInclinometerStatics4 shape=51 reverse=44 static
             in string name=deviceId
@@ -4008,9 +4008,9 @@ class Windows.Devices.Sensors.LightSensor python_type
     event reading_changed
         add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.ILightSensor shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.LightSensor,Windows.Devices.Sensors.LightSensorReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ILightSensor shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.ILightSensorStatics2 shape=51 reverse=44 static
             in string name=deviceId
@@ -4140,9 +4140,9 @@ class Windows.Devices.Sensors.Magnetometer python_type
     event reading_changed
         add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometer shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Magnetometer,Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IMagnetometer shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IMagnetometerStatics2 shape=51 reverse=44 static
             in string name=deviceId
@@ -4285,9 +4285,9 @@ class Windows.Devices.Sensors.OrientationSensor python_type
     event reading_changed
         add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensor shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.OrientationSensor,Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IOrientationSensor shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorStatics4 shape=51 reverse=65 static
             in string name=deviceId
@@ -4378,9 +4378,9 @@ class Windows.Devices.Sensors.Pedometer python_type
     event reading_changed
         add add_ReadingChanged slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IPedometer shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Pedometer,Windows.Devices.Sensors.PedometerReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IPedometer shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IPedometerStatics shape=51 reverse=24 static
             in string name=deviceId
@@ -4469,9 +4469,9 @@ class Windows.Devices.Sensors.ProximitySensor python_type
     event reading_changed
         add add_ReadingChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensor shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.ProximitySensor,Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadingChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.IProximitySensor shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_display_on_off_controller
         method CreateDisplayOnOffController slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IProximitySensor shape=4 reverse=162
             out class type=Windows.Devices.Sensors.ProximitySensorDisplayOnOffController return
@@ -4632,9 +4632,9 @@ class Windows.Devices.Sensors.SimpleOrientationSensor python_type
     event orientation_changed
         add add_OrientationChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.ISimpleOrientationSensor shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.SimpleOrientationSensor,Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OrientationChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.ISimpleOrientationSensor shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.ISimpleOrientationSensorStatics2 shape=51 reverse=44 static
             in string name=deviceId
@@ -4897,6 +4897,12 @@ struct Windows.Foundation.DateTime external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

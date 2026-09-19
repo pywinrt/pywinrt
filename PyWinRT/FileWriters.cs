@@ -294,6 +294,10 @@ static class FileWriters
                 .Classes.Concat(members.Interfaces)
                 .Where(t => t.CircularDependencyDepth == dependencyDepth)
                 .Any(t => t.MethodGroups.Any(g => g.Aliases.Count != 0))
+            || (
+                dependencyDepth == 0
+                && members.Structs.Any(s => !s.Type.IsCustomizedStruct && s.IsPyInteger)
+            )
         )
         {
             hw.WriteLine("from typing_extensions import deprecated");
@@ -511,6 +515,19 @@ static class FileWriters
             else if (type.IsPySequence)
             {
                 w.WriteLine($"winrt.runtime._internals.mixin_sequence({type.PyWrapperTypeName})");
+            }
+        }
+
+        // HResult and EventRegistrationToken were projected as structs with
+        // one field in pywinrt v3.x, and are the integer itself now, so the
+        // name that field had still reads it.
+        foreach (var type in allExtensionTypes.Where(t => t.IsPyInteger))
+        {
+            foreach (var field in type.Type.Fields)
+            {
+                w.WriteLine(
+                    $"winrt.runtime._internals.alias_field({type.Name}, \"{field.Name.ToPythonIdentifier()}\")"
+                );
             }
         }
 

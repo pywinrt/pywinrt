@@ -82,7 +82,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiAccessStat
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.WiFi.WiFiAccessStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -111,7 +111,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiAdapter> c
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.WiFi.WiFiAdapter> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -140,7 +140,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiConnection
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.WiFi.WiFiConnectionResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -169,7 +169,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiOnDemandHo
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -198,7 +198,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFi.WiFiWpsConfigu
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.WiFi.WiFiWpsConfigurationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -227,7 +227,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAdapter>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -740,9 +740,9 @@ class Windows.Devices.WiFi.WiFiAdapter python_type
     event available_networks_changed
         add add_AvailableNetworksChanged slot=9 inputs=1 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapter shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFi.WiFiAdapter,System.Object> name=args
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AvailableNetworksChanged slot=10 inputs=1 outputs=0 declaring=Windows.Devices.WiFi.IWiFiAdapter shape=26 reverse=134
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method connect_async
         method ConnectAsync slot=11 inputs=2 outputs=1 declaring=Windows.Devices.WiFi.IWiFiAdapter shape=117 reverse=145
             in class type=Windows.Devices.WiFi.WiFiAvailableNetwork name=availableNetwork
@@ -1001,6 +1001,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

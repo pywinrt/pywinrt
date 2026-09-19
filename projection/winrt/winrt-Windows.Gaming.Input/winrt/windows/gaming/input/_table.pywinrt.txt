@@ -26,33 +26,33 @@ class Windows.Gaming.Input.ArcadeStick python_type
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetConnected slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event headset_disconnected
         add add_HeadsetDisconnected slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetDisconnected slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event user_changed
         add add_UserChanged slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.System.UserChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event arcade_stick_added static
         add add_ArcadeStickAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.ArcadeStick> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ArcadeStickAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event arcade_stick_removed static
         add add_ArcadeStickRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=51 reverse=65 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.ArcadeStick> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ArcadeStickRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=26 reverse=110 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_game_controller static
         method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IArcadeStickStatics2 shape=51 reverse=24 static
             in interface type=Windows.Gaming.Input.IGameController name=gameController
@@ -170,33 +170,33 @@ class Windows.Gaming.Input.FlightStick python_type
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetConnected slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event headset_disconnected
         add add_HeadsetDisconnected slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetDisconnected slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event user_changed
         add add_UserChanged slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.System.UserChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event flight_stick_added static
         add add_FlightStickAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IFlightStickStatics shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.FlightStick> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FlightStickAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IFlightStickStatics shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event flight_stick_removed static
         add add_FlightStickRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IFlightStickStatics shape=51 reverse=65 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.FlightStick> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FlightStickRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IFlightStickStatics shape=26 reverse=110 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_game_controller static
         method FromGameController slot=11 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IFlightStickStatics shape=51 reverse=144 static
             in interface type=Windows.Gaming.Input.IGameController name=gameController
@@ -269,33 +269,33 @@ class Windows.Gaming.Input.Gamepad python_type
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetConnected slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event headset_disconnected
         add add_HeadsetDisconnected slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetDisconnected slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event user_changed
         add add_UserChanged slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.System.UserChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event gamepad_added static
         add add_GamepadAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGamepadStatics shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.Gamepad> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GamepadAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGamepadStatics shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event gamepad_removed static
         add add_GamepadRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGamepadStatics shape=51 reverse=65 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.Gamepad> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GamepadRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGamepadStatics shape=26 reverse=110 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_game_controller static
         method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGamepadStatics2 shape=51 reverse=24 static
             in interface type=Windows.Gaming.Input.IGameController name=gameController
@@ -382,21 +382,21 @@ interface Windows.Gaming.Input.IGameController python_type
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetConnected slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event headset_disconnected
         add add_HeadsetDisconnected slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetDisconnected slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event user_changed
         add add_UserChanged slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.System.UserChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 interface Windows.Gaming.Input.IGameControllerBatteryInfo python_type
     py _IGameControllerBatteryInfo
@@ -958,33 +958,33 @@ class Windows.Gaming.Input.RacingWheel python_type
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetConnected slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event headset_disconnected
         add add_HeadsetDisconnected slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetDisconnected slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event user_changed
         add add_UserChanged slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.System.UserChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event racing_wheel_added static
         add add_RacingWheelAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.RacingWheel> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RacingWheelAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event racing_wheel_removed static
         add add_RacingWheelRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=51 reverse=65 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.RacingWheel> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RacingWheelRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=26 reverse=110 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_game_controller static
         method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRacingWheelStatics2 shape=51 reverse=24 static
             in interface type=Windows.Gaming.Input.IGameController name=gameController
@@ -1067,33 +1067,33 @@ class Windows.Gaming.Input.RawGameController python_type
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetConnected slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event headset_disconnected
         add add_HeadsetDisconnected slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetDisconnected slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event user_changed
         add add_UserChanged slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.System.UserChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event raw_game_controller_added static
         add add_RawGameControllerAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.RawGameController> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RawGameControllerAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event raw_game_controller_removed static
         add add_RawGameControllerRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=51 reverse=65 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.RawGameController> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RawGameControllerRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=26 reverse=110 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_game_controller static
         method FromGameController slot=11 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=51 reverse=144 static
             in interface type=Windows.Gaming.Input.IGameController name=gameController
@@ -1168,33 +1168,33 @@ class Windows.Gaming.Input.UINavigationController python_type
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetConnected slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event headset_disconnected
         add add_HeadsetDisconnected slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadsetDisconnected slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event user_changed
         add add_UserChanged slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.System.UserChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event ui_navigation_controller_added static
         add add_UINavigationControllerAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.UINavigationController> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UINavigationControllerAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event ui_navigation_controller_removed static
         add add_UINavigationControllerRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=51 reverse=65 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.UINavigationController> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UINavigationControllerRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=26 reverse=110 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_game_controller static
         method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationControllerStatics2 shape=51 reverse=24 static
             in interface type=Windows.Gaming.Input.IGameController name=gameController
@@ -1230,6 +1230,9 @@ class Windows.Devices.Power.BatteryReport external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler

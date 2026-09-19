@@ -119,7 +119,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageD
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -148,7 +148,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageO
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Imaging.ImageObjectExtractor> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -177,7 +177,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageS
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Imaging.ImageScaler> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -206,7 +206,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.Recogn
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Imaging.RecognizedText> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -235,7 +235,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.TextRe
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Imaging.TextRecognizer> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -270,7 +270,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AI
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -305,7 +305,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Im
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.Imaging.ImageDescriptionResult,System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -834,6 +834,9 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external 
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

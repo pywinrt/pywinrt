@@ -221,7 +221,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Management.Setup.DevicePrep
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Management.Setup.DevicePreparationExecutionContext> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -632,15 +632,15 @@ class Windows.Management.Setup.MachineProvisioningProgressReporter python_type
     event session_connection_changed
         add add_SessionConnectionChanged slot=11 inputs=1 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Setup.MachineProvisioningProgressReporter,Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SessionConnectionChanged slot=12 inputs=1 outputs=0 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event session_state_changed
         add add_SessionStateChanged slot=9 inputs=1 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Setup.MachineProvisioningProgressReporter,Windows.Management.Setup.DeploymentSessionStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SessionStateChanged slot=10 inputs=1 outputs=0 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_device_preparation_execution_context_async
         method GetDevicePreparationExecutionContextAsync slot=14 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4 reverse=186
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Management.Setup.DevicePreparationExecutionContext> return
@@ -686,6 +686,12 @@ enum Windows.Foundation.AsyncStatus external
 
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

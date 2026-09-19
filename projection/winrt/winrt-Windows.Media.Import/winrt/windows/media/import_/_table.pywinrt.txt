@@ -121,7 +121,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -150,7 +150,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportSource>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -179,7 +179,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Import.PhotoImportSou
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Import.PhotoImportSource> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -214,7 +214,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Import.Ph
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult,System.Double> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -249,7 +249,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Import.Ph
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Media.Import.PhotoImportFindItemsResult,System.UInt32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -284,7 +284,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Import.Ph
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Media.Import.PhotoImportImportItemsResult,Windows.Media.Import.PhotoImportProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1282,15 +1282,15 @@ class Windows.Media.Import.PhotoImportFindItemsResult python_type
     event item_imported
         add add_ItemImported slot=37 inputs=1 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=51 reverse=300
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Import.PhotoImportFindItemsResult,Windows.Media.Import.PhotoImportItemImportedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ItemImported slot=38 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=26 reverse=305
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event selection_changed
         add add_SelectionChanged slot=34 inputs=1 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=51 reverse=289
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Import.PhotoImportFindItemsResult,Windows.Media.Import.PhotoImportSelectionChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SelectionChanged slot=35 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=26 reverse=294
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_items_in_date_range_to_selection
         method AddItemsInDateRangeToSelection slot=6 inputs=2 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult2 shape=90
             in datetime name=rangeStart
@@ -1733,6 +1733,12 @@ enum Windows.Foundation.AsyncStatus external
 
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

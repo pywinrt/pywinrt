@@ -260,7 +260,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.UI.Xaml.Data.LoadMoreItem
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -338,21 +338,21 @@ interface Microsoft.UI.Xaml.Data.ICollectionView python_type iterable sequence m
     event current_changed
         add add_CurrentChanged slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionView shape=51 reverse=163
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CurrentChanged slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.ICollectionView shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event current_changing
         add add_CurrentChanging slot=14 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionView shape=51 reverse=187
             in delegate type=Microsoft.UI.Xaml.Data.CurrentChangingEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CurrentChanging slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.ICollectionView shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event vector_changed
         add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<System.Object> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<System.Object> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<System.Object> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=173 role=append
             in object name=value
@@ -602,9 +602,9 @@ interface Microsoft.UI.Xaml.Data.INotifyDataErrorInfo python_type
     event errors_changed
         add add_ErrorsChanged slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Data.INotifyDataErrorInfo shape=51 reverse=44
             in delegate type=Windows.Foundation.EventHandler<Microsoft.UI.Xaml.Data.DataErrorsChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ErrorsChanged slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.INotifyDataErrorInfo shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_errors
         method GetErrors slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Data.INotifyDataErrorInfo shape=51 reverse=100
             in string name=propertyName
@@ -617,9 +617,9 @@ interface Microsoft.UI.Xaml.Data.INotifyPropertyChanged python_type
     event property_changed
         add add_PropertyChanged slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Data.INotifyPropertyChanged shape=51 reverse=24
             in delegate type=Microsoft.UI.Xaml.Data.PropertyChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PropertyChanged slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.INotifyPropertyChanged shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 interface Windows.Foundation.Collections.IObservableVector<System.Object> concrete iterable sequence mutable_sequence
     py winrt.windows.foundation.collections._IObservableVector[Object]
@@ -635,9 +635,9 @@ interface Windows.Foundation.Collections.IObservableVector<System.Object> concre
     event vector_changed
         add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<System.Object> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<System.Object> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<System.Object> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=173 role=append
             in object name=value
@@ -966,6 +966,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

@@ -10,6 +10,12 @@ static class StructWriterExtensions
         IReadOnlyDictionary<string, string> packageMap
     )
     {
+        if (type.IsPyInteger)
+        {
+            w.WritePythonIntegerTyping(type);
+            return;
+        }
+
         var metaclass = "";
 
         if (type.PyRequiresMetaclass)
@@ -70,6 +76,30 @@ static class StructWriterExtensions
             w.WriteLine(
                 $"def unpack(self) -> {type.Type.ToPyTupleTyping(ns, packageMap, isUnpack: true)}: ..."
             );
+        }
+
+        w.Indent--;
+        w.WriteBlankLine();
+    }
+
+    /// <summary>
+    /// Writes the typing of a WinRT struct that is one integer, which is
+    /// projected as a subclass of <c>int</c> rather than as a wrapper with one
+    /// field in it.
+    /// </summary>
+    private static void WritePythonIntegerTyping(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteLine("@typing.final");
+        w.WriteLine($"class {type.Name}(int):");
+        w.Indent++;
+
+        foreach (var field in type.Type.Fields)
+        {
+            w.WriteLine(
+                $"@deprecated(\"{type.Name}.{field.Name.ToPythonIdentifier()} is deprecated, the value is the {type.Name} itself\")"
+            );
+            w.WriteLine("@_property");
+            w.WriteLine($"def {field.Name.ToPythonIdentifier()}(self) -> int: ...");
         }
 
         w.Indent--;

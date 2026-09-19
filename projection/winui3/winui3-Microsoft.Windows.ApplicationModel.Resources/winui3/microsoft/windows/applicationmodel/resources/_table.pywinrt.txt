@@ -162,9 +162,9 @@ interface Microsoft.Windows.ApplicationModel.Resources.IResourceManager python_t
     event resource_not_found
         add add_ResourceNotFound slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.ApplicationModel.Resources.ResourceManager,Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ResourceNotFound slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_resource_context
         method CreateResourceContext slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=4 reverse=43
             out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceContext return
@@ -303,9 +303,9 @@ class Microsoft.Windows.ApplicationModel.Resources.ResourceManager activatable p
     event resource_not_found
         add add_ResourceNotFound slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.ApplicationModel.Resources.ResourceManager,Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ResourceNotFound slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_resource_context
         method CreateResourceContext slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManager shape=4 reverse=43
             out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceContext return
@@ -380,6 +380,9 @@ delegate Windows.Foundation.TypedEventHandler<Microsoft.Windows.ApplicationModel
 
 class System.String external
     py winrt.system.String
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler
