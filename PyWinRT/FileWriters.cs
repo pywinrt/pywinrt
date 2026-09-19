@@ -77,8 +77,7 @@ static class FileWriters
                     members,
                     componentDlls
                 ),
-            () => WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 0),
-            () => WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 1),
+            () => WriteNamespacePyi(nsDir, ns, nullabilityMap, packageMap, members),
             () => WriteDepsJson(nsPackageDir, packageMap, members),
             () => TableWriter.Write(nsDir, ns, packageMap, members, census)
         );
@@ -143,13 +142,168 @@ static class FileWriters
         sw.WriteFileIfChanged(nsPackageDir, "deps.json");
     }
 
+    /// <summary>
+    /// Writes the <c>__all__</c> of a namespace, which is every name it binds.
+    /// </summary>
+    private static void WriteAll(
+        this IndentedTextWriter w,
+        Members members,
+        IEnumerable<ProjectedType> allExtensionTypes
+    )
+    {
+        w.WriteLine("__all__ = [");
+        w.Indent++;
+
+        foreach (var type in members.Enums.Concat(allExtensionTypes).Concat(members.Delegates))
+        {
+            w.WriteLine($"\"{type.Name}\",");
+        }
+
+        w.Indent--;
+        w.WriteLine("]");
+    }
+
+    /// <summary>
+    /// Writes the enums of a namespace as Python enum classes.
+    /// </summary>
+    /// <remarks>
+    /// An enum is the one kind of projected type that is not built from the
+    /// table: it carries no interface and no members, so a Python class with
+    /// the constants in it is the whole projection. The same text goes into
+    /// <c>__init__.py</c>, which defines them, and into <c>__init__.pyi</c>,
+    /// which has to repeat everything the module binds.
+    /// </remarks>
+    private static void WriteEnums(this IndentedTextWriter w, Members members)
+    {
+        foreach (var type in members.Enums)
+        {
+            w.WriteBlankLine();
+            w.WriteLine(
+                $"class {type.Name}(enum.{(type.Type.HasFlagsAttribute ? "IntFlag" : "IntEnum")}):"
+            );
+
+            w.Indent++;
+
+            foreach (var field in type.Type.Fields)
+            {
+                if (field.Constant is not null)
+                {
+                    var value = type.Type.HasFlagsAttribute
+                        ? $"0x{field.Constant:X}"
+                        : field.Constant.ToString();
+                    w.WriteLine($"{field.Name.ToPythonConstant()} = {value}");
+                }
+            }
+
+            w.Indent--;
+        }
+    }
+
+    /// <summary>
+    /// Writes the delegates of a namespace as <c>typing.Callable</c> aliases.
+    /// </summary>
+    /// <param name="forStub">
+    /// Whether this is <c>__init__.pyi</c> rather than <c>__init__.py</c>. A
+    /// stub is read and not executed, so it says <c>typing.TypeAlias</c> and
+    /// names a type from another namespace directly. The aliases in
+    /// <c>__init__.py</c> are assignments evaluated when the module is
+    /// imported, and it only imports those namespaces while type checking -
+    /// not every package a namespace refers to is necessarily installed - so
+    /// there the names are quoted.
+    /// </param>
+    /// <remarks>
+    /// A delegate is a Python callable, so what the projection binds is the
+    /// signature it has to have.
+    /// </remarks>
+    private static void WriteDelegateAliases(
+        this IndentedTextWriter w,
+        QualifiedNamespace ns,
+        Members members,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap,
+        bool forStub
+    )
+    {
+        foreach (var type in members.Delegates)
+        {
+            var invoke = type.Type.Methods.Single(m => m.Name == "Invoke");
+            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                invoke.ToString(),
+                new MethodNullabilityInfo(invoke)
+            );
+            var paramTypes = invoke
+                .Parameters.Where(p => p.IsPythonInParam)
+                .Select(p =>
+                    p.ToPyCallbackInParamTyping(
+                        ns.Namespace,
+                        nullabilityInfo.Parameters[p.Index].Type,
+                        packageMap,
+                        quoteImportedTypes: !forStub
+                    )
+                );
+
+            // REVISIT: We will likely need to implement a ToPyCallbackInParamTyping()
+            // instead of ToPyReturnTyping(). For now, this isn't a problem outside
+            // of the TestComponent modules since most callbacks only return None or bool.
+            var alias = forStub ? ": typing.TypeAlias" : "";
+
+            w.WriteLine(
+                $"{type.Name}{alias} = typing.Callable[[{string.Join(", ", paramTypes)}], {invoke.ToPyReturnTyping(ns.Namespace, nullabilityInfo, packageMap, quoteImportedTypes: !forStub)}]"
+            );
+        }
+    }
+
+    /// <summary>
+    /// The namespaces other than <paramref name="ns"/> that the delegates of
+    /// <paramref name="members"/> name in their signatures.
+    /// </summary>
+    private static SortedSet<QualifiedNamespace> GetDelegateReferencedNamespaces(
+        this Members members,
+        IReadOnlyDictionary<string, string> packageMap,
+        QualifiedNamespace ns
+    )
+    {
+        return new SortedSet<QualifiedNamespace>(
+            members.Delegates.SelectMany(d =>
+            {
+                var method = d.Type.Methods.Single(m => m.Name == "Invoke");
+
+                return method
+                    .Parameters.Select(p => p.ParameterType)
+                    .Append(method.ReturnType)
+                    .Where(t =>
+                        !t.IsGenericParameter
+                        && !(
+                            t.Namespace == "Windows.Foundation.Collections"
+                            && t.Name == "IIterable`1"
+                        )
+                    )
+                    .Select(t => t.GetQualifiedNamespace(packageMap))
+                    .Where(n => n != ns && n.Namespace != "System");
+            })
+        );
+    }
+
+    /// <summary>
+    /// Writes the type stub of a namespace, which sits beside its
+    /// <c>__init__.py</c> as <c>__init__.pyi</c>.
+    /// </summary>
+    /// <remarks>
+    /// This is the inline-stub layout that PEP 561 describes and that type
+    /// checkers prefer over the <c>.py</c>. It is also the only layout a
+    /// projection package can have: the module used to re-export an extension
+    /// module's contents, and the stub went beside that extension module, but
+    /// the types come from the table now and there is no second module to
+    /// describe. So a stub has to say everything the module has, the enums and
+    /// the delegate aliases that <c>__init__.py</c> defines included, because a
+    /// type checker reads the stub instead of the module and not as well as it.
+    /// </remarks>
     private static void WriteNamespacePyi(
-        DirectoryInfo nsWinrtDir,
+        DirectoryInfo nsDir,
         QualifiedNamespace ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
         IReadOnlyDictionary<string, string> packageMap,
-        Members members,
-        int dependencyDepth
+        Members members
     )
     {
         // The stdlib imports depend on what the type hints below turn out
@@ -157,15 +311,19 @@ static class FileWriters
         // are prepended once we can see it.
         using var bodySw = new StringWriter();
         using var w = new IndentedTextWriter(bodySw) { NewLine = "\n" };
-        bool didWriteClass = false;
+
+        var allExtensionTypes = members
+            .Structs.Where(s => !s.Type.IsCustomizedStruct)
+            .Concat(members.Classes)
+            .Concat(members.Interfaces);
 
         w.WriteLine("import winrt._winrt");
         w.WriteLine("import winrt.system");
 
-        var referencedNamespaces = members.GetReferencedNamespaces(
-            packageMap,
-            includeInheritedInterfaces: true
+        var referencedNamespaces = new SortedSet<QualifiedNamespace>(
+            members.GetReferencedNamespaces(packageMap, includeInheritedInterfaces: true)
         );
+        referencedNamespaces.UnionWith(members.GetDelegateReferencedNamespaces(packageMap, ns));
 
         foreach (var rns in referencedNamespaces)
         {
@@ -173,71 +331,16 @@ static class FileWriters
         }
 
         w.WriteBlankLine();
-
-        // handle circular dependencies by importing sibling modules of the same namespace
-        for (int depth = 0; depth < 2; depth++)
-        {
-            if (depth == dependencyDepth)
-            {
-                // don't import this module to itself
-                continue;
-            }
-
-            var dependencyTypes = members
-                .Structs.Where(s => !s.Type.IsCustomizedStruct)
-                .Concat(members.Classes)
-                .Concat(members.Interfaces)
-                .Where(t => t.CircularDependencyDepth == depth);
-
-            if (!dependencyTypes.Any())
-            {
-                // nothing to import
-                continue;
-            }
-
-            var suffix = depth == 0 ? "" : $"_{depth + 1}";
-            w.WriteLine($"from {ns.PyPackage}.{ns.NsModuleName}{suffix} import (");
-            w.Indent++;
-
-            foreach (var type in dependencyTypes)
-            {
-                w.WriteLine($"{type.PyWrapperTypeName},");
-
-                if (type.Category == Category.Interface)
-                {
-                    w.WriteLine($"{type.Name},");
-                }
-            }
-
-            w.Indent--;
-            w.WriteLine(")");
-            w.WriteBlankLine();
-        }
-
-        if (members.Enums.Count != 0)
-        {
-            w.WriteLine(
-                $"from {ns.PyModuleName} import {string.Join(", ", members.Enums.Select(e => e.Name))}"
-            );
-        }
-
-        if (members.Delegates.Count != 0)
-        {
-            w.WriteLine(
-                $"from {ns.PyModuleName} import {string.Join(", ", members.Delegates.Select(d => d.Name))}"
-            );
-        }
-
-        if (members.Enums.Count != 0 || members.Delegates.Count != 0)
-        {
-            w.WriteBlankLine();
-        }
+        w.WriteAll(members, allExtensionTypes);
 
         w.WriteLine("Self = typing.TypeVar('Self')");
 
         foreach (
             var type in members
                 .Interfaces.SelectMany(i => i.Type.GenericParameters.Select(p => p.Name))
+                .Concat(
+                    members.Delegates.SelectMany(d => d.Type.GenericParameters.Select(p => p.Name))
+                )
                 .Distinct()
                 .Order()
         )
@@ -245,33 +348,20 @@ static class FileWriters
             w.WriteLine($"{type} = typing.TypeVar('{type}')");
         }
 
+        w.WriteEnums(members);
         w.WriteBlankLine();
 
-        foreach (
-            var type in members.Structs.Where(s =>
-                !s.Type.IsCustomizedStruct && s.CircularDependencyDepth == dependencyDepth
-            )
-        )
+        foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct))
         {
             w.WritePythonStructTyping(type, ns.Namespace, packageMap);
-            didWriteClass = true;
         }
 
-        foreach (
-            var type in members
-                .Classes.Concat(members.Interfaces)
-                .Where(t => t.CircularDependencyDepth == dependencyDepth)
-        )
+        foreach (var type in members.Classes.Concat(members.Interfaces))
         {
             w.WritePythonClassTyping(type, ns.Namespace, nullabilityMap, packageMap);
-            didWriteClass = true;
         }
 
-        // only write extra files if we wrote at least one class
-        if (dependencyDepth != 0 && !didWriteClass)
-        {
-            return;
-        }
+        w.WriteDelegateAliases(ns, members, nullabilityMap, packageMap, forStub: true);
 
         var body = bodySw.ToString();
 
@@ -292,12 +382,8 @@ static class FileWriters
         if (
             members
                 .Classes.Concat(members.Interfaces)
-                .Where(t => t.CircularDependencyDepth == dependencyDepth)
                 .Any(t => t.MethodGroups.Any(g => g.Aliases.Count != 0))
-            || (
-                dependencyDepth == 0
-                && members.Structs.Any(s => !s.Type.IsCustomizedStruct && s.IsPyInteger)
-            )
+            || members.Structs.Any(s => !s.Type.IsCustomizedStruct && s.IsPyInteger)
         )
         {
             hw.WriteLine("from typing_extensions import deprecated");
@@ -311,8 +397,7 @@ static class FileWriters
 
         hw.Write(body);
 
-        var moduleSuffix = dependencyDepth == 0 ? "" : $"_{dependencyDepth + 1}";
-        sw.WriteFileIfChanged(nsWinrtDir, $"{ns.NsModuleName}{moduleSuffix}.pyi");
+        sw.WriteFileIfChanged(nsDir, "__init__.pyi");
     }
 
     /// <summary>
@@ -399,25 +484,7 @@ static class FileWriters
         // them when type checking is enabled and quote the types to avoid
         // to avoid runtime errors.
 
-        var delegateReferencedNamespaces = new SortedSet<QualifiedNamespace>(
-            members.Delegates.SelectMany(d =>
-            {
-                var method = d.Type.Methods.Single(m => m.Name == "Invoke");
-
-                return method
-                    .Parameters.Select(p => p.ParameterType)
-                    .Append(method.ReturnType)
-                    .Where(t =>
-                        !t.IsGenericParameter
-                        && !(
-                            t.Namespace == "Windows.Foundation.Collections"
-                            && t.Name == "IIterable`1"
-                        )
-                    )
-                    .Select(t => t.GetQualifiedNamespace(packageMap))
-                    .Where(n => n != ns && n.Namespace != "System");
-            })
-        );
+        var delegateReferencedNamespaces = members.GetDelegateReferencedNamespaces(packageMap, ns);
 
         if (delegateReferencedNamespaces.Count > 0)
         {
@@ -448,16 +515,7 @@ static class FileWriters
         }
 
         w.WriteBlankLine();
-        w.WriteLine($"__all__ = [");
-        w.Indent++;
-
-        foreach (var type in members.Enums.Concat(allExtensionTypes).Concat(members.Delegates))
-        {
-            w.WriteLine($"\"{type.Name}\",");
-        }
-
-        w.Indent--;
-        w.WriteLine("]");
+        w.WriteAll(members, allExtensionTypes);
 
         foreach (
             var type in members
@@ -469,28 +527,7 @@ static class FileWriters
             w.WriteLine($"{type} = typing.TypeVar('{type}')");
         }
 
-        foreach (var type in members.Enums)
-        {
-            w.WriteBlankLine();
-            w.WriteLine(
-                $"class {type.Name}(enum.{(type.Type.HasFlagsAttribute ? "IntFlag" : "IntEnum")}):"
-            );
-
-            w.Indent++;
-
-            foreach (var field in type.Type.Fields)
-            {
-                if (field.Constant is not null)
-                {
-                    var value = type.Type.HasFlagsAttribute
-                        ? $"0x{field.Constant:X}"
-                        : field.Constant.ToString();
-                    w.WriteLine($"{field.Name.ToPythonConstant()} = {value}");
-                }
-            }
-
-            w.Indent--;
-        }
+        w.WriteEnums(members);
 
         w.WriteBlankLine();
 
@@ -548,31 +585,7 @@ static class FileWriters
             }
         }
 
-        foreach (var type in members.Delegates)
-        {
-            var invoke = type.Type.Methods.Single(m => m.Name == "Invoke");
-            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
-                invoke.ToString(),
-                new MethodNullabilityInfo(invoke)
-            );
-            var paramTypes = invoke
-                .Parameters.Where(p => p.IsPythonInParam)
-                .Select(p =>
-                    p.ToPyCallbackInParamTyping(
-                        ns.Namespace,
-                        nullabilityInfo.Parameters[p.Index].Type,
-                        packageMap,
-                        quoteImportedTypes: true
-                    )
-                );
-
-            // REVISIT: We will likely need to implement a ToPyCallbackInParamTyping()
-            // instead of ToPyReturnTyping(). For now, this isn't a problem outside
-            // of the TestComponent modules since most callbacks only return None or bool.
-            w.WriteLine(
-                $"{type.Name} = typing.Callable[[{string.Join(", ", paramTypes)}], {invoke.ToPyReturnTyping(ns.Namespace, nullabilityInfo, packageMap, quoteImportedTypes: true)}]"
-            );
-        }
+        w.WriteDelegateAliases(ns, members, nullabilityMap, packageMap, forStub: false);
 
         var body = bodySw.ToString();
 

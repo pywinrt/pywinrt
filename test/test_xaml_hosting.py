@@ -1,7 +1,3 @@
-from test._util import skip_without_projection
-
-skip_without_projection()
-
 import unittest
 
 from winrt.windows.ui.xaml.hosting import WindowsXamlManager, DesktopWindowXamlSource
