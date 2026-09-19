@@ -1,0 +1,27 @@
+# The lint job in .github/workflows/test.yaml runs a bare `ruff check` from the
+# repository root, so what CI checks and what an editor checks are the same
+# thing. Only the rules below are selected: the ones ruff enables by default
+# are all about executed code, and the generated __init__.py binds the names it
+# exports from the projection table at import time, which reads as fifteen
+# hundred undefined names.
+target-version = "py311"
+
+[lint]
+select = [
+    # pyupgrade: the 3.11 floor makes the legacy typing spellings unnecessary
+    "UP",
+    # flake8-pyi: the conventions that a type stub is read by
+    "PYI",
+]
+ignore = [
+    # The generated TypeVars - T, K, V, TResult, TProgress - are module-level
+    # names that the namespace package exports, so giving them the underscore
+    # that a stub-private name wants would change what the package exports.
+    "PYI001",
+]
+
+[lint.per-file-ignores]
+# The interop stubs are hand-written and are the only description the extension
+# modules beside them have, so they keep their docstrings (PYI021) and name
+# their default values rather than hiding them behind "..." (PYI011).
+"interop/**/*.pyi" = ["PYI011", "PYI021"]

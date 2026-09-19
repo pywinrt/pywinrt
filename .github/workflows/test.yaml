@@ -11,6 +11,7 @@ on:
     paths:
       - .github/workflows/test.yaml
       - mypy.ini
+      - ruff.toml
       - .config/_tools.json
       - patches/**
       - scripts/fetch-tools.ps1
@@ -38,6 +39,7 @@ on:
     paths:
       - .github/workflows/test.yaml
       - mypy.ini
+      - ruff.toml
       - .config/_tools.json
       - patches/**
       - scripts/fetch-tools.ps1
@@ -150,6 +152,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # the rules and the files they apply to are in ruff.toml, so that the
+      # editor checks the same thing as CI does
+      - name: Run ruff
+        run: pipx run ruff check
       - name: merge packages
         run: |
           mkdir _install/lint -Force
