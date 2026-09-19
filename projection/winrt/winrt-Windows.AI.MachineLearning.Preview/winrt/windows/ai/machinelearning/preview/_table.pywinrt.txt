@@ -158,7 +158,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -178,7 +178,7 @@ interface Windows.Foundation.Collections.IIterator<System.Int64> concrete iterab
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int64> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int64> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Int64> shape=117 reverse=101 role=get_many
             fill_array int64 name=items
             out uint32 return
     method move_next
@@ -198,7 +198,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.AI.MachineLearning.Pr
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview> shape=117 reverse=101 role=get_many
             fill_array interface type=Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview name=items
             out uint32 return
     method move_next
@@ -218,7 +218,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
             out uint32 return
     method move_next
@@ -238,7 +238,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
             out uint32 return
     method move_next
@@ -257,10 +257,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Obje
     argument System.String
     argument System.Object
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43 role=pair_value
             out object return
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
@@ -271,10 +271,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Stri
     argument System.String
     argument System.String
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43 role=pair_value
             out string return
 
 interface Windows.AI.MachineLearning.Preview.ILearningModelBindingPreview
@@ -324,12 +324,12 @@ interface Windows.Foundation.Collections.IMap<System.String,System.Object> concr
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=65 role=has_key
@@ -374,7 +374,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,System.Object> c
             in string name=key
             out object return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
 
@@ -401,7 +401,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,System.String> c
             in string name=key
             out string return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
@@ -510,7 +510,7 @@ class Windows.AI.MachineLearning.Preview.LearningModelBindingPreview python_type
             in string name=key
             out object return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
 

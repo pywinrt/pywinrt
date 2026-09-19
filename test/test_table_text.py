@@ -53,6 +53,8 @@ interface Test.Sample.IThing python_type stringable
         method Relabel slot=11 inputs=1 outputs=1 declaring=Test.Sample.IThing shape=1
             pass_array string name=labels
             receive_array string return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Test.Sample.IThing shape=1 role=clear
     event changed
         add add_Changed slot=8 inputs=1 outputs=1 declaring=Test.Sample.IThing shape=1
             in delegate type=Test.Sample.Changed name=handler
@@ -97,6 +99,7 @@ CATEGORY_CLASS = 3
 
 MEMBER_ROLE_SIZE = 1
 MEMBER_ROLE_GET_MANY = 20
+MEMBER_ROLE_CLEAR = 25
 
 CATEGORY_IN = 0
 CATEGORY_OUT = 1
@@ -205,6 +208,15 @@ class TestTextTable(unittest.TestCase):
         self.assertEqual(size["role"], MEMBER_ROLE_SIZE)
         self.assertEqual(size["in_count"], 0)
         self.assertEqual(size["out_count"], 1)
+
+    def test_a_member_keeps_a_role_that_only_a_python_collection_plays(self) -> None:
+        # The roles above twenty are the ones nothing on the Python side of a
+        # projected collection calls, so a table that lost them would still
+        # read - and a Python list handed to WinRT as an IVector<T> would have
+        # a vtable slot with nothing behind it.
+        groups = {g["py_name"]: g for g in types(read())["Test.Sample.IThing"]["groups"]}
+
+        self.assertEqual(groups["clear"]["members"][0]["role"], MEMBER_ROLE_CLEAR)
 
     def test_a_parameter_keeps_what_it_is_and_how_it_travels(self) -> None:
         table = read()

@@ -169,7 +169,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.JumpLi
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.JumpListItem> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.JumpListItem> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.JumpListItem> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.UI.StartScreen.JumpListItem name=items
             out uint32 return
     method move_next
@@ -189,7 +189,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.Second
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.SecondaryTile> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.SecondaryTile> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.SecondaryTile> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.UI.StartScreen.SecondaryTile name=items
             out uint32 return
     method move_next
@@ -209,7 +209,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.Second
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.SecondaryTileVisualElements> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.SecondaryTileVisualElements> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.SecondaryTileVisualElements> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.UI.StartScreen.SecondaryTileVisualElements name=items
             out uint32 return
     method move_next
@@ -409,10 +409,10 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpList
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=4 reverse=173 role=append
             in class type=Windows.UI.StartScreen.JumpListItem name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.StartScreen.JumpListItem> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.StartScreen.JumpListItem> return
@@ -426,10 +426,10 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpList
             fill_array class type=Windows.UI.StartScreen.JumpListItem name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.JumpListItem> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=117 reverse=101 role=index_of
             in class type=Windows.UI.StartScreen.JumpListItem name=value
             out uint32 name=index
             out boolean return
@@ -441,9 +441,9 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpList
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.UI.StartScreen.JumpListItem name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.StartScreen.JumpListItem> shape=51 reverse=124 role=set_at
@@ -473,7 +473,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.Jump
             fill_array class type=Windows.UI.StartScreen.JumpListItem name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.JumpListItem> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.JumpListItem> shape=117 reverse=66 role=index_of
             in class type=Windows.UI.StartScreen.JumpListItem name=value
             out uint32 name=index
             out boolean return
@@ -501,7 +501,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.Seco
             fill_array class type=Windows.UI.StartScreen.SecondaryTile name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTile> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTile> shape=117 reverse=66 role=index_of
             in class type=Windows.UI.StartScreen.SecondaryTile name=value
             out uint32 name=index
             out boolean return
@@ -529,7 +529,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.Seco
             fill_array class type=Windows.UI.StartScreen.SecondaryTileVisualElements name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTileVisualElements> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.StartScreen.SecondaryTileVisualElements> shape=117 reverse=66 role=index_of
             in class type=Windows.UI.StartScreen.SecondaryTileVisualElements name=value
             out uint32 name=index
             out boolean return

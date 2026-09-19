@@ -245,7 +245,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -265,7 +265,7 @@ interface Windows.Foundation.Collections.IIterator<System.Boolean> concrete iter
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Boolean> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Boolean> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Boolean> shape=117 reverse=101 role=get_many
             fill_array boolean name=items
             out uint32 return
     method move_next
@@ -285,7 +285,7 @@ interface Windows.Foundation.Collections.IIterator<System.Double> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Double> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Double> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Double> shape=117 reverse=101 role=get_many
             fill_array double name=items
             out uint32 return
     method move_next
@@ -305,7 +305,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
             out uint32 return
     method move_next
@@ -325,7 +325,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue> name=items
             out uint32 return
     method move_next
@@ -345,7 +345,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> concr
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Foundation.Uri name=items
             out uint32 return
     method move_next
@@ -365,7 +365,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Services.TargetedCont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentAction> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentAction> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentAction> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Services.TargetedContent.TargetedContentAction name=items
             out uint32 return
     method move_next
@@ -385,7 +385,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Services.TargetedCont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentCollection> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentCollection> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentCollection> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Services.TargetedContent.TargetedContentCollection name=items
             out uint32 return
     method move_next
@@ -405,7 +405,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Services.TargetedCont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentFile> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentFile> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentFile> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Services.TargetedContent.TargetedContentFile name=items
             out uint32 return
     method move_next
@@ -425,7 +425,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Services.TargetedCont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentImage> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentImage> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentImage> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Services.TargetedContent.TargetedContentImage name=items
             out uint32 return
     method move_next
@@ -445,7 +445,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Services.TargetedCont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentItem> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentItem> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Services.TargetedContent.TargetedContentItem> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Services.TargetedContent.TargetedContentItem name=items
             out uint32 return
     method move_next
@@ -460,10 +460,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Stri
     argument System.String
     argument System.String
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43 role=pair_value
             out string return
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue> concrete
@@ -474,10 +474,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Ser
     argument System.String
     argument Windows.Services.TargetedContent.TargetedContentValue
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Services.TargetedContent.TargetedContentValue> shape=4 reverse=43 role=pair_value
             out class type=Windows.Services.TargetedContent.TargetedContentValue return
 
 interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete iterable mapping mutable_mapping
@@ -492,12 +492,12 @@ interface Windows.Foundation.Collections.IMap<System.String,System.String> concr
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
@@ -539,7 +539,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,System.String> c
             in string name=key
             out string return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
@@ -566,7 +566,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,Windows.Services
             in string name=key
             out class type=Windows.Services.TargetedContent.TargetedContentValue return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> name=second
 
@@ -626,10 +626,10 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173 role=append
             in string name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
@@ -643,10 +643,10 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             fill_array string name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -658,9 +658,9 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211 role=replace_all
             pass_array string name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
@@ -690,7 +690,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             fill_array string name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -718,7 +718,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Boolean> concrete it
             fill_array boolean name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Boolean> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Boolean> shape=117 reverse=66 role=index_of
             in boolean name=value
             out uint32 name=index
             out boolean return
@@ -746,7 +746,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Double> concrete ite
             fill_array double name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=106 reverse=59
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=106 reverse=59 role=index_of
             in double name=value
             out uint32 name=index
             out boolean return
@@ -774,7 +774,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> con
             fill_array class type=Windows.Foundation.Uri name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=117 reverse=66 role=index_of
             in class type=Windows.Foundation.Uri name=value
             out uint32 name=index
             out boolean return
@@ -802,7 +802,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedCo
             fill_array class type=Windows.Services.TargetedContent.TargetedContentAction name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> shape=117 reverse=66 role=index_of
             in class type=Windows.Services.TargetedContent.TargetedContentAction name=value
             out uint32 name=index
             out boolean return
@@ -830,7 +830,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedCo
             fill_array class type=Windows.Services.TargetedContent.TargetedContentCollection name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> shape=117 reverse=66 role=index_of
             in class type=Windows.Services.TargetedContent.TargetedContentCollection name=value
             out uint32 name=index
             out boolean return
@@ -858,7 +858,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedCo
             fill_array class type=Windows.Services.TargetedContent.TargetedContentFile name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> shape=117 reverse=66 role=index_of
             in class type=Windows.Services.TargetedContent.TargetedContentFile name=value
             out uint32 name=index
             out boolean return
@@ -886,7 +886,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedCo
             fill_array class type=Windows.Services.TargetedContent.TargetedContentImage name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> shape=117 reverse=66 role=index_of
             in class type=Windows.Services.TargetedContent.TargetedContentImage name=value
             out uint32 name=index
             out boolean return
@@ -914,7 +914,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedCo
             fill_array class type=Windows.Services.TargetedContent.TargetedContentItem name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> shape=117 reverse=66 role=index_of
             in class type=Windows.Services.TargetedContent.TargetedContentItem name=value
             out uint32 name=index
             out boolean return

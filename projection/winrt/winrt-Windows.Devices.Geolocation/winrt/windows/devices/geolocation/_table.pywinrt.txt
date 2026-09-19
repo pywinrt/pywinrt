@@ -736,7 +736,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.B
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.BasicGeoposition> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.BasicGeoposition> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.BasicGeoposition> shape=117 reverse=101 role=get_many
             fill_array struct type=Windows.Devices.Geolocation.BasicGeoposition name=items
             out uint32 return
     method move_next
@@ -756,7 +756,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.G
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geoposition> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geoposition> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geoposition> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Geolocation.Geoposition name=items
             out uint32 return
     method move_next
@@ -776,7 +776,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.G
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geovisit> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geovisit> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Geolocation.Geovisit> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Geolocation.Geovisit name=items
             out uint32 return
     method move_next
@@ -1324,7 +1324,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation
             fill_array struct type=Windows.Devices.Geolocation.BasicGeoposition name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.BasicGeoposition> shape=157 reverse=77
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.BasicGeoposition> shape=157 reverse=77 role=index_of
             in struct type=Windows.Devices.Geolocation.BasicGeoposition name=value
             out uint32 name=index
             out boolean return
@@ -1352,7 +1352,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation
             fill_array class type=Windows.Devices.Geolocation.Geoposition name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geoposition> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geoposition> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Geolocation.Geoposition name=value
             out uint32 name=index
             out boolean return
@@ -1380,7 +1380,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation
             fill_array class type=Windows.Devices.Geolocation.Geovisit name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geovisit> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geovisit> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Geolocation.Geovisit name=value
             out uint32 name=index
             out boolean return

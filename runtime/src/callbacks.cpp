@@ -29,20 +29,6 @@ namespace py::interp
 {
     namespace
     {
-        /**
-         * How many Python arguments one call from WinRT can have. The census
-         * says the widest member of any metadata the tree projects takes
-         * seventeen.
-         */
-        constexpr uint16_t max_args = 20;
-
-        /**
-         * How many arrays one call from WinRT can lend a Python
-         * implementation. The census says the widest member of any metadata
-         * the tree projects passes or lends three.
-         */
-        constexpr uint16_t max_arrays = 4;
-
         template<typename T>
         T load(void const* storage) noexcept
         {
@@ -56,115 +42,70 @@ namespace py::interp
         {
             std::memcpy(storage, &value, sizeof(value));
         }
+    } // namespace
 
-        /**
-         * The Python arguments of one call, given back however it ends.
-         */
-        struct python_args
+    python_args::~python_args()
+    {
+        // Before the references, because taking an array back leaves the
+        // object that was lent it empty rather than freeing it.
+        for (uint16_t i = 0; i < lent_count; i++)
         {
-            python_args() = default;
-            python_args(python_args const&) = delete;
-            python_args& operator=(python_args const&) = delete;
+            take_back_array(*lent[i]);
+        }
 
-            ~python_args()
-            {
-                // Before the references, because taking an array back leaves
-                // the object that was lent it empty rather than freeing it.
-                for (uint16_t i = 0; i < lent_count; i++)
-                {
-                    take_back_array(*lent[i]);
-                }
-
-                for (uint16_t i = 0; i < count; i++)
-                {
-                    Py_DECREF(values[i]);
-                }
-            }
-
-            /**
-             * Remembers an array the caller lent, so that the call gives it
-             * back however it ends.
-             */
-            void add_lent(table_array* array)
-            {
-                if (lent_count == max_arrays)
-                {
-                    take_back_array(*array);
-
-                    throw winrt::hresult_not_implemented(
-                        L"the callback lends more arrays than the runtime takes back");
-                }
-
-                lent[lent_count++] = array;
-            }
-
-            PyObject* values[max_args]{};
-            uint16_t count{};
-            /// The arrays a WinRT caller lent, which stop being anything the
-            /// moment this call returns. Filled in as they are lent, so only
-            /// the count needs initialising.
-            table_array* lent[max_arrays];
-            uint16_t lent_count{};
-        };
-
-        /**
-         * Converts every input of @p overload into @p in, in the order Python
-         * takes them.
-         *
-         * @throws python_exception on a conversion failure, and
-         * winrt::hresult_error for a shape the interpreter cannot take apart.
-         */
-        void read_inputs(
-            member_desc const& member,
-            overload_desc& overload,
-            uint8_t* buffer,
-            python_args& in)
+        for (uint16_t i = 0; i < count; i++)
         {
-            if (overload.in_count > max_args)
+            Py_DECREF(values[i]);
+        }
+    }
+
+    /**
+     * Remembers an array the caller lent, so that the call gives it back
+     * however it ends.
+     */
+    void python_args::add_lent(table_array* array)
+    {
+        if (lent_count == max_arrays)
+        {
+            take_back_array(*array);
+
+            throw winrt::hresult_not_implemented(
+                L"the callback lends more arrays than the runtime takes back");
+        }
+
+        lent[lent_count++] = array;
+    }
+
+    /**
+     * Converts every input of @p overload into @p in, in the order Python
+     * takes them.
+     *
+     * @throws python_exception on a conversion failure, and
+     * winrt::hresult_error for a shape the interpreter cannot take apart.
+     */
+    void read_inputs(
+        member_desc const& member,
+        overload_desc& overload,
+        uint8_t* buffer,
+        python_args& in)
+    {
+        if (overload.in_count > max_args)
+        {
+            throw winrt::hresult_not_implemented(
+                L"the callback takes more arguments than the runtime passes");
+        }
+
+        for (uint16_t i = 0; i < overload.arg_count; i++)
+        {
+            auto& arg = overload.args[i];
+
+            if (arg.category == table::param_category::pass_array
+                || arg.category == table::param_category::fill_array)
             {
-                throw winrt::hresult_not_implemented(
-                    L"the callback takes more arguments than the runtime passes");
-            }
+                table_array* lent{};
 
-            for (uint16_t i = 0; i < overload.arg_count; i++)
-            {
-                auto& arg = overload.args[i];
-
-                if (arg.category == table::param_category::pass_array
-                    || arg.category == table::param_category::fill_array)
-                {
-                    table_array* lent{};
-
-                    in.values[in.count]
-                        = array_argument_to_python(*member.owner, arg, buffer, lent);
-
-                    if (!in.values[in.count])
-                    {
-                        throw python_exception();
-                    }
-
-                    in.count++;
-
-                    if (lent)
-                    {
-                        in.add_lent(lent);
-                    }
-
-                    continue;
-                }
-
-                if (arg.category != table::param_category::in || arg.is_implicit)
-                {
-                    continue;
-                }
-
-                // A by-reference input arrives as a pointer to the value
-                // rather than the value itself.
-                auto const storage = arg.by_reference
-                                         ? load<uint8_t*>(buffer + arg.offset)
-                                         : buffer + arg.offset;
-
-                in.values[in.count] = convert_borrowed(*member.owner, arg, storage);
+                in.values[in.count]
+                    = array_argument_to_python(*member.owner, arg, buffer, lent);
 
                 if (!in.values[in.count])
                 {
@@ -172,83 +113,109 @@ namespace py::interp
                 }
 
                 in.count++;
-            }
-        }
 
-        /**
-         * Stores what Python handed back where @p overload's outputs point.
-         *
-         * @throws python_exception if @p result is not what the member's
-         * outputs need.
-         */
-        void write_outputs(
-            member_desc const& member,
-            overload_desc& overload,
-            PyObject* result,
-            uint8_t* buffer)
+                if (lent)
+                {
+                    in.add_lent(lent);
+                }
+
+                continue;
+            }
+
+            if (arg.category != table::param_category::in || arg.is_implicit)
+            {
+                continue;
+            }
+
+            // A by-reference input arrives as a pointer to the value
+            // rather than the value itself.
+            auto const storage = arg.by_reference ? load<uint8_t*>(buffer + arg.offset)
+                                                  : buffer + arg.offset;
+
+            in.values[in.count] = convert_borrowed(*member.owner, arg, storage);
+
+            if (!in.values[in.count])
+            {
+                throw python_exception();
+            }
+
+            in.count++;
+        }
+    }
+
+    /**
+     * Stores what Python handed back where @p overload's outputs point.
+     *
+     * @throws python_exception if @p result is not what the member's
+     * outputs need.
+     */
+    void write_outputs(
+        member_desc const& member,
+        overload_desc& overload,
+        PyObject* result,
+        uint8_t* buffer)
+    {
+        // The return value comes first and the declared outputs follow in
+        // order, which is what the projection hands back from a call and
+        // so what it asks for here.
+        if (overload.out_count > 1)
         {
-            // The return value comes first and the declared outputs follow in
-            // order, which is what the projection hands back from a call and
-            // so what it asks for here.
-            if (overload.out_count > 1)
+            auto const shape_of_result
+                = PyTuple_Check(result)
+                  && PyTuple_GET_SIZE(result) == overload.out_count;
+
+            if (!shape_of_result)
             {
-                auto const shape_of_result
-                    = PyTuple_Check(result)
-                      && PyTuple_GET_SIZE(result) == overload.out_count;
-
-                if (!shape_of_result)
-                {
-                    PyErr_Format(
-                        PyExc_TypeError,
-                        "'%s' must hand back a tuple of %d values",
-                        overload.winrt_name,
-                        static_cast<int>(overload.out_count));
-                    throw python_exception();
-                }
-            }
-
-            // Where the declared outputs start, which is after the return
-            // value when there is one.
-            Py_ssize_t next = 0;
-
-            for (uint16_t i = 0; i < overload.arg_count; i++)
-            {
-                auto const& arg = overload.args[i];
-
-                if (is_output(arg) && arg.is_return)
-                {
-                    next = 1;
-                    break;
-                }
-            }
-
-            for (uint16_t i = 0; i < overload.arg_count; i++)
-            {
-                auto& arg = overload.args[i];
-
-                if (!is_output(arg) || arg.is_implicit)
-                {
-                    continue;
-                }
-
-                auto* const value
-                    = overload.out_count == 1
-                          ? result
-                          : PyTuple_GET_ITEM(result, arg.is_return ? 0 : next++);
-
-                if (arg.category == table::param_category::receive_array)
-                {
-                    array_result_to_abi(*member.owner, arg, value, buffer);
-                    continue;
-                }
-
-                if (auto* const storage = load<void*>(buffer + arg.offset))
-                {
-                    convert_to_abi(*member.owner, arg, value, storage);
-                }
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' must hand back a tuple of %d values",
+                    overload.winrt_name,
+                    static_cast<int>(overload.out_count));
+                throw python_exception();
             }
         }
-    } // namespace
+
+        // Where the declared outputs start, which is after the return
+        // value when there is one.
+        Py_ssize_t next = 0;
+
+        for (uint16_t i = 0; i < overload.arg_count; i++)
+        {
+            auto const& arg = overload.args[i];
+
+            if (is_output(arg) && arg.is_return)
+            {
+                next = 1;
+                break;
+            }
+        }
+
+        for (uint16_t i = 0; i < overload.arg_count; i++)
+        {
+            auto& arg = overload.args[i];
+
+            if (!is_output(arg) || arg.is_implicit)
+            {
+                continue;
+            }
+
+            auto* const value
+                = overload.out_count == 1
+                      ? result
+                      : PyTuple_GET_ITEM(result, arg.is_return ? 0 : next++);
+
+            if (arg.category == table::param_category::receive_array)
+            {
+                array_result_to_abi(*member.owner, arg, value, buffer);
+                continue;
+            }
+
+            if (auto* const storage = load<void*>(buffer + arg.offset))
+            {
+                convert_to_abi(*member.owner, arg, value, storage);
+            }
+        }
+    }
 
     /**
      * Converts one value of @p arg's type from the ABI to Python without
@@ -402,7 +369,7 @@ namespace py::interp
                 throw python_exception();
             }
 
-            put<void*>(storage, unwrap_abi(value, info->guid));
+            put<void*>(storage, unwrap_abi(value, info->guid, info));
             return;
         }
         case table::type_code::reference:

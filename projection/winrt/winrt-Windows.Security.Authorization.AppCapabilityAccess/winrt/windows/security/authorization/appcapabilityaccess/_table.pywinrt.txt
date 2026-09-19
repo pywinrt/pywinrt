@@ -187,7 +187,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -207,7 +207,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> name=items
             out uint32 return
     method move_next
@@ -222,10 +222,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Sec
     argument System.String
     argument Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=4 reverse=43 role=pair_value
             out enum32 type=Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus return
 
 interface Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> concrete iterable mapping
@@ -251,7 +251,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,Windows.Security
             in string name=key
             out enum32 type=Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> name=second
 

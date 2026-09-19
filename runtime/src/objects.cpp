@@ -17,6 +17,7 @@
 #include "members.h"
 #include "objects.h"
 #include "protocols.h"
+#include "pycollections.h"
 #include "types.h"
 
 #include <vector>
@@ -56,12 +57,16 @@ namespace py::interp
      * The ABI pointer an @c _winrt.Object holds, queried for @p iid.
      *
      * @param iid The interface to query for, or @c nullptr for IInspectable.
+     * @param info What the table says @p iid is, when the caller has it. It
+     * is what a Python object that is no WinRT object at all is measured
+     * against: a list is an IVector<T> and a dict is an IMap<K, V>, and only
+     * the type record says which of those the caller is asking for.
      * @returns A pointer the caller owns a reference to, or @c nullptr when
      * @p obj is None.
      * @throws python_exception if @p obj is not a wrapped WinRT object or does
      * not implement @p iid.
      */
-    void* unwrap_abi(PyObject* obj, void const* iid)
+    void* unwrap_abi(PyObject* obj, void const* iid, type_entry* info)
     {
         throw_if_pyobj_null(obj);
 
@@ -84,6 +89,16 @@ namespace py::interp
             if (implements_interfaces(Py_TYPE(obj)))
             {
                 return make_implements_object(obj, iid);
+            }
+
+            if (info)
+            {
+                // A Python list, dict or iterable, which WinRT reads through
+                // a collection the runtime assembles over it.
+                if (auto* const collection = make_python_collection(*info, obj, iid))
+                {
+                    return collection;
+                }
             }
 
             if (iid

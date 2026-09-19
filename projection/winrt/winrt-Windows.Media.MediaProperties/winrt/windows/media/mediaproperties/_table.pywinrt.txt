@@ -419,7 +419,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> name=items
             out uint32 return
     method move_next
@@ -439,7 +439,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStrea
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStreamDescriptor> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStreamDescriptor> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Core.AudioStreamDescriptor name=items
             out uint32 return
     method move_next
@@ -459,7 +459,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetad
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=items
             out uint32 return
     method move_next
@@ -479,7 +479,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStrea
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStreamDescriptor> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStreamDescriptor> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Core.VideoStreamDescriptor name=items
             out uint32 return
     method move_next
@@ -494,10 +494,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object
     argument System.Guid
     argument System.Object
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=22 role=pair_key
             out guid return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=43 role=pair_value
             out object return
 
 interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
@@ -516,12 +516,12 @@ interface Windows.Foundation.Collections.IMap<System.Guid,System.Object> concret
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=87 role=has_key
@@ -563,7 +563,7 @@ interface Windows.Foundation.Collections.IMapView<System.Guid,System.Object> con
             in guid name=key
             out object return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> name=second
 
@@ -648,10 +648,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamD
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=173 role=append
             in class type=Windows.Media.Core.AudioStreamDescriptor name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.AudioStreamDescriptor> return
@@ -665,10 +665,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamD
             fill_array class type=Windows.Media.Core.AudioStreamDescriptor name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioStreamDescriptor> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Core.AudioStreamDescriptor name=value
             out uint32 name=index
             out boolean return
@@ -680,9 +680,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamD
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Core.AudioStreamDescriptor name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> shape=51 reverse=124 role=set_at
@@ -700,10 +700,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadat
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=173 role=append
             in class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataStreamDescriptor> return
@@ -717,10 +717,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadat
             fill_array class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataStreamDescriptor> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=value
             out uint32 name=index
             out boolean return
@@ -732,9 +732,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadat
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=51 reverse=124 role=set_at
@@ -752,10 +752,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamD
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=173 role=append
             in class type=Windows.Media.Core.VideoStreamDescriptor name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.VideoStreamDescriptor> return
@@ -769,10 +769,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamD
             fill_array class type=Windows.Media.Core.VideoStreamDescriptor name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoStreamDescriptor> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Core.VideoStreamDescriptor name=value
             out uint32 name=index
             out boolean return
@@ -784,9 +784,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamD
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Core.VideoStreamDescriptor name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> shape=51 reverse=124 role=set_at
@@ -816,7 +816,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioStr
             fill_array class type=Windows.Media.Core.AudioStreamDescriptor name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioStreamDescriptor> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.AudioStreamDescriptor> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Core.AudioStreamDescriptor name=value
             out uint32 name=index
             out boolean return
@@ -844,7 +844,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMet
             fill_array class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataStreamDescriptor> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Core.TimedMetadataStreamDescriptor name=value
             out uint32 name=index
             out boolean return
@@ -872,7 +872,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoStr
             fill_array class type=Windows.Media.Core.VideoStreamDescriptor name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoStreamDescriptor> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoStreamDescriptor> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Core.VideoStreamDescriptor name=value
             out uint32 name=index
             out boolean return
@@ -1258,12 +1258,12 @@ class Windows.Media.MediaProperties.MediaPropertySet activatable python_type ite
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=87 role=has_key

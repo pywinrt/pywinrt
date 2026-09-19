@@ -125,7 +125,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> name=items
             out uint32 return
     method move_next
@@ -145,7 +145,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.Dire
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.DirectX.DirectXPixelFormat> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=items
             out uint32 return
     method move_next
@@ -165,7 +165,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Perception.Spatial.Sp
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Perception.Spatial.SpatialBoundingVolume> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Perception.Spatial.SpatialBoundingVolume> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Perception.Spatial.SpatialBoundingVolume> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Perception.Spatial.SpatialBoundingVolume name=items
             out uint32 return
     method move_next
@@ -180,10 +180,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perce
     argument System.Guid
     argument Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> shape=4 reverse=22 role=pair_key
             out guid return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> shape=4 reverse=43 role=pair_value
             out class type=Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo return
 
 interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> concrete iterable mapping
@@ -209,7 +209,7 @@ interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception
             in guid name=key
             out class type=Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> name=second
 
@@ -388,7 +388,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.Di
             fill_array enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.DirectX.DirectXPixelFormat> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=value
             out uint32 name=index
             out boolean return

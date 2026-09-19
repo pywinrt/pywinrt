@@ -1900,7 +1900,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Audio.AudioGrap
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.AudioGraphConnection> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.AudioGraphConnection> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.AudioGraphConnection> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Audio.AudioGraphConnection name=items
             out uint32 return
     method move_next
@@ -1920,7 +1920,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Audio.Equalizer
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.EqualizerBand> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.EqualizerBand> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Audio.EqualizerBand> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Audio.EqualizerBand name=items
             out uint32 return
     method move_next
@@ -1940,7 +1940,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioE
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=101 role=get_many
             fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
             out uint32 return
     method move_next
@@ -2250,10 +2250,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEff
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=173 role=append
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> return
@@ -2267,10 +2267,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEff
             fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=101 role=index_of
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
             out uint32 name=index
             out boolean return
@@ -2282,9 +2282,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEff
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=211 role=replace_all
             pass_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=124 role=set_at
@@ -2314,7 +2314,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.AudioGr
             fill_array class type=Windows.Media.Audio.AudioGraphConnection name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.AudioGraphConnection> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.AudioGraphConnection> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Audio.AudioGraphConnection name=value
             out uint32 name=index
             out boolean return
@@ -2342,7 +2342,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.Equaliz
             fill_array class type=Windows.Media.Audio.EqualizerBand name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.EqualizerBand> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.EqualizerBand> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Audio.EqualizerBand name=value
             out uint32 name=index
             out boolean return
@@ -2370,7 +2370,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudi
             fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=66 role=index_of
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
             out uint32 name=index
             out boolean return

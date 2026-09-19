@@ -58,7 +58,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
             out uint32 return
     method move_next
@@ -78,7 +78,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
             out uint32 return
     method move_next
@@ -95,7 +95,7 @@ interface Windows.Foundation.Collections.IIterator parameterized python_type ite
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator shape=117 reverse=101 role=get_many
             fill_array object name=items
             out uint32 return
     method move_next
@@ -114,10 +114,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Obje
     argument System.String
     argument System.Object
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43 role=pair_value
             out object return
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
@@ -128,20 +128,20 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Stri
     argument System.String
     argument System.String
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43 role=pair_value
             out string return
 
 interface Windows.Foundation.Collections.IKeyValuePair parameterized python_type
     py _IKeyValuePair
     guid 02b51929-c1c4-4a7e-8940-0312b5c18500
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair shape=4 reverse=22 role=pair_key
             out object return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair shape=4 reverse=43 role=pair_value
             out object return
 
 interface Windows.Foundation.Collections.IMap<K,V> parameterized
@@ -160,12 +160,12 @@ interface Windows.Foundation.Collections.IMap<System.String,System.Object> concr
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=65 role=has_key
@@ -196,12 +196,12 @@ interface Windows.Foundation.Collections.IMap<System.String,System.String> concr
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
@@ -228,12 +228,12 @@ interface Windows.Foundation.Collections.IMap parameterized python_type iterable
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<K,V>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<K,V> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap role=has_key
@@ -305,7 +305,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,System.Object> c
             in string name=key
             out object return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
 
@@ -332,7 +332,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,System.String> c
             in string name=key
             out string return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
@@ -355,7 +355,7 @@ interface Windows.Foundation.Collections.IMapView parameterized python_type iter
             in object name=key
             out object return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<K,V> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<K,V> name=second
 
@@ -382,12 +382,12 @@ interface Windows.Foundation.Collections.IObservableMap<System.String,System.Obj
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.Object> shape=26 reverse=53
             in event_token name=token
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=65 role=has_key
@@ -425,12 +425,12 @@ interface Windows.Foundation.Collections.IObservableMap<System.String,System.Str
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.String> shape=26 reverse=53
             in event_token name=token
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
@@ -464,12 +464,12 @@ interface Windows.Foundation.Collections.IObservableMap parameterized python_typ
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap shape=26 reverse=53
             in event_token name=token
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<K,V> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<K,V> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<K,V>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<K,V> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<K,V> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<K,V> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<K,V> role=has_key
@@ -506,10 +506,10 @@ interface Windows.Foundation.Collections.IObservableVector parameterized python_
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector shape=26 reverse=53
             in event_token name=token
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<T>
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<T> role=append
             in object name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<T> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<T> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<T> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<T> return
@@ -523,10 +523,10 @@ interface Windows.Foundation.Collections.IObservableVector parameterized python_
             fill_array object name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<T> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<T> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<T> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<T>
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<T> role=index_of
             in object name=value
             out uint32 name=index
             out boolean return
@@ -538,9 +538,9 @@ interface Windows.Foundation.Collections.IObservableVector parameterized python_
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<T> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<T> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<T> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<T> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<T> shape=51 reverse=211 role=replace_all
             pass_array object name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<T> role=set_at
@@ -566,12 +566,12 @@ interface Windows.Foundation.Collections.IPropertySet python_type iterable mappi
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.Object> shape=26 reverse=53
             in event_token name=token
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=65 role=has_key
@@ -601,10 +601,10 @@ interface Windows.Foundation.Collections.IVector parameterized python_type itera
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector role=append
             in object name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<T> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<T> return
@@ -618,10 +618,10 @@ interface Windows.Foundation.Collections.IVector parameterized python_type itera
             fill_array object name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<T> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector role=index_of
             in object name=value
             out uint32 name=index
             out boolean return
@@ -633,9 +633,9 @@ interface Windows.Foundation.Collections.IVector parameterized python_type itera
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector shape=51 reverse=211 role=replace_all
             pass_array object name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector role=set_at
@@ -676,7 +676,7 @@ interface Windows.Foundation.Collections.IVectorView parameterized python_type i
             fill_array object name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView role=index_of
             in object name=value
             out uint32 name=index
             out boolean return
@@ -742,12 +742,12 @@ class Windows.Foundation.Collections.PropertySet activatable python_type iterabl
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.Object> shape=26 reverse=53
             in event_token name=token
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=65 role=has_key
@@ -788,12 +788,12 @@ class Windows.Foundation.Collections.StringMap activatable python_type iterable 
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.String> shape=26 reverse=53
             in event_token name=token
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
@@ -839,12 +839,12 @@ class Windows.Foundation.Collections.ValueSet activatable python_type iterable m
         remove remove_MapChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableMap<System.String,System.Object> shape=26 reverse=53
             in event_token name=token
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.Object> shape=51 reverse=65 role=has_key

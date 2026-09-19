@@ -362,7 +362,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -382,7 +382,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem>
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=117 reverse=101 role=get_many
             fill_array interface type=Windows.Storage.IStorageItem name=items
             out uint32 return
     method move_next
@@ -402,7 +402,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> 
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageFile> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Storage.StorageFile name=items
             out uint32 return
     method move_next
@@ -422,7 +422,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Web.UI.WebViewControl
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Web.UI.WebViewControlDeferredPermissionRequest name=items
             out uint32 return
     method move_next
@@ -583,7 +583,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageIte
             fill_array interface type=Windows.Storage.IStorageItem name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=117 reverse=66 role=index_of
             in interface type=Windows.Storage.IStorageItem name=value
             out uint32 name=index
             out boolean return
@@ -611,7 +611,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile
             fill_array class type=Windows.Storage.StorageFile name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile> shape=117 reverse=66 role=index_of
             in class type=Windows.Storage.StorageFile name=value
             out uint32 name=index
             out boolean return
@@ -639,7 +639,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.UI.WebViewContr
             fill_array class type=Windows.Web.UI.WebViewControlDeferredPermissionRequest name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.UI.WebViewControlDeferredPermissionRequest> shape=117 reverse=66 role=index_of
             in class type=Windows.Web.UI.WebViewControlDeferredPermissionRequest name=value
             out uint32 name=index
             out boolean return

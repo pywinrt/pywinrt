@@ -464,7 +464,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -484,7 +484,7 @@ interface Windows.Foundation.Collections.IIterator<System.Double> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Double> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Double> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Double> shape=117 reverse=101 role=get_many
             fill_array double name=items
             out uint32 return
     method move_next
@@ -504,7 +504,7 @@ interface Windows.Foundation.Collections.IIterator<System.UInt32> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=117 reverse=101 role=get_many
             fill_array uint32 name=items
             out uint32 return
     method move_next
@@ -524,7 +524,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
             out uint32 return
     method move_next
@@ -544,7 +544,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DBaseMaterial name=items
             out uint32 return
     method move_next
@@ -564,7 +564,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup name=items
             out uint32 return
     method move_next
@@ -584,7 +584,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DColorMaterial name=items
             out uint32 return
     method move_next
@@ -604,7 +604,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DColorMaterialGroup name=items
             out uint32 return
     method move_next
@@ -624,7 +624,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DComponent> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DComponent> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DComponent> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DComponent name=items
             out uint32 return
     method move_next
@@ -644,7 +644,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DComponentWithMatrix name=items
             out uint32 return
     method move_next
@@ -664,7 +664,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterial name=items
             out uint32 return
     method move_next
@@ -684,7 +684,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup name=items
             out uint32 return
     method move_next
@@ -704,7 +704,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DMesh> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DMesh> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DMesh> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMesh name=items
             out uint32 return
     method move_next
@@ -724,7 +724,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DModelTexture name=items
             out uint32 return
     method move_next
@@ -744,7 +744,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial name=items
             out uint32 return
     method move_next
@@ -764,7 +764,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup name=items
             out uint32 return
     method move_next
@@ -784,7 +784,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial name=items
             out uint32 return
     method move_next
@@ -804,7 +804,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup name=items
             out uint32 return
     method move_next
@@ -824,7 +824,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.P
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTextureResource name=items
             out uint32 return
     method move_next
@@ -839,10 +839,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Stri
     argument System.String
     argument System.String
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43 role=pair_value
             out string return
 
 interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete iterable mapping mutable_mapping
@@ -857,12 +857,12 @@ interface Windows.Foundation.Collections.IMap<System.String,System.String> concr
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
@@ -904,7 +904,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,System.String> c
             in string name=key
             out string return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
@@ -1039,10 +1039,10 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173 role=append
             in string name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
@@ -1056,10 +1056,10 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             fill_array string name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -1071,9 +1071,9 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211 role=replace_all
             pass_array string name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
@@ -1091,10 +1091,10 @@ interface Windows.Foundation.Collections.IVector<System.Double> concrete iterabl
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=2 reverse=171
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=2 reverse=171 role=append
             in double name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Double> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.Double> return
@@ -1108,10 +1108,10 @@ interface Windows.Foundation.Collections.IVector<System.Double> concrete iterabl
             fill_array double name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Double> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=106 reverse=97
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=106 reverse=97 role=index_of
             in double name=value
             out uint32 name=index
             out boolean return
@@ -1123,9 +1123,9 @@ interface Windows.Foundation.Collections.IVector<System.Double> concrete iterabl
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=51 reverse=211 role=replace_all
             pass_array double name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Double> shape=49 reverse=123 role=set_at
@@ -1143,10 +1143,10 @@ interface Windows.Foundation.Collections.IVector<System.UInt32> concrete iterabl
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=4 reverse=173 role=append
             in uint32 name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.UInt32> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.UInt32> return
@@ -1160,10 +1160,10 @@ interface Windows.Foundation.Collections.IVector<System.UInt32> concrete iterabl
             fill_array uint32 name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=117 reverse=101 role=index_of
             in uint32 name=value
             out uint32 name=index
             out boolean return
@@ -1175,9 +1175,9 @@ interface Windows.Foundation.Collections.IVector<System.UInt32> concrete iterabl
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=51 reverse=211 role=replace_all
             pass_array uint32 name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.UInt32> shape=51 reverse=124 role=set_at
@@ -1195,10 +1195,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DBaseMaterial name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DBaseMaterial> return
@@ -1212,10 +1212,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DBaseMaterial name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DBaseMaterial> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DBaseMaterial name=value
             out uint32 name=index
             out boolean return
@@ -1227,9 +1227,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DBaseMaterial name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=51 reverse=124 role=set_at
@@ -1247,10 +1247,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> return
@@ -1264,10 +1264,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup name=value
             out uint32 name=index
             out boolean return
@@ -1279,9 +1279,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=51 reverse=124 role=set_at
@@ -1299,10 +1299,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DColorMaterial name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DColorMaterial> return
@@ -1316,10 +1316,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DColorMaterial name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DColorMaterial> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DColorMaterial name=value
             out uint32 name=index
             out boolean return
@@ -1331,9 +1331,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DColorMaterial name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=51 reverse=124 role=set_at
@@ -1351,10 +1351,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DColorMaterialGroup name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> return
@@ -1368,10 +1368,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DColorMaterialGroup name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DColorMaterialGroup name=value
             out uint32 name=index
             out boolean return
@@ -1383,9 +1383,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DColorMaterialGroup name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=51 reverse=124 role=set_at
@@ -1403,10 +1403,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DComponent name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DComponent> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DComponent> return
@@ -1420,10 +1420,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DComponent name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DComponent> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DComponent name=value
             out uint32 name=index
             out boolean return
@@ -1435,9 +1435,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DComponent name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponent> shape=51 reverse=124 role=set_at
@@ -1455,10 +1455,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DComponentWithMatrix name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> return
@@ -1472,10 +1472,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DComponentWithMatrix name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DComponentWithMatrix name=value
             out uint32 name=index
             out boolean return
@@ -1487,9 +1487,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DComponentWithMatrix name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=51 reverse=124 role=set_at
@@ -1507,10 +1507,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterial name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> return
@@ -1524,10 +1524,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterial name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterial name=value
             out uint32 name=index
             out boolean return
@@ -1539,9 +1539,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterial name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=51 reverse=124 role=set_at
@@ -1559,10 +1559,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> return
@@ -1576,10 +1576,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup name=value
             out uint32 name=index
             out boolean return
@@ -1591,9 +1591,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=51 reverse=124 role=set_at
@@ -1611,10 +1611,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DMesh name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DMesh> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DMesh> return
@@ -1628,10 +1628,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMesh name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMesh> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DMesh name=value
             out uint32 name=index
             out boolean return
@@ -1643,9 +1643,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DMesh name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMesh> shape=51 reverse=124 role=set_at
@@ -1663,10 +1663,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DModelTexture name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DModelTexture> return
@@ -1680,10 +1680,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DModelTexture name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DModelTexture> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DModelTexture name=value
             out uint32 name=index
             out boolean return
@@ -1695,9 +1695,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DModelTexture name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=51 reverse=124 role=set_at
@@ -1715,10 +1715,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> return
@@ -1732,10 +1732,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial name=value
             out uint32 name=index
             out boolean return
@@ -1747,9 +1747,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=51 reverse=124 role=set_at
@@ -1767,10 +1767,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> return
@@ -1784,10 +1784,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup name=value
             out uint32 name=index
             out boolean return
@@ -1799,9 +1799,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=51 reverse=124 role=set_at
@@ -1819,10 +1819,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> return
@@ -1836,10 +1836,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial name=value
             out uint32 name=index
             out boolean return
@@ -1851,9 +1851,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=51 reverse=124 role=set_at
@@ -1871,10 +1871,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> return
@@ -1888,10 +1888,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup name=value
             out uint32 name=index
             out boolean return
@@ -1903,9 +1903,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=51 reverse=124 role=set_at
@@ -1923,10 +1923,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=4 reverse=173 role=append
             in class type=Windows.Graphics.Printing3D.Printing3DTextureResource name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing3D.Printing3DTextureResource> return
@@ -1940,10 +1940,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTextureResource name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTextureResource> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=117 reverse=101 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DTextureResource name=value
             out uint32 name=index
             out boolean return
@@ -1955,9 +1955,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Pri
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Graphics.Printing3D.Printing3DTextureResource name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=51 reverse=124 role=set_at
@@ -1987,7 +1987,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             fill_array string name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -2015,7 +2015,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Double> concrete ite
             fill_array double name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=106 reverse=59
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Double> shape=106 reverse=59 role=index_of
             in double name=value
             out uint32 name=index
             out boolean return
@@ -2043,7 +2043,7 @@ interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete ite
             fill_array uint32 name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=117 reverse=66 role=index_of
             in uint32 name=value
             out uint32 name=index
             out boolean return
@@ -2071,7 +2071,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DBaseMaterial name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DBaseMaterial> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DBaseMaterial name=value
             out uint32 name=index
             out boolean return
@@ -2099,7 +2099,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DBaseMaterialGroup name=value
             out uint32 name=index
             out boolean return
@@ -2127,7 +2127,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DColorMaterial name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DColorMaterial> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DColorMaterial name=value
             out uint32 name=index
             out boolean return
@@ -2155,7 +2155,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DColorMaterialGroup name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DColorMaterialGroup> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DColorMaterialGroup name=value
             out uint32 name=index
             out boolean return
@@ -2183,7 +2183,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DComponent name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DComponent> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DComponent> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DComponent name=value
             out uint32 name=index
             out boolean return
@@ -2211,7 +2211,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DComponentWithMatrix name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DComponentWithMatrix> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DComponentWithMatrix name=value
             out uint32 name=index
             out boolean return
@@ -2239,7 +2239,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterial name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DCompositeMaterial> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterial name=value
             out uint32 name=index
             out boolean return
@@ -2267,7 +2267,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DCompositeMaterialGroup name=value
             out uint32 name=index
             out boolean return
@@ -2295,7 +2295,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMesh name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMesh> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMesh> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DMesh name=value
             out uint32 name=index
             out boolean return
@@ -2323,7 +2323,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DModelTexture name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DModelTexture> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DModelTexture name=value
             out uint32 name=index
             out boolean return
@@ -2351,7 +2351,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial name=value
             out uint32 name=index
             out boolean return
@@ -2379,7 +2379,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup name=value
             out uint32 name=index
             out boolean return
@@ -2407,7 +2407,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial name=value
             out uint32 name=index
             out boolean return
@@ -2435,7 +2435,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup name=value
             out uint32 name=index
             out boolean return
@@ -2463,7 +2463,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D
             fill_array class type=Windows.Graphics.Printing3D.Printing3DTextureResource name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing3D.Printing3DTextureResource> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Printing3D.Printing3DTextureResource name=value
             out uint32 name=index
             out boolean return

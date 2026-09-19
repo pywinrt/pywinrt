@@ -305,7 +305,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
             out uint32 return
     method move_next
@@ -325,7 +325,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Security.Authenticati
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Provider.WebAccountClientView> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Provider.WebAccountClientView> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Provider.WebAccountClientView> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Security.Authentication.Web.Provider.WebAccountClientView name=items
             out uint32 return
     method move_next
@@ -345,7 +345,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Security.Authenticati
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse name=items
             out uint32 return
     method move_next
@@ -365,7 +365,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Security.Credentials.
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Credentials.WebAccount> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Credentials.WebAccount> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Credentials.WebAccount> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Security.Credentials.WebAccount name=items
             out uint32 return
     method move_next
@@ -385,7 +385,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> 
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Web.Http.HttpCookie name=items
             out uint32 return
     method move_next
@@ -400,10 +400,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Stri
     argument System.String
     argument System.String
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43 role=pair_value
             out string return
 
 interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete iterable mapping
@@ -429,7 +429,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,System.String> c
             in string name=key
             out string return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
@@ -444,10 +444,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Security.Authentication
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=4 reverse=173 role=append
             in class type=Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> return
@@ -461,10 +461,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Security.Authentication
             fill_array class type=Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=117 reverse=101 role=index_of
             in class type=Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse name=value
             out uint32 name=index
             out boolean return
@@ -476,9 +476,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Security.Authentication
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=51 reverse=124 role=set_at
@@ -496,10 +496,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> co
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=4 reverse=173 role=append
             in class type=Windows.Web.Http.HttpCookie name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpCookie> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpCookie> return
@@ -513,10 +513,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> co
             fill_array class type=Windows.Web.Http.HttpCookie name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=117 reverse=101 role=index_of
             in class type=Windows.Web.Http.HttpCookie name=value
             out uint32 name=index
             out boolean return
@@ -528,9 +528,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> co
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Web.Http.HttpCookie name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> shape=51 reverse=124 role=set_at
@@ -560,7 +560,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentica
             fill_array class type=Windows.Security.Authentication.Web.Provider.WebAccountClientView name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Provider.WebAccountClientView> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Provider.WebAccountClientView> shape=117 reverse=66 role=index_of
             in class type=Windows.Security.Authentication.Web.Provider.WebAccountClientView name=value
             out uint32 name=index
             out boolean return
@@ -588,7 +588,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Security.Authentica
             fill_array class type=Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse> shape=117 reverse=66 role=index_of
             in class type=Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse name=value
             out uint32 name=index
             out boolean return
@@ -616,7 +616,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Security.Credential
             fill_array class type=Windows.Security.Credentials.WebAccount name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> shape=117 reverse=66 role=index_of
             in class type=Windows.Security.Credentials.WebAccount name=value
             out uint32 name=index
             out boolean return
@@ -644,7 +644,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie
             fill_array class type=Windows.Web.Http.HttpCookie name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=117 reverse=66 role=index_of
             in class type=Windows.Web.Http.HttpCookie name=value
             out uint32 name=index
             out boolean return

@@ -245,7 +245,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkIn
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Usb.UsbBulkInEndpointDescriptor name=items
             out uint32 return
     method move_next
@@ -265,7 +265,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkIn
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInPipe> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInPipe> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkInPipe> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Usb.UsbBulkInPipe name=items
             out uint32 return
     method move_next
@@ -285,7 +285,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOu
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Usb.UsbBulkOutEndpointDescriptor name=items
             out uint32 return
     method move_next
@@ -305,7 +305,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOu
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutPipe> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutPipe> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbBulkOutPipe> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Usb.UsbBulkOutPipe name=items
             out uint32 return
     method move_next
@@ -325,7 +325,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbDescri
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbDescriptor> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbDescriptor> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbDescriptor> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Usb.UsbDescriptor name=items
             out uint32 return
     method move_next
@@ -345,7 +345,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterf
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterface> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterface> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterface> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Usb.UsbInterface name=items
             out uint32 return
     method move_next
@@ -365,7 +365,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterf
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterfaceSetting> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterfaceSetting> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterfaceSetting> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Usb.UsbInterfaceSetting name=items
             out uint32 return
     method move_next
@@ -385,7 +385,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterr
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Usb.UsbInterruptInEndpointDescriptor name=items
             out uint32 return
     method move_next
@@ -405,7 +405,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterr
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInPipe> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInPipe> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptInPipe> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Usb.UsbInterruptInPipe name=items
             out uint32 return
     method move_next
@@ -425,7 +425,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterr
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor name=items
             out uint32 return
     method move_next
@@ -445,7 +445,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterr
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutPipe> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutPipe> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Usb.UsbInterruptOutPipe> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Usb.UsbInterruptOutPipe name=items
             out uint32 return
     method move_next
@@ -687,7 +687,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulk
             fill_array class type=Windows.Devices.Usb.UsbBulkInEndpointDescriptor name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Usb.UsbBulkInEndpointDescriptor name=value
             out uint32 name=index
             out boolean return
@@ -715,7 +715,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulk
             fill_array class type=Windows.Devices.Usb.UsbBulkInPipe name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInPipe> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkInPipe> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Usb.UsbBulkInPipe name=value
             out uint32 name=index
             out boolean return
@@ -743,7 +743,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulk
             fill_array class type=Windows.Devices.Usb.UsbBulkOutEndpointDescriptor name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutEndpointDescriptor> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Usb.UsbBulkOutEndpointDescriptor name=value
             out uint32 name=index
             out boolean return
@@ -771,7 +771,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulk
             fill_array class type=Windows.Devices.Usb.UsbBulkOutPipe name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutPipe> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbBulkOutPipe> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Usb.UsbBulkOutPipe name=value
             out uint32 name=index
             out boolean return
@@ -799,7 +799,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDesc
             fill_array class type=Windows.Devices.Usb.UsbDescriptor name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbDescriptor> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Usb.UsbDescriptor name=value
             out uint32 name=index
             out boolean return
@@ -827,7 +827,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInte
             fill_array class type=Windows.Devices.Usb.UsbInterface name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterface> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterface> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Usb.UsbInterface name=value
             out uint32 name=index
             out boolean return
@@ -855,7 +855,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInte
             fill_array class type=Windows.Devices.Usb.UsbInterfaceSetting name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterfaceSetting> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterfaceSetting> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Usb.UsbInterfaceSetting name=value
             out uint32 name=index
             out boolean return
@@ -883,7 +883,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInte
             fill_array class type=Windows.Devices.Usb.UsbInterruptInEndpointDescriptor name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInEndpointDescriptor> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Usb.UsbInterruptInEndpointDescriptor name=value
             out uint32 name=index
             out boolean return
@@ -911,7 +911,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInte
             fill_array class type=Windows.Devices.Usb.UsbInterruptInPipe name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInPipe> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptInPipe> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Usb.UsbInterruptInPipe name=value
             out uint32 name=index
             out boolean return
@@ -939,7 +939,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInte
             fill_array class type=Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor name=value
             out uint32 name=index
             out boolean return
@@ -967,7 +967,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInte
             fill_array class type=Windows.Devices.Usb.UsbInterruptOutPipe name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutPipe> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Usb.UsbInterruptOutPipe> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Usb.UsbInterruptOutPipe name=value
             out uint32 name=index
             out boolean return

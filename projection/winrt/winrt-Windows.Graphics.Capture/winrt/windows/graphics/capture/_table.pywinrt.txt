@@ -333,7 +333,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> c
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=117 reverse=101 role=get_many
             fill_array struct type=Windows.Graphics.RectInt32 name=items
             out uint32 return
     method move_next
@@ -363,7 +363,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32>
             fill_array struct type=Windows.Graphics.RectInt32 name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> shape=161 reverse=78
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> shape=161 reverse=78 role=index_of
             in struct type=Windows.Graphics.RectInt32 name=value
             out uint32 name=index
             out boolean return

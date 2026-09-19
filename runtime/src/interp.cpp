@@ -537,7 +537,7 @@ namespace py::interp
                 throw python_exception();
             }
 
-            auto const abi = unwrap_abi(value, info->guid);
+            auto const abi = unwrap_abi(value, info->guid, info);
             if (abi)
             {
                 frame.add(cleanup_entry::kind::interface_, abi, nullptr);

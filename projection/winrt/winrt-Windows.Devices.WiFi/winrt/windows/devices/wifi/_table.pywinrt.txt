@@ -285,7 +285,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.WiFi.WiFiAdap
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFi.WiFiAdapter> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFi.WiFiAdapter> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFi.WiFiAdapter> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.WiFi.WiFiAdapter name=items
             out uint32 return
     method move_next
@@ -305,7 +305,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.WiFi.WiFiAvai
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFi.WiFiAvailableNetwork> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFi.WiFiAvailableNetwork> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFi.WiFiAvailableNetwork> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.WiFi.WiFiAvailableNetwork name=items
             out uint32 return
     method move_next
@@ -325,7 +325,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.WiFi.WiFiWpsK
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFi.WiFiWpsKind> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFi.WiFiWpsKind> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.WiFi.WiFiWpsKind> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Devices.WiFi.WiFiWpsKind name=items
             out uint32 return
     method move_next
@@ -611,7 +611,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAd
             fill_array class type=Windows.Devices.WiFi.WiFiAdapter name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAdapter> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAdapter> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.WiFi.WiFiAdapter name=value
             out uint32 name=index
             out boolean return
@@ -639,7 +639,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAv
             fill_array class type=Windows.Devices.WiFi.WiFiAvailableNetwork name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAvailableNetwork> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAvailableNetwork> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.WiFi.WiFiAvailableNetwork name=value
             out uint32 name=index
             out boolean return
@@ -667,7 +667,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiWp
             fill_array enum32 type=Windows.Devices.WiFi.WiFiWpsKind name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiWpsKind> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiWpsKind> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Devices.WiFi.WiFiWpsKind name=value
             out uint32 name=index
             out boolean return

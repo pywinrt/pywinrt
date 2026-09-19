@@ -185,7 +185,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -205,7 +205,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Paym
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Payments.PaymentDetailsModifier name=items
             out uint32 return
     method move_next
@@ -225,7 +225,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Paym
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentItem> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentItem> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentItem> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Payments.PaymentItem name=items
             out uint32 return
     method move_next
@@ -245,7 +245,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Paym
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentMethodData> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentMethodData> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentMethodData> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Payments.PaymentMethodData name=items
             out uint32 return
     method move_next
@@ -265,7 +265,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Paym
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Payments.PaymentShippingOption name=items
             out uint32 return
     method move_next
@@ -388,7 +388,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             fill_array string name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -416,7 +416,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Pa
             fill_array class type=Windows.ApplicationModel.Payments.PaymentDetailsModifier name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentDetailsModifier> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Payments.PaymentDetailsModifier name=value
             out uint32 name=index
             out boolean return
@@ -444,7 +444,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Pa
             fill_array class type=Windows.ApplicationModel.Payments.PaymentItem name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentItem> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentItem> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Payments.PaymentItem name=value
             out uint32 name=index
             out boolean return
@@ -472,7 +472,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Pa
             fill_array class type=Windows.ApplicationModel.Payments.PaymentMethodData name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentMethodData> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentMethodData> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Payments.PaymentMethodData name=value
             out uint32 name=index
             out boolean return
@@ -500,7 +500,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Pa
             fill_array class type=Windows.ApplicationModel.Payments.PaymentShippingOption name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Payments.PaymentShippingOption> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Payments.PaymentShippingOption name=value
             out uint32 name=index
             out boolean return

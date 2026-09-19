@@ -65,6 +65,9 @@ include src/members.h
 include src/module_state.h
 include src/objects.h
 include src/protocols.h
+include src/pycollections.h
+include src/pymapping.h
+include src/pysequence.h
 include src/shapes-generated.h
 include src/shapes.h
 include src/structs.h
@@ -682,6 +685,9 @@ write_project_files(
         "src/members.cpp",
         "src/objects.cpp",
         "src/protocols.cpp",
+        "src/pycollections.cpp",
+        "src/pymapping.cpp",
+        "src/pysequence.cpp",
         "src/runtime.cpp",
         "src/shapes.cpp",
         "src/structs.cpp",

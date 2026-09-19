@@ -352,7 +352,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.ViewManagement.Cor
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ViewManagement.Core.CoreInputViewOcclusion> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ViewManagement.Core.CoreInputViewOcclusion> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.ViewManagement.Core.CoreInputViewOcclusion> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.UI.ViewManagement.Core.CoreInputViewOcclusion name=items
             out uint32 return
     method move_next
@@ -388,7 +388,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.ViewManagement.C
             fill_array class type=Windows.UI.ViewManagement.Core.CoreInputViewOcclusion name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ViewManagement.Core.CoreInputViewOcclusion> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.ViewManagement.Core.CoreInputViewOcclusion> shape=117 reverse=66 role=index_of
             in class type=Windows.UI.ViewManagement.Core.CoreInputViewOcclusion name=value
             out uint32 name=index
             out boolean return

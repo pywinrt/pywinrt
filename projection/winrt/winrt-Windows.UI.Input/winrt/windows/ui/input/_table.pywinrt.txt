@@ -439,7 +439,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.UI.Input.PointerPoint name=items
             out uint32 return
     method move_next
@@ -459,7 +459,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialContro
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerMenuItem> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerMenuItem> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.UI.Input.RadialControllerMenuItem name=items
             out uint32 return
     method move_next
@@ -479,7 +479,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialContro
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerSystemMenuItemKind> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerSystemMenuItemKind> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerSystemMenuItemKind> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.UI.Input.RadialControllerSystemMenuItemKind name=items
             out uint32 return
     method move_next
@@ -813,10 +813,10 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> 
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=173 role=append
             in class type=Windows.UI.Input.PointerPoint name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.PointerPoint> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.PointerPoint> return
@@ -830,10 +830,10 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> 
             fill_array class type=Windows.UI.Input.PointerPoint name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=117 reverse=101 role=index_of
             in class type=Windows.UI.Input.PointerPoint name=value
             out uint32 name=index
             out boolean return
@@ -845,9 +845,9 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> 
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.UI.Input.PointerPoint name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> shape=51 reverse=124 role=set_at
@@ -865,10 +865,10 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControll
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=173 role=append
             in class type=Windows.UI.Input.RadialControllerMenuItem name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Input.RadialControllerMenuItem> return
@@ -882,10 +882,10 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControll
             fill_array class type=Windows.UI.Input.RadialControllerMenuItem name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.RadialControllerMenuItem> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=117 reverse=101 role=index_of
             in class type=Windows.UI.Input.RadialControllerMenuItem name=value
             out uint32 name=index
             out boolean return
@@ -897,9 +897,9 @@ interface Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControll
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.UI.Input.RadialControllerMenuItem name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Input.RadialControllerMenuItem> shape=51 reverse=124 role=set_at
@@ -929,7 +929,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoi
             fill_array class type=Windows.UI.Input.PointerPoint name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.PointerPoint> shape=117 reverse=66 role=index_of
             in class type=Windows.UI.Input.PointerPoint name=value
             out uint32 name=index
             out boolean return
@@ -957,7 +957,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.RadialCont
             fill_array class type=Windows.UI.Input.RadialControllerMenuItem name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.RadialControllerMenuItem> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.RadialControllerMenuItem> shape=117 reverse=66 role=index_of
             in class type=Windows.UI.Input.RadialControllerMenuItem name=value
             out uint32 name=index
             out boolean return

@@ -225,7 +225,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Wall
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Wallet.WalletItem> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Wallet.WalletItem> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Wallet.WalletItem> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Wallet.WalletItem name=items
             out uint32 return
     method move_next
@@ -245,7 +245,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> name=items
             out uint32 return
     method move_next
@@ -265,7 +265,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> name=items
             out uint32 return
     method move_next
@@ -285,7 +285,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletTransaction>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletTransaction>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletTransaction>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> name=items
             out uint32 return
     method move_next
@@ -305,7 +305,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletVerb>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletVerb>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletVerb>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletVerb> name=items
             out uint32 return
     method move_next
@@ -320,10 +320,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.App
     argument System.String
     argument Windows.ApplicationModel.Wallet.WalletItemCustomProperty
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> shape=4 reverse=43 role=pair_value
             out class type=Windows.ApplicationModel.Wallet.WalletItemCustomProperty return
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> concrete
@@ -334,10 +334,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.App
     argument System.String
     argument Windows.ApplicationModel.Wallet.WalletRelevantLocation
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> shape=4 reverse=43 role=pair_value
             out class type=Windows.ApplicationModel.Wallet.WalletRelevantLocation return
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> concrete
@@ -348,10 +348,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.App
     argument System.String
     argument Windows.ApplicationModel.Wallet.WalletTransaction
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> shape=4 reverse=43 role=pair_value
             out class type=Windows.ApplicationModel.Wallet.WalletTransaction return
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletVerb> concrete
@@ -362,10 +362,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.App
     argument System.String
     argument Windows.ApplicationModel.Wallet.WalletVerb
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletVerb> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletVerb> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletVerb> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletVerb> shape=4 reverse=43 role=pair_value
             out class type=Windows.ApplicationModel.Wallet.WalletVerb return
 
 interface Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> concrete iterable mapping mutable_mapping
@@ -380,12 +380,12 @@ interface Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationM
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> shape=51 reverse=65 role=has_key
@@ -416,12 +416,12 @@ interface Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationM
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> shape=51 reverse=65 role=has_key
@@ -452,12 +452,12 @@ interface Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationM
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletTransaction>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletTransaction>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> shape=51 reverse=65 role=has_key
@@ -488,12 +488,12 @@ interface Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationM
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletVerb> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletVerb> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletVerb> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletVerb>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Wallet.WalletVerb>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletVerb> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletVerb> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletVerb> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.ApplicationModel.Wallet.WalletVerb> shape=51 reverse=65 role=has_key
@@ -535,7 +535,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,Windows.Applicat
             in string name=key
             out class type=Windows.ApplicationModel.Wallet.WalletItemCustomProperty return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> name=second
 
@@ -562,7 +562,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,Windows.Applicat
             in string name=key
             out class type=Windows.ApplicationModel.Wallet.WalletRelevantLocation return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> name=second
 
@@ -589,7 +589,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,Windows.Applicat
             in string name=key
             out class type=Windows.ApplicationModel.Wallet.WalletTransaction return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> name=second
 
@@ -616,7 +616,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,Windows.Applicat
             in string name=key
             out class type=Windows.ApplicationModel.Wallet.WalletVerb return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletVerb> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletVerb> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletVerb> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Wallet.WalletVerb> name=second
 
@@ -771,7 +771,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wa
             fill_array class type=Windows.ApplicationModel.Wallet.WalletItem name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Wallet.WalletItem name=value
             out uint32 name=index
             out boolean return
