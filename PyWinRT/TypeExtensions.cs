@@ -612,6 +612,22 @@ static class TypeExtensions
                 return false;
             }
         }
+
+        /// <summary>
+        /// The mypy error codes that have to be silenced where this method is
+        /// declared in a type stub, or <c>null</c> when there are none.
+        /// </summary>
+        /// <remarks>
+        /// SetValue is both an incompatible override and an override of a
+        /// member that the base class declares final, while ShowAt is only an
+        /// incompatible override.
+        /// </remarks>
+        public string? OverrideIgnoreCodes =>
+            method.IsProblematicOverride
+                ? method.Method.Name == "SetValue"
+                    ? "misc,override"
+                    : "override"
+                : null;
     }
 
     extension(TypeReference type)

@@ -701,7 +701,7 @@ class StandardPrintTaskOptions(winrt.system.Object, metaclass=StandardPrintTaskO
 @typing.final
 class _IPrintDocumentSource: ...
 
-class IPrintDocumentSource(winrt._winrt.IInspectable):  # type: ignore[misc]
+class IPrintDocumentSource(winrt._winrt.IInspectable):
     ...
 
 @typing.final

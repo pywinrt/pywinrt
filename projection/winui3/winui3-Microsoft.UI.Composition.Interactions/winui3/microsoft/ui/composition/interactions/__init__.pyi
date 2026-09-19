@@ -560,7 +560,7 @@ class VisualInteractionSource(microsoft_ui_composition.CompositionObject, ICompo
 @typing.final
 class _ICompositionInteractionSource: ...
 
-class ICompositionInteractionSource(winrt._winrt.IInspectable):  # type: ignore[misc]
+class ICompositionInteractionSource(winrt._winrt.IInspectable):
     ...
 
 @typing.final

@@ -1394,6 +1394,6 @@ class IMediaEnginePlaybackSource(winrt._winrt.IInspectable):
 @typing.final
 class _IMediaPlaybackSource: ...
 
-class IMediaPlaybackSource(winrt._winrt.IInspectable):  # type: ignore[misc]
+class IMediaPlaybackSource(winrt._winrt.IInspectable):
     ...
 

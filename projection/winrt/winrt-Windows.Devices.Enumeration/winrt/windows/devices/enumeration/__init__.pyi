@@ -713,12 +713,12 @@ class EnclosureLocation(winrt.system.Object):
 @typing.final
 class _IDeviceEnumerationSettings: ...
 
-class IDeviceEnumerationSettings(winrt._winrt.IInspectable):  # type: ignore[misc]
+class IDeviceEnumerationSettings(winrt._winrt.IInspectable):
     ...
 
 @typing.final
 class _IDevicePairingSettings: ...
 
-class IDevicePairingSettings(winrt._winrt.IInspectable):  # type: ignore[misc]
+class IDevicePairingSettings(winrt._winrt.IInspectable):
     ...
 

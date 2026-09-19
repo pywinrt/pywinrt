@@ -68,9 +68,13 @@ static class InterfaceWriterExtensions
             );
         }
 
-        // work around https://github.com/python/mypy/issues/17091
-        // we can't use abc.ABCMeta because it will cause errors about conflicting metaclasses
-        var typeIgnore = hasMembers ? "" : "  # type: ignore[misc]";
+        // An interface that declares no members of its own but inherits
+        // abstract ones from a required interface is not abstract as far as
+        // mypy is concerned, so it reports the inherited members as
+        // unimplemented. Declaring abc.ABCMeta as the metaclass, which is what
+        // mypy suggests, conflicts with the metaclass the projected type
+        // already has. See https://github.com/python/mypy/issues/17091.
+        var typeIgnore = !hasMembers && type.Interfaces.Any() ? "  # type: ignore[misc]" : "";
 
         w.WriteLine($"class {type.Name}({string.Join(", ", baseTypes)}):{typeIgnore}");
         w.Indent++;

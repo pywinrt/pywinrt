@@ -1708,6 +1708,6 @@ class IHumanPresenceSensorExtension(winrt._winrt.IInspectable):
 @typing.final
 class _ISensorDataThreshold: ...
 
-class ISensorDataThreshold(winrt._winrt.IInspectable):  # type: ignore[misc]
+class ISensorDataThreshold(winrt._winrt.IInspectable):
     ...
 

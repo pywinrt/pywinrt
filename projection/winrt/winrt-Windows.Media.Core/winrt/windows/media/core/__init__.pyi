@@ -2216,7 +2216,7 @@ class IMediaCue(winrt._winrt.IInspectable):
 @typing.final
 class _IMediaSource: ...
 
-class IMediaSource(winrt._winrt.IInspectable):  # type: ignore[misc]
+class IMediaSource(winrt._winrt.IInspectable):
     ...
 
 @typing.final

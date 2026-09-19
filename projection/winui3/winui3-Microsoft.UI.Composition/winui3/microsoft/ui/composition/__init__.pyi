@@ -3020,7 +3020,7 @@ class IAnimationObject(winrt._winrt.IInspectable):
 @typing.final
 class _ICompositionAnimationBase: ...
 
-class ICompositionAnimationBase(winrt._winrt.IInspectable):  # type: ignore[misc]
+class ICompositionAnimationBase(winrt._winrt.IInspectable):
     ...
 
 @typing.final
@@ -3039,7 +3039,7 @@ class ICompositionSupportsSystemBackdrop(winrt._winrt.IInspectable):
 @typing.final
 class _ICompositionSurface: ...
 
-class ICompositionSurface(winrt._winrt.IInspectable):  # type: ignore[misc]
+class ICompositionSurface(winrt._winrt.IInspectable):
     ...
 
 @typing.final
@@ -3053,7 +3053,7 @@ class ICompositionSurfaceFacade(winrt._winrt.IInspectable):
 @typing.final
 class _IVisualElement: ...
 
-class IVisualElement(winrt._winrt.IInspectable):  # type: ignore[misc]
+class IVisualElement(winrt._winrt.IInspectable):
     ...
 
 @typing.final
