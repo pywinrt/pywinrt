@@ -1114,9 +1114,9 @@ class Windows.ApplicationModel.Contacts.ContactList python_type
     event contact_changed
         add add_ContactChanged slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactList,Windows.ApplicationModel.Contacts.ContactChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContactChanged slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactList shape=26 reverse=234
-            in event_token name=value
+            in event_token type=Windows.Foundation.EventRegistrationToken name=value
     method delete_async
         method DeleteAsync slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactList shape=4 reverse=242
             out interface type=Windows.Foundation.IAsyncAction return
@@ -1348,9 +1348,9 @@ class Windows.ApplicationModel.Contacts.ContactListSyncManager python_type
     event sync_status_changed
         add add_SyncStatusChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncManager shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactListSyncManager,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SyncStatusChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactListSyncManager shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method sync_async
         method SyncAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactListSyncManager shape=4 reverse=99
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -1586,15 +1586,15 @@ class Windows.ApplicationModel.Contacts.ContactPanel python_type
     event closing
         add add_Closing slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPanel shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactPanel,Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closing slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPanel shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event launch_full_app_requested
         add add_LaunchFullAppRequested slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPanel shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactPanel,Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LaunchFullAppRequested slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPanel shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close_panel
         method ClosePanel slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactPanel shape=0 reverse=16
 
@@ -1833,9 +1833,9 @@ class Windows.ApplicationModel.Contacts.ContactStore python_type
     event contact_changed
         add add_ContactChanged slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactStore,Windows.ApplicationModel.Contacts.ContactChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContactChanged slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=26 reverse=82
-            in event_token name=value
+            in event_token type=Windows.Foundation.EventRegistrationToken name=value
     method create_contact_list_async
         method CreateContactListAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactStore2 shape=51 reverse=163
             in string name=displayName
@@ -1944,7 +1944,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1973,7 +1973,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.C
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.Contact> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2002,7 +2002,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.C
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.ContactAnnotation> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2031,7 +2031,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.C
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.ContactAnnotationList> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2060,7 +2060,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.C
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.ContactAnnotationStore> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2089,7 +2089,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.C
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.ContactBatch> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2118,7 +2118,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.C
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.ContactInformation> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2147,7 +2147,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.C
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.ContactList> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2176,7 +2176,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.C
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.ContactStore> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2205,7 +2205,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.P
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2234,7 +2234,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2263,7 +2263,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.String>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2292,7 +2292,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.Contact>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2321,7 +2321,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotation>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2350,7 +2350,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2379,7 +2379,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactChange>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2408,7 +2408,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactInformation>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2437,7 +2437,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2466,7 +2466,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAcce
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamWithContentType> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2495,7 +2495,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.RandomAcces
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.RandomAccessStreamReference> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -5255,6 +5255,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

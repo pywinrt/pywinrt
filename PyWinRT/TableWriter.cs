@@ -62,6 +62,7 @@ enum TableTypeFlags : uint
     Stringable = 1 << 18,
     Buffer = 1 << 19,
     BufferLength = 1 << 20,
+    Integer = 1 << 21,
 }
 
 enum TableGroupKind : uint
@@ -491,6 +492,11 @@ sealed class TableWriter
         if (type.IsPyStringable)
         {
             record.Flags |= TableTypeFlags.Stringable;
+        }
+
+        if (type.IsPyInteger)
+        {
+            record.Flags |= TableTypeFlags.Integer;
         }
 
         if (type.IsPyBuffer)
@@ -1360,10 +1366,13 @@ sealed class TableWriter
                 return (TypeCode.DateTime, null);
             case { FullName: "Windows.Foundation.TimeSpan" }:
                 return (TypeCode.TimeSpan, null);
+            // These two are one integer each, so the ABI is the integer, but
+            // they keep a Python type of their own and the record names it the
+            // way an enum's does.
             case { FullName: "Windows.Foundation.HResult" }:
-                return (TypeCode.HResult, null);
+                return (TypeCode.HResult, GetTypeRecord(type));
             case { FullName: "Windows.Foundation.EventRegistrationToken" }:
-                return (TypeCode.EventToken, null);
+                return (TypeCode.EventToken, GetTypeRecord(type));
             case { FullName: "System.Type" }:
                 // Windows.UI.Xaml.Interop.TypeName, which is a struct that
                 // C++/WinRT and the metadata spell differently
@@ -1423,6 +1432,7 @@ sealed class TableWriter
         ((uint)TableTypeFlags.Stringable, "stringable"),
         ((uint)TableTypeFlags.Buffer, "buffer"),
         ((uint)TableTypeFlags.BufferLength, "buffer_length"),
+        ((uint)TableTypeFlags.Integer, "integer"),
     ];
 
     private static readonly string[] groupKindNames =

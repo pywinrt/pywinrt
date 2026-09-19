@@ -39,9 +39,9 @@ class Windows.UI.Xaml.Hosting.DesignerAppManager python_type closeable
     event designer_app_exited
         add add_DesignerAppExited slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesignerAppManager shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Hosting.DesignerAppManager,Windows.UI.Xaml.Hosting.DesignerAppExitedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DesignerAppExited slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Hosting.IDesignerAppManager shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_new_view_async
@@ -109,15 +109,15 @@ class Windows.UI.Xaml.Hosting.DesktopWindowXamlSource composable python_type clo
     event got_focus
         add add_GotFocus slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Hosting.DesktopWindowXamlSource,Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GotFocus slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event take_focus_requested
         add add_TakeFocusRequested slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Hosting.DesktopWindowXamlSource,Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TakeFocusRequested slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method navigate_focus
@@ -206,7 +206,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Hosting.DesignerApp
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Hosting.DesignerAppView> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -472,6 +472,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

@@ -12,15 +12,15 @@ class Windows.System.Diagnostics.DevicePortal.DevicePortalConnection python_type
     event closed
         add add_Closed slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnection shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Diagnostics.DevicePortal.DevicePortalConnection,Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnection shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event request_received
         add add_RequestReceived slot=8 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnection shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Diagnostics.DevicePortal.DevicePortalConnection,Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RequestReceived slot=9 inputs=1 outputs=0 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnection shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_app_service_connection static
         method GetForAppServiceConnection slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionStatics shape=51 reverse=24 static
             in class type=Windows.ApplicationModel.AppService.AppServiceConnection name=appServiceConnection
@@ -196,6 +196,9 @@ class Windows.ApplicationModel.AppService.AppServiceConnection external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler

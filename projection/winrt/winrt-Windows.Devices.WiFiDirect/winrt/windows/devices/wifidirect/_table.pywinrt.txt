@@ -27,7 +27,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.WiFiDire
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.WiFiDirect.WiFiDirectDevice> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -453,9 +453,9 @@ class Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher activatable py
     event status_changed
         add add_StatusChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher,Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=10 inputs=0 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=0 reverse=117
     method stop
@@ -492,9 +492,9 @@ class Windows.Devices.WiFiDirect.WiFiDirectConnectionListener activatable python
     event connection_requested
         add add_ConnectionRequested slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionListener shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.WiFiDirectConnectionListener,Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ConnectionRequested slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionListener shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters activatable python_type
     py WiFiDirectConnectionParameters
@@ -567,9 +567,9 @@ class Windows.Devices.WiFiDirect.WiFiDirectDevice python_type closeable
     event connection_status_changed
         add add_ConnectionStatusChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.WiFiDirectDevice,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ConnectionStatusChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
@@ -675,6 +675,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

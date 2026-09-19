@@ -149,9 +149,9 @@ class Windows.Devices.Enumeration.DeviceAccessInformation python_type
     event access_changed
         add add_AccessChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceAccessInformation shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceAccessInformation,Windows.Devices.Enumeration.DeviceAccessChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccessChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceAccessInformation shape=26 reverse=53
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method create_from_device_class static
         method CreateFromDeviceClass slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceAccessInformationStatics shape=51 reverse=65 static
             in enum32 type=Windows.Devices.Enumeration.DeviceClass name=deviceClass
@@ -359,15 +359,15 @@ class Windows.Devices.Enumeration.DeviceInformationCustomPairing python_type
     event pairing_requested
         add add_PairingRequested slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceInformationCustomPairing,Windows.Devices.Enumeration.DevicePairingRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PairingRequested slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pairing_set_members_requested
         add add_PairingSetMembersRequested slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing2 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceInformationCustomPairing,Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PairingSetMembersRequested slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing2 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_pairing_set_member
         method AddPairingSetMember slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceInformationCustomPairing2 shape=4 reverse=22
             in class type=Windows.Devices.Enumeration.DeviceInformation name=device
@@ -541,21 +541,21 @@ class Windows.Devices.Enumeration.DevicePicker activatable python_type
     event device_picker_dismissed
         add add_DevicePickerDismissed slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePicker shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DevicePicker,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DevicePickerDismissed slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePicker shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event device_selected
         add add_DeviceSelected slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePicker shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DevicePicker,Windows.Devices.Enumeration.DeviceSelectedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DeviceSelected slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePicker shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event disconnect_button_clicked
         add add_DisconnectButtonClicked slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDevicePicker shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DevicePicker,Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DisconnectButtonClicked slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePicker shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method hide
         method Hide slot=19 inputs=0 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePicker shape=0 reverse=221
     method pick_single_device_async
@@ -726,33 +726,33 @@ class Windows.Devices.Enumeration.DeviceWatcher python_type
     event added
         add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformation> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
         add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
         add add_Removed slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Removed slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
         add add_Stopped slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Stopped slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
         add add_Updated slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Updated slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDeviceWatcher shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_background_trigger
         method GetBackgroundTrigger slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceWatcher2 shape=51 reverse=24
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Enumeration.DeviceWatcherEventKind> name=requestedEventKinds
@@ -827,7 +827,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -856,7 +856,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceI
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Enumeration.DeviceInformation> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -885,7 +885,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceI
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Enumeration.DeviceInformationCollection> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -914,7 +914,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceP
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Enumeration.DevicePairingResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -943,7 +943,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceT
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Enumeration.DeviceThumbnail> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -972,7 +972,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceU
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Enumeration.DeviceUnpairingResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1007,7 +1007,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UI
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1042,7 +1042,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1764,6 +1764,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

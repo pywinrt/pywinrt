@@ -32,15 +32,15 @@ class Windows.System.Power.BackgroundEnergyManager static python_type
     event recent_energy_usage_increased static
         add add_RecentEnergyUsageIncreased slot=14 inputs=1 outputs=1 declaring=Windows.System.Power.IBackgroundEnergyManagerStatics shape=51 reverse=187 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RecentEnergyUsageIncreased slot=15 inputs=1 outputs=0 declaring=Windows.System.Power.IBackgroundEnergyManagerStatics shape=26 reverse=200 static deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event recent_energy_usage_returned_to_low static
         add add_RecentEnergyUsageReturnedToLow slot=16 inputs=1 outputs=1 declaring=Windows.System.Power.IBackgroundEnergyManagerStatics shape=51 reverse=203 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RecentEnergyUsageReturnedToLow slot=17 inputs=1 outputs=0 declaring=Windows.System.Power.IBackgroundEnergyManagerStatics shape=26 reverse=215 static deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Windows.System.Power.BatteryStatus python_type
     py BatteryStatus
@@ -85,15 +85,15 @@ class Windows.System.Power.ForegroundEnergyManager static python_type
     event recent_energy_usage_increased static
         add add_RecentEnergyUsageIncreased slot=12 inputs=1 outputs=1 declaring=Windows.System.Power.IForegroundEnergyManagerStatics shape=51 reverse=163 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RecentEnergyUsageIncreased slot=13 inputs=1 outputs=0 declaring=Windows.System.Power.IForegroundEnergyManagerStatics shape=26 reverse=181 static deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event recent_energy_usage_returned_to_low static
         add add_RecentEnergyUsageReturnedToLow slot=14 inputs=1 outputs=1 declaring=Windows.System.Power.IForegroundEnergyManagerStatics shape=51 reverse=187 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RecentEnergyUsageReturnedToLow slot=15 inputs=1 outputs=0 declaring=Windows.System.Power.IForegroundEnergyManagerStatics shape=26 reverse=200 static deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 interface Windows.System.Power.IBackgroundEnergyManagerStatics
     guid b3161d95-1180-4376-96e1-4095568147ce
@@ -125,33 +125,33 @@ class Windows.System.Power.PowerManager static python_type
     event battery_status_changed static
         add add_BatteryStatusChanged slot=10 inputs=1 outputs=1 declaring=Windows.System.Power.IPowerManagerStatics shape=51 reverse=124 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BatteryStatusChanged slot=11 inputs=1 outputs=0 declaring=Windows.System.Power.IPowerManagerStatics shape=26 reverse=156 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event energy_saver_status_changed static
         add add_EnergySaverStatusChanged slot=7 inputs=1 outputs=1 declaring=Windows.System.Power.IPowerManagerStatics shape=51 reverse=44 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnergySaverStatusChanged slot=8 inputs=1 outputs=0 declaring=Windows.System.Power.IPowerManagerStatics shape=26 reverse=82 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event power_supply_status_changed static
         add add_PowerSupplyStatusChanged slot=13 inputs=1 outputs=1 declaring=Windows.System.Power.IPowerManagerStatics shape=51 reverse=174 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PowerSupplyStatusChanged slot=14 inputs=1 outputs=0 declaring=Windows.System.Power.IPowerManagerStatics shape=26 reverse=192 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event remaining_charge_percent_changed static
         add add_RemainingChargePercentChanged slot=16 inputs=1 outputs=1 declaring=Windows.System.Power.IPowerManagerStatics shape=51 reverse=203 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RemainingChargePercentChanged slot=17 inputs=1 outputs=0 declaring=Windows.System.Power.IPowerManagerStatics shape=26 reverse=215 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event remaining_discharge_time_changed static
         add add_RemainingDischargeTimeChanged slot=19 inputs=1 outputs=1 declaring=Windows.System.Power.IPowerManagerStatics shape=51 reverse=224 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RemainingDischargeTimeChanged slot=20 inputs=1 outputs=0 declaring=Windows.System.Power.IPowerManagerStatics shape=26 reverse=399 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Windows.System.Power.PowerSupplyStatus python_type
     py PowerSupplyStatus
@@ -163,3 +163,6 @@ class System.Object external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken

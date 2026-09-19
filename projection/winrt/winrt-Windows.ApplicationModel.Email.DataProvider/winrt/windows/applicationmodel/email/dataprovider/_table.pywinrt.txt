@@ -10,93 +10,93 @@ class Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection py
     event create_folder_requested
         add add_CreateFolderRequested slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CreateFolderRequested slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event delete_folder_requested
         add add_DeleteFolderRequested slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DeleteFolderRequested slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event download_attachment_requested
         add add_DownloadAttachmentRequested slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DownloadAttachmentRequested slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event download_message_requested
         add add_DownloadMessageRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DownloadMessageRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event empty_folder_requested
         add add_EmptyFolderRequested slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EmptyFolderRequested slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event forward_meeting_requested
         add add_ForwardMeetingRequested slot=22 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=238
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ForwardMeetingRequested slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=245
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event get_auto_reply_settings_requested
         add add_GetAutoReplySettingsRequested slot=28 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=264
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GetAutoReplySettingsRequested slot=29 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=268
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event mailbox_sync_requested
         add add_MailboxSyncRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MailboxSyncRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event move_folder_requested
         add add_MoveFolderRequested slot=18 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MoveFolderRequested slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event propose_new_time_for_meeting_requested
         add add_ProposeNewTimeForMeetingRequested slot=24 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=248
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ProposeNewTimeForMeetingRequested slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=254
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event resolve_recipients_requested
         add add_ResolveRecipientsRequested slot=30 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=271
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ResolveRecipientsRequested slot=31 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=277
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event server_search_read_batch_requested
         add add_ServerSearchReadBatchRequested slot=34 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=289
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ServerSearchReadBatchRequested slot=35 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=294
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event set_auto_reply_settings_requested
         add add_SetAutoReplySettingsRequested slot=26 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=256
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SetAutoReplySettingsRequested slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=262
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event update_meeting_response_requested
         add add_UpdateMeetingResponseRequested slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UpdateMeetingResponseRequested slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event validate_certificates_requested
         add add_ValidateCertificatesRequested slot=32 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=281
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ValidateCertificatesRequested slot=33 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=287
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=36 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=0 reverse=405
 
@@ -1185,6 +1185,9 @@ class Windows.ApplicationModel.Email.EmailRecipientResolutionResult external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

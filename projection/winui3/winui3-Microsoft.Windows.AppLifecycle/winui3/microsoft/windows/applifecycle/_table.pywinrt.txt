@@ -65,9 +65,9 @@ class Microsoft.Windows.AppLifecycle.AppInstance python_type
     event activated
         add add_Activated slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=51 reverse=100
             in delegate type=Windows.Foundation.EventHandler<Microsoft.Windows.AppLifecycle.AppActivationArguments> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Activated slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_or_register_for_key static
         method FindOrRegisterForKey slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstanceStatics shape=51 reverse=65 static
             in string name=key
@@ -238,6 +238,9 @@ enum Windows.ApplicationModel.Core.AppRestartFailureReason external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

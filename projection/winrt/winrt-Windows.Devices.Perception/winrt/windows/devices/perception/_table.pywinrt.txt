@@ -126,7 +126,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.Percepti
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionColorFrameSource> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -155,7 +155,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.Percepti
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -184,7 +184,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.Percepti
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -213,7 +213,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.Percepti
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionDepthFrameSource> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -242,7 +242,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.Percepti
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionFrameSourceAccessStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -271,7 +271,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.Percepti
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -300,7 +300,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Perception.Percepti
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -329,7 +329,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionColorFrameSource>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -358,7 +358,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionDepthFrameSource>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -387,7 +387,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.PerceptionInfraredFrameSource>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -994,9 +994,9 @@ class Windows.Devices.Perception.PerceptionColorFrameReader python_type closeabl
     event frame_arrived
         add add_FrameArrived slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameReader shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameReader,Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameReader shape=26 reverse=53 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method try_read_latest_frame deprecated
@@ -1049,33 +1049,33 @@ class Windows.Devices.Perception.PerceptionColorFrameSource python_type
     event active_changed
         add add_ActiveChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=65 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ActiveChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=26 reverse=110 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event available_changed
         add add_AvailableChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AvailableChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=26 reverse=53 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event camera_intrinsics_changed
         add add_CameraIntrinsicsChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=187 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CameraIntrinsicsChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=26 reverse=200 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event properties_changed
         add add_PropertiesChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=124 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PropertiesChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=26 reverse=156 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event video_profile_changed
         add add_VideoProfileChanged slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=51 reverse=163 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VideoProfileChanged slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=26 reverse=181 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method acquire_control_session deprecated
         method AcquireControlSession slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSource shape=4 reverse=259 deprecated
             out class type=Windows.Devices.Perception.PerceptionControlSession return
@@ -1152,27 +1152,27 @@ class Windows.Devices.Perception.PerceptionColorFrameSourceWatcher python_type
     event enumeration_completed
         add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=51 reverse=163 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=26 reverse=181 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_added
         add add_SourceAdded slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceAdded slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=26 reverse=53 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_removed
         add add_SourceRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=51 reverse=65 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=26 reverse=110 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
         add add_Stopped slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=51 reverse=124 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionColorFrameSourceWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Stopped slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=26 reverse=156 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start deprecated
         method Start slot=15 inputs=0 outputs=0 declaring=Windows.Devices.Perception.IPerceptionColorFrameSourceWatcher shape=0 reverse=193 deprecated
     method stop deprecated
@@ -1187,9 +1187,9 @@ class Windows.Devices.Perception.PerceptionControlSession python_type closeable
     event control_lost
         add add_ControlLost slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionControlSession shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionControlSession,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ControlLost slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionControlSession shape=26 reverse=53 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method try_set_property_async deprecated
@@ -1293,9 +1293,9 @@ class Windows.Devices.Perception.PerceptionDepthFrameReader python_type closeabl
     event frame_arrived
         add add_FrameArrived slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameReader shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameReader,Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameReader shape=26 reverse=53 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method try_read_latest_frame deprecated
@@ -1348,33 +1348,33 @@ class Windows.Devices.Perception.PerceptionDepthFrameSource python_type
     event active_changed
         add add_ActiveChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=65 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ActiveChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=26 reverse=110 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event available_changed
         add add_AvailableChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AvailableChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=26 reverse=53 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event camera_intrinsics_changed
         add add_CameraIntrinsicsChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=187 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CameraIntrinsicsChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=26 reverse=200 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event properties_changed
         add add_PropertiesChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=124 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PropertiesChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=26 reverse=156 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event video_profile_changed
         add add_VideoProfileChanged slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=51 reverse=163 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VideoProfileChanged slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=26 reverse=181 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method acquire_control_session deprecated
         method AcquireControlSession slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSource shape=4 reverse=259 deprecated
             out class type=Windows.Devices.Perception.PerceptionControlSession return
@@ -1451,27 +1451,27 @@ class Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher python_type
     event enumeration_completed
         add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=51 reverse=163 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=26 reverse=181 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_added
         add add_SourceAdded slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceAdded slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=26 reverse=53 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_removed
         add add_SourceRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=51 reverse=65 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=26 reverse=110 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
         add add_Stopped slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=51 reverse=124 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Stopped slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=26 reverse=156 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start deprecated
         method Start slot=15 inputs=0 outputs=0 declaring=Windows.Devices.Perception.IPerceptionDepthFrameSourceWatcher shape=0 reverse=193 deprecated
     method stop deprecated
@@ -1550,9 +1550,9 @@ class Windows.Devices.Perception.PerceptionInfraredFrameReader python_type close
     event frame_arrived
         add add_FrameArrived slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameReader shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameReader,Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameArrived slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameReader shape=26 reverse=53 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method try_read_latest_frame deprecated
@@ -1605,33 +1605,33 @@ class Windows.Devices.Perception.PerceptionInfraredFrameSource python_type
     event active_changed
         add add_ActiveChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=65 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ActiveChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=26 reverse=110 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event available_changed
         add add_AvailableChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AvailableChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=26 reverse=53 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event camera_intrinsics_changed
         add add_CameraIntrinsicsChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=187 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CameraIntrinsicsChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=26 reverse=200 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event properties_changed
         add add_PropertiesChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=124 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PropertiesChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=26 reverse=156 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event video_profile_changed
         add add_VideoProfileChanged slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=51 reverse=163 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VideoProfileChanged slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=26 reverse=181 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method acquire_control_session deprecated
         method AcquireControlSession slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSource shape=4 reverse=259 deprecated
             out class type=Windows.Devices.Perception.PerceptionControlSession return
@@ -1708,27 +1708,27 @@ class Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher python_typ
     event enumeration_completed
         add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=51 reverse=163 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=26 reverse=181 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_added
         add add_SourceAdded slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceAdded slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=26 reverse=53 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_removed
         add add_SourceRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=51 reverse=65 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=26 reverse=110 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
         add add_Stopped slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=51 reverse=124 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Stopped slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=26 reverse=156 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start deprecated
         method Start slot=15 inputs=0 outputs=0 declaring=Windows.Devices.Perception.IPerceptionInfraredFrameSourceWatcher shape=0 reverse=193 deprecated
     method stop deprecated
@@ -2002,6 +2002,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

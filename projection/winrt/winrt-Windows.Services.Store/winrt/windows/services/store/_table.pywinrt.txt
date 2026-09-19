@@ -205,7 +205,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -234,7 +234,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -263,7 +263,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -292,7 +292,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -321,7 +321,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAcquire
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreAcquireLicenseResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -350,7 +350,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAppLice
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreAppLicense> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -379,7 +379,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreCanAcqu
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreCanAcquireLicenseResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -408,7 +408,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreConsuma
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreConsumableResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -437,7 +437,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProduct
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreProductPagedQueryResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -466,7 +466,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProduct
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreProductQueryResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -495,7 +495,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProduct
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreProductResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -524,7 +524,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchas
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StorePurchaseResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -553,7 +553,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreRateAnd
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreRateAndReviewResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -582,7 +582,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreSendReq
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreSendRequestResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -611,7 +611,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreUninsta
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Store.StoreUninstallStorePackageResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -646,7 +646,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1452,7 +1452,7 @@ class Windows.Services.Store.StoreAcquireLicenseResult python_type
     requires Windows.Services.Store.IStoreAcquireLicenseResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAcquireLicenseResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property store_package_license
         get get_StorePackageLicense slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAcquireLicenseResult shape=4 reverse=22
             out class type=Windows.Services.Store.StorePackageLicense return
@@ -1525,7 +1525,7 @@ class Windows.Services.Store.StoreCanAcquireLicenseResult python_type
     requires Windows.Services.Store.IStoreCanAcquireLicenseResult
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCanAcquireLicenseResult shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property licensable_sku
         get get_LicensableSku slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCanAcquireLicenseResult shape=4 reverse=43
             out string return
@@ -1577,7 +1577,7 @@ class Windows.Services.Store.StoreConsumableResult python_type
             out uint32 return
     property extended_error
         get get_ExtendedError slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreConsumableResult shape=4 reverse=99
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreConsumableResult shape=4 reverse=22
             out enum32 type=Windows.Services.Store.StoreConsumableStatus return
@@ -1608,9 +1608,9 @@ class Windows.Services.Store.StoreContext python_type
     event offline_licenses_changed
         add add_OfflineLicensesChanged slot=7 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Store.StoreContext,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OfflineLicensesChanged slot=8 inputs=1 outputs=0 declaring=Windows.Services.Store.IStoreContext shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method acquire_store_license_for_optional_package_async
         method AcquireStoreLicenseForOptionalPackageAsync slot=20 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51 reverse=229
             in class type=Windows.ApplicationModel.Package name=optionalPackage
@@ -1846,9 +1846,9 @@ class Windows.Services.Store.StorePackageLicense python_type closeable
     event license_lost
         add add_LicenseLost slot=6 inputs=1 outputs=1 declaring=Windows.Services.Store.IStorePackageLicense shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Store.StorePackageLicense,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LicenseLost slot=7 inputs=1 outputs=0 declaring=Windows.Services.Store.IStorePackageLicense shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method release_license
@@ -2009,7 +2009,7 @@ class Windows.Services.Store.StoreProductPagedQueryResult python_type
     requires Windows.Services.Store.IStoreProductPagedQueryResult
     property extended_error
         get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductPagedQueryResult shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property has_more_results
         get get_HasMoreResults slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductPagedQueryResult shape=4 reverse=43
             out boolean return
@@ -2027,7 +2027,7 @@ class Windows.Services.Store.StoreProductQueryResult python_type
     requires Windows.Services.Store.IStoreProductQueryResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductQueryResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property products
         get get_Products slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductQueryResult shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreProduct> return
@@ -2039,7 +2039,7 @@ class Windows.Services.Store.StoreProductResult python_type
     requires Windows.Services.Store.IStoreProductResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property product
         get get_Product slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductResult shape=4 reverse=22
             out class type=Windows.Services.Store.StoreProduct return
@@ -2075,7 +2075,7 @@ class Windows.Services.Store.StorePurchaseResult python_type
     requires Windows.Services.Store.IStorePurchaseResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePurchaseResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePurchaseResult shape=4 reverse=22
             out enum32 type=Windows.Services.Store.StorePurchaseStatus return
@@ -2102,15 +2102,15 @@ class Windows.Services.Store.StoreQueueItem python_type
     event completed
         add add_Completed slot=10 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Store.StoreQueueItem,Windows.Services.Store.StoreQueueItemCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Windows.Services.Store.IStoreQueueItem shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event status_changed
         add add_StatusChanged slot=12 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Store.StoreQueueItem,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusChanged slot=13 inputs=1 outputs=0 declaring=Windows.Services.Store.IStoreQueueItem shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method cancel_install_async
         method CancelInstallAsync slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem2 shape=4 reverse=22
             out interface type=Windows.Foundation.IAsyncAction return
@@ -2152,7 +2152,7 @@ class Windows.Services.Store.StoreQueueItemStatus python_type
     requires Windows.Services.Store.IStoreQueueItemStatus
     property extended_error
         get get_ExtendedError slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItemStatus shape=4 reverse=99
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property package_install_extended_state
         get get_PackageInstallExtendedState slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItemStatus shape=4 reverse=43
             out enum32 type=Windows.Services.Store.StoreQueueItemExtendedState return
@@ -2170,7 +2170,7 @@ class Windows.Services.Store.StoreRateAndReviewResult python_type
     requires Windows.Services.Store.IStoreRateAndReviewResult
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreRateAndReviewResult shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property extended_json_data
         get get_ExtendedJsonData slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreRateAndReviewResult shape=4 reverse=43
             out string return
@@ -2203,7 +2203,7 @@ class Windows.Services.Store.StoreSendRequestResult python_type
     requires Windows.Services.Store.IStoreSendRequestResult2
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSendRequestResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property response
         get get_Response slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSendRequestResult shape=4 reverse=22
             out string return
@@ -2302,7 +2302,7 @@ class Windows.Services.Store.StoreUninstallStorePackageResult python_type
     requires Windows.Services.Store.IStoreUninstallStorePackageResult
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreUninstallStorePackageResult shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreUninstallStorePackageResult shape=4 reverse=43
             out enum32 type=Windows.Services.Store.StoreUninstallStorePackageStatus return
@@ -2409,6 +2409,12 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external 
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

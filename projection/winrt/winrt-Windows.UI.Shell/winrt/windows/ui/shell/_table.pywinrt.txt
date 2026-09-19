@@ -47,9 +47,9 @@ class Windows.UI.Shell.FocusSessionManager python_type
     event is_focus_active_changed
         add add_IsFocusActiveChanged slot=11 inputs=1 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManager shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.FocusSessionManager,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsFocusActiveChanged slot=12 inputs=1 outputs=0 declaring=Windows.UI.Shell.IFocusSessionManager shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method deactivate_focus
         method DeactivateFocus slot=10 inputs=0 outputs=0 declaring=Windows.UI.Shell.IFocusSessionManager shape=0 reverse=117
     method get_default static
@@ -97,7 +97,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -357,15 +357,15 @@ class Windows.UI.Shell.ShareWindowCommandSource python_type
     event command_invoked
         add add_CommandInvoked slot=11 inputs=1 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.ShareWindowCommandSource,Windows.UI.Shell.ShareWindowCommandEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CommandInvoked slot=12 inputs=1 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event command_requested
         add add_CommandRequested slot=9 inputs=1 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.ShareWindowCommandSource,Windows.UI.Shell.ShareWindowCommandEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CommandRequested slot=10 inputs=1 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandSourceStatics shape=4 reverse=22 static
             out class type=Windows.UI.Shell.ShareWindowCommandSource return
@@ -648,27 +648,27 @@ class Windows.UI.Shell.WindowTabManager python_type
     event tab_close_requested
         add add_TabCloseRequested slot=10 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabCloseRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TabCloseRequested slot=11 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_switch_requested
         add add_TabSwitchRequested slot=8 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabSwitchRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TabSwitchRequested slot=9 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_tear_out_requested
         add add_TabTearOutRequested slot=12 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabTearOutRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TabTearOutRequested slot=13 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_thumbnail_requested
         add add_TabThumbnailRequested slot=14 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TabThumbnailRequested slot=15 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_window static
         method GetForWindow slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManagerStatics shape=97 static
             in struct type=Windows.UI.WindowId name=id
@@ -750,6 +750,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

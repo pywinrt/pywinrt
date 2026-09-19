@@ -54,7 +54,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.System.Power.Effe
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.System.Power.EffectivePowerMode> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -115,69 +115,69 @@ class Microsoft.Windows.System.Power.PowerManager static python_type
     event battery_status_changed static
         add add_BatteryStatusChanged slot=10 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=124 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BatteryStatusChanged slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=156 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event display_status_changed static
         add add_DisplayStatusChanged slot=25 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=253 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DisplayStatusChanged slot=26 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=257 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event effective_power_mode_changed static
         add add_EffectivePowerModeChanged slot=30 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=271 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EffectivePowerModeChanged slot=31 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=277 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event energy_saver_status_changed static
         add add_EnergySaverStatusChanged slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=44 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnergySaverStatusChanged slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=82 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event power_source_kind_changed static
         add add_PowerSourceKindChanged slot=22 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=238 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PowerSourceKindChanged slot=23 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=245 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event power_supply_status_changed static
         add add_PowerSupplyStatusChanged slot=13 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=174 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PowerSupplyStatusChanged slot=14 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=192 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event remaining_charge_percent_changed static
         add add_RemainingChargePercentChanged slot=16 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=203 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RemainingChargePercentChanged slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=215 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event remaining_discharge_time_changed static
         add add_RemainingDischargeTimeChanged slot=19 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=224 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RemainingDischargeTimeChanged slot=20 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=399 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event system_idle_status_changed static
         add add_SystemIdleStatusChanged slot=27 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=260 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SystemIdleStatusChanged slot=28 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event system_suspend_status_changed static
         add add_SystemSuspendStatusChanged slot=36 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=297 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SystemSuspendStatusChanged slot=37 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=301 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event user_presence_status_changed static
         add add_UserPresenceStatusChanged slot=33 inputs=1 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=51 reverse=286 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UserPresenceStatusChanged slot=34 inputs=1 outputs=0 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=26 reverse=291 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Microsoft.Windows.System.Power.PowerSourceKind python_type
     py PowerSourceKind
@@ -208,6 +208,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

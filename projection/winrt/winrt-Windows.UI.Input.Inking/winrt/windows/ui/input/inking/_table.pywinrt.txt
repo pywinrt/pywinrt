@@ -82,7 +82,7 @@ interface Windows.Foundation.IAsyncActionWithProgress<System.UInt64> concrete aw
             in delegate type=Windows.Foundation.AsyncActionWithProgressCompletedHandler<System.UInt64> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -110,7 +110,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkRecognitionResult>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -145,7 +145,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UI
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1373,15 +1373,15 @@ class Windows.UI.Input.Inking.InkPresenter python_type
     event strokes_collected
         add add_StrokesCollected slot=19 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=51 reverse=224
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkPresenter,Windows.UI.Input.Inking.InkStrokesCollectedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StrokesCollected slot=20 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=26 reverse=399
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event strokes_erased
         add add_StrokesErased slot=21 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=51 reverse=233
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkPresenter,Windows.UI.Input.Inking.InkStrokesErasedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StrokesErased slot=22 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=26 reverse=400
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method activate_custom_drying
         method ActivateCustomDrying slot=17 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=210
             out class type=Windows.UI.Input.Inking.InkSynchronizer return
@@ -1755,27 +1755,27 @@ class Windows.UI.Input.Inking.InkStrokeInput python_type
     event stroke_canceled
         add add_StrokeCanceled slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkStrokeInput,Windows.UI.Core.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StrokeCanceled slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=26 reverse=181
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event stroke_continued
         add add_StrokeContinued slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkStrokeInput,Windows.UI.Core.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StrokeContinued slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=26 reverse=110
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event stroke_ended
         add add_StrokeEnded slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkStrokeInput,Windows.UI.Core.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StrokeEnded slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=26 reverse=156
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event stroke_started
         add add_StrokeStarted slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkStrokeInput,Windows.UI.Core.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StrokeStarted slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=26 reverse=53
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
 
 class Windows.UI.Input.Inking.InkStrokeRenderingSegment python_type
     py InkStrokeRenderingSegment
@@ -1844,45 +1844,45 @@ class Windows.UI.Input.Inking.InkUnprocessedInput python_type
     event pointer_entered
         add add_PointerEntered slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerEntered slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=53
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_exited
         add add_PointerExited slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerExited slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=156
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_hovered
         add add_PointerHovered slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerHovered slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=110
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_lost
         add add_PointerLost slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerLost slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=226
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_moved
         add add_PointerMoved slot=14 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerMoved slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=200
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_pressed
         add add_PointerPressed slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerPressed slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=181
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_released
         add add_PointerReleased slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerReleased slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=215
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
 
 class Windows.UI.Input.Inking.PenAndInkSettings python_type
     py PenAndInkSettings
@@ -2006,6 +2006,12 @@ enum Windows.Foundation.AsyncStatus external
 
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncActionWithProgress external parameterized
     py winrt.windows.foundation._IAsyncActionWithProgress

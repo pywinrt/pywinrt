@@ -77,15 +77,15 @@ class Windows.Storage.Provider.CachedFileUpdaterUI python_type
     event file_update_requested
         add add_FileUpdateRequested slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Provider.CachedFileUpdaterUI,Windows.Storage.Provider.FileUpdateRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FileUpdateRequested slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event ui_requested
         add add_UIRequested slot=11 inputs=1 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Provider.CachedFileUpdaterUI,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UIRequested slot=12 inputs=1 outputs=0 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_deferral
         method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI2 shape=4 reverse=43
             out class type=Windows.Storage.Provider.FileUpdateRequestDeferral return
@@ -154,7 +154,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -183,7 +183,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Uri> concrete aw
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Uri> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -212,7 +212,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Provider.StoragePro
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Provider.StorageProviderShareLinkState> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -719,9 +719,9 @@ interface Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource pyt
     event known_folder_sync_info_changed
         add add_KnownFolderSyncInfoChanged slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_KnownFolderSyncInfoChanged slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_known_folder_sync_info
         method GetKnownFolderSyncInfo slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource shape=4 reverse=22
             out class type=Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo return
@@ -843,9 +843,9 @@ interface Windows.Storage.Provider.IStorageProviderStatusUISource python_type
     event status_ui_changed
         add add_StatusUIChanged slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUISource shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Provider.IStorageProviderStatusUISource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusUIChanged slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUISource shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_status_ui
         method GetStatusUI slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUISource shape=4 reverse=22
             out class type=Windows.Storage.Provider.StorageProviderStatusUI return
@@ -1996,6 +1996,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

@@ -49,7 +49,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.PrintTick
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -78,7 +78,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.Workflow.
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -107,7 +107,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concre
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -404,15 +404,15 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession python_t
     event setup_requested
         add add_SetupRequested slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowBackgroundSession shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs> name=setupEventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SetupRequested slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowBackgroundSession shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event submitted
         add add_Submitted slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowBackgroundSession shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs> name=submittedEventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Submitted slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowBackgroundSession shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=11 inputs=0 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowBackgroundSession shape=0 reverse=137
 
@@ -463,15 +463,15 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession python_t
     event setup_requested
         add add_SetupRequested slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowForegroundSession shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs> name=setupEventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SetupRequested slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowForegroundSession shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event xps_data_available
         add add_XpsDataAvailable slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowForegroundSession shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs> name=xpsDataAvailableEventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_XpsDataAvailable slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowForegroundSession shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=11 inputs=0 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowForegroundSession shape=0 reverse=137
 
@@ -529,21 +529,21 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession pytho
     event job_starting
         add add_JobStarting slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_JobStarting slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pdl_modification_requested
         add add_PdlModificationRequested slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PdlModificationRequested slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event job_issue_detected
         add add_JobIssueDetected slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_JobIssueDetected slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=11 inputs=0 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession shape=0 reverse=137
 
@@ -562,7 +562,7 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs 
             out class type=Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration return
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobIssueDetectedEventArgs shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property job_issue_kind
         get get_JobIssueKind slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobIssueDetectedEventArgs shape=4 reverse=22
             out enum32 type=Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueKind return
@@ -644,21 +644,21 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession python_type
     event job_notification
         add add_JobNotification slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobUISession shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession,Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_JobNotification slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobUISession shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pdl_data_available
         add add_PdlDataAvailable slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobUISession shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession,Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PdlDataAvailable slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobUISession shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event virtual_printer_ui_data_available
         add add_VirtualPrinterUIDataAvailable slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobUISession2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession,Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VirtualPrinterUIDataAvailable slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobUISession2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=11 inputs=0 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobUISession shape=0 reverse=137
 
@@ -1019,9 +1019,9 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession pyth
     event virtual_printer_data_available
         add add_VirtualPrinterDataAvailable slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowVirtualPrinterSession shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession,Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VirtualPrinterDataAvailable slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowVirtualPrinterSession shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=10 inputs=0 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowVirtualPrinterSession shape=0 reverse=117
 
@@ -1237,6 +1237,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

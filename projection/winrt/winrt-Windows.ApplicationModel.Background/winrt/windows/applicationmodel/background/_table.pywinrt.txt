@@ -431,15 +431,15 @@ class Windows.ApplicationModel.Background.BackgroundTaskRegistration python_type
     event completed
         add add_Completed slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=124
             in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=156
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event progress
         add add_Progress slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=65
             in delegate type=Windows.ApplicationModel.Background.BackgroundTaskProgressEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Progress slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=110
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_task_group static
         method GetTaskGroup slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2 shape=51 reverse=44 static
             in string name=groupId
@@ -474,9 +474,9 @@ class Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup python
     event background_activated
         add add_BackgroundActivated slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroup shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup,Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BackgroundActivated slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistrationGroup shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Windows.ApplicationModel.Background.BackgroundTaskThrottleCounter python_type
     py BackgroundTaskThrottleCounter
@@ -939,7 +939,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -968,7 +968,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.AlarmAccessStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -997,7 +997,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.ApplicationTriggerResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1026,7 +1026,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.BackgroundAccessStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1055,7 +1055,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1084,7 +1084,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.DeviceTriggerResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1113,7 +1113,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1142,7 +1142,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Background
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Background.MediaProcessingTriggerResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1230,9 +1230,9 @@ interface Windows.ApplicationModel.Background.IBackgroundTaskInstance python_typ
     event canceled
         add add_Canceled slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=51 reverse=144
             in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler name=cancelHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Canceled slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=26 reverse=167
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_deferral
         method GetDeferral slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=186
             out class type=Windows.ApplicationModel.Background.BackgroundTaskDeferral return
@@ -1262,9 +1262,9 @@ interface Windows.ApplicationModel.Background.IBackgroundTaskInstance2 python_ty
     event canceled
         add add_Canceled slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=51 reverse=144
             in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler name=cancelHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Canceled slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=26 reverse=167
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_deferral
         method GetDeferral slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=186
             out class type=Windows.ApplicationModel.Background.BackgroundTaskDeferral return
@@ -1301,9 +1301,9 @@ interface Windows.ApplicationModel.Background.IBackgroundTaskInstance4 python_ty
     event canceled
         add add_Canceled slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=51 reverse=144
             in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler name=cancelHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Canceled slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=26 reverse=167
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_deferral
         method GetDeferral slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskInstance shape=4 reverse=186
             out class type=Windows.ApplicationModel.Background.BackgroundTaskDeferral return
@@ -1324,15 +1324,15 @@ interface Windows.ApplicationModel.Background.IBackgroundTaskRegistration python
     event completed
         add add_Completed slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=124
             in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=156
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event progress
         add add_Progress slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=65
             in delegate type=Windows.ApplicationModel.Background.BackgroundTaskProgressEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Progress slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=110
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method unregister
         method Unregister slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=162
             in boolean name=cancelTask
@@ -1354,15 +1354,15 @@ interface Windows.ApplicationModel.Background.IBackgroundTaskRegistration2 pytho
     event completed
         add add_Completed slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=124
             in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=156
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event progress
         add add_Progress slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=65
             in delegate type=Windows.ApplicationModel.Background.BackgroundTaskProgressEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Progress slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=110
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method unregister
         method Unregister slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=162
             in boolean name=cancelTask
@@ -1384,15 +1384,15 @@ interface Windows.ApplicationModel.Background.IBackgroundTaskRegistration3 pytho
     event completed
         add add_Completed slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=124
             in delegate type=Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=156
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event progress
         add add_Progress slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=51 reverse=65
             in delegate type=Windows.ApplicationModel.Background.BackgroundTaskProgressEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Progress slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=26 reverse=110
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method unregister
         method Unregister slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=162
             in boolean name=cancelTask
@@ -2619,6 +2619,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

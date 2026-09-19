@@ -25,15 +25,15 @@ class Windows.Gaming.UI.GameBar static python_type
     event is_input_redirected_changed static
         add add_IsInputRedirectedChanged slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.UI.IGameBarStatics shape=51 reverse=65 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsInputRedirectedChanged slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameBarStatics shape=26 reverse=110 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event visibility_changed static
         add add_VisibilityChanged slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.UI.IGameBarStatics shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VisibilityChanged slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameBarStatics shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Windows.Gaming.UI.GameChatMessageOrigin python_type
     py GameChatMessageOrigin
@@ -91,9 +91,9 @@ class Windows.Gaming.UI.GameChatOverlayMessageSource activatable python_type
     event message_received
         add add_MessageReceived slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.UI.IGameChatOverlayMessageSource shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.UI.GameChatOverlayMessageSource,Windows.Gaming.UI.GameChatMessageReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MessageReceived slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameChatOverlayMessageSource shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method set_delay_before_closing_after_message_received
         method SetDelayBeforeClosingAfterMessageReceived slot=8 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameChatOverlayMessageSource shape=26 reverse=82
             in timespan name=value
@@ -173,6 +173,9 @@ class Windows.ApplicationModel.Activation.SplashScreen external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler

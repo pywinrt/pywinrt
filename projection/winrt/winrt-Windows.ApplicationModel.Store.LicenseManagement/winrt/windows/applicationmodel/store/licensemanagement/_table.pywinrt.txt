@@ -27,7 +27,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Lice
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -211,7 +211,7 @@ class Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult
     requires Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property license_satisfaction_infos
         get get_LicenseSatisfactionInfos slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo> return
@@ -225,6 +225,9 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

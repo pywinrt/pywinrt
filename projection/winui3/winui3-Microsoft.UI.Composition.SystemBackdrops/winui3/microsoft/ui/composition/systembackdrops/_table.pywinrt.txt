@@ -51,21 +51,21 @@ class Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController activata
     event state_changed
         add add_StateChanged slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=44
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_closed
         add add_FrameworkClosed slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=100
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_system_backdrop_target
         method AddSystemBackdropTarget slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=51 reverse=44
             in interface type=Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop name=systemBackdropTarget
@@ -283,9 +283,9 @@ interface Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWith
     event state_changed
         add add_StateChanged slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_system_backdrop_target
         method AddSystemBackdropTarget slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=51 reverse=44
             in interface type=Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop name=systemBackdropTarget
@@ -360,21 +360,21 @@ class Microsoft.UI.Composition.SystemBackdrops.MicaController activatable python
     event state_changed
         add add_StateChanged slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=44
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_closed
         add add_FrameworkClosed slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=100
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_system_backdrop_target
         method AddSystemBackdropTarget slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=51 reverse=44
             in interface type=Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop name=systemBackdropTarget
@@ -476,6 +476,9 @@ interface Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop external
 
 class System.Object external
     py winrt.system.Object
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable

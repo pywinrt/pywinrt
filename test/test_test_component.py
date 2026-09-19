@@ -1,13 +1,3 @@
-from test._util import skip_without_projection
-
-# The composable half of this module works, but one thing that is not the
-# interpreter keeps the whole of it on the skip list: IAsyncInfo.ErrorCode
-# hands back a plain integer rather than the Windows.Foundation.HResult the
-# projection used to give, so test_async_action_with_progress_iter_error
-# raises inside a completion callback and the queue it feeds is never shut
-# down, which hangs the suite.
-skip_without_projection()
-
 import asyncio
 import contextlib
 import copy
@@ -1025,7 +1015,7 @@ class WinrtAiter(Generic[T]):
             elif status == wf.AsyncStatus.CANCELED:
                 result["exception"] = asyncio.CancelledError()
             elif status == wf.AsyncStatus.ERROR:
-                result["exception"] = ctypes.WinError(op.error_code.value)
+                result["exception"] = ctypes.WinError(op.error_code)
             else:
                 raise RuntimeError("unexpected status")
 

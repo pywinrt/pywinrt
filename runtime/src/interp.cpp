@@ -200,6 +200,24 @@ namespace py::interp
         }
 
         /**
+         * The integer behind a value whose Python type is built by calling it
+         * with one: an enum member's number, an HRESULT, an event token.
+         */
+        PyObject* integer_of(table::type_code code, void const* storage) noexcept
+        {
+            switch (code)
+            {
+            case table::type_code::enum_u32:
+                return convert(load<uint32_t>(storage));
+            case table::type_code::event_token:
+                return convert(load<int64_t>(storage));
+            default:
+                // enum32 and hresult, which are both a signed 32 bit integer.
+                return convert(load<int32_t>(storage));
+            }
+        }
+
+        /**
          * Names the member a call was made through, for the error path.
          */
         member_site make_site(
@@ -645,7 +663,6 @@ namespace py::interp
             case table::type_code::char16:
                 return convert(load<char16_t>(storage));
             case table::type_code::int32:
-            case table::type_code::hresult:
                 return convert(load<int32_t>(storage));
             case table::type_code::uint32:
                 return convert(load<uint32_t>(storage));
@@ -657,8 +674,6 @@ namespace py::interp
                 return convert(load<float>(storage));
             case table::type_code::double_:
                 return convert(load<double>(storage));
-            case table::type_code::event_token:
-                return convert(load<int64_t>(storage));
             case table::type_code::datetime:
                 return convert(
                     winrt::Windows::Foundation::DateTime{
@@ -682,17 +697,21 @@ namespace py::interp
             }
             case table::type_code::enum32:
             case table::type_code::enum_u32:
+            case table::type_code::hresult:
+            case table::type_code::event_token:
             {
+                // Four codes whose ABI is an integer and whose Python value is
+                // an instance of the type the record names: an enum member, an
+                // HRESULT, an event token. The type is called with the integer,
+                // which is what makes a member of the enum and what a subclass
+                // of int is built from.
                 auto const info = resolve(owner, arg.type, arg.info);
                 if (!info)
                 {
                     return nullptr;
                 }
 
-                pyobj_handle value{
-                    arg.code == table::type_code::enum32
-                        ? convert(load<int32_t>(storage))
-                        : convert(load<uint32_t>(storage))};
+                pyobj_handle value{integer_of(arg.code, storage)};
                 if (!value)
                 {
                     return nullptr;

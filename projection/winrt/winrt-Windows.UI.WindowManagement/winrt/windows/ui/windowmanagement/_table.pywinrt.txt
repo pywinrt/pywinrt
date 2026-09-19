@@ -45,21 +45,21 @@ class Windows.UI.WindowManagement.AppWindow python_type
     event changed
         add add_Changed slot=29 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=51 reverse=267
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.WindowManagement.AppWindow,Windows.UI.WindowManagement.AppWindowChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Changed slot=30 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=26 reverse=272
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event close_requested
         add add_CloseRequested slot=33 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=51 reverse=286
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.WindowManagement.AppWindow,Windows.UI.WindowManagement.AppWindowCloseRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CloseRequested slot=34 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=26 reverse=291
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=31 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=51 reverse=274
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.WindowManagement.AppWindow,Windows.UI.WindowManagement.AppWindowClosedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=32 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=26 reverse=283
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear_all_persisted_state static
         method ClearAllPersistedState slot=7 inputs=0 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowStatics shape=0 reverse=37 static
     method clear_persisted_state static
@@ -392,9 +392,9 @@ class Windows.UI.WindowManagement.DisplayRegion python_type
     event changed
         add add_Changed slot=11 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.WindowManagement.DisplayRegion,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Changed slot=12 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.WindowManagement.FullScreenPresentationConfiguration activatable python_type
     py FullScreenPresentationConfiguration
@@ -467,7 +467,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -496,7 +496,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.UI.WindowManagement.AppWind
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.WindowManagement.AppWindow> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1093,9 +1093,9 @@ class Windows.UI.WindowManagement.WindowingEnvironment python_type
     event changed
         add add_Changed slot=9 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironment shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.WindowManagement.WindowingEnvironment,Windows.UI.WindowManagement.WindowingEnvironmentChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Changed slot=10 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IWindowingEnvironment shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_all static
         method FindAll slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironmentStatics shape=4 reverse=22 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.WindowingEnvironment> return
@@ -1149,6 +1149,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
