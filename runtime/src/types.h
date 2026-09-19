@@ -44,4 +44,6 @@ namespace py::interp
     std::string qualified(table::type_view const& type);
 
     PyGetSetDef* keep_getsets(projection& proj, std::vector<PyGetSetDef>& defs);
+
+    PyMethodDef* keep_methods(projection& proj, std::vector<PyMethodDef>& defs);
 } // namespace py::interp
