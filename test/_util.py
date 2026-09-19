@@ -21,14 +21,12 @@ def skip_without_projection() -> None:
     their members, closes their parameterized interfaces, passes arrays, shows
     a buffer, wraps a Python list or dict as a collection, answers calls that
     come back the other way and composes a Python subclass into a composable
-    class, so what is still missing is the numeric members of the ``Numerics``
-    structs and the compiled interop modules. Calling this before a module's
-    imports keeps the suite reporting skips rather than a wall of errors.
-    Delete the call from a module once the interpreter covers what it tests;
-    ``test_projection.py``, ``test_delegates.py``, ``test_implements.py``,
-    ``test_array.py``, ``test_buffer.py``, ``test_python_collections.py``,
-    ``test_overloads.py`` and ``test_test_component.py`` cover the part that is
-    there.
+    class. The one thing left is the members of the ``Windows.Foundation.Numerics``
+    structs - their constants, operators, factory functions and methods - which
+    are not in any winmd: C++/WinRT declares them in ``windowsnumerics.impl.h``
+    and the generated C++ used to call them. Calling this before a module's
+    imports keeps the suite reporting a skip rather than a wall of errors.
+    Delete the call from ``test_numerics.py`` once the runtime has them.
     """
     raise unittest.SkipTest("winrt-runtime does not interpret this part of a table yet")
 
