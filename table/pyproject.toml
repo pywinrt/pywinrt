@@ -1,0 +1,35 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "winrt-table"
+version = "0.0.0"
+description = "Compiler for the projection tables of PyWinRT"
+readme = "README.md"
+license = "MIT"
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Intended Audience :: Developers",
+]
+requires-python = ">=3.11"
+
+[project.urls]
+# Homepage = "https://github.com/pywinrt/pywinrt"
+Documentation = "https://pywinrt.readthedocs.io"
+Repository = "https://github.com/pywinrt/pywinrt"
+Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
+
+# what a projection package's build calls to compile its tables
+[project.entry-points.hatch]
+winrt-table = "winrt.table.build_hooks"
+
+[tool.hatch.build.targets.sdist]
+only-include = ["winrt", "README.md"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["winrt"]

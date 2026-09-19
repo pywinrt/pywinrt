@@ -1,11 +1,12 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["setuptools>=78", "winrt-runtime"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling", "winrt-table"]
+build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Windows.Devices.Custom"
+version = "0.0.0"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"
@@ -15,8 +16,16 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: CPython",
     "Intended Audience :: Developers",
 ]
-dynamic = ["version", "dependencies", "optional-dependencies"]
 requires-python = ">=3.11"
+dependencies = [
+    "winrt-runtime~=0.0.0.0",
+]
+
+[project.optional-dependencies]
+all = [
+    "winrt-Windows.Foundation[all]~=0.0.0.0",
+    "winrt-Windows.Storage.Streams[all]~=0.0.0.0",
+]
 
 [project.urls]
 # Homepage = "https://github.com/pywinrt/pywinrt"
@@ -24,25 +33,17 @@ Documentation = "https://pywinrt.readthedocs.io"
 Repository = "https://github.com/pywinrt/pywinrt"
 Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 
-[tool.setuptools.dynamic]
-version = { file = "version.txt" }
-dependencies = { file = "requirements.txt" }
-optional-dependencies.all = { file = "all-requirements.txt" }
+[tool.hatch.build.targets.sdist]
+# The text form of the table is what the source distribution carries, and the
+# compiled form is build output wherever it turns up. Hatchling reads no
+# .gitignore above the package, so it has to be told about the latter.
+only-include = ["winrt", "README.md"]
+exclude = ["**/_table.pywinrt"]
 
-[tool.setuptools.package-data]
-"*" = ["*.pyi", "py.typed"]
+[tool.hatch.build.targets.wheel]
+packages = ["winrt"]
+exclude = ["**/_table.pywinrt.txt"]
 
-[tool.cibuildwheel]
-# use the local winrt-runtime build dependency
-environment = { PYTHONPATH="../../../runtime/python" }
-# don't install winrt-runtime from PyPI
-build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
-before-build = "uv pip install setuptools"
-# don't build for PyPy or for the free-threaded interpreters, which the
-# projection doesn't support yet
-skip = "pp* cp*t-*"
-# suppress warnings about ARM64 testing
-test-skip = "*-win_arm64"
-
-[tool.cibuildwheel.windows]
-archs = ["x86", "AMD64", "ARM64"]
+# winrt.table.build_hooks in winrt-table, which compiles each table the
+# package carries and puts the result beside the __init__.py that loads it.
+[tool.hatch.build.targets.wheel.hooks.winrt-table]

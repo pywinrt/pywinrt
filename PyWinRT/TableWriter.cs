@@ -270,7 +270,7 @@ sealed class TableConstant(string pyName, uint value)
 /// </summary>
 /// <remarks>
 /// This is the whole of what a projection package used to compile. The text is
-/// what the repository carries; <c>winrt/table.py</c> compiles it into the
+/// what the repository carries, and <c>winrt.table</c> compiles it into the
 /// <c>_table.pywinrt</c> that <c>runtime/src/table.cpp</c> reads, as part of
 /// building the projection. The format is written up in
 /// <c>runtime/src/table-format.md</c>; keep the four in step.
@@ -284,11 +284,17 @@ sealed class TableWriter
 
     private const uint NoRef = uint.MaxValue;
 
-    // The compatibility generation, which is the same number as the ABI major in
-    // pywinrt/abi.h and the epoch in a projection package's version. The runtime
-    // asserts the two against each other.
-    private const ushort FormatMajor = 4;
-    private const ushort FormatMinor = 0;
+    /// <summary>
+    /// The compatibility generation, which is the same number as the ABI major
+    /// in pywinrt/abi.h and the epoch in a projection package's version. The
+    /// runtime asserts the two against each other.
+    /// </summary>
+    public const ushort FormatMajor = 4;
+
+    /// <summary>
+    /// Counts the additions to the table format within a generation.
+    /// </summary>
+    public const ushort FormatMinor = 0;
 
     private readonly QualifiedNamespace ns;
     private readonly IReadOnlyDictionary<string, string> packageMap;
@@ -1606,7 +1612,7 @@ sealed class TableWriter
     /// </summary>
     /// <remarks>
     /// The binary the runtime reads is compiled from this text by
-    /// <c>winrt/table.py</c> in <c>winrt-runtime</c>. So nothing
+    /// <c>winrt.table</c> in <c>winrt-table</c>. So nothing
     /// written here is an offset or an index: a reference is spelled as the name
     /// of the record it points at, and the order records are written in is the
     /// order they are numbered in there. The grammar and the vocabulary are in

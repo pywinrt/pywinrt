@@ -51,14 +51,19 @@ Some additional files are also generated instead by:
 ## Generating the C++/WinRT headers
 
 `winrt-runtime` and the eight interop modules are the only things here that are
-compiled, and they include C++/WinRT headers. Those are generated from the NuGet
-packages rather than committed, so this has to be run once before building them
-and again whenever `.config/_tools.json` changes:
+compiled, and they include C++/WinRT headers. They are generated from the NuGet
+packages and committed, like the rest of the generated tree, so this has to be
+run whenever `.config/_tools.json` changes or a module starts including another
+namespace:
 
     py .\scripts\generate-cppwinrt.py
 
-It writes `_cppwinrt\windows-sdk` and `_cppwinrt\windows-app-sdk`, which is
-where CMake looks and where `CPPWINRT_PATH` should point for a `setup.py` build.
+Each package carries the headers it includes. `winrt-runtime` carries what
+`pywinrt/base.h` includes, inside the package beside the PyWinRT headers that
+`winrt._include` hands out, and an interop module carries the namespaces it
+includes beyond those in a `cppwinrt` directory of its own. Either way they are
+found at the same place whether the module is built here or from its source
+distribution.
 
 ## Regenerating other upstream code
 

@@ -17,8 +17,6 @@ jobs:
           pip install -r requirements-sdist.txt
       - name: install nuget packages
         run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml -noTestWinRT
-      - name: generate C++/WinRT headers
-        run: python ./scripts/generate-cppwinrt.py
       - name: Build sdists
         run: python scripts/build-sdist.py
       - name: Upload wheels
@@ -26,6 +24,33 @@ jobs:
         with:
           name: sdist_${{ github.run_id }}
           path: wheelhouse/
+  # A projection package is data and winrt-table is pure Python, so each is one
+  # py3-none-any wheel rather than one per interpreter and architecture.
+  pure:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-sdist.txt
+      # hatchling finds the hook that compiles the tables through the entry
+      # point in winrt-table's metadata, so it has to be installed rather than
+      # merely on the path
+      - name: install winrt-table
+        run: pip install ./table
+      - name: Build the pure wheels
+        run: python scripts/build-bdist.py --pure
+      - name: Upload wheels
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: pure_${{ github.run_id }}
+          path: wheelhouse/
+  # winrt-runtime and the eight interop modules, which are what is left of the
+  # 15-build matrix now that nothing else compiles.
   bdist:
     runs-on: windows-latest
     strategy:
@@ -48,21 +73,19 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: install nuget packages
         run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml -noTestWinRT
-      - name: generate C++/WinRT headers
-        run: python ./scripts/generate-cppwinrt.py
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements-bdist.txt
       - name: Build bdist wheels
-        run: python scripts/build-bdist.py --only ${{ matrix.py }}-${{ matrix.arch }}
+        run: python scripts/build-bdist.py --compiled --only ${{ matrix.py }}-${{ matrix.arch }}
       - name: Upload wheels
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: bdist_${{ matrix.py }}-${{ matrix.arch }}_${{ github.run_id }}
           path: wheelhouse/
   publish:
-    needs: [sdist, bdist]
+    needs: [sdist, pure, bdist]
     # only publish tagged releases, not manually triggered compile tests
     if: startsWith(github.ref, 'refs/tags/wheels/')
     runs-on: ubuntu-latest
@@ -70,7 +93,7 @@ jobs:
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           path: dist
-          pattern: "[bs]dist_*"
+          pattern: "*_${{ github.run_id }}"
           merge-multiple: true
       - uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
         with:

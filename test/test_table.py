@@ -4,7 +4,7 @@ The projection table, written by the generator and read by the runtime.
 A projection package ships one ``_table.pywinrt`` per WinRT namespace and no
 compiled code, and the ends of that file are in three languages and three
 processes: ``PyWinRT/TableWriter.cs`` writes the text a package carries,
-``winrt/table.py`` compiles it when the package is built, and
+``winrt.table`` compiles it when the package is built, and
 ``runtime/src/table.cpp`` reads the result. Nothing else can tell whether they
 agree about where a field is, so this writes nothing and reads everything: the
 tables that the build installed, through the runtime's own reader.

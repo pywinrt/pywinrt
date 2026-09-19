@@ -96,15 +96,15 @@ static class FileWriters
         {
             w.Write("\"pywinrt\": ");
             w.WriteBlock(() => w.WriteLine($"\"version\": \"{PyWinRT.VersionString}\""), ",");
-            // The ABI the generated code was written against, so that packaging
-            // tooling can read the runtime requirement without compiling
-            // anything. The same pair is asserted in the generated headers.
-            w.Write("\"runtime_abi\": ");
+            // The table format the namespace's table is written to, so that
+            // packaging tooling can read the runtime requirement without
+            // reading the table. The same pair heads the table itself.
+            w.Write("\"table_format\": ");
             w.WriteBlock(
                 () =>
                 {
-                    w.WriteLine($"\"major\": {PyWinRT.RequiredAbiMajor},");
-                    w.WriteLine($"\"minor\": {PyWinRT.RequiredAbiMinor}");
+                    w.WriteLine($"\"major\": {TableWriter.FormatMajor},");
+                    w.WriteLine($"\"minor\": {TableWriter.FormatMinor}");
                 },
                 ","
             );
