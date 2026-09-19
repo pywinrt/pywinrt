@@ -34,7 +34,6 @@ __CRT_UUID_DECL(
 #endif
 
 #include <pywinrt/base.h>
-#include "py.Windows.Graphics.Capture.h"
 #include <winrt/Windows.Graphics.Capture.h>
 
 // https://docs.microsoft.com/en-us/windows/win32/api/windows.graphics.capture.interop/
@@ -68,7 +67,8 @@ namespace py::cpp::Windows::Graphics::Capture::Interop
                 winrt::throw_hresult(result);
             }
 
-            return py::convert(item);
+            return py::wrap_object(
+                item, "winrt.windows.graphics.capture.GraphicsCaptureItem");
         }
         catch (...)
         {
@@ -105,7 +105,8 @@ namespace py::cpp::Windows::Graphics::Capture::Interop
                 winrt::throw_hresult(result);
             }
 
-            return py::convert(item);
+            return py::wrap_object(
+                item, "winrt.windows.graphics.capture.GraphicsCaptureItem");
         }
         catch (...)
         {

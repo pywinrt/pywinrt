@@ -54,9 +54,7 @@ __CRT_UUID_DECL(
 #endif
 #endif
 
-#include <winrt/Windows.Graphics.DirectX.Direct3D11.h>
 #include <pywinrt/base.h>
-#include "py.Windows.Graphics.DirectX.Direct3D11.h"
 
 // https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/
 
@@ -79,9 +77,9 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11::Interop
             winrt::check_hresult(
                 CreateDirect3D11DeviceFromDXGIDevice(dxgi_device, d3d_device.put()));
 
-            return py::convert(
-                d3d_device.as<
-                    winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>());
+            return py::wrap_object(
+                d3d_device.as<winrt::Windows::Foundation::IInspectable>(),
+                "winrt.windows.graphics.directx.direct3d11.IDirect3DDevice");
         }
         catch (...)
         {
@@ -118,9 +116,9 @@ Returns:
             winrt::check_hresult(CreateDirect3D11SurfaceFromDXGISurface(
                 dxgi_surface, d3d_surface.put()));
 
-            return py::convert(
-                d3d_surface.as<
-                    winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>());
+            return py::wrap_object(
+                d3d_surface.as<winrt::Windows::Foundation::IInspectable>(),
+                "winrt.windows.graphics.directx.direct3d11.IDirect3DSurface");
         }
         catch (...)
         {

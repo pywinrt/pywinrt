@@ -76,19 +76,14 @@ include src/table.h
 include src/types.h
 """
 
-SDK_PACKAGE_TEMPLATE = """\
-[tool.setuptools.package-data]
-"*" = ["*.h"]
-"""
-
 BINARY_PACKAGE_TEMPLATE = """\
 [tool.setuptools.package-data]
 "*" = ["*.pyi", "py.typed"{component_package_data}]
 
 [tool.cibuildwheel]
-# use local winrt-sdk and winrt-runtime build dependencies
-environment = {{ PYTHONPATH="{relative}/winrt-sdk/src;{runtime_relative}/python{extra_python_path}" }}
-# don't install winrt-sdk or winrt-runtime from PyPI
+# use the local winrt-runtime build dependency
+environment = {{ PYTHONPATH="{runtime_relative}/python" }}
+# don't install winrt-runtime from PyPI
 build-frontend = {{ name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }}
 before-build = "uv pip install setuptools"
 # don't build for PyPy or for the free-threaded interpreters, which the
@@ -112,15 +107,27 @@ FIND_SRC = """
 where = ["src"]
 """
 
-SETUP_PY_TEMPLATE = """\
-# WARNING: Please don't edit this file. It was automatically generated.
+SETUP_PY_TEMPLATE = """# WARNING: Please don't edit this file. It was automatically generated.
+
+import os
+import pathlib
 
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
 from winrt._include import get_include
-from winrt_sdk import get_include_dirs{extra_imports}
 
+# The C++/WinRT headers that scripts/generate-cppwinrt.py writes. They are
+# build output rather than a distribution - the only things that compile
+# against them are winrt-runtime and the interop modules - so the build is
+# told where they are rather than finding them in site-packages.
+try:
+    CPPWINRT_PATH = pathlib.Path(os.environ["CPPWINRT_PATH"]).resolve()
+except KeyError:
+    raise RuntimeError("Please set the CPPWINRT_PATH environment variable")
+
+CPPWINRT_INCLUDE_DIRS = [os.fspath(CPPWINRT_PATH / "windows-sdk")]
 {extra_init}
+
 class build_ext_ex(build_ext):
     def build_extension(self, ext):
         # nothing in the projection uses dynamic_cast or typeid, so disabling
@@ -148,7 +155,7 @@ setup(
         Extension(
             "{root_package}.{ext_module}",
             sources={sources},
-            include_dirs=[get_include()] + get_include_dirs(){extra_include_dirs},
+            include_dirs=[get_include()] + CPPWINRT_INCLUDE_DIRS{extra_include_dirs},
             libraries=["windowsapp"{extra_libraries}],
         ){extra_extension}
     ],
@@ -159,20 +166,24 @@ EXTRA_EXT_MODULES = """,
         Extension(
             "{root_package}.{ext_module}",
             sources={sources},
-            include_dirs=[get_include()] + get_include_dirs(){extra_include_dirs},
+            include_dirs=[get_include()] + CPPWINRT_INCLUDE_DIRS,
             libraries=["windowsapp"],
         ),
 """
 
 APP_SDK_INIT = """
-try:
-    import os, pathlib
+CPPWINRT_INCLUDE_DIRS.append(os.fspath(CPPWINRT_PATH / "windows-app-sdk"))
 
+try:
     WINDOWS_APP_SDK_PATH = pathlib.Path(os.environ["WINDOWS_APP_SDK_PATH"]).resolve()
     print(f"Using Windows App SDK from {WINDOWS_APP_SDK_PATH}")
 except KeyError:
-    raise RuntimeError("Please set WINDOWS_APP_SDK_PATH environment variable")
+    raise RuntimeError("Please set the WINDOWS_APP_SDK_PATH environment variable")
 """
+
+SETUP_PY_APP_SDK_INCLUDE_DIRS = (
+    '\n                + [os.fspath(WINDOWS_APP_SDK_PATH / "include")]'
+)
 
 APP_SDK_EXTRA_BUILD = """
         target = self.plat_name.replace("32", "-x86").replace("amd", "x").replace("win", "win10")
@@ -200,36 +211,6 @@ for more information.
 
 """
 
-SDK_README_TEMPLATE = """\
-This package provides PyWinRT header files for {sdk_name}.
-
-This package is a build time dependency, not a runtime dependency.
-
-Example use in a `pyproject.toml` file:
-
-```toml
-[build-system]
-requires = ["setuptools", "winrt-runtime", "winrt-sdk"{extra_requires}]
-build-backend = "setuptools.build_meta"
-```
-
-Then in your `setup.py`:
-
-```python
-from setuptools import setup
-from winrt._include import get_include
-from winrt_sdk import get_include_dirs{extra_imports}
-
-setup(
-    ...
-    include_dirs=[get_include()] + get_include_dirs(){extra_include_dirs}
-)
-```
-
-For the runtime package, use `winrt-runtime` and the various namespace packages
-instead.
-"""
-
 PROJECTION_PATH = (Path(__file__).parent.parent / "projection").resolve()
 RUNTIME_PATH = (Path(__file__).parent.parent / "runtime").resolve()
 INTEROP_PATH = (Path(__file__).parent.parent / "interop").resolve()
@@ -237,10 +218,10 @@ INTEROP_PATH = (Path(__file__).parent.parent / "interop").resolve()
 # The interop packages are written by hand, so there is no deps.json to derive
 # their requirements from. Every one of them needs winrt-runtime. The ones that
 # hand a projected type back to Python need that namespace's package as well,
-# because py::convert() resolves the Python type by importing the module that
-# owns it (see get_python_type() and get_struct_from_tuple_func() in
-# runtime/src/runtime.cpp). Interop that only deals in IInspectable needs
-# nothing extra, since winrt.system.Object lives in the runtime.
+# because they name the type and the runtime resolves the name by importing the
+# module that owns it (see py::get_python_type() in runtime/src/runtime.cpp).
+# Interop that only deals in IInspectable needs nothing extra, since
+# winrt.system.Object lives in the runtime.
 INTEROP_DEPENDENCIES: dict[str, list[str]] = {
     "winrt-Windows.Graphics.Capture.Interop": [
         # returns GraphicsCaptureItem
@@ -317,10 +298,6 @@ def avoid_keyword(name: str) -> str:
     return name
 
 
-def is_sdk_package(name: str) -> bool:
-    return name in ["winrt-sdk", "winrt-Microsoft.UI.Xaml", "winrt-WindowsAppSDK"]
-
-
 def is_app_sdk_interop_package(name: str) -> bool:
     return name in [
         "winui3-Microsoft.UI.Interop",
@@ -338,16 +315,8 @@ def is_webview2_package(name: str) -> bool:
     return name.startswith("webview2-Microsoft.Web.WebView2.")
 
 
-def is_microsoft_ui_xaml_package(name: str) -> bool:
-    return name.startswith("winui2-Microsoft.UI.Xaml")
-
-
 def is_windows_app_package(name: str) -> bool:
     return name.startswith("winui3-Microsoft.") or is_app_sdk_interop_package(name)
-
-
-def is_component_package(name: str) -> bool:
-    return name in ["test-winrt-TestComponent"] or is_webview2_package(name)
 
 
 def is_dispatcher_queue_package(name: str) -> bool:
@@ -388,7 +357,6 @@ def write_project_files(
     # winrt-runtime is the one package whose directory name is not its
     # distribution name, since it lives outside of projection/
     package_name = package_name or package_path.name
-    relative = os.path.relpath(PROJECTION_PATH, package_path).replace(os.sep, "/")
     runtime_relative = os.path.relpath(RUNTIME_PATH, package_path).replace(os.sep, "/")
     has_requirements = (package_path / "requirements.txt").exists()
     has_all_requirements = (package_path / "all-requirements.txt").exists()
@@ -398,27 +366,10 @@ def write_project_files(
         f.write(
             PYPROJECT_TOML_TEMPLATE.format(
                 extra_requires=(
-                    ""
-                    if is_sdk_package(package_name) or package_name == "winrt-runtime"
-                    else ', "winrt-runtime"'
-                )
-                + ("" if is_sdk_package(package_name) else ', "winrt-sdk"')
-                + (
-                    ', "winrt-Microsoft.UI.Xaml"'
-                    if is_microsoft_ui_xaml_package(package_name)
-                    else ""
-                )
-                + (
-                    ', "winrt-WindowsAppSDK"'
-                    if is_windows_app_package(package_name)
-                    else ""
+                    "" if package_name == "winrt-runtime" else ', "winrt-runtime"'
                 ),
                 package_name=package_name,
-                description=(
-                    "Windows Runtime SDK for Python header files"
-                    if is_sdk_package(package_name)
-                    else "Python projection of Windows Runtime (WinRT) APIs"
-                ),
+                description="Python projection of Windows Runtime (WinRT) APIs",
                 module_name=module_name,
                 extra_dynamic=(', "dependencies"' if has_requirements else "")
                 + (', "optional-dependencies"' if has_all_requirements else ""),
@@ -434,132 +385,78 @@ def write_project_files(
             )
         )
 
-        if is_sdk_package(package_name):
-            f.write(SDK_PACKAGE_TEMPLATE)
-        else:
-            f.write(
-                BINARY_PACKAGE_TEMPLATE.format(
-                    component_package_data=(
-                        ', "*.h"'
-                        if is_component_package(package_name)
-                        or package_name == "winrt-runtime"
-                        else ""
-                    ),
-                    relative=relative,
-                    runtime_relative=runtime_relative,
-                    extra_python_path=(
-                        f";{relative}/winrt-Microsoft.UI.Xaml/src"
-                        if is_microsoft_ui_xaml_package(package_name)
+        f.write(
+            BINARY_PACKAGE_TEMPLATE.format(
+                component_package_data=(
+                    ', "*.h"' if package_name == "winrt-runtime" else ""
+                ),
+                runtime_relative=runtime_relative,
+                extra_cibuildwheel_windows=(
+                    '\nrepair-wheel-command = "python scripts/add_bootstrap_dll.py {wheel} {dest_dir}"'
+                    if is_app_sdk_bootstrap_package(package_name)
+                    else (
+                        '\nrepair-wheel-command = "python scripts/add_webview2_dll.py {wheel} {dest_dir}"'
+                        if is_webview2_package(package_name)
                         else ""
                     )
-                    + (
-                        f";{relative}/winrt-WindowsAppSDK/src"
-                        if is_windows_app_package(package_name)
-                        else ""
-                    ),
-                    extra_cibuildwheel_windows=(
-                        '\nrepair-wheel-command = "python scripts/add_bootstrap_dll.py {wheel} {dest_dir}"'
-                        if is_app_sdk_bootstrap_package(package_name)
-                        else (
-                            '\nrepair-wheel-command = "python scripts/add_webview2_dll.py {wheel} {dest_dir}"'
-                            if is_webview2_package(package_name)
-                            else ""
-                        )
-                    ),
-                )
+                ),
             )
+        )
 
     if package_name == "winrt-runtime":
         with open(package_path / "MANIFEST.in", "w", newline="\n") as f:
             f.write(RUNTIME_MANIFEST_IN)
 
-    if not is_sdk_package(package_name):
-        with open(package_path / "setup.py", "w", newline="\n") as f:
-            f.write(
-                SETUP_PY_TEMPLATE.format(
-                    extra_init=(
-                        APP_SDK_INIT if is_app_sdk_interop_package(package_name) else ""
-                    ),
-                    root_package=root_package,
-                    ext_module=ext_module_name,
-                    sources=format_sources(sources),
-                    extra_imports=(
-                        "\nfrom winrt_microsoft_ui_xaml import get_include_dirs as get_winui2_include_dirs"
-                        if is_microsoft_ui_xaml_package(package_name)
-                        else ""
-                    )
-                    + (
-                        "\nfrom winrt_windows_app_sdk import get_include_dirs as get_app_sdk_include_dirs"
-                        if is_windows_app_package(package_name)
-                        else ""
-                    ),
-                    extra_include_dirs=(
-                        " + get_winui2_include_dirs()"
-                        if is_microsoft_ui_xaml_package(package_name)
-                        else ""
-                    )
-                    + (
-                        "+ get_app_sdk_include_dirs()"
-                        if is_windows_app_package(package_name)
-                        else ""
-                    )
-                    + (
-                        '+ [os.fspath(WINDOWS_APP_SDK_PATH / "include")]'
-                        if is_app_sdk_interop_package(package_name)
-                        else ""
-                    )
-                    + (
-                        f' + ["./{root_package}/cppwinrt", "./{root_package}/pywinrt"]'
-                        if is_component_package(package_name)
-                        else ""
-                    ),
-                    extra_build=(
-                        APP_SDK_EXTRA_BUILD
-                        if is_app_sdk_interop_package(package_name)
-                        else ""
-                    ),
-                    extra_libraries=(
-                        ', "Microsoft.WindowsAppRuntime.Bootstrap"'
-                        if is_app_sdk_bootstrap_package(package_name)
-                        else ""
-                    )
-                    + (
-                        ', "CoreMessaging"'
-                        if is_dispatcher_queue_package(package_name)
-                        else ""
-                    )
-                    + (', "D3D11"' if is_direct3d11_package(package_name) else ""),
-                    extra_extension=(
-                        EXTRA_EXT_MODULES.format(
-                            root_package=root_package,
-                            ext_module=f"{ext_module_name}_2",
-                            sources=format_sources([second_ext_source_file]),
-                            extra_include_dirs=(
-                                " + get_winui2_include_dirs()"
-                                if is_microsoft_ui_xaml_package(package_name)
-                                else ""
-                            )
-                            + (
-                                " + get_app_sdk_include_dirs()"
-                                if is_windows_app_package(package_name)
-                                else ""
-                            ),
-                        )
-                        if second_ext_source_file
-                        and (package_path / second_ext_source_file).exists()
-                        else ""
-                    ),
+    with open(package_path / "setup.py", "w", newline="\n") as f:
+        f.write(
+            SETUP_PY_TEMPLATE.format(
+                extra_init=(
+                    APP_SDK_INIT if is_app_sdk_interop_package(package_name) else ""
+                ),
+                root_package=root_package,
+                ext_module=ext_module_name,
+                sources=format_sources(sources),
+                extra_include_dirs=(
+                    SETUP_PY_APP_SDK_INCLUDE_DIRS
+                    if is_app_sdk_interop_package(package_name)
+                    else ""
+                ),
+                extra_build=(
+                    APP_SDK_EXTRA_BUILD
+                    if is_app_sdk_interop_package(package_name)
+                    else ""
+                ),
+                extra_libraries=(
+                    ', "Microsoft.WindowsAppRuntime.Bootstrap"'
+                    if is_app_sdk_bootstrap_package(package_name)
+                    else ""
                 )
+                + (
+                    ', "CoreMessaging"'
+                    if is_dispatcher_queue_package(package_name)
+                    else ""
+                )
+                + (', "D3D11"' if is_direct3d11_package(package_name) else ""),
+                extra_extension=(
+                    EXTRA_EXT_MODULES.format(
+                        root_package=root_package,
+                        ext_module=f"{ext_module_name}_2",
+                        sources=format_sources([second_ext_source_file]),
+                    )
+                    if second_ext_source_file
+                    and (package_path / second_ext_source_file).exists()
+                    else ""
+                ),
             )
+        )
 
     if package_name != "winrt-runtime":
-        if not is_sdk_package(package_name):
-            with open(
-                package_path / Path(*module_name.split(".")) / "py.typed",
-                "w",
-                newline="\n",
-            ) as f:
-                pass
+        with open(
+            package_path / Path(*module_name.split(".")) / "py.typed",
+            "w",
+            newline="\n",
+        ) as f:
+            pass
 
         with open(package_path / "README.md", "w", newline="\n") as f:
             f.write(
@@ -568,51 +465,17 @@ def write_project_files(
                 )
             )
 
-            if is_sdk_package(package_name):
-                f.write(
-                    SDK_README_TEMPLATE.format(
-                        sdk_name=(
-                            "the Windows SDK"
-                            if package_name == "winrt-sdk"
-                            else package_name.removeprefix("winrt-")
-                        ),
-                        extra_requires=(
-                            "" if package_name == "winrt-sdk" else f', "{package_name}"'
-                        ),
-                        extra_imports=(
-                            "\nfrom winrt_microsoft_ui_xaml import get_include_dirs as get_winui2_include_dirs"
-                            if is_microsoft_ui_xaml_package(package_name)
-                            else ""
-                        )
-                        + (
-                            "\nfrom winrt_windows_app_sdk import get_include_dirs as get_app_sdk_include_dirs"
-                            if is_windows_app_package(package_name)
-                            else ""
-                        ),
-                        extra_include_dirs=(
-                            " + get_winui2_include_dirs()"
-                            if is_microsoft_ui_xaml_package(package_name)
-                            else ""
-                        )
-                        + (
-                            "+ get_app_sdk_include_dirs()"
-                            if is_windows_app_package(package_name)
-                            else ""
-                        ),
-                    )
+            f.write(
+                BINARY_README_TEMPLATE.format(
+                    important=(
+                        WINUI3_README_IMPORTANT
+                        if is_windows_app_package(package_name)
+                        else ""
+                    ),
+                    namespace=package_name.removeprefix("winrt-"),
+                    module_name=module_name,
                 )
-            else:
-                f.write(
-                    BINARY_README_TEMPLATE.format(
-                        important=(
-                            WINUI3_README_IMPORTANT
-                            if is_windows_app_package(package_name)
-                            else ""
-                        ),
-                        namespace=package_name.removeprefix("winrt-"),
-                        module_name=module_name,
-                    )
-                )
+            )
 
 
 # create requirements.txt for projected projects
@@ -705,12 +568,7 @@ for package_path in chain(
     (PROJECTION_PATH / "winui2").glob("winui2-*"),
     (PROJECTION_PATH / "winui3").glob("winui3-*"),
     (PROJECTION_PATH / "webview2").glob("webview2-*"),
-    [
-        PROJECTION_PATH / "winrt-sdk",
-        PROJECTION_PATH / "winrt-Microsoft.UI.Xaml",
-        PROJECTION_PATH / "winrt-WindowsAppSDK",
-        PROJECTION_PATH / "test-winrt" / "test-winrt-TestComponent",
-    ],
+    [PROJECTION_PATH / "test-winrt" / "test-winrt-TestComponent"],
 ):
     root_package = package_path.name[: package_path.name.rindex("-")]
     namespace = package_path.name.removeprefix(f"{root_package}-")
@@ -732,11 +590,6 @@ for package_path in chain(
 # create version.txt for all projects
 
 for path in itertools.chain(
-    [
-        PROJECTION_PATH / "winrt-sdk",
-        PROJECTION_PATH / "winrt-Microsoft.UI.Xaml",
-        PROJECTION_PATH / "winrt-WindowsAppSDK",
-    ],
     (PROJECTION_PATH / "winrt").glob("winrt-*"),
     (PROJECTION_PATH / "test-winrt").glob("test-winrt-*"),
     (PROJECTION_PATH / "webview2").glob("webview2-*"),
@@ -752,19 +605,3 @@ for path in itertools.chain(
         )
     except shutil.SameFileError:
         pass
-
-# create dependencies for non-generated packages
-
-with open(PROJECTION_PATH / "winrt-sdk" / "version.txt") as f:
-    version = f.read().strip()
-
-for package in ["winrt-Microsoft.UI.Xaml", "winrt-WindowsAppSDK"]:
-    with open(PROJECTION_PATH / package / "requirements.txt", "w", newline="\n") as f:
-        f.writelines(
-            [
-                "# This file is generated by scripts/generate-pyproject.py\n",
-                "\n",
-                f"winrt-sdk~={version}.0\n",
-                f"webview2-Microsoft.Web.WebView2.Core~={version}.0\n",
-            ]
-        )

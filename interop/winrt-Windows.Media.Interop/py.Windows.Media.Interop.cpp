@@ -1,7 +1,6 @@
 #include <systemmediatransportcontrolsinterop.h>
 
 #include <pywinrt/base.h>
-#include "py.Windows.Media.h"
 #include <winrt/Windows.Media.h>
 
 // https://learn.microsoft.com/en-us/windows/win32/api/systemmediatransportcontrolsinterop/
@@ -28,7 +27,8 @@ namespace py::cpp::Windows::Media::Interop
                 winrt::guid_of<winrt::Windows::Media::SystemMediaTransportControls>(),
                 winrt::put_abi(item)));
 
-            return py::convert(item);
+            return py::wrap_object(
+                item, "winrt.windows.media.SystemMediaTransportControls");
         }
         catch (...)
         {

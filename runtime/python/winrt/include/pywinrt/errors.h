@@ -216,4 +216,25 @@ namespace py
     {
         throw_unraisable(winrt::hresult{report_unraisable()});
     }
+
+    /**
+     * Throws if one of the Python collection entries in <pywinrt/abi.h>
+     * failed.
+     *
+     * @throws winrt::hresult_error
+     */
+    inline void check_python_result(int32_t hr)
+    {
+        if (hr < 0)
+        {
+            if (hr == unraisable_python_exception)
+            {
+                // The runtime has already reported it, so the only thing left
+                // to do with it is to name it.
+                throw_unraisable(winrt::hresult{hr});
+            }
+
+            winrt::throw_hresult(hr);
+        }
+    }
 } // namespace py

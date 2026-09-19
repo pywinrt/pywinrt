@@ -10,6 +10,10 @@ on:
       - next
     paths:
       - .github/workflows/test.yaml
+      - .config/_tools.json
+      - patches/**
+      - scripts/fetch-tools.ps1
+      - scripts/generate-cppwinrt.py
       - projection/**
       - '!projection/**/*.md'
       - '!projection/**/*.toml'
@@ -32,6 +36,10 @@ on:
   pull_request:
     paths:
       - .github/workflows/test.yaml
+      - .config/_tools.json
+      - patches/**
+      - scripts/fetch-tools.ps1
+      - scripts/generate-cppwinrt.py
       - projection/**
       - '!projection/**/*.md'
       - '!projection/**/*.toml'
@@ -81,7 +89,9 @@ jobs:
           architecture: ${{ matrix.architecture }}
       - run: python -m pip install -r requirements.txt
       - name: install nuget packages
-        run: ./scripts/fetch-tools.ps1 -noCppWinRT -noWindowsSDK -noMicrosoftUiXaml
+        run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml
+      - name: generate C++/WinRT headers
+        run: python ./scripts/generate-cppwinrt.py
       - name: configure
         run: cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -A ${{ matrix.vs-arch }}
       - name: build
@@ -118,7 +128,12 @@ jobs:
             python-typing_extensions:p
       - name: install nuget packages
         shell: pwsh
-        run: ./scripts/fetch-tools.ps1 -noCppWinRT -noWindowsSDK -noMicrosoftUiXaml
+        run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml
+      # in pwsh, because the script drives cppwinrt.exe and git, which the
+      # MSYS2 environment does not necessarily have
+      - name: generate C++/WinRT headers
+        shell: pwsh
+        run: python ./scripts/generate-cppwinrt.py
       - name: configure
         run: ${MINGW_PREFIX}/bin/cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -DPython3_ROOT_DIR=${MINGW_PREFIX}
       - name: build

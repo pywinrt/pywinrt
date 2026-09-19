@@ -418,11 +418,12 @@ namespace py
     //
     // A Python list or dict passed to a WinRT method that takes an IVector<T>
     // or an IMap<K, V> is wrapped rather than copied, so WinRT calls back into
-    // Python for every element operation it makes. The implementations of
-    // those callbacks are in <pywinrt/collections.h>, and everything in them
-    // that does not name T - the Python C API call, the error policy, the
-    // GetMany() loops - is one of the entries below, so that only the
-    // per-element conversion is left in the calling module.
+    // Python for every element operation it makes. The COM object that WinRT
+    // sees is assembled by the runtime from the table's record for the
+    // parameterized instance; everything in it that is about the Python object
+    // rather than about T - the Python C API call, the error policy, the
+    // GetMany() loops - is one of the entries below, which is also what a
+    // module that implements a collection of its own calls.
     //
     // All of them:
     //

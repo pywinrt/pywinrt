@@ -1,5 +1,4 @@
 #include <pywinrt/base.h>
-#include <py.Windows.System.h>
 
 #include <winrt/base.h>
 #include <winrt/Windows.System.h>
@@ -44,7 +43,8 @@ namespace py::cpp::Windows::System::Interop
                 reinterpret_cast<abi::IDispatcherQueueController**>(
                     winrt::put_abi(controller))));
 
-            return convert(controller);
+            return wrap_object(
+                controller, "winrt.windows.system.DispatcherQueueController");
         }
         catch (...)
         {

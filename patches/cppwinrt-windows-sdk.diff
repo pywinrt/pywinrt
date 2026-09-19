@@ -1,7 +1,7 @@
-diff --git a/projection/winrt-sdk/src/winrt_sdk/cppwinrt/winrt/base.h b/projection/winrt-sdk/src/winrt_sdk/cppwinrt/winrt/base.h
+diff --git a/winrt/base.h b/winrt/base.h
 index f785012b8..fe0b1208a 100644
---- a/projection/winrt-sdk/src/winrt_sdk/cppwinrt/winrt/base.h
-+++ b/projection/winrt-sdk/src/winrt_sdk/cppwinrt/winrt/base.h
+--- a/winrt/base.h
++++ b/winrt/base.h
 @@ -7583,20 +7583,48 @@ namespace winrt::impl
                  {
                      if (is_weak_ref(count_or_pointer))
@@ -87,10 +87,10 @@ index f785012b8..fe0b1208a 100644
          using is_agile = std::negation<std::disjunction<std::is_same<non_agile, I>...>>;
          using is_inspectable = std::disjunction<std::is_base_of<Windows::Foundation::IInspectable, I>...>;
          using is_weak_ref_source = std::negation<std::disjunction<std::is_same<no_weak_ref, I>...>>;
-diff --git a/projection/winrt-sdk/src/winrt_sdk/cppwinrt/winrt/base.h b/projection/winrt-sdk/src/winrt_sdk/cppwinrt/winrt/base.h
+diff --git a/winrt/base.h b/winrt/base.h
 index fe0b1208a..c29b63826 100644
---- a/projection/winrt-sdk/src/winrt_sdk/cppwinrt/winrt/base.h
-+++ b/projection/winrt-sdk/src/winrt_sdk/cppwinrt/winrt/base.h
+--- a/winrt/base.h
++++ b/winrt/base.h
 @@ -7533,6 +7533,11 @@ namespace winrt::impl
              return error_no_interface;
          }

@@ -47,8 +47,6 @@ __CRT_UUID_DECL(
 #include <Python.h>
 
 #include <pywinrt/base.h>
-#include <py.Windows.UI.Composition.h>
-#include <py.Windows.UI.Composition.Desktop.h>
 
 // https://learn.microsoft.com/en-us/windows/win32/api/windows.ui.composition.interop
 
@@ -82,8 +80,15 @@ namespace py::cpp::Windows::UI::Composition::Interop
                 return nullptr;
             }
 
-            auto compositor
-                = convert_to<winrt::Windows::UI::Composition::Compositor>(arg0);
+            winrt::Windows::UI::Composition::Compositor compositor{nullptr};
+            if (!unwrap_object(
+                    arg0,
+                    winrt::guid_of<winrt::Windows::UI::Composition::Compositor>(),
+                    winrt::put_abi(compositor)))
+            {
+                return nullptr;
+            }
+
             auto interop = compositor.as<abi::ICompositorDesktopInterop>();
             auto hwnd_target = reinterpret_cast<HWND>(arg1);
             bool is_topmost = arg2;
@@ -95,7 +100,9 @@ namespace py::cpp::Windows::UI::Composition::Interop
                 is_topmost,
                 reinterpret_cast<abi::IDesktopWindowTarget**>(winrt::put_abi(target))));
 
-            return convert(target);
+            return wrap_object(
+                target,
+                "winrt.windows.ui.composition.desktop.DesktopWindowTarget");
         }
         catch (...)
         {

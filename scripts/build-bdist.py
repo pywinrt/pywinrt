@@ -32,6 +32,7 @@ WINDOWS_APP_SDK_PATH = (
 os.environ["WEBVIEW2_PATH"] = os.fspath(WEBVIEW2_PATH)
 os.environ["MICROSOFT_UI_XAML_PATH"] = os.fspath(MICROSOFT_UI_XAML_PATH)
 os.environ["WINDOWS_APP_SDK_PATH"] = os.fspath(WINDOWS_APP_SDK_PATH)
+os.environ["CPPWINRT_PATH"] = os.fspath(PROJECT_DIR / "_cppwinrt")
 
 for package_path in chain(
     [PROJECT_DIR / "runtime"],
