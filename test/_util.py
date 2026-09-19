@@ -5,30 +5,9 @@ Helper functions shared by tests.
 import asyncio
 import contextlib
 import sys
-import unittest
 from types import TracebackType
 from typing import Any, Protocol
 from collections.abc import Callable, Generator
-
-
-def skip_without_projection() -> None:
-    """
-    Skips the calling test module because it needs more of the interpreter than
-    there is.
-
-    A projection package is a table that ``winrt-runtime`` interprets, and the
-    interpreter is being built a piece at a time: it makes the types, calls
-    their members, closes their parameterized interfaces, passes arrays, shows
-    a buffer, wraps a Python list or dict as a collection, answers calls that
-    come back the other way and composes a Python subclass into a composable
-    class. The one thing left is the members of the ``Windows.Foundation.Numerics``
-    structs - their constants, operators, factory functions and methods - which
-    are not in any winmd: C++/WinRT declares them in ``windowsnumerics.impl.h``
-    and the generated C++ used to call them. Calling this before a module's
-    imports keeps the suite reporting a skip rather than a wall of errors.
-    Delete the call from ``test_numerics.py`` once the runtime has them.
-    """
-    raise unittest.SkipTest("winrt-runtime does not interpret this part of a table yet")
 
 
 def async_test(test: Callable[..., Any]) -> Callable[..., None]:

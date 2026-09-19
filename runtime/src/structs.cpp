@@ -22,6 +22,8 @@
 #include "arrays.h"
 #include "generics.h"
 #include "interp.h"
+#include "numerics-statics.h"
+#include "numerics.h"
 #include "objects.h"
 #include "structs.h"
 #include "types.h"
@@ -950,6 +952,17 @@ namespace py::interp
     {
         auto const layout = proj.table->get_struct_layout(record);
 
+        entry.numerics_kind = numerics::classify(entry.winrt_name);
+
+        if (!numerics::check_layout(entry.numerics_kind, layout.size, layout.align))
+        {
+            PyErr_Format(
+                PyExc_ImportError,
+                "'%s' is not laid out the way C++/WinRT lays it out",
+                entry.tp_name.c_str());
+            return false;
+        }
+
         entry.size = layout.size;
         entry.align = layout.align;
         entry.blob_offset
@@ -1016,31 +1029,62 @@ namespace py::interp
             getsets.push_back(def);
         }
 
-        PyType_Slot slots[]
-            = {{Py_tp_new, reinterpret_cast<void*>(struct_new)},
-               {Py_tp_dealloc,
-                reinterpret_cast<void*>(
-                    entry.owns_resources ? struct_dealloc_release : struct_dealloc)},
-               {Py_tp_repr, reinterpret_cast<void*>(struct_repr)},
-               {Py_tp_richcompare, reinterpret_cast<void*>(struct_richcompare)},
-               {Py_tp_methods, reinterpret_cast<void*>(struct_methods)},
-               {Py_tp_getset, reinterpret_cast<void*>(keep_getsets(proj, getsets))},
-               {}};
+        // A Windows.Foundation.Numerics struct has arithmetic and methods
+        // beyond its fields, so the two arrays every struct type is made with
+        // are the start of its own rather than the whole of them.
+        std::vector<PyMethodDef> methods;
+
+        for (auto* def = struct_methods; def->ml_name; def++)
+        {
+            methods.push_back(*def);
+        }
+
+        numerics::add_methods(entry.numerics_kind, methods);
+        methods.push_back({});
+
+        std::vector<PyType_Slot> slots{
+            {Py_tp_new, reinterpret_cast<void*>(struct_new)},
+            {Py_tp_dealloc,
+             reinterpret_cast<void*>(
+                 entry.owns_resources ? struct_dealloc_release : struct_dealloc)},
+            {Py_tp_repr, reinterpret_cast<void*>(struct_repr)},
+            {Py_tp_richcompare, reinterpret_cast<void*>(struct_richcompare)},
+            {Py_tp_methods, reinterpret_cast<void*>(keep_methods(proj, methods))},
+            {Py_tp_getset, reinterpret_cast<void*>(keep_getsets(proj, getsets))}};
+
+        numerics::add_slots(entry.numerics_kind, slots);
+        slots.push_back({});
 
         PyType_Spec spec{
             entry.tp_name.c_str(),
             static_cast<int>(entry.blob_offset + entry.size),
             0,
             Py_TPFLAGS_DEFAULT,
-            slots};
+            slots.data()};
 
-        pytype_handle type{register_python_type(proj.module, &spec, nullptr, nullptr)};
+        // The constants and the factory functions of a numerics struct are
+        // members of the type rather than of a value, so they sit on a
+        // metaclass the way a class's statics do.
+        pytype_handle statics{};
+
+        if (numerics::has_statics(entry.numerics_kind))
+        {
+            statics.attach(numerics::make_statics(proj, entry, entry.numerics_kind));
+            if (!statics)
+            {
+                return false;
+            }
+        }
+
+        pytype_handle type{
+            register_python_type(proj.module, &spec, nullptr, statics.get())};
         if (!type)
         {
             return false;
         }
 
         entry.py_type = type.detach();
+        entry.statics = statics.detach();
 
         return remember(entry, entry.py_type);
     }

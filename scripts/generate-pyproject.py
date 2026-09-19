@@ -64,6 +64,9 @@ include src/implements.h
 include src/interp.h
 include src/members.h
 include src/module_state.h
+include src/numerics-statics.h
+include src/numerics-values.h
+include src/numerics.h
 include src/objects.h
 include src/protocols.h
 include src/pycollections.h
@@ -547,6 +550,8 @@ write_project_files(
         "src/implements.cpp",
         "src/interp.cpp",
         "src/members.cpp",
+        "src/numerics-statics.cpp",
+        "src/numerics.cpp",
         "src/objects.cpp",
         "src/protocols.cpp",
         "src/pycollections.cpp",

@@ -28,6 +28,11 @@
 #include <unordered_map>
 #include <vector>
 
+namespace py::interp::numerics
+{
+    enum class kind : uint8_t;
+} // namespace py::interp::numerics
+
 namespace py::interp
 {
     struct projection;
@@ -290,6 +295,10 @@ namespace py::interp
         /// so a blittable struct is told apart here instead: it gets the dealloc
         /// that only frees the object.
         bool owns_resources;
+        /// Which of the Windows.Foundation.Numerics structs this is, for the
+        /// arithmetic on them that no metadata describes. numerics.h says what
+        /// that is and where it comes from instead.
+        numerics::kind numerics_kind;
     };
 
     /**
@@ -324,6 +333,9 @@ namespace py::interp
         /// The property and field arrays the types were created with, which
         /// CPython requires to outlive them.
         std::vector<std::unique_ptr<PyGetSetDef[]>> getsets;
+        /// The method arrays of the types that have one, which CPython
+        /// requires to outlive them in the same way.
+        std::vector<std::unique_ptr<PyMethodDef[]>> method_defs;
         /// Interned attribute names, kept alive for the descriptors.
         std::vector<PyObject*> names;
 
