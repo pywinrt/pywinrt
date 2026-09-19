@@ -689,7 +689,7 @@ static class NumberWriterExtensions
             {
                 new("is_identity", "bool", []),
                 new("determinant", "float", []),
-                new("translation", "Vector2", []),
+                new("translation", "Vector3", []),
                 new("invert", "Matrix4x4", [], NoMinGW: true),
                 new("decompose", "tuple[Vector3, Quaternion, Vector3]", [], NoMinGW: true),
                 new(
