@@ -65,11 +65,15 @@ class TestImplements(unittest.TestCase):
             def to_string(self) -> str:
                 return "hello"
 
+        obj = Stringable()
+
         vector = tc.TestRunner.create_stringable_vector()
-        vector.append(Stringable())
+        vector.append(obj)
 
         self.assertEqual(len(vector), 1)
-        self.assertEqual(str(vector[0]), "hello")
+        # Read back out of the collection it is the object that went in, for
+        # the same reason as the round trip below.
+        self.assertIs(vector[0], obj)
 
     def test_round_trip_as_object(self) -> None:
         # Passed where WinRT wants an IInspectable and read back, the same

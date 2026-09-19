@@ -3451,7 +3451,6 @@ class Microsoft.UI.Xaml.Controls.Control composable python_type
     requires Microsoft.UI.Xaml.Controls.IControlOverrides
     factory Microsoft.UI.Xaml.Controls.IControlStatics
     composable Microsoft.UI.Xaml.Controls.IControlFactory
-    overridable Microsoft.UI.Xaml.Controls.IControlProtected
     overridable Microsoft.UI.Xaml.Controls.IControlOverrides
     property vertical_content_alignment
         get get_VerticalContentAlignment slot=38 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IControl shape=4 reverse=302
@@ -13249,8 +13248,6 @@ class Microsoft.UI.Xaml.Controls.Layout composable python_type
     requires Microsoft.UI.Xaml.Controls.ILayoutProtected2
     requires Microsoft.UI.Xaml.Controls.ILayoutOverrides
     composable Microsoft.UI.Xaml.Controls.ILayoutFactory
-    overridable Microsoft.UI.Xaml.Controls.ILayoutProtected
-    overridable Microsoft.UI.Xaml.Controls.ILayoutProtected2
     overridable Microsoft.UI.Xaml.Controls.ILayoutOverrides
     property index_based_layout_orientation
         get get_IndexBasedLayoutOrientation slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ILayout2 shape=4 reverse=22
@@ -25061,7 +25058,6 @@ class Microsoft.UI.Xaml.Controls.VirtualizingPanel composable python_type
     requires Microsoft.UI.Xaml.Controls.IVirtualizingPanelProtected
     requires Microsoft.UI.Xaml.Controls.IVirtualizingPanelOverrides
     composable Microsoft.UI.Xaml.Controls.IVirtualizingPanelFactory
-    overridable Microsoft.UI.Xaml.Controls.IVirtualizingPanelProtected
     overridable Microsoft.UI.Xaml.Controls.IVirtualizingPanelOverrides
     property item_container_generator
         get get_ItemContainerGenerator slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IVirtualizingPanel shape=4 reverse=22

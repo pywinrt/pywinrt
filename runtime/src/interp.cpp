@@ -17,6 +17,7 @@
 #include <pywinrt/base.h>
 
 #include "arrays.h"
+#include "compose.h"
 #include "delegates.h"
 #include "generics.h"
 #include "interp.h"
@@ -968,10 +969,62 @@ namespace py::interp
     }
 
     /**
+     * Queries @p self for the interface that declares @p overload, which a
+     * member reached through anything but the interface the wrapper holds has
+     * to be called on.
+     *
+     * Asking here is what turns a call on an object that does not implement
+     * the interface into a Python exception instead of a call through a null
+     * vtable.
+     *
+     * @returns A pointer the caller owns a reference to.
+     * @throws python_exception if @p self does not implement it.
+     */
+    static void* query_member(
+        member_desc const& member, overload_desc const& overload, void* self)
+    {
+        winrt::com_ptr<::IUnknown> inner;
+
+        if (overload.overridable)
+        {
+            // An object a Python class was composed into answers this member
+            // from Python, so this is what super() reaches through: the object
+            // it was composed over, which is where the implementation the
+            // subclass overrode lives. An object that was not composed has no
+            // inner object and answers for itself.
+            inner.attach(static_cast<::IUnknown*>(composable_inner(self)));
+
+            if (inner)
+            {
+                self = inner.get();
+            }
+        }
+
+        void* iface{};
+
+        if (static_cast<::IUnknown*>(self)->QueryInterface(
+                *static_cast<winrt::guid const*>(overload.iface), &iface)
+            != 0)
+        {
+            throw_member_not_available(
+                member.kind == table::group_kind::property ? member_kind::property
+                                                           : member_kind::method,
+                member.type_name,
+                overload.winrt_name,
+                overload.iface_name,
+                overload.in_count);
+        }
+
+        return iface;
+    }
+
+    /**
      * Calls @p member with @p args, on @p self for an instance member or on the
      * activation factory for a static or a constructor.
      *
      * @param self The ABI pointer the instance wrapper holds, or @c nullptr.
+     * @param compose The object a Python subclass is being composed into, when
+     * @p member is the constructor that does it, and @c nullptr otherwise.
      * @returns A new reference to the result - @c None, one value, or a tuple
      * of the outputs in declaration order - or @c nullptr with a Python error
      * set.
@@ -981,7 +1034,8 @@ namespace py::interp
         overload_desc& overload,
         void* self,
         PyObject* const* args,
-        Py_ssize_t /*nargs*/) noexcept
+        Py_ssize_t /*nargs*/,
+        composing* compose) noexcept
     {
         auto const shape = overload.shape;
 
@@ -1012,27 +1066,8 @@ namespace py::interp
             }
             else if (overload.iface)
             {
-                // The member is declared by an interface the wrapper does not
-                // hold a pointer to. Asking for it here is what turns a call on
-                // an object that does not implement it into a Python exception
-                // instead of a call through a null vtable.
-                void* iface{};
-
-                if (static_cast<::IUnknown*>(self)->QueryInterface(
-                        *static_cast<winrt::guid const*>(overload.iface), &iface)
-                    != 0)
-                {
-                    throw_member_not_available(
-                        member.kind == table::group_kind::property
-                            ? member_kind::property
-                            : member_kind::method,
-                        member.type_name,
-                        overload.winrt_name,
-                        overload.iface_name,
-                        overload.in_count);
-                }
-
-                queried.attach(static_cast<::IUnknown*>(iface));
+                queried.attach(
+                    static_cast<::IUnknown*>(query_member(member, overload, self)));
             }
 
             auto const instance
@@ -1051,7 +1086,11 @@ namespace py::interp
                     {
                         // The outer object a Python subclass is composed into,
                         // which an exact type does not have.
-                        store_widened(frame.args, arg.offset, 0);
+                        store_widened(
+                            frame.args,
+                            arg.offset,
+                            reinterpret_cast<uintptr_t>(
+                                compose ? compose->outer : nullptr));
                         continue;
                     }
 
@@ -1179,7 +1218,13 @@ namespace py::interp
                 {
                     // The non-delegating inner object a composable factory
                     // hands back, which only a Python subclass keeps.
-                    if (auto const inner = load<void*>(frame.out + arg.out_offset))
+                    auto const inner = load<void*>(frame.out + arg.out_offset);
+
+                    if (compose)
+                    {
+                        compose->inner = inner;
+                    }
+                    else if (inner)
                     {
                         static_cast<::IUnknown*>(inner)->Release();
                     }
