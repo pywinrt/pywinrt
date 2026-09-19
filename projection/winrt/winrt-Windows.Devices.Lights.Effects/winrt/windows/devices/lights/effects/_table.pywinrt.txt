@@ -332,6 +332,8 @@ class Windows.Devices.Lights.Effects.LampArrayCustomEffect python_type
 enum Windows.Devices.Lights.Effects.LampArrayEffectCompletionBehavior python_type
     py LampArrayEffectCompletionBehavior
     signature enum(Windows.Devices.Lights.Effects.LampArrayEffectCompletionBehavior;i4)
+    constant CLEAR_STATE 0
+    constant KEEP_STATE 1
 
 class Windows.Devices.Lights.Effects.LampArrayEffectPlaylist activatable python_type iterable sequence
     py LampArrayEffectPlaylist
@@ -405,10 +407,14 @@ class Windows.Devices.Lights.Effects.LampArrayEffectPlaylist activatable python_
 enum Windows.Devices.Lights.Effects.LampArrayEffectStartMode python_type
     py LampArrayEffectStartMode
     signature enum(Windows.Devices.Lights.Effects.LampArrayEffectStartMode;i4)
+    constant SEQUENTIAL 0
+    constant SIMULTANEOUS 1
 
 enum Windows.Devices.Lights.Effects.LampArrayRepetitionMode python_type
     py LampArrayRepetitionMode
     signature enum(Windows.Devices.Lights.Effects.LampArrayRepetitionMode;i4)
+    constant OCCURRENCES 0
+    constant FOREVER 1
 
 class Windows.Devices.Lights.Effects.LampArraySolidEffect python_type
     py LampArraySolidEffect

@@ -94,14 +94,26 @@ class Windows.Devices.Geolocation.Geofencing.GeofenceMonitor python_type
 enum Windows.Devices.Geolocation.Geofencing.GeofenceMonitorStatus python_type
     py GeofenceMonitorStatus
     signature enum(Windows.Devices.Geolocation.Geofencing.GeofenceMonitorStatus;i4)
+    constant READY 0
+    constant INITIALIZING 1
+    constant NO_DATA 2
+    constant DISABLED 3
+    constant NOT_INITIALIZED 4
+    constant NOT_AVAILABLE 5
 
 enum Windows.Devices.Geolocation.Geofencing.GeofenceRemovalReason python_type
     py GeofenceRemovalReason
     signature enum(Windows.Devices.Geolocation.Geofencing.GeofenceRemovalReason;i4)
+    constant USED 0
+    constant EXPIRED 1
 
-enum Windows.Devices.Geolocation.Geofencing.GeofenceState python_type
+enum Windows.Devices.Geolocation.Geofencing.GeofenceState python_type flags_enum
     py GeofenceState
     signature enum(Windows.Devices.Geolocation.Geofencing.GeofenceState;u4)
+    constant NONE 0x0
+    constant ENTERED 0x1
+    constant EXITED 0x2
+    constant REMOVED 0x4
 
 class Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport python_type
     py GeofenceStateChangeReport
@@ -304,9 +316,13 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation
             out uint32 name=index
             out boolean return
 
-enum Windows.Devices.Geolocation.Geofencing.MonitoredGeofenceStates python_type
+enum Windows.Devices.Geolocation.Geofencing.MonitoredGeofenceStates python_type flags_enum
     py MonitoredGeofenceStates
     signature enum(Windows.Devices.Geolocation.Geofencing.MonitoredGeofenceStates;u4)
+    constant NONE 0x0
+    constant ENTERED 0x1
+    constant EXITED 0x2
+    constant REMOVED 0x4
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Geolocation.Geofencing.GeofenceMonitor,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[GeofenceMonitor, Object]

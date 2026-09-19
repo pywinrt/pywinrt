@@ -419,26 +419,74 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing.P
 enum Windows.Graphics.Printing.PrintBinding python_type
     py PrintBinding
     signature enum(Windows.Graphics.Printing.PrintBinding;i4)
+    constant DEFAULT 0
+    constant NOT_AVAILABLE 1
+    constant PRINTER_CUSTOM 2
+    constant NONE 3
+    constant BALE 4
+    constant BIND_BOTTOM 5
+    constant BIND_LEFT 6
+    constant BIND_RIGHT 7
+    constant BIND_TOP 8
+    constant BOOKLET 9
+    constant EDGE_STITCH_BOTTOM 10
+    constant EDGE_STITCH_LEFT 11
+    constant EDGE_STITCH_RIGHT 12
+    constant EDGE_STITCH_TOP 13
+    constant FOLD 14
+    constant JOG_OFFSET 15
+    constant TRIM 16
 
 enum Windows.Graphics.Printing.PrintBordering python_type
     py PrintBordering
     signature enum(Windows.Graphics.Printing.PrintBordering;i4)
+    constant DEFAULT 0
+    constant NOT_AVAILABLE 1
+    constant PRINTER_CUSTOM 2
+    constant BORDERED 3
+    constant BORDERLESS 4
 
 enum Windows.Graphics.Printing.PrintCollation python_type
     py PrintCollation
     signature enum(Windows.Graphics.Printing.PrintCollation;i4)
+    constant DEFAULT 0
+    constant NOT_AVAILABLE 1
+    constant PRINTER_CUSTOM 2
+    constant COLLATED 3
+    constant UNCOLLATED 4
 
 enum Windows.Graphics.Printing.PrintColorMode python_type
     py PrintColorMode
     signature enum(Windows.Graphics.Printing.PrintColorMode;i4)
+    constant DEFAULT 0
+    constant NOT_AVAILABLE 1
+    constant PRINTER_CUSTOM 2
+    constant COLOR 3
+    constant GRAYSCALE 4
+    constant MONOCHROME 5
+    constant AUTO_SELECT 6
 
 enum Windows.Graphics.Printing.PrintDuplex python_type
     py PrintDuplex
     signature enum(Windows.Graphics.Printing.PrintDuplex;i4)
+    constant DEFAULT 0
+    constant NOT_AVAILABLE 1
+    constant PRINTER_CUSTOM 2
+    constant ONE_SIDED 3
+    constant TWO_SIDED_SHORT_EDGE 4
+    constant TWO_SIDED_LONG_EDGE 5
 
 enum Windows.Graphics.Printing.PrintHolePunch python_type
     py PrintHolePunch
     signature enum(Windows.Graphics.Printing.PrintHolePunch;i4)
+    constant DEFAULT 0
+    constant NOT_AVAILABLE 1
+    constant PRINTER_CUSTOM 2
+    constant NONE 3
+    constant LEFT_EDGE 4
+    constant RIGHT_EDGE 5
+    constant TOP_EDGE 6
+    constant BOTTOM_EDGE 7
 
 class Windows.Graphics.Printing.PrintManager python_type
     py PrintManager
@@ -466,14 +514,226 @@ class Windows.Graphics.Printing.PrintManager python_type
 enum Windows.Graphics.Printing.PrintMediaSize python_type
     py PrintMediaSize
     signature enum(Windows.Graphics.Printing.PrintMediaSize;i4)
+    constant DEFAULT 0
+    constant NOT_AVAILABLE 1
+    constant PRINTER_CUSTOM 2
+    constant BUSINESS_CARD 3
+    constant CREDIT_CARD 4
+    constant ISO_A0 5
+    constant ISO_A1 6
+    constant ISO_A10 7
+    constant ISO_A2 8
+    constant ISO_A3 9
+    constant ISO_A3_EXTRA 10
+    constant ISO_A3_ROTATED 11
+    constant ISO_A4 12
+    constant ISO_A4_EXTRA 13
+    constant ISO_A4_ROTATED 14
+    constant ISO_A5 15
+    constant ISO_A5_EXTRA 16
+    constant ISO_A5_ROTATED 17
+    constant ISO_A6 18
+    constant ISO_A6_ROTATED 19
+    constant ISO_A7 20
+    constant ISO_A8 21
+    constant ISO_A9 22
+    constant ISO_B0 23
+    constant ISO_B1 24
+    constant ISO_B10 25
+    constant ISO_B2 26
+    constant ISO_B3 27
+    constant ISO_B4 28
+    constant ISO_B4_ENVELOPE 29
+    constant ISO_B5_ENVELOPE 30
+    constant ISO_B5_EXTRA 31
+    constant ISO_B7 32
+    constant ISO_B8 33
+    constant ISO_B9 34
+    constant ISO_C0 35
+    constant ISO_C1 36
+    constant ISO_C10 37
+    constant ISO_C2 38
+    constant ISO_C3 39
+    constant ISO_C3_ENVELOPE 40
+    constant ISO_C4 41
+    constant ISO_C4_ENVELOPE 42
+    constant ISO_C5 43
+    constant ISO_C5_ENVELOPE 44
+    constant ISO_C6 45
+    constant ISO_C6_C5_ENVELOPE 46
+    constant ISO_C6_ENVELOPE 47
+    constant ISO_C7 48
+    constant ISO_C8 49
+    constant ISO_C9 50
+    constant ISO_D_L_ENVELOPE 51
+    constant ISO_D_L_ENVELOPE_ROTATED 52
+    constant ISO_S_R_A3 53
+    constant JAPAN2_L_PHOTO 54
+    constant JAPAN_CHOU3_ENVELOPE 55
+    constant JAPAN_CHOU3_ENVELOPE_ROTATED 56
+    constant JAPAN_CHOU4_ENVELOPE 57
+    constant JAPAN_CHOU4_ENVELOPE_ROTATED 58
+    constant JAPAN_DOUBLE_HAGAKI_POSTCARD 59
+    constant JAPAN_DOUBLE_HAGAKI_POSTCARD_ROTATED 60
+    constant JAPAN_HAGAKI_POSTCARD 61
+    constant JAPAN_HAGAKI_POSTCARD_ROTATED 62
+    constant JAPAN_KAKU2_ENVELOPE 63
+    constant JAPAN_KAKU2_ENVELOPE_ROTATED 64
+    constant JAPAN_KAKU3_ENVELOPE 65
+    constant JAPAN_KAKU3_ENVELOPE_ROTATED 66
+    constant JAPAN_L_PHOTO 67
+    constant JAPAN_QUADRUPLE_HAGAKI_POSTCARD 68
+    constant JAPAN_YOU1_ENVELOPE 69
+    constant JAPAN_YOU2_ENVELOPE 70
+    constant JAPAN_YOU3_ENVELOPE 71
+    constant JAPAN_YOU4_ENVELOPE 72
+    constant JAPAN_YOU4_ENVELOPE_ROTATED 73
+    constant JAPAN_YOU6_ENVELOPE 74
+    constant JAPAN_YOU6_ENVELOPE_ROTATED 75
+    constant JIS_B0 76
+    constant JIS_B1 77
+    constant JIS_B10 78
+    constant JIS_B2 79
+    constant JIS_B3 80
+    constant JIS_B4 81
+    constant JIS_B4_ROTATED 82
+    constant JIS_B5 83
+    constant JIS_B5_ROTATED 84
+    constant JIS_B6 85
+    constant JIS_B6_ROTATED 86
+    constant JIS_B7 87
+    constant JIS_B8 88
+    constant JIS_B9 89
+    constant NORTH_AMERICA10X11 90
+    constant NORTH_AMERICA10X12 91
+    constant NORTH_AMERICA10X14 92
+    constant NORTH_AMERICA11X17 93
+    constant NORTH_AMERICA14X17 94
+    constant NORTH_AMERICA4X6 95
+    constant NORTH_AMERICA4X8 96
+    constant NORTH_AMERICA5X7 97
+    constant NORTH_AMERICA8X10 98
+    constant NORTH_AMERICA9X11 99
+    constant NORTH_AMERICA_ARCHITECTURE_A_SHEET 100
+    constant NORTH_AMERICA_ARCHITECTURE_B_SHEET 101
+    constant NORTH_AMERICA_ARCHITECTURE_C_SHEET 102
+    constant NORTH_AMERICA_ARCHITECTURE_D_SHEET 103
+    constant NORTH_AMERICA_ARCHITECTURE_E_SHEET 104
+    constant NORTH_AMERICA_C_SHEET 105
+    constant NORTH_AMERICA_D_SHEET 106
+    constant NORTH_AMERICA_E_SHEET 107
+    constant NORTH_AMERICA_EXECUTIVE 108
+    constant NORTH_AMERICA_GERMAN_LEGAL_FANFOLD 109
+    constant NORTH_AMERICA_GERMAN_STANDARD_FANFOLD 110
+    constant NORTH_AMERICA_LEGAL 111
+    constant NORTH_AMERICA_LEGAL_EXTRA 112
+    constant NORTH_AMERICA_LETTER 113
+    constant NORTH_AMERICA_LETTER_EXTRA 114
+    constant NORTH_AMERICA_LETTER_PLUS 115
+    constant NORTH_AMERICA_LETTER_ROTATED 116
+    constant NORTH_AMERICA_MONARCH_ENVELOPE 117
+    constant NORTH_AMERICA_NOTE 118
+    constant NORTH_AMERICA_NUMBER10_ENVELOPE 119
+    constant NORTH_AMERICA_NUMBER10_ENVELOPE_ROTATED 120
+    constant NORTH_AMERICA_NUMBER11_ENVELOPE 121
+    constant NORTH_AMERICA_NUMBER12_ENVELOPE 122
+    constant NORTH_AMERICA_NUMBER14_ENVELOPE 123
+    constant NORTH_AMERICA_NUMBER9_ENVELOPE 124
+    constant NORTH_AMERICA_PERSONAL_ENVELOPE 125
+    constant NORTH_AMERICA_QUARTO 126
+    constant NORTH_AMERICA_STATEMENT 127
+    constant NORTH_AMERICA_SUPER_A 128
+    constant NORTH_AMERICA_SUPER_B 129
+    constant NORTH_AMERICA_TABLOID 130
+    constant NORTH_AMERICA_TABLOID_EXTRA 131
+    constant OTHER_METRIC_A3_PLUS 132
+    constant OTHER_METRIC_A4_PLUS 133
+    constant OTHER_METRIC_FOLIO 134
+    constant OTHER_METRIC_INVITE_ENVELOPE 135
+    constant OTHER_METRIC_ITALIAN_ENVELOPE 136
+    constant PRC10_ENVELOPE 137
+    constant PRC10_ENVELOPE_ROTATED 138
+    constant PRC16_K 139
+    constant PRC16_K_ROTATED 140
+    constant PRC1_ENVELOPE 141
+    constant PRC1_ENVELOPE_ROTATED 142
+    constant PRC2_ENVELOPE 143
+    constant PRC2_ENVELOPE_ROTATED 144
+    constant PRC32_K 145
+    constant PRC32_K_BIG 146
+    constant PRC32_K_ROTATED 147
+    constant PRC3_ENVELOPE 148
+    constant PRC3_ENVELOPE_ROTATED 149
+    constant PRC4_ENVELOPE 150
+    constant PRC4_ENVELOPE_ROTATED 151
+    constant PRC5_ENVELOPE 152
+    constant PRC5_ENVELOPE_ROTATED 153
+    constant PRC6_ENVELOPE 154
+    constant PRC6_ENVELOPE_ROTATED 155
+    constant PRC7_ENVELOPE 156
+    constant PRC7_ENVELOPE_ROTATED 157
+    constant PRC8_ENVELOPE 158
+    constant PRC8_ENVELOPE_ROTATED 159
+    constant PRC9_ENVELOPE 160
+    constant PRC9_ENVELOPE_ROTATED 161
+    constant ROLL04_INCH 162
+    constant ROLL06_INCH 163
+    constant ROLL08_INCH 164
+    constant ROLL12_INCH 165
+    constant ROLL15_INCH 166
+    constant ROLL18_INCH 167
+    constant ROLL22_INCH 168
+    constant ROLL24_INCH 169
+    constant ROLL30_INCH 170
+    constant ROLL36_INCH 171
+    constant ROLL54_INCH 172
 
 enum Windows.Graphics.Printing.PrintMediaType python_type
     py PrintMediaType
     signature enum(Windows.Graphics.Printing.PrintMediaType;i4)
+    constant DEFAULT 0
+    constant NOT_AVAILABLE 1
+    constant PRINTER_CUSTOM 2
+    constant AUTO_SELECT 3
+    constant ARCHIVAL 4
+    constant BACK_PRINT_FILM 5
+    constant BOND 6
+    constant CARD_STOCK 7
+    constant CONTINUOUS 8
+    constant ENVELOPE_PLAIN 9
+    constant ENVELOPE_WINDOW 10
+    constant FABRIC 11
+    constant HIGH_RESOLUTION 12
+    constant LABEL 13
+    constant MULTI_LAYER_FORM 14
+    constant MULTI_PART_FORM 15
+    constant PHOTOGRAPHIC 16
+    constant PHOTOGRAPHIC_FILM 17
+    constant PHOTOGRAPHIC_GLOSSY 18
+    constant PHOTOGRAPHIC_HIGH_GLOSS 19
+    constant PHOTOGRAPHIC_MATTE 20
+    constant PHOTOGRAPHIC_SATIN 21
+    constant PHOTOGRAPHIC_SEMI_GLOSS 22
+    constant PLAIN 23
+    constant SCREEN 24
+    constant SCREEN_PAGED 25
+    constant STATIONERY 26
+    constant TAB_STOCK_FULL 27
+    constant TAB_STOCK_PRE_CUT 28
+    constant TRANSPARENCY 29
+    constant T_SHIRT_TRANSFER 30
+    constant NONE 31
 
 enum Windows.Graphics.Printing.PrintOrientation python_type
     py PrintOrientation
     signature enum(Windows.Graphics.Printing.PrintOrientation;i4)
+    constant DEFAULT 0
+    constant NOT_AVAILABLE 1
+    constant PRINTER_CUSTOM 2
+    constant PORTRAIT 3
+    constant PORTRAIT_FLIPPED 4
+    constant LANDSCAPE 5
+    constant LANDSCAPE_FLIPPED 6
 
 struct Windows.Graphics.Printing.PrintPageDescription python_type
     py PrintPageDescription
@@ -562,10 +822,33 @@ class Windows.Graphics.Printing.PrintPageRangeOptions python_type
 enum Windows.Graphics.Printing.PrintQuality python_type
     py PrintQuality
     signature enum(Windows.Graphics.Printing.PrintQuality;i4)
+    constant DEFAULT 0
+    constant NOT_AVAILABLE 1
+    constant PRINTER_CUSTOM 2
+    constant AUTOMATIC 3
+    constant DRAFT 4
+    constant FAX 5
+    constant HIGH 6
+    constant NORMAL 7
+    constant PHOTOGRAPHIC 8
+    constant TEXT 9
 
 enum Windows.Graphics.Printing.PrintStaple python_type
     py PrintStaple
     signature enum(Windows.Graphics.Printing.PrintStaple;i4)
+    constant DEFAULT 0
+    constant NOT_AVAILABLE 1
+    constant PRINTER_CUSTOM 2
+    constant NONE 3
+    constant STAPLE_TOP_LEFT 4
+    constant STAPLE_TOP_RIGHT 5
+    constant STAPLE_BOTTOM_LEFT 6
+    constant STAPLE_BOTTOM_RIGHT 7
+    constant STAPLE_DUAL_LEFT 8
+    constant STAPLE_DUAL_RIGHT 9
+    constant STAPLE_DUAL_TOP 10
+    constant STAPLE_DUAL_BOTTOM 11
+    constant SADDLE_STITCH 12
 
 class Windows.Graphics.Printing.PrintTask python_type
     py PrintTask
@@ -635,6 +918,10 @@ class Windows.Graphics.Printing.PrintTaskCompletedEventArgs python_type
 enum Windows.Graphics.Printing.PrintTaskCompletion python_type
     py PrintTaskCompletion
     signature enum(Windows.Graphics.Printing.PrintTaskCompletion;i4)
+    constant ABANDONED 0
+    constant CANCELED 1
+    constant FAILED 2
+    constant SUBMITTED 3
 
 class Windows.Graphics.Printing.PrintTaskOptions python_type
     py PrintTaskOptions

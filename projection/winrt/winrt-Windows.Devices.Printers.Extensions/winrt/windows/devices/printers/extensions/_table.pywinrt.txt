@@ -65,6 +65,13 @@ class Windows.Devices.Printers.Extensions.Print3DWorkflow python_type
 enum Windows.Devices.Printers.Extensions.Print3DWorkflowDetail python_type
     py Print3DWorkflowDetail
     signature enum(Windows.Devices.Printers.Extensions.Print3DWorkflowDetail;i4)
+    constant UNKNOWN 0
+    constant MODEL_EXCEEDS_PRINT_BED 1
+    constant UPLOAD_FAILED 2
+    constant INVALID_MATERIAL_SELECTION 3
+    constant INVALID_MODEL 4
+    constant MODEL_NOT_MANIFOLD 5
+    constant INVALID_PRINT_TICKET 6
 
 class Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs python_type
     py Print3DWorkflowPrintRequestedEventArgs
@@ -96,6 +103,11 @@ class Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs
 enum Windows.Devices.Printers.Extensions.Print3DWorkflowStatus python_type
     py Print3DWorkflowStatus
     signature enum(Windows.Devices.Printers.Extensions.Print3DWorkflowStatus;i4)
+    constant ABANDONED 0
+    constant CANCELED 1
+    constant FAILED 2
+    constant SLICING 3
+    constant SUBMITTED 4
 
 class Windows.Devices.Printers.Extensions.PrintExtensionContext static python_type
     py PrintExtensionContext

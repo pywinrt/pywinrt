@@ -562,6 +562,10 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectService python_type
 enum Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertisementStatus python_type
     py WiFiDirectServiceAdvertisementStatus
     signature enum(Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertisementStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant STOPPED 2
+    constant ABORTED 3
 
 class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser python_type
     py WiFiDirectServiceAdvertiser
@@ -664,14 +668,24 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConn
 enum Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod python_type
     py WiFiDirectServiceConfigurationMethod
     signature enum(Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod;i4)
+    constant DEFAULT 0
+    constant PIN_DISPLAY 1
+    constant PIN_ENTRY 2
 
 enum Windows.Devices.WiFiDirect.Services.WiFiDirectServiceError python_type
     py WiFiDirectServiceError
     signature enum(Windows.Devices.WiFiDirect.Services.WiFiDirectServiceError;i4)
+    constant SUCCESS 0
+    constant RADIO_NOT_AVAILABLE 1
+    constant RESOURCE_IN_USE 2
+    constant UNSUPPORTED_HARDWARE 3
+    constant NO_HARDWARE 4
 
 enum Windows.Devices.WiFiDirect.Services.WiFiDirectServiceIPProtocol python_type
     py WiFiDirectServiceIPProtocol
     signature enum(Windows.Devices.WiFiDirect.Services.WiFiDirectServiceIPProtocol;i4)
+    constant TCP 6
+    constant UDP 17
 
 class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo python_type
     py WiFiDirectServiceProvisioningInfo
@@ -762,6 +776,12 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionDeferredEventA
 enum Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionErrorStatus python_type
     py WiFiDirectServiceSessionErrorStatus
     signature enum(Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionErrorStatus;i4)
+    constant OK 0
+    constant DISASSOCIATED 1
+    constant LOCAL_CLOSE 2
+    constant REMOTE_CLOSE 3
+    constant SYSTEM_FAILURE 4
+    constant NO_RESPONSE_FROM_REMOTE 5
 
 class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest python_type closeable
     py WiFiDirectServiceSessionRequest
@@ -793,10 +813,17 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequestedEvent
 enum Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionStatus python_type
     py WiFiDirectServiceSessionStatus
     signature enum(Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionStatus;i4)
+    constant CLOSED 0
+    constant INITIATED 1
+    constant REQUESTED 2
+    constant OPEN 3
 
 enum Windows.Devices.WiFiDirect.Services.WiFiDirectServiceStatus python_type
     py WiFiDirectServiceStatus
     signature enum(Windows.Devices.WiFiDirect.Services.WiFiDirectServiceStatus;i4)
+    constant AVAILABLE 0
+    constant BUSY 1
+    constant CUSTOM 2
 
 class System.Object external
     py winrt.system.Object

@@ -45,6 +45,10 @@ interface Windows.Devices.Geolocation.Provider.IGeolocationProvider
 enum Windows.Devices.Geolocation.Provider.LocationOverrideStatus python_type
     py LocationOverrideStatus
     signature enum(Windows.Devices.Geolocation.Provider.LocationOverrideStatus;i4)
+    constant SUCCESS 0
+    constant ACCESS_DENIED 1
+    constant ALREADY_STARTED 2
+    constant OTHER 3
 
 class System.Object external
     py winrt.system.Object

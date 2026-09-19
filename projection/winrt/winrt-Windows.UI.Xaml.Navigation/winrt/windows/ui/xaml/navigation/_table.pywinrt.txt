@@ -108,6 +108,9 @@ delegate Windows.UI.Xaml.Navigation.NavigatingCancelEventHandler python_type
 enum Windows.UI.Xaml.Navigation.NavigationCacheMode python_type
     py NavigationCacheMode
     signature enum(Windows.UI.Xaml.Navigation.NavigationCacheMode;i4)
+    constant DISABLED 0
+    constant REQUIRED 1
+    constant ENABLED 2
 
 class Windows.UI.Xaml.Navigation.NavigationEventArgs python_type
     py NavigationEventArgs
@@ -165,6 +168,10 @@ delegate Windows.UI.Xaml.Navigation.NavigationFailedEventHandler python_type
 enum Windows.UI.Xaml.Navigation.NavigationMode python_type
     py NavigationMode
     signature enum(Windows.UI.Xaml.Navigation.NavigationMode;i4)
+    constant NEW 0
+    constant BACK 1
+    constant FORWARD 2
+    constant REFRESH 3
 
 delegate Windows.UI.Xaml.Navigation.NavigationStoppedEventHandler python_type
     py NavigationStoppedEventHandler

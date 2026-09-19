@@ -332,6 +332,16 @@ class Windows.Devices.Enumeration.Pnp.PnpObjectCollection python_type iterable s
 enum Windows.Devices.Enumeration.Pnp.PnpObjectType python_type
     py PnpObjectType
     signature enum(Windows.Devices.Enumeration.Pnp.PnpObjectType;i4)
+    constant UNKNOWN 0
+    constant DEVICE_INTERFACE 1
+    constant DEVICE_CONTAINER 2
+    constant DEVICE 3
+    constant DEVICE_INTERFACE_CLASS 4
+    constant ASSOCIATION_ENDPOINT 5
+    constant ASSOCIATION_ENDPOINT_CONTAINER 6
+    constant ASSOCIATION_ENDPOINT_SERVICE 7
+    constant DEVICE_PANEL 8
+    constant ASSOCIATION_ENDPOINT_PROTOCOL 9
 
 class Windows.Devices.Enumeration.Pnp.PnpObjectUpdate python_type
     py PnpObjectUpdate

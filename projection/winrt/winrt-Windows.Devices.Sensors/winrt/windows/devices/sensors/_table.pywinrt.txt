@@ -133,6 +133,9 @@ class Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs python_type
 enum Windows.Devices.Sensors.AccelerometerReadingType python_type
     py AccelerometerReadingType
     signature enum(Windows.Devices.Sensors.AccelerometerReadingType;i4)
+    constant STANDARD 0
+    constant LINEAR 1
+    constant GRAVITY 2
 
 class Windows.Devices.Sensors.AccelerometerShakenEventArgs python_type
     py AccelerometerShakenEventArgs
@@ -228,6 +231,8 @@ class Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs python_type
 enum Windows.Devices.Sensors.ActivitySensorReadingConfidence python_type
     py ActivitySensorReadingConfidence
     signature enum(Windows.Devices.Sensors.ActivitySensorReadingConfidence;i4)
+    constant HIGH 0
+    constant LOW 1
 
 class Windows.Devices.Sensors.ActivitySensorTriggerDetails python_type
     py ActivitySensorTriggerDetails
@@ -241,6 +246,14 @@ class Windows.Devices.Sensors.ActivitySensorTriggerDetails python_type
 enum Windows.Devices.Sensors.ActivityType python_type
     py ActivityType
     signature enum(Windows.Devices.Sensors.ActivityType;i4)
+    constant UNKNOWN 0
+    constant IDLE 1
+    constant STATIONARY 2
+    constant FIDGETING 3
+    constant WALKING 4
+    constant RUNNING 5
+    constant IN_VEHICLE 6
+    constant BIKING 7
 
 class Windows.Devices.Sensors.AdaptiveDimmingOptions python_type
     py AdaptiveDimmingOptions
@@ -964,10 +977,16 @@ class Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs python_typ
 enum Windows.Devices.Sensors.HumanEngagement python_type
     py HumanEngagement
     signature enum(Windows.Devices.Sensors.HumanEngagement;i4)
+    constant UNKNOWN 0
+    constant ENGAGED 1
+    constant UNENGAGED 2
 
 enum Windows.Devices.Sensors.HumanPresence python_type
     py HumanPresence
     signature enum(Windows.Devices.Sensors.HumanPresence;i4)
+    constant UNKNOWN 0
+    constant PRESENT 1
+    constant NOT_PRESENT 2
 
 class Windows.Devices.Sensors.HumanPresenceFeatures python_type
     py HumanPresenceFeatures
@@ -4160,6 +4179,10 @@ class Windows.Devices.Sensors.Magnetometer python_type
 enum Windows.Devices.Sensors.MagnetometerAccuracy python_type
     py MagnetometerAccuracy
     signature enum(Windows.Devices.Sensors.MagnetometerAccuracy;i4)
+    constant UNKNOWN 0
+    constant UNRELIABLE 1
+    constant APPROXIMATE 2
+    constant HIGH 3
 
 class Windows.Devices.Sensors.MagnetometerDataThreshold python_type
     py MagnetometerDataThreshold
@@ -4222,10 +4245,17 @@ class Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs python_type
 enum Windows.Devices.Sensors.OnlookerDetectionAction python_type
     py OnlookerDetectionAction
     signature enum(Windows.Devices.Sensors.OnlookerDetectionAction;i4)
+    constant DIM 0
+    constant NOTIFY 1
+    constant DIM_AND_NOTIFY 2
 
 enum Windows.Devices.Sensors.OnlookerDetectionBackOnMode python_type
     py OnlookerDetectionBackOnMode
     signature enum(Windows.Devices.Sensors.OnlookerDetectionBackOnMode;i4)
+    constant MANUALLY 0
+    constant ONE_HOUR 1
+    constant FOUR_HOURS 2
+    constant ONE_DAY 3
 
 class Windows.Devices.Sensors.OnlookerDetectionOptions python_type
     py OnlookerDetectionOptions
@@ -4448,6 +4478,9 @@ class Windows.Devices.Sensors.PedometerReadingChangedEventArgs python_type
 enum Windows.Devices.Sensors.PedometerStepKind python_type
     py PedometerStepKind
     signature enum(Windows.Devices.Sensors.PedometerStepKind;i4)
+    constant UNKNOWN 0
+    constant WALKING 1
+    constant RUNNING 2
 
 class Windows.Devices.Sensors.ProximitySensor python_type
     py ProximitySensor
@@ -4547,6 +4580,8 @@ class Windows.Devices.Sensors.SensorDataThresholdTriggerDetails python_type
 enum Windows.Devices.Sensors.SensorOptimizationGoal python_type
     py SensorOptimizationGoal
     signature enum(Windows.Devices.Sensors.SensorOptimizationGoal;i4)
+    constant PRECISION 0
+    constant POWER_EFFICIENCY 1
 
 class Windows.Devices.Sensors.SensorQuaternion python_type
     py SensorQuaternion
@@ -4569,6 +4604,8 @@ class Windows.Devices.Sensors.SensorQuaternion python_type
 enum Windows.Devices.Sensors.SensorReadingType python_type
     py SensorReadingType
     signature enum(Windows.Devices.Sensors.SensorReadingType;i4)
+    constant ABSOLUTE 0
+    constant RELATIVE 1
 
 class Windows.Devices.Sensors.SensorRotationMatrix python_type
     py SensorRotationMatrix
@@ -4606,10 +4643,30 @@ class Windows.Devices.Sensors.SensorRotationMatrix python_type
 enum Windows.Devices.Sensors.SensorType python_type
     py SensorType
     signature enum(Windows.Devices.Sensors.SensorType;i4)
+    constant ACCELEROMETER 0
+    constant ACTIVITY_SENSOR 1
+    constant BAROMETER 2
+    constant COMPASS 3
+    constant CUSTOM_SENSOR 4
+    constant GYROSCOPE 5
+    constant PROXIMITY_SENSOR 6
+    constant INCLINOMETER 7
+    constant LIGHT_SENSOR 8
+    constant ORIENTATION_SENSOR 9
+    constant PEDOMETER 10
+    constant RELATIVE_INCLINOMETER 11
+    constant RELATIVE_ORIENTATION_SENSOR 12
+    constant SIMPLE_ORIENTATION_SENSOR 13
 
 enum Windows.Devices.Sensors.SimpleOrientation python_type
     py SimpleOrientation
     signature enum(Windows.Devices.Sensors.SimpleOrientation;i4)
+    constant NOT_ROTATED 0
+    constant ROTATED90_DEGREES_COUNTERCLOCKWISE 1
+    constant ROTATED180_DEGREES_COUNTERCLOCKWISE 2
+    constant ROTATED270_DEGREES_COUNTERCLOCKWISE 3
+    constant FACEUP 4
+    constant FACEDOWN 5
 
 class Windows.Devices.Sensors.SimpleOrientationSensor python_type
     py SimpleOrientationSensor

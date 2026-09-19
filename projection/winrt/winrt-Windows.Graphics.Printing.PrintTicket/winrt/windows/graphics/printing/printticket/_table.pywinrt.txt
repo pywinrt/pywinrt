@@ -232,6 +232,8 @@ class Windows.Graphics.Printing.PrintTicket.PrintTicketFeature python_type
 enum Windows.Graphics.Printing.PrintTicket.PrintTicketFeatureSelectionType python_type
     py PrintTicketFeatureSelectionType
     signature enum(Windows.Graphics.Printing.PrintTicket.PrintTicketFeatureSelectionType;i4)
+    constant PICK_ONE 0
+    constant PICK_MANY 1
 
 class Windows.Graphics.Printing.PrintTicket.PrintTicketOption python_type
     py PrintTicketOption
@@ -274,6 +276,9 @@ class Windows.Graphics.Printing.PrintTicket.PrintTicketOption python_type
 enum Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDataType python_type
     py PrintTicketParameterDataType
     signature enum(Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDataType;i4)
+    constant INTEGER 0
+    constant NUMERIC_STRING 1
+    constant STRING 2
 
 class Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition python_type
     py PrintTicketParameterDefinition
@@ -340,6 +345,9 @@ class Windows.Graphics.Printing.PrintTicket.PrintTicketValue python_type
 enum Windows.Graphics.Printing.PrintTicket.PrintTicketValueType python_type
     py PrintTicketValueType
     signature enum(Windows.Graphics.Printing.PrintTicket.PrintTicketValueType;i4)
+    constant INTEGER 0
+    constant STRING 1
+    constant UNKNOWN 2
 
 class Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket python_type
     py WorkflowPrintTicket

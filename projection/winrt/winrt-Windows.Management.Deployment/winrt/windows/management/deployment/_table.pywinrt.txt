@@ -2,9 +2,14 @@ format 4.0
 generator 0.0.0
 namespace Windows.Management.Deployment
 
-enum Windows.Management.Deployment.AddPackageByAppInstallerOptions python_type
+enum Windows.Management.Deployment.AddPackageByAppInstallerOptions python_type flags_enum
     py AddPackageByAppInstallerOptions
     signature enum(Windows.Management.Deployment.AddPackageByAppInstallerOptions;u4)
+    constant NONE 0x0
+    constant INSTALL_ALL_RESOURCES 0x20
+    constant FORCE_TARGET_APP_SHUTDOWN 0x40
+    constant REQUIRED_CONTENT_GROUP_ONLY 0x100
+    constant LIMIT_TO_EXISTING_PACKAGES 0x200
 
 class Windows.Management.Deployment.AddPackageOptions activatable python_type
     py AddPackageOptions
@@ -321,9 +326,18 @@ class Windows.Management.Deployment.DeleteSharedPackageContainerResult python_ty
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeleteSharedPackageContainerResult shape=4 reverse=22
             out enum32 type=Windows.Management.Deployment.SharedPackageContainerOperationStatus return
 
-enum Windows.Management.Deployment.DeploymentOptions python_type
+enum Windows.Management.Deployment.DeploymentOptions python_type flags_enum
     py DeploymentOptions
     signature enum(Windows.Management.Deployment.DeploymentOptions;u4)
+    constant NONE 0x0
+    constant FORCE_APPLICATION_SHUTDOWN 0x1
+    constant DEVELOPMENT_MODE 0x2
+    constant INSTALL_ALL_RESOURCES 0x20
+    constant FORCE_TARGET_APPLICATION_SHUTDOWN 0x40
+    constant REQUIRED_CONTENT_GROUP_ONLY 0x100
+    constant FORCE_UPDATE_FROM_ANY_VERSION 0x40000
+    constant RETAIN_FILES_ON_FAILURE 0x200000
+    constant STAGE_IN_PLACE 0x400000
 
 struct Windows.Management.Deployment.DeploymentProgress python_type
     py DeploymentProgress
@@ -334,6 +348,8 @@ struct Windows.Management.Deployment.DeploymentProgress python_type
 enum Windows.Management.Deployment.DeploymentProgressState python_type
     py DeploymentProgressState
     signature enum(Windows.Management.Deployment.DeploymentProgressState;i4)
+    constant QUEUED 0
+    constant PROCESSING 1
 
 class Windows.Management.Deployment.DeploymentResult python_type
     py DeploymentResult
@@ -1396,6 +1412,10 @@ class Windows.Management.Deployment.PackageAllUserProvisioningOptions activatabl
 enum Windows.Management.Deployment.PackageInstallState python_type
     py PackageInstallState
     signature enum(Windows.Management.Deployment.PackageInstallState;i4)
+    constant NOT_INSTALLED 0
+    constant STAGED 1
+    constant INSTALLED 2
+    constant PAUSED 6
 
 class Windows.Management.Deployment.PackageManager activatable python_type
     py PackageManager
@@ -1767,18 +1787,37 @@ class Windows.Management.Deployment.PackageManagerDebugSettings python_type
 enum Windows.Management.Deployment.PackageState python_type
     py PackageState
     signature enum(Windows.Management.Deployment.PackageState;i4)
+    constant NORMAL 0
+    constant LICENSE_INVALID 1
+    constant MODIFIED 2
+    constant TAMPERED 3
 
-enum Windows.Management.Deployment.PackageStatus python_type
+enum Windows.Management.Deployment.PackageStatus python_type flags_enum
     py PackageStatus
     signature enum(Windows.Management.Deployment.PackageStatus;u4)
+    constant OK 0x0
+    constant LICENSE_ISSUE 0x1
+    constant MODIFIED 0x2
+    constant TAMPERED 0x4
+    constant DISABLED 0x8
 
 enum Windows.Management.Deployment.PackageStubPreference python_type
     py PackageStubPreference
     signature enum(Windows.Management.Deployment.PackageStubPreference;i4)
+    constant FULL 0
+    constant STUB 1
 
-enum Windows.Management.Deployment.PackageTypes python_type
+enum Windows.Management.Deployment.PackageTypes python_type flags_enum
     py PackageTypes
     signature enum(Windows.Management.Deployment.PackageTypes;u4)
+    constant NONE 0x0
+    constant MAIN 0x1
+    constant FRAMEWORK 0x2
+    constant RESOURCE 0x4
+    constant BUNDLE 0x8
+    constant XAP 0x10
+    constant OPTIONAL 0x20
+    constant ALL 0xFFFFFFFF
 
 class Windows.Management.Deployment.PackageUserInformation python_type
     py PackageUserInformation
@@ -1956,9 +1995,14 @@ class Windows.Management.Deployment.RegisterPackageOptions activatable python_ty
         get get_ExpectedDigests slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions2 shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> return
 
-enum Windows.Management.Deployment.RemovalOptions python_type
+enum Windows.Management.Deployment.RemovalOptions python_type flags_enum
     py RemovalOptions
     signature enum(Windows.Management.Deployment.RemovalOptions;u4)
+    constant NONE 0x0
+    constant PRESERVE_APPLICATION_DATA 0x1000
+    constant PRESERVE_ROAMABLE_APPLICATION_DATA 0x80
+    constant DEFER_REMOVAL_WHEN_PACKAGES_ARE_IN_USE 0x2000
+    constant REMOVE_FOR_ALL_USERS 0x80000
 
 class Windows.Management.Deployment.RemovePackageOptions activatable python_type
     py RemovePackageOptions
@@ -2016,6 +2060,9 @@ class Windows.Management.Deployment.SharedPackageContainer python_type
 enum Windows.Management.Deployment.SharedPackageContainerCreationCollisionOptions python_type
     py SharedPackageContainerCreationCollisionOptions
     signature enum(Windows.Management.Deployment.SharedPackageContainerCreationCollisionOptions;i4)
+    constant FAIL_IF_EXISTS 0
+    constant MERGE_WITH_EXISTING 1
+    constant REPLACE_EXISTING 2
 
 class Windows.Management.Deployment.SharedPackageContainerManager python_type
     py SharedPackageContainerManager
@@ -2071,6 +2118,12 @@ class Windows.Management.Deployment.SharedPackageContainerMember python_type
 enum Windows.Management.Deployment.SharedPackageContainerOperationStatus python_type
     py SharedPackageContainerOperationStatus
     signature enum(Windows.Management.Deployment.SharedPackageContainerOperationStatus;i4)
+    constant SUCCESS 0
+    constant BLOCKED_BY_POLICY 1
+    constant ALREADY_EXISTS 2
+    constant PACKAGE_FAMILY_EXISTS_IN_ANOTHER_CONTAINER 3
+    constant NOT_FOUND 4
+    constant UNKNOWN_FAILURE 5
 
 class Windows.Management.Deployment.StagePackageOptions activatable python_type
     py StagePackageOptions
@@ -2145,6 +2198,10 @@ class Windows.Management.Deployment.StagePackageOptions activatable python_type
 enum Windows.Management.Deployment.StubPackageOption python_type
     py StubPackageOption
     signature enum(Windows.Management.Deployment.StubPackageOption;i4)
+    constant DEFAULT 0
+    constant INSTALL_FULL 1
+    constant INSTALL_STUB 2
+    constant USE_PREFERENCE 3
 
 class Windows.Management.Deployment.UpdateSharedPackageContainerOptions activatable python_type
     py UpdateSharedPackageContainerOptions

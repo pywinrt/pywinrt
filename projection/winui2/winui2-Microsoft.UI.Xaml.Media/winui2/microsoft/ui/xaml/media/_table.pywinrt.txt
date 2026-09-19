@@ -5,6 +5,8 @@ namespace Microsoft.UI.Xaml.Media
 enum Microsoft.UI.Xaml.Media.AcrylicBackgroundSource python_type
     py AcrylicBackgroundSource
     signature enum(Microsoft.UI.Xaml.Media.AcrylicBackgroundSource;i4)
+    constant HOST_BACKDROP 0
+    constant BACKDROP 1
 
 class Microsoft.UI.Xaml.Media.AcrylicBrush composable python_type
     py AcrylicBrush
@@ -561,6 +563,9 @@ class Microsoft.UI.Xaml.Media.RevealBrush composable python_type
 enum Microsoft.UI.Xaml.Media.RevealBrushState python_type
     py RevealBrushState
     signature enum(Microsoft.UI.Xaml.Media.RevealBrushState;i4)
+    constant NORMAL 0
+    constant POINTER_OVER 1
+    constant PRESSED 2
 
 enum T parameterized
 

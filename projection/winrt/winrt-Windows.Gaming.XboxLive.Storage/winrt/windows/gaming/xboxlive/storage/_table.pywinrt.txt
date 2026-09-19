@@ -219,6 +219,21 @@ class Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery python_type
 enum Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus python_type
     py GameSaveErrorStatus
     signature enum(Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus;i4)
+    constant OK 0
+    constant ABORT -2147467260
+    constant INVALID_CONTAINER_NAME -2138898431
+    constant NO_ACCESS -2138898430
+    constant OUT_OF_LOCAL_STORAGE -2138898429
+    constant USER_CANCELED -2138898428
+    constant UPDATE_TOO_BIG -2138898427
+    constant QUOTA_EXCEEDED -2138898426
+    constant PROVIDED_BUFFER_TOO_SMALL -2138898425
+    constant BLOB_NOT_FOUND -2138898424
+    constant NO_XBOX_LIVE_INFO -2138898423
+    constant CONTAINER_NOT_IN_SYNC -2138898422
+    constant CONTAINER_SYNC_FAILED -2138898421
+    constant USER_HAS_NO_XBOX_LIVE_INFO -2138898420
+    constant OBJECT_EXPIRED -2138898419
 
 class Windows.Gaming.XboxLive.Storage.GameSaveOperationResult python_type
     py GameSaveOperationResult

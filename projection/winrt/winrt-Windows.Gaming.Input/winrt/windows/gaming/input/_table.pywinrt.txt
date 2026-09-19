@@ -68,9 +68,22 @@ class Windows.Gaming.Input.ArcadeStick python_type
         method TryGetBatteryReport slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameControllerBatteryInfo shape=4 reverse=22
             out class type=Windows.Devices.Power.BatteryReport return
 
-enum Windows.Gaming.Input.ArcadeStickButtons python_type
+enum Windows.Gaming.Input.ArcadeStickButtons python_type flags_enum
     py ArcadeStickButtons
     signature enum(Windows.Gaming.Input.ArcadeStickButtons;u4)
+    constant NONE 0x0
+    constant STICK_UP 0x1
+    constant STICK_DOWN 0x2
+    constant STICK_LEFT 0x4
+    constant STICK_RIGHT 0x8
+    constant ACTION1 0x10
+    constant ACTION2 0x20
+    constant ACTION3 0x40
+    constant ACTION4 0x80
+    constant ACTION5 0x100
+    constant ACTION6 0x200
+    constant SPECIAL1 0x400
+    constant SPECIAL2 0x800
 
 struct Windows.Gaming.Input.ArcadeStickReading python_type
     py ArcadeStickReading
@@ -212,9 +225,12 @@ class Windows.Gaming.Input.FlightStick python_type
         method TryGetBatteryReport slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameControllerBatteryInfo shape=4 reverse=22
             out class type=Windows.Devices.Power.BatteryReport return
 
-enum Windows.Gaming.Input.FlightStickButtons python_type
+enum Windows.Gaming.Input.FlightStickButtons python_type flags_enum
     py FlightStickButtons
     signature enum(Windows.Gaming.Input.FlightStickButtons;u4)
+    constant NONE 0x0
+    constant FIRE_PRIMARY 0x1
+    constant FIRE_SECONDARY 0x2
 
 struct Windows.Gaming.Input.FlightStickReading python_type
     py FlightStickReading
@@ -230,14 +246,95 @@ struct Windows.Gaming.Input.FlightStickReading python_type
 enum Windows.Gaming.Input.GameControllerButtonLabel python_type
     py GameControllerButtonLabel
     signature enum(Windows.Gaming.Input.GameControllerButtonLabel;i4)
+    constant NONE 0
+    constant XBOX_BACK 1
+    constant XBOX_START 2
+    constant XBOX_MENU 3
+    constant XBOX_VIEW 4
+    constant XBOX_UP 5
+    constant XBOX_DOWN 6
+    constant XBOX_LEFT 7
+    constant XBOX_RIGHT 8
+    constant XBOX_A 9
+    constant XBOX_B 10
+    constant XBOX_X 11
+    constant XBOX_Y 12
+    constant XBOX_LEFT_BUMPER 13
+    constant XBOX_LEFT_TRIGGER 14
+    constant XBOX_LEFT_STICK_BUTTON 15
+    constant XBOX_RIGHT_BUMPER 16
+    constant XBOX_RIGHT_TRIGGER 17
+    constant XBOX_RIGHT_STICK_BUTTON 18
+    constant XBOX_PADDLE1 19
+    constant XBOX_PADDLE2 20
+    constant XBOX_PADDLE3 21
+    constant XBOX_PADDLE4 22
+    constant MODE 23
+    constant SELECT 24
+    constant MENU 25
+    constant VIEW 26
+    constant BACK 27
+    constant START 28
+    constant OPTIONS 29
+    constant SHARE 30
+    constant UP 31
+    constant DOWN 32
+    constant LEFT 33
+    constant RIGHT 34
+    constant LETTER_A 35
+    constant LETTER_B 36
+    constant LETTER_C 37
+    constant LETTER_L 38
+    constant LETTER_R 39
+    constant LETTER_X 40
+    constant LETTER_Y 41
+    constant LETTER_Z 42
+    constant CROSS 43
+    constant CIRCLE 44
+    constant SQUARE 45
+    constant TRIANGLE 46
+    constant LEFT_BUMPER 47
+    constant LEFT_TRIGGER 48
+    constant LEFT_STICK_BUTTON 49
+    constant LEFT1 50
+    constant LEFT2 51
+    constant LEFT3 52
+    constant RIGHT_BUMPER 53
+    constant RIGHT_TRIGGER 54
+    constant RIGHT_STICK_BUTTON 55
+    constant RIGHT1 56
+    constant RIGHT2 57
+    constant RIGHT3 58
+    constant PADDLE1 59
+    constant PADDLE2 60
+    constant PADDLE3 61
+    constant PADDLE4 62
+    constant PLUS 63
+    constant MINUS 64
+    constant DOWN_LEFT_ARROW 65
+    constant DIAL_LEFT 66
+    constant DIAL_RIGHT 67
+    constant SUSPENSION 68
 
 enum Windows.Gaming.Input.GameControllerSwitchKind python_type
     py GameControllerSwitchKind
     signature enum(Windows.Gaming.Input.GameControllerSwitchKind;i4)
+    constant TWO_WAY 0
+    constant FOUR_WAY 1
+    constant EIGHT_WAY 2
 
 enum Windows.Gaming.Input.GameControllerSwitchPosition python_type
     py GameControllerSwitchPosition
     signature enum(Windows.Gaming.Input.GameControllerSwitchPosition;i4)
+    constant CENTER 0
+    constant UP 1
+    constant UP_RIGHT 2
+    constant RIGHT 3
+    constant DOWN_RIGHT 4
+    constant DOWN 5
+    constant DOWN_LEFT 6
+    constant LEFT 7
+    constant UP_LEFT 8
 
 class Windows.Gaming.Input.Gamepad python_type
     py Gamepad
@@ -311,9 +408,28 @@ class Windows.Gaming.Input.Gamepad python_type
         method TryGetBatteryReport slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameControllerBatteryInfo shape=4 reverse=22
             out class type=Windows.Devices.Power.BatteryReport return
 
-enum Windows.Gaming.Input.GamepadButtons python_type
+enum Windows.Gaming.Input.GamepadButtons python_type flags_enum
     py GamepadButtons
     signature enum(Windows.Gaming.Input.GamepadButtons;u4)
+    constant NONE 0x0
+    constant MENU 0x1
+    constant VIEW 0x2
+    constant A 0x4
+    constant B 0x8
+    constant X 0x10
+    constant Y 0x20
+    constant D_PAD_UP 0x40
+    constant D_PAD_DOWN 0x80
+    constant D_PAD_LEFT 0x100
+    constant D_PAD_RIGHT 0x200
+    constant LEFT_SHOULDER 0x400
+    constant RIGHT_SHOULDER 0x800
+    constant LEFT_THUMBSTICK 0x1000
+    constant RIGHT_THUMBSTICK 0x2000
+    constant PADDLE1 0x4000
+    constant PADDLE2 0x8000
+    constant PADDLE3 0x10000
+    constant PADDLE4 0x20000
 
 struct Windows.Gaming.Input.GamepadReading python_type
     py GamepadReading
@@ -912,9 +1028,22 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavi
             out uint32 name=index
             out boolean return
 
-enum Windows.Gaming.Input.OptionalUINavigationButtons python_type
+enum Windows.Gaming.Input.OptionalUINavigationButtons python_type flags_enum
     py OptionalUINavigationButtons
     signature enum(Windows.Gaming.Input.OptionalUINavigationButtons;u4)
+    constant NONE 0x0
+    constant CONTEXT1 0x1
+    constant CONTEXT2 0x2
+    constant CONTEXT3 0x4
+    constant CONTEXT4 0x8
+    constant PAGE_UP 0x10
+    constant PAGE_DOWN 0x20
+    constant PAGE_LEFT 0x40
+    constant PAGE_RIGHT 0x80
+    constant SCROLL_UP 0x100
+    constant SCROLL_DOWN 0x200
+    constant SCROLL_LEFT 0x400
+    constant SCROLL_RIGHT 0x800
 
 class Windows.Gaming.Input.RacingWheel python_type
     py RacingWheel
@@ -1000,9 +1129,32 @@ class Windows.Gaming.Input.RacingWheel python_type
         method TryGetBatteryReport slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameControllerBatteryInfo shape=4 reverse=22
             out class type=Windows.Devices.Power.BatteryReport return
 
-enum Windows.Gaming.Input.RacingWheelButtons python_type
+enum Windows.Gaming.Input.RacingWheelButtons python_type flags_enum
     py RacingWheelButtons
     signature enum(Windows.Gaming.Input.RacingWheelButtons;u4)
+    constant NONE 0x0
+    constant PREVIOUS_GEAR 0x1
+    constant NEXT_GEAR 0x2
+    constant D_PAD_UP 0x4
+    constant D_PAD_DOWN 0x8
+    constant D_PAD_LEFT 0x10
+    constant D_PAD_RIGHT 0x20
+    constant BUTTON1 0x40
+    constant BUTTON2 0x80
+    constant BUTTON3 0x100
+    constant BUTTON4 0x200
+    constant BUTTON5 0x400
+    constant BUTTON6 0x800
+    constant BUTTON7 0x1000
+    constant BUTTON8 0x2000
+    constant BUTTON9 0x4000
+    constant BUTTON10 0x8000
+    constant BUTTON11 0x10000
+    constant BUTTON12 0x20000
+    constant BUTTON13 0x40000
+    constant BUTTON14 0x80000
+    constant BUTTON15 0x100000
+    constant BUTTON16 0x200000
 
 struct Windows.Gaming.Input.RacingWheelReading python_type
     py RacingWheelReading
@@ -1116,9 +1268,18 @@ class Windows.Gaming.Input.RawGameController python_type
         method TryGetBatteryReport slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameControllerBatteryInfo shape=4 reverse=22
             out class type=Windows.Devices.Power.BatteryReport return
 
-enum Windows.Gaming.Input.RequiredUINavigationButtons python_type
+enum Windows.Gaming.Input.RequiredUINavigationButtons python_type flags_enum
     py RequiredUINavigationButtons
     signature enum(Windows.Gaming.Input.RequiredUINavigationButtons;u4)
+    constant NONE 0x0
+    constant MENU 0x1
+    constant VIEW 0x2
+    constant ACCEPT 0x4
+    constant CANCEL 0x8
+    constant UP 0x10
+    constant DOWN 0x20
+    constant LEFT 0x40
+    constant RIGHT 0x80
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Gaming.Input.IGameController,Windows.Gaming.Input.Headset> concrete
     py winrt.windows.foundation.TypedEventHandler[IGameController, Headset]

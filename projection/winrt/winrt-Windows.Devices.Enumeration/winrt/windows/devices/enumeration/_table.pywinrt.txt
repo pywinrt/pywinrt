@@ -168,10 +168,21 @@ class Windows.Devices.Enumeration.DeviceAccessInformation python_type
 enum Windows.Devices.Enumeration.DeviceAccessStatus python_type
     py DeviceAccessStatus
     signature enum(Windows.Devices.Enumeration.DeviceAccessStatus;i4)
+    constant UNSPECIFIED 0
+    constant ALLOWED 1
+    constant DENIED_BY_USER 2
+    constant DENIED_BY_SYSTEM 3
 
 enum Windows.Devices.Enumeration.DeviceClass python_type
     py DeviceClass
     signature enum(Windows.Devices.Enumeration.DeviceClass;i4)
+    constant ALL 0
+    constant AUDIO_CAPTURE 1
+    constant AUDIO_RENDER 2
+    constant PORTABLE_STORAGE_DEVICE 3
+    constant VIDEO_CAPTURE 4
+    constant IMAGE_SCANNER 5
+    constant LOCATION 6
 
 class Windows.Devices.Enumeration.DeviceConnectionChangeTriggerDetails python_type
     py DeviceConnectionChangeTriggerDetails
@@ -373,6 +384,16 @@ class Windows.Devices.Enumeration.DeviceInformationCustomPairing python_type
 enum Windows.Devices.Enumeration.DeviceInformationKind python_type
     py DeviceInformationKind
     signature enum(Windows.Devices.Enumeration.DeviceInformationKind;i4)
+    constant UNKNOWN 0
+    constant DEVICE_INTERFACE 1
+    constant DEVICE_CONTAINER 2
+    constant DEVICE 3
+    constant DEVICE_INTERFACE_CLASS 4
+    constant ASSOCIATION_ENDPOINT 5
+    constant ASSOCIATION_ENDPOINT_CONTAINER 6
+    constant ASSOCIATION_ENDPOINT_SERVICE 7
+    constant DEVICE_PANEL 8
+    constant ASSOCIATION_ENDPOINT_PROTOCOL 9
 
 class Windows.Devices.Enumeration.DeviceInformationPairing python_type
     py DeviceInformationPairing
@@ -436,14 +457,31 @@ class Windows.Devices.Enumeration.DeviceInformationUpdate python_type
 enum Windows.Devices.Enumeration.DevicePairingAddPairingSetMemberStatus python_type
     py DevicePairingAddPairingSetMemberStatus
     signature enum(Windows.Devices.Enumeration.DevicePairingAddPairingSetMemberStatus;i4)
+    constant ADDED_TO_SET 0
+    constant COULD_NOT_BE_ADDED_TO_SET 1
+    constant SET_DISCOVERY_NOT_ATTEMPTED_BY_PROTOCOL 2
+    constant SET_DISCOVERY_COMPLETED_BY_PROTOCOL 3
+    constant SET_DISCOVERY_PARTIALLY_COMPLETED_BY_PROTOCOL 4
+    constant FAILED 5
 
-enum Windows.Devices.Enumeration.DevicePairingKinds python_type
+enum Windows.Devices.Enumeration.DevicePairingKinds python_type flags_enum
     py DevicePairingKinds
     signature enum(Windows.Devices.Enumeration.DevicePairingKinds;u4)
+    constant NONE 0x0
+    constant CONFIRM_ONLY 0x1
+    constant DISPLAY_PIN 0x2
+    constant PROVIDE_PIN 0x4
+    constant CONFIRM_PIN_MATCH 0x8
+    constant PROVIDE_PASSWORD_CREDENTIAL 0x10
+    constant PROVIDE_ADDRESS 0x20
 
 enum Windows.Devices.Enumeration.DevicePairingProtectionLevel python_type
     py DevicePairingProtectionLevel
     signature enum(Windows.Devices.Enumeration.DevicePairingProtectionLevel;i4)
+    constant DEFAULT 0
+    constant NONE 1
+    constant ENCRYPTION 2
+    constant ENCRYPTION_AND_AUTHENTICATION 3
 
 class Windows.Devices.Enumeration.DevicePairingRequestedEventArgs python_type
     py DevicePairingRequestedEventArgs
@@ -490,6 +528,26 @@ class Windows.Devices.Enumeration.DevicePairingResult python_type
 enum Windows.Devices.Enumeration.DevicePairingResultStatus python_type
     py DevicePairingResultStatus
     signature enum(Windows.Devices.Enumeration.DevicePairingResultStatus;i4)
+    constant PAIRED 0
+    constant NOT_READY_TO_PAIR 1
+    constant NOT_PAIRED 2
+    constant ALREADY_PAIRED 3
+    constant CONNECTION_REJECTED 4
+    constant TOO_MANY_CONNECTIONS 5
+    constant HARDWARE_FAILURE 6
+    constant AUTHENTICATION_TIMEOUT 7
+    constant AUTHENTICATION_NOT_ALLOWED 8
+    constant AUTHENTICATION_FAILURE 9
+    constant NO_SUPPORTED_PROFILES 10
+    constant PROTECTION_LEVEL_COULD_NOT_BE_MET 11
+    constant ACCESS_DENIED 12
+    constant INVALID_CEREMONY_DATA 13
+    constant PAIRING_CANCELED 14
+    constant OPERATION_ALREADY_IN_PROGRESS 15
+    constant REQUIRED_HANDLER_NOT_REGISTERED 16
+    constant REJECTED_BY_HANDLER 17
+    constant REMOTE_DEVICE_HAS_ASSOCIATION 18
+    constant FAILED 19
 
 class Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs python_type
     py DevicePairingSetMembersRequestedEventArgs
@@ -604,9 +662,13 @@ class Windows.Devices.Enumeration.DevicePickerAppearance python_type
         put put_AccentColor slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.IDevicePickerAppearance shape=29
             in struct type=Windows.UI.Color name=value
 
-enum Windows.Devices.Enumeration.DevicePickerDisplayStatusOptions python_type
+enum Windows.Devices.Enumeration.DevicePickerDisplayStatusOptions python_type flags_enum
     py DevicePickerDisplayStatusOptions
     signature enum(Windows.Devices.Enumeration.DevicePickerDisplayStatusOptions;u4)
+    constant NONE 0x0
+    constant SHOW_PROGRESS 0x1
+    constant SHOW_DISCONNECT_BUTTON 0x2
+    constant SHOW_RETRY_BUTTON 0x4
 
 class Windows.Devices.Enumeration.DevicePickerFilter python_type
     py DevicePickerFilter
@@ -698,6 +760,11 @@ class Windows.Devices.Enumeration.DeviceUnpairingResult python_type
 enum Windows.Devices.Enumeration.DeviceUnpairingResultStatus python_type
     py DeviceUnpairingResultStatus
     signature enum(Windows.Devices.Enumeration.DeviceUnpairingResultStatus;i4)
+    constant UNPAIRED 0
+    constant ALREADY_UNPAIRED 1
+    constant OPERATION_ALREADY_IN_PROGRESS 2
+    constant ACCESS_DENIED 3
+    constant FAILED 4
 
 class Windows.Devices.Enumeration.DeviceWatcher python_type
     py DeviceWatcher
@@ -765,10 +832,19 @@ class Windows.Devices.Enumeration.DeviceWatcherEvent python_type
 enum Windows.Devices.Enumeration.DeviceWatcherEventKind python_type
     py DeviceWatcherEventKind
     signature enum(Windows.Devices.Enumeration.DeviceWatcherEventKind;i4)
+    constant ADD 0
+    constant UPDATE 1
+    constant REMOVE 2
 
 enum Windows.Devices.Enumeration.DeviceWatcherStatus python_type
     py DeviceWatcherStatus
     signature enum(Windows.Devices.Enumeration.DeviceWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPING 3
+    constant STOPPED 4
+    constant ABORTED 5
 
 class Windows.Devices.Enumeration.DeviceWatcherTriggerDetails python_type
     py DeviceWatcherTriggerDetails
@@ -1606,6 +1682,13 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration
 enum Windows.Devices.Enumeration.Panel python_type
     py Panel
     signature enum(Windows.Devices.Enumeration.Panel;i4)
+    constant UNKNOWN 0
+    constant FRONT 1
+    constant BACK 2
+    constant TOP 3
+    constant BOTTOM 4
+    constant LEFT 5
+    constant RIGHT 6
 
 enum T parameterized
 

@@ -179,13 +179,23 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter act
         get get_BytePatterns slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementFilter shape=4 reverse=62
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> return
 
-enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFlags python_type
+enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFlags python_type flags_enum
     py BluetoothLEAdvertisementFlags
     signature enum(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFlags;u4)
+    constant NONE 0x0
+    constant LIMITED_DISCOVERABLE_MODE 0x1
+    constant GENERAL_DISCOVERABLE_MODE 0x2
+    constant CLASSIC_NOT_SUPPORTED 0x4
+    constant DUAL_MODE_CONTROLLER_CAPABLE 0x8
+    constant DUAL_MODE_HOST_CAPABLE 0x10
 
 enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType python_type
     py BluetoothLEAdvertisementPhyType
     signature enum(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType;i4)
+    constant UNSPECIFIED 0
+    constant UNCODED1_M_PHY 1
+    constant UNCODED2_M_PHY 2
+    constant CODED_PHY 3
 
 class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher activatable python_type
     py BluetoothLEAdvertisementPublisher
@@ -251,6 +261,12 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher 
 enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatus python_type
     py BluetoothLEAdvertisementPublisherStatus
     signature enum(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatus;i4)
+    constant CREATED 0
+    constant WAITING 1
+    constant STARTED 2
+    constant STOPPING 3
+    constant STOPPED 4
+    constant ABORTED 5
 
 class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs python_type
     py BluetoothLEAdvertisementPublisherStatusChangedEventArgs
@@ -340,6 +356,12 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParame
 enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementType python_type
     py BluetoothLEAdvertisementType
     signature enum(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementType;i4)
+    constant CONNECTABLE_UNDIRECTED 0
+    constant CONNECTABLE_DIRECTED 1
+    constant SCANNABLE_UNDIRECTED 2
+    constant NON_CONNECTABLE_UNDIRECTED 3
+    constant SCAN_RESPONSE 4
+    constant EXTENDED 5
 
 class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher activatable python_type
     py BluetoothLEAdvertisementWatcher
@@ -430,6 +452,11 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher ac
 enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStatus python_type
     py BluetoothLEAdvertisementWatcherStatus
     signature enum(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant STOPPING 2
+    constant STOPPED 3
+    constant ABORTED 4
 
 class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs python_type
     py BluetoothLEAdvertisementWatcherStoppedEventArgs
@@ -467,6 +494,9 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData activa
 enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEScanningMode python_type
     py BluetoothLEScanningMode
     signature enum(Windows.Devices.Bluetooth.Advertisement.BluetoothLEScanningMode;i4)
+    constant PASSIVE 0
+    constant ACTIVE 1
+    constant NONE 2
 
 interface Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement
     guid 066fb2b7-33d1-4e7d-8367-cf81d0f79653

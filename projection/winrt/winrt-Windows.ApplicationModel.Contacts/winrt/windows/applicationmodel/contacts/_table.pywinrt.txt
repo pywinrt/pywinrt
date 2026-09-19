@@ -468,6 +468,9 @@ class Windows.ApplicationModel.Contacts.ContactAddress activatable python_type
 enum Windows.ApplicationModel.Contacts.ContactAddressKind python_type
     py ContactAddressKind
     signature enum(Windows.ApplicationModel.Contacts.ContactAddressKind;i4)
+    constant HOME 0
+    constant WORK 1
+    constant OTHER 2
 
 class Windows.ApplicationModel.Contacts.ContactAnnotation activatable python_type
     py ContactAnnotation
@@ -548,9 +551,16 @@ class Windows.ApplicationModel.Contacts.ContactAnnotationList python_type
             in class type=Windows.ApplicationModel.Contacts.ContactAnnotation name=annotation
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
-enum Windows.ApplicationModel.Contacts.ContactAnnotationOperations python_type
+enum Windows.ApplicationModel.Contacts.ContactAnnotationOperations python_type flags_enum
     py ContactAnnotationOperations
     signature enum(Windows.ApplicationModel.Contacts.ContactAnnotationOperations;u4)
+    constant NONE 0x0
+    constant CONTACT_PROFILE 0x1
+    constant MESSAGE 0x2
+    constant AUDIO_CALL 0x4
+    constant VIDEO_CALL 0x8
+    constant SOCIAL_FEEDS 0x10
+    constant SHARE 0x20
 
 class Windows.ApplicationModel.Contacts.ContactAnnotationStore python_type
     py ContactAnnotationStore
@@ -595,6 +605,8 @@ class Windows.ApplicationModel.Contacts.ContactAnnotationStore python_type
 enum Windows.ApplicationModel.Contacts.ContactAnnotationStoreAccessType python_type
     py ContactAnnotationStoreAccessType
     signature enum(Windows.ApplicationModel.Contacts.ContactAnnotationStoreAccessType;i4)
+    constant APP_ANNOTATIONS_READ_WRITE 0
+    constant ALL_ANNOTATIONS_READ_WRITE 1
 
 class Windows.ApplicationModel.Contacts.ContactBatch python_type
     py ContactBatch
@@ -611,6 +623,9 @@ class Windows.ApplicationModel.Contacts.ContactBatch python_type
 enum Windows.ApplicationModel.Contacts.ContactBatchStatus python_type
     py ContactBatchStatus
     signature enum(Windows.ApplicationModel.Contacts.ContactBatchStatus;i4)
+    constant SUCCESS 0
+    constant SERVER_SEARCH_SYNC_MANAGER_ERROR 1
+    constant SERVER_SEARCH_UNKNOWN_ERROR 2
 
 class Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader python_type closeable
     py ContactCardDelayedDataLoader
@@ -627,6 +642,9 @@ class Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader python_type
 enum Windows.ApplicationModel.Contacts.ContactCardHeaderKind python_type
     py ContactCardHeaderKind
     signature enum(Windows.ApplicationModel.Contacts.ContactCardHeaderKind;i4)
+    constant DEFAULT 0
+    constant BASIC 1
+    constant ENTERPRISE 2
 
 class Windows.ApplicationModel.Contacts.ContactCardOptions activatable python_type
     py ContactCardOptions
@@ -654,6 +672,12 @@ class Windows.ApplicationModel.Contacts.ContactCardOptions activatable python_ty
 enum Windows.ApplicationModel.Contacts.ContactCardTabKind python_type
     py ContactCardTabKind
     signature enum(Windows.ApplicationModel.Contacts.ContactCardTabKind;i4)
+    constant DEFAULT 0
+    constant EMAIL 1
+    constant MESSAGING 2
+    constant PHONE 3
+    constant VIDEO 4
+    constant ORGANIZATIONAL_HIERARCHY 5
 
 class Windows.ApplicationModel.Contacts.ContactChange python_type
     py ContactChange
@@ -701,6 +725,10 @@ class Windows.ApplicationModel.Contacts.ContactChangeTracker python_type
 enum Windows.ApplicationModel.Contacts.ContactChangeType python_type
     py ContactChangeType
     signature enum(Windows.ApplicationModel.Contacts.ContactChangeType;i4)
+    constant CREATED 0
+    constant MODIFIED 1
+    constant DELETED 2
+    constant CHANGE_TRACKING_LOST 3
 
 class Windows.ApplicationModel.Contacts.ContactChangedDeferral python_type
     py ContactChangedDeferral
@@ -775,6 +803,9 @@ class Windows.ApplicationModel.Contacts.ContactDate activatable python_type
 enum Windows.ApplicationModel.Contacts.ContactDateKind python_type
     py ContactDateKind
     signature enum(Windows.ApplicationModel.Contacts.ContactDateKind;i4)
+    constant BIRTHDAY 0
+    constant ANNIVERSARY 1
+    constant OTHER 2
 
 class Windows.ApplicationModel.Contacts.ContactEmail activatable python_type
     py ContactEmail
@@ -803,6 +834,9 @@ class Windows.ApplicationModel.Contacts.ContactEmail activatable python_type
 enum Windows.ApplicationModel.Contacts.ContactEmailKind python_type
     py ContactEmailKind
     signature enum(Windows.ApplicationModel.Contacts.ContactEmailKind;i4)
+    constant PERSONAL 0
+    constant WORK 1
+    constant OTHER 2
 
 class Windows.ApplicationModel.Contacts.ContactField python_type
     py ContactField
@@ -842,6 +876,11 @@ class Windows.ApplicationModel.Contacts.ContactField python_type
 enum Windows.ApplicationModel.Contacts.ContactFieldCategory python_type
     py ContactFieldCategory
     signature enum(Windows.ApplicationModel.Contacts.ContactFieldCategory;i4)
+    constant NONE 0
+    constant HOME 1
+    constant WORK 2
+    constant MOBILE 3
+    constant OTHER 4
 
 class Windows.ApplicationModel.Contacts.ContactFieldFactory activatable python_type
     py ContactFieldFactory
@@ -905,6 +944,18 @@ class Windows.ApplicationModel.Contacts.ContactFieldFactory activatable python_t
 enum Windows.ApplicationModel.Contacts.ContactFieldType python_type
     py ContactFieldType
     signature enum(Windows.ApplicationModel.Contacts.ContactFieldType;i4)
+    constant EMAIL 0
+    constant PHONE_NUMBER 1
+    constant LOCATION 2
+    constant INSTANT_MESSAGE 3
+    constant CUSTOM 4
+    constant CONNECTED_SERVICE_ACCOUNT 5
+    constant IMPORTANT_DATE 6
+    constant ADDRESS 7
+    constant SIGNIFICANT_OTHER 8
+    constant NOTES 9
+    constant WEBSITE 10
+    constant JOB_INFO 11
 
 class Windows.ApplicationModel.Contacts.ContactGroup python_type
     py ContactGroup
@@ -1173,10 +1224,17 @@ class Windows.ApplicationModel.Contacts.ContactListLimitedWriteOperations python
 enum Windows.ApplicationModel.Contacts.ContactListOtherAppReadAccess python_type
     py ContactListOtherAppReadAccess
     signature enum(Windows.ApplicationModel.Contacts.ContactListOtherAppReadAccess;i4)
+    constant SYSTEM_ONLY 0
+    constant LIMITED 1
+    constant FULL 2
+    constant NONE 3
 
 enum Windows.ApplicationModel.Contacts.ContactListOtherAppWriteAccess python_type
     py ContactListOtherAppWriteAccess
     signature enum(Windows.ApplicationModel.Contacts.ContactListOtherAppWriteAccess;i4)
+    constant NONE 0
+    constant SYSTEM_ONLY 1
+    constant LIMITED 2
 
 class Windows.ApplicationModel.Contacts.ContactListSyncConstraints python_type
     py ContactListSyncConstraints
@@ -1358,6 +1416,13 @@ class Windows.ApplicationModel.Contacts.ContactListSyncManager python_type
 enum Windows.ApplicationModel.Contacts.ContactListSyncStatus python_type
     py ContactListSyncStatus
     signature enum(Windows.ApplicationModel.Contacts.ContactListSyncStatus;i4)
+    constant IDLE 0
+    constant SYNCING 1
+    constant UP_TO_DATE 2
+    constant AUTHENTICATION_ERROR 3
+    constant POLICY_ERROR 4
+    constant UNKNOWN_ERROR 5
+    constant MANUAL_ACCOUNT_REMOVAL_REQUIRED 6
 
 class Windows.ApplicationModel.Contacts.ContactLocationField python_type
     py ContactLocationField
@@ -1563,10 +1628,18 @@ class Windows.ApplicationModel.Contacts.ContactMatchReason python_type
 enum Windows.ApplicationModel.Contacts.ContactMatchReasonKind python_type
     py ContactMatchReasonKind
     signature enum(Windows.ApplicationModel.Contacts.ContactMatchReasonKind;i4)
+    constant NAME 0
+    constant EMAIL_ADDRESS 1
+    constant PHONE_NUMBER 2
+    constant JOB_INFO 3
+    constant YOMI_NAME 4
+    constant OTHER 5
 
 enum Windows.ApplicationModel.Contacts.ContactNameOrder python_type
     py ContactNameOrder
     signature enum(Windows.ApplicationModel.Contacts.ContactNameOrder;i4)
+    constant FIRST_NAME_LAST_NAME 0
+    constant LAST_NAME_FIRST_NAME 1
 
 class Windows.ApplicationModel.Contacts.ContactPanel python_type
     py ContactPanel
@@ -1640,6 +1713,16 @@ class Windows.ApplicationModel.Contacts.ContactPhone activatable python_type
 enum Windows.ApplicationModel.Contacts.ContactPhoneKind python_type
     py ContactPhoneKind
     signature enum(Windows.ApplicationModel.Contacts.ContactPhoneKind;i4)
+    constant HOME 0
+    constant MOBILE 1
+    constant WORK 2
+    constant OTHER 3
+    constant PAGER 4
+    constant BUSINESS_FAX 5
+    constant HOME_FAX 6
+    constant COMPANY 7
+    constant ASSISTANT 8
+    constant RADIO 9
 
 class Windows.ApplicationModel.Contacts.ContactPicker activatable python_type
     py ContactPicker
@@ -1691,9 +1774,13 @@ class Windows.ApplicationModel.Contacts.ContactPicker activatable python_type
         method PickSingleContactAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactPicker shape=4 reverse=141
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactInformation> return
 
-enum Windows.ApplicationModel.Contacts.ContactQueryDesiredFields python_type
+enum Windows.ApplicationModel.Contacts.ContactQueryDesiredFields python_type flags_enum
     py ContactQueryDesiredFields
     signature enum(Windows.ApplicationModel.Contacts.ContactQueryDesiredFields;u4)
+    constant NONE 0x0
+    constant PHONE_NUMBER 0x1
+    constant EMAIL_ADDRESS 0x2
+    constant POSTAL_ADDRESS 0x4
 
 class Windows.ApplicationModel.Contacts.ContactQueryOptions activatable python_type
     py ContactQueryOptions
@@ -1736,13 +1823,20 @@ class Windows.ApplicationModel.Contacts.ContactQueryOptions activatable python_t
         get get_TextSearch slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptions shape=4 reverse=22
             out class type=Windows.ApplicationModel.Contacts.ContactQueryTextSearch return
 
-enum Windows.ApplicationModel.Contacts.ContactQuerySearchFields python_type
+enum Windows.ApplicationModel.Contacts.ContactQuerySearchFields python_type flags_enum
     py ContactQuerySearchFields
     signature enum(Windows.ApplicationModel.Contacts.ContactQuerySearchFields;u4)
+    constant NONE 0x0
+    constant NAME 0x1
+    constant EMAIL 0x2
+    constant PHONE 0x4
+    constant ALL 0xFFFFFFFF
 
 enum Windows.ApplicationModel.Contacts.ContactQuerySearchScope python_type
     py ContactQuerySearchScope
     signature enum(Windows.ApplicationModel.Contacts.ContactQuerySearchScope;i4)
+    constant LOCAL 0
+    constant SERVER 1
 
 class Windows.ApplicationModel.Contacts.ContactQueryTextSearch python_type
     py ContactQueryTextSearch
@@ -1781,10 +1875,18 @@ class Windows.ApplicationModel.Contacts.ContactReader python_type
 enum Windows.ApplicationModel.Contacts.ContactRelationship python_type
     py ContactRelationship
     signature enum(Windows.ApplicationModel.Contacts.ContactRelationship;i4)
+    constant OTHER 0
+    constant SPOUSE 1
+    constant PARTNER 2
+    constant SIBLING 3
+    constant PARENT 4
+    constant CHILD 5
 
 enum Windows.ApplicationModel.Contacts.ContactSelectionMode python_type
     py ContactSelectionMode
     signature enum(Windows.ApplicationModel.Contacts.ContactSelectionMode;i4)
+    constant CONTACTS 0
+    constant FIELDS 1
 
 class Windows.ApplicationModel.Contacts.ContactSignificantOther activatable python_type
     py ContactSignificantOther
@@ -1872,6 +1974,9 @@ class Windows.ApplicationModel.Contacts.ContactStore python_type
 enum Windows.ApplicationModel.Contacts.ContactStoreAccessType python_type
     py ContactStoreAccessType
     signature enum(Windows.ApplicationModel.Contacts.ContactStoreAccessType;i4)
+    constant APP_CONTACTS_READ_WRITE 0
+    constant ALL_CONTACTS_READ_ONLY 1
+    constant ALL_CONTACTS_READ_WRITE 2
 
 class Windows.ApplicationModel.Contacts.ContactStoreNotificationTriggerDetails python_type
     py ContactStoreNotificationTriggerDetails
@@ -5161,6 +5266,8 @@ class Windows.ApplicationModel.Contacts.PinnedContactManager python_type
 enum Windows.ApplicationModel.Contacts.PinnedContactSurface python_type
     py PinnedContactSurface
     signature enum(Windows.ApplicationModel.Contacts.PinnedContactSurface;i4)
+    constant START_MENU 0
+    constant TASKBAR 1
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.ContactList,Windows.ApplicationModel.Contacts.ContactChangedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[ContactList, ContactChangedEventArgs]

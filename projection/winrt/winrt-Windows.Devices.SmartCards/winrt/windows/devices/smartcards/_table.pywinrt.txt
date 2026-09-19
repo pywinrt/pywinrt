@@ -1969,6 +1969,8 @@ class Windows.Devices.SmartCards.SmartCard python_type
 enum Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult python_type
     py SmartCardActivationPolicyChangeResult
     signature enum(Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult;i4)
+    constant DENIED 0
+    constant ALLOWED 1
 
 class Windows.Devices.SmartCards.SmartCardAppletIdGroup activatable python_type
     py SmartCardAppletIdGroup
@@ -2035,6 +2037,9 @@ class Windows.Devices.SmartCards.SmartCardAppletIdGroup activatable python_type
 enum Windows.Devices.SmartCards.SmartCardAppletIdGroupActivationPolicy python_type
     py SmartCardAppletIdGroupActivationPolicy
     signature enum(Windows.Devices.SmartCards.SmartCardAppletIdGroupActivationPolicy;i4)
+    constant DISABLED 0
+    constant FOREGROUND_OVERRIDE 1
+    constant ENABLED 2
 
 class Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration python_type
     py SmartCardAppletIdGroupRegistration
@@ -2124,6 +2129,9 @@ class Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu python_type
 enum Windows.Devices.SmartCards.SmartCardAutomaticResponseStatus python_type
     py SmartCardAutomaticResponseStatus
     signature enum(Windows.Devices.SmartCards.SmartCardAutomaticResponseStatus;i4)
+    constant NONE 0
+    constant SUCCESS 1
+    constant UNKNOWN_ERROR 2
 
 class Windows.Devices.SmartCards.SmartCardChallengeContext python_type closeable
     py SmartCardChallengeContext
@@ -2172,6 +2180,15 @@ class Windows.Devices.SmartCards.SmartCardConnection python_type closeable
 enum Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm python_type
     py SmartCardCryptogramAlgorithm
     signature enum(Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm;i4)
+    constant NONE 0
+    constant CBC_MAC 1
+    constant CVC3_UMD 2
+    constant DECIMALIZED_MSD 3
+    constant CVC3_M_D 4
+    constant SHA1 5
+    constant SIGNED_DYNAMIC_APPLICATION_DATA 6
+    constant RSA_PKCS1 7
+    constant SHA256_HMAC 8
 
 class Windows.Devices.SmartCards.SmartCardCryptogramGenerator python_type
     py SmartCardCryptogramGenerator
@@ -2266,6 +2283,20 @@ class Windows.Devices.SmartCards.SmartCardCryptogramGenerator python_type
 enum Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus python_type
     py SmartCardCryptogramGeneratorOperationStatus
     signature enum(Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus;i4)
+    constant SUCCESS 0
+    constant AUTHORIZATION_FAILED 1
+    constant AUTHORIZATION_CANCELED 2
+    constant AUTHORIZATION_REQUIRED 3
+    constant CRYPTOGRAM_MATERIAL_PACKAGE_STORAGE_KEY_EXISTS 4
+    constant NO_CRYPTOGRAM_MATERIAL_PACKAGE_STORAGE_KEY 5
+    constant NO_CRYPTOGRAM_MATERIAL_PACKAGE 6
+    constant UNSUPPORTED_CRYPTOGRAM_MATERIAL_PACKAGE 7
+    constant UNKNOWN_CRYPTOGRAM_MATERIAL_NAME 8
+    constant INVALID_CRYPTOGRAM_MATERIAL_USAGE 9
+    constant APDU_RESPONSE_NOT_SENT 10
+    constant OTHER_ERROR 11
+    constant VALIDATION_FAILED 12
+    constant NOT_SUPPORTED 13
 
 class Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult activatable python_type
     py SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult
@@ -2369,10 +2400,14 @@ class Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageCharacteristi
 enum Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat python_type
     py SmartCardCryptogramMaterialPackageConfirmationResponseFormat
     signature enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat;i4)
+    constant NONE 0
+    constant VISA_HMAC 1
 
 enum Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat python_type
     py SmartCardCryptogramMaterialPackageFormat
     signature enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialPackageFormat;i4)
+    constant NONE 0
+    constant JWE_RSA_PKI 1
 
 class Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof python_type
     py SmartCardCryptogramMaterialPossessionProof
@@ -2389,14 +2424,24 @@ class Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof pyth
 enum Windows.Devices.SmartCards.SmartCardCryptogramMaterialProtectionMethod python_type
     py SmartCardCryptogramMaterialProtectionMethod
     signature enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialProtectionMethod;i4)
+    constant NONE 0
+    constant WHITE_BOXING 1
 
 enum Windows.Devices.SmartCards.SmartCardCryptogramMaterialType python_type
     py SmartCardCryptogramMaterialType
     signature enum(Windows.Devices.SmartCards.SmartCardCryptogramMaterialType;i4)
+    constant NONE 0
+    constant STATIC_DATA_AUTHENTICATION 1
+    constant TRIPLE_DES112 2
+    constant AES 3
+    constant RSA_PKCS1 4
 
-enum Windows.Devices.SmartCards.SmartCardCryptogramPlacementOptions python_type
+enum Windows.Devices.SmartCards.SmartCardCryptogramPlacementOptions python_type flags_enum
     py SmartCardCryptogramPlacementOptions
     signature enum(Windows.Devices.SmartCards.SmartCardCryptogramPlacementOptions;u4)
+    constant NONE 0x0
+    constant UNITS_ARE_IN_NIBBLES 0x1
+    constant CHAIN_OUTPUT 0x2
 
 class Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep activatable python_type
     py SmartCardCryptogramPlacementStep
@@ -2455,10 +2500,15 @@ class Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep activatable py
 enum Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyAlgorithm python_type
     py SmartCardCryptogramStorageKeyAlgorithm
     signature enum(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyAlgorithm;i4)
+    constant NONE 0
+    constant RSA2048 1
 
-enum Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities python_type
+enum Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities python_type flags_enum
     py SmartCardCryptogramStorageKeyCapabilities
     signature enum(Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities;u4)
+    constant NONE 0x0
+    constant HARDWARE_PROTECTION 0x1
+    constant UNLOCK_PROMPT 0x2
 
 class Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCharacteristics activatable python_type
     py SmartCardCryptogramStorageKeyCharacteristics
@@ -2515,14 +2565,27 @@ class Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo python_type
 enum Windows.Devices.SmartCards.SmartCardCryptographicKeyAttestationStatus python_type
     py SmartCardCryptographicKeyAttestationStatus
     signature enum(Windows.Devices.SmartCards.SmartCardCryptographicKeyAttestationStatus;i4)
+    constant NO_ATTESTATION 0
+    constant SOFTWARE_KEY_WITHOUT_TPM 1
+    constant SOFTWARE_KEY_WITH_TPM 2
+    constant TPM_KEY_UNKNOWN_ATTESTATION_STATUS 3
+    constant TPM_KEY_WITHOUT_ATTESTATION_CAPABILITY 4
+    constant TPM_KEY_WITH_TEMPORARY_ATTESTATION_FAILURE 5
+    constant TPM_KEY_WITH_LONG_TERM_ATTESTATION_FAILURE 6
+    constant TPM_KEY_WITH_ATTESTATION 7
 
 enum Windows.Devices.SmartCards.SmartCardEmulationCategory python_type
     py SmartCardEmulationCategory
     signature enum(Windows.Devices.SmartCards.SmartCardEmulationCategory;i4)
+    constant OTHER 0
+    constant PAYMENT 1
 
 enum Windows.Devices.SmartCards.SmartCardEmulationType python_type
     py SmartCardEmulationType
     signature enum(Windows.Devices.SmartCards.SmartCardEmulationType;i4)
+    constant HOST 0
+    constant UICC 1
+    constant EMBEDDED_S_E 2
 
 class Windows.Devices.SmartCards.SmartCardEmulator python_type
     py SmartCardEmulator
@@ -2627,6 +2690,8 @@ class Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs
 enum Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedReason python_type
     py SmartCardEmulatorConnectionDeactivatedReason
     signature enum(Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedReason;i4)
+    constant CONNECTION_LOST 0
+    constant CONNECTION_REDIRECTED 1
 
 class Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties python_type
     py SmartCardEmulatorConnectionProperties
@@ -2643,18 +2708,29 @@ class Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties python_ty
 enum Windows.Devices.SmartCards.SmartCardEmulatorConnectionSource python_type
     py SmartCardEmulatorConnectionSource
     signature enum(Windows.Devices.SmartCards.SmartCardEmulatorConnectionSource;i4)
+    constant UNKNOWN 0
+    constant NFC_READER 1
 
 enum Windows.Devices.SmartCards.SmartCardEmulatorEnablementPolicy python_type
     py SmartCardEmulatorEnablementPolicy
     signature enum(Windows.Devices.SmartCards.SmartCardEmulatorEnablementPolicy;i4)
+    constant NEVER 0
+    constant ALWAYS 1
+    constant SCREEN_ON 2
+    constant SCREEN_UNLOCKED 3
 
 enum Windows.Devices.SmartCards.SmartCardLaunchBehavior python_type
     py SmartCardLaunchBehavior
     signature enum(Windows.Devices.SmartCards.SmartCardLaunchBehavior;i4)
+    constant DEFAULT 0
+    constant ABOVE_LOCK 1
 
 enum Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption python_type
     py SmartCardPinCharacterPolicyOption
     signature enum(Windows.Devices.SmartCards.SmartCardPinCharacterPolicyOption;i4)
+    constant ALLOW 0
+    constant REQUIRE_AT_LEAST_ONE 1
+    constant DISALLOW 2
 
 class Windows.Devices.SmartCards.SmartCardPinPolicy activatable python_type
     py SmartCardPinPolicy
@@ -2840,14 +2916,28 @@ class Windows.Devices.SmartCards.SmartCardReader python_type
 enum Windows.Devices.SmartCards.SmartCardReaderKind python_type
     py SmartCardReaderKind
     signature enum(Windows.Devices.SmartCards.SmartCardReaderKind;i4)
+    constant ANY 0
+    constant GENERIC 1
+    constant TPM 2
+    constant NFC 3
+    constant UICC 4
+    constant EMBEDDED_S_E 5
 
 enum Windows.Devices.SmartCards.SmartCardReaderStatus python_type
     py SmartCardReaderStatus
     signature enum(Windows.Devices.SmartCards.SmartCardReaderStatus;i4)
+    constant DISCONNECTED 0
+    constant READY 1
+    constant EXCLUSIVE 2
 
 enum Windows.Devices.SmartCards.SmartCardStatus python_type
     py SmartCardStatus
     signature enum(Windows.Devices.SmartCards.SmartCardStatus;i4)
+    constant DISCONNECTED 0
+    constant READY 1
+    constant SHARED 2
+    constant EXCLUSIVE 3
+    constant UNRESPONSIVE 4
 
 class Windows.Devices.SmartCards.SmartCardTriggerDetails python_type
     py SmartCardTriggerDetails
@@ -2883,10 +2973,19 @@ class Windows.Devices.SmartCards.SmartCardTriggerDetails python_type
 enum Windows.Devices.SmartCards.SmartCardTriggerType python_type
     py SmartCardTriggerType
     signature enum(Windows.Devices.SmartCards.SmartCardTriggerType;i4)
+    constant EMULATOR_TRANSACTION 0
+    constant EMULATOR_NEAR_FIELD_ENTRY 1
+    constant EMULATOR_NEAR_FIELD_EXIT 2
+    constant EMULATOR_HOST_APPLICATION_ACTIVATED 3
+    constant EMULATOR_APPLET_ID_GROUP_REGISTRATION_CHANGED 4
+    constant READER_CARD_ADDED 5
 
 enum Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior python_type
     py SmartCardUnlockPromptingBehavior
     signature enum(Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior;i4)
+    constant ALLOW_UNLOCK_PROMPT 0
+    constant REQUIRE_UNLOCK_PROMPT 1
+    constant PREVENT_UNLOCK_PROMPT 2
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardEmulator,Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[SmartCardEmulator, SmartCardEmulatorApduReceivedEventArgs]

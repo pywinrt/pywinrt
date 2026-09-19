@@ -142,38 +142,118 @@ class Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults pytho
 enum Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult python_type
     py EasDisallowConvenienceLogonResult
     signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult;i4)
+    constant NOT_EVALUATED 0
+    constant COMPLIANT 1
+    constant CAN_BE_COMPLIANT 2
+    constant REQUESTED_POLICY_IS_STRICTER 3
 
 enum Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType python_type
     py EasEncryptionProviderType
     signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType;i4)
+    constant NOT_EVALUATED 0
+    constant WINDOWS_ENCRYPTION 1
+    constant OTHER_ENCRYPTION 2
 
 enum Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult python_type
     py EasMaxInactivityTimeLockResult
     signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult;i4)
+    constant NOT_EVALUATED 0
+    constant COMPLIANT 1
+    constant CAN_BE_COMPLIANT 2
+    constant REQUESTED_POLICY_IS_STRICTER 3
+    constant INVALID_PARAMETER 4
 
 enum Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult python_type
     py EasMaxPasswordFailedAttemptsResult
     signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult;i4)
+    constant NOT_EVALUATED 0
+    constant COMPLIANT 1
+    constant CAN_BE_COMPLIANT 2
+    constant REQUESTED_POLICY_IS_STRICTER 3
+    constant INVALID_PARAMETER 4
 
 enum Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult python_type
     py EasMinPasswordComplexCharactersResult
     signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult;i4)
+    constant NOT_EVALUATED 0
+    constant COMPLIANT 1
+    constant CAN_BE_COMPLIANT 2
+    constant REQUESTED_POLICY_IS_STRICTER 3
+    constant REQUESTED_POLICY_NOT_ENFORCEABLE 4
+    constant INVALID_PARAMETER 5
+    constant CURRENT_USER_HAS_BLANK_PASSWORD 6
+    constant ADMINS_HAVE_BLANK_PASSWORD 7
+    constant USER_CANNOT_CHANGE_PASSWORD 8
+    constant ADMINS_CANNOT_CHANGE_PASSWORD 9
+    constant LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD 10
+    constant CONNECTED_ADMINS_PROVIDER_POLICY_IS_WEAK 11
+    constant CONNECTED_USER_PROVIDER_POLICY_IS_WEAK 12
+    constant CHANGE_CONNECTED_ADMINS_PASSWORD 13
+    constant CHANGE_CONNECTED_USER_PASSWORD 14
 
 enum Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult python_type
     py EasMinPasswordLengthResult
     signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult;i4)
+    constant NOT_EVALUATED 0
+    constant COMPLIANT 1
+    constant CAN_BE_COMPLIANT 2
+    constant REQUESTED_POLICY_IS_STRICTER 3
+    constant REQUESTED_POLICY_NOT_ENFORCEABLE 4
+    constant INVALID_PARAMETER 5
+    constant CURRENT_USER_HAS_BLANK_PASSWORD 6
+    constant ADMINS_HAVE_BLANK_PASSWORD 7
+    constant USER_CANNOT_CHANGE_PASSWORD 8
+    constant ADMINS_CANNOT_CHANGE_PASSWORD 9
+    constant LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD 10
+    constant CONNECTED_ADMINS_PROVIDER_POLICY_IS_WEAK 11
+    constant CONNECTED_USER_PROVIDER_POLICY_IS_WEAK 12
+    constant CHANGE_CONNECTED_ADMINS_PASSWORD 13
+    constant CHANGE_CONNECTED_USER_PASSWORD 14
 
 enum Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult python_type
     py EasPasswordExpirationResult
     signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult;i4)
+    constant NOT_EVALUATED 0
+    constant COMPLIANT 1
+    constant CAN_BE_COMPLIANT 2
+    constant REQUESTED_POLICY_IS_STRICTER 3
+    constant REQUESTED_EXPIRATION_INCOMPATIBLE 4
+    constant INVALID_PARAMETER 5
+    constant USER_CANNOT_CHANGE_PASSWORD 6
+    constant ADMINS_CANNOT_CHANGE_PASSWORD 7
+    constant LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD 8
 
 enum Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult python_type
     py EasPasswordHistoryResult
     signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult;i4)
+    constant NOT_EVALUATED 0
+    constant COMPLIANT 1
+    constant CAN_BE_COMPLIANT 2
+    constant REQUESTED_POLICY_IS_STRICTER 3
+    constant INVALID_PARAMETER 4
 
 enum Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult python_type
     py EasRequireEncryptionResult
     signature enum(Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult;i4)
+    constant NOT_EVALUATED 0
+    constant COMPLIANT 1
+    constant CAN_BE_COMPLIANT 2
+    constant NOT_PROVISIONED_ON_ALL_VOLUMES 3
+    constant DE_FIXED_DATA_NOT_SUPPORTED 4
+    constant FIXED_DATA_NOT_SUPPORTED 4
+    constant DE_HARDWARE_NOT_COMPLIANT 5
+    constant HARDWARE_NOT_COMPLIANT 5
+    constant DE_WIN_RE_NOT_CONFIGURED 6
+    constant LOCK_NOT_CONFIGURED 6
+    constant DE_PROTECTION_SUSPENDED 7
+    constant PROTECTION_SUSPENDED 7
+    constant DE_OS_VOLUME_NOT_PROTECTED 8
+    constant OS_VOLUME_NOT_PROTECTED 8
+    constant DE_PROTECTION_NOT_YET_ENABLED 9
+    constant PROTECTION_NOT_YET_ENABLED 9
+    constant NO_FEATURE_LICENSE 10
+    constant OS_NOT_PROTECTED 11
+    constant UNEXPECTED_FAILURE 12
 
 interface Windows.Foundation.IAsyncOperation<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[EasComplianceResults]

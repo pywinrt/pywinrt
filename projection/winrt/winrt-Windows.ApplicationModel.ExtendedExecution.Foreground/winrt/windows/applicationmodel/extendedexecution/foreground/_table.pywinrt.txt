@@ -16,10 +16,16 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationMo
 enum Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundReason python_type
     py ExtendedExecutionForegroundReason
     signature enum(Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundReason;i4)
+    constant UNSPECIFIED 0
+    constant SAVING_DATA 1
+    constant BACKGROUND_AUDIO 2
+    constant UNCONSTRAINED 3
 
 enum Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundResult python_type
     py ExtendedExecutionForegroundResult
     signature enum(Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundResult;i4)
+    constant ALLOWED 0
+    constant DENIED 1
 
 class Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedEventArgs python_type
     py ExtendedExecutionForegroundRevokedEventArgs
@@ -33,6 +39,8 @@ class Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionFor
 enum Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedReason python_type
     py ExtendedExecutionForegroundRevokedReason
     signature enum(Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedReason;i4)
+    constant RESUMED 0
+    constant SYSTEM_POLICY 1
 
 class Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession activatable python_type closeable
     py ExtendedExecutionForegroundSession

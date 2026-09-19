@@ -107,10 +107,17 @@ class Microsoft.Windows.Storage.ApplicationDataContainer python_type closeable
 enum Microsoft.Windows.Storage.ApplicationDataCreateDisposition python_type
     py ApplicationDataCreateDisposition
     signature enum(Microsoft.Windows.Storage.ApplicationDataCreateDisposition;i4)
+    constant ALWAYS 0
+    constant EXISTING 1
 
 enum Microsoft.Windows.Storage.ApplicationDataLocality python_type
     py ApplicationDataLocality
     signature enum(Microsoft.Windows.Storage.ApplicationDataLocality;i4)
+    constant LOCAL 0
+    constant LOCAL_CACHE 3
+    constant SHARED_LOCAL 4
+    constant TEMPORARY 2
+    constant MACHINE 1000
 
 interface Microsoft.Windows.Storage.IApplicationData
     guid fc073ce2-2f7b-5214-95fa-530a3f9d1ea5

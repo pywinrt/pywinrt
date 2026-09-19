@@ -215,6 +215,9 @@ class Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo python_type
 enum Windows.Media.Capture.AppBroadcastCameraCaptureState python_type
     py AppBroadcastCameraCaptureState
     signature enum(Windows.Media.Capture.AppBroadcastCameraCaptureState;i4)
+    constant STOPPED 0
+    constant STARTED 1
+    constant FAILED 2
 
 class Windows.Media.Capture.AppBroadcastCameraCaptureStateChangedEventArgs python_type
     py AppBroadcastCameraCaptureStateChangedEventArgs
@@ -231,18 +234,36 @@ class Windows.Media.Capture.AppBroadcastCameraCaptureStateChangedEventArgs pytho
 enum Windows.Media.Capture.AppBroadcastCameraOverlayLocation python_type
     py AppBroadcastCameraOverlayLocation
     signature enum(Windows.Media.Capture.AppBroadcastCameraOverlayLocation;i4)
+    constant TOP_LEFT 0
+    constant TOP_CENTER 1
+    constant TOP_RIGHT 2
+    constant MIDDLE_LEFT 3
+    constant MIDDLE_CENTER 4
+    constant MIDDLE_RIGHT 5
+    constant BOTTOM_LEFT 6
+    constant BOTTOM_CENTER 7
+    constant BOTTOM_RIGHT 8
 
 enum Windows.Media.Capture.AppBroadcastCameraOverlaySize python_type
     py AppBroadcastCameraOverlaySize
     signature enum(Windows.Media.Capture.AppBroadcastCameraOverlaySize;i4)
+    constant SMALL 0
+    constant MEDIUM 1
+    constant LARGE 2
 
 enum Windows.Media.Capture.AppBroadcastCaptureTargetType python_type
     py AppBroadcastCaptureTargetType
     signature enum(Windows.Media.Capture.AppBroadcastCaptureTargetType;i4)
+    constant APP_VIEW 0
+    constant ENTIRE_DISPLAY 1
 
 enum Windows.Media.Capture.AppBroadcastExitBroadcastModeReason python_type
     py AppBroadcastExitBroadcastModeReason
     signature enum(Windows.Media.Capture.AppBroadcastExitBroadcastModeReason;i4)
+    constant NORMAL_EXIT 0
+    constant USER_CANCELED 1
+    constant AUTHORIZATION_FAIL 2
+    constant FOREGROUND_APP_ACTIVATED 3
 
 class Windows.Media.Capture.AppBroadcastGlobalSettings python_type
     py AppBroadcastGlobalSettings
@@ -342,6 +363,9 @@ class Windows.Media.Capture.AppBroadcastManager static python_type
 enum Windows.Media.Capture.AppBroadcastMicrophoneCaptureState python_type
     py AppBroadcastMicrophoneCaptureState
     signature enum(Windows.Media.Capture.AppBroadcastMicrophoneCaptureState;i4)
+    constant STOPPED 0
+    constant STARTED 1
+    constant FAILED 2
 
 class Windows.Media.Capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs python_type
     py AppBroadcastMicrophoneCaptureStateChangedEventArgs
@@ -401,6 +425,13 @@ class Windows.Media.Capture.AppBroadcastPlugInManager python_type
 enum Windows.Media.Capture.AppBroadcastPlugInState python_type
     py AppBroadcastPlugInState
     signature enum(Windows.Media.Capture.AppBroadcastPlugInState;i4)
+    constant UNKNOWN 0
+    constant INITIALIZED 1
+    constant MICROSOFT_SIGN_IN_REQUIRED 2
+    constant O_AUTH_SIGN_IN_REQUIRED 3
+    constant PROVIDER_SIGN_IN_REQUIRED 4
+    constant IN_BANDWIDTH_TEST 5
+    constant READY_TO_BROADCAST 6
 
 class Windows.Media.Capture.AppBroadcastPlugInStateChangedEventArgs python_type
     py AppBroadcastPlugInStateChangedEventArgs
@@ -437,6 +468,9 @@ class Windows.Media.Capture.AppBroadcastPreview python_type
 enum Windows.Media.Capture.AppBroadcastPreviewState python_type
     py AppBroadcastPreviewState
     signature enum(Windows.Media.Capture.AppBroadcastPreviewState;i4)
+    constant STARTED 0
+    constant STOPPED 1
+    constant FAILED 2
 
 class Windows.Media.Capture.AppBroadcastPreviewStateChangedEventArgs python_type
     py AppBroadcastPreviewStateChangedEventArgs
@@ -601,10 +635,20 @@ class Windows.Media.Capture.AppBroadcastServices python_type
 enum Windows.Media.Capture.AppBroadcastSignInResult python_type
     py AppBroadcastSignInResult
     signature enum(Windows.Media.Capture.AppBroadcastSignInResult;i4)
+    constant SUCCESS 0
+    constant AUTHENTICATION_FAILED 1
+    constant UNAUTHORIZED 2
+    constant SERVICE_UNAVAILABLE 3
+    constant UNKNOWN 4
 
 enum Windows.Media.Capture.AppBroadcastSignInState python_type
     py AppBroadcastSignInState
     signature enum(Windows.Media.Capture.AppBroadcastSignInState;i4)
+    constant NOT_SIGNED_IN 0
+    constant MICROSOFT_SIGN_IN_IN_PROGRESS 1
+    constant MICROSOFT_SIGN_IN_COMPLETE 2
+    constant O_AUTH_SIGN_IN_IN_PROGRESS 3
+    constant O_AUTH_SIGN_IN_COMPLETE 4
 
 class Windows.Media.Capture.AppBroadcastSignInStateChangedEventArgs python_type
     py AppBroadcastSignInStateChangedEventArgs
@@ -804,6 +848,11 @@ class Windows.Media.Capture.AppBroadcastStreamReader python_type
 enum Windows.Media.Capture.AppBroadcastStreamState python_type
     py AppBroadcastStreamState
     signature enum(Windows.Media.Capture.AppBroadcastStreamState;i4)
+    constant INITIALIZING 0
+    constant STREAM_READY 1
+    constant STARTED 2
+    constant PAUSED 3
+    constant TERMINATED 4
 
 class Windows.Media.Capture.AppBroadcastStreamStateChangedEventArgs python_type
     py AppBroadcastStreamStateChangedEventArgs
@@ -853,6 +902,16 @@ class Windows.Media.Capture.AppBroadcastStreamVideoHeader python_type
 enum Windows.Media.Capture.AppBroadcastTerminationReason python_type
     py AppBroadcastTerminationReason
     signature enum(Windows.Media.Capture.AppBroadcastTerminationReason;i4)
+    constant NORMAL_TERMINATION 0
+    constant LOST_CONNECTION_TO_SERVICE 1
+    constant NO_NETWORK_CONNECTIVITY 2
+    constant SERVICE_ABORT 3
+    constant SERVICE_ERROR 4
+    constant SERVICE_UNAVAILABLE 5
+    constant INTERNAL_ERROR 6
+    constant UNSUPPORTED_FORMAT 7
+    constant BACKGROUND_TASK_TERMINATED 8
+    constant BACKGROUND_TASK_UNRESPONSIVE 9
 
 class Windows.Media.Capture.AppBroadcastTriggerDetails python_type
     py AppBroadcastTriggerDetails
@@ -866,10 +925,14 @@ class Windows.Media.Capture.AppBroadcastTriggerDetails python_type
 enum Windows.Media.Capture.AppBroadcastVideoEncodingBitrateMode python_type
     py AppBroadcastVideoEncodingBitrateMode
     signature enum(Windows.Media.Capture.AppBroadcastVideoEncodingBitrateMode;i4)
+    constant CUSTOM 0
+    constant AUTO 1
 
 enum Windows.Media.Capture.AppBroadcastVideoEncodingResolutionMode python_type
     py AppBroadcastVideoEncodingResolutionMode
     signature enum(Windows.Media.Capture.AppBroadcastVideoEncodingResolutionMode;i4)
+    constant CUSTOM 0
+    constant AUTO 1
 
 class Windows.Media.Capture.AppBroadcastViewerCountChangedEventArgs python_type
     py AppBroadcastViewerCountChangedEventArgs
@@ -1016,6 +1079,8 @@ class Windows.Media.Capture.AppCaptureFileGeneratedEventArgs python_type
 enum Windows.Media.Capture.AppCaptureHistoricalBufferLengthUnit python_type
     py AppCaptureHistoricalBufferLengthUnit
     signature enum(Windows.Media.Capture.AppCaptureHistoricalBufferLengthUnit;i4)
+    constant MEGABYTES 0
+    constant SECONDS 1
 
 class Windows.Media.Capture.AppCaptureManager static python_type
     py AppCaptureManager
@@ -1030,6 +1095,8 @@ class Windows.Media.Capture.AppCaptureManager static python_type
 enum Windows.Media.Capture.AppCaptureMetadataPriority python_type
     py AppCaptureMetadataPriority
     signature enum(Windows.Media.Capture.AppCaptureMetadataPriority;i4)
+    constant INFORMATIONAL 0
+    constant IMPORTANT 1
 
 class Windows.Media.Capture.AppCaptureMetadataWriter activatable python_type closeable
     py AppCaptureMetadataWriter
@@ -1090,6 +1157,9 @@ class Windows.Media.Capture.AppCaptureMetadataWriter activatable python_type clo
 enum Windows.Media.Capture.AppCaptureMicrophoneCaptureState python_type
     py AppCaptureMicrophoneCaptureState
     signature enum(Windows.Media.Capture.AppCaptureMicrophoneCaptureState;i4)
+    constant STOPPED 0
+    constant STARTED 1
+    constant FAILED 2
 
 class Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs python_type
     py AppCaptureMicrophoneCaptureStateChangedEventArgs
@@ -1147,6 +1217,9 @@ class Windows.Media.Capture.AppCaptureRecordOperation python_type
 enum Windows.Media.Capture.AppCaptureRecordingState python_type
     py AppCaptureRecordingState
     signature enum(Windows.Media.Capture.AppCaptureRecordingState;i4)
+    constant IN_PROGRESS 0
+    constant COMPLETED 1
+    constant FAILED 2
 
 class Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs python_type
     py AppCaptureRecordingStateChangedEventArgs
@@ -1363,14 +1436,22 @@ class Windows.Media.Capture.AppCaptureState python_type
 enum Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode python_type
     py AppCaptureVideoEncodingBitrateMode
     signature enum(Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode;i4)
+    constant CUSTOM 0
+    constant HIGH 1
+    constant STANDARD 2
 
 enum Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode python_type
     py AppCaptureVideoEncodingFrameRateMode
     signature enum(Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode;i4)
+    constant STANDARD 0
+    constant HIGH 1
 
 enum Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode python_type
     py AppCaptureVideoEncodingResolutionMode
     signature enum(Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode;i4)
+    constant CUSTOM 0
+    constant HIGH 1
+    constant STANDARD 2
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
@@ -1618,14 +1699,27 @@ class Windows.Media.Capture.CameraCaptureUI activatable python_type
 enum Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution python_type
     py CameraCaptureUIMaxPhotoResolution
     signature enum(Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution;i4)
+    constant HIGHEST_AVAILABLE 0
+    constant VERY_SMALL_QVGA 1
+    constant SMALL_VGA 2
+    constant MEDIUM_XGA 3
+    constant LARGE3_M 4
+    constant VERY_LARGE5_M 5
 
 enum Windows.Media.Capture.CameraCaptureUIMaxVideoResolution python_type
     py CameraCaptureUIMaxVideoResolution
     signature enum(Windows.Media.Capture.CameraCaptureUIMaxVideoResolution;i4)
+    constant HIGHEST_AVAILABLE 0
+    constant LOW_DEFINITION 1
+    constant STANDARD_DEFINITION 2
+    constant HIGH_DEFINITION 3
 
 enum Windows.Media.Capture.CameraCaptureUIMode python_type
     py CameraCaptureUIMode
     signature enum(Windows.Media.Capture.CameraCaptureUIMode;i4)
+    constant PHOTO_OR_VIDEO 0
+    constant PHOTO 1
+    constant VIDEO 2
 
 class Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings python_type
     py CameraCaptureUIPhotoCaptureSettings
@@ -1661,6 +1755,9 @@ class Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings python_type
 enum Windows.Media.Capture.CameraCaptureUIPhotoFormat python_type
     py CameraCaptureUIPhotoFormat
     signature enum(Windows.Media.Capture.CameraCaptureUIPhotoFormat;i4)
+    constant JPEG 0
+    constant PNG 1
+    constant JPEG_X_R 2
 
 class Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings python_type
     py CameraCaptureUIVideoCaptureSettings
@@ -1691,6 +1788,8 @@ class Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings python_type
 enum Windows.Media.Capture.CameraCaptureUIVideoFormat python_type
     py CameraCaptureUIVideoFormat
     signature enum(Windows.Media.Capture.CameraCaptureUIVideoFormat;i4)
+    constant MP4 0
+    constant WMV 1
 
 class Windows.Media.Capture.CameraOptionsUI static python_type
     py CameraOptionsUI
@@ -1838,14 +1937,33 @@ class Windows.Media.Capture.CapturedPhoto python_type
 enum Windows.Media.Capture.ForegroundActivationArgument python_type
     py ForegroundActivationArgument
     signature enum(Windows.Media.Capture.ForegroundActivationArgument;i4)
+    constant SIGN_IN_REQUIRED 0
+    constant MORE_SETTINGS 1
 
 enum Windows.Media.Capture.GameBarCommand python_type
     py GameBarCommand
     signature enum(Windows.Media.Capture.GameBarCommand;i4)
+    constant OPEN_GAME_BAR 0
+    constant RECORD_HISTORICAL_BUFFER 1
+    constant TOGGLE_START_STOP_RECORD 2
+    constant START_RECORD 3
+    constant STOP_RECORD 4
+    constant TAKE_SCREENSHOT 5
+    constant START_BROADCAST 6
+    constant STOP_BROADCAST 7
+    constant PAUSE_BROADCAST 8
+    constant RESUME_BROADCAST 9
+    constant TOGGLE_START_STOP_BROADCAST 10
+    constant TOGGLE_MICROPHONE_CAPTURE 11
+    constant TOGGLE_CAMERA_CAPTURE 12
+    constant TOGGLE_RECORDING_INDICATOR 13
 
 enum Windows.Media.Capture.GameBarCommandOrigin python_type
     py GameBarCommandOrigin
     signature enum(Windows.Media.Capture.GameBarCommandOrigin;i4)
+    constant SHORTCUT_KEY 0
+    constant CORTANA 1
+    constant APP_COMMAND 2
 
 class Windows.Media.Capture.GameBarServices python_type
     py GameBarServices
@@ -1893,6 +2011,8 @@ class Windows.Media.Capture.GameBarServicesCommandEventArgs python_type
 enum Windows.Media.Capture.GameBarServicesDisplayMode python_type
     py GameBarServicesDisplayMode
     signature enum(Windows.Media.Capture.GameBarServicesDisplayMode;i4)
+    constant WINDOWED 0
+    constant FULL_SCREEN_EXCLUSIVE 1
 
 class Windows.Media.Capture.GameBarServicesManager python_type
     py GameBarServicesManager
@@ -1940,6 +2060,11 @@ class Windows.Media.Capture.GameBarServicesTargetInfo python_type
 enum Windows.Media.Capture.GameBarTargetCapturePolicy python_type
     py GameBarTargetCapturePolicy
     signature enum(Windows.Media.Capture.GameBarTargetCapturePolicy;i4)
+    constant ENABLED_BY_SYSTEM 0
+    constant ENABLED_BY_USER 1
+    constant NOT_ENABLED 2
+    constant PROHIBITED_BY_SYSTEM 3
+    constant PROHIBITED_BY_PUBLISHER 4
 
 interface Windows.Media.Capture.IAdvancedCapturedPhoto
     guid f072728b-b292-4491-9d41-99807a550bbf
@@ -4489,6 +4614,17 @@ interface Windows.Media.Capture.IVideoStreamConfiguration
 enum Windows.Media.Capture.KnownVideoProfile python_type
     py KnownVideoProfile
     signature enum(Windows.Media.Capture.KnownVideoProfile;i4)
+    constant VIDEO_RECORDING 0
+    constant HIGH_QUALITY_PHOTO 1
+    constant BALANCED_VIDEO_AND_PHOTO 2
+    constant VIDEO_CONFERENCING 3
+    constant PHOTO_SEQUENCE 4
+    constant HIGH_FRAME_RATE 5
+    constant VARIABLE_PHOTO_SEQUENCE 6
+    constant HDR_WITH_WCG_VIDEO 7
+    constant HDR_WITH_WCG_PHOTO 8
+    constant VIDEO_HDR8 9
+    constant COMPRESSED_CAMERA 10
 
 class Windows.Media.Capture.LowLagMediaRecording python_type
     py LowLagMediaRecording
@@ -4844,10 +4980,14 @@ class Windows.Media.Capture.MediaCapture activatable python_type closeable
 enum Windows.Media.Capture.MediaCaptureDeviceExclusiveControlReleaseMode python_type
     py MediaCaptureDeviceExclusiveControlReleaseMode
     signature enum(Windows.Media.Capture.MediaCaptureDeviceExclusiveControlReleaseMode;i4)
+    constant ON_DISPOSE 0
+    constant ON_ALL_STREAMS_STOPPED 1
 
 enum Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatus python_type
     py MediaCaptureDeviceExclusiveControlStatus
     signature enum(Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatus;i4)
+    constant EXCLUSIVE_CONTROL_AVAILABLE 0
+    constant SHARED_READ_ONLY_AVAILABLE 1
 
 class Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs python_type
     py MediaCaptureDeviceExclusiveControlStatusChangedEventArgs
@@ -4999,6 +5139,8 @@ class Windows.Media.Capture.MediaCaptureInitializationSettings activatable pytho
 enum Windows.Media.Capture.MediaCaptureMemoryPreference python_type
     py MediaCaptureMemoryPreference
     signature enum(Windows.Media.Capture.MediaCaptureMemoryPreference;i4)
+    constant AUTO 0
+    constant CPU 1
 
 class Windows.Media.Capture.MediaCapturePauseResult python_type closeable
     py MediaCapturePauseResult
@@ -5090,6 +5232,8 @@ class Windows.Media.Capture.MediaCaptureSettings python_type
 enum Windows.Media.Capture.MediaCaptureSharingMode python_type
     py MediaCaptureSharingMode
     signature enum(Windows.Media.Capture.MediaCaptureSharingMode;i4)
+    constant EXCLUSIVE_CONTROL 0
+    constant SHARED_READ_ONLY 1
 
 class Windows.Media.Capture.MediaCaptureStopResult python_type closeable
     py MediaCaptureStopResult
@@ -5109,6 +5253,8 @@ class Windows.Media.Capture.MediaCaptureStopResult python_type closeable
 enum Windows.Media.Capture.MediaCaptureThermalStatus python_type
     py MediaCaptureThermalStatus
     signature enum(Windows.Media.Capture.MediaCaptureThermalStatus;i4)
+    constant NORMAL 0
+    constant OVERHEATED 1
 
 class Windows.Media.Capture.MediaCaptureVideoProfile python_type
     py MediaCaptureVideoProfile
@@ -5172,10 +5318,23 @@ class Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription python_type
 enum Windows.Media.Capture.MediaCategory python_type
     py MediaCategory
     signature enum(Windows.Media.Capture.MediaCategory;i4)
+    constant OTHER 0
+    constant COMMUNICATIONS 1
+    constant MEDIA 2
+    constant GAME_CHAT 3
+    constant SPEECH 4
+    constant FAR_FIELD_SPEECH 5
+    constant UNIFORM_SPEECH 6
+    constant VOICE_TYPING 7
 
 enum Windows.Media.Capture.MediaStreamType python_type
     py MediaStreamType
     signature enum(Windows.Media.Capture.MediaStreamType;i4)
+    constant VIDEO_PREVIEW 0
+    constant VIDEO_RECORD 1
+    constant AUDIO 2
+    constant PHOTO 3
+    constant METADATA 4
 
 class Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs python_type
     py OptionalReferencePhotoCapturedEventArgs
@@ -5192,6 +5351,9 @@ class Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs python_type
 enum Windows.Media.Capture.PhotoCaptureSource python_type
     py PhotoCaptureSource
     signature enum(Windows.Media.Capture.PhotoCaptureSource;i4)
+    constant AUTO 0
+    constant VIDEO_PREVIEW 1
+    constant PHOTO 2
 
 class Windows.Media.Capture.PhotoCapturedEventArgs python_type
     py PhotoCapturedEventArgs
@@ -5223,6 +5385,10 @@ class Windows.Media.Capture.PhotoConfirmationCapturedEventArgs python_type
 enum Windows.Media.Capture.PowerlineFrequency python_type
     py PowerlineFrequency
     signature enum(Windows.Media.Capture.PowerlineFrequency;i4)
+    constant DISABLED 0
+    constant FIFTY_HERTZ 1
+    constant SIXTY_HERTZ 2
+    constant AUTO 3
 
 delegate Windows.Media.Capture.RecordLimitationExceededEventHandler python_type
     py RecordLimitationExceededEventHandler
@@ -5235,6 +5401,9 @@ delegate Windows.Media.Capture.RecordLimitationExceededEventHandler python_type
 enum Windows.Media.Capture.StreamingCaptureMode python_type
     py StreamingCaptureMode
     signature enum(Windows.Media.Capture.StreamingCaptureMode;i4)
+    constant AUDIO_AND_VIDEO 0
+    constant AUDIO 1
+    constant VIDEO 2
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AdvancedPhotoCapture,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[AdvancedPhotoCapture, Object]
@@ -5623,10 +5792,19 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Media.Capture.MediaCapture
 enum Windows.Media.Capture.VideoDeviceCharacteristic python_type
     py VideoDeviceCharacteristic
     signature enum(Windows.Media.Capture.VideoDeviceCharacteristic;i4)
+    constant ALL_STREAMS_INDEPENDENT 0
+    constant PREVIEW_RECORD_STREAMS_IDENTICAL 1
+    constant PREVIEW_PHOTO_STREAMS_IDENTICAL 2
+    constant RECORD_PHOTO_STREAMS_IDENTICAL 3
+    constant ALL_STREAMS_IDENTICAL 4
 
 enum Windows.Media.Capture.VideoRotation python_type
     py VideoRotation
     signature enum(Windows.Media.Capture.VideoRotation;i4)
+    constant NONE 0
+    constant CLOCKWISE90_DEGREES 1
+    constant CLOCKWISE180_DEGREES 2
+    constant CLOCKWISE270_DEGREES 3
 
 class Windows.Media.Capture.VideoStreamConfiguration python_type
     py VideoStreamConfiguration

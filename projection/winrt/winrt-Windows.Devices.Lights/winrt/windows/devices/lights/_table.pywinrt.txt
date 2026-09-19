@@ -433,6 +433,20 @@ class Windows.Devices.Lights.LampArray python_type
 enum Windows.Devices.Lights.LampArrayKind python_type
     py LampArrayKind
     signature enum(Windows.Devices.Lights.LampArrayKind;i4)
+    constant UNDEFINED 0
+    constant KEYBOARD 1
+    constant MOUSE 2
+    constant GAME_CONTROLLER 3
+    constant PERIPHERAL 4
+    constant SCENE 5
+    constant NOTIFICATION 6
+    constant CHASSIS 7
+    constant WEARABLE 8
+    constant FURNITURE 9
+    constant ART 10
+    constant HEADSET 11
+    constant MICROPHONE 12
+    constant SPEAKER 13
 
 class Windows.Devices.Lights.LampAvailabilityChangedEventArgs python_type
     py LampAvailabilityChangedEventArgs
@@ -480,9 +494,16 @@ class Windows.Devices.Lights.LampInfo python_type
             in struct type=Windows.UI.Color name=desiredColor
             out struct type=Windows.UI.Color return
 
-enum Windows.Devices.Lights.LampPurposes python_type
+enum Windows.Devices.Lights.LampPurposes python_type flags_enum
     py LampPurposes
     signature enum(Windows.Devices.Lights.LampPurposes;u4)
+    constant UNDEFINED 0x0
+    constant CONTROL 0x1
+    constant ACCENT 0x2
+    constant BRANDING 0x4
+    constant STATUS 0x8
+    constant ILLUMINATION 0x10
+    constant PRESENTATION 0x20
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.Lamp,Windows.Devices.Lights.LampAvailabilityChangedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[Lamp, LampAvailabilityChangedEventArgs]

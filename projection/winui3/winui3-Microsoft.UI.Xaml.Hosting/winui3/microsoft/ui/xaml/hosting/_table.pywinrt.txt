@@ -235,6 +235,14 @@ class Microsoft.UI.Xaml.Hosting.XamlShutdownCompletedOnThreadEventArgs python_ty
 enum Microsoft.UI.Xaml.Hosting.XamlSourceFocusNavigationReason python_type
     py XamlSourceFocusNavigationReason
     signature enum(Microsoft.UI.Xaml.Hosting.XamlSourceFocusNavigationReason;i4)
+    constant PROGRAMMATIC 0
+    constant RESTORE 1
+    constant FIRST 3
+    constant LAST 4
+    constant LEFT 7
+    constant UP 8
+    constant RIGHT 9
+    constant DOWN 10
 
 class Microsoft.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest python_type
     py XamlSourceFocusNavigationRequest

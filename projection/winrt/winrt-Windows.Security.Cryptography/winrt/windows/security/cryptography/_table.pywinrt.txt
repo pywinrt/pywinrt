@@ -5,6 +5,9 @@ namespace Windows.Security.Cryptography
 enum Windows.Security.Cryptography.BinaryStringEncoding python_type
     py BinaryStringEncoding
     signature enum(Windows.Security.Cryptography.BinaryStringEncoding;i4)
+    constant UTF8 0
+    constant UTF16_L_E 1
+    constant UTF16_B_E 2
 
 class Windows.Security.Cryptography.CryptographicBuffer static python_type
     py CryptographicBuffer

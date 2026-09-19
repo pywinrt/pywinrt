@@ -87,13 +87,18 @@ delegate Windows.System.Threading.WorkItemHandler python_type
         method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
             in interface type=Windows.Foundation.IAsyncAction name=operation
 
-enum Windows.System.Threading.WorkItemOptions python_type
+enum Windows.System.Threading.WorkItemOptions python_type flags_enum
     py WorkItemOptions
     signature enum(Windows.System.Threading.WorkItemOptions;u4)
+    constant NONE 0x0
+    constant TIME_SLICED 0x1
 
 enum Windows.System.Threading.WorkItemPriority python_type
     py WorkItemPriority
     signature enum(Windows.System.Threading.WorkItemPriority;i4)
+    constant LOW -1
+    constant NORMAL 0
+    constant HIGH 1
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

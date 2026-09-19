@@ -100,6 +100,9 @@ class Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController activata
 enum Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicKind python_type
     py DesktopAcrylicKind
     signature enum(Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicKind;i4)
+    constant DEFAULT 0
+    constant BASE 1
+    constant THIN 2
 
 interface Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController
     guid 7c20a6af-8eb3-5f08-bdfc-6d35e35dfe45
@@ -409,6 +412,8 @@ class Microsoft.UI.Composition.SystemBackdrops.MicaController activatable python
 enum Microsoft.UI.Composition.SystemBackdrops.MicaKind python_type
     py MicaKind
     signature enum(Microsoft.UI.Composition.SystemBackdrops.MicaKind;i4)
+    constant BASE 0
+    constant BASE_ALT 1
 
 class Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration activatable python_type
     py SystemBackdropConfiguration
@@ -442,10 +447,16 @@ class Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration activ
 enum Microsoft.UI.Composition.SystemBackdrops.SystemBackdropState python_type
     py SystemBackdropState
     signature enum(Microsoft.UI.Composition.SystemBackdrops.SystemBackdropState;i4)
+    constant ACTIVE 0
+    constant FALLBACK 1
+    constant HIGH_CONTRAST 2
 
 enum Microsoft.UI.Composition.SystemBackdrops.SystemBackdropTheme python_type
     py SystemBackdropTheme
     signature enum(Microsoft.UI.Composition.SystemBackdrops.SystemBackdropTheme;i4)
+    constant DEFAULT 0
+    constant LIGHT 1
+    constant DARK 2
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[ISystemBackdropControllerWithTargets, Object]

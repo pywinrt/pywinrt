@@ -251,6 +251,12 @@ class Windows.UI.Xaml.Input.FindNextElementOptions activatable python_type
 enum Windows.UI.Xaml.Input.FocusInputDeviceKind python_type
     py FocusInputDeviceKind
     signature enum(Windows.UI.Xaml.Input.FocusInputDeviceKind;i4)
+    constant NONE 0
+    constant MOUSE 1
+    constant TOUCH 2
+    constant PEN 3
+    constant KEYBOARD 4
+    constant GAME_CONTROLLER 5
 
 class Windows.UI.Xaml.Input.FocusManager python_type
     py FocusManager
@@ -376,6 +382,13 @@ class Windows.UI.Xaml.Input.FocusMovementResult python_type
 enum Windows.UI.Xaml.Input.FocusNavigationDirection python_type
     py FocusNavigationDirection
     signature enum(Windows.UI.Xaml.Input.FocusNavigationDirection;i4)
+    constant NEXT 0
+    constant PREVIOUS 1
+    constant UP 2
+    constant DOWN 3
+    constant LEFT 4
+    constant RIGHT 5
+    constant NONE 6
 
 class Windows.UI.Xaml.Input.GettingFocusEventArgs python_type
     py GettingFocusEventArgs
@@ -1115,6 +1128,50 @@ class Windows.UI.Xaml.Input.InputScopeName activatable python_type
 enum Windows.UI.Xaml.Input.InputScopeNameValue python_type
     py InputScopeNameValue
     signature enum(Windows.UI.Xaml.Input.InputScopeNameValue;i4)
+    constant DEFAULT 0
+    constant URL 1
+    constant EMAIL_SMTP_ADDRESS 5
+    constant PERSONAL_FULL_NAME 7
+    constant CURRENCY_AMOUNT_AND_SYMBOL 20
+    constant CURRENCY_AMOUNT 21
+    constant DATE_MONTH_NUMBER 23
+    constant DATE_DAY_NUMBER 24
+    constant DATE_YEAR 25
+    constant DIGITS 28
+    constant NUMBER 29
+    constant PASSWORD 31
+    constant TELEPHONE_NUMBER 32
+    constant TELEPHONE_COUNTRY_CODE 33
+    constant TELEPHONE_AREA_CODE 34
+    constant TELEPHONE_LOCAL_NUMBER 35
+    constant TIME_HOUR 37
+    constant TIME_MINUTES_OR_SECONDS 38
+    constant NUMBER_FULL_WIDTH 39
+    constant ALPHANUMERIC_HALF_WIDTH 40
+    constant ALPHANUMERIC_FULL_WIDTH 41
+    constant HIRAGANA 44
+    constant KATAKANA_HALF_WIDTH 45
+    constant KATAKANA_FULL_WIDTH 46
+    constant HANJA 47
+    constant HANGUL_HALF_WIDTH 48
+    constant HANGUL_FULL_WIDTH 49
+    constant SEARCH 50
+    constant FORMULA 51
+    constant SEARCH_INCREMENTAL 52
+    constant CHINESE_HALF_WIDTH 53
+    constant CHINESE_FULL_WIDTH 54
+    constant NATIVE_SCRIPT 55
+    constant TEXT 57
+    constant CHAT 58
+    constant NAME_OR_PHONE_NUMBER 59
+    constant EMAIL_NAME_OR_ADDRESS 60
+    constant PRIVATE 61
+    constant MAPS 62
+    constant NUMERIC_PASSWORD 63
+    constant NUMERIC_PIN 64
+    constant ALPHANUMERIC_PIN 65
+    constant FORMULA_NUMBER 67
+    constant CHAT_WITHOUT_EMOJI 68
 
 delegate Windows.UI.Xaml.Input.KeyEventHandler python_type
     py KeyEventHandler
@@ -1154,6 +1211,13 @@ class Windows.UI.Xaml.Input.KeyRoutedEventArgs python_type
 enum Windows.UI.Xaml.Input.KeyTipPlacementMode python_type
     py KeyTipPlacementMode
     signature enum(Windows.UI.Xaml.Input.KeyTipPlacementMode;i4)
+    constant AUTO 0
+    constant BOTTOM 1
+    constant TOP 2
+    constant LEFT 3
+    constant RIGHT 4
+    constant CENTER 5
+    constant HIDDEN 6
 
 class Windows.UI.Xaml.Input.KeyboardAccelerator composable python_type
     py KeyboardAccelerator
@@ -1228,10 +1292,15 @@ class Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs python_type
 enum Windows.UI.Xaml.Input.KeyboardAcceleratorPlacementMode python_type
     py KeyboardAcceleratorPlacementMode
     signature enum(Windows.UI.Xaml.Input.KeyboardAcceleratorPlacementMode;i4)
+    constant AUTO 0
+    constant HIDDEN 1
 
 enum Windows.UI.Xaml.Input.KeyboardNavigationMode python_type
     py KeyboardNavigationMode
     signature enum(Windows.UI.Xaml.Input.KeyboardNavigationMode;i4)
+    constant LOCAL 0
+    constant CYCLE 1
+    constant ONCE 2
 
 class Windows.UI.Xaml.Input.LosingFocusEventArgs python_type
     py LosingFocusEventArgs
@@ -1422,9 +1491,21 @@ class Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs activatab
         get get_Velocities slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=218
             out struct type=Windows.UI.Input.ManipulationVelocities return
 
-enum Windows.UI.Xaml.Input.ManipulationModes python_type
+enum Windows.UI.Xaml.Input.ManipulationModes python_type flags_enum
     py ManipulationModes
     signature enum(Windows.UI.Xaml.Input.ManipulationModes;u4)
+    constant NONE 0x0
+    constant TRANSLATE_X 0x1
+    constant TRANSLATE_Y 0x2
+    constant TRANSLATE_RAILS_X 0x4
+    constant TRANSLATE_RAILS_Y 0x8
+    constant ROTATE 0x10
+    constant SCALE 0x20
+    constant TRANSLATE_INERTIA 0x40
+    constant ROTATE_INERTIA 0x80
+    constant SCALE_INERTIA 0x100
+    constant ALL 0xFFFF
+    constant SYSTEM 0x10000
 
 class Windows.UI.Xaml.Input.ManipulationPivot activatable python_type
     py ManipulationPivot
@@ -1684,6 +1765,23 @@ class Windows.UI.Xaml.Input.StandardUICommand composable python_type
 enum Windows.UI.Xaml.Input.StandardUICommandKind python_type
     py StandardUICommandKind
     signature enum(Windows.UI.Xaml.Input.StandardUICommandKind;i4)
+    constant NONE 0
+    constant CUT 1
+    constant COPY 2
+    constant PASTE 3
+    constant SELECT_ALL 4
+    constant DELETE 5
+    constant SHARE 6
+    constant SAVE 7
+    constant OPEN 8
+    constant CLOSE 9
+    constant PAUSE 10
+    constant PLAY 11
+    constant STOP 12
+    constant FORWARD 13
+    constant BACKWARD 14
+    constant UNDO 15
+    constant REDO 16
 
 delegate Windows.UI.Xaml.Input.TappedEventHandler python_type
     py TappedEventHandler
@@ -1767,14 +1865,26 @@ delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Input.XamlUIComman
 enum Windows.UI.Xaml.Input.XYFocusKeyboardNavigationMode python_type
     py XYFocusKeyboardNavigationMode
     signature enum(Windows.UI.Xaml.Input.XYFocusKeyboardNavigationMode;i4)
+    constant AUTO 0
+    constant ENABLED 1
+    constant DISABLED 2
 
 enum Windows.UI.Xaml.Input.XYFocusNavigationStrategy python_type
     py XYFocusNavigationStrategy
     signature enum(Windows.UI.Xaml.Input.XYFocusNavigationStrategy;i4)
+    constant AUTO 0
+    constant PROJECTION 1
+    constant NAVIGATION_DIRECTION_DISTANCE 2
+    constant RECTILINEAR_DISTANCE 3
 
 enum Windows.UI.Xaml.Input.XYFocusNavigationStrategyOverride python_type
     py XYFocusNavigationStrategyOverride
     signature enum(Windows.UI.Xaml.Input.XYFocusNavigationStrategyOverride;i4)
+    constant NONE 0
+    constant AUTO 1
+    constant PROJECTION 2
+    constant NAVIGATION_DIRECTION_DISTANCE 3
+    constant RECTILINEAR_DISTANCE 4
 
 class Windows.UI.Xaml.Input.XamlUICommand composable python_type
     py XamlUICommand

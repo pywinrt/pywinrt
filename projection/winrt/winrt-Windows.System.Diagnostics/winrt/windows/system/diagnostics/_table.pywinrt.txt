@@ -41,6 +41,13 @@ class Windows.System.Diagnostics.DiagnosticActionResult python_type
 enum Windows.System.Diagnostics.DiagnosticActionState python_type
     py DiagnosticActionState
     signature enum(Windows.System.Diagnostics.DiagnosticActionState;i4)
+    constant INITIALIZING 0
+    constant DOWNLOADING 1
+    constant VERIFYING_TRUST 2
+    constant DETECTING 3
+    constant RESOLVING 4
+    constant VERIFYING_RESOLUTION 5
+    constant EXECUTING 6
 
 class Windows.System.Diagnostics.DiagnosticInvoker python_type
     py DiagnosticInvoker

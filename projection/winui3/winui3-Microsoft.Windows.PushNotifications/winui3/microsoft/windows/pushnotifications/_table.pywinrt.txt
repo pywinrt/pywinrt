@@ -93,6 +93,10 @@ class Microsoft.Windows.PushNotifications.PushNotificationChannel python_type
 enum Microsoft.Windows.PushNotifications.PushNotificationChannelStatus python_type
     py PushNotificationChannelStatus
     signature enum(Microsoft.Windows.PushNotifications.PushNotificationChannelStatus;i4)
+    constant IN_PROGRESS 0
+    constant IN_PROGRESS_RETRY 1
+    constant COMPLETED_SUCCESS 2
+    constant COMPLETED_FAILURE 3
 
 class Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult python_type
     py PushNotificationCreateChannelResult

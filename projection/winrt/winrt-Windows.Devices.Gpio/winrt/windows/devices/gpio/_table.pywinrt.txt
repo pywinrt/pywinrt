@@ -65,6 +65,9 @@ class Windows.Devices.Gpio.GpioChangeCounter python_type closeable
 enum Windows.Devices.Gpio.GpioChangePolarity python_type
     py GpioChangePolarity
     signature enum(Windows.Devices.Gpio.GpioChangePolarity;i4)
+    constant FALLING 0
+    constant RISING 1
+    constant BOTH 2
 
 class Windows.Devices.Gpio.GpioChangeReader python_type closeable
     py GpioChangeReader
@@ -168,6 +171,11 @@ class Windows.Devices.Gpio.GpioController python_type
 enum Windows.Devices.Gpio.GpioOpenStatus python_type
     py GpioOpenStatus
     signature enum(Windows.Devices.Gpio.GpioOpenStatus;i4)
+    constant PIN_OPENED 0
+    constant PIN_UNAVAILABLE 1
+    constant SHARING_VIOLATION 2
+    constant MUXING_CONFLICT 3
+    constant UNKNOWN_ERROR 4
 
 class Windows.Devices.Gpio.GpioPin python_type closeable
     py GpioPin
@@ -214,14 +222,26 @@ class Windows.Devices.Gpio.GpioPin python_type closeable
 enum Windows.Devices.Gpio.GpioPinDriveMode python_type
     py GpioPinDriveMode
     signature enum(Windows.Devices.Gpio.GpioPinDriveMode;i4)
+    constant INPUT 0
+    constant OUTPUT 1
+    constant INPUT_PULL_UP 2
+    constant INPUT_PULL_DOWN 3
+    constant OUTPUT_OPEN_DRAIN 4
+    constant OUTPUT_OPEN_DRAIN_PULL_UP 5
+    constant OUTPUT_OPEN_SOURCE 6
+    constant OUTPUT_OPEN_SOURCE_PULL_DOWN 7
 
 enum Windows.Devices.Gpio.GpioPinEdge python_type
     py GpioPinEdge
     signature enum(Windows.Devices.Gpio.GpioPinEdge;i4)
+    constant FALLING_EDGE 0
+    constant RISING_EDGE 1
 
 enum Windows.Devices.Gpio.GpioPinValue python_type
     py GpioPinValue
     signature enum(Windows.Devices.Gpio.GpioPinValue;i4)
+    constant LOW 0
+    constant HIGH 1
 
 class Windows.Devices.Gpio.GpioPinValueChangedEventArgs python_type
     py GpioPinValueChangedEventArgs
@@ -235,6 +255,8 @@ class Windows.Devices.Gpio.GpioPinValueChangedEventArgs python_type
 enum Windows.Devices.Gpio.GpioSharingMode python_type
     py GpioSharingMode
     signature enum(Windows.Devices.Gpio.GpioSharingMode;i4)
+    constant EXCLUSIVE 0
+    constant SHARED_READ_ONLY 1
 
 interface Windows.Foundation.IAsyncOperation<Windows.Devices.Gpio.GpioController> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[GpioController]

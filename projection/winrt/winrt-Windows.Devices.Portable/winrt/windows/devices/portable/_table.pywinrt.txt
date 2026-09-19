@@ -23,6 +23,13 @@ class Windows.Devices.Portable.ServiceDevice static python_type
 enum Windows.Devices.Portable.ServiceDeviceType python_type
     py ServiceDeviceType
     signature enum(Windows.Devices.Portable.ServiceDeviceType;i4)
+    constant CALENDAR_SERVICE 0
+    constant CONTACTS_SERVICE 1
+    constant DEVICE_STATUS_SERVICE 2
+    constant NOTES_SERVICE 3
+    constant RINGTONES_SERVICE 4
+    constant SMS_SERVICE 5
+    constant TASKS_SERVICE 6
 
 class Windows.Devices.Portable.StorageDevice static python_type
     py StorageDevice

@@ -77,6 +77,10 @@ class Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity activatable 
 enum Microsoft.Windows.AI.ContentSafety.SeverityLevel python_type
     py SeverityLevel
     signature enum(Microsoft.Windows.AI.ContentSafety.SeverityLevel;i4)
+    constant MINIMUM 10
+    constant LOW 11
+    constant MEDIUM 12
+    constant HIGH 13
 
 class Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity activatable python_type
     py TextContentFilterSeverity

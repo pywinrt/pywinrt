@@ -435,6 +435,9 @@ class Windows.Devices.WiFiDirect.WiFiDirectAdvertisement python_type
 enum Windows.Devices.WiFiDirect.WiFiDirectAdvertisementListenStateDiscoverability python_type
     py WiFiDirectAdvertisementListenStateDiscoverability
     signature enum(Windows.Devices.WiFiDirect.WiFiDirectAdvertisementListenStateDiscoverability;i4)
+    constant NONE 0
+    constant NORMAL 1
+    constant INTENSIVE 2
 
 class Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher activatable python_type
     py WiFiDirectAdvertisementPublisher
@@ -464,6 +467,10 @@ class Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher activatable py
 enum Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatus python_type
     py WiFiDirectAdvertisementPublisherStatus
     signature enum(Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant STOPPED 2
+    constant ABORTED 3
 
 class Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs python_type
     py WiFiDirectAdvertisementPublisherStatusChangedEventArgs
@@ -480,6 +487,9 @@ class Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEv
 enum Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod python_type
     py WiFiDirectConfigurationMethod
     signature enum(Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod;i4)
+    constant PROVIDE_PIN 0
+    constant DISPLAY_PIN 1
+    constant PUSH_BUTTON 2
 
 class Windows.Devices.WiFiDirect.WiFiDirectConnectionListener activatable python_type
     py WiFiDirectConnectionListener
@@ -549,6 +559,8 @@ class Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs python_t
 enum Windows.Devices.WiFiDirect.WiFiDirectConnectionStatus python_type
     py WiFiDirectConnectionStatus
     signature enum(Windows.Devices.WiFiDirect.WiFiDirectConnectionStatus;i4)
+    constant DISCONNECTED 0
+    constant CONNECTED 1
 
 class Windows.Devices.WiFiDirect.WiFiDirectDevice python_type closeable
     py WiFiDirectDevice
@@ -593,10 +605,15 @@ class Windows.Devices.WiFiDirect.WiFiDirectDevice python_type closeable
 enum Windows.Devices.WiFiDirect.WiFiDirectDeviceSelectorType python_type
     py WiFiDirectDeviceSelectorType
     signature enum(Windows.Devices.WiFiDirect.WiFiDirectDeviceSelectorType;i4)
+    constant DEVICE_INTERFACE 0
+    constant ASSOCIATION_ENDPOINT 1
 
 enum Windows.Devices.WiFiDirect.WiFiDirectError python_type
     py WiFiDirectError
     signature enum(Windows.Devices.WiFiDirect.WiFiDirectError;i4)
+    constant SUCCESS 0
+    constant RADIO_NOT_AVAILABLE 1
+    constant RESOURCE_IN_USE 2
 
 class Windows.Devices.WiFiDirect.WiFiDirectInformationElement activatable python_type
     py WiFiDirectInformationElement
@@ -655,6 +672,8 @@ class Windows.Devices.WiFiDirect.WiFiDirectLegacySettings python_type
 enum Windows.Devices.WiFiDirect.WiFiDirectPairingProcedure python_type
     py WiFiDirectPairingProcedure
     signature enum(Windows.Devices.WiFiDirect.WiFiDirectPairingProcedure;i4)
+    constant GROUP_OWNER_NEGOTIATION 0
+    constant INVITATION 1
 
 class System.Object external
     py winrt.system.Object

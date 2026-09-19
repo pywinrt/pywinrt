@@ -71,18 +71,32 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Stora
 enum Windows.Foundation.Diagnostics.CausalityRelation python_type
     py CausalityRelation
     signature enum(Windows.Foundation.Diagnostics.CausalityRelation;i4)
+    constant ASSIGN_DELEGATE 0
+    constant JOIN 1
+    constant CHOICE 2
+    constant CANCEL 3
+    constant ERROR 4
 
 enum Windows.Foundation.Diagnostics.CausalitySource python_type
     py CausalitySource
     signature enum(Windows.Foundation.Diagnostics.CausalitySource;i4)
+    constant APPLICATION 0
+    constant LIBRARY 1
+    constant SYSTEM 2
 
 enum Windows.Foundation.Diagnostics.CausalitySynchronousWork python_type
     py CausalitySynchronousWork
     signature enum(Windows.Foundation.Diagnostics.CausalitySynchronousWork;i4)
+    constant COMPLETION_NOTIFICATION 0
+    constant PROGRESS_NOTIFICATION 1
+    constant EXECUTION 2
 
 enum Windows.Foundation.Diagnostics.CausalityTraceLevel python_type
     py CausalityTraceLevel
     signature enum(Windows.Foundation.Diagnostics.CausalityTraceLevel;i4)
+    constant REQUIRED 0
+    constant IMPORTANT 1
+    constant VERBOSE 2
 
 class Windows.Foundation.Diagnostics.ErrorDetails python_type
     py ErrorDetails
@@ -104,9 +118,14 @@ class Windows.Foundation.Diagnostics.ErrorDetails python_type
             in int32 name=errorCode
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Diagnostics.ErrorDetails> return
 
-enum Windows.Foundation.Diagnostics.ErrorOptions python_type
+enum Windows.Foundation.Diagnostics.ErrorOptions python_type flags_enum
     py ErrorOptions
     signature enum(Windows.Foundation.Diagnostics.ErrorOptions;u4)
+    constant NONE 0x0
+    constant SUPPRESS_EXCEPTIONS 0x1
+    constant FORCE_EXCEPTIONS 0x2
+    constant USE_SET_ERROR_INFO 0x4
+    constant SUPPRESS_SET_ERROR_INFO 0x8
 
 delegate Windows.Foundation.EventHandler<Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs> concrete
     py winrt.windows.foundation.EventHandler[TracingStatusChangedEventArgs]
@@ -634,6 +653,25 @@ class Windows.Foundation.Diagnostics.LoggingChannelOptions activatable python_ty
 enum Windows.Foundation.Diagnostics.LoggingFieldFormat python_type
     py LoggingFieldFormat
     signature enum(Windows.Foundation.Diagnostics.LoggingFieldFormat;i4)
+    constant DEFAULT 0
+    constant HIDDEN 1
+    constant STRING 2
+    constant BOOLEAN 3
+    constant HEXADECIMAL 4
+    constant PROCESS_ID 5
+    constant THREAD_ID 6
+    constant PORT 7
+    constant IPV4_ADDRESS 8
+    constant IPV6_ADDRESS 9
+    constant SOCKET_ADDRESS 10
+    constant XML 11
+    constant JSON 12
+    constant WIN32_ERROR 13
+    constant NT_STATUS 14
+    constant H_RESULT 15
+    constant FILE_TIME 16
+    constant SIGNED 17
+    constant UNSIGNED 18
 
 class Windows.Foundation.Diagnostics.LoggingFields activatable python_type
     py LoggingFields
@@ -1135,10 +1173,22 @@ class Windows.Foundation.Diagnostics.LoggingFields activatable python_type
 enum Windows.Foundation.Diagnostics.LoggingLevel python_type
     py LoggingLevel
     signature enum(Windows.Foundation.Diagnostics.LoggingLevel;i4)
+    constant VERBOSE 0
+    constant INFORMATION 1
+    constant WARNING 2
+    constant ERROR 3
+    constant CRITICAL 4
 
 enum Windows.Foundation.Diagnostics.LoggingOpcode python_type
     py LoggingOpcode
     signature enum(Windows.Foundation.Diagnostics.LoggingOpcode;i4)
+    constant INFO 0
+    constant START 1
+    constant STOP 2
+    constant REPLY 6
+    constant RESUME 7
+    constant SUSPEND 8
+    constant SEND 9
 
 class Windows.Foundation.Diagnostics.LoggingOptions activatable python_type
     py LoggingOptions

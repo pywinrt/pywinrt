@@ -492,10 +492,17 @@ class Windows.System.Profile.PlatformAutomaticAppSignInManager static python_typ
 enum Windows.System.Profile.PlatformAutomaticAppSignInPolicy python_type
     py PlatformAutomaticAppSignInPolicy
     signature enum(Windows.System.Profile.PlatformAutomaticAppSignInPolicy;i4)
+    constant UNKNOWN 0
+    constant PERMISSION_REQUIRED 1
+    constant ALWAYS_ALLOWED 2
 
 enum Windows.System.Profile.PlatformDataCollectionLevel python_type
     py PlatformDataCollectionLevel
     signature enum(Windows.System.Profile.PlatformDataCollectionLevel;i4)
+    constant SECURITY 0
+    constant BASIC 1
+    constant ENHANCED 2
+    constant FULL 3
 
 class Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings static python_type
     py PlatformDiagnosticsAndUsageDataSettings
@@ -574,10 +581,17 @@ class Windows.System.Profile.SystemIdentificationInfo python_type
 enum Windows.System.Profile.SystemIdentificationSource python_type
     py SystemIdentificationSource
     signature enum(Windows.System.Profile.SystemIdentificationSource;i4)
+    constant NONE 0
+    constant TPM 1
+    constant UEFI 2
+    constant REGISTRY 3
 
 enum Windows.System.Profile.SystemOutOfBoxExperienceState python_type
     py SystemOutOfBoxExperienceState
     signature enum(Windows.System.Profile.SystemOutOfBoxExperienceState;i4)
+    constant NOT_STARTED 0
+    constant IN_PROGRESS 1
+    constant COMPLETED 2
 
 class Windows.System.Profile.SystemSetupInfo static python_type
     py SystemSetupInfo
@@ -604,9 +618,11 @@ class Windows.System.Profile.UnsupportedAppRequirement python_type
         get get_Requirement slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IUnsupportedAppRequirement shape=4 reverse=22
             out string return
 
-enum Windows.System.Profile.UnsupportedAppRequirementReasons python_type
+enum Windows.System.Profile.UnsupportedAppRequirementReasons python_type flags_enum
     py UnsupportedAppRequirementReasons
     signature enum(Windows.System.Profile.UnsupportedAppRequirementReasons;u4)
+    constant UNKNOWN 0x0
+    constant DENIED_BY_SYSTEM 0x1
 
 class Windows.System.Profile.WindowsIntegrityPolicy static python_type
     py WindowsIntegrityPolicy

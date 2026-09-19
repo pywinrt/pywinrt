@@ -402,6 +402,11 @@ class Windows.Data.Json.JsonError static python_type
 enum Windows.Data.Json.JsonErrorStatus python_type
     py JsonErrorStatus
     signature enum(Windows.Data.Json.JsonErrorStatus;i4)
+    constant UNKNOWN 0
+    constant INVALID_JSON_STRING 1
+    constant INVALID_JSON_NUMBER 2
+    constant JSON_VALUE_NOT_FOUND 3
+    constant IMPLEMENTATION_LIMIT 4
 
 class Windows.Data.Json.JsonObject activatable python_type iterable mapping mutable_mapping stringable
     py JsonObject
@@ -591,6 +596,12 @@ class Windows.Data.Json.JsonValue python_type stringable
 enum Windows.Data.Json.JsonValueType python_type
     py JsonValueType
     signature enum(Windows.Data.Json.JsonValueType;i4)
+    constant NULL 0
+    constant BOOLEAN 1
+    constant NUMBER 2
+    constant STRING 3
+    constant ARRAY 4
+    constant OBJECT 5
 
 enum K parameterized
 

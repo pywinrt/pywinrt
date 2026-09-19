@@ -5,6 +5,8 @@ namespace Microsoft.Windows.AppNotifications.Builder
 enum Microsoft.Windows.AppNotifications.Builder.AppNotificationAudioLooping python_type
     py AppNotificationAudioLooping
     signature enum(Microsoft.Windows.AppNotifications.Builder.AppNotificationAudioLooping;i4)
+    constant NONE 0
+    constant LOOP 1
 
 class Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder activatable python_type
     py AppNotificationBuilder
@@ -237,6 +239,9 @@ class Microsoft.Windows.AppNotifications.Builder.AppNotificationButton activatab
 enum Microsoft.Windows.AppNotifications.Builder.AppNotificationButtonStyle python_type
     py AppNotificationButtonStyle
     signature enum(Microsoft.Windows.AppNotifications.Builder.AppNotificationButtonStyle;i4)
+    constant DEFAULT 0
+    constant SUCCESS 1
+    constant CRITICAL 2
 
 class Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox python_type
     py AppNotificationComboBox
@@ -280,10 +285,14 @@ class Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox python_
 enum Microsoft.Windows.AppNotifications.Builder.AppNotificationDuration python_type
     py AppNotificationDuration
     signature enum(Microsoft.Windows.AppNotifications.Builder.AppNotificationDuration;i4)
+    constant DEFAULT 0
+    constant LONG 1
 
 enum Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop python_type
     py AppNotificationImageCrop
     signature enum(Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop;i4)
+    constant DEFAULT 0
+    constant CIRCLE 1
 
 class Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar activatable python_type
     py AppNotificationProgressBar
@@ -345,10 +354,40 @@ class Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar acti
 enum Microsoft.Windows.AppNotifications.Builder.AppNotificationScenario python_type
     py AppNotificationScenario
     signature enum(Microsoft.Windows.AppNotifications.Builder.AppNotificationScenario;i4)
+    constant DEFAULT 0
+    constant REMINDER 1
+    constant ALARM 2
+    constant INCOMING_CALL 3
+    constant URGENT 4
 
 enum Microsoft.Windows.AppNotifications.Builder.AppNotificationSoundEvent python_type
     py AppNotificationSoundEvent
     signature enum(Microsoft.Windows.AppNotifications.Builder.AppNotificationSoundEvent;i4)
+    constant DEFAULT 0
+    constant IM 1
+    constant MAIL 2
+    constant REMINDER 3
+    constant SMS 4
+    constant ALARM 5
+    constant ALARM2 6
+    constant ALARM3 7
+    constant ALARM4 8
+    constant ALARM5 9
+    constant ALARM6 10
+    constant ALARM7 11
+    constant ALARM8 12
+    constant ALARM9 13
+    constant ALARM10 14
+    constant CALL 15
+    constant CALL2 16
+    constant CALL3 17
+    constant CALL4 18
+    constant CALL5 19
+    constant CALL6 20
+    constant CALL7 21
+    constant CALL8 22
+    constant CALL9 23
+    constant CALL10 24
 
 class Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties activatable python_type
     py AppNotificationTextProperties

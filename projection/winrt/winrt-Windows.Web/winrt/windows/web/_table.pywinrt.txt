@@ -65,6 +65,61 @@ class Windows.Web.WebError static python_type
 enum Windows.Web.WebErrorStatus python_type
     py WebErrorStatus
     signature enum(Windows.Web.WebErrorStatus;i4)
+    constant UNKNOWN 0
+    constant CERTIFICATE_COMMON_NAME_IS_INCORRECT 1
+    constant CERTIFICATE_EXPIRED 2
+    constant CERTIFICATE_CONTAINS_ERRORS 3
+    constant CERTIFICATE_REVOKED 4
+    constant CERTIFICATE_IS_INVALID 5
+    constant SERVER_UNREACHABLE 6
+    constant TIMEOUT 7
+    constant ERROR_HTTP_INVALID_SERVER_RESPONSE 8
+    constant CONNECTION_ABORTED 9
+    constant CONNECTION_RESET 10
+    constant DISCONNECTED 11
+    constant HTTP_TO_HTTPS_ON_REDIRECTION 12
+    constant HTTPS_TO_HTTP_ON_REDIRECTION 13
+    constant CANNOT_CONNECT 14
+    constant HOST_NAME_NOT_RESOLVED 15
+    constant OPERATION_CANCELED 16
+    constant REDIRECT_FAILED 17
+    constant UNEXPECTED_STATUS_CODE 18
+    constant UNEXPECTED_REDIRECTION 19
+    constant UNEXPECTED_CLIENT_ERROR 20
+    constant UNEXPECTED_SERVER_ERROR 21
+    constant INSUFFICIENT_RANGE_SUPPORT 22
+    constant MISSING_CONTENT_LENGTH_SUPPORT 23
+    constant MULTIPLE_CHOICES 300
+    constant MOVED_PERMANENTLY 301
+    constant FOUND 302
+    constant SEE_OTHER 303
+    constant NOT_MODIFIED 304
+    constant USE_PROXY 305
+    constant TEMPORARY_REDIRECT 307
+    constant BAD_REQUEST 400
+    constant UNAUTHORIZED 401
+    constant PAYMENT_REQUIRED 402
+    constant FORBIDDEN 403
+    constant NOT_FOUND 404
+    constant METHOD_NOT_ALLOWED 405
+    constant NOT_ACCEPTABLE 406
+    constant PROXY_AUTHENTICATION_REQUIRED 407
+    constant REQUEST_TIMEOUT 408
+    constant CONFLICT 409
+    constant GONE 410
+    constant LENGTH_REQUIRED 411
+    constant PRECONDITION_FAILED 412
+    constant REQUEST_ENTITY_TOO_LARGE 413
+    constant REQUEST_URI_TOO_LONG 414
+    constant UNSUPPORTED_MEDIA_TYPE 415
+    constant REQUESTED_RANGE_NOT_SATISFIABLE 416
+    constant EXPECTATION_FAILED 417
+    constant INTERNAL_SERVER_ERROR 500
+    constant NOT_IMPLEMENTED 501
+    constant BAD_GATEWAY 502
+    constant SERVICE_UNAVAILABLE 503
+    constant GATEWAY_TIMEOUT 504
+    constant HTTP_VERSION_NOT_SUPPORTED 505
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
     py winrt.windows.foundation.AsyncOperationCompletedHandler

@@ -112,6 +112,9 @@ class Windows.UI.Input.Inking.Core.CoreInkPresenterHost activatable python_type
 enum Windows.UI.Input.Inking.Core.CoreWetStrokeDisposition python_type
     py CoreWetStrokeDisposition
     signature enum(Windows.UI.Input.Inking.Core.CoreWetStrokeDisposition;i4)
+    constant INKING 0
+    constant COMPLETED 1
+    constant CANCELED 2
 
 class Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs python_type
     py CoreWetStrokeUpdateEventArgs

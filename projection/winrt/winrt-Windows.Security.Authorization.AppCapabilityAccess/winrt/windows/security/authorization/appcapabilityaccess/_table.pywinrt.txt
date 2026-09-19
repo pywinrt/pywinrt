@@ -61,6 +61,11 @@ class Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessChan
 enum Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus python_type
     py AppCapabilityAccessStatus
     signature enum(Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus;i4)
+    constant DENIED_BY_SYSTEM 0
+    constant NOT_DECLARED_BY_APP 1
+    constant DENIED_BY_USER 2
+    constant USER_PROMPT_REQUIRED 3
+    constant ALLOWED 4
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[IMapView[String, AppCapabilityAccessStatus]]

@@ -844,6 +844,10 @@ class Windows.System.RemoteSystems.RemoteSystem python_type
 enum Windows.System.RemoteSystems.RemoteSystemAccessStatus python_type
     py RemoteSystemAccessStatus
     signature enum(Windows.System.RemoteSystems.RemoteSystemAccessStatus;i4)
+    constant UNSPECIFIED 0
+    constant ALLOWED 1
+    constant DENIED_BY_USER 2
+    constant DENIED_BY_SYSTEM 3
 
 class Windows.System.RemoteSystems.RemoteSystemAddedEventArgs python_type
     py RemoteSystemAddedEventArgs
@@ -908,6 +912,8 @@ class Windows.System.RemoteSystems.RemoteSystemAppRegistration python_type
 enum Windows.System.RemoteSystems.RemoteSystemAuthorizationKind python_type
     py RemoteSystemAuthorizationKind
     signature enum(Windows.System.RemoteSystems.RemoteSystemAuthorizationKind;i4)
+    constant SAME_USER 0
+    constant ANONYMOUS 1
 
 class Windows.System.RemoteSystems.RemoteSystemAuthorizationKindFilter python_type
     py RemoteSystemAuthorizationKindFilter
@@ -978,6 +984,10 @@ class Windows.System.RemoteSystems.RemoteSystemConnectionRequest python_type
 enum Windows.System.RemoteSystems.RemoteSystemDiscoveryType python_type
     py RemoteSystemDiscoveryType
     signature enum(Windows.System.RemoteSystems.RemoteSystemDiscoveryType;i4)
+    constant ANY 0
+    constant PROXIMAL 1
+    constant CLOUD 2
+    constant SPATIALLY_PROXIMAL 3
 
 class Windows.System.RemoteSystems.RemoteSystemDiscoveryTypeFilter python_type
     py RemoteSystemDiscoveryTypeFilter
@@ -1047,6 +1057,11 @@ class Windows.System.RemoteSystems.RemoteSystemKinds static python_type
 enum Windows.System.RemoteSystems.RemoteSystemPlatform python_type
     py RemoteSystemPlatform
     signature enum(Windows.System.RemoteSystems.RemoteSystemPlatform;i4)
+    constant UNKNOWN 0
+    constant WINDOWS 1
+    constant ANDROID 2
+    constant IOS 3
+    constant LINUX 4
 
 class Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs python_type
     py RemoteSystemRemovedEventArgs
@@ -1144,6 +1159,9 @@ class Windows.System.RemoteSystems.RemoteSystemSessionCreationResult python_type
 enum Windows.System.RemoteSystems.RemoteSystemSessionCreationStatus python_type
     py RemoteSystemSessionCreationStatus
     signature enum(Windows.System.RemoteSystems.RemoteSystemSessionCreationStatus;i4)
+    constant SUCCESS 0
+    constant SESSION_LIMITS_EXCEEDED 1
+    constant OPERATION_ABORTED 2
 
 class Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs python_type
     py RemoteSystemSessionDisconnectedEventArgs
@@ -1157,6 +1175,9 @@ class Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs pyth
 enum Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedReason python_type
     py RemoteSystemSessionDisconnectedReason
     signature enum(Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedReason;i4)
+    constant SESSION_UNAVAILABLE 0
+    constant REMOVED_BY_CONTROLLER 1
+    constant SESSION_CLOSED 2
 
 class Windows.System.RemoteSystems.RemoteSystemSessionInfo python_type
     py RemoteSystemSessionInfo
@@ -1247,6 +1268,11 @@ class Windows.System.RemoteSystems.RemoteSystemSessionJoinResult python_type
 enum Windows.System.RemoteSystems.RemoteSystemSessionJoinStatus python_type
     py RemoteSystemSessionJoinStatus
     signature enum(Windows.System.RemoteSystems.RemoteSystemSessionJoinStatus;i4)
+    constant SUCCESS 0
+    constant SESSION_LIMITS_EXCEEDED 1
+    constant OPERATION_ABORTED 2
+    constant SESSION_UNAVAILABLE 3
+    constant REJECTED_BY_CONTROLLER 4
 
 class Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel python_type
     py RemoteSystemSessionMessageChannel
@@ -1291,6 +1317,8 @@ class Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel python_type
 enum Windows.System.RemoteSystems.RemoteSystemSessionMessageChannelReliability python_type
     py RemoteSystemSessionMessageChannelReliability
     signature enum(Windows.System.RemoteSystems.RemoteSystemSessionMessageChannelReliability;i4)
+    constant RELIABLE 0
+    constant UNRELIABLE 1
 
 class Windows.System.RemoteSystems.RemoteSystemSessionOptions activatable python_type
     py RemoteSystemSessionOptions
@@ -1370,6 +1398,12 @@ class Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher python_
 enum Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcherStatus python_type
     py RemoteSystemSessionParticipantWatcherStatus
     signature enum(Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPING 3
+    constant STOPPED 4
+    constant ABORTED 5
 
 class Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs python_type
     py RemoteSystemSessionRemovedEventArgs
@@ -1435,14 +1469,26 @@ class Windows.System.RemoteSystems.RemoteSystemSessionWatcher python_type
 enum Windows.System.RemoteSystems.RemoteSystemSessionWatcherStatus python_type
     py RemoteSystemSessionWatcherStatus
     signature enum(Windows.System.RemoteSystems.RemoteSystemSessionWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPING 3
+    constant STOPPED 4
+    constant ABORTED 5
 
 enum Windows.System.RemoteSystems.RemoteSystemStatus python_type
     py RemoteSystemStatus
     signature enum(Windows.System.RemoteSystems.RemoteSystemStatus;i4)
+    constant UNAVAILABLE 0
+    constant DISCOVERING_AVAILABILITY 1
+    constant AVAILABLE 2
+    constant UNKNOWN 3
 
 enum Windows.System.RemoteSystems.RemoteSystemStatusType python_type
     py RemoteSystemStatusType
     signature enum(Windows.System.RemoteSystems.RemoteSystemStatusType;i4)
+    constant ANY 0
+    constant AVAILABLE 1
 
 class Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter python_type
     py RemoteSystemStatusTypeFilter
@@ -1516,6 +1562,9 @@ class Windows.System.RemoteSystems.RemoteSystemWatcher python_type
 enum Windows.System.RemoteSystems.RemoteSystemWatcherError python_type
     py RemoteSystemWatcherError
     signature enum(Windows.System.RemoteSystems.RemoteSystemWatcherError;i4)
+    constant UNKNOWN 0
+    constant INTERNET_NOT_AVAILABLE 1
+    constant AUTHENTICATION_ERROR 2
 
 class Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs python_type
     py RemoteSystemWatcherErrorOccurredEventArgs

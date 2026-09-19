@@ -2,9 +2,12 @@ format 4.0
 generator 0.0.0
 namespace Windows.ApplicationModel
 
-enum Windows.ApplicationModel.AddResourcePackageOptions python_type
+enum Windows.ApplicationModel.AddResourcePackageOptions python_type flags_enum
     py AddResourcePackageOptions
     signature enum(Windows.ApplicationModel.AddResourcePackageOptions;u4)
+    constant NONE 0x0
+    constant FORCE_TARGET_APP_SHUTDOWN 0x1
+    constant APPLY_UPDATE_IF_AVAILABLE 0x2
 
 class Windows.ApplicationModel.AppDisplayInfo python_type
     py AppDisplayInfo
@@ -25,6 +28,9 @@ class Windows.ApplicationModel.AppDisplayInfo python_type
 enum Windows.ApplicationModel.AppExecutionContext python_type
     py AppExecutionContext
     signature enum(Windows.ApplicationModel.AppExecutionContext;i4)
+    constant UNKNOWN 0
+    constant HOST 1
+    constant GUEST 2
 
 class Windows.ApplicationModel.AppInfo python_type
     py AppInfo
@@ -127,6 +133,8 @@ class Windows.ApplicationModel.AppInstallerInfo python_type
 enum Windows.ApplicationModel.AppInstallerPolicySource python_type
     py AppInstallerPolicySource
     signature enum(Windows.ApplicationModel.AppInstallerPolicySource;i4)
+    constant DEFAULT 0
+    constant SYSTEM 1
 
 class Windows.ApplicationModel.AppInstance python_type
     py AppInstance
@@ -373,6 +381,10 @@ class Windows.ApplicationModel.FindRelatedPackagesOptions python_type
 enum Windows.ApplicationModel.FullTrustLaunchResult python_type
     py FullTrustLaunchResult
     signature enum(Windows.ApplicationModel.FullTrustLaunchResult;i4)
+    constant SUCCESS 0
+    constant ACCESS_DENIED 1
+    constant FILE_NOT_FOUND 2
+    constant UNKNOWN 3
 
 class Windows.ApplicationModel.FullTrustProcessLaunchResult python_type
     py FullTrustProcessLaunchResult
@@ -1699,6 +1711,10 @@ class Windows.ApplicationModel.LimitedAccessFeatureRequestResult python_type
 enum Windows.ApplicationModel.LimitedAccessFeatureStatus python_type
     py LimitedAccessFeatureStatus
     signature enum(Windows.ApplicationModel.LimitedAccessFeatureStatus;i4)
+    constant UNAVAILABLE 0
+    constant AVAILABLE 1
+    constant AVAILABLE_WITHOUT_TOKEN 2
+    constant UNKNOWN 3
 
 class Windows.ApplicationModel.LimitedAccessFeatures static python_type
     py LimitedAccessFeatures
@@ -2042,6 +2058,10 @@ class Windows.ApplicationModel.PackageContentGroupStagingEventArgs python_type
 enum Windows.ApplicationModel.PackageContentGroupState python_type
     py PackageContentGroupState
     signature enum(Windows.ApplicationModel.PackageContentGroupState;i4)
+    constant NOT_STAGED 0
+    constant QUEUED 1
+    constant STAGING 2
+    constant STAGED 3
 
 class Windows.ApplicationModel.PackageId python_type
     py PackageId
@@ -2109,10 +2129,18 @@ class Windows.ApplicationModel.PackageInstallingEventArgs python_type
 enum Windows.ApplicationModel.PackageRelationship python_type
     py PackageRelationship
     signature enum(Windows.ApplicationModel.PackageRelationship;i4)
+    constant DEPENDENCIES 0
+    constant DEPENDENTS 1
+    constant ALL 2
 
 enum Windows.ApplicationModel.PackageSignatureKind python_type
     py PackageSignatureKind
     signature enum(Windows.ApplicationModel.PackageSignatureKind;i4)
+    constant NONE 0
+    constant DEVELOPER 1
+    constant ENTERPRISE 2
+    constant STORE 3
+    constant SYSTEM 4
 
 class Windows.ApplicationModel.PackageStagingEventArgs python_type
     py PackageStagingEventArgs
@@ -2214,6 +2242,11 @@ class Windows.ApplicationModel.PackageUninstallingEventArgs python_type
 enum Windows.ApplicationModel.PackageUpdateAvailability python_type
     py PackageUpdateAvailability
     signature enum(Windows.ApplicationModel.PackageUpdateAvailability;i4)
+    constant UNKNOWN 0
+    constant NO_UPDATES 1
+    constant AVAILABLE 2
+    constant REQUIRED 3
+    constant ERROR 4
 
 class Windows.ApplicationModel.PackageUpdateAvailabilityResult python_type
     py PackageUpdateAvailabilityResult
@@ -2287,6 +2320,11 @@ class Windows.ApplicationModel.StartupTask python_type
 enum Windows.ApplicationModel.StartupTaskState python_type
     py StartupTaskState
     signature enum(Windows.ApplicationModel.StartupTaskState;i4)
+    constant DISABLED 0
+    constant DISABLED_BY_USER 1
+    constant ENABLED 2
+    constant DISABLED_BY_POLICY 3
+    constant ENABLED_BY_POLICY 4
 
 class Windows.ApplicationModel.SuspendingDeferral python_type
     py SuspendingDeferral

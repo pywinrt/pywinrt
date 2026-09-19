@@ -58,6 +58,8 @@ class Windows.UI.Composition.Effects.SceneLightingEffect activatable python_type
 enum Windows.UI.Composition.Effects.SceneLightingEffectReflectanceModel python_type
     py SceneLightingEffectReflectanceModel
     signature enum(Windows.UI.Composition.Effects.SceneLightingEffectReflectanceModel;i4)
+    constant BLINN_PHONG 0
+    constant PHYSICALLY_BASED_BLINN_PHONG 1
 
 interface Windows.Graphics.Effects.IGraphicsEffect external
     py winrt.windows.graphics.effects._IGraphicsEffect

@@ -93,10 +93,29 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Searc
 enum Windows.Storage.Search.CommonFileQuery python_type
     py CommonFileQuery
     signature enum(Windows.Storage.Search.CommonFileQuery;i4)
+    constant DEFAULT_QUERY 0
+    constant ORDER_BY_NAME 1
+    constant ORDER_BY_TITLE 2
+    constant ORDER_BY_MUSIC_PROPERTIES 3
+    constant ORDER_BY_SEARCH_RANK 4
+    constant ORDER_BY_DATE 5
 
 enum Windows.Storage.Search.CommonFolderQuery python_type
     py CommonFolderQuery
     signature enum(Windows.Storage.Search.CommonFolderQuery;i4)
+    constant DEFAULT_QUERY 0
+    constant GROUP_BY_YEAR 100
+    constant GROUP_BY_MONTH 101
+    constant GROUP_BY_ARTIST 102
+    constant GROUP_BY_ALBUM 103
+    constant GROUP_BY_ALBUM_ARTIST 104
+    constant GROUP_BY_COMPOSER 105
+    constant GROUP_BY_GENRE 106
+    constant GROUP_BY_PUBLISHED_YEAR 107
+    constant GROUP_BY_RATING 108
+    constant GROUP_BY_TAG 109
+    constant GROUP_BY_AUTHOR 110
+    constant GROUP_BY_TYPE 111
 
 class Windows.Storage.Search.ContentIndexer python_type
     py ContentIndexer
@@ -184,10 +203,15 @@ class Windows.Storage.Search.ContentIndexerQuery python_type
 enum Windows.Storage.Search.DateStackOption python_type
     py DateStackOption
     signature enum(Windows.Storage.Search.DateStackOption;i4)
+    constant NONE 0
+    constant YEAR 1
+    constant MONTH 2
 
 enum Windows.Storage.Search.FolderDepth python_type
     py FolderDepth
     signature enum(Windows.Storage.Search.FolderDepth;i4)
+    constant SHALLOW 0
+    constant DEEP 1
 
 interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[UInt32]
@@ -1404,10 +1428,18 @@ class Windows.Storage.Search.IndexableContent activatable python_type
 enum Windows.Storage.Search.IndexedState python_type
     py IndexedState
     signature enum(Windows.Storage.Search.IndexedState;i4)
+    constant UNKNOWN 0
+    constant NOT_INDEXED 1
+    constant PARTIALLY_INDEXED 2
+    constant FULLY_INDEXED 3
 
 enum Windows.Storage.Search.IndexerOption python_type
     py IndexerOption
     signature enum(Windows.Storage.Search.IndexerOption;i4)
+    constant USE_INDEXER_WHEN_AVAILABLE 0
+    constant ONLY_USE_INDEXER 1
+    constant DO_NOT_USE_INDEXER 2
+    constant ONLY_USE_INDEXER_AND_OPTIMIZE_FOR_INDEXED_PROPERTIES 3
 
 class Windows.Storage.Search.QueryOptions activatable python_type
     py QueryOptions

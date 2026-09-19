@@ -104,6 +104,12 @@ class Windows.System.AppDiagnosticInfoWatcherEventArgs python_type
 enum Windows.System.AppDiagnosticInfoWatcherStatus python_type
     py AppDiagnosticInfoWatcherStatus
     signature enum(Windows.System.AppDiagnosticInfoWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPING 3
+    constant STOPPED 4
+    constant ABORTED 5
 
 class Windows.System.AppExecutionStateChangeResult python_type
     py AppExecutionStateChangeResult
@@ -139,6 +145,10 @@ class Windows.System.AppMemoryReport python_type
 enum Windows.System.AppMemoryUsageLevel python_type
     py AppMemoryUsageLevel
     signature enum(Windows.System.AppMemoryUsageLevel;i4)
+    constant LOW 0
+    constant MEDIUM 1
+    constant HIGH 2
+    constant OVER_LIMIT 3
 
 class Windows.System.AppMemoryUsageLimitChangingEventArgs python_type
     py AppMemoryUsageLimitChangingEventArgs
@@ -173,10 +183,18 @@ class Windows.System.AppResourceGroupBackgroundTaskReport python_type
 enum Windows.System.AppResourceGroupEnergyQuotaState python_type
     py AppResourceGroupEnergyQuotaState
     signature enum(Windows.System.AppResourceGroupEnergyQuotaState;i4)
+    constant UNKNOWN 0
+    constant OVER 1
+    constant UNDER 2
 
 enum Windows.System.AppResourceGroupExecutionState python_type
     py AppResourceGroupExecutionState
     signature enum(Windows.System.AppResourceGroupExecutionState;i4)
+    constant UNKNOWN 0
+    constant RUNNING 1
+    constant SUSPENDING 2
+    constant SUSPENDED 3
+    constant NOT_RUNNING 4
 
 class Windows.System.AppResourceGroupInfo python_type
     py AppResourceGroupInfo
@@ -282,6 +300,12 @@ class Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs p
 enum Windows.System.AppResourceGroupInfoWatcherStatus python_type
     py AppResourceGroupInfoWatcherStatus
     signature enum(Windows.System.AppResourceGroupInfoWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPING 3
+    constant STOPPED 4
+    constant ABORTED 5
 
 class Windows.System.AppResourceGroupMemoryReport python_type
     py AppResourceGroupMemoryReport
@@ -613,6 +637,9 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.UserAg
 enum Windows.System.AutoUpdateTimeZoneStatus python_type
     py AutoUpdateTimeZoneStatus
     signature enum(Windows.System.AutoUpdateTimeZoneStatus;i4)
+    constant ATTEMPTED 0
+    constant TIMED_OUT 1
+    constant FAILED 2
 
 class Windows.System.DateTimeSettings static python_type
     py DateTimeSettings
@@ -624,6 +651,10 @@ class Windows.System.DateTimeSettings static python_type
 enum Windows.System.DiagnosticAccessStatus python_type
     py DiagnosticAccessStatus
     signature enum(Windows.System.DiagnosticAccessStatus;i4)
+    constant UNSPECIFIED 0
+    constant DENIED 1
+    constant LIMITED 2
+    constant ALLOWED 3
 
 class Windows.System.DispatcherQueue python_type
     py DispatcherQueue
@@ -688,6 +719,9 @@ delegate Windows.System.DispatcherQueueHandler python_type
 enum Windows.System.DispatcherQueuePriority python_type
     py DispatcherQueuePriority
     signature enum(Windows.System.DispatcherQueuePriority;i4)
+    constant LOW -10
+    constant NORMAL 0
+    constant HIGH 10
 
 class Windows.System.DispatcherQueueShutdownStartingEventArgs python_type
     py DispatcherQueueShutdownStartingEventArgs
@@ -2814,14 +2848,26 @@ class Windows.System.KnownUserProperties static python_type
 enum Windows.System.LaunchFileStatus python_type
     py LaunchFileStatus
     signature enum(Windows.System.LaunchFileStatus;i4)
+    constant SUCCESS 0
+    constant APP_UNAVAILABLE 1
+    constant DENIED_BY_POLICY 2
+    constant FILE_TYPE_NOT_SUPPORTED 3
+    constant UNKNOWN 4
 
 enum Windows.System.LaunchQuerySupportStatus python_type
     py LaunchQuerySupportStatus
     signature enum(Windows.System.LaunchQuerySupportStatus;i4)
+    constant AVAILABLE 0
+    constant APP_NOT_INSTALLED 1
+    constant APP_UNAVAILABLE 2
+    constant NOT_SUPPORTED 3
+    constant UNKNOWN 4
 
 enum Windows.System.LaunchQuerySupportType python_type
     py LaunchQuerySupportType
     signature enum(Windows.System.LaunchQuerySupportType;i4)
+    constant URI 0
+    constant URI_FOR_RESULTS 1
 
 class Windows.System.LaunchUriResult python_type
     py LaunchUriResult
@@ -2838,6 +2884,10 @@ class Windows.System.LaunchUriResult python_type
 enum Windows.System.LaunchUriStatus python_type
     py LaunchUriStatus
     signature enum(Windows.System.LaunchUriStatus;i4)
+    constant SUCCESS 0
+    constant APP_UNAVAILABLE 1
+    constant PROTOCOL_UNAVAILABLE 2
+    constant UNKNOWN 3
 
 class Windows.System.Launcher static python_type
     py Launcher
@@ -3116,6 +3166,8 @@ class Windows.System.MemoryManager static python_type
 enum Windows.System.PowerState python_type
     py PowerState
     signature enum(Windows.System.PowerState;i4)
+    constant CONNECTED_STANDBY 0
+    constant SLEEP_S3 1
 
 class Windows.System.ProcessLauncher static python_type
     py ProcessLauncher
@@ -3184,6 +3236,13 @@ class Windows.System.ProcessMemoryReport python_type
 enum Windows.System.ProcessorArchitecture python_type
     py ProcessorArchitecture
     signature enum(Windows.System.ProcessorArchitecture;i4)
+    constant X86 0
+    constant ARM 5
+    constant X64 9
+    constant NEUTRAL 11
+    constant ARM64 12
+    constant X86_ON_ARM64 14
+    constant UNKNOWN 65535
 
 class Windows.System.ProtocolForResultsOperation python_type
     py ProtocolForResultsOperation
@@ -3197,6 +3256,14 @@ class Windows.System.ProtocolForResultsOperation python_type
 enum Windows.System.RemoteLaunchUriStatus python_type
     py RemoteLaunchUriStatus
     signature enum(Windows.System.RemoteLaunchUriStatus;i4)
+    constant UNKNOWN 0
+    constant SUCCESS 1
+    constant APP_UNAVAILABLE 2
+    constant PROTOCOL_UNAVAILABLE 3
+    constant REMOTE_SYSTEM_UNAVAILABLE 4
+    constant VALUE_SET_TOO_LARGE 5
+    constant DENIED_BY_LOCAL_SYSTEM 6
+    constant DENIED_BY_REMOTE_SYSTEM 7
 
 class Windows.System.RemoteLauncher static python_type
     py RemoteLauncher
@@ -3238,6 +3305,8 @@ class Windows.System.RemoteLauncherOptions activatable python_type
 enum Windows.System.ShutdownKind python_type
     py ShutdownKind
     signature enum(Windows.System.ShutdownKind;i4)
+    constant SHUTDOWN 0
+    constant RESTART 1
 
 class Windows.System.ShutdownManager static python_type
     py ShutdownManager
@@ -3470,14 +3539,25 @@ class Windows.System.User python_type
 enum Windows.System.UserAgeConsentGroup python_type
     py UserAgeConsentGroup
     signature enum(Windows.System.UserAgeConsentGroup;i4)
+    constant CHILD 0
+    constant MINOR 1
+    constant ADULT 2
 
 enum Windows.System.UserAgeConsentResult python_type
     py UserAgeConsentResult
     signature enum(Windows.System.UserAgeConsentResult;i4)
+    constant NOT_ENFORCED 0
+    constant INCLUDED 1
+    constant NOT_INCLUDED 2
+    constant UNKNOWN 3
+    constant AMBIGUOUS 4
 
 enum Windows.System.UserAuthenticationStatus python_type
     py UserAuthenticationStatus
     signature enum(Windows.System.UserAuthenticationStatus;i4)
+    constant UNAUTHENTICATED 0
+    constant LOCALLY_AUTHENTICATED 1
+    constant REMOTELY_AUTHENTICATED 2
 
 class Windows.System.UserAuthenticationStatusChangeDeferral python_type
     py UserAuthenticationStatusChangeDeferral
@@ -3576,10 +3656,19 @@ class Windows.System.UserPicker activatable python_type
 enum Windows.System.UserPictureSize python_type
     py UserPictureSize
     signature enum(Windows.System.UserPictureSize;i4)
+    constant SIZE64X64 0
+    constant SIZE208X208 1
+    constant SIZE424X424 2
+    constant SIZE1080X1080 3
 
 enum Windows.System.UserType python_type
     py UserType
     signature enum(Windows.System.UserType;i4)
+    constant LOCAL_USER 0
+    constant REMOTE_USER 1
+    constant LOCAL_GUEST 2
+    constant REMOTE_GUEST 3
+    constant SYSTEM_MANAGED 4
 
 class Windows.System.UserWatcher python_type
     py UserWatcher
@@ -3639,18 +3728,203 @@ class Windows.System.UserWatcher python_type
 enum Windows.System.UserWatcherStatus python_type
     py UserWatcherStatus
     signature enum(Windows.System.UserWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPING 3
+    constant STOPPED 4
+    constant ABORTED 5
 
 enum Windows.System.UserWatcherUpdateKind python_type
     py UserWatcherUpdateKind
     signature enum(Windows.System.UserWatcherUpdateKind;i4)
+    constant PROPERTIES 0
+    constant PICTURE 1
 
 enum Windows.System.VirtualKey python_type
     py VirtualKey
     signature enum(Windows.System.VirtualKey;i4)
+    constant NONE 0
+    constant LEFT_BUTTON 1
+    constant RIGHT_BUTTON 2
+    constant CANCEL 3
+    constant MIDDLE_BUTTON 4
+    constant X_BUTTON1 5
+    constant X_BUTTON2 6
+    constant BACK 8
+    constant TAB 9
+    constant CLEAR 12
+    constant ENTER 13
+    constant SHIFT 16
+    constant CONTROL 17
+    constant MENU 18
+    constant PAUSE 19
+    constant CAPITAL_LOCK 20
+    constant KANA 21
+    constant HANGUL 21
+    constant IME_ON 22
+    constant JUNJA 23
+    constant FINAL 24
+    constant HANJA 25
+    constant KANJI 25
+    constant IME_OFF 26
+    constant ESCAPE 27
+    constant CONVERT 28
+    constant NON_CONVERT 29
+    constant ACCEPT 30
+    constant MODE_CHANGE 31
+    constant SPACE 32
+    constant PAGE_UP 33
+    constant PAGE_DOWN 34
+    constant END 35
+    constant HOME 36
+    constant LEFT 37
+    constant UP 38
+    constant RIGHT 39
+    constant DOWN 40
+    constant SELECT 41
+    constant PRINT 42
+    constant EXECUTE 43
+    constant SNAPSHOT 44
+    constant INSERT 45
+    constant DELETE 46
+    constant HELP 47
+    constant NUMBER0 48
+    constant NUMBER1 49
+    constant NUMBER2 50
+    constant NUMBER3 51
+    constant NUMBER4 52
+    constant NUMBER5 53
+    constant NUMBER6 54
+    constant NUMBER7 55
+    constant NUMBER8 56
+    constant NUMBER9 57
+    constant A 65
+    constant B 66
+    constant C 67
+    constant D 68
+    constant E 69
+    constant F 70
+    constant G 71
+    constant H 72
+    constant I 73
+    constant J 74
+    constant K 75
+    constant L 76
+    constant M 77
+    constant N 78
+    constant O 79
+    constant P 80
+    constant Q 81
+    constant R 82
+    constant S 83
+    constant T 84
+    constant U 85
+    constant V 86
+    constant W 87
+    constant X 88
+    constant Y 89
+    constant Z 90
+    constant LEFT_WINDOWS 91
+    constant RIGHT_WINDOWS 92
+    constant APPLICATION 93
+    constant SLEEP 95
+    constant NUMBER_PAD0 96
+    constant NUMBER_PAD1 97
+    constant NUMBER_PAD2 98
+    constant NUMBER_PAD3 99
+    constant NUMBER_PAD4 100
+    constant NUMBER_PAD5 101
+    constant NUMBER_PAD6 102
+    constant NUMBER_PAD7 103
+    constant NUMBER_PAD8 104
+    constant NUMBER_PAD9 105
+    constant MULTIPLY 106
+    constant ADD 107
+    constant SEPARATOR 108
+    constant SUBTRACT 109
+    constant DECIMAL 110
+    constant DIVIDE 111
+    constant F1 112
+    constant F2 113
+    constant F3 114
+    constant F4 115
+    constant F5 116
+    constant F6 117
+    constant F7 118
+    constant F8 119
+    constant F9 120
+    constant F10 121
+    constant F11 122
+    constant F12 123
+    constant F13 124
+    constant F14 125
+    constant F15 126
+    constant F16 127
+    constant F17 128
+    constant F18 129
+    constant F19 130
+    constant F20 131
+    constant F21 132
+    constant F22 133
+    constant F23 134
+    constant F24 135
+    constant NAVIGATION_VIEW 136
+    constant NAVIGATION_MENU 137
+    constant NAVIGATION_UP 138
+    constant NAVIGATION_DOWN 139
+    constant NAVIGATION_LEFT 140
+    constant NAVIGATION_RIGHT 141
+    constant NAVIGATION_ACCEPT 142
+    constant NAVIGATION_CANCEL 143
+    constant NUMBER_KEY_LOCK 144
+    constant SCROLL 145
+    constant LEFT_SHIFT 160
+    constant RIGHT_SHIFT 161
+    constant LEFT_CONTROL 162
+    constant RIGHT_CONTROL 163
+    constant LEFT_MENU 164
+    constant RIGHT_MENU 165
+    constant GO_BACK 166
+    constant GO_FORWARD 167
+    constant REFRESH 168
+    constant STOP 169
+    constant SEARCH 170
+    constant FAVORITES 171
+    constant GO_HOME 172
+    constant GAMEPAD_A 195
+    constant GAMEPAD_B 196
+    constant GAMEPAD_X 197
+    constant GAMEPAD_Y 198
+    constant GAMEPAD_RIGHT_SHOULDER 199
+    constant GAMEPAD_LEFT_SHOULDER 200
+    constant GAMEPAD_LEFT_TRIGGER 201
+    constant GAMEPAD_RIGHT_TRIGGER 202
+    constant GAMEPAD_D_PAD_UP 203
+    constant GAMEPAD_D_PAD_DOWN 204
+    constant GAMEPAD_D_PAD_LEFT 205
+    constant GAMEPAD_D_PAD_RIGHT 206
+    constant GAMEPAD_MENU 207
+    constant GAMEPAD_VIEW 208
+    constant GAMEPAD_LEFT_THUMBSTICK_BUTTON 209
+    constant GAMEPAD_RIGHT_THUMBSTICK_BUTTON 210
+    constant GAMEPAD_LEFT_THUMBSTICK_UP 211
+    constant GAMEPAD_LEFT_THUMBSTICK_DOWN 212
+    constant GAMEPAD_LEFT_THUMBSTICK_RIGHT 213
+    constant GAMEPAD_LEFT_THUMBSTICK_LEFT 214
+    constant GAMEPAD_RIGHT_THUMBSTICK_UP 215
+    constant GAMEPAD_RIGHT_THUMBSTICK_DOWN 216
+    constant GAMEPAD_RIGHT_THUMBSTICK_RIGHT 217
+    constant GAMEPAD_RIGHT_THUMBSTICK_LEFT 218
 
-enum Windows.System.VirtualKeyModifiers python_type
+enum Windows.System.VirtualKeyModifiers python_type flags_enum
     py VirtualKeyModifiers
     signature enum(Windows.System.VirtualKeyModifiers;u4)
+    constant NONE 0x0
+    constant CONTROL 0x1
+    constant MENU 0x2
+    constant SHIFT 0x4
+    constant WINDOWS 0x8
 
 class System.Boolean external
     py winrt.system.Boolean

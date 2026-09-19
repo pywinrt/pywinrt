@@ -54,6 +54,9 @@ interface Windows.Security.Authentication.Web.IWebAuthenticationResult
 enum Windows.Security.Authentication.Web.TokenBindingKeyType python_type
     py TokenBindingKeyType
     signature enum(Windows.Security.Authentication.Web.TokenBindingKeyType;i4)
+    constant RSA2048 0
+    constant ECDSA_P256 1
+    constant ANY_EXISTING 2
 
 class Windows.Security.Authentication.Web.WebAuthenticationBroker static python_type
     py WebAuthenticationBroker
@@ -92,9 +95,14 @@ class Windows.Security.Authentication.Web.WebAuthenticationBroker static python_
         method GetCurrentApplicationCallbackUri slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=4 reverse=62 static
             out class type=Windows.Foundation.Uri return
 
-enum Windows.Security.Authentication.Web.WebAuthenticationOptions python_type
+enum Windows.Security.Authentication.Web.WebAuthenticationOptions python_type flags_enum
     py WebAuthenticationOptions
     signature enum(Windows.Security.Authentication.Web.WebAuthenticationOptions;u4)
+    constant NONE 0x0
+    constant SILENT_MODE 0x1
+    constant USE_TITLE 0x2
+    constant USE_HTTP_POST 0x4
+    constant USE_CORPORATE_NETWORK 0x8
 
 class Windows.Security.Authentication.Web.WebAuthenticationResult python_type
     py WebAuthenticationResult
@@ -114,6 +122,9 @@ class Windows.Security.Authentication.Web.WebAuthenticationResult python_type
 enum Windows.Security.Authentication.Web.WebAuthenticationStatus python_type
     py WebAuthenticationStatus
     signature enum(Windows.Security.Authentication.Web.WebAuthenticationStatus;i4)
+    constant SUCCESS 0
+    constant USER_CANCEL 1
+    constant ERROR_HTTP 2
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
     py winrt.windows.foundation.AsyncOperationCompletedHandler

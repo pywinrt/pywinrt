@@ -191,6 +191,9 @@ class Windows.UI.Xaml.Controls.AppBarButton composable python_type
 enum Windows.UI.Xaml.Controls.AppBarClosedDisplayMode python_type
     py AppBarClosedDisplayMode
     signature enum(Windows.UI.Xaml.Controls.AppBarClosedDisplayMode;i4)
+    constant COMPACT 0
+    constant MINIMAL 1
+    constant HIDDEN 2
 
 class Windows.UI.Xaml.Controls.AppBarElementContainer composable python_type
     py AppBarElementContainer
@@ -642,6 +645,9 @@ class Windows.UI.Xaml.Controls.AutoSuggestBoxTextChangedEventArgs activatable py
 enum Windows.UI.Xaml.Controls.AutoSuggestionBoxTextChangeReason python_type
     py AutoSuggestionBoxTextChangeReason
     signature enum(Windows.UI.Xaml.Controls.AutoSuggestionBoxTextChangeReason;i4)
+    constant USER_INPUT 0
+    constant PROGRAMMATIC_CHANGE 1
+    constant SUGGESTION_CHOSEN 2
 
 class Windows.UI.Xaml.Controls.BackClickEventArgs activatable python_type
     py BackClickEventArgs
@@ -669,6 +675,8 @@ delegate Windows.UI.Xaml.Controls.BackClickEventHandler python_type
 enum Windows.UI.Xaml.Controls.BackgroundSizing python_type
     py BackgroundSizing
     signature enum(Windows.UI.Xaml.Controls.BackgroundSizing;i4)
+    constant INNER_BORDER_EDGE 0
+    constant OUTER_BORDER_EDGE 1
 
 class Windows.UI.Xaml.Controls.BitmapIcon composable python_type
     py BitmapIcon
@@ -1734,6 +1742,9 @@ delegate Windows.UI.Xaml.Controls.CalendarViewDayItemChangingEventHandler python
 enum Windows.UI.Xaml.Controls.CalendarViewDisplayMode python_type
     py CalendarViewDisplayMode
     signature enum(Windows.UI.Xaml.Controls.CalendarViewDisplayMode;i4)
+    constant MONTH 0
+    constant YEAR 1
+    constant DECADE 2
 
 class Windows.UI.Xaml.Controls.CalendarViewSelectedDatesChangedEventArgs python_type
     py CalendarViewSelectedDatesChangedEventArgs
@@ -1750,10 +1761,15 @@ class Windows.UI.Xaml.Controls.CalendarViewSelectedDatesChangedEventArgs python_
 enum Windows.UI.Xaml.Controls.CalendarViewSelectionMode python_type
     py CalendarViewSelectionMode
     signature enum(Windows.UI.Xaml.Controls.CalendarViewSelectionMode;i4)
+    constant NONE 0
+    constant SINGLE 1
+    constant MULTIPLE 2
 
 enum Windows.UI.Xaml.Controls.CandidateWindowAlignment python_type
     py CandidateWindowAlignment
     signature enum(Windows.UI.Xaml.Controls.CandidateWindowAlignment;i4)
+    constant DEFAULT 0
+    constant BOTTOM_EDGE 1
 
 class Windows.UI.Xaml.Controls.CandidateWindowBoundsChangedEventArgs python_type
     py CandidateWindowBoundsChangedEventArgs
@@ -1841,6 +1857,9 @@ class Windows.UI.Xaml.Controls.CaptureElement activatable python_type
 enum Windows.UI.Xaml.Controls.CharacterCasing python_type
     py CharacterCasing
     signature enum(Windows.UI.Xaml.Controls.CharacterCasing;i4)
+    constant NORMAL 0
+    constant LOWER 1
+    constant UPPER 2
 
 class Windows.UI.Xaml.Controls.CheckBox composable python_type
     py CheckBox
@@ -1930,6 +1949,9 @@ delegate Windows.UI.Xaml.Controls.CleanUpVirtualizedItemEventHandler python_type
 enum Windows.UI.Xaml.Controls.ClickMode python_type
     py ClickMode
     signature enum(Windows.UI.Xaml.Controls.ClickMode;i4)
+    constant RELEASE 0
+    constant PRESS 1
+    constant HOVER 2
 
 class Windows.UI.Xaml.Controls.ColorChangedEventArgs python_type
     py ColorChangedEventArgs
@@ -2118,14 +2140,26 @@ class Windows.UI.Xaml.Controls.ColorPicker composable python_type
 enum Windows.UI.Xaml.Controls.ColorPickerHsvChannel python_type
     py ColorPickerHsvChannel
     signature enum(Windows.UI.Xaml.Controls.ColorPickerHsvChannel;i4)
+    constant HUE 0
+    constant SATURATION 1
+    constant VALUE 2
+    constant ALPHA 3
 
 enum Windows.UI.Xaml.Controls.ColorSpectrumComponents python_type
     py ColorSpectrumComponents
     signature enum(Windows.UI.Xaml.Controls.ColorSpectrumComponents;i4)
+    constant HUE_VALUE 0
+    constant VALUE_HUE 1
+    constant HUE_SATURATION 2
+    constant SATURATION_HUE 3
+    constant SATURATION_VALUE 4
+    constant VALUE_SATURATION 5
 
 enum Windows.UI.Xaml.Controls.ColorSpectrumShape python_type
     py ColorSpectrumShape
     signature enum(Windows.UI.Xaml.Controls.ColorSpectrumShape;i4)
+    constant BOX 0
+    constant RING 1
 
 class Windows.UI.Xaml.Controls.ColumnDefinition activatable python_type
     py ColumnDefinition
@@ -2399,6 +2433,8 @@ class Windows.UI.Xaml.Controls.ComboBoxItem composable python_type
 enum Windows.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger python_type
     py ComboBoxSelectionChangedTrigger
     signature enum(Windows.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger;i4)
+    constant COMMITTED 0
+    constant ALWAYS 1
 
 class Windows.UI.Xaml.Controls.ComboBoxTextSubmittedEventArgs python_type
     py ComboBoxTextSubmittedEventArgs
@@ -2488,10 +2524,15 @@ class Windows.UI.Xaml.Controls.CommandBar composable python_type
 enum Windows.UI.Xaml.Controls.CommandBarDefaultLabelPosition python_type
     py CommandBarDefaultLabelPosition
     signature enum(Windows.UI.Xaml.Controls.CommandBarDefaultLabelPosition;i4)
+    constant BOTTOM 0
+    constant RIGHT 1
+    constant COLLAPSED 2
 
 enum Windows.UI.Xaml.Controls.CommandBarDynamicOverflowAction python_type
     py CommandBarDynamicOverflowAction
     signature enum(Windows.UI.Xaml.Controls.CommandBarDynamicOverflowAction;i4)
+    constant ADDING_TO_OVERFLOW 0
+    constant REMOVING_FROM_OVERFLOW 1
 
 class Windows.UI.Xaml.Controls.CommandBarFlyout composable python_type
     py CommandBarFlyout
@@ -2515,10 +2556,15 @@ class Windows.UI.Xaml.Controls.CommandBarFlyout composable python_type
 enum Windows.UI.Xaml.Controls.CommandBarLabelPosition python_type
     py CommandBarLabelPosition
     signature enum(Windows.UI.Xaml.Controls.CommandBarLabelPosition;i4)
+    constant DEFAULT 0
+    constant COLLAPSED 1
 
 enum Windows.UI.Xaml.Controls.CommandBarOverflowButtonVisibility python_type
     py CommandBarOverflowButtonVisibility
     signature enum(Windows.UI.Xaml.Controls.CommandBarOverflowButtonVisibility;i4)
+    constant AUTO 0
+    constant VISIBLE 1
+    constant COLLAPSED 2
 
 class Windows.UI.Xaml.Controls.CommandBarOverflowPresenter composable python_type
     py CommandBarOverflowPresenter
@@ -2840,6 +2886,10 @@ class Windows.UI.Xaml.Controls.ContentDialog composable python_type
 enum Windows.UI.Xaml.Controls.ContentDialogButton python_type
     py ContentDialogButton
     signature enum(Windows.UI.Xaml.Controls.ContentDialogButton;i4)
+    constant NONE 0
+    constant PRIMARY 1
+    constant SECONDARY 2
+    constant CLOSE 3
 
 class Windows.UI.Xaml.Controls.ContentDialogButtonClickDeferral python_type
     py ContentDialogButtonClickDeferral
@@ -2906,14 +2956,22 @@ class Windows.UI.Xaml.Controls.ContentDialogOpenedEventArgs python_type
 enum Windows.UI.Xaml.Controls.ContentDialogPlacement python_type
     py ContentDialogPlacement
     signature enum(Windows.UI.Xaml.Controls.ContentDialogPlacement;i4)
+    constant POPUP 0
+    constant IN_PLACE 1
 
 enum Windows.UI.Xaml.Controls.ContentDialogResult python_type
     py ContentDialogResult
     signature enum(Windows.UI.Xaml.Controls.ContentDialogResult;i4)
+    constant NONE 0
+    constant PRIMARY 1
+    constant SECONDARY 2
 
 enum Windows.UI.Xaml.Controls.ContentLinkChangeKind python_type
     py ContentLinkChangeKind
     signature enum(Windows.UI.Xaml.Controls.ContentLinkChangeKind;i4)
+    constant INSERTED 0
+    constant REMOVED 1
+    constant EDITED 2
 
 class Windows.UI.Xaml.Controls.ContentLinkChangedEventArgs python_type
     py ContentLinkChangedEventArgs
@@ -4027,9 +4085,14 @@ class Windows.UI.Xaml.Controls.DatePickerValueChangedEventArgs python_type
         get get_OldDate slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IDatePickerValueChangedEventArgs shape=4 reverse=22
             out datetime return
 
-enum Windows.UI.Xaml.Controls.DisabledFormattingAccelerators python_type
+enum Windows.UI.Xaml.Controls.DisabledFormattingAccelerators python_type flags_enum
     py DisabledFormattingAccelerators
     signature enum(Windows.UI.Xaml.Controls.DisabledFormattingAccelerators;u4)
+    constant NONE 0x0
+    constant BOLD 0x1
+    constant ITALIC 0x2
+    constant UNDERLINE 0x4
+    constant ALL 0xFFFFFFFF
 
 class Windows.UI.Xaml.Controls.DragItemsCompletedEventArgs python_type
     py DragItemsCompletedEventArgs
@@ -4841,6 +4904,11 @@ class Windows.UI.Xaml.Controls.HandwritingPanelOpenedEventArgs python_type
 enum Windows.UI.Xaml.Controls.HandwritingPanelPlacementAlignment python_type
     py HandwritingPanelPlacementAlignment
     signature enum(Windows.UI.Xaml.Controls.HandwritingPanelPlacementAlignment;i4)
+    constant AUTO 0
+    constant TOP_LEFT 1
+    constant TOP_RIGHT 2
+    constant BOTTOM_LEFT 3
+    constant BOTTOM_RIGHT 4
 
 class Windows.UI.Xaml.Controls.HandwritingView composable python_type
     py HandwritingView
@@ -11485,6 +11553,8 @@ class Windows.UI.Xaml.Controls.Image activatable python_type
 enum Windows.UI.Xaml.Controls.IncrementalLoadingTrigger python_type
     py IncrementalLoadingTrigger
     signature enum(Windows.UI.Xaml.Controls.IncrementalLoadingTrigger;i4)
+    constant NONE 0
+    constant EDGE 1
 
 class Windows.UI.Xaml.Controls.InkCanvas composable python_type
     py InkCanvas
@@ -11654,6 +11724,11 @@ class Windows.UI.Xaml.Controls.InkToolbarBallpointPenButton composable python_ty
 enum Windows.UI.Xaml.Controls.InkToolbarButtonFlyoutPlacement python_type
     py InkToolbarButtonFlyoutPlacement
     signature enum(Windows.UI.Xaml.Controls.InkToolbarButtonFlyoutPlacement;i4)
+    constant AUTO 0
+    constant TOP 1
+    constant BOTTOM 2
+    constant LEFT 3
+    constant RIGHT 4
 
 class Windows.UI.Xaml.Controls.InkToolbarCustomPen composable python_type
     py InkToolbarCustomPen
@@ -11808,6 +11883,10 @@ class Windows.UI.Xaml.Controls.InkToolbarFlyoutItem composable python_type
 enum Windows.UI.Xaml.Controls.InkToolbarFlyoutItemKind python_type
     py InkToolbarFlyoutItemKind
     signature enum(Windows.UI.Xaml.Controls.InkToolbarFlyoutItemKind;i4)
+    constant SIMPLE 0
+    constant RADIO 1
+    constant CHECK 2
+    constant RADIO_CHECK 3
 
 class Windows.UI.Xaml.Controls.InkToolbarHighlighterButton composable python_type
     py InkToolbarHighlighterButton
@@ -11825,6 +11904,10 @@ class Windows.UI.Xaml.Controls.InkToolbarHighlighterButton composable python_typ
 enum Windows.UI.Xaml.Controls.InkToolbarInitialControls python_type
     py InkToolbarInitialControls
     signature enum(Windows.UI.Xaml.Controls.InkToolbarInitialControls;i4)
+    constant ALL 0
+    constant NONE 1
+    constant PENS_ONLY 2
+    constant ALL_EXCEPT_PENS 3
 
 class Windows.UI.Xaml.Controls.InkToolbarIsStencilButtonCheckedChangedEventArgs activatable python_type
     py InkToolbarIsStencilButtonCheckedChangedEventArgs
@@ -11864,6 +11947,7 @@ class Windows.UI.Xaml.Controls.InkToolbarMenuButton composable python_type
 enum Windows.UI.Xaml.Controls.InkToolbarMenuKind python_type
     py InkToolbarMenuKind
     signature enum(Windows.UI.Xaml.Controls.InkToolbarMenuKind;i4)
+    constant STENCIL 0
 
 class Windows.UI.Xaml.Controls.InkToolbarPenButton composable python_type
     py InkToolbarPenButton
@@ -12026,10 +12110,14 @@ class Windows.UI.Xaml.Controls.InkToolbarStencilButton composable python_type
 enum Windows.UI.Xaml.Controls.InkToolbarStencilKind python_type
     py InkToolbarStencilKind
     signature enum(Windows.UI.Xaml.Controls.InkToolbarStencilKind;i4)
+    constant RULER 0
+    constant PROTRACTOR 1
 
 enum Windows.UI.Xaml.Controls.InkToolbarToggle python_type
     py InkToolbarToggle
     signature enum(Windows.UI.Xaml.Controls.InkToolbarToggle;i4)
+    constant RULER 0
+    constant CUSTOM 1
 
 class Windows.UI.Xaml.Controls.InkToolbarToggleButton composable python_type
     py InkToolbarToggleButton
@@ -12045,6 +12133,12 @@ class Windows.UI.Xaml.Controls.InkToolbarToggleButton composable python_type
 enum Windows.UI.Xaml.Controls.InkToolbarTool python_type
     py InkToolbarTool
     signature enum(Windows.UI.Xaml.Controls.InkToolbarTool;i4)
+    constant BALLPOINT_PEN 0
+    constant PENCIL 1
+    constant HIGHLIGHTER 2
+    constant ERASER 3
+    constant CUSTOM_PEN 4
+    constant CUSTOM_TOOL 5
 
 class Windows.UI.Xaml.Controls.InkToolbarToolButton composable python_type
     py InkToolbarToolButton
@@ -12594,6 +12688,9 @@ class Windows.UI.Xaml.Controls.ItemsStackPanel activatable python_type
 enum Windows.UI.Xaml.Controls.ItemsUpdatingScrollMode python_type
     py ItemsUpdatingScrollMode
     signature enum(Windows.UI.Xaml.Controls.ItemsUpdatingScrollMode;i4)
+    constant KEEP_ITEMS_IN_VIEW 0
+    constant KEEP_SCROLL_OFFSET 1
+    constant KEEP_LAST_ITEM_IN_VIEW 2
 
 class Windows.UI.Xaml.Controls.ItemsWrapGrid activatable python_type
     py ItemsWrapGrid
@@ -12690,6 +12787,9 @@ class Windows.UI.Xaml.Controls.ItemsWrapGrid activatable python_type
 enum Windows.UI.Xaml.Controls.LightDismissOverlayMode python_type
     py LightDismissOverlayMode
     signature enum(Windows.UI.Xaml.Controls.LightDismissOverlayMode;i4)
+    constant AUTO 0
+    constant ON 1
+    constant OFF 2
 
 class Windows.UI.Xaml.Controls.ListBox composable python_type
     py ListBox
@@ -12842,6 +12942,8 @@ class Windows.UI.Xaml.Controls.ListPickerFlyoutPresenter python_type
 enum Windows.UI.Xaml.Controls.ListPickerFlyoutSelectionMode python_type
     py ListPickerFlyoutSelectionMode
     signature enum(Windows.UI.Xaml.Controls.ListPickerFlyoutSelectionMode;i4)
+    constant SINGLE 0
+    constant MULTIPLE 1
 
 class Windows.UI.Xaml.Controls.ListView composable python_type
     py ListView
@@ -13219,10 +13321,16 @@ class Windows.UI.Xaml.Controls.ListViewPersistenceHelper python_type
 enum Windows.UI.Xaml.Controls.ListViewReorderMode python_type
     py ListViewReorderMode
     signature enum(Windows.UI.Xaml.Controls.ListViewReorderMode;i4)
+    constant DISABLED 0
+    constant ENABLED 1
 
 enum Windows.UI.Xaml.Controls.ListViewSelectionMode python_type
     py ListViewSelectionMode
     signature enum(Windows.UI.Xaml.Controls.ListViewSelectionMode;i4)
+    constant NONE 0
+    constant SINGLE 1
+    constant MULTIPLE 2
+    constant EXTENDED 3
 
 class Windows.UI.Xaml.Controls.MediaElement activatable python_type
     py MediaElement
@@ -14588,6 +14696,9 @@ class Windows.UI.Xaml.Controls.NavigationView composable python_type
 enum Windows.UI.Xaml.Controls.NavigationViewBackButtonVisible python_type
     py NavigationViewBackButtonVisible
     signature enum(Windows.UI.Xaml.Controls.NavigationViewBackButtonVisible;i4)
+    constant COLLAPSED 0
+    constant VISIBLE 1
+    constant AUTO 2
 
 class Windows.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs python_type
     py NavigationViewBackRequestedEventArgs
@@ -14598,6 +14709,9 @@ class Windows.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs python_type
 enum Windows.UI.Xaml.Controls.NavigationViewDisplayMode python_type
     py NavigationViewDisplayMode
     signature enum(Windows.UI.Xaml.Controls.NavigationViewDisplayMode;i4)
+    constant MINIMAL 0
+    constant COMPACT 1
+    constant EXPANDED 2
 
 class Windows.UI.Xaml.Controls.NavigationViewDisplayModeChangedEventArgs python_type
     py NavigationViewDisplayModeChangedEventArgs
@@ -14718,6 +14832,8 @@ class Windows.UI.Xaml.Controls.NavigationViewList composable python_type
 enum Windows.UI.Xaml.Controls.NavigationViewOverflowLabelMode python_type
     py NavigationViewOverflowLabelMode
     signature enum(Windows.UI.Xaml.Controls.NavigationViewOverflowLabelMode;i4)
+    constant MORE_LABEL 0
+    constant NO_LABEL 1
 
 class Windows.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs python_type
     py NavigationViewPaneClosingEventArgs
@@ -14733,6 +14849,11 @@ class Windows.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs python_type
 enum Windows.UI.Xaml.Controls.NavigationViewPaneDisplayMode python_type
     py NavigationViewPaneDisplayMode
     signature enum(Windows.UI.Xaml.Controls.NavigationViewPaneDisplayMode;i4)
+    constant AUTO 0
+    constant LEFT 1
+    constant TOP 2
+    constant LEFT_COMPACT 3
+    constant LEFT_MINIMAL 4
 
 class Windows.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs python_type
     py NavigationViewSelectionChangedEventArgs
@@ -14756,10 +14877,15 @@ class Windows.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs python_ty
 enum Windows.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus python_type
     py NavigationViewSelectionFollowsFocus
     signature enum(Windows.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus;i4)
+    constant DISABLED 0
+    constant ENABLED 1
 
 enum Windows.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled python_type
     py NavigationViewShoulderNavigationEnabled
     signature enum(Windows.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled;i4)
+    constant WHEN_SELECTION_FOLLOWS_FOCUS 0
+    constant ALWAYS 1
+    constant NEVER 2
 
 class Windows.UI.Xaml.Controls.NavigationViewTemplateSettings composable python_type
     py NavigationViewTemplateSettings
@@ -14842,6 +14968,8 @@ delegate Windows.UI.Xaml.Controls.NotifyEventHandler python_type
 enum Windows.UI.Xaml.Controls.Orientation python_type
     py Orientation
     signature enum(Windows.UI.Xaml.Controls.Orientation;i4)
+    constant VERTICAL 0
+    constant HORIZONTAL 1
 
 class Windows.UI.Xaml.Controls.Page composable python_type
     py Page
@@ -14938,10 +15066,15 @@ class Windows.UI.Xaml.Controls.Panel composable python_type
 enum Windows.UI.Xaml.Controls.PanelScrollingDirection python_type
     py PanelScrollingDirection
     signature enum(Windows.UI.Xaml.Controls.PanelScrollingDirection;i4)
+    constant NONE 0
+    constant FORWARD 1
+    constant BACKWARD 2
 
 enum Windows.UI.Xaml.Controls.ParallaxSourceOffsetKind python_type
     py ParallaxSourceOffsetKind
     signature enum(Windows.UI.Xaml.Controls.ParallaxSourceOffsetKind;i4)
+    constant ABSOLUTE 0
+    constant RELATIVE 1
 
 class Windows.UI.Xaml.Controls.ParallaxView composable python_type
     py ParallaxView
@@ -15249,6 +15382,9 @@ class Windows.UI.Xaml.Controls.PasswordBoxPasswordChangingEventArgs python_type
 enum Windows.UI.Xaml.Controls.PasswordRevealMode python_type
     py PasswordRevealMode
     signature enum(Windows.UI.Xaml.Controls.PasswordRevealMode;i4)
+    constant PEEK 0
+    constant HIDDEN 1
+    constant VISIBLE 2
 
 class Windows.UI.Xaml.Controls.PathIcon composable python_type
     py PathIcon
@@ -15600,6 +15736,8 @@ class Windows.UI.Xaml.Controls.Pivot composable python_type
 enum Windows.UI.Xaml.Controls.PivotHeaderFocusVisualPlacement python_type
     py PivotHeaderFocusVisualPlacement
     signature enum(Windows.UI.Xaml.Controls.PivotHeaderFocusVisualPlacement;i4)
+    constant ITEM_HEADERS 0
+    constant SELECTED_ITEM_HEADER 1
 
 class Windows.UI.Xaml.Controls.PivotItem composable python_type
     py PivotItem
@@ -15640,6 +15778,10 @@ class Windows.UI.Xaml.Controls.PivotItemEventArgs activatable python_type
 enum Windows.UI.Xaml.Controls.PivotSlideInAnimationGroup python_type
     py PivotSlideInAnimationGroup
     signature enum(Windows.UI.Xaml.Controls.PivotSlideInAnimationGroup;i4)
+    constant DEFAULT 0
+    constant GROUP_ONE 1
+    constant GROUP_TWO 2
+    constant GROUP_THREE 3
 
 class Windows.UI.Xaml.Controls.ProgressBar composable python_type
     py ProgressBar
@@ -15997,6 +16139,10 @@ class Windows.UI.Xaml.Controls.RefreshInteractionRatioChangedEventArgs python_ty
 enum Windows.UI.Xaml.Controls.RefreshPullDirection python_type
     py RefreshPullDirection
     signature enum(Windows.UI.Xaml.Controls.RefreshPullDirection;i4)
+    constant LEFT_TO_RIGHT 0
+    constant TOP_TO_BOTTOM 1
+    constant RIGHT_TO_LEFT 2
+    constant BOTTOM_TO_TOP 3
 
 class Windows.UI.Xaml.Controls.RefreshRequestedEventArgs python_type
     py RefreshRequestedEventArgs
@@ -16075,10 +16221,19 @@ class Windows.UI.Xaml.Controls.RefreshVisualizer composable python_type
 enum Windows.UI.Xaml.Controls.RefreshVisualizerOrientation python_type
     py RefreshVisualizerOrientation
     signature enum(Windows.UI.Xaml.Controls.RefreshVisualizerOrientation;i4)
+    constant AUTO 0
+    constant NORMAL 1
+    constant ROTATE90_DEGREES_COUNTERCLOCKWISE 2
+    constant ROTATE270_DEGREES_COUNTERCLOCKWISE 3
 
 enum Windows.UI.Xaml.Controls.RefreshVisualizerState python_type
     py RefreshVisualizerState
     signature enum(Windows.UI.Xaml.Controls.RefreshVisualizerState;i4)
+    constant IDLE 0
+    constant PEEKING 1
+    constant INTERACTING 2
+    constant PENDING 3
+    constant REFRESHING 4
 
 class Windows.UI.Xaml.Controls.RelativePanel composable python_type
     py RelativePanel
@@ -16315,6 +16470,9 @@ class Windows.UI.Xaml.Controls.RelativePanel composable python_type
 enum Windows.UI.Xaml.Controls.RequiresPointer python_type
     py RequiresPointer
     signature enum(Windows.UI.Xaml.Controls.RequiresPointer;i4)
+    constant NEVER 0
+    constant WHEN_ENGAGED 1
+    constant WHEN_FOCUSED 2
 
 class Windows.UI.Xaml.Controls.RichEditBox composable python_type
     py RichEditBox
@@ -16697,6 +16855,8 @@ class Windows.UI.Xaml.Controls.RichEditBoxTextChangingEventArgs python_type
 enum Windows.UI.Xaml.Controls.RichEditClipboardFormat python_type
     py RichEditClipboardFormat
     signature enum(Windows.UI.Xaml.Controls.RichEditClipboardFormat;i4)
+    constant ALL_FORMATS 0
+    constant PLAIN_TEXT 1
 
 class Windows.UI.Xaml.Controls.RichTextBlock activatable python_type
     py RichTextBlock
@@ -17170,6 +17330,10 @@ class Windows.UI.Xaml.Controls.RowDefinitionCollection python_type iterable sequ
 enum Windows.UI.Xaml.Controls.ScrollBarVisibility python_type
     py ScrollBarVisibility
     signature enum(Windows.UI.Xaml.Controls.ScrollBarVisibility;i4)
+    constant DISABLED 0
+    constant AUTO 1
+    constant HIDDEN 2
+    constant VISIBLE 3
 
 class Windows.UI.Xaml.Controls.ScrollContentPresenter activatable python_type
     py ScrollContentPresenter
@@ -17270,10 +17434,15 @@ class Windows.UI.Xaml.Controls.ScrollContentPresenter activatable python_type
 enum Windows.UI.Xaml.Controls.ScrollIntoViewAlignment python_type
     py ScrollIntoViewAlignment
     signature enum(Windows.UI.Xaml.Controls.ScrollIntoViewAlignment;i4)
+    constant DEFAULT 0
+    constant LEADING 1
 
 enum Windows.UI.Xaml.Controls.ScrollMode python_type
     py ScrollMode
     signature enum(Windows.UI.Xaml.Controls.ScrollMode;i4)
+    constant DISABLED 0
+    constant ENABLED 1
+    constant AUTO 2
 
 class Windows.UI.Xaml.Controls.ScrollViewer activatable python_type
     py ScrollViewer
@@ -18028,6 +18197,9 @@ delegate Windows.UI.Xaml.Controls.SelectionChangedEventHandler python_type
 enum Windows.UI.Xaml.Controls.SelectionMode python_type
     py SelectionMode
     signature enum(Windows.UI.Xaml.Controls.SelectionMode;i4)
+    constant SINGLE 0
+    constant MULTIPLE 1
+    constant EXTENDED 2
 
 class Windows.UI.Xaml.Controls.SemanticZoom activatable python_type
     py SemanticZoom
@@ -18314,6 +18486,11 @@ class Windows.UI.Xaml.Controls.Slider composable python_type
 enum Windows.UI.Xaml.Controls.SnapPointsType python_type
     py SnapPointsType
     signature enum(Windows.UI.Xaml.Controls.SnapPointsType;i4)
+    constant NONE 0
+    constant OPTIONAL 1
+    constant MANDATORY 2
+    constant OPTIONAL_SINGLE 3
+    constant MANDATORY_SINGLE 4
 
 class Windows.UI.Xaml.Controls.SplitButton composable python_type
     py SplitButton
@@ -18512,6 +18689,10 @@ class Windows.UI.Xaml.Controls.SplitView composable python_type
 enum Windows.UI.Xaml.Controls.SplitViewDisplayMode python_type
     py SplitViewDisplayMode
     signature enum(Windows.UI.Xaml.Controls.SplitViewDisplayMode;i4)
+    constant OVERLAY 0
+    constant INLINE 1
+    constant COMPACT_OVERLAY 2
+    constant COMPACT_INLINE 3
 
 class Windows.UI.Xaml.Controls.SplitViewPaneClosingEventArgs python_type
     py SplitViewPaneClosingEventArgs
@@ -18527,6 +18708,8 @@ class Windows.UI.Xaml.Controls.SplitViewPaneClosingEventArgs python_type
 enum Windows.UI.Xaml.Controls.SplitViewPanePlacement python_type
     py SplitViewPanePlacement
     signature enum(Windows.UI.Xaml.Controls.SplitViewPanePlacement;i4)
+    constant LEFT 0
+    constant RIGHT 1
 
 class Windows.UI.Xaml.Controls.StackPanel composable python_type
     py StackPanel
@@ -18651,6 +18834,9 @@ class Windows.UI.Xaml.Controls.StackPanel composable python_type
 enum Windows.UI.Xaml.Controls.StretchDirection python_type
     py StretchDirection
     signature enum(Windows.UI.Xaml.Controls.StretchDirection;i4)
+    constant UP_ONLY 0
+    constant DOWN_ONLY 1
+    constant BOTH 2
 
 class Windows.UI.Xaml.Controls.StyleSelector composable python_type
     py StyleSelector
@@ -18733,6 +18919,9 @@ class Windows.UI.Xaml.Controls.SwapChainPanel composable python_type
 enum Windows.UI.Xaml.Controls.SwipeBehaviorOnInvoked python_type
     py SwipeBehaviorOnInvoked
     signature enum(Windows.UI.Xaml.Controls.SwipeBehaviorOnInvoked;i4)
+    constant AUTO 0
+    constant CLOSE 1
+    constant REMAIN_OPEN 2
 
 class Windows.UI.Xaml.Controls.SwipeControl composable python_type
     py SwipeControl
@@ -18939,10 +19128,209 @@ class Windows.UI.Xaml.Controls.SwipeItems composable python_type iterable sequen
 enum Windows.UI.Xaml.Controls.SwipeMode python_type
     py SwipeMode
     signature enum(Windows.UI.Xaml.Controls.SwipeMode;i4)
+    constant REVEAL 0
+    constant EXECUTE 1
 
 enum Windows.UI.Xaml.Controls.Symbol python_type
     py Symbol
     signature enum(Windows.UI.Xaml.Controls.Symbol;i4)
+    constant PREVIOUS 57600
+    constant NEXT 57601
+    constant PLAY 57602
+    constant PAUSE 57603
+    constant EDIT 57604
+    constant SAVE 57605
+    constant CLEAR 57606
+    constant DELETE 57607
+    constant REMOVE 57608
+    constant ADD 57609
+    constant CANCEL 57610
+    constant ACCEPT 57611
+    constant MORE 57612
+    constant REDO 57613
+    constant UNDO 57614
+    constant HOME 57615
+    constant UP 57616
+    constant FORWARD 57617
+    constant BACK 57618
+    constant FAVORITE 57619
+    constant CAMERA 57620
+    constant SETTING 57621
+    constant VIDEO 57622
+    constant SYNC 57623
+    constant DOWNLOAD 57624
+    constant MAIL 57625
+    constant FIND 57626
+    constant HELP 57627
+    constant UPLOAD 57628
+    constant EMOJI 57629
+    constant TWO_PAGE 57630
+    constant LEAVE_CHAT 57631
+    constant MAIL_FORWARD 57632
+    constant CLOCK 57633
+    constant SEND 57634
+    constant CROP 57635
+    constant ROTATE_CAMERA 57636
+    constant PEOPLE 57637
+    constant OPEN_PANE 57638
+    constant CLOSE_PANE 57639
+    constant WORLD 57640
+    constant FLAG 57641
+    constant PREVIEW_LINK 57642
+    constant GLOBE 57643
+    constant TRIM 57644
+    constant ATTACH_CAMERA 57645
+    constant ZOOM_IN 57646
+    constant BOOKMARKS 57647
+    constant DOCUMENT 57648
+    constant PROTECTED_DOCUMENT 57649
+    constant PAGE 57650
+    constant BULLETS 57651
+    constant COMMENT 57652
+    constant MAIL_FILLED 57653
+    constant CONTACT_INFO 57654
+    constant HANG_UP 57655
+    constant VIEW_ALL 57656
+    constant MAP_PIN 57657
+    constant PHONE 57658
+    constant VIDEO_CHAT 57659
+    constant SWITCH 57660
+    constant CONTACT 57661
+    constant RENAME 57662
+    constant PIN 57665
+    constant MUSIC_INFO 57666
+    constant GO 57667
+    constant KEYBOARD 57668
+    constant DOCK_LEFT 57669
+    constant DOCK_RIGHT 57670
+    constant DOCK_BOTTOM 57671
+    constant REMOTE 57672
+    constant REFRESH 57673
+    constant ROTATE 57674
+    constant SHUFFLE 57675
+    constant LIST 57676
+    constant SHOP 57677
+    constant SELECT_ALL 57678
+    constant ORIENTATION 57679
+    constant IMPORT 57680
+    constant IMPORT_ALL 57681
+    constant BROWSE_PHOTOS 57685
+    constant WEB_CAM 57686
+    constant PICTURES 57688
+    constant SAVE_LOCAL 57689
+    constant CAPTION 57690
+    constant STOP 57691
+    constant SHOW_RESULTS 57692
+    constant VOLUME 57693
+    constant REPAIR 57694
+    constant MESSAGE 57695
+    constant PAGE2 57696
+    constant CALENDAR_DAY 57697
+    constant CALENDAR_WEEK 57698
+    constant CALENDAR 57699
+    constant CHARACTER 57700
+    constant MAIL_REPLY_ALL 57701
+    constant READ 57702
+    constant LINK 57703
+    constant ACCOUNT 57704
+    constant SHOW_BCC 57705
+    constant HIDE_BCC 57706
+    constant CUT 57707
+    constant ATTACH 57708
+    constant PASTE 57709
+    constant FILTER 57710
+    constant COPY 57711
+    constant EMOJI2 57712
+    constant IMPORTANT 57713
+    constant MAIL_REPLY 57714
+    constant SLIDE_SHOW 57715
+    constant SORT 57716
+    constant MANAGE 57720
+    constant ALL_APPS 57721
+    constant DISCONNECT_DRIVE 57722
+    constant MAP_DRIVE 57723
+    constant NEW_WINDOW 57724
+    constant OPEN_WITH 57725
+    constant CONTACT_PRESENCE 57729
+    constant PRIORITY 57730
+    constant GO_TO_TODAY 57732
+    constant FONT 57733
+    constant FONT_COLOR 57734
+    constant CONTACT2 57735
+    constant FOLDER 57736
+    constant AUDIO 57737
+    constant PLACEHOLDER 57738
+    constant VIEW 57739
+    constant SET_LOCK_SCREEN 57740
+    constant SET_TILE 57741
+    constant CLOSED_CAPTION 57744
+    constant STOP_SLIDE_SHOW 57745
+    constant PERMISSIONS 57746
+    constant HIGHLIGHT 57747
+    constant DISABLE_UPDATES 57748
+    constant UN_FAVORITE 57749
+    constant UN_PIN 57750
+    constant OPEN_LOCAL 57751
+    constant MUTE 57752
+    constant ITALIC 57753
+    constant UNDERLINE 57754
+    constant BOLD 57755
+    constant MOVE_TO_FOLDER 57756
+    constant LIKE_DISLIKE 57757
+    constant DISLIKE 57758
+    constant LIKE 57759
+    constant ALIGN_RIGHT 57760
+    constant ALIGN_CENTER 57761
+    constant ALIGN_LEFT 57762
+    constant ZOOM 57763
+    constant ZOOM_OUT 57764
+    constant OPEN_FILE 57765
+    constant OTHER_USER 57766
+    constant ADMIN 57767
+    constant STREET 57795
+    constant MAP 57796
+    constant CLEAR_SELECTION 57797
+    constant FONT_DECREASE 57798
+    constant FONT_INCREASE 57799
+    constant FONT_SIZE 57800
+    constant CELL_PHONE 57801
+    constant RE_SHARE 57802
+    constant TAG 57803
+    constant REPEAT_ONE 57804
+    constant REPEAT_ALL 57805
+    constant OUTLINE_STAR 57806
+    constant SOLID_STAR 57807
+    constant CALCULATOR 57808
+    constant DIRECTIONS 57809
+    constant TARGET 57810
+    constant LIBRARY 57811
+    constant PHONE_BOOK 57812
+    constant MEMO 57813
+    constant MICROPHONE 57814
+    constant POST_UPDATE 57815
+    constant BACK_TO_WINDOW 57816
+    constant FULL_SCREEN 57817
+    constant NEW_FOLDER 57818
+    constant CALENDAR_REPLY 57819
+    constant UN_SYNC_FOLDER 57821
+    constant REPORT_HACKED 57822
+    constant SYNC_FOLDER 57823
+    constant BLOCK_CONTACT 57824
+    constant SWITCH_APPS 57825
+    constant ADD_FRIEND 57826
+    constant TOUCH_POINTER 57827
+    constant GO_TO_START 57828
+    constant ZERO_BARS 57829
+    constant ONE_BAR 57830
+    constant TWO_BARS 57831
+    constant THREE_BARS 57832
+    constant FOUR_BARS 57833
+    constant SCAN 58004
+    constant PREVIEW 58005
+    constant GLOBAL_NAVIGATION_BUTTON 59136
+    constant SHARE 59181
+    constant PRINT 59209
+    constant XBOX_ONE_CONSOLE 59792
 
 class Windows.UI.Xaml.Controls.SymbolIcon activatable python_type
     py SymbolIcon
@@ -20686,6 +21074,9 @@ class Windows.UI.Xaml.Controls.TreeViewNode composable python_type
 enum Windows.UI.Xaml.Controls.TreeViewSelectionMode python_type
     py TreeViewSelectionMode
     signature enum(Windows.UI.Xaml.Controls.TreeViewSelectionMode;i4)
+    constant NONE 0
+    constant SINGLE 1
+    constant MULTIPLE 2
 
 class Windows.UI.Xaml.Controls.TwoPaneView composable python_type
     py TwoPaneView
@@ -20788,18 +21179,29 @@ class Windows.UI.Xaml.Controls.TwoPaneView composable python_type
 enum Windows.UI.Xaml.Controls.TwoPaneViewMode python_type
     py TwoPaneViewMode
     signature enum(Windows.UI.Xaml.Controls.TwoPaneViewMode;i4)
+    constant SINGLE_PANE 0
+    constant WIDE 1
+    constant TALL 2
 
 enum Windows.UI.Xaml.Controls.TwoPaneViewPriority python_type
     py TwoPaneViewPriority
     signature enum(Windows.UI.Xaml.Controls.TwoPaneViewPriority;i4)
+    constant PANE1 0
+    constant PANE2 1
 
 enum Windows.UI.Xaml.Controls.TwoPaneViewTallModeConfiguration python_type
     py TwoPaneViewTallModeConfiguration
     signature enum(Windows.UI.Xaml.Controls.TwoPaneViewTallModeConfiguration;i4)
+    constant SINGLE_PANE 0
+    constant TOP_BOTTOM 1
+    constant BOTTOM_TOP 2
 
 enum Windows.UI.Xaml.Controls.TwoPaneViewWideModeConfiguration python_type
     py TwoPaneViewWideModeConfiguration
     signature enum(Windows.UI.Xaml.Controls.TwoPaneViewWideModeConfiguration;i4)
+    constant SINGLE_PANE 0
+    constant LEFT_RIGHT 1
+    constant RIGHT_LEFT 2
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.AutoSuggestBox,Windows.UI.Xaml.Controls.AutoSuggestBoxQuerySubmittedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[AutoSuggestBox, AutoSuggestBoxQuerySubmittedEventArgs]
@@ -22205,6 +22607,8 @@ class Windows.UI.Xaml.Controls.Viewbox activatable python_type
 enum Windows.UI.Xaml.Controls.VirtualizationMode python_type
     py VirtualizationMode
     signature enum(Windows.UI.Xaml.Controls.VirtualizationMode;i4)
+    constant STANDARD 0
+    constant RECYCLING 1
 
 class Windows.UI.Xaml.Controls.VirtualizingPanel composable python_type
     py VirtualizingPanel
@@ -22664,6 +23068,9 @@ class Windows.UI.Xaml.Controls.WebViewDeferredPermissionRequest python_type
 enum Windows.UI.Xaml.Controls.WebViewExecutionMode python_type
     py WebViewExecutionMode
     signature enum(Windows.UI.Xaml.Controls.WebViewExecutionMode;i4)
+    constant SAME_THREAD 0
+    constant SEPARATE_THREAD 1
+    constant SEPARATE_PROCESS 2
 
 class Windows.UI.Xaml.Controls.WebViewLongRunningScriptDetectedEventArgs python_type
     py WebViewLongRunningScriptDetectedEventArgs
@@ -22782,10 +23189,21 @@ class Windows.UI.Xaml.Controls.WebViewPermissionRequestedEventArgs python_type
 enum Windows.UI.Xaml.Controls.WebViewPermissionState python_type
     py WebViewPermissionState
     signature enum(Windows.UI.Xaml.Controls.WebViewPermissionState;i4)
+    constant UNKNOWN 0
+    constant DEFER 1
+    constant ALLOW 2
+    constant DENY 3
 
 enum Windows.UI.Xaml.Controls.WebViewPermissionType python_type
     py WebViewPermissionType
     signature enum(Windows.UI.Xaml.Controls.WebViewPermissionType;i4)
+    constant GEOLOCATION 0
+    constant UNLIMITED_INDEXED_DB_QUOTA 1
+    constant MEDIA 2
+    constant POINTER_LOCK 3
+    constant WEB_NOTIFICATIONS 4
+    constant SCREEN 5
+    constant IMMERSIVE_VIEW 6
 
 class Windows.UI.Xaml.Controls.WebViewSeparateProcessLostEventArgs python_type
     py WebViewSeparateProcessLostEventArgs
@@ -22918,6 +23336,8 @@ class Windows.UI.Xaml.Controls.WrapGrid activatable python_type
 enum Windows.UI.Xaml.Controls.ZoomMode python_type
     py ZoomMode
     signature enum(Windows.UI.Xaml.Controls.ZoomMode;i4)
+    constant DISABLED 0
+    constant ENABLED 1
 
 class System.Boolean external
     py winrt.system.Boolean

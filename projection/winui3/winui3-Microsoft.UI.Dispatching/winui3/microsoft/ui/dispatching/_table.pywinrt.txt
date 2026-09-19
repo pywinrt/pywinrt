@@ -104,6 +104,9 @@ delegate Microsoft.UI.Dispatching.DispatcherQueueHandler python_type
 enum Microsoft.UI.Dispatching.DispatcherQueuePriority python_type
     py DispatcherQueuePriority
     signature enum(Microsoft.UI.Dispatching.DispatcherQueuePriority;i4)
+    constant LOW -10
+    constant NORMAL 0
+    constant HIGH 10
 
 class Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs python_type
     py DispatcherQueueShutdownStartingEventArgs
@@ -143,9 +146,12 @@ class Microsoft.UI.Dispatching.DispatcherQueueTimer python_type
     method stop
         method Stop slot=12 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=0 reverse=159
 
-enum Microsoft.UI.Dispatching.DispatcherRunOptions python_type
+enum Microsoft.UI.Dispatching.DispatcherRunOptions python_type flags_enum
     py DispatcherRunOptions
     signature enum(Microsoft.UI.Dispatching.DispatcherRunOptions;u4)
+    constant NONE 0x0
+    constant CONTINUE_ON_QUIT 0x1
+    constant QUIT_ONLY_LOCAL_LOOP 0x2
 
 interface Microsoft.UI.Dispatching.IDispatcherExitDeferral
     guid 910b5aac-3310-563e-8418-f3005579729e

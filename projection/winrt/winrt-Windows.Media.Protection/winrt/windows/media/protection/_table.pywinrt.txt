@@ -69,10 +69,19 @@ class Windows.Media.Protection.ComponentRenewal static python_type
 enum Windows.Media.Protection.GraphicsTrustStatus python_type
     py GraphicsTrustStatus
     signature enum(Windows.Media.Protection.GraphicsTrustStatus;i4)
+    constant TRUST_NOT_REQUIRED 0
+    constant TRUST_ESTABLISHED 1
+    constant ENVIRONMENT_NOT_SUPPORTED 2
+    constant DRIVER_NOT_SUPPORTED 3
+    constant DRIVER_SIGNING_FAILURE 4
+    constant UNKNOWN_FAILURE 5
 
 enum Windows.Media.Protection.HdcpProtection python_type
     py HdcpProtection
     signature enum(Windows.Media.Protection.HdcpProtection;i4)
+    constant OFF 0
+    constant ON 1
+    constant ON_WITH_TYPE_ENFORCEMENT 2
 
 class Windows.Media.Protection.HdcpSession activatable python_type closeable
     py HdcpSession
@@ -106,6 +115,10 @@ class Windows.Media.Protection.HdcpSession activatable python_type closeable
 enum Windows.Media.Protection.HdcpSetProtectionResult python_type
     py HdcpSetProtectionResult
     signature enum(Windows.Media.Protection.HdcpSetProtectionResult;i4)
+    constant SUCCESS 0
+    constant TIMED_OUT 1
+    constant NOT_SUPPORTED 2
+    constant UNKNOWN_FAILURE 3
 
 interface Windows.Foundation.IAsyncOperation<Windows.Media.Protection.HdcpSetProtectionResult> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[HdcpSetProtectionResult]
@@ -526,6 +539,9 @@ class Windows.Media.Protection.ProtectionCapabilities activatable python_type
 enum Windows.Media.Protection.ProtectionCapabilityResult python_type
     py ProtectionCapabilityResult
     signature enum(Windows.Media.Protection.ProtectionCapabilityResult;i4)
+    constant NOT_SUPPORTED 0
+    constant MAYBE 1
+    constant PROBABLY 2
 
 delegate Windows.Media.Protection.RebootNeededEventHandler python_type
     py RebootNeededEventHandler
@@ -538,6 +554,11 @@ delegate Windows.Media.Protection.RebootNeededEventHandler python_type
 enum Windows.Media.Protection.RenewalStatus python_type
     py RenewalStatus
     signature enum(Windows.Media.Protection.RenewalStatus;i4)
+    constant NOT_STARTED 0
+    constant UPDATES_IN_PROGRESS 1
+    constant USER_CANCELLED 2
+    constant APP_COMPONENTS_MAY_NEED_UPDATING 3
+    constant NO_COMPONENTS_FOUND 4
 
 class Windows.Media.Protection.RevocationAndRenewalInformation python_type
     py RevocationAndRenewalInformation
@@ -569,9 +590,24 @@ class Windows.Media.Protection.RevocationAndRenewalItem python_type
         get get_RenewalId slot=10 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalItem shape=4 reverse=121
             out string return
 
-enum Windows.Media.Protection.RevocationAndRenewalReasons python_type
+enum Windows.Media.Protection.RevocationAndRenewalReasons python_type flags_enum
     py RevocationAndRenewalReasons
     signature enum(Windows.Media.Protection.RevocationAndRenewalReasons;u4)
+    constant USER_MODE_COMPONENT_LOAD 0x1
+    constant KERNEL_MODE_COMPONENT_LOAD 0x2
+    constant APP_COMPONENT 0x4
+    constant GLOBAL_REVOCATION_LIST_LOAD_FAILED 0x10
+    constant INVALID_GLOBAL_REVOCATION_LIST_SIGNATURE 0x20
+    constant GLOBAL_REVOCATION_LIST_ABSENT 0x1000
+    constant COMPONENT_REVOKED 0x2000
+    constant INVALID_COMPONENT_CERTIFICATE_EXTENDED_KEY_USE 0x4000
+    constant COMPONENT_CERTIFICATE_REVOKED 0x8000
+    constant INVALID_COMPONENT_CERTIFICATE_ROOT 0x10000
+    constant COMPONENT_HIGH_SECURITY_CERTIFICATE_REVOKED 0x20000
+    constant COMPONENT_LOW_SECURITY_CERTIFICATE_REVOKED 0x40000
+    constant BOOT_DRIVER_VERIFICATION_FAILED 0x100000
+    constant COMPONENT_SIGNED_WITH_TEST_CERTIFICATE 0x1000000
+    constant ENCRYPTION_FAILURE 0x10000000
 
 class Windows.Media.Protection.ServiceRequestedEventArgs python_type
     py ServiceRequestedEventArgs

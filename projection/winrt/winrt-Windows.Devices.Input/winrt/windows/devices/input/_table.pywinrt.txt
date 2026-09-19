@@ -403,6 +403,10 @@ class Windows.Devices.Input.PointerDevice python_type
 enum Windows.Devices.Input.PointerDeviceType python_type
     py PointerDeviceType
     signature enum(Windows.Devices.Input.PointerDeviceType;i4)
+    constant TOUCH 0
+    constant PEN 1
+    constant MOUSE 2
+    constant TOUCHPAD 3
 
 struct Windows.Devices.Input.PointerDeviceUsage python_type
     py PointerDeviceUsage

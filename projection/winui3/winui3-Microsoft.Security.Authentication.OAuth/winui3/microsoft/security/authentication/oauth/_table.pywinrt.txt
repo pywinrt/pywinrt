@@ -186,6 +186,9 @@ class Microsoft.Security.Authentication.OAuth.ClientAuthentication activatable p
 enum Microsoft.Security.Authentication.OAuth.CodeChallengeMethodKind python_type
     py CodeChallengeMethodKind
     signature enum(Microsoft.Security.Authentication.OAuth.CodeChallengeMethodKind;i4)
+    constant NONE 0
+    constant S256 1
+    constant PLAIN 2
 
 interface Windows.Foundation.IAsyncOperation<Microsoft.Security.Authentication.OAuth.AuthRequestResult> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[AuthRequestResult]
@@ -522,6 +525,9 @@ class Microsoft.Security.Authentication.OAuth.TokenFailure python_type
 enum Microsoft.Security.Authentication.OAuth.TokenFailureKind python_type
     py TokenFailureKind
     signature enum(Microsoft.Security.Authentication.OAuth.TokenFailureKind;i4)
+    constant ERROR_RESPONSE 0
+    constant HTTP_FAILURE 1
+    constant INVALID_RESPONSE 2
 
 class Microsoft.Security.Authentication.OAuth.TokenRequestParams python_type
     py TokenRequestParams

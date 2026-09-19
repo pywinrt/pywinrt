@@ -89,6 +89,8 @@ delegate Windows.UI.Xaml.Printing.PaginateEventHandler python_type
 enum Windows.UI.Xaml.Printing.PreviewPageCountType python_type
     py PreviewPageCountType
     signature enum(Windows.UI.Xaml.Printing.PreviewPageCountType;i4)
+    constant FINAL 0
+    constant INTERMEDIATE 1
 
 class Windows.UI.Xaml.Printing.PrintDocument composable python_type
     py PrintDocument

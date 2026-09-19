@@ -132,6 +132,7 @@ set(WINRT_RUNTIME_SOURCES
     "${WINRT_RUNTIME_SRC_PATH}/collections.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/compose.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/delegates.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/enums.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/errors.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/generics.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/implements.cpp"

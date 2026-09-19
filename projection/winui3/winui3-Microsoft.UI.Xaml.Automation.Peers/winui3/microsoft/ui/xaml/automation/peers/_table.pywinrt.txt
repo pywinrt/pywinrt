@@ -5,6 +5,9 @@ namespace Microsoft.UI.Xaml.Automation.Peers
 enum Microsoft.UI.Xaml.Automation.Peers.AccessibilityView python_type
     py AccessibilityView
     signature enum(Microsoft.UI.Xaml.Automation.Peers.AccessibilityView;i4)
+    constant RAW 0
+    constant CONTROL 1
+    constant CONTENT 2
 
 class Microsoft.UI.Xaml.Automation.Peers.AnimatedVisualPlayerAutomationPeer composable python_type
     py AnimatedVisualPlayerAutomationPeer
@@ -130,38 +133,147 @@ class Microsoft.UI.Xaml.Automation.Peers.AutoSuggestBoxAutomationPeer python_typ
 enum Microsoft.UI.Xaml.Automation.Peers.AutomationControlType python_type
     py AutomationControlType
     signature enum(Microsoft.UI.Xaml.Automation.Peers.AutomationControlType;i4)
+    constant BUTTON 0
+    constant CALENDAR 1
+    constant CHECK_BOX 2
+    constant COMBO_BOX 3
+    constant EDIT 4
+    constant HYPERLINK 5
+    constant IMAGE 6
+    constant LIST_ITEM 7
+    constant LIST 8
+    constant MENU 9
+    constant MENU_BAR 10
+    constant MENU_ITEM 11
+    constant PROGRESS_BAR 12
+    constant RADIO_BUTTON 13
+    constant SCROLL_BAR 14
+    constant SLIDER 15
+    constant SPINNER 16
+    constant STATUS_BAR 17
+    constant TAB 18
+    constant TAB_ITEM 19
+    constant TEXT 20
+    constant TOOL_BAR 21
+    constant TOOL_TIP 22
+    constant TREE 23
+    constant TREE_ITEM 24
+    constant CUSTOM 25
+    constant GROUP 26
+    constant THUMB 27
+    constant DATA_GRID 28
+    constant DATA_ITEM 29
+    constant DOCUMENT 30
+    constant SPLIT_BUTTON 31
+    constant WINDOW 32
+    constant PANE 33
+    constant HEADER 34
+    constant HEADER_ITEM 35
+    constant TABLE 36
+    constant TITLE_BAR 37
+    constant SEPARATOR 38
+    constant SEMANTIC_ZOOM 39
+    constant APP_BAR 40
+    constant FLIP_VIEW 41
 
 enum Microsoft.UI.Xaml.Automation.Peers.AutomationEvents python_type
     py AutomationEvents
     signature enum(Microsoft.UI.Xaml.Automation.Peers.AutomationEvents;i4)
+    constant TOOL_TIP_OPENED 0
+    constant TOOL_TIP_CLOSED 1
+    constant MENU_OPENED 2
+    constant MENU_CLOSED 3
+    constant AUTOMATION_FOCUS_CHANGED 4
+    constant INVOKE_PATTERN_ON_INVOKED 5
+    constant SELECTION_ITEM_PATTERN_ON_ELEMENT_ADDED_TO_SELECTION 6
+    constant SELECTION_ITEM_PATTERN_ON_ELEMENT_REMOVED_FROM_SELECTION 7
+    constant SELECTION_ITEM_PATTERN_ON_ELEMENT_SELECTED 8
+    constant SELECTION_PATTERN_ON_INVALIDATED 9
+    constant TEXT_PATTERN_ON_TEXT_SELECTION_CHANGED 10
+    constant TEXT_PATTERN_ON_TEXT_CHANGED 11
+    constant ASYNC_CONTENT_LOADED 12
+    constant PROPERTY_CHANGED 13
+    constant STRUCTURE_CHANGED 14
+    constant DRAG_START 15
+    constant DRAG_CANCEL 16
+    constant DRAG_COMPLETE 17
+    constant DRAG_ENTER 18
+    constant DRAG_LEAVE 19
+    constant DROPPED 20
+    constant LIVE_REGION_CHANGED 21
+    constant INPUT_REACHED_TARGET 22
+    constant INPUT_REACHED_OTHER_ELEMENT 23
+    constant INPUT_DISCARDED 24
+    constant WINDOW_CLOSED 25
+    constant WINDOW_OPENED 26
+    constant CONVERSION_TARGET_CHANGED 27
+    constant TEXT_EDIT_TEXT_CHANGED 28
+    constant LAYOUT_INVALIDATED 29
 
 enum Microsoft.UI.Xaml.Automation.Peers.AutomationHeadingLevel python_type
     py AutomationHeadingLevel
     signature enum(Microsoft.UI.Xaml.Automation.Peers.AutomationHeadingLevel;i4)
+    constant NONE 0
+    constant LEVEL1 1
+    constant LEVEL2 2
+    constant LEVEL3 3
+    constant LEVEL4 4
+    constant LEVEL5 5
+    constant LEVEL6 6
+    constant LEVEL7 7
+    constant LEVEL8 8
+    constant LEVEL9 9
 
 enum Microsoft.UI.Xaml.Automation.Peers.AutomationLandmarkType python_type
     py AutomationLandmarkType
     signature enum(Microsoft.UI.Xaml.Automation.Peers.AutomationLandmarkType;i4)
+    constant NONE 0
+    constant CUSTOM 1
+    constant FORM 2
+    constant MAIN 3
+    constant NAVIGATION 4
+    constant SEARCH 5
 
 enum Microsoft.UI.Xaml.Automation.Peers.AutomationLiveSetting python_type
     py AutomationLiveSetting
     signature enum(Microsoft.UI.Xaml.Automation.Peers.AutomationLiveSetting;i4)
+    constant OFF 0
+    constant POLITE 1
+    constant ASSERTIVE 2
 
 enum Microsoft.UI.Xaml.Automation.Peers.AutomationNavigationDirection python_type
     py AutomationNavigationDirection
     signature enum(Microsoft.UI.Xaml.Automation.Peers.AutomationNavigationDirection;i4)
+    constant PARENT 0
+    constant NEXT_SIBLING 1
+    constant PREVIOUS_SIBLING 2
+    constant FIRST_CHILD 3
+    constant LAST_CHILD 4
 
 enum Microsoft.UI.Xaml.Automation.Peers.AutomationNotificationKind python_type
     py AutomationNotificationKind
     signature enum(Microsoft.UI.Xaml.Automation.Peers.AutomationNotificationKind;i4)
+    constant ITEM_ADDED 0
+    constant ITEM_REMOVED 1
+    constant ACTION_COMPLETED 2
+    constant ACTION_ABORTED 3
+    constant OTHER 4
 
 enum Microsoft.UI.Xaml.Automation.Peers.AutomationNotificationProcessing python_type
     py AutomationNotificationProcessing
     signature enum(Microsoft.UI.Xaml.Automation.Peers.AutomationNotificationProcessing;i4)
+    constant IMPORTANT_ALL 0
+    constant IMPORTANT_MOST_RECENT 1
+    constant ALL 2
+    constant MOST_RECENT 3
+    constant CURRENT_THEN_MOST_RECENT 4
 
 enum Microsoft.UI.Xaml.Automation.Peers.AutomationOrientation python_type
     py AutomationOrientation
     signature enum(Microsoft.UI.Xaml.Automation.Peers.AutomationOrientation;i4)
+    constant NONE 0
+    constant HORIZONTAL 1
+    constant VERTICAL 2
 
 class Microsoft.UI.Xaml.Automation.Peers.AutomationPeer composable python_type
     py AutomationPeer
@@ -540,6 +652,12 @@ class Microsoft.UI.Xaml.Automation.Peers.AutomationPeerAnnotation activatable py
 enum Microsoft.UI.Xaml.Automation.Peers.AutomationStructureChangeType python_type
     py AutomationStructureChangeType
     signature enum(Microsoft.UI.Xaml.Automation.Peers.AutomationStructureChangeType;i4)
+    constant CHILD_ADDED 0
+    constant CHILD_REMOVED 1
+    constant CHILDREN_INVALIDATED 2
+    constant CHILDREN_BULK_ADDED 3
+    constant CHILDREN_BULK_REMOVED 4
+    constant CHILDREN_REORDERED 5
 
 class Microsoft.UI.Xaml.Automation.Peers.BreadcrumbBarItemAutomationPeer composable python_type
     py BreadcrumbBarItemAutomationPeer
@@ -2450,6 +2568,40 @@ class Microsoft.UI.Xaml.Automation.Peers.PasswordBoxAutomationPeer composable py
 enum Microsoft.UI.Xaml.Automation.Peers.PatternInterface python_type
     py PatternInterface
     signature enum(Microsoft.UI.Xaml.Automation.Peers.PatternInterface;i4)
+    constant INVOKE 0
+    constant SELECTION 1
+    constant VALUE 2
+    constant RANGE_VALUE 3
+    constant SCROLL 4
+    constant SCROLL_ITEM 5
+    constant EXPAND_COLLAPSE 6
+    constant GRID 7
+    constant GRID_ITEM 8
+    constant MULTIPLE_VIEW 9
+    constant WINDOW 10
+    constant SELECTION_ITEM 11
+    constant DOCK 12
+    constant TABLE 13
+    constant TABLE_ITEM 14
+    constant TOGGLE 15
+    constant TRANSFORM 16
+    constant TEXT 17
+    constant ITEM_CONTAINER 18
+    constant VIRTUALIZED_ITEM 19
+    constant TEXT2 20
+    constant TEXT_CHILD 21
+    constant TEXT_RANGE 22
+    constant ANNOTATION 23
+    constant DRAG 24
+    constant DROP_TARGET 25
+    constant OBJECT_MODEL 26
+    constant SPREADSHEET 27
+    constant SPREADSHEET_ITEM 28
+    constant STYLES 29
+    constant TRANSFORM2 30
+    constant SYNCHRONIZED_INPUT 31
+    constant TEXT_EDIT 32
+    constant CUSTOM_NAVIGATION 33
 
 class Microsoft.UI.Xaml.Automation.Peers.PersonPictureAutomationPeer composable python_type
     py PersonPictureAutomationPeer

@@ -5,6 +5,9 @@ namespace Windows.System.UserProfile
 enum Windows.System.UserProfile.AccountPictureKind python_type
     py AccountPictureKind
     signature enum(Windows.System.UserProfile.AccountPictureKind;i4)
+    constant SMALL_IMAGE 0
+    constant LARGE_IMAGE 1
+    constant VIDEO 2
 
 class Windows.System.UserProfile.AdvertisingManager static python_type
     py AdvertisingManager
@@ -599,10 +602,19 @@ class Windows.System.UserProfile.LockScreen static python_type
 enum Windows.System.UserProfile.SetAccountPictureResult python_type
     py SetAccountPictureResult
     signature enum(Windows.System.UserProfile.SetAccountPictureResult;i4)
+    constant SUCCESS 0
+    constant CHANGE_DISABLED 1
+    constant LARGE_OR_DYNAMIC_ERROR 2
+    constant VIDEO_FRAME_SIZE_ERROR 3
+    constant FILE_SIZE_ERROR 4
+    constant FAILURE 5
 
 enum Windows.System.UserProfile.SetImageFeedResult python_type
     py SetImageFeedResult
     signature enum(Windows.System.UserProfile.SetImageFeedResult;i4)
+    constant SUCCESS 0
+    constant CHANGE_DISABLED 1
+    constant USER_CANCELED 2
 
 class Windows.System.UserProfile.UserInformation static python_type
     py UserInformation

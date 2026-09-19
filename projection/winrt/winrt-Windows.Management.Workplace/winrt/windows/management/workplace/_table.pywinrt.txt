@@ -34,6 +34,9 @@ class Windows.Management.Workplace.MdmPolicy static python_type
 enum Windows.Management.Workplace.MessagingSyncPolicy python_type
     py MessagingSyncPolicy
     signature enum(Windows.Management.Workplace.MessagingSyncPolicy;i4)
+    constant DISALLOWED 0
+    constant ALLOWED 1
+    constant REQUIRED 2
 
 class Windows.Management.Workplace.WorkplaceSettings static python_type
     py WorkplaceSettings

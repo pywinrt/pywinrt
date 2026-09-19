@@ -1045,17 +1045,30 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskBatch python_type
         get get_Tasks slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskBatch shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTask> return
 
-enum Windows.ApplicationModel.UserDataTasks.UserDataTaskDaysOfWeek python_type
+enum Windows.ApplicationModel.UserDataTasks.UserDataTaskDaysOfWeek python_type flags_enum
     py UserDataTaskDaysOfWeek
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskDaysOfWeek;u4)
+    constant NONE 0x0
+    constant SUNDAY 0x1
+    constant MONDAY 0x2
+    constant TUESDAY 0x4
+    constant WEDNESDAY 0x8
+    constant THURSDAY 0x10
+    constant FRIDAY 0x20
+    constant SATURDAY 0x40
 
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskDetailsKind python_type
     py UserDataTaskDetailsKind
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskDetailsKind;i4)
+    constant PLAIN_TEXT 0
+    constant HTML 1
 
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskKind python_type
     py UserDataTaskKind
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskKind;i4)
+    constant SINGLE 0
+    constant RECURRING 1
+    constant REGENERATING 2
 
 class Windows.ApplicationModel.UserDataTasks.UserDataTaskList python_type
     py UserDataTaskList
@@ -1145,10 +1158,15 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperati
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskListOtherAppReadAccess python_type
     py UserDataTaskListOtherAppReadAccess
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskListOtherAppReadAccess;i4)
+    constant FULL 0
+    constant SYSTEM_ONLY 1
+    constant NONE 2
 
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskListOtherAppWriteAccess python_type
     py UserDataTaskListOtherAppWriteAccess
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskListOtherAppWriteAccess;i4)
+    constant LIMITED 0
+    constant NONE 1
 
 class Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager python_type
     py UserDataTaskListSyncManager
@@ -1183,6 +1201,12 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager python_
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncStatus python_type
     py UserDataTaskListSyncStatus
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncStatus;i4)
+    constant IDLE 0
+    constant SYNCING 1
+    constant UP_TO_DATE 2
+    constant AUTHENTICATION_ERROR 3
+    constant POLICY_ERROR 4
+    constant UNKNOWN_ERROR 5
 
 class Windows.ApplicationModel.UserDataTasks.UserDataTaskManager python_type
     py UserDataTaskManager
@@ -1208,10 +1232,16 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskManager python_type
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskPriority python_type
     py UserDataTaskPriority
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskPriority;i4)
+    constant NORMAL 0
+    constant LOW -1
+    constant HIGH 1
 
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryKind python_type
     py UserDataTaskQueryKind
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryKind;i4)
+    constant ALL 0
+    constant INCOMPLETE 1
+    constant COMPLETE 2
 
 class Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions activatable python_type
     py UserDataTaskQueryOptions
@@ -1235,6 +1265,7 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions activatabl
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskQuerySortProperty python_type
     py UserDataTaskQuerySortProperty
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskQuerySortProperty;i4)
+    constant DUE_DATE 0
 
 class Windows.ApplicationModel.UserDataTasks.UserDataTaskReader python_type
     py UserDataTaskReader
@@ -1297,6 +1328,12 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties ac
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceUnit python_type
     py UserDataTaskRecurrenceUnit
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceUnit;i4)
+    constant DAILY 0
+    constant WEEKLY 1
+    constant MONTHLY 2
+    constant MONTHLY_ON_DAY 3
+    constant YEARLY 4
+    constant YEARLY_ON_DAY 5
 
 class Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties activatable python_type
     py UserDataTaskRegenerationProperties
@@ -1330,10 +1367,16 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties 
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationUnit python_type
     py UserDataTaskRegenerationUnit
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationUnit;i4)
+    constant DAILY 0
+    constant WEEKLY 1
+    constant MONTHLY 2
+    constant YEARLY 4
 
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskSensitivity python_type
     py UserDataTaskSensitivity
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskSensitivity;i4)
+    constant PUBLIC 0
+    constant PRIVATE 1
 
 class Windows.ApplicationModel.UserDataTasks.UserDataTaskStore python_type
     py UserDataTaskStore
@@ -1359,10 +1402,17 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskStore python_type
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskStoreAccessType python_type
     py UserDataTaskStoreAccessType
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskStoreAccessType;i4)
+    constant APP_TASKS_READ_WRITE 0
+    constant ALL_TASKS_LIMITED_READ_WRITE 1
 
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskWeekOfMonth python_type
     py UserDataTaskWeekOfMonth
     signature enum(Windows.ApplicationModel.UserDataTasks.UserDataTaskWeekOfMonth;i4)
+    constant FIRST 0
+    constant SECOND 1
+    constant THIRD 2
+    constant FOURTH 3
+    constant LAST 4
 
 class System.Boolean external
     py winrt.system.Boolean

@@ -5,3 +5,6 @@ namespace Microsoft.Windows.Widgets
 enum Microsoft.Windows.Widgets.WidgetSize python_type
     py WidgetSize
     signature enum(Microsoft.Windows.Widgets.WidgetSize;i4)
+    constant SMALL 0
+    constant MEDIUM 1
+    constant LARGE 2

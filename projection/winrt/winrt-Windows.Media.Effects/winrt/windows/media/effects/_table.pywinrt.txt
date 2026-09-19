@@ -72,10 +72,32 @@ class Windows.Media.Effects.AudioEffectDefinition python_type
 enum Windows.Media.Effects.AudioEffectState python_type
     py AudioEffectState
     signature enum(Windows.Media.Effects.AudioEffectState;i4)
+    constant OFF 0
+    constant ON 1
 
 enum Windows.Media.Effects.AudioEffectType python_type
     py AudioEffectType
     signature enum(Windows.Media.Effects.AudioEffectType;i4)
+    constant OTHER 0
+    constant ACOUSTIC_ECHO_CANCELLATION 1
+    constant NOISE_SUPPRESSION 2
+    constant AUTOMATIC_GAIN_CONTROL 3
+    constant BEAM_FORMING 4
+    constant CONSTANT_TONE_REMOVAL 5
+    constant EQUALIZER 6
+    constant LOUDNESS_EQUALIZER 7
+    constant BASS_BOOST 8
+    constant VIRTUAL_SURROUND 9
+    constant VIRTUAL_HEADPHONES 10
+    constant SPEAKER_FILL 11
+    constant ROOM_CORRECTION 12
+    constant BASS_MANAGEMENT 13
+    constant ENVIRONMENTAL_EFFECTS 14
+    constant SPEAKER_PROTECTION 15
+    constant SPEAKER_COMPENSATION 16
+    constant DYNAMIC_RANGE_COMPRESSION 17
+    constant FAR_FIELD_BEAM_FORMING 18
+    constant DEEP_NOISE_SUPPRESSION 19
 
 class Windows.Media.Effects.AudioEffectsManager static python_type
     py AudioEffectsManager
@@ -543,10 +565,17 @@ interface Windows.Media.Effects.IVideoTransformSphericalProjection
 enum Windows.Media.Effects.MediaEffectClosedReason python_type
     py MediaEffectClosedReason
     signature enum(Windows.Media.Effects.MediaEffectClosedReason;i4)
+    constant DONE 0
+    constant UNKNOWN_ERROR 1
+    constant UNSUPPORTED_ENCODING_FORMAT 2
+    constant EFFECT_CURRENTLY_UNLOADED 3
 
 enum Windows.Media.Effects.MediaMemoryTypes python_type
     py MediaMemoryTypes
     signature enum(Windows.Media.Effects.MediaMemoryTypes;i4)
+    constant GPU 0
+    constant CPU 1
+    constant GPU_AND_CPU 2
 
 class Windows.Media.Effects.ProcessAudioFrameContext python_type
     py ProcessAudioFrameContext

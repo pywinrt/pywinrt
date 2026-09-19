@@ -911,13 +911,20 @@ class Windows.Management.Update.WindowsUpdateAdministrator python_type
             in string name=organizationName
             out enum32 type=Windows.Management.Update.WindowsUpdateAdministratorStatus return
 
-enum Windows.Management.Update.WindowsUpdateAdministratorOptions python_type
+enum Windows.Management.Update.WindowsUpdateAdministratorOptions python_type flags_enum
     py WindowsUpdateAdministratorOptions
     signature enum(Windows.Management.Update.WindowsUpdateAdministratorOptions;u4)
+    constant NONE 0x0
+    constant REQUIRE_ADMINISTRATOR_APPROVAL_FOR_SCANS 0x1
+    constant REQUIRE_ADMINISTRATOR_APPROVAL_FOR_UPDATES 0x2
+    constant REQUIRE_ADMINISTRATOR_APPROVAL_FOR_ACTIONS 0x4
 
 enum Windows.Management.Update.WindowsUpdateAdministratorStatus python_type
     py WindowsUpdateAdministratorStatus
     signature enum(Windows.Management.Update.WindowsUpdateAdministratorStatus;i4)
+    constant SUCCEEDED 0
+    constant NO_ADMINISTRATOR_REGISTERED 1
+    constant OTHER_ADMINISTRATOR_IS_REGISTERED 2
 
 class Windows.Management.Update.WindowsUpdateApprovalData activatable python_type
     py WindowsUpdateApprovalData
@@ -968,6 +975,39 @@ class Windows.Management.Update.WindowsUpdateAttentionRequiredInfo python_type
 enum Windows.Management.Update.WindowsUpdateAttentionRequiredReason python_type
     py WindowsUpdateAttentionRequiredReason
     signature enum(Windows.Management.Update.WindowsUpdateAttentionRequiredReason;i4)
+    constant NONE 0
+    constant SEEKER_UPDATE 1
+    constant READY_TO_REBOOT 2
+    constant NEED_NON_METERED_NETWORK 3
+    constant NEED_USER_AGREEMENT_FOR_METERED_NETWORK 4
+    constant NEED_NETWORK 5
+    constant NEED_MORE_SPACE 6
+    constant BATTERY_SAVER_ENABLED 7
+    constant NEED_USER_INTERACTION 8
+    constant NEED_USER_AGREEMENT_FOR_POLICY 9
+    constant COMPATIBILITY_ERROR 10
+    constant NEED_USER_INTERACTION_FOR_EULA 11
+    constant NEED_USER_INTERACTION_FOR_CTA 12
+    constant REGULATED 13
+    constant EXTERNAL_REBOOT 14
+    constant OTHER_UPDATE 15
+    constant BLOCKED_BY_PROVIDER 16
+    constant BLOCKED_BY_POST_REBOOT_FAILURE 17
+    constant USER_ENGAGED 18
+    constant BLOCKED_BY_BATTERY 19
+    constant EXCLUSIVITY 20
+    constant BLOCKED_BY_SERIALIZATION 21
+    constant CONFLICT_CLASS 22
+    constant BLOCKED_BY_ADMIN_APPROVAL 23
+    constant BLOCKED_BY_TOO_MANY_ATTEMPTS 24
+    constant BLOCKED_BY_FAILURE 25
+    constant DEMOTION 26
+    constant BLOCKED_BY_ACTIVE_HOURS 27
+    constant SCHEDULED_FOR_MAINTENANCE 28
+    constant POLICY_SCHEDULED_INSTALL_TIME 29
+    constant BLOCKED_BY_OOBE 30
+    constant DEFERRED_DURING_OOBE 31
+    constant DEFERRED_FOR_SUSTAINABLE_TIME 32
 
 class Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs python_type
     py WindowsUpdateAttentionRequiredReasonChangedEventArgs

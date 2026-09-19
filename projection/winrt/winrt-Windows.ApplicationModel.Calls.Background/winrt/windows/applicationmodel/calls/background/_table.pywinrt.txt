@@ -23,6 +23,9 @@ interface Windows.ApplicationModel.Calls.Background.IPhoneNewVoicemailMessageTri
 enum Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason python_type
     py PhoneCallBlockedReason
     signature enum(Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason;i4)
+    constant IN_CALL_BLOCKING_LIST 0
+    constant PRIVATE_NUMBER 1
+    constant UNKNOWN_NUMBER 2
 
 class Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails python_type
     py PhoneCallBlockedTriggerDetails
@@ -54,6 +57,10 @@ class Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTrigge
 enum Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason python_type
     py PhoneIncomingCallDismissedReason
     signature enum(Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason;i4)
+    constant UNKNOWN 0
+    constant CALL_REJECTED 1
+    constant TEXT_REPLY 2
+    constant CONNECTION_LOST 3
 
 class Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails python_type
     py PhoneIncomingCallDismissedTriggerDetails
@@ -94,6 +101,9 @@ class Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTri
 enum Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind python_type
     py PhoneLineChangeKind
     signature enum(Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind;i4)
+    constant ADDED 0
+    constant REMOVED 1
+    constant PROPERTIES_CHANGED 2
 
 class Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails python_type
     py PhoneLineChangedTriggerDetails
@@ -111,9 +121,19 @@ class Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails p
             in enum_u32 type=Windows.ApplicationModel.Calls.Background.PhoneLineProperties name=lineProperty
             out boolean return
 
-enum Windows.ApplicationModel.Calls.Background.PhoneLineProperties python_type
+enum Windows.ApplicationModel.Calls.Background.PhoneLineProperties python_type flags_enum
     py PhoneLineProperties
     signature enum(Windows.ApplicationModel.Calls.Background.PhoneLineProperties;u4)
+    constant NONE 0x0
+    constant BRANDING_OPTIONS 0x1
+    constant CAN_DIAL 0x2
+    constant CELLULAR_DETAILS 0x4
+    constant DISPLAY_COLOR 0x8
+    constant DISPLAY_NAME 0x10
+    constant NETWORK_NAME 0x20
+    constant NETWORK_STATE 0x40
+    constant TRANSPORT 0x80
+    constant VOICEMAIL 0x100
 
 class Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails python_type
     py PhoneNewVoicemailMessageTriggerDetails
@@ -133,3 +153,11 @@ class Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerD
 enum Windows.ApplicationModel.Calls.Background.PhoneTriggerType python_type
     py PhoneTriggerType
     signature enum(Windows.ApplicationModel.Calls.Background.PhoneTriggerType;i4)
+    constant NEW_VOICEMAIL_MESSAGE 0
+    constant CALL_HISTORY_CHANGED 1
+    constant LINE_CHANGED 2
+    constant AIRPLANE_MODE_DISABLED_FOR_EMERGENCY_CALL 3
+    constant CALL_ORIGIN_DATA_REQUEST 4
+    constant CALL_BLOCKED 5
+    constant INCOMING_CALL_DISMISSED 6
+    constant INCOMING_CALL_NOTIFICATION 7

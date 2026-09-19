@@ -55,9 +55,16 @@ class Windows.Devices.Display.Core.DisplayAdapter python_type
             in struct type=Windows.Graphics.DisplayAdapterId name=id
             out class type=Windows.Devices.Display.Core.DisplayAdapter return
 
-enum Windows.Devices.Display.Core.DisplayBitsPerChannel python_type
+enum Windows.Devices.Display.Core.DisplayBitsPerChannel python_type flags_enum
     py DisplayBitsPerChannel
     signature enum(Windows.Devices.Display.Core.DisplayBitsPerChannel;u4)
+    constant NONE 0x0
+    constant BPC6 0x1
+    constant BPC8 0x2
+    constant BPC10 0x4
+    constant BPC12 0x8
+    constant BPC14 0x10
+    constant BPC16 0x20
 
 class Windows.Devices.Display.Core.DisplayDevice python_type
     py DisplayDevice
@@ -113,6 +120,7 @@ class Windows.Devices.Display.Core.DisplayDevice python_type
 enum Windows.Devices.Display.Core.DisplayDeviceCapability python_type
     py DisplayDeviceCapability
     signature enum(Windows.Devices.Display.Core.DisplayDeviceCapability;i4)
+    constant FLIP_OVERRIDE 0
 
 class Windows.Devices.Display.Core.DisplayFence python_type
     py DisplayFence
@@ -247,9 +255,12 @@ class Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs python_type
         method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerEnabledEventArgs shape=4 reverse=62
             out class type=Windows.Foundation.Deferral return
 
-enum Windows.Devices.Display.Core.DisplayManagerOptions python_type
+enum Windows.Devices.Display.Core.DisplayManagerOptions python_type flags_enum
     py DisplayManagerOptions
     signature enum(Windows.Devices.Display.Core.DisplayManagerOptions;u4)
+    constant NONE 0x0
+    constant ENFORCE_SOURCE_OWNERSHIP 0x1
+    constant VIRTUAL_REFRESH_RATE_AWARE 0x2
 
 class Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs python_type
     py DisplayManagerPathsFailedOrInvalidatedEventArgs
@@ -268,6 +279,11 @@ class Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventAr
 enum Windows.Devices.Display.Core.DisplayManagerResult python_type
     py DisplayManagerResult
     signature enum(Windows.Devices.Display.Core.DisplayManagerResult;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant TARGET_ACCESS_DENIED 2
+    constant TARGET_STALE 3
+    constant REMOTE_SESSION_NOT_SUPPORTED 4
 
 class Windows.Devices.Display.Core.DisplayManagerResultWithState python_type
     py DisplayManagerResultWithState
@@ -323,9 +339,11 @@ class Windows.Devices.Display.Core.DisplayModeInfo python_type
             in class type=Windows.Devices.Display.Core.DisplayWireFormat name=wireFormat
             out boolean return
 
-enum Windows.Devices.Display.Core.DisplayModeQueryOptions python_type
+enum Windows.Devices.Display.Core.DisplayModeQueryOptions python_type flags_enum
     py DisplayModeQueryOptions
     signature enum(Windows.Devices.Display.Core.DisplayModeQueryOptions;u4)
+    constant NONE 0x0
+    constant ONLY_PREFERRED_RESOLUTION 0x1
 
 class Windows.Devices.Display.Core.DisplayMuxDevice python_type closeable
     py DisplayMuxDevice
@@ -454,14 +472,32 @@ class Windows.Devices.Display.Core.DisplayPath python_type
 enum Windows.Devices.Display.Core.DisplayPathScaling python_type
     py DisplayPathScaling
     signature enum(Windows.Devices.Display.Core.DisplayPathScaling;i4)
+    constant IDENTITY 0
+    constant CENTERED 1
+    constant STRETCHED 2
+    constant ASPECT_RATIO_STRETCHED 3
+    constant CUSTOM 4
+    constant DRIVER_PREFERRED 5
 
 enum Windows.Devices.Display.Core.DisplayPathStatus python_type
     py DisplayPathStatus
     signature enum(Windows.Devices.Display.Core.DisplayPathStatus;i4)
+    constant UNKNOWN 0
+    constant SUCCEEDED 1
+    constant PENDING 2
+    constant FAILED 3
+    constant FAILED_ASYNC 4
+    constant INVALIDATED_ASYNC 5
 
 enum Windows.Devices.Display.Core.DisplayPresentStatus python_type
     py DisplayPresentStatus
     signature enum(Windows.Devices.Display.Core.DisplayPresentStatus;i4)
+    constant SUCCESS 0
+    constant SOURCE_STATUS_PREVENTED_PRESENT 1
+    constant SCANOUT_INVALID 2
+    constant SOURCE_INVALID 3
+    constant DEVICE_INVALID 4
+    constant UNKNOWN_FAILURE 5
 
 struct Windows.Devices.Display.Core.DisplayPresentationRate python_type
     py DisplayPresentationRate
@@ -520,6 +556,10 @@ class Windows.Devices.Display.Core.DisplayPrimaryDescription python_type
 enum Windows.Devices.Display.Core.DisplayRotation python_type
     py DisplayRotation
     signature enum(Windows.Devices.Display.Core.DisplayRotation;i4)
+    constant NONE 0
+    constant CLOCKWISE90_DEGREES 1
+    constant CLOCKWISE180_DEGREES 2
+    constant CLOCKWISE270_DEGREES 3
 
 class Windows.Devices.Display.Core.DisplayScanout python_type
     py DisplayScanout
@@ -527,9 +567,11 @@ class Windows.Devices.Display.Core.DisplayScanout python_type
     default Windows.Devices.Display.Core.IDisplayScanout
     requires Windows.Devices.Display.Core.IDisplayScanout
 
-enum Windows.Devices.Display.Core.DisplayScanoutOptions python_type
+enum Windows.Devices.Display.Core.DisplayScanoutOptions python_type flags_enum
     py DisplayScanoutOptions
     signature enum(Windows.Devices.Display.Core.DisplayScanoutOptions;u4)
+    constant NONE 0x0
+    constant ALLOW_TEARING 0x2
 
 class Windows.Devices.Display.Core.DisplaySource python_type
     py DisplaySource
@@ -560,6 +602,11 @@ class Windows.Devices.Display.Core.DisplaySource python_type
 enum Windows.Devices.Display.Core.DisplaySourceStatus python_type
     py DisplaySourceStatus
     signature enum(Windows.Devices.Display.Core.DisplaySourceStatus;i4)
+    constant ACTIVE 0
+    constant POWERED_OFF 1
+    constant INVALID 2
+    constant OWNED_BY_ANOTHER_DEVICE 3
+    constant UNOWNED 4
 
 class Windows.Devices.Display.Core.DisplayState python_type
     py DisplayState
@@ -617,13 +664,20 @@ class Windows.Devices.Display.Core.DisplayState python_type
             in enum_u32 type=Windows.Devices.Display.Core.DisplayStateFunctionalizeOptions name=options
             out class type=Windows.Devices.Display.Core.DisplayStateOperationResult return
 
-enum Windows.Devices.Display.Core.DisplayStateApplyOptions python_type
+enum Windows.Devices.Display.Core.DisplayStateApplyOptions python_type flags_enum
     py DisplayStateApplyOptions
     signature enum(Windows.Devices.Display.Core.DisplayStateApplyOptions;u4)
+    constant NONE 0x0
+    constant FAIL_IF_STATE_CHANGED 0x1
+    constant FORCE_REAPPLY 0x2
+    constant FORCE_MODE_ENUMERATION 0x4
 
-enum Windows.Devices.Display.Core.DisplayStateFunctionalizeOptions python_type
+enum Windows.Devices.Display.Core.DisplayStateFunctionalizeOptions python_type flags_enum
     py DisplayStateFunctionalizeOptions
     signature enum(Windows.Devices.Display.Core.DisplayStateFunctionalizeOptions;u4)
+    constant NONE 0x0
+    constant FAIL_IF_STATE_CHANGED 0x1
+    constant VALIDATE_TOPOLOGY_ONLY 0x2
 
 class Windows.Devices.Display.Core.DisplayStateOperationResult python_type
     py DisplayStateOperationResult
@@ -640,6 +694,14 @@ class Windows.Devices.Display.Core.DisplayStateOperationResult python_type
 enum Windows.Devices.Display.Core.DisplayStateOperationStatus python_type
     py DisplayStateOperationStatus
     signature enum(Windows.Devices.Display.Core.DisplayStateOperationStatus;i4)
+    constant SUCCESS 0
+    constant PARTIAL_FAILURE 1
+    constant UNKNOWN_FAILURE 2
+    constant TARGET_OWNERSHIP_LOST 3
+    constant SYSTEM_STATE_CHANGED 4
+    constant TOO_MANY_PATHS_FOR_ADAPTER 5
+    constant MODES_NOT_SUPPORTED 6
+    constant REMOTE_SESSION_NOT_SUPPORTED 7
 
 class Windows.Devices.Display.Core.DisplaySurface python_type
     py DisplaySurface
@@ -700,6 +762,10 @@ class Windows.Devices.Display.Core.DisplayTarget python_type
 enum Windows.Devices.Display.Core.DisplayTargetPersistence python_type
     py DisplayTargetPersistence
     signature enum(Windows.Devices.Display.Core.DisplayTargetPersistence;i4)
+    constant NONE 0
+    constant BOOT_PERSISTED 1
+    constant TEMPORARY_PERSISTED 2
+    constant PATH_PERSISTED 3
 
 class Windows.Devices.Display.Core.DisplayTask python_type
     py DisplayTask
@@ -754,6 +820,8 @@ class Windows.Devices.Display.Core.DisplayTaskResult python_type
 enum Windows.Devices.Display.Core.DisplayTaskSignalKind python_type
     py DisplayTaskSignalKind
     signature enum(Windows.Devices.Display.Core.DisplayTaskSignalKind;i4)
+    constant ON_PRESENT_FLIP_AWAY 0
+    constant ON_PRESENT_FLIP_TO 1
 
 class Windows.Devices.Display.Core.DisplayView python_type
     py DisplayView
@@ -821,18 +889,32 @@ class Windows.Devices.Display.Core.DisplayWireFormat python_type
 enum Windows.Devices.Display.Core.DisplayWireFormatColorSpace python_type
     py DisplayWireFormatColorSpace
     signature enum(Windows.Devices.Display.Core.DisplayWireFormatColorSpace;i4)
+    constant BT709 0
+    constant BT2020 1
+    constant PROFILE_DEFINED_WIDE_COLOR_GAMUT 2
 
 enum Windows.Devices.Display.Core.DisplayWireFormatEotf python_type
     py DisplayWireFormatEotf
     signature enum(Windows.Devices.Display.Core.DisplayWireFormatEotf;i4)
+    constant SDR 0
+    constant HDR_SMPTE2084 1
 
 enum Windows.Devices.Display.Core.DisplayWireFormatHdrMetadata python_type
     py DisplayWireFormatHdrMetadata
     signature enum(Windows.Devices.Display.Core.DisplayWireFormatHdrMetadata;i4)
+    constant NONE 0
+    constant HDR10 1
+    constant HDR10_PLUS 2
+    constant DOLBY_VISION_LOW_LATENCY 3
 
 enum Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding python_type
     py DisplayWireFormatPixelEncoding
     signature enum(Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding;i4)
+    constant RGB444 0
+    constant YCC444 1
+    constant YCC422 2
+    constant YCC420 3
+    constant INTENSITY 4
 
 interface Windows.Foundation.IAsyncOperation<Windows.Devices.Display.Core.DisplayMuxDevice> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[DisplayMuxDevice]

@@ -723,6 +723,10 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Devices.WiFi.WiFiAdapter,S
 enum Windows.Devices.WiFi.WiFiAccessStatus python_type
     py WiFiAccessStatus
     signature enum(Windows.Devices.WiFi.WiFiAccessStatus;i4)
+    constant UNSPECIFIED 0
+    constant ALLOWED 1
+    constant DENIED_BY_USER 2
+    constant DENIED_BY_SYSTEM 3
 
 class Windows.Devices.WiFi.WiFiAdapter python_type
     py WiFiAdapter
@@ -831,6 +835,9 @@ class Windows.Devices.WiFi.WiFiAvailableNetwork python_type
 enum Windows.Devices.WiFi.WiFiConnectionMethod python_type
     py WiFiConnectionMethod
     signature enum(Windows.Devices.WiFi.WiFiConnectionMethod;i4)
+    constant DEFAULT 0
+    constant WPS_PIN 1
+    constant WPS_PUSH_BUTTON 2
 
 class Windows.Devices.WiFi.WiFiConnectionResult python_type
     py WiFiConnectionResult
@@ -844,10 +851,20 @@ class Windows.Devices.WiFi.WiFiConnectionResult python_type
 enum Windows.Devices.WiFi.WiFiConnectionStatus python_type
     py WiFiConnectionStatus
     signature enum(Windows.Devices.WiFi.WiFiConnectionStatus;i4)
+    constant UNSPECIFIED_FAILURE 0
+    constant SUCCESS 1
+    constant ACCESS_REVOKED 2
+    constant INVALID_CREDENTIAL 3
+    constant NETWORK_NOT_AVAILABLE 4
+    constant TIMEOUT 5
+    constant UNSUPPORTED_AUTHENTICATION_PROTOCOL 6
 
 enum Windows.Devices.WiFi.WiFiNetworkKind python_type
     py WiFiNetworkKind
     signature enum(Windows.Devices.WiFi.WiFiNetworkKind;i4)
+    constant ANY 0
+    constant INFRASTRUCTURE 1
+    constant ADHOC 2
 
 class Windows.Devices.WiFi.WiFiNetworkReport python_type
     py WiFiNetworkReport
@@ -864,14 +881,41 @@ class Windows.Devices.WiFi.WiFiNetworkReport python_type
 enum Windows.Devices.WiFi.WiFiOnDemandHotspotAvailability python_type
     py WiFiOnDemandHotspotAvailability
     signature enum(Windows.Devices.WiFi.WiFiOnDemandHotspotAvailability;i4)
+    constant AVAILABLE 0
+    constant UNAVAILABLE 1
 
 enum Windows.Devices.WiFi.WiFiOnDemandHotspotCellularBars python_type
     py WiFiOnDemandHotspotCellularBars
     signature enum(Windows.Devices.WiFi.WiFiOnDemandHotspotCellularBars;i4)
+    constant ZERO_BARS 0
+    constant ONE_BAR 1
+    constant TWO_BARS 2
+    constant THREE_BARS 3
+    constant FOUR_BARS 4
+    constant FIVE_BARS 5
 
 enum Windows.Devices.WiFi.WiFiOnDemandHotspotConnectStatus python_type
     py WiFiOnDemandHotspotConnectStatus
     signature enum(Windows.Devices.WiFi.WiFiOnDemandHotspotConnectStatus;i4)
+    constant UNSPECIFIED_FAILURE 0
+    constant SUCCESS 1
+    constant APP_TIMED_OUT 2
+    constant INVALID_CREDENTIAL 3
+    constant NETWORK_NOT_AVAILABLE 4
+    constant UNSUPPORTED_AUTHENTICATION_PROTOCOL 5
+    constant BLUETOOTH_CONNECT_FAILED 6
+    constant BLUETOOTH_TRANSMISSION_ERROR 7
+    constant OPERATION_CANCELED_BY_USER 8
+    constant ENTITLEMENT_CHECK_FAILED 9
+    constant NO_CELLULAR_SIGNAL 10
+    constant CELLULAR_DATA_TURNED_OFF 11
+    constant WLAN_CONNECT_FAILED 12
+    constant WLAN_NOT_VISIBLE 13
+    constant ACCESS_POINT_CANNOT_CONNECT 14
+    constant CELLULAR_CONNECT_TIMED_OUT 15
+    constant ROAMING_NOT_ALLOWED 16
+    constant PAIRING_REQUIRED 17
+    constant DATA_LIMIT_REACHED 18
 
 class Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails python_type
     py WiFiOnDemandHotspotConnectTriggerDetails
@@ -964,10 +1008,24 @@ class Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties python_type
 enum Windows.Devices.WiFi.WiFiPhyKind python_type
     py WiFiPhyKind
     signature enum(Windows.Devices.WiFi.WiFiPhyKind;i4)
+    constant UNKNOWN 0
+    constant FHSS 1
+    constant DSSS 2
+    constant IR_BASEBAND 3
+    constant OFDM 4
+    constant HRDSSS 5
+    constant ERP 6
+    constant HT 7
+    constant VHT 8
+    constant DMG 9
+    constant HE 10
+    constant EHT 11
 
 enum Windows.Devices.WiFi.WiFiReconnectionKind python_type
     py WiFiReconnectionKind
     signature enum(Windows.Devices.WiFi.WiFiReconnectionKind;i4)
+    constant AUTOMATIC 0
+    constant MANUAL 1
 
 class Windows.Devices.WiFi.WiFiWpsConfigurationResult python_type
     py WiFiWpsConfigurationResult
@@ -984,10 +1042,19 @@ class Windows.Devices.WiFi.WiFiWpsConfigurationResult python_type
 enum Windows.Devices.WiFi.WiFiWpsConfigurationStatus python_type
     py WiFiWpsConfigurationStatus
     signature enum(Windows.Devices.WiFi.WiFiWpsConfigurationStatus;i4)
+    constant UNSPECIFIED_FAILURE 0
+    constant SUCCESS 1
+    constant TIMEOUT 2
 
 enum Windows.Devices.WiFi.WiFiWpsKind python_type
     py WiFiWpsKind
     signature enum(Windows.Devices.WiFi.WiFiWpsKind;i4)
+    constant UNKNOWN 0
+    constant PIN 1
+    constant PUSH_BUTTON 2
+    constant NFC 3
+    constant ETHERNET 4
+    constant USB 5
 
 class System.Object external
     py winrt.system.Object

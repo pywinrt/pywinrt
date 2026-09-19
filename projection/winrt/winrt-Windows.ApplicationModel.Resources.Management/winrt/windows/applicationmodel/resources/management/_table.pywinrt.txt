@@ -284,6 +284,9 @@ class Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier pyt
 enum Windows.ApplicationModel.Resources.Management.IndexedResourceType python_type
     py IndexedResourceType
     signature enum(Windows.ApplicationModel.Resources.Management.IndexedResourceType;i4)
+    constant STRING 0
+    constant PATH 1
+    constant EMBEDDED_DATA 2
 
 class Windows.ApplicationModel.Resources.Management.ResourceIndexer python_type
     py ResourceIndexer

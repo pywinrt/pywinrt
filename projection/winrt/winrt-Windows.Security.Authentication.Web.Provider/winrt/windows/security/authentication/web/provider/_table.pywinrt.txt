@@ -818,6 +818,8 @@ class Windows.Security.Authentication.Web.Provider.WebAccountClientView python_t
 enum Windows.Security.Authentication.Web.Provider.WebAccountClientViewType python_type
     py WebAccountClientViewType
     signature enum(Windows.Security.Authentication.Web.Provider.WebAccountClientViewType;i4)
+    constant ID_ONLY 0
+    constant ID_AND_PROPERTIES 1
 
 class Windows.Security.Authentication.Web.Provider.WebAccountManager static python_type
     py WebAccountManager
@@ -1029,6 +1031,13 @@ class Windows.Security.Authentication.Web.Provider.WebAccountProviderManageAccou
 enum Windows.Security.Authentication.Web.Provider.WebAccountProviderOperationKind python_type
     py WebAccountProviderOperationKind
     signature enum(Windows.Security.Authentication.Web.Provider.WebAccountProviderOperationKind;i4)
+    constant REQUEST_TOKEN 0
+    constant GET_TOKEN_SILENTLY 1
+    constant ADD_ACCOUNT 2
+    constant MANAGE_ACCOUNT 3
+    constant DELETE_ACCOUNT 4
+    constant RETRIEVE_COOKIES 5
+    constant SIGN_OUT_ACCOUNT 6
 
 class Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation python_type
     py WebAccountProviderRequestTokenOperation
@@ -1131,10 +1140,14 @@ class Windows.Security.Authentication.Web.Provider.WebAccountProviderTriggerDeta
 enum Windows.Security.Authentication.Web.Provider.WebAccountScope python_type
     py WebAccountScope
     signature enum(Windows.Security.Authentication.Web.Provider.WebAccountScope;i4)
+    constant PER_USER 0
+    constant PER_APPLICATION 1
 
-enum Windows.Security.Authentication.Web.Provider.WebAccountSelectionOptions python_type
+enum Windows.Security.Authentication.Web.Provider.WebAccountSelectionOptions python_type flags_enum
     py WebAccountSelectionOptions
     signature enum(Windows.Security.Authentication.Web.Provider.WebAccountSelectionOptions;u4)
+    constant DEFAULT 0x0
+    constant NEW 0x1
 
 class Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest python_type
     py WebProviderTokenRequest

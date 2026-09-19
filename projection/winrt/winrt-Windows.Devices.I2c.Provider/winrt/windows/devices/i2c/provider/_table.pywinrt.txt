@@ -157,6 +157,8 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.I2c.Provide
 enum Windows.Devices.I2c.Provider.ProviderI2cBusSpeed python_type
     py ProviderI2cBusSpeed
     signature enum(Windows.Devices.I2c.Provider.ProviderI2cBusSpeed;i4)
+    constant STANDARD_MODE 0
+    constant FAST_MODE 1
 
 class Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings python_type
     py ProviderI2cConnectionSettings
@@ -182,6 +184,8 @@ class Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings python_type
 enum Windows.Devices.I2c.Provider.ProviderI2cSharingMode python_type
     py ProviderI2cSharingMode
     signature enum(Windows.Devices.I2c.Provider.ProviderI2cSharingMode;i4)
+    constant EXCLUSIVE 0
+    constant SHARED 1
 
 struct Windows.Devices.I2c.Provider.ProviderI2cTransferResult python_type
     py ProviderI2cTransferResult
@@ -192,6 +196,9 @@ struct Windows.Devices.I2c.Provider.ProviderI2cTransferResult python_type
 enum Windows.Devices.I2c.Provider.ProviderI2cTransferStatus python_type
     py ProviderI2cTransferStatus
     signature enum(Windows.Devices.I2c.Provider.ProviderI2cTransferStatus;i4)
+    constant FULL_TRANSFER 0
+    constant PARTIAL_TRANSFER 1
+    constant SLAVE_ADDRESS_NOT_ACKNOWLEDGED 2
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
     py winrt.windows.foundation.AsyncOperationCompletedHandler

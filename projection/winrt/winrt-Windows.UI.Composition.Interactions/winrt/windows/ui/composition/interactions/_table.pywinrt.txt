@@ -576,13 +576,20 @@ interface Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics
 interface Windows.UI.Composition.Interactions.IVisualInteractionSourceStatics2
     guid a979c032-5764-55e0-bc1f-0778786dcfde
 
-enum Windows.UI.Composition.Interactions.InteractionBindingAxisModes python_type
+enum Windows.UI.Composition.Interactions.InteractionBindingAxisModes python_type flags_enum
     py InteractionBindingAxisModes
     signature enum(Windows.UI.Composition.Interactions.InteractionBindingAxisModes;u4)
+    constant NONE 0x0
+    constant POSITION_X 0x1
+    constant POSITION_Y 0x2
+    constant SCALE 0x4
 
 enum Windows.UI.Composition.Interactions.InteractionChainingMode python_type
     py InteractionChainingMode
     signature enum(Windows.UI.Composition.Interactions.InteractionChainingMode;i4)
+    constant AUTO 0
+    constant ALWAYS 1
+    constant NEVER 2
 
 class Windows.UI.Composition.Interactions.InteractionSourceConfiguration python_type
     py InteractionSourceConfiguration
@@ -609,10 +616,15 @@ class Windows.UI.Composition.Interactions.InteractionSourceConfiguration python_
 enum Windows.UI.Composition.Interactions.InteractionSourceMode python_type
     py InteractionSourceMode
     signature enum(Windows.UI.Composition.Interactions.InteractionSourceMode;i4)
+    constant DISABLED 0
+    constant ENABLED_WITH_INERTIA 1
+    constant ENABLED_WITHOUT_INERTIA 2
 
 enum Windows.UI.Composition.Interactions.InteractionSourceRedirectionMode python_type
     py InteractionSourceRedirectionMode
     signature enum(Windows.UI.Composition.Interactions.InteractionSourceRedirectionMode;i4)
+    constant DISABLED 0
+    constant ENABLED 1
 
 class Windows.UI.Composition.Interactions.InteractionTracker python_type
     py InteractionTracker
@@ -779,6 +791,8 @@ class Windows.UI.Composition.Interactions.InteractionTracker python_type
 enum Windows.UI.Composition.Interactions.InteractionTrackerClampingOption python_type
     py InteractionTrackerClampingOption
     signature enum(Windows.UI.Composition.Interactions.InteractionTrackerClampingOption;i4)
+    constant AUTO 0
+    constant DISABLED 1
 
 class Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs python_type
     py InteractionTrackerCustomAnimationStateEnteredArgs
@@ -931,6 +945,8 @@ class Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnte
 enum Windows.UI.Composition.Interactions.InteractionTrackerPositionUpdateOption python_type
     py InteractionTrackerPositionUpdateOption
     signature enum(Windows.UI.Composition.Interactions.InteractionTrackerPositionUpdateOption;i4)
+    constant DEFAULT 0
+    constant ALLOW_ACTIVE_CUSTOM_SCALE_ANIMATION 1
 
 class Windows.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs python_type
     py InteractionTrackerRequestIgnoredArgs
@@ -1097,6 +1113,10 @@ class Windows.UI.Composition.Interactions.VisualInteractionSource composable pyt
 enum Windows.UI.Composition.Interactions.VisualInteractionSourceRedirectionMode python_type
     py VisualInteractionSourceRedirectionMode
     signature enum(Windows.UI.Composition.Interactions.VisualInteractionSourceRedirectionMode;i4)
+    constant OFF 0
+    constant CAPABLE_TOUCHPAD_ONLY 1
+    constant POINTER_WHEEL_ONLY 2
+    constant CAPABLE_TOUCHPAD_AND_POINTER_WHEEL 3
 
 class System.Single external
     py winrt.system.Single

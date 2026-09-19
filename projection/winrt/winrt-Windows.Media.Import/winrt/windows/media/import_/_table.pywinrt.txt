@@ -1143,18 +1143,32 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
 enum Windows.Media.Import.PhotoImportAccessMode python_type
     py PhotoImportAccessMode
     signature enum(Windows.Media.Import.PhotoImportAccessMode;i4)
+    constant READ_WRITE 0
+    constant READ_ONLY 1
+    constant READ_AND_DELETE 2
 
 enum Windows.Media.Import.PhotoImportConnectionTransport python_type
     py PhotoImportConnectionTransport
     signature enum(Windows.Media.Import.PhotoImportConnectionTransport;i4)
+    constant UNKNOWN 0
+    constant USB 1
+    constant IP 2
+    constant BLUETOOTH 3
 
 enum Windows.Media.Import.PhotoImportContentType python_type
     py PhotoImportContentType
     signature enum(Windows.Media.Import.PhotoImportContentType;i4)
+    constant UNKNOWN 0
+    constant IMAGE 1
+    constant VIDEO 2
 
 enum Windows.Media.Import.PhotoImportContentTypeFilter python_type
     py PhotoImportContentTypeFilter
     signature enum(Windows.Media.Import.PhotoImportContentTypeFilter;i4)
+    constant ONLY_IMAGES 0
+    constant ONLY_VIDEOS 1
+    constant IMAGES_AND_VIDEOS 2
+    constant IMAGES_AND_VIDEOS_FROM_CAMERA_ROLL 3
 
 class Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult python_type
     py PhotoImportDeleteImportedItemsFromSourceResult
@@ -1360,6 +1374,10 @@ class Windows.Media.Import.PhotoImportImportItemsResult python_type
 enum Windows.Media.Import.PhotoImportImportMode python_type
     py PhotoImportImportMode
     signature enum(Windows.Media.Import.PhotoImportImportMode;i4)
+    constant IMPORT_EVERYTHING 0
+    constant IGNORE_SIDECARS 1
+    constant IGNORE_SIBLINGS 2
+    constant IGNORE_SIDECARS_AND_SIBLINGS 3
 
 class Windows.Media.Import.PhotoImportItem python_type
     py PhotoImportItem
@@ -1421,6 +1439,9 @@ class Windows.Media.Import.PhotoImportItemImportedEventArgs python_type
 enum Windows.Media.Import.PhotoImportItemSelectionMode python_type
     py PhotoImportItemSelectionMode
     signature enum(Windows.Media.Import.PhotoImportItemSelectionMode;i4)
+    constant SELECT_ALL 0
+    constant SELECT_NONE 1
+    constant SELECT_NEW 2
 
 class Windows.Media.Import.PhotoImportManager static python_type
     py PhotoImportManager
@@ -1459,6 +1480,9 @@ class Windows.Media.Import.PhotoImportOperation python_type
 enum Windows.Media.Import.PhotoImportPowerSource python_type
     py PhotoImportPowerSource
     signature enum(Windows.Media.Import.PhotoImportPowerSource;i4)
+    constant UNKNOWN 0
+    constant BATTERY 1
+    constant EXTERNAL 2
 
 struct Windows.Media.Import.PhotoImportProgress python_type
     py PhotoImportProgress
@@ -1613,10 +1637,21 @@ class Windows.Media.Import.PhotoImportSource python_type
 enum Windows.Media.Import.PhotoImportSourceType python_type
     py PhotoImportSourceType
     signature enum(Windows.Media.Import.PhotoImportSourceType;i4)
+    constant GENERIC 0
+    constant CAMERA 1
+    constant MEDIA_PLAYER 2
+    constant PHONE 3
+    constant VIDEO 4
+    constant PERSONAL_INFO_MANAGER 5
+    constant AUDIO_RECORDER 6
 
 enum Windows.Media.Import.PhotoImportStage python_type
     py PhotoImportStage
     signature enum(Windows.Media.Import.PhotoImportStage;i4)
+    constant NOT_STARTED 0
+    constant FINDING_ITEMS 1
+    constant IMPORTING_ITEMS 2
+    constant DELETING_IMPORTED_ITEMS_FROM_SOURCE 3
 
 class Windows.Media.Import.PhotoImportStorageMedium python_type
     py PhotoImportStorageMedium
@@ -1650,14 +1685,24 @@ class Windows.Media.Import.PhotoImportStorageMedium python_type
 enum Windows.Media.Import.PhotoImportStorageMediumType python_type
     py PhotoImportStorageMediumType
     signature enum(Windows.Media.Import.PhotoImportStorageMediumType;i4)
+    constant UNDEFINED 0
+    constant FIXED 1
+    constant REMOVABLE 2
 
 enum Windows.Media.Import.PhotoImportSubfolderCreationMode python_type
     py PhotoImportSubfolderCreationMode
     signature enum(Windows.Media.Import.PhotoImportSubfolderCreationMode;i4)
+    constant DO_NOT_CREATE_SUBFOLDERS 0
+    constant CREATE_SUBFOLDERS_FROM_FILE_DATE 1
+    constant CREATE_SUBFOLDERS_FROM_EXIF_DATE 2
+    constant KEEP_ORIGINAL_FOLDER_STRUCTURE 3
 
 enum Windows.Media.Import.PhotoImportSubfolderDateFormat python_type
     py PhotoImportSubfolderDateFormat
     signature enum(Windows.Media.Import.PhotoImportSubfolderDateFormat;i4)
+    constant YEAR 0
+    constant YEAR_MONTH 1
+    constant YEAR_MONTH_DAY 2
 
 class Windows.Media.Import.PhotoImportVideoSegment python_type
     py PhotoImportVideoSegment

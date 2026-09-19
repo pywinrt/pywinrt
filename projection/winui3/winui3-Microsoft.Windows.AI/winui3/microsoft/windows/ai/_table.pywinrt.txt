@@ -23,10 +23,17 @@ class Microsoft.Windows.AI.AIFeatureReadyResult python_type
 enum Microsoft.Windows.AI.AIFeatureReadyResultState python_type
     py AIFeatureReadyResultState
     signature enum(Microsoft.Windows.AI.AIFeatureReadyResultState;i4)
+    constant IN_PROGRESS 0
+    constant SUCCESS 1
+    constant FAILURE 2
 
 enum Microsoft.Windows.AI.AIFeatureReadyState python_type
     py AIFeatureReadyState
     signature enum(Microsoft.Windows.AI.AIFeatureReadyState;i4)
+    constant READY 0
+    constant NOT_READY 1
+    constant NOT_SUPPORTED_ON_CURRENT_SYSTEM 2
+    constant DISABLED_BY_USER 3
 
 interface Microsoft.Windows.AI.IAIFeatureReadyResult
     guid 936a78a6-c242-5937-9814-e512d4193a6d

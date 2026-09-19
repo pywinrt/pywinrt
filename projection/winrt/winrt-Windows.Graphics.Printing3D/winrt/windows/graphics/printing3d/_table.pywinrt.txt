@@ -2529,10 +2529,22 @@ class Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs python_type
 enum Windows.Graphics.Printing3D.Print3DTaskCompletion python_type
     py Print3DTaskCompletion
     signature enum(Windows.Graphics.Printing3D.Print3DTaskCompletion;i4)
+    constant ABANDONED 0
+    constant CANCELED 1
+    constant FAILED 2
+    constant SLICING 3
+    constant SUBMITTED 4
 
 enum Windows.Graphics.Printing3D.Print3DTaskDetail python_type
     py Print3DTaskDetail
     signature enum(Windows.Graphics.Printing3D.Print3DTaskDetail;i4)
+    constant UNKNOWN 0
+    constant MODEL_EXCEEDS_PRINT_BED 1
+    constant UPLOAD_FAILED 2
+    constant INVALID_MATERIAL_SELECTION 3
+    constant INVALID_MODEL 4
+    constant MODEL_NOT_MANIFOLD 5
+    constant INVALID_PRINT_TICKET 6
 
 class Windows.Graphics.Printing3D.Print3DTaskRequest python_type
     py Print3DTaskRequest
@@ -2682,6 +2694,13 @@ struct Windows.Graphics.Printing3D.Printing3DBufferDescription python_type
 enum Windows.Graphics.Printing3D.Printing3DBufferFormat python_type
     py Printing3DBufferFormat
     signature enum(Windows.Graphics.Printing3D.Printing3DBufferFormat;i4)
+    constant UNKNOWN 0
+    constant R32_G32_B32_A32_FLOAT 2
+    constant R32_G32_B32_A32_UINT 3
+    constant R32_G32_B32_FLOAT 6
+    constant R32_G32_B32_UINT 7
+    constant PRINTING_3D_DOUBLE 500
+    constant PRINTING_3D_UINT 501
 
 class Windows.Graphics.Printing3D.Printing3DColorMaterial activatable python_type
     py Printing3DColorMaterial
@@ -2938,6 +2957,8 @@ class Windows.Graphics.Printing3D.Printing3DMesh activatable python_type
 enum Windows.Graphics.Printing3D.Printing3DMeshVerificationMode python_type
     py Printing3DMeshVerificationMode
     signature enum(Windows.Graphics.Printing3D.Printing3DMeshVerificationMode;i4)
+    constant FIND_FIRST_ERROR 0
+    constant FIND_ALL_ERRORS 1
 
 class Windows.Graphics.Printing3D.Printing3DMeshVerificationResult python_type
     py Printing3DMeshVerificationResult
@@ -3051,6 +3072,12 @@ class Windows.Graphics.Printing3D.Printing3DModelTexture activatable python_type
 enum Windows.Graphics.Printing3D.Printing3DModelUnit python_type
     py Printing3DModelUnit
     signature enum(Windows.Graphics.Printing3D.Printing3DModelUnit;i4)
+    constant METER 0
+    constant MICRON 1
+    constant MILLIMETER 2
+    constant CENTIMETER 3
+    constant INCH 4
+    constant FOOT 5
 
 class Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterial activatable python_type
     py Printing3DMultiplePropertyMaterial
@@ -3087,10 +3114,16 @@ class Windows.Graphics.Printing3D.Printing3DMultiplePropertyMaterialGroup python
 enum Windows.Graphics.Printing3D.Printing3DObjectType python_type
     py Printing3DObjectType
     signature enum(Windows.Graphics.Printing3D.Printing3DObjectType;i4)
+    constant MODEL 0
+    constant SUPPORT 1
+    constant OTHERS 2
 
 enum Windows.Graphics.Printing3D.Printing3DPackageCompression python_type
     py Printing3DPackageCompression
     signature enum(Windows.Graphics.Printing3D.Printing3DPackageCompression;i4)
+    constant LOW 0
+    constant MEDIUM 1
+    constant HIGH 2
 
 class Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterial activatable python_type
     py Printing3DTexture2CoordMaterial
@@ -3142,6 +3175,10 @@ class Windows.Graphics.Printing3D.Printing3DTexture2CoordMaterialGroup python_ty
 enum Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior python_type
     py Printing3DTextureEdgeBehavior
     signature enum(Windows.Graphics.Printing3D.Printing3DTextureEdgeBehavior;i4)
+    constant NONE 0
+    constant WRAP 1
+    constant MIRROR 2
+    constant CLAMP 3
 
 class Windows.Graphics.Printing3D.Printing3DTextureResource activatable python_type
     py Printing3DTextureResource

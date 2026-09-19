@@ -159,6 +159,9 @@ class Windows.UI.WindowManagement.AppWindowClosedEventArgs python_type
 enum Windows.UI.WindowManagement.AppWindowClosedReason python_type
     py AppWindowClosedReason
     signature enum(Windows.UI.WindowManagement.AppWindowClosedReason;i4)
+    constant OTHER 0
+    constant APP_INITIATED 1
+    constant USER_INITIATED 2
 
 class Windows.UI.WindowManagement.AppWindowFrame python_type
     py AppWindowFrame
@@ -179,6 +182,8 @@ class Windows.UI.WindowManagement.AppWindowFrame python_type
 enum Windows.UI.WindowManagement.AppWindowFrameStyle python_type
     py AppWindowFrameStyle
     signature enum(Windows.UI.WindowManagement.AppWindowFrameStyle;i4)
+    constant DEFAULT 0
+    constant NO_FRAME 1
 
 class Windows.UI.WindowManagement.AppWindowPlacement python_type
     py AppWindowPlacement
@@ -208,6 +213,9 @@ class Windows.UI.WindowManagement.AppWindowPresentationConfiguration composable 
 enum Windows.UI.WindowManagement.AppWindowPresentationKind python_type
     py AppWindowPresentationKind
     signature enum(Windows.UI.WindowManagement.AppWindowPresentationKind;i4)
+    constant DEFAULT 0
+    constant COMPACT_OVERLAY 1
+    constant FULL_SCREEN 2
 
 class Windows.UI.WindowManagement.AppWindowPresenter python_type
     py AppWindowPresenter
@@ -326,6 +334,8 @@ class Windows.UI.WindowManagement.AppWindowTitleBarOcclusion python_type
 enum Windows.UI.WindowManagement.AppWindowTitleBarVisibility python_type
     py AppWindowTitleBarVisibility
     signature enum(Windows.UI.WindowManagement.AppWindowTitleBarVisibility;i4)
+    constant DEFAULT 0
+    constant ALWAYS_HIDDEN 1
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
@@ -1124,6 +1134,9 @@ class Windows.UI.WindowManagement.WindowingEnvironmentChangedEventArgs python_ty
 enum Windows.UI.WindowManagement.WindowingEnvironmentKind python_type
     py WindowingEnvironmentKind
     signature enum(Windows.UI.WindowManagement.WindowingEnvironmentKind;i4)
+    constant UNKNOWN 0
+    constant OVERLAPPED 1
+    constant TILED 2
 
 class Windows.UI.WindowManagement.WindowingEnvironmentRemovedEventArgs python_type
     py WindowingEnvironmentRemovedEventArgs

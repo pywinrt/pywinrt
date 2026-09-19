@@ -35,13 +35,19 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Provi
             in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Provider.StorageProviderShareLinkState> name=asyncInfo
             in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-enum Windows.Storage.Provider.CachedFileOptions python_type
+enum Windows.Storage.Provider.CachedFileOptions python_type flags_enum
     py CachedFileOptions
     signature enum(Windows.Storage.Provider.CachedFileOptions;u4)
+    constant NONE 0x0
+    constant REQUIRE_UPDATE_ON_ACCESS 0x1
+    constant USE_CACHED_FILE_WHEN_OFFLINE 0x2
+    constant DENY_ACCESS_WHEN_OFFLINE 0x4
 
 enum Windows.Storage.Provider.CachedFileTarget python_type
     py CachedFileTarget
     signature enum(Windows.Storage.Provider.CachedFileTarget;i4)
+    constant LOCAL 0
+    constant REMOTE 1
 
 class Windows.Storage.Provider.CachedFileUpdater static python_type
     py CachedFileUpdater
@@ -139,6 +145,12 @@ class Windows.Storage.Provider.FileUpdateRequestedEventArgs python_type
 enum Windows.Storage.Provider.FileUpdateStatus python_type
     py FileUpdateStatus
     signature enum(Windows.Storage.Provider.FileUpdateStatus;i4)
+    constant INCOMPLETE 0
+    constant COMPLETE 1
+    constant USER_INPUT_NEEDED 2
+    constant CURRENTLY_UNAVAILABLE 3
+    constant FAILED 4
+    constant COMPLETE_AND_RENAMED 5
 
 interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[String]
@@ -1369,6 +1381,8 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.Sort
 enum Windows.Storage.Provider.ReadActivationMode python_type
     py ReadActivationMode
     signature enum(Windows.Storage.Provider.ReadActivationMode;i4)
+    constant NOT_NEEDED 0
+    constant BEFORE_ACCESS 1
 
 class Windows.Storage.Provider.StorageProviderFileTypeInfo python_type
     py StorageProviderFileTypeInfo
@@ -1431,21 +1445,44 @@ class Windows.Storage.Provider.StorageProviderGetPathForContentUriResult activat
         put put_Path slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderGetPathForContentUriResult shape=4 reverse=99
             in string name=value
 
-enum Windows.Storage.Provider.StorageProviderHardlinkPolicy python_type
+enum Windows.Storage.Provider.StorageProviderHardlinkPolicy python_type flags_enum
     py StorageProviderHardlinkPolicy
     signature enum(Windows.Storage.Provider.StorageProviderHardlinkPolicy;u4)
+    constant NONE 0x0
+    constant ALLOWED 0x1
 
 enum Windows.Storage.Provider.StorageProviderHydrationPolicy python_type
     py StorageProviderHydrationPolicy
     signature enum(Windows.Storage.Provider.StorageProviderHydrationPolicy;i4)
+    constant PARTIAL 0
+    constant PROGRESSIVE 1
+    constant FULL 2
+    constant ALWAYS_FULL 3
 
-enum Windows.Storage.Provider.StorageProviderHydrationPolicyModifier python_type
+enum Windows.Storage.Provider.StorageProviderHydrationPolicyModifier python_type flags_enum
     py StorageProviderHydrationPolicyModifier
     signature enum(Windows.Storage.Provider.StorageProviderHydrationPolicyModifier;u4)
+    constant NONE 0x0
+    constant VALIDATION_REQUIRED 0x1
+    constant STREAMING_ALLOWED 0x2
+    constant AUTO_DEHYDRATION_ALLOWED 0x4
+    constant ALLOW_FULL_RESTART_HYDRATION 0x8
 
-enum Windows.Storage.Provider.StorageProviderInSyncPolicy python_type
+enum Windows.Storage.Provider.StorageProviderInSyncPolicy python_type flags_enum
     py StorageProviderInSyncPolicy
     signature enum(Windows.Storage.Provider.StorageProviderInSyncPolicy;u4)
+    constant DEFAULT 0x0
+    constant FILE_CREATION_TIME 0x1
+    constant FILE_READ_ONLY_ATTRIBUTE 0x2
+    constant FILE_HIDDEN_ATTRIBUTE 0x4
+    constant FILE_SYSTEM_ATTRIBUTE 0x8
+    constant DIRECTORY_CREATION_TIME 0x10
+    constant DIRECTORY_READ_ONLY_ATTRIBUTE 0x20
+    constant DIRECTORY_HIDDEN_ATTRIBUTE 0x40
+    constant DIRECTORY_SYSTEM_ATTRIBUTE 0x80
+    constant FILE_LAST_WRITE_TIME 0x100
+    constant DIRECTORY_LAST_WRITE_TIME 0x200
+    constant PRESERVE_INSYNC_FOR_SYNC_ENGINE 0x80000000
 
 class Windows.Storage.Provider.StorageProviderItemProperties static python_type
     py StorageProviderItemProperties
@@ -1563,6 +1600,9 @@ delegate Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestedHandler
 enum Windows.Storage.Provider.StorageProviderKnownFolderSyncStatus python_type
     py StorageProviderKnownFolderSyncStatus
     signature enum(Windows.Storage.Provider.StorageProviderKnownFolderSyncStatus;i4)
+    constant AVAILABLE 0
+    constant ENROLLING 1
+    constant ENROLLED 2
 
 class Windows.Storage.Provider.StorageProviderMoreInfoUI activatable python_type
     py StorageProviderMoreInfoUI
@@ -1586,10 +1626,14 @@ class Windows.Storage.Provider.StorageProviderMoreInfoUI activatable python_type
 enum Windows.Storage.Provider.StorageProviderPopulationPolicy python_type
     py StorageProviderPopulationPolicy
     signature enum(Windows.Storage.Provider.StorageProviderPopulationPolicy;i4)
+    constant FULL 1
+    constant ALWAYS_FULL 2
 
 enum Windows.Storage.Provider.StorageProviderProtectionMode python_type
     py StorageProviderProtectionMode
     signature enum(Windows.Storage.Provider.StorageProviderProtectionMode;i4)
+    constant UNKNOWN 0
+    constant PERSONAL 1
 
 class Windows.Storage.Provider.StorageProviderQueryResultSet python_type
     py StorageProviderQueryResultSet
@@ -1647,14 +1691,26 @@ class Windows.Storage.Provider.StorageProviderQuotaUI activatable python_type
 enum Windows.Storage.Provider.StorageProviderResultKind python_type
     py StorageProviderResultKind
     signature enum(Windows.Storage.Provider.StorageProviderResultKind;i4)
+    constant SEARCH 0
+    constant RECOMMENDED 1
+    constant FAVORITES 2
+    constant RECENT 3
+    constant SHARED 4
+    constant RELATED_FILES 5
+    constant RELATED_CONVERSATIONS 6
 
 enum Windows.Storage.Provider.StorageProviderResultUsageKind python_type
     py StorageProviderResultUsageKind
     signature enum(Windows.Storage.Provider.StorageProviderResultUsageKind;i4)
+    constant RENDERED 0
+    constant OPENED 1
+    constant SUGGESTION_RESPONSE_RECEIVED 2
 
 enum Windows.Storage.Provider.StorageProviderSearchMatchKind python_type
     py StorageProviderSearchMatchKind
     signature enum(Windows.Storage.Provider.StorageProviderSearchMatchKind;i4)
+    constant LEXICAL 0
+    constant SEMANTIC 1
 
 class Windows.Storage.Provider.StorageProviderSearchQueryOptions python_type
     py StorageProviderSearchQueryOptions
@@ -1689,6 +1745,14 @@ class Windows.Storage.Provider.StorageProviderSearchQueryOptions python_type
 enum Windows.Storage.Provider.StorageProviderSearchQueryStatus python_type
     py StorageProviderSearchQueryStatus
     signature enum(Windows.Storage.Provider.StorageProviderSearchQueryStatus;i4)
+    constant SUCCESS 0
+    constant ERROR 1
+    constant TIMEOUT 2
+    constant NO_NETWORK 3
+    constant NETWORK_ERROR 4
+    constant NOT_SIGNED_IN 5
+    constant QUERY_NOT_SUPPORTED 6
+    constant SORT_ORDER_NOT_SUPPORTED 7
 
 class Windows.Storage.Provider.StorageProviderSearchResult activatable python_type
     py StorageProviderSearchResult
@@ -1741,10 +1805,18 @@ class Windows.Storage.Provider.StorageProviderSearchResult activatable python_ty
 enum Windows.Storage.Provider.StorageProviderShareLinkState python_type
     py StorageProviderShareLinkState
     signature enum(Windows.Storage.Provider.StorageProviderShareLinkState;i4)
+    constant ENABLED 0
+    constant DISABLED 1
 
 enum Windows.Storage.Provider.StorageProviderState python_type
     py StorageProviderState
     signature enum(Windows.Storage.Provider.StorageProviderState;i4)
+    constant IN_SYNC 0
+    constant SYNCING 1
+    constant PAUSED 2
+    constant ERROR 3
+    constant WARNING 4
+    constant OFFLINE 5
 
 class Windows.Storage.Provider.StorageProviderStatusUI activatable python_type
     py StorageProviderStatusUI
@@ -1920,10 +1992,16 @@ class Windows.Storage.Provider.StorageProviderSyncRootManager static python_type
 enum Windows.Storage.Provider.StorageProviderUICommandState python_type
     py StorageProviderUICommandState
     signature enum(Windows.Storage.Provider.StorageProviderUICommandState;i4)
+    constant ENABLED 0
+    constant DISABLED 1
+    constant HIDDEN 2
 
 enum Windows.Storage.Provider.StorageProviderUriSourceStatus python_type
     py StorageProviderUriSourceStatus
     signature enum(Windows.Storage.Provider.StorageProviderUriSourceStatus;i4)
+    constant SUCCESS 0
+    constant NO_SYNC_ROOT 1
+    constant FILE_NOT_FOUND 2
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Provider.CachedFileUpdaterUI,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[CachedFileUpdaterUI, Object]
@@ -1976,10 +2054,17 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Provider.IStorageP
 enum Windows.Storage.Provider.UIStatus python_type
     py UIStatus
     signature enum(Windows.Storage.Provider.UIStatus;i4)
+    constant UNAVAILABLE 0
+    constant HIDDEN 1
+    constant VISIBLE 2
+    constant COMPLETE 3
 
 enum Windows.Storage.Provider.WriteActivationMode python_type
     py WriteActivationMode
     signature enum(Windows.Storage.Provider.WriteActivationMode;i4)
+    constant READ_ONLY 0
+    constant NOT_NEEDED 1
+    constant AFTER_WRITE 2
 
 class System.Guid external
     py winrt.system.Guid

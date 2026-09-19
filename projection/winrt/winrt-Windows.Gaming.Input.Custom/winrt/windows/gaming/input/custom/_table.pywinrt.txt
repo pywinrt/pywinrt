@@ -82,6 +82,9 @@ class Windows.Gaming.Input.Custom.GipFirmwareUpdateResult python_type
 enum Windows.Gaming.Input.Custom.GipFirmwareUpdateStatus python_type
     py GipFirmwareUpdateStatus
     signature enum(Windows.Gaming.Input.Custom.GipFirmwareUpdateStatus;i4)
+    constant COMPLETED 0
+    constant UP_TO_DATE 1
+    constant FAILED 2
 
 class Windows.Gaming.Input.Custom.GipGameControllerProvider python_type
     py GipGameControllerProvider
@@ -123,6 +126,9 @@ class Windows.Gaming.Input.Custom.GipGameControllerProvider python_type
 enum Windows.Gaming.Input.Custom.GipMessageClass python_type
     py GipMessageClass
     signature enum(Windows.Gaming.Input.Custom.GipMessageClass;i4)
+    constant COMMAND 0
+    constant LOW_LATENCY 1
+    constant STANDARD_LATENCY 2
 
 class Windows.Gaming.Input.Custom.HidGameControllerProvider python_type
     py HidGameControllerProvider
@@ -324,10 +330,23 @@ interface Windows.Gaming.Input.Custom.IXusbGameControllerProvider
 enum Windows.Gaming.Input.Custom.XusbDeviceSubtype python_type
     py XusbDeviceSubtype
     signature enum(Windows.Gaming.Input.Custom.XusbDeviceSubtype;i4)
+    constant UNKNOWN 0
+    constant GAMEPAD 1
+    constant ARCADE_PAD 2
+    constant ARCADE_STICK 3
+    constant FLIGHT_STICK 4
+    constant WHEEL 5
+    constant GUITAR 6
+    constant GUITAR_ALTERNATE 7
+    constant GUITAR_BASS 8
+    constant DRUM_KIT 9
+    constant DANCE_PAD 10
 
 enum Windows.Gaming.Input.Custom.XusbDeviceType python_type
     py XusbDeviceType
     signature enum(Windows.Gaming.Input.Custom.XusbDeviceType;i4)
+    constant UNKNOWN 0
+    constant GAMEPAD 1
 
 class Windows.Gaming.Input.Custom.XusbGameControllerProvider python_type
     py XusbGameControllerProvider

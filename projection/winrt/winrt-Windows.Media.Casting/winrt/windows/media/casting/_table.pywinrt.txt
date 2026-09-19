@@ -111,10 +111,22 @@ class Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs python_type
 enum Windows.Media.Casting.CastingConnectionErrorStatus python_type
     py CastingConnectionErrorStatus
     signature enum(Windows.Media.Casting.CastingConnectionErrorStatus;i4)
+    constant SUCCEEDED 0
+    constant DEVICE_DID_NOT_RESPOND 1
+    constant DEVICE_ERROR 2
+    constant DEVICE_LOCKED 3
+    constant PROTECTED_PLAYBACK_FAILED 4
+    constant INVALID_CASTING_SOURCE 5
+    constant UNKNOWN 6
 
 enum Windows.Media.Casting.CastingConnectionState python_type
     py CastingConnectionState
     signature enum(Windows.Media.Casting.CastingConnectionState;i4)
+    constant DISCONNECTED 0
+    constant CONNECTED 1
+    constant RENDERING 2
+    constant DISCONNECTING 3
+    constant CONNECTING 4
 
 class Windows.Media.Casting.CastingDevice python_type
     py CastingDevice
@@ -222,9 +234,13 @@ class Windows.Media.Casting.CastingDeviceSelectedEventArgs python_type
         get get_SelectedCastingDevice slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceSelectedEventArgs shape=4 reverse=22
             out class type=Windows.Media.Casting.CastingDevice return
 
-enum Windows.Media.Casting.CastingPlaybackTypes python_type
+enum Windows.Media.Casting.CastingPlaybackTypes python_type flags_enum
     py CastingPlaybackTypes
     signature enum(Windows.Media.Casting.CastingPlaybackTypes;u4)
+    constant NONE 0x0
+    constant AUDIO 0x1
+    constant VIDEO 0x2
+    constant PICTURE 0x4
 
 class Windows.Media.Casting.CastingSource python_type
     py CastingSource

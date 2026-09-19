@@ -180,18 +180,94 @@ class Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs python_type
 enum Windows.UI.Text.Core.CoreTextFormatUpdatingReason python_type
     py CoreTextFormatUpdatingReason
     signature enum(Windows.UI.Text.Core.CoreTextFormatUpdatingReason;i4)
+    constant NONE 0
+    constant COMPOSITION_UNCONVERTED 1
+    constant COMPOSITION_CONVERTED 2
+    constant COMPOSITION_TARGET_UNCONVERTED 3
+    constant COMPOSITION_TARGET_CONVERTED 4
 
 enum Windows.UI.Text.Core.CoreTextFormatUpdatingResult python_type
     py CoreTextFormatUpdatingResult
     signature enum(Windows.UI.Text.Core.CoreTextFormatUpdatingResult;i4)
+    constant SUCCEEDED 0
+    constant FAILED 1
 
 enum Windows.UI.Text.Core.CoreTextInputPaneDisplayPolicy python_type
     py CoreTextInputPaneDisplayPolicy
     signature enum(Windows.UI.Text.Core.CoreTextInputPaneDisplayPolicy;i4)
+    constant AUTOMATIC 0
+    constant MANUAL 1
 
 enum Windows.UI.Text.Core.CoreTextInputScope python_type
     py CoreTextInputScope
     signature enum(Windows.UI.Text.Core.CoreTextInputScope;i4)
+    constant DEFAULT 0
+    constant URL 1
+    constant FILE_PATH 2
+    constant FILE_NAME 3
+    constant EMAIL_USER_NAME 4
+    constant EMAIL_ADDRESS 5
+    constant USER_NAME 6
+    constant PERSONAL_FULL_NAME 7
+    constant PERSONAL_NAME_PREFIX 8
+    constant PERSONAL_GIVEN_NAME 9
+    constant PERSONAL_MIDDLE_NAME 10
+    constant PERSONAL_SURNAME 11
+    constant PERSONAL_NAME_SUFFIX 12
+    constant ADDRESS 13
+    constant ADDRESS_POSTAL_CODE 14
+    constant ADDRESS_STREET 15
+    constant ADDRESS_STATE_OR_PROVINCE 16
+    constant ADDRESS_CITY 17
+    constant ADDRESS_COUNTRY_NAME 18
+    constant ADDRESS_COUNTRY_SHORT_NAME 19
+    constant CURRENCY_AMOUNT_AND_SYMBOL 20
+    constant CURRENCY_AMOUNT 21
+    constant DATE 22
+    constant DATE_MONTH 23
+    constant DATE_DAY 24
+    constant DATE_YEAR 25
+    constant DATE_MONTH_NAME 26
+    constant DATE_DAY_NAME 27
+    constant NUMBER 29
+    constant SINGLE_CHARACTER 30
+    constant PASSWORD 31
+    constant TELEPHONE_NUMBER 32
+    constant TELEPHONE_COUNTRY_CODE 33
+    constant TELEPHONE_AREA_CODE 34
+    constant TELEPHONE_LOCAL_NUMBER 35
+    constant TIME 36
+    constant TIME_HOUR 37
+    constant TIME_MINUTE_OR_SECOND 38
+    constant NUMBER_FULL_WIDTH 39
+    constant ALPHANUMERIC_HALF_WIDTH 40
+    constant ALPHANUMERIC_FULL_WIDTH 41
+    constant CURRENCY_CHINESE 42
+    constant BOPOMOFO 43
+    constant HIRAGANA 44
+    constant KATAKANA_HALF_WIDTH 45
+    constant KATAKANA_FULL_WIDTH 46
+    constant HANJA 47
+    constant HANGUL_HALF_WIDTH 48
+    constant HANGUL_FULL_WIDTH 49
+    constant SEARCH 50
+    constant FORMULA 51
+    constant SEARCH_INCREMENTAL 52
+    constant CHINESE_HALF_WIDTH 53
+    constant CHINESE_FULL_WIDTH 54
+    constant NATIVE_SCRIPT 55
+    constant TEXT 57
+    constant CHAT 58
+    constant NAME_OR_PHONE_NUMBER 59
+    constant EMAIL_USER_NAME_OR_ADDRESS 60
+    constant PRIVATE 61
+    constant MAPS 62
+    constant PASSWORD_NUMERIC 63
+    constant FORMULA_NUMBER 67
+    constant CHAT_WITHOUT_EMOJI 68
+    constant DIGITS 28
+    constant PIN_NUMERIC 64
+    constant PIN_ALPHANUMERIC 65
 
 class Windows.UI.Text.Core.CoreTextLayoutBounds python_type
     py CoreTextLayoutBounds
@@ -295,6 +371,8 @@ class Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs python_type
 enum Windows.UI.Text.Core.CoreTextSelectionUpdatingResult python_type
     py CoreTextSelectionUpdatingResult
     signature enum(Windows.UI.Text.Core.CoreTextSelectionUpdatingResult;i4)
+    constant SUCCEEDED 0
+    constant FAILED 1
 
 class Windows.UI.Text.Core.CoreTextServicesConstants static python_type
     py CoreTextServicesConstants
@@ -386,6 +464,8 @@ class Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs python_type
 enum Windows.UI.Text.Core.CoreTextTextUpdatingResult python_type
     py CoreTextTextUpdatingResult
     signature enum(Windows.UI.Text.Core.CoreTextTextUpdatingResult;i4)
+    constant SUCCEEDED 0
+    constant FAILED 1
 
 interface Windows.UI.Text.Core.ICoreTextCompositionCompletedEventArgs
     guid 1f34ebb6-b79f-4121-a5e7-fda9b8616e30

@@ -38,6 +38,8 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.StartScree
 enum Windows.UI.StartScreen.ForegroundText python_type
     py ForegroundText
     signature enum(Windows.UI.StartScreen.ForegroundText;i4)
+    constant DARK 0
+    constant LIGHT 1
 
 interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[Boolean]
@@ -614,10 +616,15 @@ class Windows.UI.StartScreen.JumpListItem python_type
 enum Windows.UI.StartScreen.JumpListItemKind python_type
     py JumpListItemKind
     signature enum(Windows.UI.StartScreen.JumpListItemKind;i4)
+    constant ARGUMENTS 0
+    constant SEPARATOR 1
 
 enum Windows.UI.StartScreen.JumpListSystemGroupKind python_type
     py JumpListSystemGroupKind
     signature enum(Windows.UI.StartScreen.JumpListSystemGroupKind;i4)
+    constant NONE 0
+    constant FREQUENT 1
+    constant RECENT 2
 
 class Windows.UI.StartScreen.SecondaryTile activatable python_type
     py SecondaryTile
@@ -917,14 +924,28 @@ class Windows.UI.StartScreen.TileMixedRealityModel python_type
 enum Windows.UI.StartScreen.TileMixedRealityModelActivationBehavior python_type
     py TileMixedRealityModelActivationBehavior
     signature enum(Windows.UI.StartScreen.TileMixedRealityModelActivationBehavior;i4)
+    constant DEFAULT 0
+    constant NONE 1
 
-enum Windows.UI.StartScreen.TileOptions python_type
+enum Windows.UI.StartScreen.TileOptions python_type flags_enum
     py TileOptions
     signature enum(Windows.UI.StartScreen.TileOptions;u4)
+    constant NONE 0x0
+    constant SHOW_NAME_ON_LOGO 0x1
+    constant SHOW_NAME_ON_WIDE_LOGO 0x2
+    constant COPY_ON_DEPLOYMENT 0x4
 
 enum Windows.UI.StartScreen.TileSize python_type
     py TileSize
     signature enum(Windows.UI.StartScreen.TileSize;i4)
+    constant DEFAULT 0
+    constant SQUARE30X30 1
+    constant SQUARE70X70 2
+    constant SQUARE150X150 3
+    constant WIDE310X150 4
+    constant SQUARE310X310 5
+    constant SQUARE71X71 6
+    constant SQUARE44X44 7
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.StartScreen.SecondaryTile,Windows.UI.StartScreen.VisualElementsRequestedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[SecondaryTile, VisualElementsRequestedEventArgs]

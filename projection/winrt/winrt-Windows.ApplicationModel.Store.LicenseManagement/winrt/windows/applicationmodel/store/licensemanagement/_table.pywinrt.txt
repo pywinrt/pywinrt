@@ -176,6 +176,8 @@ class Windows.ApplicationModel.Store.LicenseManagement.LicenseManager static pyt
 enum Windows.ApplicationModel.Store.LicenseManagement.LicenseRefreshOption python_type
     py LicenseRefreshOption
     signature enum(Windows.ApplicationModel.Store.LicenseManagement.LicenseRefreshOption;i4)
+    constant RUNNING_LICENSES 0
+    constant ALL_LICENSES 1
 
 class Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo python_type
     py LicenseSatisfactionInfo

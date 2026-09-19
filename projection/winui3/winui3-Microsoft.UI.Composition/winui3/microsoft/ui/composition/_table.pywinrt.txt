@@ -56,22 +56,36 @@ class Microsoft.UI.Composition.AnimationController python_type
 enum Microsoft.UI.Composition.AnimationControllerProgressBehavior python_type
     py AnimationControllerProgressBehavior
     signature enum(Microsoft.UI.Composition.AnimationControllerProgressBehavior;i4)
+    constant DEFAULT 0
+    constant INCLUDES_DELAY_TIME 1
 
 enum Microsoft.UI.Composition.AnimationDelayBehavior python_type
     py AnimationDelayBehavior
     signature enum(Microsoft.UI.Composition.AnimationDelayBehavior;i4)
+    constant SET_INITIAL_VALUE_AFTER_DELAY 0
+    constant SET_INITIAL_VALUE_BEFORE_DELAY 1
 
 enum Microsoft.UI.Composition.AnimationDirection python_type
     py AnimationDirection
     signature enum(Microsoft.UI.Composition.AnimationDirection;i4)
+    constant NORMAL 0
+    constant REVERSE 1
+    constant ALTERNATE 2
+    constant ALTERNATE_REVERSE 3
 
 enum Microsoft.UI.Composition.AnimationIterationBehavior python_type
     py AnimationIterationBehavior
     signature enum(Microsoft.UI.Composition.AnimationIterationBehavior;i4)
+    constant COUNT 0
+    constant FOREVER 1
 
 enum Microsoft.UI.Composition.AnimationPropertyAccessMode python_type
     py AnimationPropertyAccessMode
     signature enum(Microsoft.UI.Composition.AnimationPropertyAccessMode;i4)
+    constant NONE 0
+    constant READ_ONLY 1
+    constant WRITE_ONLY 2
+    constant READ_WRITE 3
 
 class Microsoft.UI.Composition.AnimationPropertyInfo python_type
     py AnimationPropertyInfo
@@ -95,6 +109,9 @@ class Microsoft.UI.Composition.AnimationPropertyInfo python_type
 enum Microsoft.UI.Composition.AnimationStopBehavior python_type
     py AnimationStopBehavior
     signature enum(Microsoft.UI.Composition.AnimationStopBehavior;i4)
+    constant LEAVE_CURRENT_VALUE 0
+    constant SET_TO_INITIAL_VALUE 1
+    constant SET_TO_FINAL_VALUE 2
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.UI.Composition.ICompositionSurface> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[ICompositionSurface]
@@ -337,6 +354,9 @@ class Microsoft.UI.Composition.CompositionBackdropBrush python_type
 enum Microsoft.UI.Composition.CompositionBackfaceVisibility python_type
     py CompositionBackfaceVisibility
     signature enum(Microsoft.UI.Composition.CompositionBackfaceVisibility;i4)
+    constant INHERIT 0
+    constant VISIBLE 1
+    constant HIDDEN 2
 
 class Microsoft.UI.Composition.CompositionBatchCompletedEventArgs python_type
     py CompositionBatchCompletedEventArgs
@@ -345,17 +365,35 @@ class Microsoft.UI.Composition.CompositionBatchCompletedEventArgs python_type
     default Microsoft.UI.Composition.ICompositionBatchCompletedEventArgs
     requires Microsoft.UI.Composition.ICompositionBatchCompletedEventArgs
 
-enum Microsoft.UI.Composition.CompositionBatchTypes python_type
+enum Microsoft.UI.Composition.CompositionBatchTypes python_type flags_enum
     py CompositionBatchTypes
     signature enum(Microsoft.UI.Composition.CompositionBatchTypes;u4)
+    constant NONE 0x0
+    constant ANIMATION 0x1
+    constant EFFECT 0x2
+    constant INFINITE_ANIMATION 0x4
+    constant ALL_ANIMATIONS 0x5
 
 enum Microsoft.UI.Composition.CompositionBitmapInterpolationMode python_type
     py CompositionBitmapInterpolationMode
     signature enum(Microsoft.UI.Composition.CompositionBitmapInterpolationMode;i4)
+    constant NEAREST_NEIGHBOR 0
+    constant LINEAR 1
+    constant MAG_LINEAR_MIN_LINEAR_MIP_LINEAR 2
+    constant MAG_LINEAR_MIN_LINEAR_MIP_NEAREST 3
+    constant MAG_LINEAR_MIN_NEAREST_MIP_LINEAR 4
+    constant MAG_LINEAR_MIN_NEAREST_MIP_NEAREST 5
+    constant MAG_NEAREST_MIN_LINEAR_MIP_LINEAR 6
+    constant MAG_NEAREST_MIN_LINEAR_MIP_NEAREST 7
+    constant MAG_NEAREST_MIN_NEAREST_MIP_LINEAR 8
+    constant MAG_NEAREST_MIN_NEAREST_MIP_NEAREST 9
 
 enum Microsoft.UI.Composition.CompositionBorderMode python_type
     py CompositionBorderMode
     signature enum(Microsoft.UI.Composition.CompositionBorderMode;i4)
+    constant INHERIT 0
+    constant SOFT 1
+    constant HARD 2
 
 class Microsoft.UI.Composition.CompositionBrush composable python_type
     py CompositionBrush
@@ -515,6 +553,11 @@ class Microsoft.UI.Composition.CompositionColorGradientStopCollection python_typ
 enum Microsoft.UI.Composition.CompositionColorSpace python_type
     py CompositionColorSpace
     signature enum(Microsoft.UI.Composition.CompositionColorSpace;i4)
+    constant AUTO 0
+    constant HSL 1
+    constant RGB 2
+    constant HSL_LINEAR 3
+    constant RGB_LINEAR 4
 
 class Microsoft.UI.Composition.CompositionCommitBatch python_type
     py CompositionCommitBatch
@@ -538,6 +581,10 @@ class Microsoft.UI.Composition.CompositionCommitBatch python_type
 enum Microsoft.UI.Composition.CompositionCompositeMode python_type
     py CompositionCompositeMode
     signature enum(Microsoft.UI.Composition.CompositionCompositeMode;i4)
+    constant INHERIT 0
+    constant SOURCE_OVER 1
+    constant DESTINATION_INVERT 2
+    constant MIN_BLEND 3
 
 class Microsoft.UI.Composition.CompositionContainerShape python_type
     py CompositionContainerShape
@@ -591,6 +638,8 @@ class Microsoft.UI.Composition.CompositionDrawingSurface composable python_type
 enum Microsoft.UI.Composition.CompositionDropShadowSourcePolicy python_type
     py CompositionDropShadowSourcePolicy
     signature enum(Microsoft.UI.Composition.CompositionDropShadowSourcePolicy;i4)
+    constant DEFAULT 0
+    constant INHERIT_FROM_VISUAL_CONTENT 1
 
 class Microsoft.UI.Composition.CompositionEasingFunction composable python_type
     py CompositionEasingFunction
@@ -664,6 +713,9 @@ class Microsoft.UI.Composition.CompositionEasingFunction composable python_type
 enum Microsoft.UI.Composition.CompositionEasingFunctionMode python_type
     py CompositionEasingFunctionMode
     signature enum(Microsoft.UI.Composition.CompositionEasingFunctionMode;i4)
+    constant IN 0
+    constant OUT 1
+    constant IN_OUT 2
 
 class Microsoft.UI.Composition.CompositionEffectBrush python_type
     py CompositionEffectBrush
@@ -699,6 +751,10 @@ class Microsoft.UI.Composition.CompositionEffectFactory python_type
 enum Microsoft.UI.Composition.CompositionEffectFactoryLoadStatus python_type
     py CompositionEffectFactoryLoadStatus
     signature enum(Microsoft.UI.Composition.CompositionEffectFactoryLoadStatus;i4)
+    constant SUCCESS 0
+    constant EFFECT_TOO_COMPLEX 1
+    constant PENDING 2
+    constant OTHER -1
 
 class Microsoft.UI.Composition.CompositionEffectSourceParameter python_type
     py CompositionEffectSourceParameter
@@ -775,6 +831,9 @@ class Microsoft.UI.Composition.CompositionGeometry composable python_type
 enum Microsoft.UI.Composition.CompositionGetValueStatus python_type
     py CompositionGetValueStatus
     signature enum(Microsoft.UI.Composition.CompositionGetValueStatus;i4)
+    constant SUCCEEDED 0
+    constant TYPE_MISMATCH 1
+    constant NOT_FOUND 2
 
 class Microsoft.UI.Composition.CompositionGradientBrush composable python_type
     py CompositionGradientBrush
@@ -841,6 +900,9 @@ class Microsoft.UI.Composition.CompositionGradientBrush composable python_type
 enum Microsoft.UI.Composition.CompositionGradientExtendMode python_type
     py CompositionGradientExtendMode
     signature enum(Microsoft.UI.Composition.CompositionGradientExtendMode;i4)
+    constant CLAMP 0
+    constant WRAP 1
+    constant MIRROR 2
 
 class Microsoft.UI.Composition.CompositionGraphicsDevice python_type
     py CompositionGraphicsDevice
@@ -950,6 +1012,8 @@ class Microsoft.UI.Composition.CompositionLinearGradientBrush python_type
 enum Microsoft.UI.Composition.CompositionMappingMode python_type
     py CompositionMappingMode
     signature enum(Microsoft.UI.Composition.CompositionMappingMode;i4)
+    constant ABSOLUTE 0
+    constant RELATIVE 1
 
 class Microsoft.UI.Composition.CompositionMaskBrush python_type
     py CompositionMaskBrush
@@ -1621,10 +1685,18 @@ class Microsoft.UI.Composition.CompositionSpriteShape python_type
 enum Microsoft.UI.Composition.CompositionStretch python_type
     py CompositionStretch
     signature enum(Microsoft.UI.Composition.CompositionStretch;i4)
+    constant NONE 0
+    constant FILL 1
+    constant UNIFORM 2
+    constant UNIFORM_TO_FILL 3
 
 enum Microsoft.UI.Composition.CompositionStrokeCap python_type
     py CompositionStrokeCap
     signature enum(Microsoft.UI.Composition.CompositionStrokeCap;i4)
+    constant FLAT 0
+    constant SQUARE 1
+    constant ROUND 2
+    constant TRIANGLE 3
 
 class Microsoft.UI.Composition.CompositionStrokeDashArray python_type iterable sequence mutable_sequence
     py CompositionStrokeDashArray
@@ -1682,6 +1754,10 @@ class Microsoft.UI.Composition.CompositionStrokeDashArray python_type iterable s
 enum Microsoft.UI.Composition.CompositionStrokeLineJoin python_type
     py CompositionStrokeLineJoin
     signature enum(Microsoft.UI.Composition.CompositionStrokeLineJoin;i4)
+    constant MITER 0
+    constant BEVEL 1
+    constant ROUND 2
+    constant MITER_OR_BEVEL 3
 
 class Microsoft.UI.Composition.CompositionSurfaceBrush python_type
     py CompositionSurfaceBrush

@@ -360,6 +360,11 @@ class Windows.Devices.PointOfService.BarcodeScannerReport python_type
 enum Windows.Devices.PointOfService.BarcodeScannerStatus python_type
     py BarcodeScannerStatus
     signature enum(Windows.Devices.PointOfService.BarcodeScannerStatus;i4)
+    constant ONLINE 0
+    constant OFF 1
+    constant OFFLINE 2
+    constant OFF_OR_OFFLINE 3
+    constant EXTENDED 4
 
 class Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs python_type
     py BarcodeScannerStatusUpdatedEventArgs
@@ -707,6 +712,9 @@ class Windows.Devices.PointOfService.BarcodeSymbologyAttributes python_type
 enum Windows.Devices.PointOfService.BarcodeSymbologyDecodeLengthKind python_type
     py BarcodeSymbologyDecodeLengthKind
     signature enum(Windows.Devices.PointOfService.BarcodeSymbologyDecodeLengthKind;i4)
+    constant ANY_LENGTH 0
+    constant DISCRETE 1
+    constant RANGE 2
 
 class Windows.Devices.PointOfService.CashDrawer python_type closeable
     py CashDrawer
@@ -874,6 +882,11 @@ class Windows.Devices.PointOfService.CashDrawerStatus python_type
 enum Windows.Devices.PointOfService.CashDrawerStatusKind python_type
     py CashDrawerStatusKind
     signature enum(Windows.Devices.PointOfService.CashDrawerStatusKind;i4)
+    constant ONLINE 0
+    constant OFF 1
+    constant OFFLINE 2
+    constant OFF_OR_OFFLINE 3
+    constant EXTENDED 4
 
 class Windows.Devices.PointOfService.CashDrawerStatusUpdatedEventArgs python_type
     py CashDrawerStatusUpdatedEventArgs
@@ -3520,6 +3533,12 @@ class Windows.Devices.PointOfService.LineDisplayCursorAttributes python_type
 enum Windows.Devices.PointOfService.LineDisplayCursorType python_type
     py LineDisplayCursorType
     signature enum(Windows.Devices.PointOfService.LineDisplayCursorType;i4)
+    constant NONE 0
+    constant BLOCK 1
+    constant HALF_BLOCK 2
+    constant UNDERLINE 3
+    constant REVERSE 4
+    constant OTHER 5
 
 class Windows.Devices.PointOfService.LineDisplayCustomGlyphs python_type
     py LineDisplayCustomGlyphs
@@ -3541,10 +3560,16 @@ class Windows.Devices.PointOfService.LineDisplayCustomGlyphs python_type
 enum Windows.Devices.PointOfService.LineDisplayDescriptorState python_type
     py LineDisplayDescriptorState
     signature enum(Windows.Devices.PointOfService.LineDisplayDescriptorState;i4)
+    constant OFF 0
+    constant ON 1
+    constant BLINK 2
 
 enum Windows.Devices.PointOfService.LineDisplayHorizontalAlignment python_type
     py LineDisplayHorizontalAlignment
     signature enum(Windows.Devices.PointOfService.LineDisplayHorizontalAlignment;i4)
+    constant LEFT 0
+    constant CENTER 1
+    constant RIGHT 2
 
 class Windows.Devices.PointOfService.LineDisplayMarquee python_type
     py LineDisplayMarquee
@@ -3577,14 +3602,26 @@ class Windows.Devices.PointOfService.LineDisplayMarquee python_type
 enum Windows.Devices.PointOfService.LineDisplayMarqueeFormat python_type
     py LineDisplayMarqueeFormat
     signature enum(Windows.Devices.PointOfService.LineDisplayMarqueeFormat;i4)
+    constant NONE 0
+    constant WALK 1
+    constant PLACE 2
 
 enum Windows.Devices.PointOfService.LineDisplayPowerStatus python_type
     py LineDisplayPowerStatus
     signature enum(Windows.Devices.PointOfService.LineDisplayPowerStatus;i4)
+    constant UNKNOWN 0
+    constant ONLINE 1
+    constant OFF 2
+    constant OFFLINE 3
+    constant OFF_OR_OFFLINE 4
 
 enum Windows.Devices.PointOfService.LineDisplayScrollDirection python_type
     py LineDisplayScrollDirection
     signature enum(Windows.Devices.PointOfService.LineDisplayScrollDirection;i4)
+    constant UP 0
+    constant DOWN 1
+    constant LEFT 2
+    constant RIGHT 3
 
 class Windows.Devices.PointOfService.LineDisplayStatisticsCategorySelector python_type
     py LineDisplayStatisticsCategorySelector
@@ -3625,14 +3662,24 @@ class Windows.Devices.PointOfService.LineDisplayStoredBitmap python_type
 enum Windows.Devices.PointOfService.LineDisplayTextAttribute python_type
     py LineDisplayTextAttribute
     signature enum(Windows.Devices.PointOfService.LineDisplayTextAttribute;i4)
+    constant NORMAL 0
+    constant BLINK 1
+    constant REVERSE 2
+    constant REVERSE_BLINK 3
 
 enum Windows.Devices.PointOfService.LineDisplayTextAttributeGranularity python_type
     py LineDisplayTextAttributeGranularity
     signature enum(Windows.Devices.PointOfService.LineDisplayTextAttributeGranularity;i4)
+    constant NOT_SUPPORTED 0
+    constant ENTIRE_DISPLAY 1
+    constant PER_CHARACTER 2
 
 enum Windows.Devices.PointOfService.LineDisplayVerticalAlignment python_type
     py LineDisplayVerticalAlignment
     signature enum(Windows.Devices.PointOfService.LineDisplayVerticalAlignment;i4)
+    constant TOP 0
+    constant CENTER 1
+    constant BOTTOM 2
 
 class Windows.Devices.PointOfService.LineDisplayWindow python_type closeable
     py LineDisplayWindow
@@ -3836,10 +3883,15 @@ class Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEv
 enum Windows.Devices.PointOfService.MagneticStripeReaderAuthenticationLevel python_type
     py MagneticStripeReaderAuthenticationLevel
     signature enum(Windows.Devices.PointOfService.MagneticStripeReaderAuthenticationLevel;i4)
+    constant NOT_SUPPORTED 0
+    constant OPTIONAL 1
+    constant REQUIRED 2
 
 enum Windows.Devices.PointOfService.MagneticStripeReaderAuthenticationProtocol python_type
     py MagneticStripeReaderAuthenticationProtocol
     signature enum(Windows.Devices.PointOfService.MagneticStripeReaderAuthenticationProtocol;i4)
+    constant NONE 0
+    constant CHALLENGE_RESPONSE 1
 
 class Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs python_type
     py MagneticStripeReaderBankCardDataReceivedEventArgs
@@ -3969,6 +4021,8 @@ class Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs 
 enum Windows.Devices.PointOfService.MagneticStripeReaderErrorReportingType python_type
     py MagneticStripeReaderErrorReportingType
     signature enum(Windows.Devices.PointOfService.MagneticStripeReaderErrorReportingType;i4)
+    constant CARD_LEVEL 0
+    constant TRACK_LEVEL 1
 
 class Windows.Devices.PointOfService.MagneticStripeReaderReport python_type
     py MagneticStripeReaderReport
@@ -4006,6 +4060,9 @@ class Windows.Devices.PointOfService.MagneticStripeReaderReport python_type
 enum Windows.Devices.PointOfService.MagneticStripeReaderStatus python_type
     py MagneticStripeReaderStatus
     signature enum(Windows.Devices.PointOfService.MagneticStripeReaderStatus;i4)
+    constant UNAUTHENTICATED 0
+    constant AUTHENTICATED 1
+    constant EXTENDED 2
 
 class Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs python_type
     py MagneticStripeReaderStatusUpdatedEventArgs
@@ -4037,10 +4094,21 @@ class Windows.Devices.PointOfService.MagneticStripeReaderTrackData python_type
 enum Windows.Devices.PointOfService.MagneticStripeReaderTrackErrorType python_type
     py MagneticStripeReaderTrackErrorType
     signature enum(Windows.Devices.PointOfService.MagneticStripeReaderTrackErrorType;i4)
+    constant NONE 0
+    constant START_SENTINEL_ERROR 1
+    constant END_SENTINEL_ERROR 2
+    constant PARITY_ERROR 3
+    constant LRC_ERROR 4
+    constant UNKNOWN -1
 
 enum Windows.Devices.PointOfService.MagneticStripeReaderTrackIds python_type
     py MagneticStripeReaderTrackIds
     signature enum(Windows.Devices.PointOfService.MagneticStripeReaderTrackIds;i4)
+    constant NONE 0
+    constant TRACK1 1
+    constant TRACK2 2
+    constant TRACK3 4
+    constant TRACK4 8
 
 class Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs python_type
     py MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs
@@ -4051,9 +4119,13 @@ class Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataR
         get get_Report slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs shape=4 reverse=22
             out class type=Windows.Devices.PointOfService.MagneticStripeReaderReport return
 
-enum Windows.Devices.PointOfService.PosConnectionTypes python_type
+enum Windows.Devices.PointOfService.PosConnectionTypes python_type flags_enum
     py PosConnectionTypes
     signature enum(Windows.Devices.PointOfService.PosConnectionTypes;u4)
+    constant LOCAL 0x1
+    constant IP 0x2
+    constant BLUETOOTH 0x4
+    constant ALL 0xFFFFFFFF
 
 class Windows.Devices.PointOfService.PosPrinter python_type closeable
     py PosPrinter
@@ -4122,10 +4194,16 @@ class Windows.Devices.PointOfService.PosPrinter python_type closeable
 enum Windows.Devices.PointOfService.PosPrinterAlignment python_type
     py PosPrinterAlignment
     signature enum(Windows.Devices.PointOfService.PosPrinterAlignment;i4)
+    constant LEFT 0
+    constant CENTER 1
+    constant RIGHT 2
 
 enum Windows.Devices.PointOfService.PosPrinterBarcodeTextPosition python_type
     py PosPrinterBarcodeTextPosition
     signature enum(Windows.Devices.PointOfService.PosPrinterBarcodeTextPosition;i4)
+    constant NONE 0
+    constant ABOVE 1
+    constant BELOW 2
 
 class Windows.Devices.PointOfService.PosPrinterCapabilities python_type
     py PosPrinterCapabilities
@@ -4163,9 +4241,14 @@ class Windows.Devices.PointOfService.PosPrinterCapabilities python_type
         get get_Slip slot=14 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinterCapabilities shape=4 reverse=186
             out class type=Windows.Devices.PointOfService.SlipPrinterCapabilities return
 
-enum Windows.Devices.PointOfService.PosPrinterCartridgeSensors python_type
+enum Windows.Devices.PointOfService.PosPrinterCartridgeSensors python_type flags_enum
     py PosPrinterCartridgeSensors
     signature enum(Windows.Devices.PointOfService.PosPrinterCartridgeSensors;u4)
+    constant NONE 0x0
+    constant REMOVED 0x1
+    constant EMPTY 0x2
+    constant HEAD_CLEANING 0x4
+    constant NEAR_END 0x8
 
 class Windows.Devices.PointOfService.PosPrinterCharacterSetIds static python_type
     py PosPrinterCharacterSetIds
@@ -4180,13 +4263,36 @@ class Windows.Devices.PointOfService.PosPrinterCharacterSetIds static python_typ
         get get_Utf16LE slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinterCharacterSetIdsStatics shape=4 reverse=22 static
             out uint32 return
 
-enum Windows.Devices.PointOfService.PosPrinterColorCapabilities python_type
+enum Windows.Devices.PointOfService.PosPrinterColorCapabilities python_type flags_enum
     py PosPrinterColorCapabilities
     signature enum(Windows.Devices.PointOfService.PosPrinterColorCapabilities;u4)
+    constant NONE 0x0
+    constant PRIMARY 0x1
+    constant CUSTOM1 0x2
+    constant CUSTOM2 0x4
+    constant CUSTOM3 0x8
+    constant CUSTOM4 0x10
+    constant CUSTOM5 0x20
+    constant CUSTOM6 0x40
+    constant CYAN 0x80
+    constant MAGENTA 0x100
+    constant YELLOW 0x200
+    constant FULL 0x400
 
 enum Windows.Devices.PointOfService.PosPrinterColorCartridge python_type
     py PosPrinterColorCartridge
     signature enum(Windows.Devices.PointOfService.PosPrinterColorCartridge;i4)
+    constant UNKNOWN 0
+    constant PRIMARY 1
+    constant CUSTOM1 2
+    constant CUSTOM2 3
+    constant CUSTOM3 4
+    constant CUSTOM4 5
+    constant CUSTOM5 6
+    constant CUSTOM6 7
+    constant CYAN 8
+    constant MAGENTA 9
+    constant YELLOW 10
 
 class Windows.Devices.PointOfService.PosPrinterFontProperty python_type
     py PosPrinterFontProperty
@@ -4206,22 +4312,41 @@ class Windows.Devices.PointOfService.PosPrinterFontProperty python_type
 enum Windows.Devices.PointOfService.PosPrinterLineDirection python_type
     py PosPrinterLineDirection
     signature enum(Windows.Devices.PointOfService.PosPrinterLineDirection;i4)
+    constant HORIZONTAL 0
+    constant VERTICAL 1
 
 enum Windows.Devices.PointOfService.PosPrinterLineStyle python_type
     py PosPrinterLineStyle
     signature enum(Windows.Devices.PointOfService.PosPrinterLineStyle;i4)
+    constant SINGLE_SOLID 0
+    constant DOUBLE_SOLID 1
+    constant BROKEN 2
+    constant CHAIN 3
 
 enum Windows.Devices.PointOfService.PosPrinterMapMode python_type
     py PosPrinterMapMode
     signature enum(Windows.Devices.PointOfService.PosPrinterMapMode;i4)
+    constant DOTS 0
+    constant TWIPS 1
+    constant ENGLISH 2
+    constant METRIC 3
 
-enum Windows.Devices.PointOfService.PosPrinterMarkFeedCapabilities python_type
+enum Windows.Devices.PointOfService.PosPrinterMarkFeedCapabilities python_type flags_enum
     py PosPrinterMarkFeedCapabilities
     signature enum(Windows.Devices.PointOfService.PosPrinterMarkFeedCapabilities;u4)
+    constant NONE 0x0
+    constant TO_TAKE_UP 0x1
+    constant TO_CUTTER 0x2
+    constant TO_CURRENT_TOP_OF_FORM 0x4
+    constant TO_NEXT_TOP_OF_FORM 0x8
 
 enum Windows.Devices.PointOfService.PosPrinterMarkFeedKind python_type
     py PosPrinterMarkFeedKind
     signature enum(Windows.Devices.PointOfService.PosPrinterMarkFeedKind;i4)
+    constant TO_TAKE_UP 0
+    constant TO_CUTTER 1
+    constant TO_CURRENT_TOP_OF_FORM 2
+    constant TO_NEXT_TOP_OF_FORM 3
 
 class Windows.Devices.PointOfService.PosPrinterPrintOptions activatable python_type
     py PosPrinterPrintOptions
@@ -4300,6 +4425,9 @@ class Windows.Devices.PointOfService.PosPrinterPrintOptions activatable python_t
 enum Windows.Devices.PointOfService.PosPrinterPrintSide python_type
     py PosPrinterPrintSide
     signature enum(Windows.Devices.PointOfService.PosPrinterPrintSide;i4)
+    constant UNKNOWN 0
+    constant SIDE1 1
+    constant SIDE2 2
 
 class Windows.Devices.PointOfService.PosPrinterReleaseDeviceRequestedEventArgs python_type
     py PosPrinterReleaseDeviceRequestedEventArgs
@@ -4310,10 +4438,17 @@ class Windows.Devices.PointOfService.PosPrinterReleaseDeviceRequestedEventArgs p
 enum Windows.Devices.PointOfService.PosPrinterRotation python_type
     py PosPrinterRotation
     signature enum(Windows.Devices.PointOfService.PosPrinterRotation;i4)
+    constant NORMAL 0
+    constant RIGHT90 1
+    constant LEFT90 2
+    constant ROTATE180 3
 
-enum Windows.Devices.PointOfService.PosPrinterRuledLineCapabilities python_type
+enum Windows.Devices.PointOfService.PosPrinterRuledLineCapabilities python_type flags_enum
     py PosPrinterRuledLineCapabilities
     signature enum(Windows.Devices.PointOfService.PosPrinterRuledLineCapabilities;u4)
+    constant NONE 0x0
+    constant HORIZONTAL 0x1
+    constant VERTICAL 0x2
 
 class Windows.Devices.PointOfService.PosPrinterStatus python_type
     py PosPrinterStatus
@@ -4330,6 +4465,11 @@ class Windows.Devices.PointOfService.PosPrinterStatus python_type
 enum Windows.Devices.PointOfService.PosPrinterStatusKind python_type
     py PosPrinterStatusKind
     signature enum(Windows.Devices.PointOfService.PosPrinterStatusKind;i4)
+    constant ONLINE 0
+    constant OFF 1
+    constant OFFLINE 2
+    constant OFF_OR_OFFLINE 3
+    constant EXTENDED 4
 
 class Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs python_type
     py PosPrinterStatusUpdatedEventArgs
@@ -5060,18 +5200,42 @@ class Windows.Devices.PointOfService.UnifiedPosErrorData python_type
 enum Windows.Devices.PointOfService.UnifiedPosErrorReason python_type
     py UnifiedPosErrorReason
     signature enum(Windows.Devices.PointOfService.UnifiedPosErrorReason;i4)
+    constant UNKNOWN_ERROR_REASON 0
+    constant NO_SERVICE 1
+    constant DISABLED 2
+    constant ILLEGAL 3
+    constant NO_HARDWARE 4
+    constant CLOSED 5
+    constant OFFLINE 6
+    constant FAILURE 7
+    constant TIMEOUT 8
+    constant BUSY 9
+    constant EXTENDED 10
 
 enum Windows.Devices.PointOfService.UnifiedPosErrorSeverity python_type
     py UnifiedPosErrorSeverity
     signature enum(Windows.Devices.PointOfService.UnifiedPosErrorSeverity;i4)
+    constant UNKNOWN_ERROR_SEVERITY 0
+    constant WARNING 1
+    constant RECOVERABLE 2
+    constant UNRECOVERABLE 3
+    constant ASSISTANCE_REQUIRED 4
+    constant FATAL 5
 
 enum Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel python_type
     py UnifiedPosHealthCheckLevel
     signature enum(Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel;i4)
+    constant UNKNOWN_HEALTH_CHECK_LEVEL 0
+    constant P_O_S_INTERNAL 1
+    constant EXTERNAL 2
+    constant INTERACTIVE 3
 
 enum Windows.Devices.PointOfService.UnifiedPosPowerReportingType python_type
     py UnifiedPosPowerReportingType
     signature enum(Windows.Devices.PointOfService.UnifiedPosPowerReportingType;i4)
+    constant UNKNOWN_POWER_REPORTING_TYPE 0
+    constant STANDARD 1
+    constant ADVANCED 2
 
 class System.Boolean external
     py winrt.system.Boolean

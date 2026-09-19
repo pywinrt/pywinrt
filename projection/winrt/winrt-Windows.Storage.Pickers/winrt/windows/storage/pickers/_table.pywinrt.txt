@@ -751,10 +751,22 @@ enum K parameterized
 enum Windows.Storage.Pickers.PickerLocationId python_type
     py PickerLocationId
     signature enum(Windows.Storage.Pickers.PickerLocationId;i4)
+    constant DOCUMENTS_LIBRARY 0
+    constant COMPUTER_FOLDER 1
+    constant DESKTOP 2
+    constant DOWNLOADS 3
+    constant HOME_GROUP 4
+    constant MUSIC_LIBRARY 5
+    constant PICTURES_LIBRARY 6
+    constant VIDEOS_LIBRARY 7
+    constant OBJECTS_3D 8
+    constant UNSPECIFIED 9
 
 enum Windows.Storage.Pickers.PickerViewMode python_type
     py PickerViewMode
     signature enum(Windows.Storage.Pickers.PickerViewMode;i4)
+    constant LIST 0
+    constant THUMBNAIL 1
 
 enum T parameterized
 

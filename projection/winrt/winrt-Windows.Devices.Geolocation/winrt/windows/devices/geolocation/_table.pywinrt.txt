@@ -5,6 +5,11 @@ namespace Windows.Devices.Geolocation
 enum Windows.Devices.Geolocation.AltitudeReferenceSystem python_type
     py AltitudeReferenceSystem
     signature enum(Windows.Devices.Geolocation.AltitudeReferenceSystem;i4)
+    constant UNSPECIFIED 0
+    constant TERRAIN 1
+    constant ELLIPSOID 2
+    constant GEOID 3
+    constant SURFACE 4
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Geolocation.GeolocationAccessStatus> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[GeolocationAccessStatus]
@@ -253,6 +258,9 @@ class Windows.Devices.Geolocation.GeocoordinateSatelliteData python_type
 enum Windows.Devices.Geolocation.GeolocationAccessStatus python_type
     py GeolocationAccessStatus
     signature enum(Windows.Devices.Geolocation.GeolocationAccessStatus;i4)
+    constant UNSPECIFIED 0
+    constant ALLOWED 1
+    constant DENIED 2
 
 class Windows.Devices.Geolocation.Geolocator activatable python_type
     py Geolocator
@@ -415,6 +423,10 @@ class Windows.Devices.Geolocation.Geoposition python_type
 enum Windows.Devices.Geolocation.GeoshapeType python_type
     py GeoshapeType
     signature enum(Windows.Devices.Geolocation.GeoshapeType;i4)
+    constant GEOPOINT 0
+    constant GEOCIRCLE 1
+    constant GEOPATH 2
+    constant GEOBOUNDING_BOX 3
 
 class Windows.Devices.Geolocation.Geovisit python_type
     py Geovisit
@@ -1391,6 +1403,8 @@ interface Windows.Devices.Geolocation.IVenueData
 enum Windows.Devices.Geolocation.PositionAccuracy python_type
     py PositionAccuracy
     signature enum(Windows.Devices.Geolocation.PositionAccuracy;i4)
+    constant DEFAULT 0
+    constant HIGH 1
 
 class Windows.Devices.Geolocation.PositionChangedEventArgs python_type
     py PositionChangedEventArgs
@@ -1404,10 +1418,23 @@ class Windows.Devices.Geolocation.PositionChangedEventArgs python_type
 enum Windows.Devices.Geolocation.PositionSource python_type
     py PositionSource
     signature enum(Windows.Devices.Geolocation.PositionSource;i4)
+    constant CELLULAR 0
+    constant SATELLITE 1
+    constant WI_FI 2
+    constant IP_ADDRESS 3
+    constant UNKNOWN 4
+    constant DEFAULT 5
+    constant OBFUSCATED 6
 
 enum Windows.Devices.Geolocation.PositionStatus python_type
     py PositionStatus
     signature enum(Windows.Devices.Geolocation.PositionStatus;i4)
+    constant READY 0
+    constant INITIALIZING 1
+    constant NO_DATA 2
+    constant DISABLED 3
+    constant NOT_INITIALIZED 4
+    constant NOT_AVAILABLE 5
 
 class Windows.Devices.Geolocation.StatusChangedEventArgs python_type
     py StatusChangedEventArgs
@@ -1469,10 +1496,16 @@ class Windows.Devices.Geolocation.VenueData python_type
 enum Windows.Devices.Geolocation.VisitMonitoringScope python_type
     py VisitMonitoringScope
     signature enum(Windows.Devices.Geolocation.VisitMonitoringScope;i4)
+    constant VENUE 0
+    constant CITY 1
 
 enum Windows.Devices.Geolocation.VisitStateChange python_type
     py VisitStateChange
     signature enum(Windows.Devices.Geolocation.VisitStateChange;i4)
+    constant TRACKING_LOST 0
+    constant ARRIVED 1
+    constant DEPARTED 2
+    constant OTHER_MOVEMENT 3
 
 class System.Double external
     py winrt.system.Double

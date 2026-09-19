@@ -116,6 +116,10 @@ class Windows.Media.MediaProperties.AudioEncodingProperties activatable python_t
 enum Windows.Media.MediaProperties.AudioEncodingQuality python_type
     py AudioEncodingQuality
     signature enum(Windows.Media.MediaProperties.AudioEncodingQuality;i4)
+    constant AUTO 0
+    constant HIGH 1
+    constant MEDIUM 2
+    constant LOW 3
 
 class Windows.Media.MediaProperties.Av1ProfileIds static python_type
     py Av1ProfileIds
@@ -1236,13 +1240,19 @@ class Windows.Media.MediaProperties.MediaEncodingSubtypes static python_type
         get get_Av1 slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7 shape=4 reverse=22 static
             out string return
 
-enum Windows.Media.MediaProperties.MediaMirroringOptions python_type
+enum Windows.Media.MediaProperties.MediaMirroringOptions python_type flags_enum
     py MediaMirroringOptions
     signature enum(Windows.Media.MediaProperties.MediaMirroringOptions;u4)
+    constant NONE 0x0
+    constant HORIZONTAL 0x1
+    constant VERTICAL 0x2
 
 enum Windows.Media.MediaProperties.MediaPixelFormat python_type
     py MediaPixelFormat
     signature enum(Windows.Media.MediaProperties.MediaPixelFormat;i4)
+    constant NV12 0
+    constant BGRA8 1
+    constant P010 2
 
 class Windows.Media.MediaProperties.MediaPropertySet activatable python_type iterable mapping mutable_mapping
     py MediaPropertySet
@@ -1301,10 +1311,16 @@ class Windows.Media.MediaProperties.MediaRatio python_type
 enum Windows.Media.MediaProperties.MediaRotation python_type
     py MediaRotation
     signature enum(Windows.Media.MediaProperties.MediaRotation;i4)
+    constant NONE 0
+    constant CLOCKWISE90_DEGREES 1
+    constant CLOCKWISE180_DEGREES 2
+    constant CLOCKWISE270_DEGREES 3
 
 enum Windows.Media.MediaProperties.MediaThumbnailFormat python_type
     py MediaThumbnailFormat
     signature enum(Windows.Media.MediaProperties.MediaThumbnailFormat;i4)
+    constant BMP 0
+    constant BGRA8 1
 
 class Windows.Media.MediaProperties.Mpeg2ProfileIds static python_type
     py Mpeg2ProfileIds
@@ -1328,10 +1344,16 @@ class Windows.Media.MediaProperties.Mpeg2ProfileIds static python_type
 enum Windows.Media.MediaProperties.SphericalVideoFrameFormat python_type
     py SphericalVideoFrameFormat
     signature enum(Windows.Media.MediaProperties.SphericalVideoFrameFormat;i4)
+    constant NONE 0
+    constant UNSUPPORTED 1
+    constant EQUIRECTANGULAR 2
 
 enum Windows.Media.MediaProperties.StereoscopicVideoPackingMode python_type
     py StereoscopicVideoPackingMode
     signature enum(Windows.Media.MediaProperties.StereoscopicVideoPackingMode;i4)
+    constant NONE 0
+    constant SIDE_BY_SIDE 1
+    constant TOP_BOTTOM 2
 
 class Windows.Media.MediaProperties.TimedMetadataEncodingProperties activatable python_type
     py TimedMetadataEncodingProperties
@@ -1473,6 +1495,16 @@ class Windows.Media.MediaProperties.VideoEncodingProperties activatable python_t
 enum Windows.Media.MediaProperties.VideoEncodingQuality python_type
     py VideoEncodingQuality
     signature enum(Windows.Media.MediaProperties.VideoEncodingQuality;i4)
+    constant AUTO 0
+    constant H_D1080P 1
+    constant H_D720P 2
+    constant WVGA 3
+    constant NTSC 4
+    constant PAL 5
+    constant VGA 6
+    constant QVGA 7
+    constant UHD2160P 8
+    constant UHD4320P 9
 
 class Windows.Media.MediaProperties.Vp9ProfileIds static python_type
     py Vp9ProfileIds

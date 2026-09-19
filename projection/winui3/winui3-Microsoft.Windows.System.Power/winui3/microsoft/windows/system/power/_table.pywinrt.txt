@@ -16,18 +16,36 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.Sys
 enum Microsoft.Windows.System.Power.BatteryStatus python_type
     py BatteryStatus
     signature enum(Microsoft.Windows.System.Power.BatteryStatus;i4)
+    constant NOT_PRESENT 0
+    constant DISCHARGING 1
+    constant IDLE 2
+    constant CHARGING 3
 
 enum Microsoft.Windows.System.Power.DisplayStatus python_type
     py DisplayStatus
     signature enum(Microsoft.Windows.System.Power.DisplayStatus;i4)
+    constant OFF 0
+    constant ON 1
+    constant DIMMED 2
 
 enum Microsoft.Windows.System.Power.EffectivePowerMode python_type
     py EffectivePowerMode
     signature enum(Microsoft.Windows.System.Power.EffectivePowerMode;i4)
+    constant BATTERY_SAVER 0
+    constant BETTER_BATTERY 1
+    constant BALANCED 2
+    constant HIGH_PERFORMANCE 3
+    constant MAX_PERFORMANCE 4
+    constant GAME_MODE 5
+    constant MIXED_REALITY 6
 
 enum Microsoft.Windows.System.Power.EnergySaverStatus python_type
     py EnergySaverStatus
     signature enum(Microsoft.Windows.System.Power.EnergySaverStatus;i4)
+    constant UNINITIALIZED 0
+    constant DISABLED 1
+    constant OFF 2
+    constant ON 3
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
     py winrt.windows.foundation.EventHandler[Object]
@@ -182,18 +200,29 @@ class Microsoft.Windows.System.Power.PowerManager static python_type
 enum Microsoft.Windows.System.Power.PowerSourceKind python_type
     py PowerSourceKind
     signature enum(Microsoft.Windows.System.Power.PowerSourceKind;i4)
+    constant AC 0
+    constant DC 1
 
 enum Microsoft.Windows.System.Power.PowerSupplyStatus python_type
     py PowerSupplyStatus
     signature enum(Microsoft.Windows.System.Power.PowerSupplyStatus;i4)
+    constant NOT_PRESENT 0
+    constant INADEQUATE 1
+    constant ADEQUATE 2
 
 enum Microsoft.Windows.System.Power.SystemSuspendStatus python_type
     py SystemSuspendStatus
     signature enum(Microsoft.Windows.System.Power.SystemSuspendStatus;i4)
+    constant UNINITIALIZED 0
+    constant ENTERING 1
+    constant AUTO_RESUME 2
+    constant MANUAL_RESUME 3
 
 enum Microsoft.Windows.System.Power.UserPresenceStatus python_type
     py UserPresenceStatus
     signature enum(Microsoft.Windows.System.Power.UserPresenceStatus;i4)
+    constant PRESENT 0
+    constant ABSENT 1
 
 class System.Object external
     py winrt.system.Object

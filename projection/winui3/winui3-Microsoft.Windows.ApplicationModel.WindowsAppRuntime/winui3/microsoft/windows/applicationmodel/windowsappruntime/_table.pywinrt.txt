@@ -57,6 +57,10 @@ class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult pyth
 enum Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentStatus python_type
     py DeploymentStatus
     signature enum(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentStatus;i4)
+    constant UNKNOWN 0
+    constant OK 1
+    constant PACKAGE_INSTALL_REQUIRED 2
+    constant PACKAGE_INSTALL_FAILED 3
 
 interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions
     guid 578a5fd4-9d7f-5e01-97b8-d8ea61db4027
@@ -217,6 +221,18 @@ class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo static py
 enum Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange python_type
     py RuntimeCompatibilityChange
     signature enum(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange;i4)
+    constant NONE 0
+    constant ENSURE_PACKAGE_READY_VERSION_SUPERCEDENCE 56439870
+    constant FIX_POPUP_CLOSING_REENTRANCY_CRASH 56870998
+    constant FIX_POPUP_UNLOADING_CRASH 56686624
+    constant FIX_RANDOM_UI_FREEZE_IN_DISPATCHER 56545444
+    constant FIX_SET_PROGRESS_BAR_INDICATOR_WIDTH_CRASH 56779522
+    constant FIX_STUCK_POINTER_INPUT_QUEUE 56620717
+    constant FIX_WEB_VIEW_VISIBILITY_REENTRANCY_CRASH 56852985
+    constant FIX_WINDOW_CLOSE_FOCUS_CRASH 56873234
+    constant ACTIVATE_DIRECT_MANIPULATION_MANAGER_CHECK_CAN_INIT 56997009
+    constant DWM_CORE_I_OPTIMIZE_FIRST_FRAME_LATENCY 57345278
+    constant INPUT_STATE_MANAGER_PEN_INPUT_CRASH_X86 57003641
 
 class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions activatable python_type
     py RuntimeCompatibilityOptions

@@ -126,22 +126,56 @@ class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConf
 enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationStatus python_type
     py ActivationSignalDetectionConfigurationCreationStatus
     signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationStatus;i4)
+    constant SUCCESS 0
+    constant SIGNAL_ID_NOT_AVAILABLE 1
+    constant MODEL_ID_NOT_SUPPORTED 2
+    constant INVALID_SIGNAL_ID 3
+    constant INVALID_MODEL_ID 4
+    constant INVALID_DISPLAY_NAME 5
+    constant CONFIGURATION_ALREADY_EXISTS 6
+    constant CREATION_NOT_SUPPORTED 7
 
 enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult python_type
     py ActivationSignalDetectionConfigurationRemovalResult
     signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult;i4)
+    constant SUCCESS 0
+    constant NOT_FOUND 1
+    constant CURRENTLY_ENABLED 2
+    constant REMOVAL_NOT_SUPPORTED 3
 
 enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult python_type
     py ActivationSignalDetectionConfigurationSetModelDataResult
     signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult;i4)
+    constant SUCCESS 0
+    constant EMPTY_MODEL_DATA 1
+    constant UNSUPPORTED_FORMAT 2
+    constant CONFIGURATION_CURRENTLY_ENABLED 3
+    constant INVALID_DATA 4
+    constant SET_MODEL_DATA_NOT_SUPPORTED 5
+    constant CONFIGURATION_NOT_FOUND 6
+    constant UNKNOWN_ERROR 7
 
 enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult python_type
     py ActivationSignalDetectionConfigurationStateChangeResult
     signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult;i4)
+    constant SUCCESS 0
+    constant NO_MODEL_DATA 1
+    constant CONFIGURATION_NOT_FOUND 2
 
 enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat python_type
     py ActivationSignalDetectionTrainingDataFormat
     signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat;i4)
+    constant VOICE8K_HZ8_BIT_MONO 0
+    constant VOICE8K_HZ16_BIT_MONO 1
+    constant VOICE16K_HZ8_BIT_MONO 2
+    constant VOICE16K_HZ16_BIT_MONO 3
+    constant VOICE_OEM_DEFINED 4
+    constant AUDIO44K_HZ8_BIT_MONO 5
+    constant AUDIO44K_HZ16_BIT_MONO 6
+    constant AUDIO48K_HZ8_BIT_MONO 7
+    constant AUDIO48K_HZ16_BIT_MONO 8
+    constant AUDIO_OEM_DEFINED 9
+    constant OTHER_OEM_DEFINED 10
 
 class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector python_type
     py ActivationSignalDetector
@@ -248,10 +282,16 @@ class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector pyth
 enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind python_type
     py ActivationSignalDetectorKind
     signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind;i4)
+    constant AUDIO_PATTERN 0
+    constant AUDIO_IMPULSE 1
+    constant HARDWARE_EVENT 2
 
 enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState python_type
     py ActivationSignalDetectorPowerState
     signature enum(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState;i4)
+    constant HIGH_POWER 0
+    constant CONNECTED_LOW_POWER 1
+    constant DISCONNECTED_LOW_POWER 2
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Object> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[Object]
@@ -498,10 +538,16 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Strea
 enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationKind python_type
     py ConversationalAgentActivationKind
     signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationKind;i4)
+    constant VOICE_ACTIVATION_PREVIEW 0
+    constant FOREGROUND 1
 
 enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult python_type
     py ConversationalAgentActivationResult
     signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult;i4)
+    constant SUCCESS 0
+    constant AGENT_INACTIVE 1
+    constant SCREEN_NOT_AVAILABLE 2
+    constant AGENT_INTERRUPTED 3
 
 class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager python_type
     py ConversationalAgentDetectorManager
@@ -693,6 +739,8 @@ class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInt
 enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse python_type
     py ConversationalAgentSessionUpdateResponse
     signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse;i4)
+    constant SUCCESS 0
+    constant FAILED 1
 
 class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal python_type
     py ConversationalAgentSignal
@@ -746,10 +794,20 @@ class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDete
 enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentState python_type
     py ConversationalAgentState
     signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentState;i4)
+    constant INACTIVE 0
+    constant DETECTING 1
+    constant LISTENING 2
+    constant WORKING 3
+    constant SPEAKING 4
+    constant LISTENING_AND_SPEAKING 5
 
 enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangeType python_type
     py ConversationalAgentSystemStateChangeType
     signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangeType;i4)
+    constant USER_AUTHENTICATION 0
+    constant SCREEN_AVAILABILITY 1
+    constant INDICATOR_LIGHT_AVAILABILITY 2
+    constant VOICE_ACTIVATION_AVAILABILITY 3
 
 class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs python_type
     py ConversationalAgentSystemStateChangedEventArgs
@@ -763,10 +821,19 @@ class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStat
 enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind python_type
     py ConversationalAgentVoiceActivationPrerequisiteKind
     signature enum(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind;i4)
+    constant MICROPHONE_PERMISSION 0
+    constant KNOWN_AGENTS 1
+    constant AGENT_ALLOWED 2
+    constant APP_CAPABILITY 3
+    constant BACKGROUND_TASK_REGISTRATION 4
+    constant POLICY_PERMISSION 5
 
 enum Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangeKind python_type
     py DetectionConfigurationAvailabilityChangeKind
     signature enum(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangeKind;i4)
+    constant SYSTEM_RESOURCE_ACCESS 0
+    constant PERMISSION 1
+    constant LOCK_SCREEN_PERMISSION 2
 
 class Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs python_type
     py DetectionConfigurationAvailabilityChangedEventArgs
@@ -802,6 +869,16 @@ class Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailab
 enum Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus python_type
     py DetectionConfigurationTrainingStatus
     signature enum(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus;i4)
+    constant SUCCESS 0
+    constant FORMAT_NOT_SUPPORTED 1
+    constant VOICE_TOO_QUIET 2
+    constant VOICE_TOO_LOUD 3
+    constant VOICE_TOO_FAST 4
+    constant VOICE_TOO_SLOW 5
+    constant VOICE_QUALITY_PROBLEM 6
+    constant TRAINING_SYSTEM_INTERNAL_ERROR 7
+    constant TRAINING_TIMED_OUT 8
+    constant CONFIGURATION_NOT_FOUND 9
 
 interface Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration
     guid 40d8be16-5217-581c-9ab2-ce9b2f2e8e00
@@ -2017,6 +2094,20 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
 enum Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind python_type
     py SignalDetectorResourceKind
     signature enum(Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind;i4)
+    constant PARALLEL_MODEL_SUPPORT 0
+    constant PARALLEL_MODEL_SUPPORT_FOR_AGENT 1
+    constant PARALLEL_SIGNAL_SUPPORT 2
+    constant PARALLEL_SIGNAL_SUPPORT_FOR_AGENT 3
+    constant DISPLAY_OFF_SUPPORT 4
+    constant PLUGGED_IN_POWER 5
+    constant DETECTOR 6
+    constant SUPPORTED_SLEEP_STATE 7
+    constant SUPPORTED_BATTERY_SAVER_STATE 8
+    constant SCREEN_AVAILABILITY 9
+    constant INPUT_HARDWARE 10
+    constant ACOUSTIC_ECHO_CANCELLATION 11
+    constant MODEL_ID_SUPPORT 12
+    constant DATA_CHANNEL 13
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration,Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[ActivationSignalDetectionConfiguration, DetectionConfigurationAvailabilityChangedEventArgs]

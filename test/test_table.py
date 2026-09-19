@@ -18,6 +18,8 @@ interfaces is compared against the published values, which is what
 ``winrt::guid_of<T>()`` yields for them.
 """
 
+import enum
+import importlib
 import pathlib
 import struct
 import sys
@@ -48,6 +50,7 @@ TYPE_MUTABLE_MAPPING = 1 << 15
 TYPE_AWAITABLE = 1 << 16
 TYPE_CLOSEABLE = 1 << 17
 TYPE_STRINGABLE = 1 << 18
+TYPE_FLAGS_ENUM = 1 << 22
 
 GROUP_METHOD = 0
 GROUP_PROPERTY = 1
@@ -584,6 +587,108 @@ class TestTableProtocolRoles(unittest.TestCase):
 
                 with self.subTest(signature=type_record["signature"]):
                     self.assertEqual(roles(type_record), roles(definition))
+
+        self.assertGreater(checked, 0)
+
+
+class TestTableEnums(unittest.TestCase):
+    """
+    The constants of an enum, which are the whole of what one is.
+
+    An enum is the one projected type with no interface and no members, so the
+    table is the only place its constants are written down and the class the
+    runtime builds is the only place they end up. The stub says them a second
+    time, for a type checker, and nothing executes that.
+    """
+
+    def test_an_enum_carries_its_constants_in_the_order_it_declares_them(
+        self,
+    ) -> None:
+        status = defined(read("winrt", "windows", "foundation"))["AsyncStatus"]
+
+        self.assertFalse(status["flags"] & TYPE_FLAGS_ENUM)
+        self.assertEqual(
+            [(c["py_name"], c["value"]) for c in status["constants"]],
+            [("CANCELED", 2), ("COMPLETED", 1), ("ERROR", 3), ("STARTED", 0)],
+        )
+
+    def test_a_flags_enum_says_so(self) -> None:
+        attributes = defined(read("winrt", "windows", "storage"))["FileAttributes"]
+
+        self.assertTrue(attributes["flags"] & TYPE_FLAGS_ENUM)
+        self.assertEqual(
+            dict((c["py_name"], c["value"]) for c in attributes["constants"])[
+                "DIRECTORY"
+            ],
+            0x10,
+        )
+
+    def test_a_negative_constant_is_kept_as_its_bits(self) -> None:
+        # A plain enum is a signed int32 and a flags enum an unsigned uint32,
+        # so a record holds the thirty-two bits and the type says how to read
+        # them.
+        priority = defined(read("winrt", "windows", "system"))[
+            "DispatcherQueuePriority"
+        ]
+        constants = dict((c["py_name"], c["value"]) for c in priority["constants"])
+
+        self.assertFalse(priority["flags"] & TYPE_FLAGS_ENUM)
+        self.assertEqual(constants["LOW"], (-10) & 0xFFFFFFFF)
+
+    def test_only_an_enum_has_constants(self) -> None:
+        for parts in (
+            ("winrt", "windows", "foundation"),
+            ("winrt", "windows", "storage"),
+            ("test_winrt", "testcomponent"),
+        ):
+            table = read(*parts)
+
+            for type_record in table["types"]:
+                if type_record["category"] & 0x7 == CATEGORY_ENUM:
+                    continue
+
+                with self.subTest(type=type_record["name"]):
+                    self.assertEqual(type_record["constants"], [])
+
+    def test_the_class_the_runtime_builds_is_what_the_table_says(self) -> None:
+        checked = 0
+
+        for parts, module_name in (
+            (("winrt", "windows", "foundation"), "winrt.windows.foundation"),
+            (("winrt", "windows", "storage"), "winrt.windows.storage"),
+            (("winrt", "windows", "system"), "winrt.windows.system"),
+        ):
+            table = read(*parts)
+            module = importlib.import_module(module_name)
+
+            for type_record in table["types"]:
+                if type_record["category"] & 0x7 != CATEGORY_ENUM:
+                    continue
+
+                if not type_record["flags"] & TYPE_PYTHON_TYPE:
+                    continue
+
+                checked += 1
+                built = getattr(module, type_record["py_name"])
+                is_flags = bool(type_record["flags"] & TYPE_FLAGS_ENUM)
+
+                with self.subTest(type=type_record["name"]):
+                    self.assertTrue(
+                        issubclass(built, enum.IntFlag if is_flags else enum.IntEnum)
+                    )
+                    self.assertEqual(built.__module__, module_name)
+                    self.assertEqual(
+                        [(name, int(member)) for name, member in built.__members__.items()],
+                        [
+                            (
+                                c["py_name"],
+                                c["value"]
+                                if is_flags
+                                else c["value"] - ((c["value"] & 0x80000000) << 1),
+                            )
+                            for c in type_record["constants"]
+                        ],
+                    )
 
         self.assertGreater(checked, 0)
 

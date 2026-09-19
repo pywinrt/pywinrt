@@ -244,6 +244,9 @@ delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Wallet.Sy
 enum Windows.ApplicationModel.Wallet.System.WalletItemAppAssociation python_type
     py WalletItemAppAssociation
     signature enum(Windows.ApplicationModel.Wallet.System.WalletItemAppAssociation;i4)
+    constant NONE 0
+    constant APP_INSTALLED 1
+    constant APP_NOT_INSTALLED 2
 
 class Windows.ApplicationModel.Wallet.System.WalletItemSystemStore python_type
     py WalletItemSystemStore

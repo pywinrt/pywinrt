@@ -162,6 +162,11 @@ class Windows.Media.Audio.AudioDeviceInputNode python_type closeable
 enum Windows.Media.Audio.AudioDeviceNodeCreationStatus python_type
     py AudioDeviceNodeCreationStatus
     signature enum(Windows.Media.Audio.AudioDeviceNodeCreationStatus;i4)
+    constant SUCCESS 0
+    constant DEVICE_NOT_AVAILABLE 1
+    constant FORMAT_NOT_SUPPORTED 2
+    constant UNKNOWN_FAILURE 3
+    constant ACCESS_DENIED 4
 
 class Windows.Media.Audio.AudioDeviceOutputNode python_type closeable
     py AudioDeviceOutputNode
@@ -245,6 +250,9 @@ class Windows.Media.Audio.AudioEffectsPackConfiguration python_type
 enum Windows.Media.Audio.AudioEffectsPackStatus python_type
     py AudioEffectsPackStatus
     signature enum(Windows.Media.Audio.AudioEffectsPackStatus;i4)
+    constant NOT_ENABLED 0
+    constant ENABLED 1
+    constant NOT_SUPPORTED 2
 
 class Windows.Media.Audio.AudioFileInputNode python_type closeable
     py AudioFileInputNode
@@ -342,6 +350,11 @@ class Windows.Media.Audio.AudioFileInputNode python_type closeable
 enum Windows.Media.Audio.AudioFileNodeCreationStatus python_type
     py AudioFileNodeCreationStatus
     signature enum(Windows.Media.Audio.AudioFileNodeCreationStatus;i4)
+    constant SUCCESS 0
+    constant FILE_NOT_FOUND 1
+    constant INVALID_FILE_TYPE 2
+    constant FORMAT_NOT_SUPPORTED 3
+    constant UNKNOWN_FAILURE 4
 
 class Windows.Media.Audio.AudioFileOutputNode python_type closeable
     py AudioFileOutputNode
@@ -678,6 +691,10 @@ class Windows.Media.Audio.AudioGraphConnection python_type
 enum Windows.Media.Audio.AudioGraphCreationStatus python_type
     py AudioGraphCreationStatus
     signature enum(Windows.Media.Audio.AudioGraphCreationStatus;i4)
+    constant SUCCESS 0
+    constant DEVICE_NOT_AVAILABLE 1
+    constant FORMAT_NOT_SUPPORTED 2
+    constant UNKNOWN_FAILURE 3
 
 class Windows.Media.Audio.AudioGraphSettings python_type
     py AudioGraphSettings
@@ -729,6 +746,10 @@ class Windows.Media.Audio.AudioGraphSettings python_type
 enum Windows.Media.Audio.AudioGraphUnrecoverableError python_type
     py AudioGraphUnrecoverableError
     signature enum(Windows.Media.Audio.AudioGraphUnrecoverableError;i4)
+    constant NONE 0
+    constant AUDIO_DEVICE_LOST 1
+    constant AUDIO_SESSION_DISCONNECTED 2
+    constant UNKNOWN_FAILURE 3
 
 class Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs python_type
     py AudioGraphUnrecoverableErrorOccurredEventArgs
@@ -817,6 +838,8 @@ class Windows.Media.Audio.AudioNodeEmitterConeProperties python_type
 enum Windows.Media.Audio.AudioNodeEmitterDecayKind python_type
     py AudioNodeEmitterDecayKind
     signature enum(Windows.Media.Audio.AudioNodeEmitterDecayKind;i4)
+    constant NATURAL 0
+    constant CUSTOM 1
 
 class Windows.Media.Audio.AudioNodeEmitterDecayModel python_type
     py AudioNodeEmitterDecayModel
@@ -861,9 +884,11 @@ class Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties python_typ
         get get_UnityGainDistance slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterNaturalDecayModelProperties shape=4 reverse=22
             out double return
 
-enum Windows.Media.Audio.AudioNodeEmitterSettings python_type
+enum Windows.Media.Audio.AudioNodeEmitterSettings python_type flags_enum
     py AudioNodeEmitterSettings
     signature enum(Windows.Media.Audio.AudioNodeEmitterSettings;u4)
+    constant NONE 0x0
+    constant DISABLE_DOPPLER 0x1
 
 class Windows.Media.Audio.AudioNodeEmitterShape python_type
     py AudioNodeEmitterShape
@@ -890,6 +915,8 @@ class Windows.Media.Audio.AudioNodeEmitterShape python_type
 enum Windows.Media.Audio.AudioNodeEmitterShapeKind python_type
     py AudioNodeEmitterShapeKind
     signature enum(Windows.Media.Audio.AudioNodeEmitterShapeKind;i4)
+    constant OMNIDIRECTIONAL 0
+    constant CONE 1
 
 class Windows.Media.Audio.AudioNodeListener activatable python_type
     py AudioNodeListener
@@ -975,10 +1002,16 @@ class Windows.Media.Audio.AudioPlaybackConnectionOpenResult python_type
 enum Windows.Media.Audio.AudioPlaybackConnectionOpenResultStatus python_type
     py AudioPlaybackConnectionOpenResultStatus
     signature enum(Windows.Media.Audio.AudioPlaybackConnectionOpenResultStatus;i4)
+    constant SUCCESS 0
+    constant REQUEST_TIMED_OUT 1
+    constant DENIED_BY_SYSTEM 2
+    constant UNKNOWN_FAILURE 3
 
 enum Windows.Media.Audio.AudioPlaybackConnectionState python_type
     py AudioPlaybackConnectionState
     signature enum(Windows.Media.Audio.AudioPlaybackConnectionState;i4)
+    constant CLOSED 0
+    constant OPENED 1
 
 class Windows.Media.Audio.AudioStateMonitor python_type
     py AudioStateMonitor
@@ -2496,14 +2529,23 @@ class Windows.Media.Audio.MediaSourceAudioInputNode python_type closeable
 enum Windows.Media.Audio.MediaSourceAudioInputNodeCreationStatus python_type
     py MediaSourceAudioInputNodeCreationStatus
     signature enum(Windows.Media.Audio.MediaSourceAudioInputNodeCreationStatus;i4)
+    constant SUCCESS 0
+    constant FORMAT_NOT_SUPPORTED 1
+    constant NETWORK_ERROR 2
+    constant UNKNOWN_FAILURE 3
 
 enum Windows.Media.Audio.MixedRealitySpatialAudioFormatPolicy python_type
     py MixedRealitySpatialAudioFormatPolicy
     signature enum(Windows.Media.Audio.MixedRealitySpatialAudioFormatPolicy;i4)
+    constant USE_MIXED_REALITY_DEFAULT_SPATIAL_AUDIO_FORMAT 0
+    constant USE_DEVICE_CONFIGURATION_DEFAULT_SPATIAL_AUDIO_FORMAT 1
 
 enum Windows.Media.Audio.QuantumSizeSelectionMode python_type
     py QuantumSizeSelectionMode
     signature enum(Windows.Media.Audio.QuantumSizeSelectionMode;i4)
+    constant SYSTEM_DEFAULT 0
+    constant LOWEST_LATENCY 1
+    constant CLOSEST_TO_DESIRED 2
 
 class Windows.Media.Audio.ReverbEffectDefinition python_type
     py ReverbEffectDefinition
@@ -2650,6 +2692,12 @@ class Windows.Media.Audio.SetDefaultSpatialAudioFormatResult python_type
 enum Windows.Media.Audio.SetDefaultSpatialAudioFormatStatus python_type
     py SetDefaultSpatialAudioFormatStatus
     signature enum(Windows.Media.Audio.SetDefaultSpatialAudioFormatStatus;i4)
+    constant SUCCEEDED 0
+    constant ACCESS_DENIED 1
+    constant LICENSE_EXPIRED 2
+    constant LICENSE_NOT_VALID_FOR_AUDIO_ENDPOINT 3
+    constant NOT_SUPPORTED_ON_AUDIO_ENDPOINT 4
+    constant UNKNOWN_ERROR 5
 
 class Windows.Media.Audio.SpatialAudioDeviceConfiguration python_type
     py SpatialAudioDeviceConfiguration
@@ -2740,6 +2788,8 @@ class Windows.Media.Audio.SpatialAudioFormatSubtype static python_type
 enum Windows.Media.Audio.SpatialAudioModel python_type
     py SpatialAudioModel
     signature enum(Windows.Media.Audio.SpatialAudioModel;i4)
+    constant OBJECT_BASED 0
+    constant FOLD_DOWN 1
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioEffectsPackConfiguration,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[AudioEffectsPackConfiguration, Object]

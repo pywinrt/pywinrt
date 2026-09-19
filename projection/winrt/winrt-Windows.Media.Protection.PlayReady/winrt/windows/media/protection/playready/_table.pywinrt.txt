@@ -1251,14 +1251,46 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.VideoStr
 enum Windows.Media.Protection.PlayReady.NDCertificateFeature python_type
     py NDCertificateFeature
     signature enum(Windows.Media.Protection.PlayReady.NDCertificateFeature;i4)
+    constant TRANSMITTER 1
+    constant RECEIVER 2
+    constant SHARED_CERTIFICATE 3
+    constant SECURE_CLOCK 4
+    constant ANTI_ROLL_BACK_CLOCK 5
+    constant CRLS 9
+    constant PLAY_READY3_FEATURES 13
 
 enum Windows.Media.Protection.PlayReady.NDCertificatePlatformID python_type
     py NDCertificatePlatformID
     signature enum(Windows.Media.Protection.PlayReady.NDCertificatePlatformID;i4)
+    constant WINDOWS 0
+    constant OSX 1
+    constant WINDOWS_ON_ARM 2
+    constant WINDOWS_MOBILE7 5
+    constant IOS_ON_ARM 6
+    constant X_BOX_ON_PPC 7
+    constant WINDOWS_PHONE8_ON_ARM 8
+    constant WINDOWS_PHONE8_ON_X86 9
+    constant XBOX_ONE 10
+    constant ANDROID_ON_ARM 11
+    constant WINDOWS_PHONE81_ON_ARM 12
+    constant WINDOWS_PHONE81_ON_X86 13
 
 enum Windows.Media.Protection.PlayReady.NDCertificateType python_type
     py NDCertificateType
     signature enum(Windows.Media.Protection.PlayReady.NDCertificateType;i4)
+    constant UNKNOWN 0
+    constant PC 1
+    constant DEVICE 2
+    constant DOMAIN 3
+    constant ISSUER 4
+    constant CRL_SIGNER 5
+    constant SERVICE 6
+    constant SILVERLIGHT 7
+    constant APPLICATION 8
+    constant METERING 9
+    constant KEY_FILE_SIGNER 10
+    constant SERVER 11
+    constant LICENSE_SIGNER 12
 
 class Windows.Media.Protection.PlayReady.NDClient python_type
     py NDClient
@@ -1323,10 +1355,16 @@ class Windows.Media.Protection.PlayReady.NDClient python_type
 enum Windows.Media.Protection.PlayReady.NDClosedCaptionFormat python_type
     py NDClosedCaptionFormat
     signature enum(Windows.Media.Protection.PlayReady.NDClosedCaptionFormat;i4)
+    constant ATSC 0
+    constant SCTE20 1
+    constant UNKNOWN 2
 
 enum Windows.Media.Protection.PlayReady.NDContentIDType python_type
     py NDContentIDType
     signature enum(Windows.Media.Protection.PlayReady.NDContentIDType;i4)
+    constant KEY_ID 1
+    constant PLAY_READY_OBJECT 2
+    constant CUSTOM 3
 
 class Windows.Media.Protection.PlayReady.NDCustomData python_type
     py NDCustomData
@@ -1398,14 +1436,21 @@ class Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor python_type
 enum Windows.Media.Protection.PlayReady.NDMediaStreamType python_type
     py NDMediaStreamType
     signature enum(Windows.Media.Protection.PlayReady.NDMediaStreamType;i4)
+    constant AUDIO 1
+    constant VIDEO 2
 
 enum Windows.Media.Protection.PlayReady.NDProximityDetectionType python_type
     py NDProximityDetectionType
     signature enum(Windows.Media.Protection.PlayReady.NDProximityDetectionType;i4)
+    constant UDP 1
+    constant TCP 2
+    constant TRANSPORT_AGNOSTIC 4
 
 enum Windows.Media.Protection.PlayReady.NDStartAsyncOptions python_type
     py NDStartAsyncOptions
     signature enum(Windows.Media.Protection.PlayReady.NDStartAsyncOptions;i4)
+    constant MUTUAL_AUTHENTICATION 1
+    constant WAIT_FOR_LICENSE_DESCRIPTOR 2
 
 class Windows.Media.Protection.PlayReady.NDStorageFileHelper activatable python_type
     py NDStorageFileHelper
@@ -1571,6 +1616,8 @@ class Windows.Media.Protection.PlayReady.PlayReadyContentResolver static python_
 enum Windows.Media.Protection.PlayReady.PlayReadyDecryptorSetup python_type
     py PlayReadyDecryptorSetup
     signature enum(Windows.Media.Protection.PlayReady.PlayReadyDecryptorSetup;i4)
+    constant UNINITIALIZED 0
+    constant ON_DEMAND 1
 
 class Windows.Media.Protection.PlayReady.PlayReadyDomain python_type
     py PlayReadyDomain
@@ -1740,14 +1787,25 @@ class Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest acti
 enum Windows.Media.Protection.PlayReady.PlayReadyEncryptionAlgorithm python_type
     py PlayReadyEncryptionAlgorithm
     signature enum(Windows.Media.Protection.PlayReady.PlayReadyEncryptionAlgorithm;i4)
+    constant UNPROTECTED 0
+    constant AES128_CTR 1
+    constant COCKTAIL 4
+    constant AES128_CBC 5
+    constant UNSPECIFIED 65535
+    constant UNINITIALIZED 2147483647
 
 enum Windows.Media.Protection.PlayReady.PlayReadyHardwareDRMFeatures python_type
     py PlayReadyHardwareDRMFeatures
     signature enum(Windows.Media.Protection.PlayReady.PlayReadyHardwareDRMFeatures;i4)
+    constant HARDWARE_DRM 1
+    constant HEVC 2
+    constant AES128_CBC 3
 
 enum Windows.Media.Protection.PlayReady.PlayReadyITADataFormat python_type
     py PlayReadyITADataFormat
     signature enum(Windows.Media.Protection.PlayReady.PlayReadyITADataFormat;i4)
+    constant SERIALIZED_PROPERTIES 0
+    constant SERIALIZED_PROPERTIES_WITH_CONTENT_PROTECTION_WRAPPER 1
 
 class Windows.Media.Protection.PlayReady.PlayReadyITADataGenerator activatable python_type
     py PlayReadyITADataGenerator

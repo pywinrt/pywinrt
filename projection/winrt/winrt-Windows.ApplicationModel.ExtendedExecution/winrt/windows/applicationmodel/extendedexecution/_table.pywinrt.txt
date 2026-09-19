@@ -16,10 +16,15 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationMo
 enum Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionReason python_type
     py ExtendedExecutionReason
     signature enum(Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionReason;i4)
+    constant UNSPECIFIED 0
+    constant LOCATION_TRACKING 1
+    constant SAVING_DATA 2
 
 enum Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionResult python_type
     py ExtendedExecutionResult
     signature enum(Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionResult;i4)
+    constant ALLOWED 0
+    constant DENIED 1
 
 class Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionRevokedEventArgs python_type
     py ExtendedExecutionRevokedEventArgs
@@ -33,6 +38,8 @@ class Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionRevokedEventAr
 enum Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionRevokedReason python_type
     py ExtendedExecutionRevokedReason
     signature enum(Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionRevokedReason;i4)
+    constant RESUMED 0
+    constant SYSTEM_POLICY 1
 
 class Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionSession activatable python_type closeable
     py ExtendedExecutionSession

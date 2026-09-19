@@ -165,6 +165,11 @@ interface Microsoft.UI.Xaml.Interop.INotifyCollectionChangedEventArgsFactory
 enum Microsoft.UI.Xaml.Interop.NotifyCollectionChangedAction python_type
     py NotifyCollectionChangedAction
     signature enum(Microsoft.UI.Xaml.Interop.NotifyCollectionChangedAction;i4)
+    constant ADD 0
+    constant REMOVE 1
+    constant REPLACE 2
+    constant MOVE 3
+    constant RESET 4
 
 class Microsoft.UI.Xaml.Interop.NotifyCollectionChangedEventArgs composable python_type
     py NotifyCollectionChangedEventArgs

@@ -368,6 +368,26 @@ class Windows.Devices.Midi.MidiMessageReceivedEventArgs python_type
 enum Windows.Devices.Midi.MidiMessageType python_type
     py MidiMessageType
     signature enum(Windows.Devices.Midi.MidiMessageType;i4)
+    constant NONE 0
+    constant NOTE_OFF 128
+    constant NOTE_ON 144
+    constant POLYPHONIC_KEY_PRESSURE 160
+    constant CONTROL_CHANGE 176
+    constant PROGRAM_CHANGE 192
+    constant CHANNEL_PRESSURE 208
+    constant PITCH_BEND_CHANGE 224
+    constant SYSTEM_EXCLUSIVE 240
+    constant MIDI_TIME_CODE 241
+    constant SONG_POSITION_POINTER 242
+    constant SONG_SELECT 243
+    constant TUNE_REQUEST 246
+    constant END_SYSTEM_EXCLUSIVE 247
+    constant TIMING_CLOCK 248
+    constant START 250
+    constant CONTINUE 251
+    constant STOP 252
+    constant ACTIVE_SENSING 254
+    constant SYSTEM_RESET 255
 
 class Windows.Devices.Midi.MidiNoteOffMessage python_type
     py MidiNoteOffMessage

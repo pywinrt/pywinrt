@@ -171,10 +171,20 @@ class Windows.Security.EnterpriseData.DataProtectionManager static python_type
 enum Windows.Security.EnterpriseData.DataProtectionStatus python_type
     py DataProtectionStatus
     signature enum(Windows.Security.EnterpriseData.DataProtectionStatus;i4)
+    constant PROTECTED_TO_OTHER_IDENTITY 0
+    constant PROTECTED 1
+    constant REVOKED 2
+    constant UNPROTECTED 3
+    constant LICENSE_EXPIRED 4
+    constant ACCESS_SUSPENDED 5
 
 enum Windows.Security.EnterpriseData.EnforcementLevel python_type
     py EnforcementLevel
     signature enum(Windows.Security.EnterpriseData.EnforcementLevel;i4)
+    constant NO_PROTECTION 0
+    constant SILENT 1
+    constant OVERRIDE 2
+    constant BLOCK 3
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
     py winrt.windows.foundation.EventHandler[Object]
@@ -302,6 +312,18 @@ class Windows.Security.EnterpriseData.FileProtectionManager static python_type
 enum Windows.Security.EnterpriseData.FileProtectionStatus python_type
     py FileProtectionStatus
     signature enum(Windows.Security.EnterpriseData.FileProtectionStatus;i4)
+    constant UNDETERMINED 0
+    constant UNKNOWN 0
+    constant UNPROTECTED 1
+    constant REVOKED 2
+    constant PROTECTED 3
+    constant PROTECTED_BY_OTHER_USER 4
+    constant PROTECTED_TO_OTHER_ENTERPRISE 5
+    constant NOT_PROTECTABLE 6
+    constant PROTECTED_TO_OTHER_IDENTITY 7
+    constant LICENSE_EXPIRED 8
+    constant ACCESS_SUSPENDED 9
+    constant FILE_IN_USE 10
 
 class Windows.Security.EnterpriseData.FileRevocationManager static python_type
     py FileRevocationManager
@@ -871,10 +893,22 @@ class Windows.Security.EnterpriseData.ProtectedFileCreateResult python_type
 enum Windows.Security.EnterpriseData.ProtectedImportExportStatus python_type
     py ProtectedImportExportStatus
     signature enum(Windows.Security.EnterpriseData.ProtectedImportExportStatus;i4)
+    constant OK 0
+    constant UNDETERMINED 1
+    constant UNPROTECTED 2
+    constant REVOKED 3
+    constant NOT_ROAMABLE 4
+    constant PROTECTED_TO_OTHER_IDENTITY 5
+    constant LICENSE_EXPIRED 6
+    constant ACCESS_SUSPENDED 7
 
 enum Windows.Security.EnterpriseData.ProtectionPolicyAuditAction python_type
     py ProtectionPolicyAuditAction
     signature enum(Windows.Security.EnterpriseData.ProtectionPolicyAuditAction;i4)
+    constant DECRYPT 0
+    constant COPY_TO_LOCATION 1
+    constant SEND_TO_RECIPIENT 2
+    constant OTHER 3
 
 class Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo python_type
     py ProtectionPolicyAuditInfo
@@ -917,6 +951,9 @@ class Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo python_type
 enum Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult python_type
     py ProtectionPolicyEvaluationResult
     signature enum(Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult;i4)
+    constant ALLOWED 0
+    constant BLOCKED 1
+    constant CONSENT_REQUIRED 2
 
 class Windows.Security.EnterpriseData.ProtectionPolicyManager python_type
     py ProtectionPolicyManager
@@ -1119,6 +1156,8 @@ class Windows.Security.EnterpriseData.ProtectionPolicyManager python_type
 enum Windows.Security.EnterpriseData.ProtectionPolicyRequestAccessBehavior python_type
     py ProtectionPolicyRequestAccessBehavior
     signature enum(Windows.Security.EnterpriseData.ProtectionPolicyRequestAccessBehavior;i4)
+    constant DECRYPT 0
+    constant TREAT_OVERRIDE_POLICY_AS_BLOCK 1
 
 class Windows.Security.EnterpriseData.ThreadNetworkContext python_type closeable
     py ThreadNetworkContext

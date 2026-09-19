@@ -230,13 +230,20 @@ class Windows.UI.Popups.MessageDialog python_type
         method ShowAsync slot=15 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=194
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> return
 
-enum Windows.UI.Popups.MessageDialogOptions python_type
+enum Windows.UI.Popups.MessageDialogOptions python_type flags_enum
     py MessageDialogOptions
     signature enum(Windows.UI.Popups.MessageDialogOptions;u4)
+    constant NONE 0x0
+    constant ACCEPT_USER_INPUT_AFTER_DELAY 0x1
 
 enum Windows.UI.Popups.Placement python_type
     py Placement
     signature enum(Windows.UI.Popups.Placement;i4)
+    constant DEFAULT 0
+    constant ABOVE 1
+    constant BELOW 2
+    constant LEFT 3
+    constant RIGHT 4
 
 class Windows.UI.Popups.PopupMenu activatable python_type
     py PopupMenu

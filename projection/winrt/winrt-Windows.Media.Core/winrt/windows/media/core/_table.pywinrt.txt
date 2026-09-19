@@ -51,10 +51,17 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.M
 enum Windows.Media.Core.AudioDecoderDegradation python_type
     py AudioDecoderDegradation
     signature enum(Windows.Media.Core.AudioDecoderDegradation;i4)
+    constant NONE 0
+    constant DOWNMIX_TO2_CHANNELS 1
+    constant DOWNMIX_TO6_CHANNELS 2
+    constant DOWNMIX_TO8_CHANNELS 3
 
 enum Windows.Media.Core.AudioDecoderDegradationReason python_type
     py AudioDecoderDegradationReason
     signature enum(Windows.Media.Core.AudioDecoderDegradationReason;i4)
+    constant NONE 0
+    constant LICENSING_REQUIREMENT 1
+    constant SPATIAL_AUDIO_NOT_SUPPORTED 2
 
 class Windows.Media.Core.AudioStreamDescriptor python_type
     py AudioStreamDescriptor
@@ -204,6 +211,8 @@ class Windows.Media.Core.ChapterCue activatable python_type
 enum Windows.Media.Core.CodecCategory python_type
     py CodecCategory
     signature enum(Windows.Media.Core.CodecCategory;i4)
+    constant ENCODER 0
+    constant DECODER 1
 
 class Windows.Media.Core.CodecInfo python_type
     py CodecInfo
@@ -229,6 +238,8 @@ class Windows.Media.Core.CodecInfo python_type
 enum Windows.Media.Core.CodecKind python_type
     py CodecKind
     signature enum(Windows.Media.Core.CodecKind;i4)
+    constant AUDIO 0
+    constant VIDEO 1
 
 class Windows.Media.Core.CodecQuery activatable python_type
     py CodecQuery
@@ -542,6 +553,9 @@ class Windows.Media.Core.FaceDetectionEffectFrame python_type closeable
 enum Windows.Media.Core.FaceDetectionMode python_type
     py FaceDetectionMode
     signature enum(Windows.Media.Core.FaceDetectionMode;i4)
+    constant HIGH_PERFORMANCE 0
+    constant BALANCED 1
+    constant HIGH_QUALITY 2
 
 class Windows.Media.Core.HighDynamicRangeControl python_type
     py HighDynamicRangeControl
@@ -3039,6 +3053,10 @@ class Windows.Media.Core.MediaCueEventArgs python_type
 enum Windows.Media.Core.MediaDecoderStatus python_type
     py MediaDecoderStatus
     signature enum(Windows.Media.Core.MediaDecoderStatus;i4)
+    constant FULLY_SUPPORTED 0
+    constant UNSUPPORTED_SUBTYPE 1
+    constant UNSUPPORTED_ENCODER_PROPERTIES 2
+    constant DEGRADED 3
 
 class Windows.Media.Core.MediaSource python_type closeable
     py MediaSource
@@ -3193,6 +3211,11 @@ class Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs python_type
 enum Windows.Media.Core.MediaSourceState python_type
     py MediaSourceState
     signature enum(Windows.Media.Core.MediaSourceState;i4)
+    constant INITIAL 0
+    constant OPENING 1
+    constant OPENED 2
+    constant FAILED 3
+    constant CLOSED 4
 
 class Windows.Media.Core.MediaSourceStateChangedEventArgs python_type
     py MediaSourceStateChangedEventArgs
@@ -3209,6 +3232,8 @@ class Windows.Media.Core.MediaSourceStateChangedEventArgs python_type
 enum Windows.Media.Core.MediaSourceStatus python_type
     py MediaSourceStatus
     signature enum(Windows.Media.Core.MediaSourceStatus;i4)
+    constant FULLY_SUPPORTED 0
+    constant UNKNOWN 1
 
 class Windows.Media.Core.MediaStreamSample python_type
     py MediaStreamSample
@@ -3458,6 +3483,13 @@ class Windows.Media.Core.MediaStreamSourceClosedEventArgs python_type
 enum Windows.Media.Core.MediaStreamSourceClosedReason python_type
     py MediaStreamSourceClosedReason
     signature enum(Windows.Media.Core.MediaStreamSourceClosedReason;i4)
+    constant DONE 0
+    constant UNKNOWN_ERROR 1
+    constant APP_REPORTED_ERROR 2
+    constant UNSUPPORTED_PROTECTION_SYSTEM 3
+    constant PROTECTION_SYSTEM_FAILURE 4
+    constant UNSUPPORTED_ENCODING_FORMAT 5
+    constant MISSING_SAMPLE_REQUESTED_EVENT_HANDLER 6
 
 class Windows.Media.Core.MediaStreamSourceClosedRequest python_type
     py MediaStreamSourceClosedRequest
@@ -3471,6 +3503,14 @@ class Windows.Media.Core.MediaStreamSourceClosedRequest python_type
 enum Windows.Media.Core.MediaStreamSourceErrorStatus python_type
     py MediaStreamSourceErrorStatus
     signature enum(Windows.Media.Core.MediaStreamSourceErrorStatus;i4)
+    constant OTHER 0
+    constant OUT_OF_MEMORY 1
+    constant FAILED_TO_OPEN_FILE 2
+    constant FAILED_TO_CONNECT_TO_SERVER 3
+    constant CONNECTION_TO_SERVER_LOST 4
+    constant UNSPECIFIED_NETWORK_ERROR 5
+    constant DECODE_ERROR 6
+    constant UNSUPPORTED_MEDIA_FORMAT 7
 
 class Windows.Media.Core.MediaStreamSourceSampleRenderedEventArgs python_type
     py MediaStreamSourceSampleRenderedEventArgs
@@ -3585,18 +3625,30 @@ class Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs python
 enum Windows.Media.Core.MediaTrackKind python_type
     py MediaTrackKind
     signature enum(Windows.Media.Core.MediaTrackKind;i4)
+    constant AUDIO 0
+    constant VIDEO 1
+    constant TIMED_METADATA 2
 
 enum Windows.Media.Core.MseAppendMode python_type
     py MseAppendMode
     signature enum(Windows.Media.Core.MseAppendMode;i4)
+    constant SEGMENTS 0
+    constant SEQUENCE 1
 
 enum Windows.Media.Core.MseEndOfStreamStatus python_type
     py MseEndOfStreamStatus
     signature enum(Windows.Media.Core.MseEndOfStreamStatus;i4)
+    constant SUCCESS 0
+    constant NETWORK_ERROR 1
+    constant DECODE_ERROR 2
+    constant UNKNOWN_ERROR 3
 
 enum Windows.Media.Core.MseReadyState python_type
     py MseReadyState
     signature enum(Windows.Media.Core.MseReadyState;i4)
+    constant CLOSED 0
+    constant OPEN 1
+    constant ENDED 2
 
 class Windows.Media.Core.MseSourceBuffer python_type
     py MseSourceBuffer
@@ -3856,6 +3908,9 @@ class Windows.Media.Core.SceneAnalysisEffectFrame python_type closeable
 enum Windows.Media.Core.SceneAnalysisRecommendation python_type
     py SceneAnalysisRecommendation
     signature enum(Windows.Media.Core.SceneAnalysisRecommendation;i4)
+    constant STANDARD 0
+    constant HDR 1
+    constant LOW_LIGHT 2
 
 class Windows.Media.Core.SceneAnalyzedEventArgs python_type
     py SceneAnalyzedEventArgs
@@ -3911,6 +3966,14 @@ enum T parameterized
 enum Windows.Media.Core.TimedMetadataKind python_type
     py TimedMetadataKind
     signature enum(Windows.Media.Core.TimedMetadataKind;i4)
+    constant CAPTION 0
+    constant CHAPTER 1
+    constant CUSTOM 2
+    constant DATA 3
+    constant DESCRIPTION 4
+    constant SUBTITLE 5
+    constant IMAGE_SUBTITLE 6
+    constant SPEECH 7
 
 class Windows.Media.Core.TimedMetadataStreamDescriptor python_type
     py TimedMetadataStreamDescriptor
@@ -4035,6 +4098,10 @@ class Windows.Media.Core.TimedMetadataTrackError python_type
 enum Windows.Media.Core.TimedMetadataTrackErrorCode python_type
     py TimedMetadataTrackErrorCode
     signature enum(Windows.Media.Core.TimedMetadataTrackErrorCode;i4)
+    constant NONE 0
+    constant DATA_FORMAT_ERROR 1
+    constant NETWORK_ERROR 2
+    constant INTERNAL_ERROR 3
 
 class Windows.Media.Core.TimedMetadataTrackFailedEventArgs python_type
     py TimedMetadataTrackFailedEventArgs
@@ -4069,10 +4136,21 @@ class Windows.Media.Core.TimedTextBouten python_type
 enum Windows.Media.Core.TimedTextBoutenPosition python_type
     py TimedTextBoutenPosition
     signature enum(Windows.Media.Core.TimedTextBoutenPosition;i4)
+    constant BEFORE 0
+    constant AFTER 1
+    constant OUTSIDE 2
 
 enum Windows.Media.Core.TimedTextBoutenType python_type
     py TimedTextBoutenType
     signature enum(Windows.Media.Core.TimedTextBoutenType;i4)
+    constant NONE 0
+    constant AUTO 1
+    constant FILLED_CIRCLE 2
+    constant OPEN_CIRCLE 3
+    constant FILLED_DOT 4
+    constant OPEN_DOT 5
+    constant FILLED_SESAME 6
+    constant OPEN_SESAME 7
 
 class Windows.Media.Core.TimedTextCue activatable python_type
     py TimedTextCue
@@ -4115,6 +4193,9 @@ class Windows.Media.Core.TimedTextCue activatable python_type
 enum Windows.Media.Core.TimedTextDisplayAlignment python_type
     py TimedTextDisplayAlignment
     signature enum(Windows.Media.Core.TimedTextDisplayAlignment;i4)
+    constant BEFORE 0
+    constant AFTER 1
+    constant CENTER 2
 
 struct Windows.Media.Core.TimedTextDouble python_type
     py TimedTextDouble
@@ -4125,10 +4206,15 @@ struct Windows.Media.Core.TimedTextDouble python_type
 enum Windows.Media.Core.TimedTextFlowDirection python_type
     py TimedTextFlowDirection
     signature enum(Windows.Media.Core.TimedTextFlowDirection;i4)
+    constant LEFT_TO_RIGHT 0
+    constant RIGHT_TO_LEFT 1
 
 enum Windows.Media.Core.TimedTextFontStyle python_type
     py TimedTextFontStyle
     signature enum(Windows.Media.Core.TimedTextFontStyle;i4)
+    constant NORMAL 0
+    constant OBLIQUE 1
+    constant ITALIC 2
 
 class Windows.Media.Core.TimedTextLine activatable python_type
     py TimedTextLine
@@ -4150,6 +4236,9 @@ class Windows.Media.Core.TimedTextLine activatable python_type
 enum Windows.Media.Core.TimedTextLineAlignment python_type
     py TimedTextLineAlignment
     signature enum(Windows.Media.Core.TimedTextLineAlignment;i4)
+    constant START 0
+    constant END 1
+    constant CENTER 2
 
 struct Windows.Media.Core.TimedTextPadding python_type
     py TimedTextPadding
@@ -4265,18 +4354,34 @@ class Windows.Media.Core.TimedTextRuby python_type
 enum Windows.Media.Core.TimedTextRubyAlign python_type
     py TimedTextRubyAlign
     signature enum(Windows.Media.Core.TimedTextRubyAlign;i4)
+    constant CENTER 0
+    constant START 1
+    constant END 2
+    constant SPACE_AROUND 3
+    constant SPACE_BETWEEN 4
+    constant WITH_BASE 5
 
 enum Windows.Media.Core.TimedTextRubyPosition python_type
     py TimedTextRubyPosition
     signature enum(Windows.Media.Core.TimedTextRubyPosition;i4)
+    constant BEFORE 0
+    constant AFTER 1
+    constant OUTSIDE 2
 
 enum Windows.Media.Core.TimedTextRubyReserve python_type
     py TimedTextRubyReserve
     signature enum(Windows.Media.Core.TimedTextRubyReserve;i4)
+    constant NONE 0
+    constant BEFORE 1
+    constant AFTER 2
+    constant BOTH 3
+    constant OUTSIDE 4
 
 enum Windows.Media.Core.TimedTextScrollMode python_type
     py TimedTextScrollMode
     signature enum(Windows.Media.Core.TimedTextScrollMode;i4)
+    constant POPON 0
+    constant ROLLUP 1
 
 struct Windows.Media.Core.TimedTextSize python_type
     py TimedTextSize
@@ -4481,18 +4586,31 @@ class Windows.Media.Core.TimedTextSubformat activatable python_type
 enum Windows.Media.Core.TimedTextUnit python_type
     py TimedTextUnit
     signature enum(Windows.Media.Core.TimedTextUnit;i4)
+    constant PIXELS 0
+    constant PERCENTAGE 1
 
 enum Windows.Media.Core.TimedTextWeight python_type
     py TimedTextWeight
     signature enum(Windows.Media.Core.TimedTextWeight;i4)
+    constant NORMAL 400
+    constant BOLD 700
 
 enum Windows.Media.Core.TimedTextWrapping python_type
     py TimedTextWrapping
     signature enum(Windows.Media.Core.TimedTextWrapping;i4)
+    constant NO_WRAP 0
+    constant WRAP 1
 
 enum Windows.Media.Core.TimedTextWritingMode python_type
     py TimedTextWritingMode
     signature enum(Windows.Media.Core.TimedTextWritingMode;i4)
+    constant LEFT_RIGHT_TOP_BOTTOM 0
+    constant RIGHT_LEFT_TOP_BOTTOM 1
+    constant TOP_BOTTOM_RIGHT_LEFT 2
+    constant TOP_BOTTOM_LEFT_RIGHT 3
+    constant LEFT_RIGHT 4
+    constant RIGHT_LEFT 5
+    constant TOP_BOTTOM 6
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Core.AudioTrack,Windows.Media.Core.AudioTrackOpenFailedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[AudioTrack, AudioTrackOpenFailedEventArgs]
@@ -4859,6 +4977,9 @@ class Windows.Media.Core.VideoStabilizationEffectEnabledChangedEventArgs python_
 enum Windows.Media.Core.VideoStabilizationEffectEnabledChangedReason python_type
     py VideoStabilizationEffectEnabledChangedReason
     signature enum(Windows.Media.Core.VideoStabilizationEffectEnabledChangedReason;i4)
+    constant PROGRAMMATIC 0
+    constant PIXEL_RATE_TOO_HIGH 1
+    constant RUNNING_SLOWLY 2
 
 class Windows.Media.Core.VideoStreamDescriptor python_type
     py VideoStreamDescriptor

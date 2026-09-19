@@ -22,6 +22,10 @@ class Windows.ApplicationModel.AppService.AppServiceClosedEventArgs python_type
 enum Windows.ApplicationModel.AppService.AppServiceClosedStatus python_type
     py AppServiceClosedStatus
     signature enum(Windows.ApplicationModel.AppService.AppServiceClosedStatus;i4)
+    constant COMPLETED 0
+    constant CANCELED 1
+    constant RESOURCE_LIMITS_EXCEEDED 2
+    constant UNKNOWN 3
 
 class Windows.ApplicationModel.AppService.AppServiceConnection activatable python_type closeable
     py AppServiceConnection
@@ -84,6 +88,18 @@ class Windows.ApplicationModel.AppService.AppServiceConnection activatable pytho
 enum Windows.ApplicationModel.AppService.AppServiceConnectionStatus python_type
     py AppServiceConnectionStatus
     signature enum(Windows.ApplicationModel.AppService.AppServiceConnectionStatus;i4)
+    constant SUCCESS 0
+    constant APP_NOT_INSTALLED 1
+    constant APP_UNAVAILABLE 2
+    constant APP_SERVICE_UNAVAILABLE 3
+    constant UNKNOWN 4
+    constant REMOTE_SYSTEM_UNAVAILABLE 5
+    constant REMOTE_SYSTEM_NOT_SUPPORTED_BY_APP 6
+    constant NOT_AUTHORIZED 7
+    constant AUTHENTICATION_ERROR 8
+    constant NETWORK_NOT_AVAILABLE 9
+    constant DISABLED_BY_POLICY 10
+    constant WEB_SERVICE_UNAVAILABLE 11
 
 class Windows.ApplicationModel.AppService.AppServiceDeferral python_type
     py AppServiceDeferral
@@ -133,6 +149,17 @@ class Windows.ApplicationModel.AppService.AppServiceResponse python_type
 enum Windows.ApplicationModel.AppService.AppServiceResponseStatus python_type
     py AppServiceResponseStatus
     signature enum(Windows.ApplicationModel.AppService.AppServiceResponseStatus;i4)
+    constant SUCCESS 0
+    constant FAILURE 1
+    constant RESOURCE_LIMITS_EXCEEDED 2
+    constant UNKNOWN 3
+    constant REMOTE_SYSTEM_UNAVAILABLE 4
+    constant MESSAGE_SIZE_TOO_LARGE 5
+    constant APP_UNAVAILABLE 6
+    constant AUTHENTICATION_ERROR 7
+    constant NETWORK_NOT_AVAILABLE 8
+    constant DISABLED_BY_POLICY 9
+    constant WEB_SERVICE_UNAVAILABLE 10
 
 class Windows.ApplicationModel.AppService.AppServiceTriggerDetails python_type
     py AppServiceTriggerDetails
@@ -517,6 +544,21 @@ class Windows.ApplicationModel.AppService.StatelessAppServiceResponse python_typ
 enum Windows.ApplicationModel.AppService.StatelessAppServiceResponseStatus python_type
     py StatelessAppServiceResponseStatus
     signature enum(Windows.ApplicationModel.AppService.StatelessAppServiceResponseStatus;i4)
+    constant SUCCESS 0
+    constant APP_NOT_INSTALLED 1
+    constant APP_UNAVAILABLE 2
+    constant APP_SERVICE_UNAVAILABLE 3
+    constant REMOTE_SYSTEM_UNAVAILABLE 4
+    constant REMOTE_SYSTEM_NOT_SUPPORTED_BY_APP 5
+    constant NOT_AUTHORIZED 6
+    constant RESOURCE_LIMITS_EXCEEDED 7
+    constant MESSAGE_SIZE_TOO_LARGE 8
+    constant FAILURE 9
+    constant UNKNOWN 10
+    constant AUTHENTICATION_ERROR 11
+    constant NETWORK_NOT_AVAILABLE 12
+    constant DISABLED_BY_POLICY 13
+    constant WEB_SERVICE_UNAVAILABLE 14
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppService.AppServiceConnection,Windows.ApplicationModel.AppService.AppServiceClosedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[AppServiceConnection, AppServiceClosedEventArgs]

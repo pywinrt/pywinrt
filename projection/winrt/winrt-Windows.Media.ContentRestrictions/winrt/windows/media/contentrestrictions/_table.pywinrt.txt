@@ -38,6 +38,10 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Content
 enum Windows.Media.ContentRestrictions.ContentAccessRestrictionLevel python_type
     py ContentAccessRestrictionLevel
     signature enum(Windows.Media.ContentRestrictions.ContentAccessRestrictionLevel;i4)
+    constant ALLOW 0
+    constant WARN 1
+    constant BLOCK 2
+    constant HIDE 3
 
 class Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy python_type
     py ContentRestrictionsBrowsePolicy
@@ -408,6 +412,12 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
 enum Windows.Media.ContentRestrictions.RatedContentCategory python_type
     py RatedContentCategory
     signature enum(Windows.Media.ContentRestrictions.RatedContentCategory;i4)
+    constant GENERAL 0
+    constant APPLICATION 1
+    constant GAME 2
+    constant MOVIE 3
+    constant TELEVISION 4
+    constant MUSIC 5
 
 class Windows.Media.ContentRestrictions.RatedContentDescription python_type
     py RatedContentDescription

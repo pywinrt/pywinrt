@@ -899,6 +899,12 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> con
 enum Microsoft.Windows.Management.Deployment.PackageDeploymentFeature python_type
     py PackageDeploymentFeature
     signature enum(Microsoft.Windows.Management.Deployment.PackageDeploymentFeature;i4)
+    constant PACKAGE_URI_SCHEME_MS_UUP 1
+    constant IS_PACKAGE_READY_OR_NEWER_AVAILABLE 2
+    constant REMOVE_PACKAGE_BY_URI 3
+    constant RESET_PACKAGE 4
+    constant REPAIR_PACKAGE 5
+    constant PROVISION_PACKAGE_FRAMEWORK 6
 
 class Microsoft.Windows.Management.Deployment.PackageDeploymentManager python_type
     py PackageDeploymentManager
@@ -1106,6 +1112,10 @@ struct Microsoft.Windows.Management.Deployment.PackageDeploymentProgress python_
 enum Microsoft.Windows.Management.Deployment.PackageDeploymentProgressStatus python_type
     py PackageDeploymentProgressStatus
     signature enum(Microsoft.Windows.Management.Deployment.PackageDeploymentProgressStatus;i4)
+    constant QUEUED 0
+    constant IN_PROGRESS 1
+    constant COMPLETED_SUCCESS 2
+    constant COMPLETED_FAILURE 3
 
 class Microsoft.Windows.Management.Deployment.PackageDeploymentResult python_type
     py PackageDeploymentResult
@@ -1131,10 +1141,16 @@ class Microsoft.Windows.Management.Deployment.PackageDeploymentResult python_typ
 enum Microsoft.Windows.Management.Deployment.PackageDeploymentStatus python_type
     py PackageDeploymentStatus
     signature enum(Microsoft.Windows.Management.Deployment.PackageDeploymentStatus;i4)
+    constant IN_PROGRESS 0
+    constant COMPLETED_SUCCESS 1
+    constant COMPLETED_FAILURE 2
 
 enum Microsoft.Windows.Management.Deployment.PackageReadyOrNewerAvailableStatus python_type
     py PackageReadyOrNewerAvailableStatus
     signature enum(Microsoft.Windows.Management.Deployment.PackageReadyOrNewerAvailableStatus;i4)
+    constant NOT_READY 0
+    constant READY 1
+    constant NEWER_AVAILABLE 2
 
 class Microsoft.Windows.Management.Deployment.PackageRuntimeManager python_type
     py PackageRuntimeManager
@@ -1495,6 +1511,10 @@ class Microsoft.Windows.Management.Deployment.StagePackageOptions activatable py
 enum Microsoft.Windows.Management.Deployment.StubPackageOption python_type
     py StubPackageOption
     signature enum(Microsoft.Windows.Management.Deployment.StubPackageOption;i4)
+    constant DEFAULT 0
+    constant INSTALL_FULL 1
+    constant INSTALL_STUB 2
+    constant USE_PREFERENCE 3
 
 class Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions external
     py winui3.microsoft.windows.applicationmodel.dynamicdependency.AddPackageDependencyOptions

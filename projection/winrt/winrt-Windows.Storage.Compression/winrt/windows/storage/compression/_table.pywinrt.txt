@@ -64,6 +64,12 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.S
 enum Windows.Storage.Compression.CompressAlgorithm python_type
     py CompressAlgorithm
     signature enum(Windows.Storage.Compression.CompressAlgorithm;i4)
+    constant INVALID_ALGORITHM 0
+    constant NULL_ALGORITHM 1
+    constant MSZIP 2
+    constant XPRESS 3
+    constant XPRESS_HUFF 4
+    constant LZMS 5
 
 class Windows.Storage.Compression.Compressor python_type closeable
     py Compressor

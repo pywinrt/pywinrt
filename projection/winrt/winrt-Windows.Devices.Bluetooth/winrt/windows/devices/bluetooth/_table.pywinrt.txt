@@ -144,10 +144,15 @@ class Windows.Devices.Bluetooth.BluetoothAdapter python_type
 enum Windows.Devices.Bluetooth.BluetoothAddressType python_type
     py BluetoothAddressType
     signature enum(Windows.Devices.Bluetooth.BluetoothAddressType;i4)
+    constant PUBLIC 0
+    constant RANDOM 1
+    constant UNSPECIFIED 2
 
 enum Windows.Devices.Bluetooth.BluetoothCacheMode python_type
     py BluetoothCacheMode
     signature enum(Windows.Devices.Bluetooth.BluetoothCacheMode;i4)
+    constant CACHED 0
+    constant UNCACHED 1
 
 class Windows.Devices.Bluetooth.BluetoothClassOfDevice python_type
     py BluetoothClassOfDevice
@@ -181,6 +186,8 @@ class Windows.Devices.Bluetooth.BluetoothClassOfDevice python_type
 enum Windows.Devices.Bluetooth.BluetoothConnectionStatus python_type
     py BluetoothConnectionStatus
     signature enum(Windows.Devices.Bluetooth.BluetoothConnectionStatus;i4)
+    constant DISCONNECTED 0
+    constant CONNECTED 1
 
 class Windows.Devices.Bluetooth.BluetoothDevice python_type closeable
     py BluetoothDevice
@@ -326,6 +333,16 @@ class Windows.Devices.Bluetooth.BluetoothDeviceId python_type
 enum Windows.Devices.Bluetooth.BluetoothError python_type
     py BluetoothError
     signature enum(Windows.Devices.Bluetooth.BluetoothError;i4)
+    constant SUCCESS 0
+    constant RADIO_NOT_AVAILABLE 1
+    constant RESOURCE_IN_USE 2
+    constant DEVICE_NOT_CONNECTED 3
+    constant OTHER_ERROR 4
+    constant DISABLED_BY_POLICY 5
+    constant NOT_SUPPORTED 6
+    constant DISABLED_BY_USER 7
+    constant CONSENT_REQUIRED 8
+    constant TRANSPORT_NOT_SUPPORTED 9
 
 class Windows.Devices.Bluetooth.BluetoothLEAppearance python_type
     py BluetoothLEAppearance
@@ -744,18 +761,113 @@ class Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest 
 enum Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequestStatus python_type
     py BluetoothLEPreferredConnectionParametersRequestStatus
     signature enum(Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequestStatus;i4)
+    constant UNSPECIFIED 0
+    constant SUCCESS 1
+    constant DEVICE_NOT_AVAILABLE 2
+    constant ACCESS_DENIED 3
 
 enum Windows.Devices.Bluetooth.BluetoothMajorClass python_type
     py BluetoothMajorClass
     signature enum(Windows.Devices.Bluetooth.BluetoothMajorClass;i4)
+    constant MISCELLANEOUS 0
+    constant COMPUTER 1
+    constant PHONE 2
+    constant NETWORK_ACCESS_POINT 3
+    constant AUDIO_VIDEO 4
+    constant PERIPHERAL 5
+    constant IMAGING 6
+    constant WEARABLE 7
+    constant TOY 8
+    constant HEALTH 9
 
 enum Windows.Devices.Bluetooth.BluetoothMinorClass python_type
     py BluetoothMinorClass
     signature enum(Windows.Devices.Bluetooth.BluetoothMinorClass;i4)
+    constant UNCATEGORIZED 0
+    constant COMPUTER_DESKTOP 1
+    constant COMPUTER_SERVER 2
+    constant COMPUTER_LAPTOP 3
+    constant COMPUTER_HANDHELD 4
+    constant COMPUTER_PALM_SIZE 5
+    constant COMPUTER_WEARABLE 6
+    constant COMPUTER_TABLET 7
+    constant PHONE_CELLULAR 1
+    constant PHONE_CORDLESS 2
+    constant PHONE_SMART_PHONE 3
+    constant PHONE_WIRED 4
+    constant PHONE_ISDN 5
+    constant NETWORK_FULLY_AVAILABLE 0
+    constant NETWORK_USED01_TO17_PERCENT 8
+    constant NETWORK_USED17_TO33_PERCENT 16
+    constant NETWORK_USED33_TO50_PERCENT 24
+    constant NETWORK_USED50_TO67_PERCENT 32
+    constant NETWORK_USED67_TO83_PERCENT 40
+    constant NETWORK_USED83_TO99_PERCENT 48
+    constant NETWORK_NO_SERVICE_AVAILABLE 56
+    constant AUDIO_VIDEO_WEARABLE_HEADSET 1
+    constant AUDIO_VIDEO_HANDS_FREE 2
+    constant AUDIO_VIDEO_MICROPHONE 4
+    constant AUDIO_VIDEO_LOUDSPEAKER 5
+    constant AUDIO_VIDEO_HEADPHONES 6
+    constant AUDIO_VIDEO_PORTABLE_AUDIO 7
+    constant AUDIO_VIDEO_CAR_AUDIO 8
+    constant AUDIO_VIDEO_SET_TOP_BOX 9
+    constant AUDIO_VIDEO_HIFI_AUDIO_DEVICE 10
+    constant AUDIO_VIDEO_VCR 11
+    constant AUDIO_VIDEO_VIDEO_CAMERA 12
+    constant AUDIO_VIDEO_CAMCORDER 13
+    constant AUDIO_VIDEO_VIDEO_MONITOR 14
+    constant AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER 15
+    constant AUDIO_VIDEO_VIDEO_CONFERENCING 16
+    constant AUDIO_VIDEO_GAMING_OR_TOY 18
+    constant PERIPHERAL_JOYSTICK 1
+    constant PERIPHERAL_GAMEPAD 2
+    constant PERIPHERAL_REMOTE_CONTROL 3
+    constant PERIPHERAL_SENSING 4
+    constant PERIPHERAL_DIGITIZER_TABLET 5
+    constant PERIPHERAL_CARD_READER 6
+    constant PERIPHERAL_DIGITAL_PEN 7
+    constant PERIPHERAL_HANDHELD_SCANNER 8
+    constant PERIPHERAL_HANDHELD_GESTURE 9
+    constant WEARABLE_WRISTWATCH 1
+    constant WEARABLE_PAGER 2
+    constant WEARABLE_JACKET 3
+    constant WEARABLE_HELMET 4
+    constant WEARABLE_GLASSES 5
+    constant TOY_ROBOT 1
+    constant TOY_VEHICLE 2
+    constant TOY_DOLL 3
+    constant TOY_CONTROLLER 4
+    constant TOY_GAME 5
+    constant HEALTH_BLOOD_PRESSURE_MONITOR 1
+    constant HEALTH_THERMOMETER 2
+    constant HEALTH_WEIGHING_SCALE 3
+    constant HEALTH_GLUCOSE_METER 4
+    constant HEALTH_PULSE_OXIMETER 5
+    constant HEALTH_HEART_RATE_MONITOR 6
+    constant HEALTH_HEALTH_DATA_DISPLAY 7
+    constant HEALTH_STEP_COUNTER 8
+    constant HEALTH_BODY_COMPOSITION_ANALYZER 9
+    constant HEALTH_PEAK_FLOW_MONITOR 10
+    constant HEALTH_MEDICATION_MONITOR 11
+    constant HEALTH_KNEE_PROSTHESIS 12
+    constant HEALTH_ANKLE_PROSTHESIS 13
+    constant HEALTH_GENERIC_HEALTH_MANAGER 14
+    constant HEALTH_PERSONAL_MOBILITY_DEVICE 15
 
-enum Windows.Devices.Bluetooth.BluetoothServiceCapabilities python_type
+enum Windows.Devices.Bluetooth.BluetoothServiceCapabilities python_type flags_enum
     py BluetoothServiceCapabilities
     signature enum(Windows.Devices.Bluetooth.BluetoothServiceCapabilities;u4)
+    constant NONE 0x0
+    constant LIMITED_DISCOVERABLE_MODE 0x1
+    constant POSITIONING_SERVICE 0x8
+    constant NETWORKING_SERVICE 0x10
+    constant RENDERING_SERVICE 0x20
+    constant CAPTURING_SERVICE 0x40
+    constant OBJECT_TRANSFER_SERVICE 0x80
+    constant AUDIO_SERVICE 0x100
+    constant TELEPHONE_SERVICE 0x200
+    constant INFORMATION_SERVICE 0x400
 
 class Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter activatable python_type
     py BluetoothSignalStrengthFilter

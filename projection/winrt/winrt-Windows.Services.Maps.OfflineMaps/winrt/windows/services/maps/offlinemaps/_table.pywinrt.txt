@@ -207,6 +207,10 @@ class Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult python_type
 enum Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryStatus python_type
     py OfflineMapPackageQueryStatus
     signature enum(Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_ERROR 1
+    constant INVALID_CREDENTIALS 2
+    constant NETWORK_FAILURE 3
 
 class Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult python_type
     py OfflineMapPackageStartDownloadResult
@@ -220,10 +224,18 @@ class Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult pyt
 enum Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadStatus python_type
     py OfflineMapPackageStartDownloadStatus
     signature enum(Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_ERROR 1
+    constant INVALID_CREDENTIALS 2
+    constant DENIED_WITHOUT_CAPABILITY 3
 
 enum Windows.Services.Maps.OfflineMaps.OfflineMapPackageStatus python_type
     py OfflineMapPackageStatus
     signature enum(Windows.Services.Maps.OfflineMaps.OfflineMapPackageStatus;i4)
+    constant NOT_DOWNLOADED 0
+    constant DOWNLOADING 1
+    constant DOWNLOADED 2
+    constant DELETING 3
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.Maps.OfflineMaps.OfflineMapPackage,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[OfflineMapPackage, Object]

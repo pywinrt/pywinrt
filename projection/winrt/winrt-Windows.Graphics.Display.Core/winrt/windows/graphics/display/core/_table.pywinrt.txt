@@ -16,6 +16,10 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concr
 enum Windows.Graphics.Display.Core.HdmiDisplayColorSpace python_type
     py HdmiDisplayColorSpace
     signature enum(Windows.Graphics.Display.Core.HdmiDisplayColorSpace;i4)
+    constant RGB_LIMITED 0
+    constant RGB_FULL 1
+    constant BT2020 2
+    constant BT709 3
 
 struct Windows.Graphics.Display.Core.HdmiDisplayHdr2086Metadata python_type
     py HdmiDisplayHdr2086Metadata
@@ -36,6 +40,10 @@ struct Windows.Graphics.Display.Core.HdmiDisplayHdr2086Metadata python_type
 enum Windows.Graphics.Display.Core.HdmiDisplayHdrOption python_type
     py HdmiDisplayHdrOption
     signature enum(Windows.Graphics.Display.Core.HdmiDisplayHdrOption;i4)
+    constant NONE 0
+    constant EOTF_SDR 1
+    constant EOTF2084 2
+    constant DOLBY_VISION_LOW_LATENCY 3
 
 class Windows.Graphics.Display.Core.HdmiDisplayInformation python_type
     py HdmiDisplayInformation
@@ -122,6 +130,10 @@ class Windows.Graphics.Display.Core.HdmiDisplayMode python_type
 enum Windows.Graphics.Display.Core.HdmiDisplayPixelEncoding python_type
     py HdmiDisplayPixelEncoding
     signature enum(Windows.Graphics.Display.Core.HdmiDisplayPixelEncoding;i4)
+    constant RGB444 0
+    constant YCC444 1
+    constant YCC422 2
+    constant YCC420 3
 
 interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[Boolean]

@@ -140,6 +140,19 @@ class Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventAr
 enum Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator python_type
     py HttpDiagnosticRequestInitiator
     signature enum(Windows.Web.Http.Diagnostics.HttpDiagnosticRequestInitiator;i4)
+    constant PARSED_ELEMENT 0
+    constant SCRIPT 1
+    constant IMAGE 2
+    constant LINK 3
+    constant STYLE 4
+    constant XML_HTTP_REQUEST 5
+    constant MEDIA 6
+    constant HTML_DOWNLOAD 7
+    constant PREFETCH 8
+    constant OTHER 9
+    constant CROSS_ORIGIN_PRE_FLIGHT 10
+    constant FETCH 11
+    constant BEACON 12
 
 class Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation python_type
     py HttpDiagnosticSourceLocation

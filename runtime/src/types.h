@@ -2,8 +2,8 @@
 //
 // This is the entry point a projection package's __init__.py reaches through
 // winrt.runtime._internals.load_projection(), and the small set of things the
-// three files that build one kind of type each - objects.cpp, structs.cpp and
-// members.cpp - need from the one that keeps track of them all.
+// files that build one kind of type each - objects.cpp, structs.cpp, enums.cpp
+// and members.cpp - need from the one that keeps track of them all.
 
 #pragma once
 

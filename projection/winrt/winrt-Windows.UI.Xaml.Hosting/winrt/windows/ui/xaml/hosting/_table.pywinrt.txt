@@ -85,6 +85,8 @@ class Windows.UI.Xaml.Hosting.DesignerAppView python_type closeable
 enum Windows.UI.Xaml.Hosting.DesignerAppViewState python_type
     py DesignerAppViewState
     signature enum(Windows.UI.Xaml.Hosting.DesignerAppViewState;i4)
+    constant VISIBLE 0
+    constant HIDDEN 1
 
 class Windows.UI.Xaml.Hosting.DesktopWindowXamlSource composable python_type closeable
     py DesktopWindowXamlSource
@@ -364,6 +366,14 @@ class Windows.UI.Xaml.Hosting.WindowsXamlManager python_type closeable
 enum Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationReason python_type
     py XamlSourceFocusNavigationReason
     signature enum(Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationReason;i4)
+    constant PROGRAMMATIC 0
+    constant RESTORE 1
+    constant FIRST 3
+    constant LAST 4
+    constant LEFT 7
+    constant UP 8
+    constant RIGHT 9
+    constant DOWN 10
 
 class Windows.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest python_type
     py XamlSourceFocusNavigationRequest

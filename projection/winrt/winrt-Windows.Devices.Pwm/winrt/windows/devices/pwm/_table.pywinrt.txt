@@ -234,6 +234,8 @@ class Windows.Devices.Pwm.PwmPin python_type closeable
 enum Windows.Devices.Pwm.PwmPulsePolarity python_type
     py PwmPulsePolarity
     signature enum(Windows.Devices.Pwm.PwmPulsePolarity;i4)
+    constant ACTIVE_HIGH 0
+    constant ACTIVE_LOW 1
 
 interface Windows.Devices.Pwm.Provider.IPwmProvider external
     py winrt.windows.devices.pwm.provider._IPwmProvider

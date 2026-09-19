@@ -4,9 +4,9 @@
 // __init__.py used to import from an extension module are created here instead,
 // straight into the package's own module. This file is the part that is the
 // same whatever kind of type it is: mapping the table, keeping track of what
-// has been built, and finding a type by name. What a class, an interface or a
-// struct actually is belongs to objects.cpp and structs.cpp, and the members
-// bound to them to members.cpp.
+// has been built, and finding a type by name. What a class, an interface, a
+// struct or an enum actually is belongs to objects.cpp, structs.cpp and
+// enums.cpp, and the members bound to them to members.cpp.
 //
 // A table is mapped once per process and never unmapped, because the names and
 // descriptors built from it point into it and a type outlives the import that
@@ -22,6 +22,7 @@
 #include <pywinrt/base.h>
 
 #include "delegates.h"
+#include "enums.h"
 #include "interp.h"
 #include "module_state.h"
 #include "objects.h"
@@ -276,26 +277,12 @@ namespace py::interp
             switch (entry.category)
             {
             case table::category::enum_:
-            {
-                // An enum is an ordinary Python class that __init__.py writes,
-                // so this only has to find what it wrote.
-                pyobj_handle written{
-                    PyObject_GetAttrString(proj.module, record.py_name().data())};
-                if (!written)
+                if (!make_enum_type(proj, entry, record))
                 {
                     return nullptr;
                 }
 
-                if (!PyType_Check(written.get()))
-                {
-                    PyErr_Format(
-                        PyExc_TypeError, "'%s' is not a type", entry.tp_name.c_str());
-                    return nullptr;
-                }
-
-                entry.py_type = reinterpret_cast<PyTypeObject*>(written.detach());
                 break;
-            }
             case table::category::delegate:
                 if (!make_delegate_type(proj, entry, record))
                 {
@@ -641,6 +628,7 @@ namespace py::interp
 
             switch (record.get_category())
             {
+            case table::category::enum_:
             case table::category::struct_:
             case table::category::interface_:
             case table::category::class_:

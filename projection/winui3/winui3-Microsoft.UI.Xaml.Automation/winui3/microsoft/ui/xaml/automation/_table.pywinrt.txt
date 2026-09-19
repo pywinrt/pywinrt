@@ -27,14 +27,48 @@ class Microsoft.UI.Xaml.Automation.AnnotationPatternIdentifiers python_type
 enum Microsoft.UI.Xaml.Automation.AnnotationType python_type
     py AnnotationType
     signature enum(Microsoft.UI.Xaml.Automation.AnnotationType;i4)
+    constant UNKNOWN 60000
+    constant SPELLING_ERROR 60001
+    constant GRAMMAR_ERROR 60002
+    constant COMMENT 60003
+    constant FORMULA_ERROR 60004
+    constant TRACK_CHANGES 60005
+    constant HEADER 60006
+    constant FOOTER 60007
+    constant HIGHLIGHTED 60008
+    constant ENDNOTE 60009
+    constant FOOTNOTE 60010
+    constant INSERTION_CHANGE 60011
+    constant DELETION_CHANGE 60012
+    constant MOVE_CHANGE 60013
+    constant FORMAT_CHANGE 60014
+    constant UNSYNCED_CHANGE 60015
+    constant EDITING_LOCKED_CHANGE 60016
+    constant EXTERNAL_CHANGE 60017
+    constant CONFLICTING_CHANGE 60018
+    constant AUTHOR 60019
+    constant ADVANCED_PROOFING_ISSUE 60020
+    constant DATA_VALIDATION_ERROR 60021
+    constant CIRCULAR_REFERENCE_ERROR 60022
 
 enum Microsoft.UI.Xaml.Automation.AutomationActiveEnd python_type
     py AutomationActiveEnd
     signature enum(Microsoft.UI.Xaml.Automation.AutomationActiveEnd;i4)
+    constant NONE 0
+    constant START 1
+    constant END 2
 
 enum Microsoft.UI.Xaml.Automation.AutomationAnimationStyle python_type
     py AutomationAnimationStyle
     signature enum(Microsoft.UI.Xaml.Automation.AutomationAnimationStyle;i4)
+    constant NONE 0
+    constant LAS_VEGAS_LIGHTS 1
+    constant BLINKING_BACKGROUND 2
+    constant SPARKLE_TEXT 3
+    constant MARCHING_BLACK_ANTS 4
+    constant MARCHING_RED_ANTS 5
+    constant SHIMMER 6
+    constant OTHER 7
 
 class Microsoft.UI.Xaml.Automation.AutomationAnnotation activatable python_type
     py AutomationAnnotation
@@ -74,14 +108,26 @@ class Microsoft.UI.Xaml.Automation.AutomationAnnotation activatable python_type
 enum Microsoft.UI.Xaml.Automation.AutomationBulletStyle python_type
     py AutomationBulletStyle
     signature enum(Microsoft.UI.Xaml.Automation.AutomationBulletStyle;i4)
+    constant NONE 0
+    constant HOLLOW_ROUND_BULLET 1
+    constant FILLED_ROUND_BULLET 2
+    constant HOLLOW_SQUARE_BULLET 3
+    constant FILLED_SQUARE_BULLET 4
+    constant DASH_BULLET 5
+    constant OTHER 6
 
 enum Microsoft.UI.Xaml.Automation.AutomationCaretBidiMode python_type
     py AutomationCaretBidiMode
     signature enum(Microsoft.UI.Xaml.Automation.AutomationCaretBidiMode;i4)
+    constant LTR 0
+    constant RTL 1
 
 enum Microsoft.UI.Xaml.Automation.AutomationCaretPosition python_type
     py AutomationCaretPosition
     signature enum(Microsoft.UI.Xaml.Automation.AutomationCaretPosition;i4)
+    constant UNKNOWN 0
+    constant END_OF_LINE 1
+    constant BEGINNING_OF_LINE 2
 
 class Microsoft.UI.Xaml.Automation.AutomationElementIdentifiers python_type
     py AutomationElementIdentifiers
@@ -210,10 +256,19 @@ class Microsoft.UI.Xaml.Automation.AutomationElementIdentifiers python_type
 enum Microsoft.UI.Xaml.Automation.AutomationFlowDirections python_type
     py AutomationFlowDirections
     signature enum(Microsoft.UI.Xaml.Automation.AutomationFlowDirections;i4)
+    constant DEFAULT 0
+    constant RIGHT_TO_LEFT 1
+    constant BOTTOM_TO_TOP 2
+    constant VERTICAL 3
 
 enum Microsoft.UI.Xaml.Automation.AutomationOutlineStyles python_type
     py AutomationOutlineStyles
     signature enum(Microsoft.UI.Xaml.Automation.AutomationOutlineStyles;i4)
+    constant NONE 0
+    constant OUTLINE 1
+    constant SHADOW 2
+    constant ENGRAVED 3
+    constant EMBOSSED 4
 
 class Microsoft.UI.Xaml.Automation.AutomationProperties python_type
     py AutomationProperties
@@ -531,14 +586,52 @@ class Microsoft.UI.Xaml.Automation.AutomationProperty python_type
 enum Microsoft.UI.Xaml.Automation.AutomationStyleId python_type
     py AutomationStyleId
     signature enum(Microsoft.UI.Xaml.Automation.AutomationStyleId;i4)
+    constant HEADING1 70001
+    constant HEADING2 70002
+    constant HEADING3 70003
+    constant HEADING4 70004
+    constant HEADING5 70005
+    constant HEADING6 70006
+    constant HEADING7 70007
+    constant HEADING8 70008
+    constant HEADING9 70009
+    constant TITLE 70010
+    constant SUBTITLE 70011
+    constant NORMAL 70012
+    constant EMPHASIS 70013
+    constant QUOTE 70014
+    constant BULLETED_LIST 70015
 
 enum Microsoft.UI.Xaml.Automation.AutomationTextDecorationLineStyle python_type
     py AutomationTextDecorationLineStyle
     signature enum(Microsoft.UI.Xaml.Automation.AutomationTextDecorationLineStyle;i4)
+    constant NONE 0
+    constant SINGLE 1
+    constant WORDS_ONLY 2
+    constant DOUBLE 3
+    constant DOT 4
+    constant DASH 5
+    constant DASH_DOT 6
+    constant DASH_DOT_DOT 7
+    constant WAVY 8
+    constant THICK_SINGLE 9
+    constant DOUBLE_WAVY 10
+    constant THICK_WAVY 11
+    constant LONG_DASH 12
+    constant THICK_DASH 13
+    constant THICK_DASH_DOT 14
+    constant THICK_DASH_DOT_DOT 15
+    constant THICK_DOT 16
+    constant THICK_LONG_DASH 17
+    constant OTHER 18
 
 enum Microsoft.UI.Xaml.Automation.AutomationTextEditChangeType python_type
     py AutomationTextEditChangeType
     signature enum(Microsoft.UI.Xaml.Automation.AutomationTextEditChangeType;i4)
+    constant NONE 0
+    constant AUTO_CORRECT 1
+    constant COMPOSITION 2
+    constant COMPOSITION_FINALIZED 3
 
 class Microsoft.UI.Xaml.Automation.DockPatternIdentifiers python_type
     py DockPatternIdentifiers
@@ -553,6 +646,12 @@ class Microsoft.UI.Xaml.Automation.DockPatternIdentifiers python_type
 enum Microsoft.UI.Xaml.Automation.DockPosition python_type
     py DockPosition
     signature enum(Microsoft.UI.Xaml.Automation.DockPosition;i4)
+    constant TOP 0
+    constant LEFT 1
+    constant BOTTOM 2
+    constant RIGHT 3
+    constant FILL 4
+    constant NONE 5
 
 class Microsoft.UI.Xaml.Automation.DragPatternIdentifiers python_type
     py DragPatternIdentifiers
@@ -599,6 +698,10 @@ class Microsoft.UI.Xaml.Automation.ExpandCollapsePatternIdentifiers python_type
 enum Microsoft.UI.Xaml.Automation.ExpandCollapseState python_type
     py ExpandCollapseState
     signature enum(Microsoft.UI.Xaml.Automation.ExpandCollapseState;i4)
+    constant COLLAPSED 0
+    constant EXPANDED 1
+    constant PARTIALLY_EXPANDED 2
+    constant LEAF_NODE 3
 
 class Microsoft.UI.Xaml.Automation.GridItemPatternIdentifiers python_type
     py GridItemPatternIdentifiers
@@ -1159,10 +1262,18 @@ class Microsoft.UI.Xaml.Automation.RangeValuePatternIdentifiers python_type
 enum Microsoft.UI.Xaml.Automation.RowOrColumnMajor python_type
     py RowOrColumnMajor
     signature enum(Microsoft.UI.Xaml.Automation.RowOrColumnMajor;i4)
+    constant ROW_MAJOR 0
+    constant COLUMN_MAJOR 1
+    constant INDETERMINATE 2
 
 enum Microsoft.UI.Xaml.Automation.ScrollAmount python_type
     py ScrollAmount
     signature enum(Microsoft.UI.Xaml.Automation.ScrollAmount;i4)
+    constant LARGE_DECREMENT 0
+    constant SMALL_DECREMENT 1
+    constant NO_AMOUNT 2
+    constant LARGE_INCREMENT 3
+    constant SMALL_INCREMENT 4
 
 class Microsoft.UI.Xaml.Automation.ScrollPatternIdentifiers python_type
     py ScrollPatternIdentifiers
@@ -1262,10 +1373,19 @@ class Microsoft.UI.Xaml.Automation.StylesPatternIdentifiers python_type
 enum Microsoft.UI.Xaml.Automation.SupportedTextSelection python_type
     py SupportedTextSelection
     signature enum(Microsoft.UI.Xaml.Automation.SupportedTextSelection;i4)
+    constant NONE 0
+    constant SINGLE 1
+    constant MULTIPLE 2
 
 enum Microsoft.UI.Xaml.Automation.SynchronizedInputType python_type
     py SynchronizedInputType
     signature enum(Microsoft.UI.Xaml.Automation.SynchronizedInputType;i4)
+    constant KEY_UP 1
+    constant KEY_DOWN 2
+    constant LEFT_MOUSE_UP 4
+    constant LEFT_MOUSE_DOWN 8
+    constant RIGHT_MOUSE_UP 16
+    constant RIGHT_MOUSE_DOWN 32
 
 class Microsoft.UI.Xaml.Automation.TableItemPatternIdentifiers python_type
     py TableItemPatternIdentifiers
@@ -1309,6 +1429,9 @@ class Microsoft.UI.Xaml.Automation.TogglePatternIdentifiers python_type
 enum Microsoft.UI.Xaml.Automation.ToggleState python_type
     py ToggleState
     signature enum(Microsoft.UI.Xaml.Automation.ToggleState;i4)
+    constant OFF 0
+    constant ON 1
+    constant INDETERMINATE 2
 
 class Microsoft.UI.Xaml.Automation.TransformPattern2Identifiers python_type
     py TransformPattern2Identifiers
@@ -1361,6 +1484,11 @@ class Microsoft.UI.Xaml.Automation.ValuePatternIdentifiers python_type
 enum Microsoft.UI.Xaml.Automation.WindowInteractionState python_type
     py WindowInteractionState
     signature enum(Microsoft.UI.Xaml.Automation.WindowInteractionState;i4)
+    constant RUNNING 0
+    constant CLOSING 1
+    constant READY_FOR_USER_INTERACTION 2
+    constant BLOCKED_BY_MODAL_WINDOW 3
+    constant NOT_RESPONDING 4
 
 class Microsoft.UI.Xaml.Automation.WindowPatternIdentifiers python_type
     py WindowPatternIdentifiers
@@ -1390,10 +1518,18 @@ class Microsoft.UI.Xaml.Automation.WindowPatternIdentifiers python_type
 enum Microsoft.UI.Xaml.Automation.WindowVisualState python_type
     py WindowVisualState
     signature enum(Microsoft.UI.Xaml.Automation.WindowVisualState;i4)
+    constant NORMAL 0
+    constant MAXIMIZED 1
+    constant MINIMIZED 2
 
 enum Microsoft.UI.Xaml.Automation.ZoomUnit python_type
     py ZoomUnit
     signature enum(Microsoft.UI.Xaml.Automation.ZoomUnit;i4)
+    constant NO_AMOUNT 0
+    constant LARGE_DECREMENT 1
+    constant SMALL_DECREMENT 2
+    constant LARGE_INCREMENT 3
+    constant SMALL_INCREMENT 4
 
 class Microsoft.UI.Xaml.DependencyObject external
     py winui3.microsoft.ui.xaml.DependencyObject

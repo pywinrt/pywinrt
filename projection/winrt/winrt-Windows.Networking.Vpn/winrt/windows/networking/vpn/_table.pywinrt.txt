@@ -1603,10 +1603,17 @@ class Windows.Networking.Vpn.VpnAppId python_type
 enum Windows.Networking.Vpn.VpnAppIdType python_type
     py VpnAppIdType
     signature enum(Windows.Networking.Vpn.VpnAppIdType;i4)
+    constant PACKAGE_FAMILY_NAME 0
+    constant FULLY_QUALIFIED_BINARY_NAME 1
+    constant FILE_PATH 2
 
 enum Windows.Networking.Vpn.VpnAuthenticationMethod python_type
     py VpnAuthenticationMethod
     signature enum(Windows.Networking.Vpn.VpnAuthenticationMethod;i4)
+    constant MSCHAPV2 0
+    constant EAP 1
+    constant CERTIFICATE 2
+    constant PRESHARED_KEY 3
 
 class Windows.Networking.Vpn.VpnChannel python_type
     py VpnChannel
@@ -1808,6 +1815,8 @@ class Windows.Networking.Vpn.VpnChannelActivityEventArgs python_type
 enum Windows.Networking.Vpn.VpnChannelActivityEventType python_type
     py VpnChannelActivityEventType
     signature enum(Windows.Networking.Vpn.VpnChannelActivityEventType;i4)
+    constant IDLE 0
+    constant ACTIVE 1
 
 class Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs python_type
     py VpnChannelActivityStateChangedArgs
@@ -1837,9 +1846,12 @@ class Windows.Networking.Vpn.VpnChannelConfiguration python_type
         get get_ServerUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration2 shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
 
-enum Windows.Networking.Vpn.VpnChannelRequestCredentialsOptions python_type
+enum Windows.Networking.Vpn.VpnChannelRequestCredentialsOptions python_type flags_enum
     py VpnChannelRequestCredentialsOptions
     signature enum(Windows.Networking.Vpn.VpnChannelRequestCredentialsOptions;u4)
+    constant NONE 0x0
+    constant RETRYING 0x1
+    constant USE_FOR_SINGLE_SIGN_IN 0x2
 
 class Windows.Networking.Vpn.VpnCredential python_type
     py VpnCredential
@@ -1862,6 +1874,13 @@ class Windows.Networking.Vpn.VpnCredential python_type
 enum Windows.Networking.Vpn.VpnCredentialType python_type
     py VpnCredentialType
     signature enum(Windows.Networking.Vpn.VpnCredentialType;i4)
+    constant USERNAME_PASSWORD 0
+    constant USERNAME_OTP_PIN 1
+    constant USERNAME_PASSWORD_AND_PIN 2
+    constant USERNAME_PASSWORD_CHANGE 3
+    constant SMART_CARD 4
+    constant PROTECTED_CERTIFICATE 5
+    constant UN_PROTECTED_CERTIFICATE 6
 
 class Windows.Networking.Vpn.VpnCustomCheckBox activatable python_type
     py VpnCustomCheckBox
@@ -2157,6 +2176,8 @@ class Windows.Networking.Vpn.VpnCustomTextBox activatable python_type
 enum Windows.Networking.Vpn.VpnDataPathType python_type
     py VpnDataPathType
     signature enum(Windows.Networking.Vpn.VpnDataPathType;i4)
+    constant SEND 0
+    constant RECEIVE 1
 
 class Windows.Networking.Vpn.VpnDomainNameAssignment activatable python_type
     py VpnDomainNameAssignment
@@ -2212,6 +2233,9 @@ class Windows.Networking.Vpn.VpnDomainNameInfo python_type
 enum Windows.Networking.Vpn.VpnDomainNameType python_type
     py VpnDomainNameType
     signature enum(Windows.Networking.Vpn.VpnDomainNameType;i4)
+    constant SUFFIX 0
+    constant FULLY_QUALIFIED 1
+    constant RESERVED 65535
 
 class Windows.Networking.Vpn.VpnForegroundActivatedEventArgs python_type
     py VpnForegroundActivatedEventArgs
@@ -2254,6 +2278,13 @@ class Windows.Networking.Vpn.VpnForegroundActivationOperation python_type
 enum Windows.Networking.Vpn.VpnIPProtocol python_type
     py VpnIPProtocol
     signature enum(Windows.Networking.Vpn.VpnIPProtocol;i4)
+    constant NONE 0
+    constant TCP 6
+    constant UDP 17
+    constant ICMP 1
+    constant IPV6_ICMP 58
+    constant IGMP 2
+    constant PGM 113
 
 class Windows.Networking.Vpn.VpnInterfaceId python_type
     py VpnInterfaceId
@@ -2317,10 +2348,33 @@ class Windows.Networking.Vpn.VpnManagementAgent activatable python_type
 enum Windows.Networking.Vpn.VpnManagementConnectionStatus python_type
     py VpnManagementConnectionStatus
     signature enum(Windows.Networking.Vpn.VpnManagementConnectionStatus;i4)
+    constant DISCONNECTED 0
+    constant DISCONNECTING 1
+    constant CONNECTED 2
+    constant CONNECTING 3
 
 enum Windows.Networking.Vpn.VpnManagementErrorStatus python_type
     py VpnManagementErrorStatus
     signature enum(Windows.Networking.Vpn.VpnManagementErrorStatus;i4)
+    constant OK 0
+    constant OTHER 1
+    constant INVALID_XML_SYNTAX 2
+    constant PROFILE_NAME_TOO_LONG 3
+    constant PROFILE_INVALID_APP_ID 4
+    constant ACCESS_DENIED 5
+    constant CANNOT_FIND_PROFILE 6
+    constant ALREADY_DISCONNECTING 7
+    constant ALREADY_CONNECTED 8
+    constant GENERAL_AUTHENTICATION_FAILURE 9
+    constant EAP_FAILURE 10
+    constant SMART_CARD_FAILURE 11
+    constant CERTIFICATE_FAILURE 12
+    constant SERVER_CONFIGURATION 13
+    constant NO_CONNECTION 14
+    constant SERVER_CONNECTION 15
+    constant USER_NAME_PASSWORD 16
+    constant DNS_NOT_RESOLVABLE 17
+    constant INVALID_IP 18
 
 class Windows.Networking.Vpn.VpnNamespaceAssignment activatable python_type
     py VpnNamespaceAssignment
@@ -2446,6 +2500,9 @@ class Windows.Networking.Vpn.VpnNativeProfile activatable python_type
 enum Windows.Networking.Vpn.VpnNativeProtocolType python_type
     py VpnNativeProtocolType
     signature enum(Windows.Networking.Vpn.VpnNativeProtocolType;i4)
+    constant PPTP 0
+    constant L2TP 1
+    constant IPSEC_IKEV2 2
 
 class Windows.Networking.Vpn.VpnPacketBuffer python_type
     py VpnPacketBuffer
@@ -2518,6 +2575,8 @@ class Windows.Networking.Vpn.VpnPacketBufferList python_type iterable
 enum Windows.Networking.Vpn.VpnPacketBufferStatus python_type
     py VpnPacketBufferStatus
     signature enum(Windows.Networking.Vpn.VpnPacketBufferStatus;i4)
+    constant OK 0
+    constant INVALID_BUFFER_SIZE 1
 
 class Windows.Networking.Vpn.VpnPickedCredential python_type
     py VpnPickedCredential
@@ -2652,6 +2711,8 @@ class Windows.Networking.Vpn.VpnRouteAssignment activatable python_type
 enum Windows.Networking.Vpn.VpnRoutingPolicyType python_type
     py VpnRoutingPolicyType
     signature enum(Windows.Networking.Vpn.VpnRoutingPolicyType;i4)
+    constant SPLIT_ROUTING 0
+    constant FORCE_ALL_TRAFFIC_OVER_VPN 1
 
 class Windows.Networking.Vpn.VpnSystemHealth python_type
     py VpnSystemHealth

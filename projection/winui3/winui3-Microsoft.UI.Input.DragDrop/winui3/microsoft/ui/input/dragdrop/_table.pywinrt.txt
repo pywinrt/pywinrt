@@ -38,9 +38,16 @@ class Microsoft.UI.Input.DragDrop.DragDropManager python_type closeable
             in class type=Microsoft.UI.Content.ContentIsland name=content
             out class type=Microsoft.UI.Input.DragDrop.DragDropManager return
 
-enum Microsoft.UI.Input.DragDrop.DragDropModifiers python_type
+enum Microsoft.UI.Input.DragDrop.DragDropModifiers python_type flags_enum
     py DragDropModifiers
     signature enum(Microsoft.UI.Input.DragDrop.DragDropModifiers;u4)
+    constant NONE 0x0
+    constant SHIFT 0x1
+    constant CONTROL 0x2
+    constant ALT 0x4
+    constant LEFT_BUTTON 0x8
+    constant MIDDLE_BUTTON 0x10
+    constant RIGHT_BUTTON 0x20
 
 class Microsoft.UI.Input.DragDrop.DragInfo python_type
     py DragInfo
@@ -99,6 +106,8 @@ class Microsoft.UI.Input.DragDrop.DragOperation activatable python_type closeabl
 enum Microsoft.UI.Input.DragDrop.DragUIContentMode python_type
     py DragUIContentMode
     signature enum(Microsoft.UI.Input.DragDrop.DragUIContentMode;i4)
+    constant AUTO 0
+    constant DEFERRED 1
 
 class Microsoft.UI.Input.DragDrop.DragUIOverride python_type
     py DragUIOverride

@@ -138,6 +138,8 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Strea
 enum Windows.Security.Cryptography.Core.Capi1KdfTargetAlgorithm python_type
     py Capi1KdfTargetAlgorithm
     signature enum(Windows.Security.Cryptography.Core.Capi1KdfTargetAlgorithm;i4)
+    constant NOT_AES 0
+    constant AES 1
 
 class Windows.Security.Cryptography.Core.CryptographicEngine static python_type
     py CryptographicEngine
@@ -251,14 +253,28 @@ class Windows.Security.Cryptography.Core.CryptographicKey python_type
 enum Windows.Security.Cryptography.Core.CryptographicPadding python_type
     py CryptographicPadding
     signature enum(Windows.Security.Cryptography.Core.CryptographicPadding;i4)
+    constant NONE 0
+    constant RSA_OAEP 1
+    constant RSA_PKCS1_V15 2
+    constant RSA_PSS 3
 
 enum Windows.Security.Cryptography.Core.CryptographicPrivateKeyBlobType python_type
     py CryptographicPrivateKeyBlobType
     signature enum(Windows.Security.Cryptography.Core.CryptographicPrivateKeyBlobType;i4)
+    constant PKCS8_RAW_PRIVATE_KEY_INFO 0
+    constant PKCS1_RSA_PRIVATE_KEY 1
+    constant B_CRYPT_PRIVATE_KEY 2
+    constant CAPI1_PRIVATE_KEY 3
+    constant B_CRYPT_ECC_FULL_PRIVATE_KEY 4
 
 enum Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType python_type
     py CryptographicPublicKeyBlobType
     signature enum(Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType;i4)
+    constant X509_SUBJECT_PUBLIC_KEY_INFO 0
+    constant PKCS1_RSA_PUBLIC_KEY 1
+    constant B_CRYPT_PUBLIC_KEY 2
+    constant CAPI1_PUBLIC_KEY 3
+    constant B_CRYPT_ECC_FULL_PUBLIC_KEY 4
 
 class Windows.Security.Cryptography.Core.EccCurveNames static python_type
     py EccCurveNames

@@ -739,6 +739,8 @@ class Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem pyt
 enum Windows.ApplicationModel.UserActivities.UserActivityState python_type
     py UserActivityState
     signature enum(Windows.ApplicationModel.UserActivities.UserActivityState;i4)
+    constant NEW 0
+    constant PUBLISHED 1
 
 class Windows.ApplicationModel.UserActivities.UserActivityVisualElements python_type
     py UserActivityVisualElements

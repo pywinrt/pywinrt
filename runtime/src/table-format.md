@@ -139,6 +139,14 @@ format 4.0
 generator 3.2.1
 namespace Windows.Foundation
 
+enum Windows.Foundation.AsyncStatus python_type
+    py AsyncStatus
+    signature enum(Windows.Foundation.AsyncStatus;i4)
+    constant CANCELED 2
+    constant COMPLETED 1
+    constant ERROR 3
+    constant STARTED 0
+
 class Windows.Foundation.Uri python_type stringable
     py Uri
     signature rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc})
@@ -190,10 +198,18 @@ A type's own line is its category - `enum`, `struct`, `interface`, `class` or
 | `composable <type>` | one composable factory interface |
 | `overridable <type>` | one overridable interface, which a Python subclass answers |
 | `field <py> <winrt> <code>` | one struct field, with `type=` when the code names a type |
+| `constant <py> <value>` | one constant of an enum |
 | `<kind> <name>` | a group of members bound to one Python attribute, then the group's flags |
 
 A group's name is a dash when the group is bound to no name of its own, which a
 constructor group and the `Invoke` of a delegate are.
+
+A constant carries only the name it is reached by, where a struct field carries
+its WinRT name as well: an enum constant is never named on the ABI, so the
+spelling the metadata gives it is of no use to anyone reading the table. Its
+value is written the way the enum is read - a flags enum in hexadecimal,
+because it is a set of bits, and every other enum as a signed decimal - and
+both are kept as the thirty-two bits they occupy.
 
 A member's line is its kind, the WinRT name of the method, then `slot=`,
 `inputs=`, `outputs=`, `declaring=`, `shape=`, `reverse=` and `role=` - of which
@@ -252,6 +268,7 @@ tag appears at most once.
 | `MEMB` | member records |
 | `PARM` | parameter records |
 | `FLDS` | struct field records |
+| `CNST` | enum constant records |
 
 ### References
 
@@ -263,7 +280,7 @@ tag appears at most once.
   count of zero and an ignored index.
 - A **guid ref** is a `u32` index into `GUID`, or `0xFFFFFFFF` for none.
 
-### Type record, 88 bytes
+### Type record, 96 bytes
 
 | index | field |
 |---|---|
@@ -282,6 +299,7 @@ tag appears at most once.
 | 16, 17 | activation factory interfaces, a list |
 | 18, 19 | composable factory interfaces, a list |
 | 20, 21 | overridable interfaces, a list: the ones a class derived from this one implements rather than calls |
+| 22, 23 | enum constants, a first index into `CNST` and a count |
 
 The records of the types the namespace defines come first, sorted by WinRT name,
 so that a lookup by name is a binary search. The external references follow in
@@ -323,6 +341,7 @@ Type flags, and the words the text writes them as:
 | 19 | `buffer` | supports the buffer protocol |
 | 20 | `buffer_length` | the buffer length is `Length` rather than `Capacity` |
 | 21 | `integer` | a struct that is one integer, projected as a subclass of `int` |
+| 22 | `flags_enum` | an enum that is a set of bits, projected as an `enum.IntFlag` |
 
 ### Group record, 16 bytes
 
@@ -483,6 +502,23 @@ counted in the Python input or output counts.
 | 1 | WinRT name, a string ref |
 | 2 | type code |
 | 3 | type ref, or `0xFFFFFFFF` |
+
+### Enum constant record, 8 bytes
+
+| index | field |
+|---|---|
+| 0 | Python name, a string ref |
+| 1 | the constant, as the thirty-two bits it occupies |
+
+The constants of an enum are the whole of what the table says about it - an
+enum has no interface, no IID and no members - and a reader builds an
+`enum.IntEnum` of them, or an `enum.IntFlag` where the `flags_enum` bit says
+so. What the bits mean is the enum's to say rather than the constant's: a WinRT
+enum is a signed `int32` unless it carries `FlagsAttribute`, in which case it
+is an unsigned `uint32`, so the same record serves both and the type's flags
+decide. The order the constants are written in is the order they are declared
+in, which is what settles which of two constants with one value is the name and
+which is the alias.
 
 ### Type codes
 

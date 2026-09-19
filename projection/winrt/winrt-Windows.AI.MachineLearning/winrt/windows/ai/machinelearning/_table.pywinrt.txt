@@ -1376,6 +1376,11 @@ class Windows.AI.MachineLearning.LearningModelDevice python_type
 enum Windows.AI.MachineLearning.LearningModelDeviceKind python_type
     py LearningModelDeviceKind
     signature enum(Windows.AI.MachineLearning.LearningModelDeviceKind;i4)
+    constant DEFAULT 0
+    constant CPU 1
+    constant DIRECTX 2
+    constant DIRECTX_HIGH_PERFORMANCE 3
+    constant DIRECTX_MIN_POWER 4
 
 class Windows.AI.MachineLearning.LearningModelEvaluationResult python_type
     py LearningModelEvaluationResult
@@ -1398,10 +1403,17 @@ class Windows.AI.MachineLearning.LearningModelEvaluationResult python_type
 enum Windows.AI.MachineLearning.LearningModelFeatureKind python_type
     py LearningModelFeatureKind
     signature enum(Windows.AI.MachineLearning.LearningModelFeatureKind;i4)
+    constant TENSOR 0
+    constant SEQUENCE 1
+    constant MAP 2
+    constant IMAGE 3
 
 enum Windows.AI.MachineLearning.LearningModelPixelRange python_type
     py LearningModelPixelRange
     signature enum(Windows.AI.MachineLearning.LearningModelPixelRange;i4)
+    constant ZERO_TO255 0
+    constant ZERO_TO_ONE 1
+    constant MINUS_ONE_TO_ONE 2
 
 class Windows.AI.MachineLearning.LearningModelSession python_type closeable
     py LearningModelSession
@@ -1996,6 +2008,22 @@ class Windows.AI.MachineLearning.TensorInt8Bit python_type closeable
 enum Windows.AI.MachineLearning.TensorKind python_type
     py TensorKind
     signature enum(Windows.AI.MachineLearning.TensorKind;i4)
+    constant UNDEFINED 0
+    constant FLOAT 1
+    constant UINT8 2
+    constant INT8 3
+    constant UINT16 4
+    constant INT16 5
+    constant INT32 6
+    constant INT64 7
+    constant STRING 8
+    constant BOOLEAN 9
+    constant FLOAT16 10
+    constant DOUBLE 11
+    constant UINT32 12
+    constant UINT64 13
+    constant COMPLEX64 14
+    constant COMPLEX128 15
 
 class Windows.AI.MachineLearning.TensorString python_type closeable
     py TensorString

@@ -5,6 +5,8 @@ namespace Windows.Networking
 enum Windows.Networking.DomainNameType python_type
     py DomainNameType
     signature enum(Windows.Networking.DomainNameType;i4)
+    constant SUFFIX 0
+    constant FULLY_QUALIFIED 1
 
 class Windows.Networking.EndpointPair python_type
     py EndpointPair
@@ -80,13 +82,19 @@ class Windows.Networking.HostName python_type stringable
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
 
-enum Windows.Networking.HostNameSortOptions python_type
+enum Windows.Networking.HostNameSortOptions python_type flags_enum
     py HostNameSortOptions
     signature enum(Windows.Networking.HostNameSortOptions;u4)
+    constant NONE 0x0
+    constant OPTIMIZE_FOR_LONG_CONNECTIONS 0x2
 
 enum Windows.Networking.HostNameType python_type
     py HostNameType
     signature enum(Windows.Networking.HostNameType;i4)
+    constant DOMAIN_NAME 0
+    constant IPV4 1
+    constant IPV6 2
+    constant BLUETOOTH 3
 
 interface Windows.Networking.IEndpointPair
     guid 33a0aa36-f8fa-4b30-b856-76517c3bd06d

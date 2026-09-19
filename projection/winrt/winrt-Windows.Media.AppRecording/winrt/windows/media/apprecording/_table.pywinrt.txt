@@ -56,6 +56,8 @@ class Windows.Media.AppRecording.AppRecordingResult python_type
 enum Windows.Media.AppRecording.AppRecordingSaveScreenshotOption python_type
     py AppRecordingSaveScreenshotOption
     signature enum(Windows.Media.AppRecording.AppRecordingSaveScreenshotOption;i4)
+    constant NONE 0
+    constant HDR_CONTENT_VISIBLE 1
 
 class Windows.Media.AppRecording.AppRecordingSaveScreenshotResult python_type
     py AppRecordingSaveScreenshotResult

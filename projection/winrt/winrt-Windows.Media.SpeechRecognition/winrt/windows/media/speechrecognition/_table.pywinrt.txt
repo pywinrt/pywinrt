@@ -639,6 +639,8 @@ class Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventA
 enum Windows.Media.SpeechRecognition.SpeechContinuousRecognitionMode python_type
     py SpeechContinuousRecognitionMode
     signature enum(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionMode;i4)
+    constant DEFAULT 0
+    constant PAUSE_ON_RECOGNITION 1
 
 class Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs python_type
     py SpeechContinuousRecognitionResultGeneratedEventArgs
@@ -692,6 +694,13 @@ class Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession python_
 enum Windows.Media.SpeechRecognition.SpeechRecognitionAudioProblem python_type
     py SpeechRecognitionAudioProblem
     signature enum(Windows.Media.SpeechRecognition.SpeechRecognitionAudioProblem;i4)
+    constant NONE 0
+    constant TOO_NOISY 1
+    constant NO_SIGNAL 2
+    constant TOO_LOUD 3
+    constant TOO_QUIET 4
+    constant TOO_FAST 5
+    constant TOO_SLOW 6
 
 class Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult python_type
     py SpeechRecognitionCompilationResult
@@ -705,14 +714,25 @@ class Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult python_
 enum Windows.Media.SpeechRecognition.SpeechRecognitionConfidence python_type
     py SpeechRecognitionConfidence
     signature enum(Windows.Media.SpeechRecognition.SpeechRecognitionConfidence;i4)
+    constant HIGH 0
+    constant MEDIUM 1
+    constant LOW 2
+    constant REJECTED 3
 
 enum Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability python_type
     py SpeechRecognitionConstraintProbability
     signature enum(Windows.Media.SpeechRecognition.SpeechRecognitionConstraintProbability;i4)
+    constant DEFAULT 0
+    constant MIN 1
+    constant MAX 2
 
 enum Windows.Media.SpeechRecognition.SpeechRecognitionConstraintType python_type
     py SpeechRecognitionConstraintType
     signature enum(Windows.Media.SpeechRecognition.SpeechRecognitionConstraintType;i4)
+    constant TOPIC 0
+    constant LIST 1
+    constant GRAMMAR 2
+    constant VOICE_COMMAND_DEFINITION 3
 
 class Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint python_type
     py SpeechRecognitionGrammarFileConstraint
@@ -856,10 +876,24 @@ class Windows.Media.SpeechRecognition.SpeechRecognitionResult python_type
 enum Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus python_type
     py SpeechRecognitionResultStatus
     signature enum(Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus;i4)
+    constant SUCCESS 0
+    constant TOPIC_LANGUAGE_NOT_SUPPORTED 1
+    constant GRAMMAR_LANGUAGE_MISMATCH 2
+    constant GRAMMAR_COMPILATION_FAILURE 3
+    constant AUDIO_QUALITY_FAILURE 4
+    constant USER_CANCELED 5
+    constant UNKNOWN 6
+    constant TIMEOUT_EXCEEDED 7
+    constant PAUSE_LIMIT_EXCEEDED 8
+    constant NETWORK_FAILURE 9
+    constant MICROPHONE_UNAVAILABLE 10
 
 enum Windows.Media.SpeechRecognition.SpeechRecognitionScenario python_type
     py SpeechRecognitionScenario
     signature enum(Windows.Media.SpeechRecognition.SpeechRecognitionScenario;i4)
+    constant WEB_SEARCH 0
+    constant DICTATION 1
+    constant FORM_FILLING 2
 
 class Windows.Media.SpeechRecognition.SpeechRecognitionSemanticInterpretation python_type
     py SpeechRecognitionSemanticInterpretation
@@ -1020,6 +1054,13 @@ class Windows.Media.SpeechRecognition.SpeechRecognizer activatable python_type c
 enum Windows.Media.SpeechRecognition.SpeechRecognizerState python_type
     py SpeechRecognizerState
     signature enum(Windows.Media.SpeechRecognition.SpeechRecognizerState;i4)
+    constant IDLE 0
+    constant CAPTURING 1
+    constant PROCESSING 2
+    constant SOUND_STARTED 3
+    constant SOUND_ENDED 4
+    constant SPEECH_DETECTED 5
+    constant PAUSED 6
 
 class Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs python_type
     py SpeechRecognizerStateChangedEventArgs

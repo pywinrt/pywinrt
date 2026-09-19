@@ -24,9 +24,11 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Media
             in parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus> name=asyncInfo
             in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-enum Windows.UI.Xaml.Media.Imaging.BitmapCreateOptions python_type
+enum Windows.UI.Xaml.Media.Imaging.BitmapCreateOptions python_type flags_enum
     py BitmapCreateOptions
     signature enum(Windows.UI.Xaml.Media.Imaging.BitmapCreateOptions;u4)
+    constant NONE 0x0
+    constant IGNORE_IMAGE_CACHE 0x8
 
 class Windows.UI.Xaml.Media.Imaging.BitmapImage activatable python_type
     py BitmapImage
@@ -160,6 +162,8 @@ class Windows.UI.Xaml.Media.Imaging.BitmapSource composable python_type
 enum Windows.UI.Xaml.Media.Imaging.DecodePixelType python_type
     py DecodePixelType
     signature enum(Windows.UI.Xaml.Media.Imaging.DecodePixelType;i4)
+    constant PHYSICAL 0
+    constant LOGICAL 1
 
 class Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs python_type
     py DownloadProgressEventArgs
@@ -468,6 +472,10 @@ class Windows.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs python_type
 enum Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus python_type
     py SvgImageSourceLoadStatus
     signature enum(Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus;i4)
+    constant SUCCESS 0
+    constant NETWORK_ERROR 1
+    constant INVALID_FORMAT 2
+    constant OTHER 3
 
 class Windows.UI.Xaml.Media.Imaging.SvgImageSourceOpenedEventArgs python_type
     py SvgImageSourceOpenedEventArgs

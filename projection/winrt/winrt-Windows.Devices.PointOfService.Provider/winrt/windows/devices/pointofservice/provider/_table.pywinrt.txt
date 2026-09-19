@@ -463,6 +463,8 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerR
 enum Windows.Devices.PointOfService.Provider.BarcodeScannerTriggerState python_type
     py BarcodeScannerTriggerState
     signature enum(Windows.Devices.PointOfService.Provider.BarcodeScannerTriggerState;i4)
+    constant RELEASED 0
+    constant PRESSED 1
 
 class Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame python_type closeable
     py BarcodeScannerVideoFrame

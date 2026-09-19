@@ -385,13 +385,22 @@ interface Windows.Graphics.Printing.Workflow.IPrintWorkflowVirtualPrinterUIEvent
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowXpsDataAvailableEventArgs
     guid 4d11c331-54d1-434e-be0e-82c5fa58e5b2
 
-enum Windows.Graphics.Printing.Workflow.PdlConversionHostBasedProcessingOperations python_type
+enum Windows.Graphics.Printing.Workflow.PdlConversionHostBasedProcessingOperations python_type flags_enum
     py PdlConversionHostBasedProcessingOperations
     signature enum(Windows.Graphics.Printing.Workflow.PdlConversionHostBasedProcessingOperations;u4)
+    constant NONE 0x0
+    constant PAGE_ROTATION 0x1
+    constant PAGE_ORDERING 0x2
+    constant COPIES 0x4
+    constant BLANK_PAGE_INSERTION 0x8
+    constant ALL 0xFFFFFFFF
 
 enum Windows.Graphics.Printing.Workflow.PrintWorkflowAttributesMergePolicy python_type
     py PrintWorkflowAttributesMergePolicy
     signature enum(Windows.Graphics.Printing.Workflow.PrintWorkflowAttributesMergePolicy;i4)
+    constant MERGE_PREFER_PRINT_TICKET_ON_CONFLICT 0
+    constant MERGE_PREFER_PSA_ON_CONFLICT 1
+    constant DO_NOT_MERGE_WITH_PRINT_TICKET 2
 
 class Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession python_type
     py PrintWorkflowBackgroundSession
@@ -493,6 +502,8 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEv
 enum Windows.Graphics.Printing.Workflow.PrintWorkflowJobAbortReason python_type
     py PrintWorkflowJobAbortReason
     signature enum(Windows.Graphics.Printing.Workflow.PrintWorkflowJobAbortReason;i4)
+    constant JOB_FAILED 0
+    constant USER_CANCELED 1
 
 class Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs python_type
     py PrintWorkflowJobActivatedEventArgs
@@ -579,6 +590,17 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs 
 enum Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueKind python_type
     py PrintWorkflowJobIssueKind
     signature enum(Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueKind;i4)
+    constant OTHER 0
+    constant ATTENTION_REQUIRED 1
+    constant DOOR_OPEN 2
+    constant MARKER_SUPPLY_LOW 3
+    constant MARKER_SUPPLY_EMPTY 4
+    constant MEDIA_JAM 5
+    constant MEDIA_EMPTY 6
+    constant MEDIA_LOW 7
+    constant OUTPUT_AREA_ALMOST_FULL 8
+    constant OUTPUT_AREA_FULL 9
+    constant JOB_PRINTING_ERROR 10
 
 class Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs python_type
     py PrintWorkflowJobNotificationEventArgs
@@ -682,6 +704,10 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowObjectModelTargetPackage p
 enum Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConversionType python_type
     py PrintWorkflowPdlConversionType
     signature enum(Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConversionType;i4)
+    constant XPS_TO_PDF 0
+    constant XPS_TO_PWGR 1
+    constant XPS_TO_PCLM 2
+    constant XPS_TO_TIFF 3
 
 class Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter python_type
     py PrintWorkflowPdlConverter
@@ -844,10 +870,19 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob python_type
 enum Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatus python_type
     py PrintWorkflowPrinterJobStatus
     signature enum(Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatus;i4)
+    constant ERROR 0
+    constant ABORTED 1
+    constant IN_PROGRESS 2
+    constant COMPLETED 3
 
 enum Windows.Graphics.Printing.Workflow.PrintWorkflowSessionStatus python_type
     py PrintWorkflowSessionStatus
     signature enum(Windows.Graphics.Printing.Workflow.PrintWorkflowSessionStatus;i4)
+    constant STARTED 0
+    constant COMPLETED 1
+    constant ABORTED 2
+    constant CLOSED 3
+    constant PDL_DATA_AVAILABLE_FOR_MODIFICATION 4
 
 class Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent python_type
     py PrintWorkflowSourceContent
@@ -916,6 +951,9 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation python_
 enum Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedStatus python_type
     py PrintWorkflowSubmittedStatus
     signature enum(Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedStatus;i4)
+    constant SUCCEEDED 0
+    constant CANCELED 1
+    constant FAILED 2
 
 class Windows.Graphics.Printing.Workflow.PrintWorkflowTarget python_type
     py PrintWorkflowTarget
@@ -964,6 +1002,10 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs pytho
 enum Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus python_type
     py PrintWorkflowUICompletionStatus
     signature enum(Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus;i4)
+    constant COMPLETED 0
+    constant LAUNCH_FAILED 1
+    constant JOB_FAILED 2
+    constant USER_CANCELED 3
 
 class Windows.Graphics.Printing.Workflow.PrintWorkflowUILauncher python_type
     py PrintWorkflowUILauncher

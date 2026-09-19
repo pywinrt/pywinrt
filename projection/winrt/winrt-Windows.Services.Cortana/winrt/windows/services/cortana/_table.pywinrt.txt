@@ -90,10 +90,24 @@ class Windows.Services.Cortana.CortanaActionableInsightsOptions activatable pyth
 enum Windows.Services.Cortana.CortanaPermission python_type
     py CortanaPermission
     signature enum(Windows.Services.Cortana.CortanaPermission;i4)
+    constant BROWSING_HISTORY 0
+    constant CALENDAR 1
+    constant CALL_HISTORY 2
+    constant CONTACTS 3
+    constant EMAIL 4
+    constant INPUT_PERSONALIZATION 5
+    constant LOCATION 6
+    constant MESSAGING 7
+    constant MICROPHONE 8
+    constant PERSONALIZATION 9
+    constant PHONE_CALL 10
 
 enum Windows.Services.Cortana.CortanaPermissionsChangeResult python_type
     py CortanaPermissionsChangeResult
     signature enum(Windows.Services.Cortana.CortanaPermissionsChangeResult;i4)
+    constant SUCCESS 0
+    constant UNAVAILABLE 1
+    constant DISABLED_BY_POLICY 2
 
 class Windows.Services.Cortana.CortanaPermissionsManager python_type
     py CortanaPermissionsManager

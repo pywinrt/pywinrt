@@ -58,10 +58,24 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Management.Se
 enum Windows.Management.Setup.DeploymentAgentProgressState python_type
     py DeploymentAgentProgressState
     signature enum(Windows.Management.Setup.DeploymentAgentProgressState;i4)
+    constant NOT_STARTED 0
+    constant INITIALIZING 1
+    constant IN_PROGRESS 2
+    constant COMPLETED 3
+    constant ERROR_OCCURRED 4
+    constant REBOOT_REQUIRED 5
+    constant CANCELED 6
 
 enum Windows.Management.Setup.DeploymentSessionConnectionChange python_type
     py DeploymentSessionConnectionChange
     signature enum(Windows.Management.Setup.DeploymentSessionConnectionChange;i4)
+    constant NO_CHANGE 0
+    constant HOST_CONNECTION_LOST 1
+    constant HOST_CONNECTION_RESTORED 2
+    constant AGENT_CONNECTION_LOST 3
+    constant AGENT_CONNECTION_RESTORED 4
+    constant INTERNET_CONNECTION_LOST 5
+    constant INTERNET_CONNECTION_RESTORED 6
 
 class Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs python_type
     py DeploymentSessionConnectionChangedEventArgs
@@ -97,6 +111,9 @@ class Windows.Management.Setup.DeploymentSessionHeartbeatRequestedEventArgs pyth
 enum Windows.Management.Setup.DeploymentSessionStateChange python_type
     py DeploymentSessionStateChange
     signature enum(Windows.Management.Setup.DeploymentSessionStateChange;i4)
+    constant NO_CHANGE 0
+    constant CANCEL_REQUESTED_BY_USER 1
+    constant RETRY_REQUESTED_BY_USER 2
 
 class Windows.Management.Setup.DeploymentSessionStateChangedEventArgs python_type
     py DeploymentSessionStateChangedEventArgs
@@ -194,6 +211,14 @@ class Windows.Management.Setup.DeploymentWorkloadBatch python_type
 enum Windows.Management.Setup.DeploymentWorkloadState python_type
     py DeploymentWorkloadState
     signature enum(Windows.Management.Setup.DeploymentWorkloadState;i4)
+    constant NOT_STARTED 0
+    constant IN_PROGRESS 1
+    constant COMPLETED 2
+    constant FAILED 3
+    constant CANCELED 4
+    constant SKIPPED 5
+    constant UNINSTALLED 6
+    constant REBOOT_REQUIRED 7
 
 class Windows.Management.Setup.DevicePreparationExecutionContext python_type
     py DevicePreparationExecutionContext

@@ -107,10 +107,14 @@ class Windows.Graphics.Capture.GraphicsCaptureAccess static python_type
 enum Windows.Graphics.Capture.GraphicsCaptureAccessKind python_type
     py GraphicsCaptureAccessKind
     signature enum(Windows.Graphics.Capture.GraphicsCaptureAccessKind;i4)
+    constant BORDERLESS 0
+    constant PROGRAMMATIC 1
 
 enum Windows.Graphics.Capture.GraphicsCaptureDirtyRegionMode python_type
     py GraphicsCaptureDirtyRegionMode
     signature enum(Windows.Graphics.Capture.GraphicsCaptureDirtyRegionMode;i4)
+    constant REPORT_ONLY 0
+    constant REPORT_AND_RENDER 1
 
 class Windows.Graphics.Capture.GraphicsCaptureItem python_type
     py GraphicsCaptureItem

@@ -394,6 +394,35 @@ class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationF
 enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationMessage python_type
     py SecondaryAuthenticationFactorAuthenticationMessage
     signature enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationMessage;i4)
+    constant INVALID 0
+    constant SWIPE_UP_WELCOME 1
+    constant TAP_WELCOME 2
+    constant DEVICE_NEEDS_ATTENTION 3
+    constant LOOKING_FOR_DEVICE 4
+    constant LOOKING_FOR_DEVICE_PLUGGEDIN 5
+    constant BLUETOOTH_IS_DISABLED 6
+    constant NFC_IS_DISABLED 7
+    constant WI_FI_IS_DISABLED 8
+    constant EXTRA_TAP_IS_REQUIRED 9
+    constant DISABLED_BY_POLICY 10
+    constant TAP_ON_DEVICE_REQUIRED 11
+    constant HOLD_FINGER 12
+    constant SCAN_FINGER 13
+    constant UNAUTHORIZED_USER 14
+    constant REREGISTER_REQUIRED 15
+    constant TRY_AGAIN 16
+    constant SAY_PASSPHRASE 17
+    constant READY_TO_SIGN_IN 18
+    constant USE_ANOTHER_SIGN_IN_OPTION 19
+    constant CONNECTION_REQUIRED 20
+    constant TIME_LIMIT_EXCEEDED 21
+    constant CANCELED_BY_USER 22
+    constant CENTER_HAND 23
+    constant MOVE_HAND_CLOSER 24
+    constant MOVE_HAND_FARTHER 25
+    constant PLACE_HAND_ABOVE 26
+    constant RECOGNITION_FAILED 27
+    constant DEVICE_UNAVAILABLE 28
 
 class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult python_type
     py SecondaryAuthenticationFactorAuthenticationResult
@@ -410,10 +439,21 @@ class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationF
 enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationScenario python_type
     py SecondaryAuthenticationFactorAuthenticationScenario
     signature enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationScenario;i4)
+    constant SIGN_IN 0
+    constant CREDENTIAL_PROMPT 1
 
 enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStage python_type
     py SecondaryAuthenticationFactorAuthenticationStage
     signature enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStage;i4)
+    constant NOT_STARTED 0
+    constant WAITING_FOR_USER_CONFIRMATION 1
+    constant COLLECTING_CREDENTIAL 2
+    constant SUSPENDING_AUTHENTICATION 3
+    constant CREDENTIAL_COLLECTED 4
+    constant CREDENTIAL_AUTHENTICATED 5
+    constant STOPPING_AUTHENTICATION 6
+    constant READY_FOR_LOCK 7
+    constant CHECKING_DEVICE_PRESENCE 8
 
 class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs python_type
     py SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs
@@ -442,30 +482,56 @@ class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationF
 enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStatus python_type
     py SecondaryAuthenticationFactorAuthenticationStatus
     signature enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStatus;i4)
+    constant FAILED 0
+    constant STARTED 1
+    constant UNKNOWN_DEVICE 2
+    constant DISABLED_BY_POLICY 3
+    constant INVALID_AUTHENTICATION_STAGE 4
 
-enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceCapabilities python_type
+enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceCapabilities python_type flags_enum
     py SecondaryAuthenticationFactorDeviceCapabilities
     signature enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceCapabilities;u4)
+    constant NONE 0x0
+    constant SECURE_STORAGE 0x1
+    constant STORE_KEYS 0x2
+    constant CONFIRM_USER_INTENT_TO_AUTHENTICATE 0x4
+    constant SUPPORT_SECURE_USER_PRESENCE_CHECK 0x8
+    constant TRANSMITTED_DATA_IS_ENCRYPTED 0x10
+    constant H_MAC_SHA256 0x20
+    constant CLOSE_RANGE_DATA_TRANSMISSION 0x40
 
 enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceFindScope python_type
     py SecondaryAuthenticationFactorDeviceFindScope
     signature enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceFindScope;i4)
+    constant USER 0
+    constant ALL_USERS 1
 
 enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresence python_type
     py SecondaryAuthenticationFactorDevicePresence
     signature enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresence;i4)
+    constant ABSENT 0
+    constant PRESENT 1
 
 enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringMode python_type
     py SecondaryAuthenticationFactorDevicePresenceMonitoringMode
     signature enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringMode;i4)
+    constant UNSUPPORTED 0
+    constant APP_MANAGED 1
+    constant SYSTEM_MANAGED 2
 
 enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus python_type
     py SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus
     signature enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus;i4)
+    constant UNSUPPORTED 0
+    constant SUCCEEDED 1
+    constant DISABLED_BY_POLICY 2
 
 enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus python_type
     py SecondaryAuthenticationFactorFinishAuthenticationStatus
     signature enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus;i4)
+    constant FAILED 0
+    constant COMPLETED 1
+    constant NONCE_EXPIRED 2
 
 class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo python_type
     py SecondaryAuthenticationFactorInfo
@@ -570,6 +636,11 @@ class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationF
 enum Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationStatus python_type
     py SecondaryAuthenticationFactorRegistrationStatus
     signature enum(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationStatus;i4)
+    constant FAILED 0
+    constant STARTED 1
+    constant CANCELED_BY_USER 2
+    constant PIN_SETUP_REQUIRED 3
+    constant DISABLED_BY_POLICY 4
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
     py winrt.windows.foundation.AsyncOperationCompletedHandler

@@ -71,6 +71,10 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler parameter
 enum Windows.Foundation.AsyncStatus python_type
     py AsyncStatus
     signature enum(Windows.Foundation.AsyncStatus;i4)
+    constant CANCELED 2
+    constant COMPLETED 1
+    constant ERROR 3
+    constant STARTED 0
 
 struct Windows.Foundation.DateTime python_type
     py DateTime
@@ -829,6 +833,47 @@ struct Windows.Foundation.Point python_type
 enum Windows.Foundation.PropertyType python_type
     py PropertyType
     signature enum(Windows.Foundation.PropertyType;i4)
+    constant EMPTY 0
+    constant UINT8 1
+    constant INT16 2
+    constant UINT16 3
+    constant INT32 4
+    constant UINT32 5
+    constant INT64 6
+    constant UINT64 7
+    constant SINGLE 8
+    constant DOUBLE 9
+    constant CHAR16 10
+    constant BOOLEAN 11
+    constant STRING 12
+    constant INSPECTABLE 13
+    constant DATE_TIME 14
+    constant TIME_SPAN 15
+    constant GUID 16
+    constant POINT 17
+    constant SIZE 18
+    constant RECT 19
+    constant OTHER_TYPE 20
+    constant UINT8_ARRAY 1025
+    constant INT16_ARRAY 1026
+    constant UINT16_ARRAY 1027
+    constant INT32_ARRAY 1028
+    constant UINT32_ARRAY 1029
+    constant INT64_ARRAY 1030
+    constant UINT64_ARRAY 1031
+    constant SINGLE_ARRAY 1032
+    constant DOUBLE_ARRAY 1033
+    constant CHAR16_ARRAY 1034
+    constant BOOLEAN_ARRAY 1035
+    constant STRING_ARRAY 1036
+    constant INSPECTABLE_ARRAY 1037
+    constant DATE_TIME_ARRAY 1038
+    constant TIME_SPAN_ARRAY 1039
+    constant GUID_ARRAY 1040
+    constant POINT_ARRAY 1041
+    constant SIZE_ARRAY 1042
+    constant RECT_ARRAY 1043
+    constant OTHER_TYPE_ARRAY 1044
 
 class Windows.Foundation.PropertyValue static python_type
     py PropertyValue

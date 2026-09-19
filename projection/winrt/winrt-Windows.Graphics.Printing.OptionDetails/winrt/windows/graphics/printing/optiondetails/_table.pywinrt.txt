@@ -1046,13 +1046,21 @@ class Windows.Graphics.Printing.OptionDetails.PrintMediaTypeOptionDetails python
             in object name=value
             out boolean return
 
-enum Windows.Graphics.Printing.OptionDetails.PrintOptionStates python_type
+enum Windows.Graphics.Printing.OptionDetails.PrintOptionStates python_type flags_enum
     py PrintOptionStates
     signature enum(Windows.Graphics.Printing.OptionDetails.PrintOptionStates;u4)
+    constant NONE 0x0
+    constant ENABLED 0x1
+    constant CONSTRAINED 0x2
 
 enum Windows.Graphics.Printing.OptionDetails.PrintOptionType python_type
     py PrintOptionType
     signature enum(Windows.Graphics.Printing.OptionDetails.PrintOptionType;i4)
+    constant UNKNOWN 0
+    constant NUMBER 1
+    constant TEXT 2
+    constant ITEM_LIST 3
+    constant TOGGLE 4
 
 class Windows.Graphics.Printing.OptionDetails.PrintOrientationOptionDetails python_type
     py PrintOrientationOptionDetails

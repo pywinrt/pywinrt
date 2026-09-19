@@ -404,10 +404,14 @@ interface Windows.Media.SpeechSynthesis.IVoiceInformation
 enum Windows.Media.SpeechSynthesis.SpeechAppendedSilence python_type
     py SpeechAppendedSilence
     signature enum(Windows.Media.SpeechSynthesis.SpeechAppendedSilence;i4)
+    constant DEFAULT 0
+    constant MIN 1
 
 enum Windows.Media.SpeechSynthesis.SpeechPunctuationSilence python_type
     py SpeechPunctuationSilence
     signature enum(Windows.Media.SpeechSynthesis.SpeechPunctuationSilence;i4)
+    constant DEFAULT 0
+    constant MIN 1
 
 class Windows.Media.SpeechSynthesis.SpeechSynthesisStream python_type closeable
     py SpeechSynthesisStream
@@ -561,6 +565,8 @@ class Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions python_type
 enum Windows.Media.SpeechSynthesis.VoiceGender python_type
     py VoiceGender
     signature enum(Windows.Media.SpeechSynthesis.VoiceGender;i4)
+    constant MALE 0
+    constant FEMALE 1
 
 class Windows.Media.SpeechSynthesis.VoiceInformation python_type
     py VoiceInformation

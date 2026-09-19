@@ -172,10 +172,19 @@ class Windows.Management.MdmAlert activatable python_type
 enum Windows.Management.MdmAlertDataType python_type
     py MdmAlertDataType
     signature enum(Windows.Management.MdmAlertDataType;i4)
+    constant STRING 0
+    constant BASE64 1
+    constant BOOLEAN 2
+    constant INTEGER 3
 
 enum Windows.Management.MdmAlertMark python_type
     py MdmAlertMark
     signature enum(Windows.Management.MdmAlertMark;i4)
+    constant NONE 0
+    constant FATAL 1
+    constant CRITICAL 2
+    constant WARNING 3
+    constant INFORMATIONAL 4
 
 class Windows.Management.MdmSession python_type
     py MdmSession
@@ -226,6 +235,13 @@ class Windows.Management.MdmSessionManager static python_type
 enum Windows.Management.MdmSessionState python_type
     py MdmSessionState
     signature enum(Windows.Management.MdmSessionState;i4)
+    constant NOT_STARTED 0
+    constant STARTING 1
+    constant CONNECTING 2
+    constant COMMUNICATING 3
+    constant ALERT_STATUS_AVAILABLE 4
+    constant RETRYING 5
+    constant COMPLETED 6
 
 class System.String external
     py winrt.system.String

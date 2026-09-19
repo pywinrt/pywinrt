@@ -2,9 +2,19 @@ format 4.0
 generator 0.0.0
 namespace Windows.Graphics.DirectX.Direct3D11
 
-enum Windows.Graphics.DirectX.Direct3D11.Direct3DBindings python_type
+enum Windows.Graphics.DirectX.Direct3D11.Direct3DBindings python_type flags_enum
     py Direct3DBindings
     signature enum(Windows.Graphics.DirectX.Direct3D11.Direct3DBindings;u4)
+    constant VERTEX_BUFFER 0x1
+    constant INDEX_BUFFER 0x2
+    constant CONSTANT_BUFFER 0x4
+    constant SHADER_RESOURCE 0x8
+    constant STREAM_OUTPUT 0x10
+    constant RENDER_TARGET 0x20
+    constant DEPTH_STENCIL 0x40
+    constant UNORDERED_ACCESS 0x80
+    constant DECODER 0x200
+    constant VIDEO_ENCODER 0x400
 
 struct Windows.Graphics.DirectX.Direct3D11.Direct3DMultisampleDescription python_type
     py Direct3DMultisampleDescription
@@ -23,6 +33,10 @@ struct Windows.Graphics.DirectX.Direct3D11.Direct3DSurfaceDescription python_typ
 enum Windows.Graphics.DirectX.Direct3D11.Direct3DUsage python_type
     py Direct3DUsage
     signature enum(Windows.Graphics.DirectX.Direct3D11.Direct3DUsage;i4)
+    constant DEFAULT 0
+    constant IMMUTABLE 1
+    constant DYNAMIC 2
+    constant STAGING 3
 
 interface Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice python_type closeable
     py _IDirect3DDevice

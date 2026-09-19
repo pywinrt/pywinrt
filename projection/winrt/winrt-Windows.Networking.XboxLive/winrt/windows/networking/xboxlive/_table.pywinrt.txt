@@ -678,9 +678,11 @@ class Windows.Networking.XboxLive.XboxLiveEndpointPair python_type
         method GetRemoteSocketAddressBytes slot=9 inputs=1 outputs=0 declaring=Windows.Networking.XboxLive.IXboxLiveEndpointPair shape=51 reverse=100
             fill_array uint8 name=socketAddress
 
-enum Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors python_type
+enum Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors python_type flags_enum
     py XboxLiveEndpointPairCreationBehaviors
     signature enum(Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors;u4)
+    constant NONE 0x0
+    constant REEVALUATE_PATH 0x1
 
 class Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult python_type
     py XboxLiveEndpointPairCreationResult
@@ -703,10 +705,26 @@ class Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult python_type
 enum Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus python_type
     py XboxLiveEndpointPairCreationStatus
     signature enum(Windows.Networking.XboxLive.XboxLiveEndpointPairCreationStatus;i4)
+    constant SUCCEEDED 0
+    constant NO_LOCAL_NETWORKS 1
+    constant NO_COMPATIBLE_NETWORK_PATHS 2
+    constant LOCAL_SYSTEM_NOT_AUTHORIZED 3
+    constant CANCELED 4
+    constant TIMED_OUT 5
+    constant REMOTE_SYSTEM_NOT_AUTHORIZED 6
+    constant REFUSED_DUE_TO_CONFIGURATION 7
+    constant UNEXPECTED_INTERNAL_ERROR 8
 
 enum Windows.Networking.XboxLive.XboxLiveEndpointPairState python_type
     py XboxLiveEndpointPairState
     signature enum(Windows.Networking.XboxLive.XboxLiveEndpointPairState;i4)
+    constant INVALID 0
+    constant CREATING_OUTBOUND 1
+    constant CREATING_INBOUND 2
+    constant READY 3
+    constant DELETING_LOCALLY 4
+    constant REMOTE_ENDPOINT_TERMINATING 5
+    constant DELETED 6
 
 class Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs python_type
     py XboxLiveEndpointPairStateChangedEventArgs
@@ -793,6 +811,9 @@ class Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs py
 enum Windows.Networking.XboxLive.XboxLiveNetworkAccessKind python_type
     py XboxLiveNetworkAccessKind
     signature enum(Windows.Networking.XboxLive.XboxLiveNetworkAccessKind;i4)
+    constant OPEN 0
+    constant MODERATE 1
+    constant STRICT 2
 
 class Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement activatable python_type
     py XboxLiveQualityOfServiceMeasurement
@@ -885,10 +906,31 @@ class Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement activatabl
 enum Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurementStatus python_type
     py XboxLiveQualityOfServiceMeasurementStatus
     signature enum(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurementStatus;i4)
+    constant NOT_STARTED 0
+    constant IN_PROGRESS 1
+    constant IN_PROGRESS_WITH_PROVISIONAL_RESULTS 2
+    constant SUCCEEDED 3
+    constant NO_LOCAL_NETWORKS 4
+    constant NO_COMPATIBLE_NETWORK_PATHS 5
+    constant LOCAL_SYSTEM_NOT_AUTHORIZED 6
+    constant CANCELED 7
+    constant TIMED_OUT 8
+    constant REMOTE_SYSTEM_NOT_AUTHORIZED 9
+    constant REFUSED_DUE_TO_CONFIGURATION 10
+    constant UNEXPECTED_INTERNAL_ERROR 11
 
 enum Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric python_type
     py XboxLiveQualityOfServiceMetric
     signature enum(Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric;i4)
+    constant AVERAGE_LATENCY_IN_MILLISECONDS 0
+    constant MIN_LATENCY_IN_MILLISECONDS 1
+    constant MAX_LATENCY_IN_MILLISECONDS 2
+    constant AVERAGE_OUTBOUND_BITS_PER_SECOND 3
+    constant MIN_OUTBOUND_BITS_PER_SECOND 4
+    constant MAX_OUTBOUND_BITS_PER_SECOND 5
+    constant AVERAGE_INBOUND_BITS_PER_SECOND 6
+    constant MIN_INBOUND_BITS_PER_SECOND 7
+    constant MAX_INBOUND_BITS_PER_SECOND 8
 
 class Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult python_type
     py XboxLiveQualityOfServiceMetricResult
@@ -926,6 +968,9 @@ class Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult p
 enum Windows.Networking.XboxLive.XboxLiveSocketKind python_type
     py XboxLiveSocketKind
     signature enum(Windows.Networking.XboxLive.XboxLiveSocketKind;i4)
+    constant NONE 0
+    constant DATAGRAM 1
+    constant STREAM 2
 
 class System.Object external
     py winrt.system.Object

@@ -5,6 +5,19 @@ namespace Microsoft.Windows.BadgeNotifications
 enum Microsoft.Windows.BadgeNotifications.BadgeNotificationGlyph python_type
     py BadgeNotificationGlyph
     signature enum(Microsoft.Windows.BadgeNotifications.BadgeNotificationGlyph;i4)
+    constant NONE 0
+    constant ACTIVITY 1
+    constant ALARM 2
+    constant ALERT 3
+    constant ATTENTION 4
+    constant AVAILABLE 5
+    constant AWAY 6
+    constant BUSY 7
+    constant ERROR 8
+    constant NEW_MESSAGE 9
+    constant PAUSED 10
+    constant PLAYING 11
+    constant UNAVAILABLE 12
 
 class Microsoft.Windows.BadgeNotifications.BadgeNotificationManager python_type
     py BadgeNotificationManager

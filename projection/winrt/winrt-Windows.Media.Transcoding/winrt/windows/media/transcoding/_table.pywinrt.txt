@@ -178,6 +178,8 @@ class Windows.Media.Transcoding.MediaTranscoder activatable python_type
 enum Windows.Media.Transcoding.MediaVideoProcessingAlgorithm python_type
     py MediaVideoProcessingAlgorithm
     signature enum(Windows.Media.Transcoding.MediaVideoProcessingAlgorithm;i4)
+    constant DEFAULT 0
+    constant MRF_CRF444 1
 
 class Windows.Media.Transcoding.PrepareTranscodeResult python_type
     py PrepareTranscodeResult
@@ -197,6 +199,10 @@ class Windows.Media.Transcoding.PrepareTranscodeResult python_type
 enum Windows.Media.Transcoding.TranscodeFailureReason python_type
     py TranscodeFailureReason
     signature enum(Windows.Media.Transcoding.TranscodeFailureReason;i4)
+    constant NONE 0
+    constant UNKNOWN 1
+    constant INVALID_PROFILE 2
+    constant CODEC_NOT_FOUND 3
 
 class System.Double external
     py winrt.system.Double

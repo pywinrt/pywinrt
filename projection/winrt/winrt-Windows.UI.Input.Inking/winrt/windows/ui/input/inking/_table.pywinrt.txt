@@ -62,6 +62,9 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UI
 enum Windows.UI.Input.Inking.HandwritingLineHeight python_type
     py HandwritingLineHeight
     signature enum(Windows.UI.Input.Inking.HandwritingLineHeight;i4)
+    constant SMALL 0
+    constant MEDIUM 1
+    constant LARGE 2
 
 interface Windows.Foundation.IAsyncActionWithProgress<System.UInt64> concrete awaitable
     py winrt.windows.foundation._IAsyncActionWithProgress[UInt64]
@@ -1108,6 +1111,8 @@ class Windows.UI.Input.Inking.InkDrawingAttributes activatable python_type
 enum Windows.UI.Input.Inking.InkDrawingAttributesKind python_type
     py InkDrawingAttributesKind
     signature enum(Windows.UI.Input.Inking.InkDrawingAttributesKind;i4)
+    constant DEFAULT 0
+    constant PENCIL 1
 
 class Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties python_type
     py InkDrawingAttributesPencilProperties
@@ -1123,6 +1128,9 @@ class Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties python_type
 enum Windows.UI.Input.Inking.InkHighContrastAdjustment python_type
     py InkHighContrastAdjustment
     signature enum(Windows.UI.Input.Inking.InkHighContrastAdjustment;i4)
+    constant USE_SYSTEM_COLORS_WHEN_NECESSARY 0
+    constant USE_SYSTEM_COLORS 1
+    constant USE_ORIGINAL_COLORS 2
 
 class Windows.UI.Input.Inking.InkInputConfiguration python_type
     py InkInputConfiguration
@@ -1165,10 +1173,15 @@ class Windows.UI.Input.Inking.InkInputProcessingConfiguration python_type
 enum Windows.UI.Input.Inking.InkInputProcessingMode python_type
     py InkInputProcessingMode
     signature enum(Windows.UI.Input.Inking.InkInputProcessingMode;i4)
+    constant NONE 0
+    constant INKING 1
+    constant ERASING 2
 
 enum Windows.UI.Input.Inking.InkInputRightDragAction python_type
     py InkInputRightDragAction
     signature enum(Windows.UI.Input.Inking.InkInputRightDragAction;i4)
+    constant LEAVE_UNPROCESSED 0
+    constant ALLOW_PROCESSING 1
 
 class Windows.UI.Input.Inking.InkManager activatable python_type
     py InkManager
@@ -1265,6 +1278,9 @@ class Windows.UI.Input.Inking.InkManager activatable python_type
 enum Windows.UI.Input.Inking.InkManipulationMode python_type
     py InkManipulationMode
     signature enum(Windows.UI.Input.Inking.InkManipulationMode;i4)
+    constant INKING 0
+    constant ERASING 1
+    constant SELECTING 2
 
 class Windows.UI.Input.Inking.InkModelerAttributes python_type
     py InkModelerAttributes
@@ -1291,6 +1307,8 @@ class Windows.UI.Input.Inking.InkModelerAttributes python_type
 enum Windows.UI.Input.Inking.InkPersistenceFormat python_type
     py InkPersistenceFormat
     signature enum(Windows.UI.Input.Inking.InkPersistenceFormat;i4)
+    constant GIF_WITH_EMBEDDED_ISF 0
+    constant ISF 1
 
 class Windows.UI.Input.Inking.InkPoint python_type
     py InkPoint
@@ -1395,6 +1413,8 @@ class Windows.UI.Input.Inking.InkPresenter python_type
 enum Windows.UI.Input.Inking.InkPresenterPredefinedConfiguration python_type
     py InkPresenterPredefinedConfiguration
     signature enum(Windows.UI.Input.Inking.InkPresenterPredefinedConfiguration;i4)
+    constant SIMPLE_SINGLE_POINTER 0
+    constant SIMPLE_MULTIPLE_POINTER 1
 
 class Windows.UI.Input.Inking.InkPresenterProtractor python_type
     py InkPresenterProtractor
@@ -1525,6 +1545,9 @@ class Windows.UI.Input.Inking.InkPresenterRuler python_type
 enum Windows.UI.Input.Inking.InkPresenterStencilKind python_type
     py InkPresenterStencilKind
     signature enum(Windows.UI.Input.Inking.InkPresenterStencilKind;i4)
+    constant OTHER 0
+    constant RULER 1
+    constant PROTRACTOR 2
 
 class Windows.UI.Input.Inking.InkRecognitionResult python_type
     py InkRecognitionResult
@@ -1544,6 +1567,9 @@ class Windows.UI.Input.Inking.InkRecognitionResult python_type
 enum Windows.UI.Input.Inking.InkRecognitionTarget python_type
     py InkRecognitionTarget
     signature enum(Windows.UI.Input.Inking.InkRecognitionTarget;i4)
+    constant ALL 0
+    constant SELECTED 1
+    constant RECENT 2
 
 class Windows.UI.Input.Inking.InkRecognizer python_type
     py InkRecognizer
@@ -1916,10 +1942,14 @@ class Windows.UI.Input.Inking.PenAndInkSettings python_type
 enum Windows.UI.Input.Inking.PenHandedness python_type
     py PenHandedness
     signature enum(Windows.UI.Input.Inking.PenHandedness;i4)
+    constant RIGHT 0
+    constant LEFT 1
 
 enum Windows.UI.Input.Inking.PenTipShape python_type
     py PenTipShape
     signature enum(Windows.UI.Input.Inking.PenTipShape;i4)
+    constant CIRCLE 0
+    constant RECTANGLE 1
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkPresenter,Windows.UI.Input.Inking.InkStrokesCollectedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[InkPresenter, InkStrokesCollectedEventArgs]

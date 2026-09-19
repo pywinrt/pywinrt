@@ -5,10 +5,15 @@ namespace Microsoft.UI.Text
 enum Microsoft.UI.Text.CaretType python_type
     py CaretType
     signature enum(Microsoft.UI.Text.CaretType;i4)
+    constant NORMAL 0
+    constant NULL 1
 
-enum Microsoft.UI.Text.FindOptions python_type
+enum Microsoft.UI.Text.FindOptions python_type flags_enum
     py FindOptions
     signature enum(Microsoft.UI.Text.FindOptions;u4)
+    constant NONE 0x0
+    constant WORD 0x2
+    constant CASE 0x4
 
 class Microsoft.UI.Text.FontWeights python_type
     py FontWeights
@@ -53,10 +58,17 @@ class Microsoft.UI.Text.FontWeights python_type
 enum Microsoft.UI.Text.FormatEffect python_type
     py FormatEffect
     signature enum(Microsoft.UI.Text.FormatEffect;i4)
+    constant OFF 0
+    constant ON 1
+    constant TOGGLE 2
+    constant UNDEFINED 3
 
 enum Microsoft.UI.Text.HorizontalCharacterAlignment python_type
     py HorizontalCharacterAlignment
     signature enum(Microsoft.UI.Text.HorizontalCharacterAlignment;i4)
+    constant LEFT 0
+    constant RIGHT 1
+    constant CENTER 2
 
 interface Microsoft.UI.Text.IFontWeights
     guid 386cd040-5404-5a8d-8bc7-2ca989f5c065
@@ -775,46 +787,133 @@ interface Microsoft.UI.Text.ITextSelection python_type
 enum Microsoft.UI.Text.LetterCase python_type
     py LetterCase
     signature enum(Microsoft.UI.Text.LetterCase;i4)
+    constant LOWER 0
+    constant UPPER 1
 
 enum Microsoft.UI.Text.LineSpacingRule python_type
     py LineSpacingRule
     signature enum(Microsoft.UI.Text.LineSpacingRule;i4)
+    constant UNDEFINED 0
+    constant SINGLE 1
+    constant ONE_AND_HALF 2
+    constant DOUBLE 3
+    constant AT_LEAST 4
+    constant EXACTLY 5
+    constant MULTIPLE 6
+    constant PERCENT 7
 
 enum Microsoft.UI.Text.LinkType python_type
     py LinkType
     signature enum(Microsoft.UI.Text.LinkType;i4)
+    constant UNDEFINED 0
+    constant NOT_A_LINK 1
+    constant CLIENT_LINK 2
+    constant FRIENDLY_LINK_NAME 3
+    constant FRIENDLY_LINK_ADDRESS 4
+    constant AUTO_LINK 5
+    constant AUTO_LINK_EMAIL 6
+    constant AUTO_LINK_PHONE 7
+    constant AUTO_LINK_PATH 8
 
 enum Microsoft.UI.Text.MarkerAlignment python_type
     py MarkerAlignment
     signature enum(Microsoft.UI.Text.MarkerAlignment;i4)
+    constant UNDEFINED 0
+    constant LEFT 1
+    constant CENTER 2
+    constant RIGHT 3
 
 enum Microsoft.UI.Text.MarkerStyle python_type
     py MarkerStyle
     signature enum(Microsoft.UI.Text.MarkerStyle;i4)
+    constant UNDEFINED 0
+    constant PARENTHESIS 1
+    constant PARENTHESES 2
+    constant PERIOD 3
+    constant PLAIN 4
+    constant MINUS 5
+    constant NO_NUMBER 6
 
 enum Microsoft.UI.Text.MarkerType python_type
     py MarkerType
     signature enum(Microsoft.UI.Text.MarkerType;i4)
+    constant UNDEFINED 0
+    constant NONE 1
+    constant BULLET 2
+    constant ARABIC 3
+    constant LOWERCASE_ENGLISH_LETTER 4
+    constant UPPERCASE_ENGLISH_LETTER 5
+    constant LOWERCASE_ROMAN 6
+    constant UPPERCASE_ROMAN 7
+    constant UNICODE_SEQUENCE 8
+    constant CIRCLED_NUMBER 9
+    constant BLACK_CIRCLE_WINGDING 10
+    constant WHITE_CIRCLE_WINGDING 11
+    constant ARABIC_WIDE 12
+    constant SIMPLIFIED_CHINESE 13
+    constant TRADITIONAL_CHINESE 14
+    constant JAPAN_SIMPLIFIED_CHINESE 15
+    constant JAPAN_KOREA 16
+    constant ARABIC_DICTIONARY 17
+    constant ARABIC_ABJAD 18
+    constant HEBREW 19
+    constant THAI_ALPHABETIC 20
+    constant THAI_NUMERIC 21
+    constant DEVANAGARI_VOWEL 22
+    constant DEVANAGARI_CONSONANT 23
+    constant DEVANAGARI_NUMERIC 24
 
 enum Microsoft.UI.Text.ParagraphAlignment python_type
     py ParagraphAlignment
     signature enum(Microsoft.UI.Text.ParagraphAlignment;i4)
+    constant UNDEFINED 0
+    constant LEFT 1
+    constant CENTER 2
+    constant RIGHT 3
+    constant JUSTIFY 4
 
 enum Microsoft.UI.Text.ParagraphStyle python_type
     py ParagraphStyle
     signature enum(Microsoft.UI.Text.ParagraphStyle;i4)
+    constant UNDEFINED 0
+    constant NONE 1
+    constant NORMAL 2
+    constant HEADING1 3
+    constant HEADING2 4
+    constant HEADING3 5
+    constant HEADING4 6
+    constant HEADING5 7
+    constant HEADING6 8
+    constant HEADING7 9
+    constant HEADING8 10
+    constant HEADING9 11
 
-enum Microsoft.UI.Text.PointOptions python_type
+enum Microsoft.UI.Text.PointOptions python_type flags_enum
     py PointOptions
     signature enum(Microsoft.UI.Text.PointOptions;u4)
+    constant NONE 0x0
+    constant INCLUDE_INSET 0x1
+    constant START 0x20
+    constant CLIENT_COORDINATES 0x100
+    constant ALLOW_OFF_CLIENT 0x200
+    constant TRANSFORM 0x400
+    constant NO_HORIZONTAL_SCROLL 0x10000
+    constant NO_VERTICAL_SCROLL 0x40000
 
 enum Microsoft.UI.Text.RangeGravity python_type
     py RangeGravity
     signature enum(Microsoft.UI.Text.RangeGravity;i4)
+    constant UI_BEHAVIOR 0
+    constant BACKWARD 1
+    constant FORWARD 2
+    constant INWARD 3
+    constant OUTWARD 4
 
 enum Microsoft.UI.Text.RichEditMathMode python_type
     py RichEditMathMode
     signature enum(Microsoft.UI.Text.RichEditMathMode;i4)
+    constant NO_MATH 0
+    constant MATH_ONLY 1
 
 class Microsoft.UI.Text.RichEditTextDocument python_type
     py RichEditTextDocument
@@ -1120,21 +1219,42 @@ class Microsoft.UI.Text.RichEditTextRange python_type
             in boolean name=extend
             out int32 return
 
-enum Microsoft.UI.Text.SelectionOptions python_type
+enum Microsoft.UI.Text.SelectionOptions python_type flags_enum
     py SelectionOptions
     signature enum(Microsoft.UI.Text.SelectionOptions;u4)
+    constant START_ACTIVE 0x1
+    constant AT_END_OF_LINE 0x2
+    constant OVERTYPE 0x4
+    constant ACTIVE 0x8
+    constant REPLACE 0x10
 
 enum Microsoft.UI.Text.SelectionType python_type
     py SelectionType
     signature enum(Microsoft.UI.Text.SelectionType;i4)
+    constant NONE 0
+    constant INSERTION_POINT 1
+    constant NORMAL 2
+    constant INLINE_SHAPE 7
+    constant SHAPE 8
 
 enum Microsoft.UI.Text.TabAlignment python_type
     py TabAlignment
     signature enum(Microsoft.UI.Text.TabAlignment;i4)
+    constant LEFT 0
+    constant CENTER 1
+    constant RIGHT 2
+    constant DECIMAL 3
+    constant BAR 4
 
 enum Microsoft.UI.Text.TabLeader python_type
     py TabLeader
     signature enum(Microsoft.UI.Text.TabLeader;i4)
+    constant SPACES 0
+    constant DOTS 1
+    constant DASHES 2
+    constant LINES 3
+    constant THICK_LINES 4
+    constant EQUALS 5
 
 class Microsoft.UI.Text.TextConstants static python_type
     py TextConstants
@@ -1164,29 +1284,165 @@ class Microsoft.UI.Text.TextConstants static python_type
         get get_UndefinedInt32Value slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Text.ITextConstantsStatics shape=4 reverse=141 static
             out int32 return
 
-enum Microsoft.UI.Text.TextGetOptions python_type
+enum Microsoft.UI.Text.TextGetOptions python_type flags_enum
     py TextGetOptions
     signature enum(Microsoft.UI.Text.TextGetOptions;u4)
+    constant NONE 0x0
+    constant ADJUST_CRLF 0x1
+    constant USE_CRLF 0x2
+    constant USE_OBJECT_TEXT 0x4
+    constant ALLOW_FINAL_EOP 0x8
+    constant NO_HIDDEN 0x20
+    constant INCLUDE_NUMBERING 0x40
+    constant FORMAT_RTF 0x2000
+    constant USE_LF 0x1000000
 
 enum Microsoft.UI.Text.TextRangeUnit python_type
     py TextRangeUnit
     signature enum(Microsoft.UI.Text.TextRangeUnit;i4)
+    constant CHARACTER 0
+    constant WORD 1
+    constant SENTENCE 2
+    constant PARAGRAPH 3
+    constant LINE 4
+    constant STORY 5
+    constant SCREEN 6
+    constant SECTION 7
+    constant WINDOW 8
+    constant CHARACTER_FORMAT 9
+    constant PARAGRAPH_FORMAT 10
+    constant OBJECT 11
+    constant HARD_PARAGRAPH 12
+    constant CLUSTER 13
+    constant BOLD 14
+    constant ITALIC 15
+    constant UNDERLINE 16
+    constant STRIKETHROUGH 17
+    constant PROTECTED_TEXT 18
+    constant LINK 19
+    constant SMALL_CAPS 20
+    constant ALL_CAPS 21
+    constant HIDDEN 22
+    constant OUTLINE 23
+    constant SHADOW 24
+    constant IMPRINT 25
+    constant DISABLED 26
+    constant REVISED 27
+    constant SUBSCRIPT 28
+    constant SUPERSCRIPT 29
+    constant FONT_BOUND 30
+    constant LINK_PROTECTED 31
+    constant CONTENT_LINK 32
 
 enum Microsoft.UI.Text.TextScript python_type
     py TextScript
     signature enum(Microsoft.UI.Text.TextScript;i4)
+    constant UNDEFINED 0
+    constant ANSI 1
+    constant EAST_EUROPE 2
+    constant CYRILLIC 3
+    constant GREEK 4
+    constant TURKISH 5
+    constant HEBREW 6
+    constant ARABIC 7
+    constant BALTIC 8
+    constant VIETNAMESE 9
+    constant DEFAULT 10
+    constant SYMBOL 11
+    constant THAI 12
+    constant SHIFT_JIS 13
+    constant GB2312 14
+    constant HANGUL 15
+    constant BIG5 16
+    constant PC437 17
+    constant OEM 18
+    constant MAC 19
+    constant ARMENIAN 20
+    constant SYRIAC 21
+    constant THAANA 22
+    constant DEVANAGARI 23
+    constant BENGALI 24
+    constant GURMUKHI 25
+    constant GUJARATI 26
+    constant ORIYA 27
+    constant TAMIL 28
+    constant TELUGU 29
+    constant KANNADA 30
+    constant MALAYALAM 31
+    constant SINHALA 32
+    constant LAO 33
+    constant TIBETAN 34
+    constant MYANMAR 35
+    constant GEORGIAN 36
+    constant JAMO 37
+    constant ETHIOPIC 38
+    constant CHEROKEE 39
+    constant ABORIGINAL 40
+    constant OGHAM 41
+    constant RUNIC 42
+    constant KHMER 43
+    constant MONGOLIAN 44
+    constant BRAILLE 45
+    constant YI 46
+    constant LIMBU 47
+    constant TAI_LE 48
+    constant NEW_TAI_LUE 49
+    constant SYLOTI_NAGRI 50
+    constant KHAROSHTHI 51
+    constant KAYAHLI 52
+    constant UNICODE_SYMBOL 53
+    constant EMOJI 54
+    constant GLAGOLITIC 55
+    constant LISU 56
+    constant VAI 57
+    constant N_KO 58
+    constant OSMANYA 59
+    constant PHAGS_PA 60
+    constant GOTHIC 61
+    constant DESERET 62
+    constant TIFINAGH 63
 
-enum Microsoft.UI.Text.TextSetOptions python_type
+enum Microsoft.UI.Text.TextSetOptions python_type flags_enum
     py TextSetOptions
     signature enum(Microsoft.UI.Text.TextSetOptions;u4)
+    constant NONE 0x0
+    constant UNICODE_BIDI 0x1
+    constant UNLINK 0x8
+    constant UNHIDE 0x10
+    constant CHECK_TEXT_LIMIT 0x20
+    constant FORMAT_RTF 0x2000
+    constant APPLY_RTF_DOCUMENT_DEFAULTS 0x4000
 
 enum Microsoft.UI.Text.UnderlineType python_type
     py UnderlineType
     signature enum(Microsoft.UI.Text.UnderlineType;i4)
+    constant UNDEFINED 0
+    constant NONE 1
+    constant SINGLE 2
+    constant WORDS 3
+    constant DOUBLE 4
+    constant DOTTED 5
+    constant DASH 6
+    constant DASH_DOT 7
+    constant DASH_DOT_DOT 8
+    constant WAVE 9
+    constant THICK 10
+    constant THIN 11
+    constant DOUBLE_WAVE 12
+    constant HEAVY_WAVE 13
+    constant LONG_DASH 14
+    constant THICK_DASH 15
+    constant THICK_DASH_DOT 16
+    constant THICK_DASH_DOT_DOT 17
+    constant THICK_DOTTED 18
+    constant THICK_LONG_DASH 19
 
 enum Microsoft.UI.Text.VerticalCharacterAlignment python_type
     py VerticalCharacterAlignment
     signature enum(Microsoft.UI.Text.VerticalCharacterAlignment;i4)
+    constant TOP 0
+    constant BASELINE 1
+    constant BOTTOM 2
 
 struct Windows.Foundation.Point external
     py winrt.windows.foundation.Point

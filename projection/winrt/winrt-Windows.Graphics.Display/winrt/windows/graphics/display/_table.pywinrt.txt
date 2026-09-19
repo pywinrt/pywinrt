@@ -46,6 +46,9 @@ class Windows.Graphics.Display.AdvancedColorInfo python_type
 enum Windows.Graphics.Display.AdvancedColorKind python_type
     py AdvancedColorKind
     signature enum(Windows.Graphics.Display.AdvancedColorKind;i4)
+    constant STANDARD_DYNAMIC_RANGE 0
+    constant WIDE_COLOR_GAMUT 1
+    constant HIGH_DYNAMIC_RANGE 2
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
@@ -168,21 +171,31 @@ class Windows.Graphics.Display.ColorOverrideSettings python_type
             in enum32 type=Windows.Graphics.Display.DisplayColorOverrideScenario name=overrideScenario
             out class type=Windows.Graphics.Display.ColorOverrideSettings return
 
-enum Windows.Graphics.Display.DisplayBrightnessOverrideOptions python_type
+enum Windows.Graphics.Display.DisplayBrightnessOverrideOptions python_type flags_enum
     py DisplayBrightnessOverrideOptions
     signature enum(Windows.Graphics.Display.DisplayBrightnessOverrideOptions;u4)
+    constant NONE 0x0
+    constant USE_DIMMED_POLICY_WHEN_BATTERY_IS_LOW 0x1
 
 enum Windows.Graphics.Display.DisplayBrightnessOverrideScenario python_type
     py DisplayBrightnessOverrideScenario
     signature enum(Windows.Graphics.Display.DisplayBrightnessOverrideScenario;i4)
+    constant IDLE_BRIGHTNESS 0
+    constant BARCODE_READING_BRIGHTNESS 1
+    constant FULL_BRIGHTNESS 2
 
 enum Windows.Graphics.Display.DisplayBrightnessScenario python_type
     py DisplayBrightnessScenario
     signature enum(Windows.Graphics.Display.DisplayBrightnessScenario;i4)
+    constant DEFAULT_BRIGHTNESS 0
+    constant IDLE_BRIGHTNESS 1
+    constant BARCODE_READING_BRIGHTNESS 2
+    constant FULL_BRIGHTNESS 3
 
 enum Windows.Graphics.Display.DisplayColorOverrideScenario python_type
     py DisplayColorOverrideScenario
     signature enum(Windows.Graphics.Display.DisplayColorOverrideScenario;i4)
+    constant ACCURATE 0
 
 class Windows.Graphics.Display.DisplayEnhancementOverride python_type
     py DisplayEnhancementOverride
@@ -353,9 +366,14 @@ class Windows.Graphics.Display.DisplayInformation python_type
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=4 reverse=22 static
             out class type=Windows.Graphics.Display.DisplayInformation return
 
-enum Windows.Graphics.Display.DisplayOrientations python_type
+enum Windows.Graphics.Display.DisplayOrientations python_type flags_enum
     py DisplayOrientations
     signature enum(Windows.Graphics.Display.DisplayOrientations;u4)
+    constant NONE 0x0
+    constant LANDSCAPE 0x1
+    constant PORTRAIT 0x2
+    constant LANDSCAPE_FLIPPED 0x4
+    constant PORTRAIT_FLIPPED 0x8
 
 class Windows.Graphics.Display.DisplayProperties static python_type
     py DisplayProperties
@@ -435,6 +453,8 @@ class Windows.Graphics.Display.DisplayServices python_type
 enum Windows.Graphics.Display.HdrMetadataFormat python_type
     py HdrMetadataFormat
     signature enum(Windows.Graphics.Display.HdrMetadataFormat;i4)
+    constant HDR10 0
+    constant HDR10_PLUS 1
 
 interface Windows.Graphics.Display.IAdvancedColorInfo
     guid 8797dcfb-b229-4081-ae9a-2cc85e34ad6a
@@ -750,6 +770,23 @@ struct Windows.Graphics.Display.NitRange python_type
 enum Windows.Graphics.Display.ResolutionScale python_type
     py ResolutionScale
     signature enum(Windows.Graphics.Display.ResolutionScale;i4)
+    constant INVALID 0
+    constant SCALE100_PERCENT 100
+    constant SCALE120_PERCENT 120
+    constant SCALE125_PERCENT 125
+    constant SCALE140_PERCENT 140
+    constant SCALE150_PERCENT 150
+    constant SCALE160_PERCENT 160
+    constant SCALE175_PERCENT 175
+    constant SCALE180_PERCENT 180
+    constant SCALE200_PERCENT 200
+    constant SCALE225_PERCENT 225
+    constant SCALE250_PERCENT 250
+    constant SCALE300_PERCENT 300
+    constant SCALE350_PERCENT 350
+    constant SCALE400_PERCENT 400
+    constant SCALE450_PERCENT 450
+    constant SCALE500_PERCENT 500
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.BrightnessOverride,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[BrightnessOverride, Object]

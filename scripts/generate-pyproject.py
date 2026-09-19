@@ -61,6 +61,7 @@ include src/async.h
 include src/callbacks.h
 include src/compose.h
 include src/delegates.h
+include src/enums.h
 include src/generics.h
 include src/implements.h
 include src/interp.h
@@ -569,6 +570,7 @@ write_project_files(
         "src/collections.cpp",
         "src/compose.cpp",
         "src/delegates.cpp",
+        "src/enums.cpp",
         "src/errors.cpp",
         "src/generics.cpp",
         "src/implements.cpp",

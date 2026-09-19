@@ -153,10 +153,20 @@ struct Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyCon
 enum Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyLifetimeArtifactKind python_type
     py PackageDependencyLifetimeArtifactKind
     signature enum(Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyLifetimeArtifactKind;i4)
+    constant PROCESS 0
+    constant FILE_PATH 1
+    constant REGISTRY_KEY 2
 
-enum Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyProcessorArchitectures python_type
+enum Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyProcessorArchitectures python_type flags_enum
     py PackageDependencyProcessorArchitectures
     signature enum(Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyProcessorArchitectures;u4)
+    constant NONE 0x0
+    constant NEUTRAL 0x1
+    constant X86 0x2
+    constant X64 0x4
+    constant ARM 0x8
+    constant ARM64 0x10
+    constant X86_ON_ARM64 0x20
 
 class Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyRank static python_type
     py PackageDependencyRank

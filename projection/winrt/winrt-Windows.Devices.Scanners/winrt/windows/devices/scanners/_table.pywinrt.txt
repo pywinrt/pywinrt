@@ -400,10 +400,17 @@ class Windows.Devices.Scanners.ImageScannerAutoConfiguration python_type
 enum Windows.Devices.Scanners.ImageScannerAutoCroppingMode python_type
     py ImageScannerAutoCroppingMode
     signature enum(Windows.Devices.Scanners.ImageScannerAutoCroppingMode;i4)
+    constant DISABLED 0
+    constant SINGLE_REGION 1
+    constant MULTIPLE_REGION 2
 
 enum Windows.Devices.Scanners.ImageScannerColorMode python_type
     py ImageScannerColorMode
     signature enum(Windows.Devices.Scanners.ImageScannerColorMode;i4)
+    constant COLOR 0
+    constant GRAYSCALE 1
+    constant MONOCHROME 2
+    constant AUTO_COLOR 3
 
 class Windows.Devices.Scanners.ImageScannerFeederConfiguration python_type
     py ImageScannerFeederConfiguration
@@ -660,6 +667,13 @@ class Windows.Devices.Scanners.ImageScannerFlatbedConfiguration python_type
 enum Windows.Devices.Scanners.ImageScannerFormat python_type
     py ImageScannerFormat
     signature enum(Windows.Devices.Scanners.ImageScannerFormat;i4)
+    constant JPEG 0
+    constant PNG 1
+    constant DEVICE_INDEPENDENT_BITMAP 2
+    constant TIFF 3
+    constant XPS 4
+    constant OPEN_XPS 5
+    constant PDF 6
 
 class Windows.Devices.Scanners.ImageScannerPreviewResult python_type
     py ImageScannerPreviewResult
@@ -691,6 +705,10 @@ class Windows.Devices.Scanners.ImageScannerScanResult python_type
 enum Windows.Devices.Scanners.ImageScannerScanSource python_type
     py ImageScannerScanSource
     signature enum(Windows.Devices.Scanners.ImageScannerScanSource;i4)
+    constant DEFAULT 0
+    constant FLATBED 1
+    constant FEEDER 2
+    constant AUTO_CONFIGURED 3
 
 class System.UInt32 external
     py winrt.system.UInt32

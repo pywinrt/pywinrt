@@ -529,6 +529,14 @@ class Windows.Services.Maps.LocalSearch.LocalLocationFinderResult python_type
 enum Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus python_type
     py LocalLocationFinderStatus
     signature enum(Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_ERROR 1
+    constant INVALID_CREDENTIALS 2
+    constant INVALID_CATEGORY 3
+    constant INVALID_SEARCH_TERM 4
+    constant INVALID_SEARCH_AREA 5
+    constant NETWORK_FAILURE 6
+    constant NOT_SUPPORTED 7
 
 class Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem python_type
     py LocalLocationHoursOfOperationItem

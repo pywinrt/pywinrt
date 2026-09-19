@@ -201,6 +201,9 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.
 enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState python_type
     py PlatformDiagnosticActionState
     signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState;i4)
+    constant SUCCESS 0
+    constant FREE_NETWORK_NOT_AVAILABLE 1
+    constant A_C_POWER_NOT_AVAILABLE 2
 
 class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions static python_type
     py PlatformDiagnosticActions
@@ -253,10 +256,15 @@ class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions static
 enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEscalationType python_type
     py PlatformDiagnosticEscalationType
     signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEscalationType;i4)
+    constant ON_COMPLETION 0
+    constant ON_FAILURE 1
 
-enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEventBufferLatencies python_type
+enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEventBufferLatencies python_type flags_enum
     py PlatformDiagnosticEventBufferLatencies
     signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEventBufferLatencies;u4)
+    constant NORMAL 0x1
+    constant COST_DEFERRED 0x2
+    constant REALTIME 0x4
 
 class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo python_type
     py PlatformDiagnosticTraceInfo
@@ -285,6 +293,8 @@ class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo pyth
 enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTracePriority python_type
     py PlatformDiagnosticTracePriority
     signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTracePriority;i4)
+    constant NORMAL 0
+    constant USER_ELEVATED 1
 
 class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo python_type
     py PlatformDiagnosticTraceRuntimeInfo
@@ -301,10 +311,16 @@ class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeIn
 enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotState python_type
     py PlatformDiagnosticTraceSlotState
     signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotState;i4)
+    constant NOT_RUNNING 0
+    constant RUNNING 1
+    constant THROTTLED 2
 
 enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType python_type
     py PlatformDiagnosticTraceSlotType
     signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType;i4)
+    constant ALTERNATIVE 0
+    constant ALWAYS_ON 1
+    constant MINI 2
 
 class System.Guid external
     py winrt.system.Guid

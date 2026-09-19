@@ -202,6 +202,11 @@ class Windows.ApplicationModel.Store.CurrentAppSimulator static python_type
 enum Windows.ApplicationModel.Store.FulfillmentResult python_type
     py FulfillmentResult
     signature enum(Windows.ApplicationModel.Store.FulfillmentResult;i4)
+    constant SUCCEEDED 0
+    constant NOTHING_TO_FULFILL 1
+    constant PURCHASE_PENDING 2
+    constant PURCHASE_REVERTED 3
+    constant SERVER_ERROR 4
 
 interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[String]
@@ -803,10 +808,17 @@ class Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties activatabl
 enum Windows.ApplicationModel.Store.ProductPurchaseStatus python_type
     py ProductPurchaseStatus
     signature enum(Windows.ApplicationModel.Store.ProductPurchaseStatus;i4)
+    constant SUCCEEDED 0
+    constant ALREADY_PURCHASED 1
+    constant NOT_FULFILLED 2
+    constant NOT_PURCHASED 3
 
 enum Windows.ApplicationModel.Store.ProductType python_type
     py ProductType
     signature enum(Windows.ApplicationModel.Store.ProductType;i4)
+    constant UNKNOWN 0
+    constant DURABLE 1
+    constant CONSUMABLE 2
 
 class Windows.ApplicationModel.Store.PurchaseResults python_type
     py PurchaseResults

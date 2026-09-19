@@ -5,22 +5,43 @@ namespace Windows.Gaming.Input.Preview
 enum Windows.Gaming.Input.Preview.DeviceCommand python_type
     py DeviceCommand
     signature enum(Windows.Gaming.Input.Preview.DeviceCommand;i4)
+    constant RESET 0
 
 enum Windows.Gaming.Input.Preview.GameControllerBatteryChargingState python_type
     py GameControllerBatteryChargingState
     signature enum(Windows.Gaming.Input.Preview.GameControllerBatteryChargingState;i4)
+    constant UNKNOWN 0
+    constant INACTIVE 1
+    constant ACTIVE 2
+    constant ERROR 3
 
 enum Windows.Gaming.Input.Preview.GameControllerBatteryKind python_type
     py GameControllerBatteryKind
     signature enum(Windows.Gaming.Input.Preview.GameControllerBatteryKind;i4)
+    constant UNKNOWN 0
+    constant NONE 1
+    constant STANDARD 2
+    constant RECHARGEABLE 3
 
 enum Windows.Gaming.Input.Preview.GameControllerBatteryLevel python_type
     py GameControllerBatteryLevel
     signature enum(Windows.Gaming.Input.Preview.GameControllerBatteryLevel;i4)
+    constant UNKNOWN 0
+    constant CRITICAL 1
+    constant LOW 2
+    constant MEDIUM 3
+    constant FULL 4
 
 enum Windows.Gaming.Input.Preview.GameControllerFirmwareCorruptReason python_type
     py GameControllerFirmwareCorruptReason
     signature enum(Windows.Gaming.Input.Preview.GameControllerFirmwareCorruptReason;i4)
+    constant UNKNOWN 0
+    constant NOT_CORRUPT 1
+    constant TWO_UP_CORRUPT 2
+    constant APP_CORRUPT 3
+    constant RADIO_CORRUPT 4
+    constant EEPROM_CORRUPT 5
+    constant SAFE_TO_UPDATE 6
 
 class Windows.Gaming.Input.Preview.GameControllerProviderInfo static python_type
     py GameControllerProviderInfo
@@ -46,10 +67,20 @@ struct Windows.Gaming.Input.Preview.HeadsetGeqGains python_type
 enum Windows.Gaming.Input.Preview.HeadsetLevel python_type
     py HeadsetLevel
     signature enum(Windows.Gaming.Input.Preview.HeadsetLevel;i4)
+    constant OFF 0
+    constant LOW 1
+    constant MEDIUM 2
+    constant HIGH 3
 
 enum Windows.Gaming.Input.Preview.HeadsetOperation python_type
     py HeadsetOperation
     signature enum(Windows.Gaming.Input.Preview.HeadsetOperation;i4)
+    constant GEQ 0
+    constant BASS_BOOST_GAIN 1
+    constant SMART_MUTE 2
+    constant SIDE_TONE 3
+    constant MUTE_LED_BRIGHTNESS 4
+    constant SWAP_MIX_AND_VOLUME_DIALS 5
 
 interface Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics
     guid 0be1e6c5-d9bd-44ee-8362-488b2e464bfb
@@ -281,6 +312,18 @@ class Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider python_type
 enum Windows.Gaming.Input.Preview.RemappingButtonCategory python_type
     py RemappingButtonCategory
     signature enum(Windows.Gaming.Input.Preview.RemappingButtonCategory;i4)
+    constant BUTTON_SETTINGS 0
+    constant ANALOG_SETTINGS 1
+    constant VIBRATION_SETTINGS 2
+    constant SHARE_SHORT_PRESS 3
+    constant SHARE_SHORT_PRESS_META_DATA 4
+    constant SHARE_SHORT_PRESS_META_DATA_DISPLAY 5
+    constant SHARE_LONG_PRESS 6
+    constant SHARE_LONG_PRESS_META_DATA 7
+    constant SHARE_LONG_PRESS_META_DATA_DISPLAY 8
+    constant SHARE_DOUBLE_PRESS 9
+    constant SHARE_DOUBLE_PRESS_META_DATA 10
+    constant SHARE_DOUBLE_PRESS_META_DATA_DISPLAY 11
 
 class System.Object external
     py winrt.system.Object

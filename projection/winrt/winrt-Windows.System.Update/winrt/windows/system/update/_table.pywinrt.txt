@@ -181,6 +181,11 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.Update.Syste
 enum Windows.System.Update.SystemUpdateAttentionRequiredReason python_type
     py SystemUpdateAttentionRequiredReason
     signature enum(Windows.System.Update.SystemUpdateAttentionRequiredReason;i4)
+    constant NONE 0
+    constant NETWORK_REQUIRED 1
+    constant INSUFFICIENT_DISK_SPACE 2
+    constant INSUFFICIENT_BATTERY 3
+    constant UPDATE_BLOCKED 4
 
 class Windows.System.Update.SystemUpdateItem python_type
     py SystemUpdateItem
@@ -215,6 +220,15 @@ class Windows.System.Update.SystemUpdateItem python_type
 enum Windows.System.Update.SystemUpdateItemState python_type
     py SystemUpdateItemState
     signature enum(Windows.System.Update.SystemUpdateItemState;i4)
+    constant NOT_STARTED 0
+    constant INITIALIZING 1
+    constant PREPARING 2
+    constant CALCULATING 3
+    constant DOWNLOADING 4
+    constant INSTALLING 5
+    constant COMPLETED 6
+    constant REBOOT_REQUIRED 7
+    constant ERROR 8
 
 class Windows.System.Update.SystemUpdateLastErrorInfo python_type
     py SystemUpdateLastErrorInfo
@@ -313,10 +327,24 @@ class Windows.System.Update.SystemUpdateManager static python_type
 enum Windows.System.Update.SystemUpdateManagerState python_type
     py SystemUpdateManagerState
     signature enum(Windows.System.Update.SystemUpdateManagerState;i4)
+    constant IDLE 0
+    constant DETECTING 1
+    constant READY_TO_DOWNLOAD 2
+    constant DOWNLOADING 3
+    constant READY_TO_INSTALL 4
+    constant INSTALLING 5
+    constant REBOOT_REQUIRED 6
+    constant READY_TO_FINALIZE 7
+    constant FINALIZING 8
+    constant COMPLETED 9
+    constant ATTENTION_REQUIRED 10
+    constant ERROR 11
 
 enum Windows.System.Update.SystemUpdateStartInstallAction python_type
     py SystemUpdateStartInstallAction
     signature enum(Windows.System.Update.SystemUpdateStartInstallAction;i4)
+    constant UP_TO_REBOOT 0
+    constant ALLOW_REBOOT 1
 
 class System.Boolean external
     py winrt.system.Boolean

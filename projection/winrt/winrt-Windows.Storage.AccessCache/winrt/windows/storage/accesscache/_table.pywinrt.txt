@@ -2,9 +2,14 @@ format 4.0
 generator 0.0.0
 namespace Windows.Storage.AccessCache
 
-enum Windows.Storage.AccessCache.AccessCacheOptions python_type
+enum Windows.Storage.AccessCache.AccessCacheOptions python_type flags_enum
     py AccessCacheOptions
     signature enum(Windows.Storage.AccessCache.AccessCacheOptions;u4)
+    constant NONE 0x0
+    constant DISALLOW_USER_INPUT 0x1
+    constant FAST_LOCATIONS_ONLY 0x2
+    constant USE_READ_ONLY_CACHED_COPY 0x4
+    constant SUPPRESS_ACCESS_TIME_UPDATE 0x8
 
 struct Windows.Storage.AccessCache.AccessListEntry python_type
     py AccessListEntry
@@ -312,6 +317,8 @@ class Windows.Storage.AccessCache.ItemRemovedEventArgs python_type
 enum Windows.Storage.AccessCache.RecentStorageItemVisibility python_type
     py RecentStorageItemVisibility
     signature enum(Windows.Storage.AccessCache.RecentStorageItemVisibility;i4)
+    constant APP_ONLY 0
+    constant APP_AND_SYSTEM 1
 
 class Windows.Storage.AccessCache.StorageApplicationPermissions static python_type
     py StorageApplicationPermissions

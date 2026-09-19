@@ -333,6 +333,13 @@ class Microsoft.Windows.AI.Text.LanguageModelResponseResult python_type
 enum Microsoft.Windows.AI.Text.LanguageModelResponseStatus python_type
     py LanguageModelResponseStatus
     signature enum(Microsoft.Windows.AI.Text.LanguageModelResponseStatus;i4)
+    constant COMPLETE 0
+    constant IN_PROGRESS 1
+    constant BLOCKED_BY_POLICY 2
+    constant PROMPT_LARGER_THAN_CONTEXT 3
+    constant PROMPT_BLOCKED_BY_CONTENT_MODERATION 4
+    constant RESPONSE_BLOCKED_BY_CONTENT_MODERATION 5
+    constant ERROR 6
 
 class Microsoft.Windows.AI.Text.TextRewriter python_type
     py TextRewriter

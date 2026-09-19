@@ -5,6 +5,9 @@ namespace Windows.ApplicationModel.Contacts.Provider
 enum Windows.ApplicationModel.Contacts.Provider.AddContactResult python_type
     py AddContactResult
     signature enum(Windows.ApplicationModel.Contacts.Provider.AddContactResult;i4)
+    constant ADDED 0
+    constant ALREADY_ADDED 1
+    constant UNAVAILABLE 2
 
 class Windows.ApplicationModel.Contacts.Provider.ContactPickerUI python_type
     py ContactPickerUI
