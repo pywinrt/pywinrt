@@ -300,6 +300,8 @@ namespace py::interp
             overload.slot = member.slot();
             overload.winrt_name = member.winrt_name().data();
             overload.role = member.role();
+            overload.overridable
+                = (member.flags() & table::member_flags::overridable) != 0;
             overload.in_count = static_cast<uint16_t>(member.in_count());
             overload.out_count = static_cast<uint16_t>(member.out_count());
             overload.arg_count = static_cast<uint16_t>(member.param_count());

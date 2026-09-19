@@ -175,7 +175,6 @@ class Windows.UI.Xaml.Automation.Peers.AutomationPeer composable python_type
     factory Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics3
     factory Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics
     composable Windows.UI.Xaml.Automation.Peers.IAutomationPeerFactory
-    overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerProtected
     overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides
     overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides2
     overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides3

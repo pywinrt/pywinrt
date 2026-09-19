@@ -57,6 +57,7 @@ RUNTIME_MANIFEST_IN = """\
 include src/arrays.h
 include src/async.h
 include src/callbacks.h
+include src/compose.h
 include src/delegates.h
 include src/generics.h
 include src/implements.h

@@ -3223,7 +3223,6 @@ class Windows.UI.Xaml.Controls.Control composable python_type
     factory Windows.UI.Xaml.Controls.IControlStatics
     factory Windows.UI.Xaml.Controls.IControlStatics5
     composable Windows.UI.Xaml.Controls.IControlFactory
-    overridable Windows.UI.Xaml.Controls.IControlProtected
     overridable Windows.UI.Xaml.Controls.IControlOverrides
     overridable Windows.UI.Xaml.Controls.IControlOverrides6
     property padding
@@ -22217,7 +22216,6 @@ class Windows.UI.Xaml.Controls.VirtualizingPanel composable python_type
     requires Windows.UI.Xaml.Controls.IVirtualizingPanelProtected
     requires Windows.UI.Xaml.Controls.IVirtualizingPanelOverrides
     composable Windows.UI.Xaml.Controls.IVirtualizingPanelFactory
-    overridable Windows.UI.Xaml.Controls.IVirtualizingPanelProtected
     overridable Windows.UI.Xaml.Controls.IVirtualizingPanelOverrides
     property item_container_generator
         get get_ItemContainerGenerator slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IVirtualizingPanel shape=4 reverse=22

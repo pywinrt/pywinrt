@@ -424,12 +424,16 @@ sealed class TableWriter
             }
         }
 
+        // A [protected] interface belongs here just as little as any other
+        // interface the class implements itself: what it marks is that only a
+        // derived class may call it, which the members carry. An [overridable]
+        // one is implemented by the derived class, so it is the derived
+        // object that has to answer it.
         foreach (var iface in type.Type.Interfaces)
         {
             if (
                 iface.CustomAttributes.Any(a =>
                     a.AttributeType.FullName == "Windows.Foundation.Metadata.OverridableAttribute"
-                    || a.AttributeType.FullName == "Windows.Foundation.Metadata.ProtectedAttribute"
                 )
             )
             {

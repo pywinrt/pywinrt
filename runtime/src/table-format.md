@@ -188,7 +188,7 @@ A type's own line is its category - `enum`, `struct`, `interface`, `class` or
 | `argument <type>` | one type argument |
 | `factory <type>` | one activation factory interface |
 | `composable <type>` | one composable factory interface |
-| `overridable <type>` | one overridable or protected interface |
+| `overridable <type>` | one overridable interface, which a Python subclass answers |
 | `field <py> <winrt> <code>` | one struct field, with `type=` when the code names a type |
 | `<kind> <name>` | a group of members bound to one Python attribute, then the group's flags |
 
@@ -281,7 +281,7 @@ tag appears at most once.
 | 14, 15 | struct fields, a first index into `FLDS` and a count |
 | 16, 17 | activation factory interfaces, a list |
 | 18, 19 | composable factory interfaces, a list |
-| 20, 21 | overridable and protected interfaces, a list |
+| 20, 21 | overridable interfaces, a list: the ones a class derived from this one implements rather than calls |
 
 The records of the types the namespace defines come first, sorted by WinRT name,
 so that a lookup by name is a binary search. The external references follow in

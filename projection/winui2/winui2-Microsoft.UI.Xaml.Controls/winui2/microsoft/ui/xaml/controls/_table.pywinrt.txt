@@ -3429,7 +3429,6 @@ class Microsoft.UI.Xaml.Controls.Layout composable python_type
     requires Microsoft.UI.Xaml.Controls.ILayout
     requires Microsoft.UI.Xaml.Controls.ILayoutProtected
     composable Microsoft.UI.Xaml.Controls.ILayoutFactory
-    overridable Microsoft.UI.Xaml.Controls.ILayoutProtected
     event arrange_invalidated
         add add_ArrangeInvalidated slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ILayout shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Layout,System.Object> name=handler

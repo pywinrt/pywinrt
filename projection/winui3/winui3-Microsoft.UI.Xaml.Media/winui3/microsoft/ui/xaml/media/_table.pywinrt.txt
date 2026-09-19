@@ -3642,7 +3642,6 @@ class Microsoft.UI.Xaml.Media.XamlCompositionBrushBase composable python_type
     requires Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseOverrides
     factory Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseStatics
     composable Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseFactory
-    overridable Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseProtected
     overridable Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseOverrides
     property fallback_color
         get get_FallbackColor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IXamlCompositionBrushBase shape=4 reverse=22
@@ -3667,7 +3666,6 @@ class Microsoft.UI.Xaml.Media.XamlLight composable python_type
     requires Microsoft.UI.Xaml.Media.IXamlLightOverrides
     factory Microsoft.UI.Xaml.Media.IXamlLightStatics
     composable Microsoft.UI.Xaml.Media.IXamlLightFactory
-    overridable Microsoft.UI.Xaml.Media.IXamlLightProtected
     overridable Microsoft.UI.Xaml.Media.IXamlLightOverrides
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IXamlLightFactory shape=117 reverse=25

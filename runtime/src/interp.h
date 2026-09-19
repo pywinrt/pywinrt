@@ -108,6 +108,11 @@ namespace py::interp
         char const* iface_name;
         /// The Python protocol this overload stands for, if any.
         table::member_role role;
+        /// A class derived from the one that declares this member answers it
+        /// itself, so a call on an object a Python class was composed into has
+        /// to be made on the inner object: making it on the object itself
+        /// would arrive back in Python, where the call came from.
+        bool overridable;
         uint16_t in_count;
         uint16_t out_count;
         uint16_t arg_count;
@@ -329,12 +334,31 @@ namespace py::interp
 
     // ----- interp.cpp -----------------------------------------------------
 
+    /**
+     * The two objects a composable class's constructor passes between when a
+     * Python subclass of it is being made.
+     *
+     * The constructor declares them as implicit parameters, which every other
+     * caller leaves empty: an exact type is activated with nothing to compose
+     * it into, and takes nothing back.
+     */
+    struct composing
+    {
+        /// The object WinRT is to call the class's overridable members on,
+        /// which is the outer object compose.cpp assembled.
+        void* outer;
+        /// The object the class was composed over, which the constructor hands
+        /// back and the caller owns a reference to.
+        void* inner;
+    };
+
     PyObject* call_member(
         member_desc const& member,
         overload_desc& overload,
         void* self,
         PyObject* const* args,
-        Py_ssize_t nargs) noexcept;
+        Py_ssize_t nargs,
+        composing* compose = nullptr) noexcept;
 
     overload_desc* select_overload(
         member_desc const& member, Py_ssize_t nargs) noexcept;
