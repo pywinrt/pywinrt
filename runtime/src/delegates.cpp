@@ -22,6 +22,7 @@
 #include "delegates.h"
 #include "interp.h"
 #include "members.h"
+#include "metaclass.h"
 #include "objects.h"
 #include "types.h"
 

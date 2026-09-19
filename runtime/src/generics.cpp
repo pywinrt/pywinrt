@@ -18,6 +18,7 @@
 
 #include "generics.h"
 #include "interp.h"
+#include "metaclass.h"
 #include "members.h"
 #include "module_state.h"
 #include "objects.h"
