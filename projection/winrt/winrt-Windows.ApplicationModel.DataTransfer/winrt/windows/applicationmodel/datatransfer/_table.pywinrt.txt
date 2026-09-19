@@ -667,8 +667,7 @@ class Windows.ApplicationModel.DataTransfer.DataTransferManager python_type
         method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics2 shape=4 reverse=22 static
             out boolean return
     method show_share_ui static
-        method ShowShareUI slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics3 shape=4 reverse=22 static
-            in class type=Windows.ApplicationModel.DataTransfer.ShareUIOptions name=options
+        method ShowShareUI slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics shape=0 reverse=16 static
         method ShowShareUI slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics3 shape=4 reverse=22 static
             in class type=Windows.ApplicationModel.DataTransfer.ShareUIOptions name=options
 

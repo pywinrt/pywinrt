@@ -948,9 +948,8 @@ class Windows.Media.SpeechRecognition.SpeechRecognizer activatable python_type c
     factory Windows.Media.SpeechRecognition.ISpeechRecognizerFactory
     factory Windows.Media.SpeechRecognition.ISpeechRecognizerStatics2
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerFactory shape=51 reverse=24
-            in class type=Windows.Globalization.Language name=language implicit
-            out class type=Windows.Media.SpeechRecognition.SpeechRecognizer return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizerFactory shape=51 reverse=24
             in class type=Windows.Globalization.Language name=language
             out class type=Windows.Media.SpeechRecognition.SpeechRecognizer return

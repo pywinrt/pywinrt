@@ -1301,12 +1301,9 @@ class Windows.UI.Input.Inking.InkPoint python_type
     factory Windows.UI.Input.Inking.IInkPointFactory2
     factory Windows.UI.Input.Inking.IInkPointFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Input.Inking.IInkPointFactory2 shape=274
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Input.Inking.IInkPointFactory shape=149 reverse=30
             in struct type=Windows.Foundation.Point name=position
             in single name=pressure
-            in single name=tiltX implicit
-            in single name=tiltY implicit
-            in uint64 name=timestamp implicit
             out class type=Windows.UI.Input.Inking.InkPoint return
         ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.UI.Input.Inking.IInkPointFactory2 shape=274
             in struct type=Windows.Foundation.Point name=position

@@ -145,9 +145,8 @@ class Microsoft.Windows.AppNotifications.Builder.AppNotificationButton activatab
     factory Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonStatics
     factory Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonFactory shape=51 reverse=24
-            in string name=content implicit
-            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButton return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonFactory shape=51 reverse=24
             in string name=content
             out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButton return

@@ -705,9 +705,8 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService python
             in uint16 name=shortId
             out guid return
     method from_id_async static
-        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceServiceStatics2 shape=117 reverse=25 static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceServiceStatics shape=51 reverse=24 static
             in string name=deviceId
-            in enum32 type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSharingMode name=sharingMode
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> return
         method FromIdAsync slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceServiceStatics2 shape=117 reverse=25 static
             in string name=deviceId

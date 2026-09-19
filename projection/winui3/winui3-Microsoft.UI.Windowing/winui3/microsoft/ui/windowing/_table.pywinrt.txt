@@ -71,20 +71,14 @@ class Microsoft.UI.Windowing.AppWindow python_type
         method AssociateWithDispatcherQueue slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow3 shape=4 reverse=22
             in class type=Microsoft.UI.Dispatching.DispatcherQueue name=dispatcherQueue
     method create static
-        method Create slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics2 shape=324 static
-            in class type=Microsoft.UI.Windowing.AppWindowPresenter name=appWindowPresenter
-            in struct type=Microsoft.UI.WindowId name=ownerWindowId
-            in class type=Microsoft.UI.Dispatching.DispatcherQueue name=DispatcherQueue
+        method Create slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics shape=4 reverse=22 static
             out class type=Microsoft.UI.Windowing.AppWindow return
-        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics2 shape=324 static
+        method Create slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics shape=51 reverse=44 static
             in class type=Microsoft.UI.Windowing.AppWindowPresenter name=appWindowPresenter
-            in struct type=Microsoft.UI.WindowId name=ownerWindowId
-            in class type=Microsoft.UI.Dispatching.DispatcherQueue name=DispatcherQueue
             out class type=Microsoft.UI.Windowing.AppWindow return
-        method Create slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics2 shape=324 static
+        method Create slot=8 inputs=2 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics shape=142 static
             in class type=Microsoft.UI.Windowing.AppWindowPresenter name=appWindowPresenter
             in struct type=Microsoft.UI.WindowId name=ownerWindowId
-            in class type=Microsoft.UI.Dispatching.DispatcherQueue name=DispatcherQueue
             out class type=Microsoft.UI.Windowing.AppWindow return
         method Create slot=6 inputs=3 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics2 shape=324 static
             in class type=Microsoft.UI.Windowing.AppWindowPresenter name=appWindowPresenter

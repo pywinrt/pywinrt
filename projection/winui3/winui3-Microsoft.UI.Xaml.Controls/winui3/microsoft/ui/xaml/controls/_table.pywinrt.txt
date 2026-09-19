@@ -20415,9 +20415,8 @@ class Microsoft.UI.Xaml.Controls.SymbolIcon activatable python_type
     factory Microsoft.UI.Xaml.Controls.ISymbolIconStatics
     factory Microsoft.UI.Xaml.Controls.ISymbolIconFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISymbolIconFactory shape=51 reverse=24
-            in enum32 type=Microsoft.UI.Xaml.Controls.Symbol name=symbol implicit
-            out class type=Microsoft.UI.Xaml.Controls.SymbolIcon return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISymbolIconFactory shape=51 reverse=24
             in enum32 type=Microsoft.UI.Xaml.Controls.Symbol name=symbol
             out class type=Microsoft.UI.Xaml.Controls.SymbolIcon return

@@ -2516,10 +2516,8 @@ class Windows.UI.Xaml.Media.LinearGradientBrush activatable python_type
     factory Windows.UI.Xaml.Media.ILinearGradientBrushFactory
     factory Windows.UI.Xaml.Media.ILinearGradientBrushStatics
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILinearGradientBrushFactory shape=111 reverse=23
-            in class type=Windows.UI.Xaml.Media.GradientStopCollection name=gradientStopCollection implicit
-            in double name=angle implicit
-            out class type=Windows.UI.Xaml.Media.LinearGradientBrush return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Media.ILinearGradientBrushFactory shape=111 reverse=23
             in class type=Windows.UI.Xaml.Media.GradientStopCollection name=gradientStopCollection
             in double name=angle
@@ -2580,18 +2578,16 @@ class Windows.UI.Xaml.Media.LoadedImageSurface python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method start_load_from_stream static
-        method StartLoadFromStream slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=134 reverse=385 static
+        method StartLoadFromStream slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=51 reverse=100 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
-            in struct type=Windows.Foundation.Size name=desiredMaxSize
             out class type=Windows.UI.Xaml.Media.LoadedImageSurface return
         method StartLoadFromStream slot=8 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=134 reverse=385 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             in struct type=Windows.Foundation.Size name=desiredMaxSize
             out class type=Windows.UI.Xaml.Media.LoadedImageSurface return
     method start_load_from_uri static
-        method StartLoadFromUri slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=134 static
+        method StartLoadFromUri slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=51 reverse=44 static
             in class type=Windows.Foundation.Uri name=uri
-            in struct type=Windows.Foundation.Size name=desiredMaxSize
             out class type=Windows.UI.Xaml.Media.LoadedImageSurface return
         method StartLoadFromUri slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=134 static
             in class type=Windows.Foundation.Uri name=uri
@@ -3434,9 +3430,8 @@ class Windows.UI.Xaml.Media.SolidColorBrush activatable python_type
     factory Windows.UI.Xaml.Media.ISolidColorBrushFactory
     factory Windows.UI.Xaml.Media.ISolidColorBrushStatics
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISolidColorBrushFactory shape=92
-            in struct type=Windows.UI.Color name=color implicit
-            out class type=Windows.UI.Xaml.Media.SolidColorBrush return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ISolidColorBrushFactory shape=92
             in struct type=Windows.UI.Color name=color
             out class type=Windows.UI.Xaml.Media.SolidColorBrush return

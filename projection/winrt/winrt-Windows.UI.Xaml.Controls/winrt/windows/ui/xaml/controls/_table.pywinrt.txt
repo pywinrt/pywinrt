@@ -18953,9 +18953,8 @@ class Windows.UI.Xaml.Controls.SymbolIcon activatable python_type
     factory Windows.UI.Xaml.Controls.ISymbolIconStatics
     factory Windows.UI.Xaml.Controls.ISymbolIconFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.ISymbolIconFactory shape=51 reverse=24
-            in enum32 type=Windows.UI.Xaml.Controls.Symbol name=symbol implicit
-            out class type=Windows.UI.Xaml.Controls.SymbolIcon return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.ISymbolIconFactory shape=51 reverse=24
             in enum32 type=Windows.UI.Xaml.Controls.Symbol name=symbol
             out class type=Windows.UI.Xaml.Controls.SymbolIcon return
@@ -22316,9 +22315,8 @@ class Windows.UI.Xaml.Controls.WebView activatable python_type
     factory Windows.UI.Xaml.Controls.IWebViewStatics5
     factory Windows.UI.Xaml.Controls.IWebViewStatics4
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebViewFactory4 shape=51 reverse=24
-            in enum32 type=Windows.UI.Xaml.Controls.WebViewExecutionMode name=executionMode implicit
-            out class type=Windows.UI.Xaml.Controls.WebView return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebViewFactory4 shape=51 reverse=24
             in enum32 type=Windows.UI.Xaml.Controls.WebViewExecutionMode name=executionMode
             out class type=Windows.UI.Xaml.Controls.WebView return

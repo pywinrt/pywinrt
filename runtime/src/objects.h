@@ -31,6 +31,8 @@ namespace py::interp
 
     PyObject* wrap_abi(PyTypeObject* type, void* abi) noexcept;
 
+    PyObject* wrap_activated_abi(PyTypeObject* type, void const* iid, void* abi);
+
     void* unwrap_abi(PyObject* obj, void const* iid, type_entry* info = nullptr);
 
     bool make_interface_type(

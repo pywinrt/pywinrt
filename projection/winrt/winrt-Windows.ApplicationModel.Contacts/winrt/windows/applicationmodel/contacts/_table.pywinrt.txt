@@ -1466,34 +1466,29 @@ class Windows.ApplicationModel.Contacts.ContactManager static python_type
             in enum32 type=Windows.ApplicationModel.Contacts.ContactAnnotationStoreAccessType name=accessType
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactAnnotationStore> return
     method request_store_async static
-        method RequestStoreAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=51 reverse=100 static
-            in enum32 type=Windows.ApplicationModel.Contacts.ContactStoreAccessType name=accessType
+        method RequestStoreAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics2 shape=4 reverse=22 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactStore> return
         method RequestStoreAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=51 reverse=100 static
             in enum32 type=Windows.ApplicationModel.Contacts.ContactStoreAccessType name=accessType
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.ContactStore> return
     method show_contact_card static
-        method ShowContactCard slot=12 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=205 static
+        method ShowContactCard slot=6 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics shape=55 static
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            in struct type=Windows.Foundation.Rect name=selection
+        method ShowContactCard slot=7 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics shape=130 static
             in class type=Windows.ApplicationModel.Contacts.Contact name=contact
             in struct type=Windows.Foundation.Rect name=selection
             in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
-            in class type=Windows.ApplicationModel.Contacts.ContactCardOptions name=contactCardOptions
-        method ShowContactCard slot=12 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=205 static
-            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
-            in struct type=Windows.Foundation.Rect name=selection
-            in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
-            in class type=Windows.ApplicationModel.Contacts.ContactCardOptions name=contactCardOptions
         method ShowContactCard slot=12 inputs=4 outputs=0 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=205 static
             in class type=Windows.ApplicationModel.Contacts.Contact name=contact
             in struct type=Windows.Foundation.Rect name=selection
             in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
             in class type=Windows.ApplicationModel.Contacts.ContactCardOptions name=contactCardOptions
     method show_delay_loaded_contact_card static
-        method ShowDelayLoadedContactCard slot=14 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=248 static
+        method ShowDelayLoadedContactCard slot=8 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics shape=205 static
             in class type=Windows.ApplicationModel.Contacts.Contact name=contact
             in struct type=Windows.Foundation.Rect name=selection
             in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
-            in class type=Windows.ApplicationModel.Contacts.ContactCardOptions name=contactCardOptions
             out class type=Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader return
         method ShowDelayLoadedContactCard slot=14 inputs=4 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=248 static
             in class type=Windows.ApplicationModel.Contacts.Contact name=contact
@@ -1707,9 +1702,8 @@ class Windows.ApplicationModel.Contacts.ContactQueryOptions activatable python_t
     requires Windows.ApplicationModel.Contacts.IContactQueryOptions
     factory Windows.ApplicationModel.Contacts.IContactQueryOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptionsFactory shape=51 reverse=24
-            in string name=text implicit
-            out class type=Windows.ApplicationModel.Contacts.ContactQueryOptions return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactQueryOptionsFactory shape=51 reverse=24
             in string name=text
             out class type=Windows.ApplicationModel.Contacts.ContactQueryOptions return

@@ -748,6 +748,11 @@ namespace py::interp
                     return nullptr;
                 }
 
+                if (arg.query_interface)
+                {
+                    return wrap_activated_abi(info->py_type, info->guid, abi);
+                }
+
                 return wrap_abi(info->py_type, abi);
             }
             case table::type_code::reference:

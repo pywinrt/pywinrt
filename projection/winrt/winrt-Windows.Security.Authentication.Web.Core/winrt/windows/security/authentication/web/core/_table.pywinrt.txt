@@ -634,15 +634,12 @@ class Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager stat
             in string name=webAccountId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> return
     method find_account_provider_async static
-        method FindAccountProviderAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics2 shape=195 reverse=26 static
+        method FindAccountProviderAsync slot=11 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics shape=51 reverse=144 static
             in string name=webAccountProviderId
-            in string name=authority
-            in class type=Windows.System.User name=user
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> return
-        method FindAccountProviderAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics2 shape=195 reverse=26 static
+        method FindAccountProviderAsync slot=12 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics shape=117 reverse=164 static
             in string name=webAccountProviderId
             in string name=authority
-            in class type=Windows.System.User name=user
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccountProvider> return
         method FindAccountProviderAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics2 shape=195 reverse=26 static
             in string name=webAccountProviderId
@@ -750,15 +747,12 @@ class Windows.Security.Authentication.Web.Core.WebTokenRequest python_type
     requires Windows.Security.Authentication.Web.Core.IWebTokenRequest3
     factory Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory shape=195 reverse=26
+        ctor .ctor slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory shape=51 reverse=65
             in class type=Windows.Security.Credentials.WebAccountProvider name=provider
-            in string name=scope implicit
-            in string name=clientId implicit
             out class type=Windows.Security.Authentication.Web.Core.WebTokenRequest return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory shape=195 reverse=26
+        ctor .ctor slot=9 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory shape=117 reverse=101
             in class type=Windows.Security.Credentials.WebAccountProvider name=provider
             in string name=scope
-            in string name=clientId implicit
             out class type=Windows.Security.Authentication.Web.Core.WebTokenRequest return
         ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenRequestFactory shape=195 reverse=26
             in class type=Windows.Security.Credentials.WebAccountProvider name=provider
@@ -828,9 +822,8 @@ class Windows.Security.Authentication.Web.Core.WebTokenResponse activatable pyth
     requires Windows.Security.Authentication.Web.Core.IWebTokenResponse
     factory Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory shape=51 reverse=24
-            in string name=token implicit
-            out class type=Windows.Security.Authentication.Web.Core.WebTokenResponse return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebTokenResponseFactory shape=51 reverse=24
             in string name=token
             out class type=Windows.Security.Authentication.Web.Core.WebTokenResponse return

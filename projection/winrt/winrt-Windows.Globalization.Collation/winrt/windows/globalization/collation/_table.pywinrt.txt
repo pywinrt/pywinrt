@@ -24,9 +24,8 @@ class Windows.Globalization.Collation.CharacterGroupings activatable python_type
     requires Windows.Foundation.Collections.IIterable<Windows.Globalization.Collation.CharacterGrouping>
     factory Windows.Globalization.Collation.ICharacterGroupingsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.Collation.ICharacterGroupingsFactory shape=51 reverse=24
-            in string name=language implicit
-            out class type=Windows.Globalization.Collation.CharacterGroupings return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.Collation.ICharacterGroupingsFactory shape=51 reverse=24
             in string name=language
             out class type=Windows.Globalization.Collation.CharacterGroupings return

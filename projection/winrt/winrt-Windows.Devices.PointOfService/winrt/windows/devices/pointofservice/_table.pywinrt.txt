@@ -754,8 +754,7 @@ class Windows.Devices.PointOfService.CashDrawer python_type closeable
         method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawerStatics shape=4 reverse=22 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.CashDrawer> return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawerStatics2 shape=51 reverse=24 static
-            in enum_u32 type=Windows.Devices.PointOfService.PosConnectionTypes name=connectionTypes
+        method GetDeviceSelector slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawerStatics shape=4 reverse=62 static
             out string return
         method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawerStatics2 shape=51 reverse=24 static
             in enum_u32 type=Windows.Devices.PointOfService.PosConnectionTypes name=connectionTypes
@@ -3758,8 +3757,7 @@ class Windows.Devices.PointOfService.MagneticStripeReader python_type closeable
         method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IMagneticStripeReaderStatics shape=4 reverse=22 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.MagneticStripeReader> return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IMagneticStripeReaderStatics2 shape=51 reverse=24 static
-            in enum_u32 type=Windows.Devices.PointOfService.PosConnectionTypes name=connectionTypes
+        method GetDeviceSelector slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IMagneticStripeReaderStatics shape=4 reverse=62 static
             out string return
         method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IMagneticStripeReaderStatics2 shape=51 reverse=24 static
             in enum_u32 type=Windows.Devices.PointOfService.PosConnectionTypes name=connectionTypes
@@ -4107,8 +4105,7 @@ class Windows.Devices.PointOfService.PosPrinter python_type closeable
         method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinterStatics shape=4 reverse=22 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.PosPrinter> return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinterStatics2 shape=51 reverse=24 static
-            in enum_u32 type=Windows.Devices.PointOfService.PosConnectionTypes name=connectionTypes
+        method GetDeviceSelector slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinterStatics shape=4 reverse=62 static
             out string return
         method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinterStatics2 shape=51 reverse=24 static
             in enum_u32 type=Windows.Devices.PointOfService.PosConnectionTypes name=connectionTypes

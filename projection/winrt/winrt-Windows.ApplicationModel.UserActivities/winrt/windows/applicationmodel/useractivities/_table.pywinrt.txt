@@ -594,9 +594,8 @@ class Windows.ApplicationModel.UserActivities.UserActivityAttribution activatabl
     requires Windows.ApplicationModel.UserActivities.IUserActivityAttribution
     factory Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory shape=51 reverse=24
-            in class type=Windows.Foundation.Uri name=iconUri implicit
-            out class type=Windows.ApplicationModel.UserActivities.UserActivityAttribution return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory shape=51 reverse=24
             in class type=Windows.Foundation.Uri name=iconUri
             out class type=Windows.ApplicationModel.UserActivities.UserActivityAttribution return

@@ -1564,13 +1564,10 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Environment python_type
             in class type=Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Web.WebView2.Core.CoreWebView2Environment> return
     method get_available_browser_version_string static
-        method GetAvailableBrowserVersionString slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2EnvironmentStatics2 shape=117 reverse=25 static
-            in string name=browserExecutableFolder
-            in class type=Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions name=options
+        method GetAvailableBrowserVersionString slot=8 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2EnvironmentStatics shape=4 reverse=62 static
             out string return
-        method GetAvailableBrowserVersionString slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2EnvironmentStatics2 shape=117 reverse=25 static
+        method GetAvailableBrowserVersionString slot=9 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2EnvironmentStatics shape=51 reverse=100 static
             in string name=browserExecutableFolder
-            in class type=Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions name=options
             out string return
         method GetAvailableBrowserVersionString slot=6 inputs=2 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2EnvironmentStatics2 shape=117 reverse=25 static
             in string name=browserExecutableFolder

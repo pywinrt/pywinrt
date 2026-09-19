@@ -127,9 +127,8 @@ class Windows.Networking.BackgroundTransfer.BackgroundDownloader activatable pyt
     factory Windows.Networking.BackgroundTransfer.IBackgroundDownloaderUserConsent
     factory Windows.Networking.BackgroundTransfer.IBackgroundDownloaderFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloaderFactory shape=51 reverse=24
-            in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup name=completionGroup implicit
-            out class type=Windows.Networking.BackgroundTransfer.BackgroundDownloader return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloaderFactory shape=51 reverse=24
             in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup name=completionGroup
             out class type=Windows.Networking.BackgroundTransfer.BackgroundDownloader return
@@ -261,9 +260,8 @@ class Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart activa
     requires Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPart
     factory Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory shape=51 reverse=24
-            in string name=name implicit
-            out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory shape=51 reverse=24
             in string name=name
             out class type=Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart return
@@ -366,9 +364,8 @@ class Windows.Networking.BackgroundTransfer.BackgroundUploader activatable pytho
     factory Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods2
     factory Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploaderFactory shape=51 reverse=24
-            in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup name=completionGroup implicit
-            out class type=Windows.Networking.BackgroundTransfer.BackgroundUploader return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploaderFactory shape=51 reverse=24
             in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup name=completionGroup
             out class type=Windows.Networking.BackgroundTransfer.BackgroundUploader return

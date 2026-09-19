@@ -192,14 +192,13 @@ class Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager st
             in string name=password
             in class type=Windows.Security.Cryptography.Certificates.PfxImportParameters name=pfxImportParameters
             out interface type=Windows.Foundation.IAsyncAction return
-        method ImportPfxDataAsync slot=7 inputs=6 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2 shape=286 reverse=47 static
+        method ImportPfxDataAsync slot=8 inputs=6 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics shape=278 static
             in string name=pfxData
             in string name=password
             in enum32 type=Windows.Security.Cryptography.Certificates.ExportOption name=exportable
             in enum32 type=Windows.Security.Cryptography.Certificates.KeyProtectionLevel name=keyProtectionLevel
             in enum_u32 type=Windows.Security.Cryptography.Certificates.InstallOptions name=installOption
             in string name=friendlyName
-            in string name=keyStorageProvider
             out interface type=Windows.Foundation.IAsyncAction return
         method ImportPfxDataAsync slot=7 inputs=7 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2 shape=286 reverse=47 static
             in string name=pfxData
@@ -1388,9 +1387,8 @@ class Windows.Security.Cryptography.Certificates.KeyAttestationHelper static pyt
     factory Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics2
     factory Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics
     method decrypt_tpm_attestation_credential_async static
-        method DecryptTpmAttestationCredentialAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics2 shape=117 reverse=25 static
+        method DecryptTpmAttestationCredentialAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics shape=51 reverse=24 static
             in string name=credential
-            in string name=containerName
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
         method DecryptTpmAttestationCredentialAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics2 shape=117 reverse=25 static
             in string name=credential

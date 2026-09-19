@@ -321,9 +321,8 @@ class Windows.System.AppUriHandlerHost activatable python_type
     requires Windows.System.IAppUriHandlerHost2
     factory Windows.System.IAppUriHandlerHostFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerHostFactory shape=51 reverse=24
-            in string name=name implicit
-            out class type=Windows.System.AppUriHandlerHost return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerHostFactory shape=51 reverse=24
             in string name=name
             out class type=Windows.System.AppUriHandlerHost return
@@ -2898,15 +2897,12 @@ class Windows.System.Launcher static python_type
             in class type=Windows.System.FolderLauncherOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method launch_uri_async static
-        method LaunchUriAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 reverse=68 static
+        method LaunchUriAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics shape=51 reverse=65 static
             in class type=Windows.Foundation.Uri name=uri
-            in class type=Windows.System.LauncherOptions name=options
-            in class type=Windows.Foundation.Collections.ValueSet name=inputData
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-        method LaunchUriAsync slot=8 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 reverse=68 static
+        method LaunchUriAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics shape=117 reverse=101 static
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.System.LauncherOptions name=options
-            in class type=Windows.Foundation.Collections.ValueSet name=inputData
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
         method LaunchUriAsync slot=8 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 reverse=68 static
             in class type=Windows.Foundation.Uri name=uri

@@ -204,18 +204,16 @@ class Windows.ApplicationModel.Chat.ChatCapabilitiesManager static python_type
     factory Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2
     factory Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics
     method get_cached_capabilities_async static
-        method GetCachedCapabilitiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2 shape=117 reverse=25 static
+        method GetCachedCapabilitiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics shape=51 reverse=24 static
             in string name=address
-            in string name=transportId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatCapabilities> return
         method GetCachedCapabilitiesAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2 shape=117 reverse=25 static
             in string name=address
             in string name=transportId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatCapabilities> return
     method get_capabilities_from_network_async static
-        method GetCapabilitiesFromNetworkAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2 shape=117 reverse=45 static
+        method GetCapabilitiesFromNetworkAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics shape=51 reverse=44 static
             in string name=address
-            in string name=transportId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Chat.ChatCapabilities> return
         method GetCapabilitiesFromNetworkAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2 shape=117 reverse=45 static
             in string name=address

@@ -1979,12 +1979,8 @@ class Windows.Devices.SmartCards.SmartCardAppletIdGroup activatable python_type
     factory Windows.Devices.SmartCards.ISmartCardAppletIdGroupStatics
     factory Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory shape=239 reverse=27
-            in string name=displayName implicit
-            in parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> name=appletIds implicit
-            in enum32 type=Windows.Devices.SmartCards.SmartCardEmulationCategory name=emulationCategory implicit
-            in enum32 type=Windows.Devices.SmartCards.SmartCardEmulationType name=emulationType implicit
-            out class type=Windows.Devices.SmartCards.SmartCardAppletIdGroup return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory shape=239 reverse=27
             in string name=displayName
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Streams.IBuffer> name=appletIds

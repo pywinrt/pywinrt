@@ -347,9 +347,8 @@ class Windows.Web.Http.HttpClient activatable python_type closeable stringable
     requires Windows.Foundation.IStringable
     factory Windows.Web.Http.IHttpClientFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpClientFactory shape=51 reverse=24
-            in interface type=Windows.Web.Http.Filters.IHttpFilter name=filter implicit
-            out class type=Windows.Web.Http.HttpClient return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClientFactory shape=51 reverse=24
             in interface type=Windows.Web.Http.Filters.IHttpFilter name=filter
             out class type=Windows.Web.Http.HttpClient return
@@ -726,9 +725,8 @@ class Windows.Web.Http.HttpMultipartContent activatable python_type iterable clo
     requires Windows.Foundation.IStringable
     factory Windows.Web.Http.IHttpMultipartContentFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMultipartContentFactory shape=51 reverse=24
-            in string name=subtype implicit
-            out class type=Windows.Web.Http.HttpMultipartContent return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpMultipartContentFactory shape=51 reverse=24
             in string name=subtype
             out class type=Windows.Web.Http.HttpMultipartContent return
@@ -782,9 +780,8 @@ class Windows.Web.Http.HttpMultipartFormDataContent activatable python_type iter
     requires Windows.Foundation.IStringable
     factory Windows.Web.Http.IHttpMultipartFormDataContentFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMultipartFormDataContentFactory shape=51 reverse=24
-            in string name=boundary implicit
-            out class type=Windows.Web.Http.HttpMultipartFormDataContent return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpMultipartFormDataContentFactory shape=51 reverse=24
             in string name=boundary
             out class type=Windows.Web.Http.HttpMultipartFormDataContent return
@@ -854,10 +851,8 @@ class Windows.Web.Http.HttpRequestMessage activatable python_type closeable stri
     requires Windows.Foundation.IStringable
     factory Windows.Web.Http.IHttpRequestMessageFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessageFactory shape=117 reverse=25
-            in class type=Windows.Web.Http.HttpMethod name=method implicit
-            in class type=Windows.Foundation.Uri name=uri implicit
-            out class type=Windows.Web.Http.HttpRequestMessage return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessageFactory shape=117 reverse=25
             in class type=Windows.Web.Http.HttpMethod name=method
             in class type=Windows.Foundation.Uri name=uri
@@ -931,9 +926,8 @@ class Windows.Web.Http.HttpResponseMessage activatable python_type closeable str
     requires Windows.Foundation.IStringable
     factory Windows.Web.Http.IHttpResponseMessageFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessageFactory shape=51 reverse=24
-            in enum32 type=Windows.Web.Http.HttpStatusCode name=statusCode implicit
-            out class type=Windows.Web.Http.HttpResponseMessage return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessageFactory shape=51 reverse=24
             in enum32 type=Windows.Web.Http.HttpStatusCode name=statusCode
             out class type=Windows.Web.Http.HttpResponseMessage return

@@ -675,9 +675,8 @@ class Windows.ApplicationModel.Background.ContentPrefetchTrigger activatable pyt
     requires Windows.ApplicationModel.Background.IBackgroundTrigger
     factory Windows.ApplicationModel.Background.IContentPrefetchTriggerFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IContentPrefetchTriggerFactory shape=89
-            in timespan name=waitInterval implicit
-            out class type=Windows.ApplicationModel.Background.ContentPrefetchTrigger return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IContentPrefetchTriggerFactory shape=89
             in timespan name=waitInterval
             out class type=Windows.ApplicationModel.Background.ContentPrefetchTrigger return
@@ -832,9 +831,8 @@ class Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger 
     factory Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory2
     factory Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory2 shape=117 reverse=25
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory shape=51 reverse=24
             in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic name=characteristic
-            in enum32 type=Windows.Devices.Bluetooth.Background.BluetoothEventTriggeringMode name=eventTriggeringMode implicit
             out class type=Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory2 shape=117 reverse=25
             in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic name=characteristic
@@ -2268,9 +2266,8 @@ class Windows.ApplicationModel.Background.PushNotificationTrigger activatable py
     requires Windows.ApplicationModel.Background.IBackgroundTrigger
     factory Windows.ApplicationModel.Background.IPushNotificationTriggerFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IPushNotificationTriggerFactory shape=51 reverse=24
-            in string name=applicationId implicit
-            out class type=Windows.ApplicationModel.Background.PushNotificationTrigger return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IPushNotificationTriggerFactory shape=51 reverse=24
             in string name=applicationId
             out class type=Windows.ApplicationModel.Background.PushNotificationTrigger return
@@ -2481,9 +2478,8 @@ class Windows.ApplicationModel.Background.ToastNotificationActionTrigger activat
     requires Windows.ApplicationModel.Background.IBackgroundTrigger
     factory Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory shape=51 reverse=24
-            in string name=applicationId implicit
-            out class type=Windows.ApplicationModel.Background.ToastNotificationActionTrigger return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IToastNotificationActionTriggerFactory shape=51 reverse=24
             in string name=applicationId
             out class type=Windows.ApplicationModel.Background.ToastNotificationActionTrigger return
@@ -2495,9 +2491,8 @@ class Windows.ApplicationModel.Background.ToastNotificationHistoryChangedTrigger
     requires Windows.ApplicationModel.Background.IBackgroundTrigger
     factory Windows.ApplicationModel.Background.IToastNotificationHistoryChangedTriggerFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IToastNotificationHistoryChangedTriggerFactory shape=51 reverse=24
-            in string name=applicationId implicit
-            out class type=Windows.ApplicationModel.Background.ToastNotificationHistoryChangedTrigger return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IToastNotificationHistoryChangedTriggerFactory shape=51 reverse=24
             in string name=applicationId
             out class type=Windows.ApplicationModel.Background.ToastNotificationHistoryChangedTrigger return

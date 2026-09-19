@@ -31,9 +31,8 @@ class Windows.Globalization.Calendar activatable python_type
     factory Windows.Globalization.ICalendarFactory
     factory Windows.Globalization.ICalendarFactory2
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarFactory shape=51 reverse=24
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages implicit
-            out class type=Windows.Globalization.Calendar return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendarFactory shape=51 reverse=24
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             out class type=Windows.Globalization.Calendar return
@@ -935,9 +934,8 @@ class Windows.Globalization.GeographicRegion activatable python_type
     factory Windows.Globalization.IGeographicRegionStatics
     factory Windows.Globalization.IGeographicRegionFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegionFactory shape=51 reverse=24
-            in string name=geographicRegionCode implicit
-            out class type=Windows.Globalization.GeographicRegion return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.IGeographicRegionFactory shape=51 reverse=24
             in string name=geographicRegionCode
             out class type=Windows.Globalization.GeographicRegion return

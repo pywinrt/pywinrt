@@ -313,8 +313,7 @@ class Windows.UI.Xaml.Input.FocusManager python_type
             in struct type=Windows.Foundation.Rect name=hintRect
             out class type=Windows.UI.Xaml.UIElement return
     method get_focused_element static
-        method GetFocusedElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics7 shape=51 reverse=24 static
-            in class type=Windows.UI.Xaml.XamlRoot name=xamlRoot
+        method GetFocusedElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics shape=4 reverse=22 static
             out object return
         method GetFocusedElement slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics7 shape=51 reverse=24 static
             in class type=Windows.UI.Xaml.XamlRoot name=xamlRoot
@@ -325,9 +324,8 @@ class Windows.UI.Xaml.Input.FocusManager python_type
             in enum32 type=Windows.UI.Xaml.FocusState name=value
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Input.FocusMovementResult> return
     method try_move_focus static
-        method TryMoveFocus slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics4 shape=117 reverse=25 static
+        method TryMoveFocus slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics2 shape=51 reverse=24 static
             in enum32 type=Windows.UI.Xaml.Input.FocusNavigationDirection name=focusNavigationDirection
-            in class type=Windows.UI.Xaml.Input.FindNextElementOptions name=focusNavigationOptions
             out boolean return
         method TryMoveFocus slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics4 shape=117 reverse=25 static
             in enum32 type=Windows.UI.Xaml.Input.FocusNavigationDirection name=focusNavigationDirection
@@ -1103,9 +1101,8 @@ class Windows.UI.Xaml.Input.InputScopeName activatable python_type
     requires Windows.UI.Xaml.Input.IInputScopeName
     factory Windows.UI.Xaml.Input.IInputScopeNameFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInputScopeNameFactory shape=51 reverse=24
-            in enum32 type=Windows.UI.Xaml.Input.InputScopeNameValue name=nameValue implicit
-            out class type=Windows.UI.Xaml.Input.InputScopeName return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IInputScopeNameFactory shape=51 reverse=24
             in enum32 type=Windows.UI.Xaml.Input.InputScopeNameValue name=nameValue
             out class type=Windows.UI.Xaml.Input.InputScopeName return
@@ -1436,10 +1433,8 @@ class Windows.UI.Xaml.Input.ManipulationPivot activatable python_type
     requires Windows.UI.Xaml.Input.IManipulationPivot
     factory Windows.UI.Xaml.Input.IManipulationPivotFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationPivotFactory shape=150
-            in struct type=Windows.Foundation.Point name=center implicit
-            in double name=radius implicit
-            out class type=Windows.UI.Xaml.Input.ManipulationPivot return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationPivotFactory shape=150
             in struct type=Windows.Foundation.Point name=center
             in double name=radius

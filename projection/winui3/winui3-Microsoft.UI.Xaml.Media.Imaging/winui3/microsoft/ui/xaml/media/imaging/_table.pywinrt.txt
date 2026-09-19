@@ -37,9 +37,8 @@ class Microsoft.UI.Xaml.Media.Imaging.BitmapImage activatable python_type
     factory Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics
     factory Microsoft.UI.Xaml.Media.Imaging.IBitmapImageFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageFactory shape=51 reverse=24
-            in class type=Windows.Foundation.Uri name=uriSource implicit
-            out class type=Microsoft.UI.Xaml.Media.Imaging.BitmapImage return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageFactory shape=51 reverse=24
             in class type=Windows.Foundation.Uri name=uriSource
             out class type=Microsoft.UI.Xaml.Media.Imaging.BitmapImage return

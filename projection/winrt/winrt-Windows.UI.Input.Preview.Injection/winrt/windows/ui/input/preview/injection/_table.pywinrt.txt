@@ -133,9 +133,8 @@ class Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo activatable py
     requires Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo
     factory Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfoFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfoFactory shape=95
-            in struct type=Windows.Gaming.Input.GamepadReading name=reading implicit
-            out class type=Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfoFactory shape=95
             in struct type=Windows.Gaming.Input.GamepadReading name=reading
             out class type=Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo return

@@ -1494,12 +1494,8 @@ class Windows.Media.Protection.PlayReady.PlayReadyContentHeader python_type
     factory Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory2
     factory Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory shape=280
+        ctor .ctor slot=8 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory shape=117 reverse=66
             pass_array uint8 name=headerBytes
-            in class type=Windows.Foundation.Uri name=licenseAcquisitionUrl implicit
-            in class type=Windows.Foundation.Uri name=licenseAcquisitionUserInterfaceUrl implicit
-            in string name=customAttributes implicit
-            in guid name=domainServiceId implicit
             out class type=Windows.Media.Protection.PlayReady.PlayReadyContentHeader return
         ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory shape=280
             pass_array uint8 name=headerBytes
@@ -1923,10 +1919,8 @@ class Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable activatable py
     requires Windows.Foundation.Collections.IIterable<Windows.Media.Protection.PlayReady.IPlayReadyLicense>
     factory Windows.Media.Protection.PlayReady.IPlayReadyLicenseIterableFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseIterableFactory shape=117 reverse=25
-            in class type=Windows.Media.Protection.PlayReady.PlayReadyContentHeader name=contentHeader implicit
-            in boolean name=fullyEvaluated implicit
-            out class type=Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseIterableFactory shape=117 reverse=25
             in class type=Windows.Media.Protection.PlayReady.PlayReadyContentHeader name=contentHeader
             in boolean name=fullyEvaluated
