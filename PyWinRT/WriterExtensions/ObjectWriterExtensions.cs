@@ -120,7 +120,7 @@ static class ObjectWriterExtensions
 
             if (!hasMembers)
             {
-                w.WriteLine("pass");
+                w.WriteLine("...");
             }
 
             w.Indent--;
@@ -238,7 +238,7 @@ static class ObjectWriterExtensions
 
         if (type.IsStatic)
         {
-            w.WriteLine("pass");
+            w.WriteLine("...");
             w.Indent--;
             w.WriteBlankLine();
             return;
@@ -254,16 +254,10 @@ static class ObjectWriterExtensions
 
         if (type.IsPyCloseable)
         {
-            w.WriteLine("def __enter__(self: Self) -> Self: ...");
+            w.WriteLine("def __enter__(self) -> typing.Self: ...");
             w.WriteLine(
                 "def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ..."
             );
-            didWriteLine = true;
-        }
-
-        if (type.IsPyStringable)
-        {
-            w.WriteLine("def __str__(self) -> str: ...");
             didWriteLine = true;
         }
 
@@ -320,7 +314,7 @@ static class ObjectWriterExtensions
                 nullabilityInfo.Return.Type,
                 packageMap
             );
-            w.WriteLine("def __iter__(self: Self) -> Self: ...");
+            w.WriteLine("def __iter__(self) -> typing.Self: ...");
             w.WriteLine($"def __next__(self) -> {nextType}: ...");
             didWriteLine = true;
         }
@@ -365,7 +359,7 @@ static class ObjectWriterExtensions
                 w.WriteLine("@typing.overload");
             }
 
-            w.WriteLine($"def __new__(cls: type[Self]{paramList}) -> Self: ...");
+            w.WriteLine($"def __new__(cls{paramList}) -> typing.Self: ...");
             didWriteLine = true;
         }
 
@@ -463,7 +457,7 @@ static class ObjectWriterExtensions
 
         if (!didWriteLine)
         {
-            w.WriteLine("pass");
+            w.WriteLine("...");
         }
 
         w.Indent--;

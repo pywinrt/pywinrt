@@ -27,7 +27,6 @@ __all__ = [
     "AppUpdateOptions",
     "GetEntitlementResult",
 ]
-Self = typing.TypeVar('Self')
 
 class AppInstallState(enum.IntEnum):
     PENDING = 0
@@ -167,7 +166,7 @@ class AppInstallItem(winrt.system.Object):
 
 @typing.final
 class AppInstallManager(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     @typing.overload
     # System.Void Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager::Cancel(System.String)
     def cancel(self, product_id: str, /) -> None: ...
@@ -362,7 +361,7 @@ class AppInstallManagerItemEventArgs(winrt.system.Object):
 
 @typing.final
 class AppInstallOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Management.Deployment.PackageVolume Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions::get_TargetVolume()
     @_property
     def target_volume(self) -> windows_management_deployment.PackageVolume: ...
@@ -483,7 +482,7 @@ class AppInstallStatus(winrt.system.Object):
 
 @typing.final
 class AppUpdateOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions::get_CatalogId()
     @_property
     def catalog_id(self) -> str: ...

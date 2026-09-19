@@ -13,7 +13,6 @@ __all__ = [
     "CommunicationBlockingAccessManager",
     "CommunicationBlockingAppManager",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class CommunicationBlockingAccessManager_Static(winrt._winrt.IInspectable_Static):
@@ -33,7 +32,7 @@ class CommunicationBlockingAccessManager_Static(winrt._winrt.IInspectable_Static
 
 @typing.final
 class CommunicationBlockingAccessManager(winrt.system.Object, metaclass=CommunicationBlockingAccessManager_Static):
-    pass
+    ...
 
 @typing.final
 class CommunicationBlockingAppManager_Static(winrt._winrt.IInspectable_Static):
@@ -47,5 +46,5 @@ class CommunicationBlockingAppManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CommunicationBlockingAppManager(winrt.system.Object, metaclass=CommunicationBlockingAppManager_Static):
-    pass
+    ...
 

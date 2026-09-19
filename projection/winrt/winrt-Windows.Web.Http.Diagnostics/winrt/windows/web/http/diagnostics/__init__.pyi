@@ -23,7 +23,6 @@ __all__ = [
     "HttpDiagnosticProviderResponseReceivedEventArgs",
     "HttpDiagnosticSourceLocation",
 ]
-Self = typing.TypeVar('Self')
 
 class HttpDiagnosticRequestInitiator(enum.IntEnum):
     PARSED_ELEMENT = 0

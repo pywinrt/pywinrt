@@ -48,7 +48,6 @@ __all__ = [
     "UIViewSettings",
     "ViewModePreferences",
 ]
-Self = typing.TypeVar('Self')
 
 class ApplicationViewBoundsMode(enum.IntEnum):
     USE_VISIBLE = 0
@@ -147,7 +146,7 @@ class ViewSizePreference(enum.IntEnum):
 
 @typing.final
 class AccessibilitySettings(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.ViewManagement.AccessibilitySettings::add_HighContrastChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.ViewManagement.AccessibilitySettings,System.Object>)
     def add_high_contrast_changed(self, handler: windows_foundation.TypedEventHandler[AccessibilitySettings, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.ViewManagement.AccessibilitySettings::remove_HighContrastChanged(Windows.Foundation.EventRegistrationToken)
@@ -339,7 +338,7 @@ class ApplicationViewScaling_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ApplicationViewScaling(winrt.system.Object, metaclass=ApplicationViewScaling_Static):
-    pass
+    ...
 
 @typing.final
 class ApplicationViewSwitcher_Static(winrt._winrt.IInspectable_Static):
@@ -396,7 +395,7 @@ class ApplicationViewSwitcher_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ApplicationViewSwitcher(winrt.system.Object, metaclass=ApplicationViewSwitcher_Static):
-    pass
+    ...
 
 @typing.final
 class ApplicationViewTitleBar(winrt.system.Object):
@@ -481,7 +480,7 @@ class ApplicationViewTransferContext_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ApplicationViewTransferContext(winrt.system.Object, metaclass=ApplicationViewTransferContext_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Int32 Windows.UI.ViewManagement.ApplicationViewTransferContext::get_ViewId()
     @_property
     def view_id(self) -> winrt.system.Int32: ...
@@ -570,11 +569,11 @@ class ProjectionManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ProjectionManager(winrt.system.Object, metaclass=ProjectionManager_Static):
-    pass
+    ...
 
 @typing.final
 class UISettings(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.UI.Color Windows.UI.ViewManagement.UISettings::GetColorValue(Windows.UI.ViewManagement.UIColorType)
     def get_color_value(self, desired_color: UIColorType, /) -> windows_ui.Color: ...
     # Windows.UI.Color Windows.UI.ViewManagement.UISettings::UIElementColor(Windows.UI.ViewManagement.UIElementType)
@@ -651,15 +650,15 @@ class UISettings(winrt.system.Object):
 
 @typing.final
 class UISettingsAnimationsEnabledChangedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class UISettingsAutoHideScrollBarsChangedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class UISettingsMessageDurationChangedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class UIViewSettings_Static(winrt._winrt.IInspectable_Static):

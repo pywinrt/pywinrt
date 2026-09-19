@@ -66,7 +66,6 @@ __all__ = [
     "GattWriteRequestedEventArgs",
     "GattWriteResult",
 ]
-Self = typing.TypeVar('Self')
 
 class GattCharacteristicProperties(enum.IntFlag):
     NONE = 0x0
@@ -479,7 +478,7 @@ class GattCharacteristicUuids_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GattCharacteristicUuids(winrt.system.Object, metaclass=GattCharacteristicUuids_Static):
-    pass
+    ...
 
 @typing.final
 class GattCharacteristicsResult(winrt.system.Object):
@@ -566,7 +565,7 @@ class GattDescriptorUuids_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GattDescriptorUuids(winrt.system.Object, metaclass=GattDescriptorUuids_Static):
-    pass
+    ...
 
 @typing.final
 class GattDescriptorsResult(winrt.system.Object):
@@ -623,7 +622,7 @@ class GattDeviceService_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GattDeviceService(winrt.system.Object, windows_foundation.IClosable, metaclass=GattDeviceService_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::Close()
     def close(self) -> None: ...
@@ -776,7 +775,7 @@ class GattLocalCharacteristic(winrt.system.Object):
 
 @typing.final
 class GattLocalCharacteristicParameters(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Devices.Bluetooth.GenericAttributeProfile.GattProtectionLevel Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters::get_WriteProtectionLevel()
     @_property
     def write_protection_level(self) -> GattProtectionLevel: ...
@@ -845,7 +844,7 @@ class GattLocalDescriptor(winrt.system.Object):
 
 @typing.final
 class GattLocalDescriptorParameters(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Devices.Bluetooth.GenericAttributeProfile.GattProtectionLevel Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorParameters::get_WriteProtectionLevel()
     @_property
     def write_protection_level(self) -> GattProtectionLevel: ...
@@ -997,7 +996,7 @@ class GattPresentationFormatTypes_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GattPresentationFormatTypes(winrt.system.Object, metaclass=GattPresentationFormatTypes_Static):
-    pass
+    ...
 
 @typing.final
 class GattProtocolError_Static(winrt._winrt.IInspectable_Static):
@@ -1055,7 +1054,7 @@ class GattProtocolError_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GattProtocolError(winrt.system.Object, metaclass=GattProtocolError_Static):
-    pass
+    ...
 
 @typing.final
 class GattReadClientCharacteristicConfigurationDescriptorResult(winrt.system.Object):
@@ -1113,7 +1112,7 @@ class GattReadResult(winrt.system.Object):
 
 @typing.final
 class GattReliableWriteTransaction(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> Windows.Devices.Bluetooth.GenericAttributeProfile.GattReliableWriteTransaction::CommitAsync()
     def commit_async(self) -> windows_foundation.IAsyncOperation[GattCommunicationStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattReliableWriteTransaction::CommitWithResultAsync()
@@ -1173,7 +1172,7 @@ class GattServiceProviderAdvertisementStatusChangedEventArgs(winrt.system.Object
 
 @typing.final
 class GattServiceProviderAdvertisingParameters(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters::get_IsDiscoverable()
     @_property
     def is_discoverable(self) -> bool: ...
@@ -1285,7 +1284,7 @@ class GattServiceUuids_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GattServiceUuids(winrt.system.Object, metaclass=GattServiceUuids_Static):
-    pass
+    ...
 
 @typing.final
 class GattSession_Static(winrt._winrt.IInspectable_Static):
@@ -1294,7 +1293,7 @@ class GattSession_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GattSession(winrt.system.Object, windows_foundation.IClosable, metaclass=GattSession_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession::Close()
     def close(self) -> None: ...

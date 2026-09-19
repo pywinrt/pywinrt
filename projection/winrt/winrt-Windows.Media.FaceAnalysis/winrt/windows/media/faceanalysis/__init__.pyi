@@ -17,7 +17,6 @@ __all__ = [
     "FaceDetector",
     "FaceTracker",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class DetectedFace(winrt.system.Object):

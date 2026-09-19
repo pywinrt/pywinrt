@@ -13,7 +13,6 @@ __all__ = [
     "CompositionDebugHeatMaps",
     "CompositionDebugSettings",
 ]
-Self = typing.TypeVar('Self')
 
 class CompositionDebugOverdrawContentKinds(enum.IntFlag):
     NONE = 0x0

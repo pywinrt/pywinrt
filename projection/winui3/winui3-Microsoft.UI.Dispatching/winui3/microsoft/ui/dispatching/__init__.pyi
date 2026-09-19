@@ -20,7 +20,6 @@ __all__ = [
     "DispatcherQueueTimer",
     "DispatcherQueueHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class DispatcherQueuePriority(enum.IntEnum):
     LOW = -10
@@ -34,7 +33,7 @@ class DispatcherRunOptions(enum.IntFlag):
 
 @typing.final
 class DispatcherExitDeferral(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Microsoft.UI.Dispatching.DispatcherExitDeferral::Complete()
     def complete(self) -> None: ...
 

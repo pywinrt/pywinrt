@@ -16,7 +16,6 @@ __all__ = [
     "ContactPickerUI",
     "ContactRemovedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class AddContactResult(enum.IntEnum):
     ADDED = 0

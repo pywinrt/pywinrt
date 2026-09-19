@@ -22,7 +22,6 @@ __all__ = [
     "RuntimeCompatibilityOptions",
     "RuntimeInfo",
 ]
-Self = typing.TypeVar('Self')
 
 class DeploymentStatus(enum.IntEnum):
     UNKNOWN = 0
@@ -58,7 +57,7 @@ class WindowsAppRuntimeVersion:
 
 @typing.final
 class DeploymentInitializeOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions::get_ForceDeployment()
     @_property
     def force_deployment(self) -> bool: ...
@@ -85,11 +84,11 @@ class DeploymentManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DeploymentManager(winrt.system.Object, metaclass=DeploymentManager_Static):
-    pass
+    ...
 
 @typing.final
 class DeploymentResult(winrt.system.Object):
-    def __new__(cls: type[Self], status: DeploymentStatus, extended_error: windows_foundation.HResult | tuple[winrt.system.Int32]) -> Self: ...
+    def __new__(cls, status: DeploymentStatus, extended_error: windows_foundation.HResult | tuple[winrt.system.Int32]) -> typing.Self: ...
     # Windows.Foundation.HResult Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -117,11 +116,11 @@ class ReleaseInfo_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ReleaseInfo(winrt.system.Object, metaclass=ReleaseInfo_Static):
-    pass
+    ...
 
 @typing.final
 class RuntimeCompatibilityOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions::Apply()
     def apply(self) -> None: ...
     # Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions::get_PatchLevel2()
@@ -151,5 +150,5 @@ class RuntimeInfo_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class RuntimeInfo(winrt.system.Object, metaclass=RuntimeInfo_Static):
-    pass
+    ...
 

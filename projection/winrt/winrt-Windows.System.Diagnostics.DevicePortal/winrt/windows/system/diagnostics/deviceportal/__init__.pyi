@@ -20,7 +20,6 @@ __all__ = [
     "DevicePortalConnectionClosedEventArgs",
     "DevicePortalConnectionRequestReceivedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class DevicePortalConnectionClosedReason(enum.IntEnum):
     UNKNOWN = 0

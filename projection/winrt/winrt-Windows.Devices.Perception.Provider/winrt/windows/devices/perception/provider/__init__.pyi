@@ -32,7 +32,6 @@ __all__ = [
     "PerceptionStartFaceAuthenticationHandler",
     "PerceptionStopFaceAuthenticationHandler",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class KnownPerceptionFrameKind_Static(winrt._winrt.IInspectable_Static):
@@ -48,18 +47,18 @@ class KnownPerceptionFrameKind_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KnownPerceptionFrameKind(winrt.system.Object, metaclass=KnownPerceptionFrameKind_Static):
-    pass
+    ...
 
 @typing.final
 class PerceptionControlGroup(winrt.system.Object):
-    def __new__(cls: type[Self], ids: _cabc.Iterable[str]) -> Self: ...
+    def __new__(cls, ids: _cabc.Iterable[str]) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Perception.Provider.PerceptionControlGroup::get_FrameProviderIds()
     @_property
     def frame_provider_ids(self) -> _cabc.Sequence[str]: ...
 
 @typing.final
 class PerceptionCorrelation(winrt.system.Object):
-    def __new__(cls: type[Self], target_id: str, position: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], orientation: windows_foundation_numerics.Quaternion | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]) -> Self: ...
+    def __new__(cls, target_id: str, position: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], orientation: windows_foundation_numerics.Quaternion | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]) -> typing.Self: ...
     # Windows.Foundation.Numerics.Quaternion Windows.Devices.Perception.Provider.PerceptionCorrelation::get_Orientation()
     @_property
     def orientation(self) -> windows_foundation_numerics.Quaternion: ...
@@ -72,14 +71,14 @@ class PerceptionCorrelation(winrt.system.Object):
 
 @typing.final
 class PerceptionCorrelationGroup(winrt.system.Object):
-    def __new__(cls: type[Self], relative_locations: _cabc.Iterable[PerceptionCorrelation]) -> Self: ...
+    def __new__(cls, relative_locations: _cabc.Iterable[PerceptionCorrelation]) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Perception.Provider.PerceptionCorrelation> Windows.Devices.Perception.Provider.PerceptionCorrelationGroup::get_RelativeLocations()
     @_property
     def relative_locations(self) -> _cabc.Sequence[PerceptionCorrelation]: ...
 
 @typing.final
 class PerceptionFaceAuthenticationGroup(winrt.system.Object):
-    def __new__(cls: type[Self], ids: _cabc.Iterable[str], start_handler: PerceptionStartFaceAuthenticationHandler, stop_handler: PerceptionStopFaceAuthenticationHandler) -> Self: ...
+    def __new__(cls, ids: _cabc.Iterable[str], start_handler: PerceptionStartFaceAuthenticationHandler, stop_handler: PerceptionStopFaceAuthenticationHandler) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup::get_FrameProviderIds()
     @_property
     def frame_provider_ids(self) -> _cabc.Sequence[str]: ...
@@ -101,7 +100,7 @@ class PerceptionFrame(winrt.system.Object):
 
 @typing.final
 class PerceptionFrameProviderInfo(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo::get_Id()
     @_property
     def id(self) -> str: ...
@@ -168,7 +167,7 @@ class PerceptionFrameProviderManagerService_Static(winrt._winrt.IInspectable_Sta
 
 @typing.final
 class PerceptionFrameProviderManagerService(winrt.system.Object, metaclass=PerceptionFrameProviderManagerService_Static):
-    pass
+    ...
 
 @typing.final
 class PerceptionPropertyChangeRequest(winrt.system.Object):
@@ -190,9 +189,9 @@ class PerceptionPropertyChangeRequest(winrt.system.Object):
 
 @typing.final
 class PerceptionVideoFrameAllocator(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
-    def __new__(cls: type[Self], max_outstanding_frame_count_for_write: winrt.system.UInt32, format: windows_graphics_imaging.BitmapPixelFormat, resolution: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], alpha: windows_graphics_imaging.BitmapAlphaMode) -> Self: ...
+    def __new__(cls, max_outstanding_frame_count_for_write: winrt.system.UInt32, format: windows_graphics_imaging.BitmapPixelFormat, resolution: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], alpha: windows_graphics_imaging.BitmapAlphaMode) -> typing.Self: ...
     # Windows.Devices.Perception.Provider.PerceptionFrame Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator::AllocateFrame()
     # @deprecated("PerceptionVideoFrameAllocator may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def allocate_frame(self) -> PerceptionFrame: ...

@@ -50,7 +50,6 @@ __all__ = [
     "DataProviderHandler",
     "ShareProviderHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class ClipboardHistoryItemsResultStatus(enum.IntEnum):
     SUCCESS = 0
@@ -116,11 +115,11 @@ class Clipboard_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Clipboard(winrt.system.Object, metaclass=Clipboard_Static):
-    pass
+    ...
 
 @typing.final
 class ClipboardContentOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.ApplicationModel.DataTransfer.ClipboardContentOptions::get_IsRoamable()
     @_property
     def is_roamable(self) -> bool: ...
@@ -142,7 +141,7 @@ class ClipboardContentOptions(winrt.system.Object):
 
 @typing.final
 class ClipboardHistoryChangedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class ClipboardHistoryItem(winrt.system.Object):
@@ -167,7 +166,7 @@ class ClipboardHistoryItemsResult(winrt.system.Object):
 
 @typing.final
 class DataPackage(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.ApplicationModel.DataTransfer.DataPackageView Windows.ApplicationModel.DataTransfer.DataPackage::GetView()
     def get_view(self) -> DataPackageView: ...
     # System.Void Windows.ApplicationModel.DataTransfer.DataPackage::SetApplicationLink(Windows.Foundation.Uri)
@@ -534,7 +533,7 @@ class HtmlFormatHelper_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class HtmlFormatHelper(winrt.system.Object, metaclass=HtmlFormatHelper_Static):
-    pass
+    ...
 
 @typing.final
 class OperationCompletedEventArgs(winrt.system.Object):
@@ -553,7 +552,7 @@ class ShareCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class ShareProvider(winrt.system.Object):
-    def __new__(cls: type[Self], title: str, display_icon: windows_storage_streams.RandomAccessStreamReference, background_color: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8], handler: ShareProviderHandler) -> Self: ...
+    def __new__(cls, title: str, display_icon: windows_storage_streams.RandomAccessStreamReference, background_color: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8], handler: ShareProviderHandler) -> typing.Self: ...
     # System.Object Windows.ApplicationModel.DataTransfer.ShareProvider::get_Tag()
     @_property
     def tag(self) -> winrt.system.Object: ...
@@ -603,7 +602,7 @@ class ShareTargetInfo(winrt.system.Object):
 
 @typing.final
 class ShareUIOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.ApplicationModel.DataTransfer.ShareUITheme Windows.ApplicationModel.DataTransfer.ShareUIOptions::get_Theme()
     @_property
     def theme(self) -> ShareUITheme: ...
@@ -628,7 +627,7 @@ class SharedStorageAccessManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SharedStorageAccessManager(winrt.system.Object, metaclass=SharedStorageAccessManager_Static):
-    pass
+    ...
 
 @typing.final
 class StandardDataFormats_Static(winrt._winrt.IInspectable_Static):
@@ -662,7 +661,7 @@ class StandardDataFormats_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class StandardDataFormats(winrt.system.Object, metaclass=StandardDataFormats_Static):
-    pass
+    ...
 
 @typing.final
 class TargetApplicationChosenEventArgs(winrt.system.Object):

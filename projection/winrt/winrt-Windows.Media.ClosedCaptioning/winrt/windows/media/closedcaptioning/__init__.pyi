@@ -17,7 +17,6 @@ __all__ = [
     "ClosedCaptionStyle",
     "ClosedCaptionProperties",
 ]
-Self = typing.TypeVar('Self')
 
 class ClosedCaptionColor(enum.IntEnum):
     DEFAULT = 0
@@ -107,5 +106,5 @@ class ClosedCaptionProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ClosedCaptionProperties(winrt.system.Object, metaclass=ClosedCaptionProperties_Static):
-    pass
+    ...
 

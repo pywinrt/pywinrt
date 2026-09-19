@@ -29,7 +29,6 @@ __all__ = [
     "TokenRequestResult",
     "TokenResponse",
 ]
-Self = typing.TypeVar('Self')
 
 class CodeChallengeMethodKind(enum.IntEnum):
     NONE = 0
@@ -75,9 +74,9 @@ class AuthRequestParams_Static(winrt._winrt.IInspectable_Static):
 @typing.final
 class AuthRequestParams(winrt.system.Object, metaclass=AuthRequestParams_Static):
     @typing.overload
-    def __new__(cls: type[Self], response_type: str, client_id: str) -> Self: ...
+    def __new__(cls, response_type: str, client_id: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], response_type: str, client_id: str, redirect_uri: windows_foundation.Uri) -> Self: ...
+    def __new__(cls, response_type: str, client_id: str, redirect_uri: windows_foundation.Uri) -> typing.Self: ...
     # System.String Microsoft.Security.Authentication.OAuth.AuthRequestParams::get_State()
     @_property
     def state(self) -> str: ...
@@ -168,9 +167,9 @@ class ClientAuthentication_Static(winrt._winrt.IInspectable_Static):
 @typing.final
 class ClientAuthentication(winrt.system.Object, metaclass=ClientAuthentication_Static):
     @typing.overload
-    def __new__(cls: type[Self], authorization: windows_web_http_headers.HttpCredentialsHeaderValue) -> Self: ...
+    def __new__(cls, authorization: windows_web_http_headers.HttpCredentialsHeaderValue) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Web.Http.Headers.HttpCredentialsHeaderValue Microsoft.Security.Authentication.OAuth.ClientAuthentication::get_ProxyAuthorization()
     @_property
     def proxy_authorization(self) -> windows_web_http_headers.HttpCredentialsHeaderValue: ...
@@ -206,7 +205,7 @@ class OAuth2Manager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class OAuth2Manager(winrt.system.Object, metaclass=OAuth2Manager_Static):
-    pass
+    ...
 
 @typing.final
 class TokenFailure(winrt.system.Object):
@@ -242,7 +241,7 @@ class TokenRequestParams_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class TokenRequestParams(winrt.system.Object, metaclass=TokenRequestParams_Static):
-    def __new__(cls: type[Self], grant_type: str) -> Self: ...
+    def __new__(cls, grant_type: str) -> typing.Self: ...
     # System.String Microsoft.Security.Authentication.OAuth.TokenRequestParams::get_Username()
     @_property
     def username(self) -> str: ...

@@ -86,6 +86,26 @@ static class TypeExtensions
             _ => throw new NotImplementedException(),
         };
 
+    /// <summary>
+    /// Gets the default value of <paramref name="type"/> as a type stub
+    /// spells it.
+    /// </summary>
+    /// <remarks>
+    /// A stub is read and not executed, so a default that is not a literal is
+    /// written as <c>...</c>, which is how a stub says that a parameter has a
+    /// default without naming the value.
+    /// </remarks>
+    public static string GetDefaultPyValueForStub(
+        this TypeReference type,
+        string ns,
+        IReadOnlyDictionary<string, string> packageMap
+    ) =>
+        type.GetDefaultPyValue(ns, packageMap) switch
+        {
+            var value and ("False" or "0" or "\"\"" or "None") => value,
+            _ => "...",
+        };
+
     public static string ToPyTypeName(
         this TypeReference type,
         string ns,

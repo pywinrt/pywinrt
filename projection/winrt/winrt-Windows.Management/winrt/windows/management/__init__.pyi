@@ -19,7 +19,6 @@ __all__ = [
     "MdmSession",
     "MdmSessionManager",
 ]
-Self = typing.TypeVar('Self')
 
 class MdmAlertDataType(enum.IntEnum):
     STRING = 0
@@ -45,7 +44,7 @@ class MdmSessionState(enum.IntEnum):
 
 @typing.final
 class MdmAlert(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Management.MdmAlert::get_Type()
     @_property
     def type(self) -> str: ...
@@ -129,5 +128,5 @@ class MdmSessionManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class MdmSessionManager(winrt.system.Object, metaclass=MdmSessionManager_Static):
-    pass
+    ...
 

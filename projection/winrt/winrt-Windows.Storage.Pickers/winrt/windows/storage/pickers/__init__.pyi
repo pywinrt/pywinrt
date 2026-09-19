@@ -22,7 +22,6 @@ __all__ = [
     "FileSavePicker",
     "FolderPicker",
 ]
-Self = typing.TypeVar('Self')
 
 class PickerLocationId(enum.IntEnum):
     DOCUMENTS_LIBRARY = 0
@@ -94,7 +93,7 @@ class FileOpenPicker_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class FileOpenPicker(winrt.system.Object, metaclass=FileOpenPicker_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Storage.Pickers.FileOpenPicker::PickMultipleFilesAndContinue()
     # @deprecated("Instead, use PickMultipleFilesAsync")
     def pick_multiple_files_and_continue(self) -> None: ...
@@ -196,7 +195,7 @@ class FileSavePicker_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class FileSavePicker(winrt.system.Object, metaclass=FileSavePicker_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Storage.Pickers.FileSavePicker::PickSaveFileAndContinue()
     # @deprecated("Instead, use PickSaveFileAsync")
     def pick_save_file_and_continue(self) -> None: ...
@@ -261,7 +260,7 @@ class FolderPicker_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class FolderPicker(winrt.system.Object, metaclass=FolderPicker_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Storage.Pickers.FolderPicker::PickFolderAndContinue()
     # @deprecated("Instead, use PickSingleFolderAsync")
     def pick_folder_and_continue(self) -> None: ...

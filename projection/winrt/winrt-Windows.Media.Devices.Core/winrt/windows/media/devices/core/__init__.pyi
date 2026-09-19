@@ -33,7 +33,6 @@ __all__ = [
     "FrameIsoSpeedControl",
     "VariablePhotoSequenceController",
 ]
-Self = typing.TypeVar('Self')
 
 class FrameFlashMode(enum.IntEnum):
     DISABLE = 0
@@ -42,7 +41,7 @@ class FrameFlashMode(enum.IntEnum):
 
 @typing.final
 class CameraIntrinsics(winrt.system.Object):
-    def __new__(cls: type[Self], focal_length: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], principal_point: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], radial_distortion: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], tangential_distortion: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], image_width: winrt.system.UInt32, image_height: winrt.system.UInt32) -> Self: ...
+    def __new__(cls, focal_length: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], principal_point: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], radial_distortion: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], tangential_distortion: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], image_width: winrt.system.UInt32, image_height: winrt.system.UInt32) -> typing.Self: ...
     # Windows.Foundation.Point Windows.Media.Devices.Core.CameraIntrinsics::DistortPoint(Windows.Foundation.Point)
     def distort_point(self, input: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single], /) -> windows_foundation.Point: ...
     # System.Void Windows.Media.Devices.Core.CameraIntrinsics::DistortPoints(Windows.Foundation.Point[],Windows.Foundation.Point[])
@@ -83,7 +82,7 @@ class CameraIntrinsics(winrt.system.Object):
 
 @typing.final
 class DepthCorrelatedCoordinateMapper(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper::Close()
     def close(self) -> None: ...
@@ -119,7 +118,7 @@ class FrameControlCapabilities(winrt.system.Object):
 
 @typing.final
 class FrameController(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IReference`1<System.Boolean> Windows.Media.Devices.Core.FrameController::get_PhotoConfirmationEnabled()
     @_property
     def photo_confirmation_enabled(self) -> bool | None: ...

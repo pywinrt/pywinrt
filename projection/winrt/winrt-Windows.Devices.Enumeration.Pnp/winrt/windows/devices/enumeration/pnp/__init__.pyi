@@ -19,7 +19,6 @@ __all__ = [
     "PnpObjectUpdate",
     "PnpObjectWatcher",
 ]
-Self = typing.TypeVar('Self')
 
 class PnpObjectType(enum.IntEnum):
     UNKNOWN = 0

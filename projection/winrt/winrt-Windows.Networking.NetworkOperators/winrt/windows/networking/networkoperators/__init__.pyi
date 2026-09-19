@@ -139,7 +139,6 @@ __all__ = [
     "UssdReply",
     "UssdSession",
 ]
-Self = typing.TypeVar('Self')
 
 class DataClasses(enum.IntFlag):
     NONE = 0x0
@@ -443,7 +442,7 @@ class ProfileUsage:
     def usage_in_megabytes(self) -> winrt.system.UInt32: ...
     @_property
     def last_sync_time(self) -> datetime.datetime: ...
-    def __new__(cls, usage_in_megabytes: winrt.system.UInt32 = 0, last_sync_time: datetime.datetime = datetime.datetime(1601, 1, 1, tzinfo=datetime.UTC)) -> ProfileUsage: ...
+    def __new__(cls, usage_in_megabytes: winrt.system.UInt32 = 0, last_sync_time: datetime.datetime = ...) -> ProfileUsage: ...
     def __replace__(self, /, **changes: typing.Any) -> ProfileUsage: ...
     def unpack(self) -> tuple[winrt.system.UInt32, datetime.datetime]: ...
 
@@ -556,7 +555,7 @@ class ESimManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ESimManager(winrt.system.Object, metaclass=ESimManager_Static):
-    pass
+    ...
 
 @typing.final
 class ESimOperationResult(winrt.system.Object):
@@ -776,7 +775,7 @@ class KnownCSimFilePaths_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KnownCSimFilePaths(winrt.system.Object, metaclass=KnownCSimFilePaths_Static):
-    pass
+    ...
 
 @typing.final
 class KnownRuimFilePaths_Static(winrt._winrt.IInspectable_Static):
@@ -792,7 +791,7 @@ class KnownRuimFilePaths_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KnownRuimFilePaths(winrt.system.Object, metaclass=KnownRuimFilePaths_Static):
-    pass
+    ...
 
 @typing.final
 class KnownSimFilePaths_Static(winrt._winrt.IInspectable_Static):
@@ -811,7 +810,7 @@ class KnownSimFilePaths_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KnownSimFilePaths(winrt.system.Object, metaclass=KnownSimFilePaths_Static):
-    pass
+    ...
 
 @typing.final
 class KnownUSimFilePaths_Static(winrt._winrt.IInspectable_Static):
@@ -833,7 +832,7 @@ class KnownUSimFilePaths_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KnownUSimFilePaths(winrt.system.Object, metaclass=KnownUSimFilePaths_Static):
-    pass
+    ...
 
 @typing.final
 class MobileBroadbandAccount_Static(winrt._winrt.IInspectable_Static):
@@ -886,7 +885,7 @@ class MobileBroadbandAccountUpdatedEventArgs(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandAccountWatcher(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher::Stop()
@@ -917,7 +916,7 @@ class MobileBroadbandAccountWatcher(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandAntennaSar(winrt.system.Object):
-    def __new__(cls: type[Self], antenna_index: winrt.system.Int32, sar_backoff_index: winrt.system.Int32) -> Self: ...
+    def __new__(cls, antenna_index: winrt.system.Int32, sar_backoff_index: winrt.system.Int32) -> typing.Self: ...
     # System.Int32 Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar::get_AntennaIndex()
     @_property
     def antenna_index(self) -> winrt.system.Int32: ...
@@ -1389,7 +1388,7 @@ class MobileBroadbandModemConfiguration(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandModemIsolation(winrt.system.Object):
-    def __new__(cls: type[Self], modem_device_id: str, rule_group_id: str) -> Self: ...
+    def __new__(cls, modem_device_id: str, rule_group_id: str) -> typing.Self: ...
     # System.Void Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation::AddAllowedHost(Windows.Networking.HostName)
     def add_allowed_host(self, host: windows_networking.HostName, /) -> None: ...
     # System.Void Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation::AddAllowedHostRange(Windows.Networking.HostName,Windows.Networking.HostName)
@@ -1729,7 +1728,7 @@ class NetworkOperatorNotificationEventDetails(winrt.system.Object):
 
 @typing.final
 class NetworkOperatorTetheringAccessPointConfiguration(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration::IsAuthenticationKindSupported(Windows.Networking.NetworkOperators.TetheringWiFiAuthenticationKind)
     def is_authentication_kind_supported(self, authentication_kind: TetheringWiFiAuthenticationKind, /) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration::IsAuthenticationKindSupportedAsync(Windows.Networking.NetworkOperators.TetheringWiFiAuthenticationKind)
@@ -1838,7 +1837,7 @@ class NetworkOperatorTetheringOperationResult(winrt.system.Object):
 
 @typing.final
 class NetworkOperatorTetheringSessionAccessPointConfiguration(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration::IsAuthenticationKindSupported(Windows.Networking.NetworkOperators.TetheringWiFiAuthenticationKind)
     def is_authentication_kind_supported(self, authentication_kind: TetheringWiFiAuthenticationKind, /) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration::IsAuthenticationKindSupportedAsync(Windows.Networking.NetworkOperators.TetheringWiFiAuthenticationKind)
@@ -1901,7 +1900,7 @@ class ProvisioningAgent_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ProvisioningAgent(winrt.system.Object, metaclass=ProvisioningAgent_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Networking.NetworkOperators.ProvisionedProfile Windows.Networking.NetworkOperators.ProvisioningAgent::GetProvisionedProfile(Windows.Networking.NetworkOperators.ProfileMediaType,System.String)
     def get_provisioned_profile(self, media_type: ProfileMediaType, profile_name: str, /) -> ProvisionedProfile: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.ProvisionFromXmlDocumentResults> Windows.Networking.NetworkOperators.ProvisioningAgent::ProvisionFromXmlDocumentAsync(System.String)
@@ -1919,7 +1918,7 @@ class TetheringEntitlementCheckTriggerDetails(winrt.system.Object):
 
 @typing.final
 class UssdMessage(winrt.system.Object):
-    def __new__(cls: type[Self], message_text: str) -> Self: ...
+    def __new__(cls, message_text: str) -> typing.Self: ...
     # System.Byte[] Windows.Networking.NetworkOperators.UssdMessage::GetPayload()
     def get_payload(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # System.Void Windows.Networking.NetworkOperators.UssdMessage::SetPayload(System.Byte[])

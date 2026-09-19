@@ -32,7 +32,6 @@ __all__ = [
     "StorePreviewSkuInfo",
     "WebAuthenticationCoreManagerHelper",
 ]
-Self = typing.TypeVar('Self')
 
 class DeliveryOptimizationDownloadMode(enum.IntEnum):
     SIMPLE = 0
@@ -171,7 +170,7 @@ class StoreConfiguration_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class StoreConfiguration(winrt.system.Object, metaclass=StoreConfiguration_Static):
-    pass
+    ...
 
 @typing.final
 class StoreHardwareManufacturerInfo(winrt.system.Object):
@@ -197,7 +196,7 @@ class StorePreview_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class StorePreview(winrt.system.Object, metaclass=StorePreview_Static):
-    pass
+    ...
 
 @typing.final
 class StorePreviewProductInfo(winrt.system.Object):
@@ -268,5 +267,5 @@ class WebAuthenticationCoreManagerHelper_Static(winrt._winrt.IInspectable_Static
 
 @typing.final
 class WebAuthenticationCoreManagerHelper(winrt.system.Object, metaclass=WebAuthenticationCoreManagerHelper_Static):
-    pass
+    ...
 

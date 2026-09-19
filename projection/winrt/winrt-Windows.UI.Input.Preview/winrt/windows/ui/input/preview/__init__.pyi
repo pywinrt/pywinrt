@@ -10,7 +10,6 @@ import winrt.windows.ui.windowmanagement as windows_ui_windowmanagement
 __all__ = [
     "InputActivationListenerPreview",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class InputActivationListenerPreview_Static(winrt._winrt.IInspectable_Static):
@@ -19,5 +18,5 @@ class InputActivationListenerPreview_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class InputActivationListenerPreview(winrt.system.Object, metaclass=InputActivationListenerPreview_Static):
-    pass
+    ...
 

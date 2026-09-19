@@ -9,7 +9,6 @@ import winrt.windows.ui as windows_ui
 __all__ = [
     "ToastOcclusionManagerPreview",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class ToastOcclusionManagerPreview_Static(winrt._winrt.IInspectable_Static):
@@ -18,5 +17,5 @@ class ToastOcclusionManagerPreview_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ToastOcclusionManagerPreview(winrt.system.Object, metaclass=ToastOcclusionManagerPreview_Static):
-    pass
+    ...
 

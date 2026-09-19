@@ -32,7 +32,6 @@ __all__ = [
     "SourceChangeRequestedEventArgs",
     "VolumeChangeRequestedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class PlayToConnectionError(enum.IntEnum):
     NONE = 0
@@ -141,7 +140,7 @@ class PlayToManager(winrt.system.Object, metaclass=PlayToManager_Static):
 
 @typing.final
 class PlayToReceiver(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Media.PlayTo.PlayToReceiver::NotifyDurationChange(Windows.Foundation.TimeSpan)
     def notify_duration_change(self, duration: datetime.timedelta, /) -> None: ...
     # System.Void Windows.Media.PlayTo.PlayToReceiver::NotifyEnded()

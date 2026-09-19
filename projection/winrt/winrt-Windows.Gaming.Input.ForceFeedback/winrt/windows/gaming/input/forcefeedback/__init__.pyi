@@ -24,7 +24,6 @@ __all__ = [
     "RampForceEffect",
     "IForceFeedbackEffect",
 ]
-Self = typing.TypeVar('Self')
 
 class ConditionForceEffectKind(enum.IntEnum):
     SPRING = 0
@@ -58,7 +57,7 @@ class PeriodicForceEffectKind(enum.IntEnum):
 
 @typing.final
 class ConditionForceEffect(winrt.system.Object, IForceFeedbackEffect):
-    def __new__(cls: type[Self], effect_kind: ConditionForceEffectKind) -> Self: ...
+    def __new__(cls, effect_kind: ConditionForceEffectKind) -> typing.Self: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.ConditionForceEffect::SetParameters(Windows.Foundation.Numerics.Vector3,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
     def set_parameters(self, direction: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], positive_coefficient: winrt.system.Single, negative_coefficient: winrt.system.Single, max_positive_magnitude: winrt.system.Single, max_negative_magnitude: winrt.system.Single, dead_zone: winrt.system.Single, bias: winrt.system.Single, /) -> None: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.ConditionForceEffect::Start()
@@ -80,7 +79,7 @@ class ConditionForceEffect(winrt.system.Object, IForceFeedbackEffect):
 
 @typing.final
 class ConstantForceEffect(winrt.system.Object, IForceFeedbackEffect):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.ConstantForceEffect::SetParameters(Windows.Foundation.Numerics.Vector3,Windows.Foundation.TimeSpan)
     def set_parameters(self, vector: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], duration: datetime.timedelta, /) -> None: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.ConstantForceEffect::SetParametersWithEnvelope(Windows.Foundation.Numerics.Vector3,System.Single,System.Single,System.Single,Windows.Foundation.TimeSpan,Windows.Foundation.TimeSpan,Windows.Foundation.TimeSpan,Windows.Foundation.TimeSpan,System.UInt32)
@@ -135,7 +134,7 @@ class ForceFeedbackMotor(winrt.system.Object):
 
 @typing.final
 class PeriodicForceEffect(winrt.system.Object, IForceFeedbackEffect):
-    def __new__(cls: type[Self], effect_kind: PeriodicForceEffectKind) -> Self: ...
+    def __new__(cls, effect_kind: PeriodicForceEffectKind) -> typing.Self: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect::SetParameters(Windows.Foundation.Numerics.Vector3,System.Single,System.Single,System.Single,Windows.Foundation.TimeSpan)
     def set_parameters(self, vector: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], frequency: winrt.system.Single, phase: winrt.system.Single, bias: winrt.system.Single, duration: datetime.timedelta, /) -> None: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect::SetParametersWithEnvelope(Windows.Foundation.Numerics.Vector3,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,Windows.Foundation.TimeSpan,Windows.Foundation.TimeSpan,Windows.Foundation.TimeSpan,Windows.Foundation.TimeSpan,System.UInt32)
@@ -159,7 +158,7 @@ class PeriodicForceEffect(winrt.system.Object, IForceFeedbackEffect):
 
 @typing.final
 class RampForceEffect(winrt.system.Object, IForceFeedbackEffect):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.RampForceEffect::SetParameters(Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3,Windows.Foundation.TimeSpan)
     def set_parameters(self, start_vector: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], end_vector: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], duration: datetime.timedelta, /) -> None: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.RampForceEffect::SetParametersWithEnvelope(Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3,System.Single,System.Single,System.Single,Windows.Foundation.TimeSpan,Windows.Foundation.TimeSpan,Windows.Foundation.TimeSpan,Windows.Foundation.TimeSpan,System.UInt32)

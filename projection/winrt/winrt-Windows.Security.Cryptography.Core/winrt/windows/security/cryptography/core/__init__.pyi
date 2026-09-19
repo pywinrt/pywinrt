@@ -36,7 +36,6 @@ __all__ = [
     "SymmetricAlgorithmNames",
     "SymmetricKeyAlgorithmProvider",
 ]
-Self = typing.TypeVar('Self')
 
 class Capi1KdfTargetAlgorithm(enum.IntEnum):
     NOT_AES = 0
@@ -130,7 +129,7 @@ class AsymmetricAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AsymmetricAlgorithmNames(winrt.system.Object, metaclass=AsymmetricAlgorithmNames_Static):
-    pass
+    ...
 
 @typing.final
 class AsymmetricKeyAlgorithmProvider_Static(winrt._winrt.IInspectable_Static):
@@ -206,7 +205,7 @@ class CryptographicEngine_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CryptographicEngine(winrt.system.Object, metaclass=CryptographicEngine_Static):
-    pass
+    ...
 
 @typing.final
 class CryptographicHash(winrt.system.Object):
@@ -392,7 +391,7 @@ class EccCurveNames_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class EccCurveNames(winrt.system.Object, metaclass=EccCurveNames_Static):
-    pass
+    ...
 
 @typing.final
 class EncryptedAndAuthenticatedData(winrt.system.Object):
@@ -423,7 +422,7 @@ class HashAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class HashAlgorithmNames(winrt.system.Object, metaclass=HashAlgorithmNames_Static):
-    pass
+    ...
 
 @typing.final
 class HashAlgorithmProvider_Static(winrt._winrt.IInspectable_Static):
@@ -508,7 +507,7 @@ class KeyDerivationAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KeyDerivationAlgorithmNames(winrt.system.Object, metaclass=KeyDerivationAlgorithmNames_Static):
-    pass
+    ...
 
 @typing.final
 class KeyDerivationAlgorithmProvider_Static(winrt._winrt.IInspectable_Static):
@@ -575,7 +574,7 @@ class MacAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class MacAlgorithmNames(winrt.system.Object, metaclass=MacAlgorithmNames_Static):
-    pass
+    ...
 
 @typing.final
 class MacAlgorithmProvider_Static(winrt._winrt.IInspectable_Static):
@@ -604,7 +603,7 @@ class PersistedKeyProvider_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PersistedKeyProvider(winrt.system.Object, metaclass=PersistedKeyProvider_Static):
-    pass
+    ...
 
 @typing.final
 class SymmetricAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
@@ -668,7 +667,7 @@ class SymmetricAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SymmetricAlgorithmNames(winrt.system.Object, metaclass=SymmetricAlgorithmNames_Static):
-    pass
+    ...
 
 @typing.final
 class SymmetricKeyAlgorithmProvider_Static(winrt._winrt.IInspectable_Static):

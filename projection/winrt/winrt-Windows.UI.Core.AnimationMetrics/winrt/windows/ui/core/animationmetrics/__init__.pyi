@@ -23,7 +23,6 @@ __all__ = [
     "TranslationAnimation",
     "IPropertyAnimation",
 ]
-Self = typing.TypeVar('Self')
 
 class AnimationEffect(enum.IntEnum):
     EXPAND = 0
@@ -92,7 +91,7 @@ class PropertyAnimationType(enum.IntEnum):
 
 @typing.final
 class AnimationDescription(winrt.system.Object):
-    def __new__(cls: type[Self], effect: AnimationEffect, target: AnimationEffectTarget) -> Self: ...
+    def __new__(cls, effect: AnimationEffect, target: AnimationEffectTarget) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Core.AnimationMetrics.IPropertyAnimation> Windows.UI.Core.AnimationMetrics.AnimationDescription::get_Animations()
     @_property
     def animations(self) -> _cabc.Sequence[IPropertyAnimation]: ...

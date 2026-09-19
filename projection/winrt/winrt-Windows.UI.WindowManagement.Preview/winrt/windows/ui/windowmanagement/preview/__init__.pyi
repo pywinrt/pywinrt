@@ -10,7 +10,6 @@ import winrt.windows.ui.windowmanagement as windows_ui_windowmanagement
 __all__ = [
     "WindowManagementPreview",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class WindowManagementPreview_Static(winrt._winrt.IInspectable_Static):
@@ -19,5 +18,5 @@ class WindowManagementPreview_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WindowManagementPreview(winrt.system.Object, metaclass=WindowManagementPreview_Static):
-    pass
+    ...
 

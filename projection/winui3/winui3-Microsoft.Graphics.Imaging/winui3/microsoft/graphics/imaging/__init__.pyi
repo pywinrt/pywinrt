@@ -15,7 +15,6 @@ __all__ = [
     "ImageBufferPixelFormat",
     "ImageBuffer",
 ]
-Self = typing.TypeVar('Self')
 
 class ImageBufferPixelFormat(enum.IntEnum):
     RGB8 = 137224
@@ -33,7 +32,7 @@ class ImageBuffer_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ImageBuffer(winrt.system.Object, windows_foundation.IClosable, metaclass=ImageBuffer_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Microsoft.Graphics.Imaging.ImageBuffer::Close()
     def close(self) -> None: ...

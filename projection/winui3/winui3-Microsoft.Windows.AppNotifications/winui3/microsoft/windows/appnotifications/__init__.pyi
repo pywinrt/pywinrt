@@ -21,7 +21,6 @@ __all__ = [
     "AppNotificationManager",
     "AppNotificationProgressData",
 ]
-Self = typing.TypeVar('Self')
 
 class AppNotificationPriority(enum.IntEnum):
     DEFAULT = 0
@@ -42,7 +41,7 @@ class AppNotificationSetting(enum.IntEnum):
 
 @typing.final
 class AppNotification(winrt.system.Object):
-    def __new__(cls: type[Self], payload: str) -> Self: ...
+    def __new__(cls, payload: str) -> typing.Self: ...
     # System.String Microsoft.Windows.AppNotifications.AppNotification::get_Tag()
     @_property
     def tag(self) -> str: ...
@@ -158,7 +157,7 @@ class AppNotificationManager(winrt.system.Object, metaclass=AppNotificationManag
 
 @typing.final
 class AppNotificationProgressData(winrt.system.Object):
-    def __new__(cls: type[Self], sequence_number: winrt.system.UInt32) -> Self: ...
+    def __new__(cls, sequence_number: winrt.system.UInt32) -> typing.Self: ...
     # System.String Microsoft.Windows.AppNotifications.AppNotificationProgressData::get_ValueStringOverride()
     @_property
     def value_string_override(self) -> str: ...

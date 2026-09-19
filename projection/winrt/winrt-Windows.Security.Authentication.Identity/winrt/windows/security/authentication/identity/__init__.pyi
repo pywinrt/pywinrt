@@ -13,7 +13,6 @@ __all__ = [
     "EnterpriseKeyCredentialRegistrationInfo",
     "EnterpriseKeyCredentialRegistrationManager",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class EnterpriseKeyCredentialRegistrationInfo(winrt.system.Object):

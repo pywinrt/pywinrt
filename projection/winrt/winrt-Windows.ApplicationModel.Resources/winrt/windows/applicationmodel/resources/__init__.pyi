@@ -11,7 +11,6 @@ import winrt.windows.ui as windows_ui
 __all__ = [
     "ResourceLoader",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class ResourceLoader_Static(winrt._winrt.IInspectable_Static):
@@ -45,9 +44,9 @@ class ResourceLoader_Static(winrt._winrt.IInspectable_Static):
 @typing.final
 class ResourceLoader(winrt.system.Object, metaclass=ResourceLoader_Static):
     @typing.overload
-    def __new__(cls: type[Self], name: str) -> Self: ...
+    def __new__(cls, name: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Resources.ResourceLoader::GetString(System.String)
     def get_string(self, resource: str, /) -> str: ...
     # System.String Windows.ApplicationModel.Resources.ResourceLoader::GetStringForUri(Windows.Foundation.Uri)

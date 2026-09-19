@@ -15,7 +15,6 @@ __all__ = [
     "UserNotificationListenerAccessStatus",
     "UserNotificationListener",
 ]
-Self = typing.TypeVar('Self')
 
 class UserNotificationListenerAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0

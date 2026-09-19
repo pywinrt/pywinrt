@@ -31,7 +31,6 @@ __all__ = [
     "MessageReceivedHandler",
     "MessageTransmittedHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class PeerDiscoveryTypes(enum.IntFlag):
     NONE = 0x0
@@ -138,7 +137,7 @@ class PeerFinder_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PeerFinder(winrt.system.Object, metaclass=PeerFinder_Static):
-    pass
+    ...
 
 @typing.final
 class PeerInformation(winrt.system.Object):

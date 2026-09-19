@@ -29,7 +29,6 @@ __all__ = [
     "VoiceCommandServiceConnection",
     "VoiceCommandUserMessage",
 ]
-Self = typing.TypeVar('Self')
 
 class VoiceCommandCompletionReason(enum.IntEnum):
     UNKNOWN = 0
@@ -76,7 +75,7 @@ class VoiceCommandConfirmationResult(winrt.system.Object):
 
 @typing.final
 class VoiceCommandContentTile(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile::get_Title()
     @_property
     def title(self) -> str: ...
@@ -147,7 +146,7 @@ class VoiceCommandDefinitionManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class VoiceCommandDefinitionManager(winrt.system.Object, metaclass=VoiceCommandDefinitionManager_Static):
-    pass
+    ...
 
 @typing.final
 class VoiceCommandDisambiguationResult(winrt.system.Object):
@@ -236,7 +235,7 @@ class VoiceCommandServiceConnection(winrt.system.Object, metaclass=VoiceCommandS
 
 @typing.final
 class VoiceCommandUserMessage(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage::get_SpokenMessage()
     @_property
     def spoken_message(self) -> str: ...

@@ -27,7 +27,6 @@ __all__ = [
     "AppointmentDataProviderConnection",
     "AppointmentDataProviderTriggerDetails",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class AppointmentCalendarCancelMeetingRequest(winrt.system.Object):

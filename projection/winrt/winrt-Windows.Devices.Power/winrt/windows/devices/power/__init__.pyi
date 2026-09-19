@@ -17,7 +17,6 @@ __all__ = [
     "PowerGridData",
     "PowerGridForecast",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class Battery_Static(winrt._winrt.IInspectable_Static):

@@ -14,7 +14,6 @@ __all__ = [
     "UIContentRoot",
     "UIContext",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class Color:
@@ -46,7 +45,7 @@ class ColorHelper_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ColorHelper(winrt.system.Object, metaclass=ColorHelper_Static):
-    pass
+    ...
 
 @typing.final
 class Colors_Static(winrt._winrt.IInspectable_Static):
@@ -476,7 +475,7 @@ class Colors_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Colors(winrt.system.Object, metaclass=Colors_Static):
-    pass
+    ...
 
 @typing.final
 class UIContentRoot(winrt.system.Object):
@@ -486,5 +485,5 @@ class UIContentRoot(winrt.system.Object):
 
 @typing.final
 class UIContext(winrt.system.Object):
-    pass
+    ...
 

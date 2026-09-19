@@ -20,7 +20,6 @@ __all__ = [
     "UserDataAccountProviderSettingsOperation",
     "IUserDataAccountProviderOperation",
 ]
-Self = typing.TypeVar('Self')
 
 class UserDataAccountProviderOperationKind(enum.IntEnum):
     ADD_ACCOUNT = 0

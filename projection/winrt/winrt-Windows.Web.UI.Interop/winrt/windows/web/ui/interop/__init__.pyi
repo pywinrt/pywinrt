@@ -28,7 +28,6 @@ __all__ = [
     "WebViewControlProcess",
     "WebViewControlProcessOptions",
 ]
-Self = typing.TypeVar('Self')
 
 class WebViewControlAcceleratorKeyRoutingStage(enum.IntEnum):
     TUNNELING = 0
@@ -244,9 +243,9 @@ class WebViewControlMoveFocusRequestedEventArgs(winrt.system.Object):
 @typing.final
 class WebViewControlProcess(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], process_options: WebViewControlProcessOptions) -> Self: ...
+    def __new__(cls, process_options: WebViewControlProcessOptions) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Web.UI.Interop.WebViewControl> Windows.Web.UI.Interop.WebViewControlProcess::CreateWebViewControlAsync(System.Int64,Windows.Foundation.Rect)
     def create_web_view_control_async(self, host_window_handle: winrt.system.Int64, bounds: windows_foundation.Rect | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> windows_foundation.IAsyncOperation[WebViewControl]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Web.UI.Interop.WebViewControl> Windows.Web.UI.Interop.WebViewControlProcess::GetWebViewControls()
@@ -269,7 +268,7 @@ class WebViewControlProcess(winrt.system.Object):
 
 @typing.final
 class WebViewControlProcessOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Web.UI.Interop.WebViewControlProcessCapabilityState Windows.Web.UI.Interop.WebViewControlProcessOptions::get_PrivateNetworkClientServerCapability()
     @_property
     def private_network_client_server_capability(self) -> WebViewControlProcessCapabilityState: ...

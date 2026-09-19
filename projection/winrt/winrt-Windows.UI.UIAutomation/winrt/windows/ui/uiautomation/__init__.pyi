@@ -12,7 +12,6 @@ __all__ = [
     "AutomationElement",
     "AutomationTextRange",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class AutomationConnection(winrt.system.Object):
@@ -46,5 +45,5 @@ class AutomationElement(winrt.system.Object):
 
 @typing.final
 class AutomationTextRange(winrt.system.Object):
-    pass
+    ...
 

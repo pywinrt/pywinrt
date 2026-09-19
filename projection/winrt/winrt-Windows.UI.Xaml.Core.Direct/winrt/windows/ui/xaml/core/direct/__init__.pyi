@@ -22,7 +22,6 @@ __all__ = [
     "XamlDirect",
     "IXamlDirectObject",
 ]
-Self = typing.TypeVar('Self')
 
 class XamlEventIndex(enum.IntEnum):
     FRAMEWORK_ELEMENT_DATA_CONTEXT_CHANGED = 16
@@ -2209,5 +2208,5 @@ class XamlDirect(winrt.system.Object, metaclass=XamlDirect_Static):
 class _IXamlDirectObject: ...
 
 class IXamlDirectObject(winrt._winrt.IInspectable):  # type: ignore[misc]
-    pass
+    ...
 

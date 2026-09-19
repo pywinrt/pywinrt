@@ -14,7 +14,6 @@ __all__ = [
     "PlatformTelemetryRegistrationResult",
     "PlatformTelemetryRegistrationSettings",
 ]
-Self = typing.TypeVar('Self')
 
 class PlatformTelemetryRegistrationStatus(enum.IntEnum):
     SUCCESS = 0
@@ -36,7 +35,7 @@ class PlatformTelemetryClient_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PlatformTelemetryClient(winrt.system.Object, metaclass=PlatformTelemetryClient_Static):
-    pass
+    ...
 
 @typing.final
 class PlatformTelemetryRegistrationResult(winrt.system.Object):
@@ -46,7 +45,7 @@ class PlatformTelemetryRegistrationResult(winrt.system.Object):
 
 @typing.final
 class PlatformTelemetryRegistrationSettings(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.UInt32 Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings::get_UploadQuotaSize()
     @_property
     def upload_quota_size(self) -> winrt.system.UInt32: ...

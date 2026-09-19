@@ -20,7 +20,6 @@ __all__ = [
     "UserPresenceStatus",
     "PowerManager",
 ]
-Self = typing.TypeVar('Self')
 
 class BatteryStatus(enum.IntEnum):
     NOT_PRESENT = 0
@@ -149,5 +148,5 @@ class PowerManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PowerManager(winrt.system.Object, metaclass=PowerManager_Static):
-    pass
+    ...
 

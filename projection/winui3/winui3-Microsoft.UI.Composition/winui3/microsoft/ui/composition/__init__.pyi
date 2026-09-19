@@ -154,7 +154,6 @@ __all__ = [
     "IVisualElement",
     "IVisualElement2",
 ]
-Self = typing.TypeVar('Self')
 
 class AnimationControllerProgressBehavior(enum.IntEnum):
     DEFAULT = 0
@@ -433,7 +432,7 @@ class ColorKeyFrameAnimation(KeyFrameAnimation):
     def interpolation_color_space(self, value: CompositionColorSpace) -> None: ...
 
 class CompositionAnimation_Static(CompositionObject_Static):
-    pass
+    ...
 
 class CompositionAnimation(CompositionObject, ICompositionAnimationBase, metaclass=CompositionAnimation_Static):
     @typing.final
@@ -510,25 +509,25 @@ class CompositionApiInformation_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CompositionApiInformation(winrt.system.Object, metaclass=CompositionApiInformation_Static):
-    pass
+    ...
 
 @typing.final
 class CompositionBackdropBrush(CompositionBrush):
-    pass
+    ...
 
 @typing.final
 class CompositionBatchCompletedEventArgs(CompositionObject):
-    pass
+    ...
 
 class CompositionBrush_Static(CompositionObject_Static):
-    pass
+    ...
 
 class CompositionBrush(CompositionObject, metaclass=CompositionBrush_Static):
-    pass
+    ...
 
 @typing.final
 class CompositionCapabilities(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Microsoft.UI.Composition.CompositionCapabilities::AreEffectsFast()
     def are_effects_fast(self) -> bool: ...
     # System.Boolean Microsoft.UI.Composition.CompositionCapabilities::AreEffectsSupported()
@@ -539,7 +538,7 @@ class CompositionCapabilities(winrt.system.Object):
     def remove_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
 
 class CompositionClip_Static(CompositionObject_Static):
-    pass
+    ...
 
 class CompositionClip(CompositionObject, metaclass=CompositionClip_Static):
     # Windows.Foundation.Numerics.Matrix3x2 Microsoft.UI.Composition.CompositionClip::get_TransformMatrix()
@@ -680,7 +679,7 @@ class CompositionContainerShape(CompositionShape):
     def shapes(self) -> CompositionShapeCollection: ...
 
 class CompositionDrawingSurface_Static(CompositionObject_Static):
-    pass
+    ...
 
 class CompositionDrawingSurface(CompositionObject, ICompositionSurface, metaclass=CompositionDrawingSurface_Static):
     @typing.final
@@ -758,7 +757,7 @@ class CompositionEasingFunction_Static(CompositionObject_Static):
     def create_step_easing_function_with_step_count(cls, owner: Compositor, step_count: winrt.system.Int32, /) -> StepEasingFunction: ...
 
 class CompositionEasingFunction(CompositionObject, metaclass=CompositionEasingFunction_Static):
-    pass
+    ...
 
 @typing.final
 class CompositionEffectBrush(CompositionBrush):
@@ -780,7 +779,7 @@ class CompositionEffectFactory(CompositionObject):
 
 @typing.final
 class CompositionEffectSourceParameter(winrt.system.Object, windows_graphics_effects.IGraphicsEffectSource):
-    def __new__(cls: type[Self], name: str) -> Self: ...
+    def __new__(cls, name: str) -> typing.Self: ...
     # System.String Microsoft.UI.Composition.CompositionEffectSourceParameter::get_Name()
     @_property
     def name(self) -> str: ...
@@ -816,7 +815,7 @@ class CompositionGeometricClip(CompositionClip):
     def geometry(self, value: CompositionGeometry) -> None: ...
 
 class CompositionGeometry_Static(CompositionObject_Static):
-    pass
+    ...
 
 class CompositionGeometry(CompositionObject, metaclass=CompositionGeometry_Static):
     # System.Single Microsoft.UI.Composition.CompositionGeometry::get_TrimStart()
@@ -842,7 +841,7 @@ class CompositionGeometry(CompositionObject, metaclass=CompositionGeometry_Stati
     def trim_end(self, value: winrt.system.Single) -> None: ...
 
 class CompositionGradientBrush_Static(CompositionBrush_Static):
-    pass
+    ...
 
 class CompositionGradientBrush(CompositionBrush, metaclass=CompositionGradientBrush_Static):
     # Windows.Foundation.Numerics.Matrix3x2 Microsoft.UI.Composition.CompositionGradientBrush::get_TransformMatrix()
@@ -940,7 +939,7 @@ class CompositionGraphicsDevice(CompositionObject):
     def remove_rendering_device_replaced(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
 
 class CompositionLight_Static(CompositionObject_Static):
-    pass
+    ...
 
 class CompositionLight(CompositionObject, metaclass=CompositionLight_Static):
     # Microsoft.UI.Composition.VisualUnorderedCollection Microsoft.UI.Composition.CompositionLight::get_Targets()
@@ -1111,7 +1110,7 @@ class CompositionObject_Static(winrt._winrt.IInspectable_Static):
     def start_animation_with_ianimation_object(cls, target: IAnimationObject, property_name: str, animation: CompositionAnimation, /) -> None: ...
 
 class CompositionObject(winrt.system.Object, IAnimationObject, windows_foundation.IClosable, metaclass=CompositionObject_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Microsoft.UI.Composition.CompositionObject::Close()
     def close(self) -> None: ...
@@ -1170,7 +1169,7 @@ class CompositionObject(winrt.system.Object, IAnimationObject, windows_foundatio
 
 @typing.final
 class CompositionPath(winrt.system.Object, windows_graphics.IGeometrySource2D):
-    def __new__(cls: type[Self], source: windows_graphics.IGeometrySource2D) -> Self: ...
+    def __new__(cls, source: windows_graphics.IGeometrySource2D) -> typing.Self: ...
 
 @typing.final
 class CompositionPathGeometry(CompositionGeometry):
@@ -1396,13 +1395,13 @@ class CompositionScopedBatch(CompositionObject):
     def is_ended(self) -> bool: ...
 
 class CompositionShadow_Static(CompositionObject_Static):
-    pass
+    ...
 
 class CompositionShadow(CompositionObject, metaclass=CompositionShadow_Static):
-    pass
+    ...
 
 class CompositionShape_Static(CompositionObject_Static):
-    pass
+    ...
 
 class CompositionShape(CompositionObject, metaclass=CompositionShape_Static):
     # Windows.Foundation.Numerics.Matrix3x2 Microsoft.UI.Composition.CompositionShape::get_TransformMatrix()
@@ -1690,10 +1689,10 @@ class CompositionSurfaceBrush(CompositionBrush):
     def snap_to_pixels(self, value: bool) -> None: ...
 
 class CompositionTransform_Static(CompositionObject_Static):
-    pass
+    ...
 
 class CompositionTransform(CompositionObject, metaclass=CompositionTransform_Static):
-    pass
+    ...
 
 @typing.final
 class CompositionViewBox(CompositionObject):
@@ -1729,7 +1728,7 @@ class CompositionViewBox(CompositionObject):
     def horizontal_alignment_ratio(self, value: winrt.system.Single) -> None: ...
 
 class CompositionVirtualDrawingSurface_Static(CompositionDrawingSurface_Static):
-    pass
+    ...
 
 class CompositionVirtualDrawingSurface(CompositionDrawingSurface, metaclass=CompositionVirtualDrawingSurface_Static):
     @typing.final
@@ -1768,9 +1767,9 @@ class Compositor_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Compositor_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Microsoft.UI.Composition.Compositor::Close()
     def close(self) -> None: ...
     # Microsoft.UI.Composition.AmbientLight Microsoft.UI.Composition.Compositor::CreateAmbientLight()
@@ -2013,7 +2012,7 @@ class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Co
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
 class ContainerVisual_Static(Visual_Static):
-    pass
+    ...
 
 class ContainerVisual(Visual, metaclass=ContainerVisual_Static):
     # Microsoft.UI.Composition.VisualCollection Microsoft.UI.Composition.ContainerVisual::get_Children()
@@ -2206,7 +2205,7 @@ class InsetClip(CompositionClip):
     def bottom_inset(self, value: winrt.system.Single) -> None: ...
 
 class KeyFrameAnimation_Static(CompositionAnimation_Static):
-    pass
+    ...
 
 class KeyFrameAnimation(CompositionAnimation, metaclass=KeyFrameAnimation_Static):
     @typing.overload
@@ -2292,10 +2291,10 @@ class LayerVisual(ContainerVisual):
 
 @typing.final
 class LinearEasingFunction(CompositionEasingFunction):
-    pass
+    ...
 
 class NaturalMotionAnimation_Static(CompositionAnimation_Static):
-    pass
+    ...
 
 class NaturalMotionAnimation(CompositionAnimation, metaclass=NaturalMotionAnimation_Static):
     # Microsoft.UI.Composition.AnimationStopBehavior Microsoft.UI.Composition.NaturalMotionAnimation::get_StopBehavior()
@@ -2492,7 +2491,7 @@ class ScalarKeyFrameAnimation(KeyFrameAnimation):
     def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: winrt.system.Single, easing_function: CompositionEasingFunction, /) -> None: ...
 
 class ScalarNaturalMotionAnimation_Static(NaturalMotionAnimation_Static):
-    pass
+    ...
 
 class ScalarNaturalMotionAnimation(NaturalMotionAnimation, metaclass=ScalarNaturalMotionAnimation_Static):
     # System.Single Microsoft.UI.Composition.ScalarNaturalMotionAnimation::get_InitialVelocity()
@@ -2741,7 +2740,7 @@ class Vector2KeyFrameAnimation(KeyFrameAnimation):
     def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], easing_function: CompositionEasingFunction, /) -> None: ...
 
 class Vector2NaturalMotionAnimation_Static(NaturalMotionAnimation_Static):
-    pass
+    ...
 
 class Vector2NaturalMotionAnimation(NaturalMotionAnimation, metaclass=Vector2NaturalMotionAnimation_Static):
     # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Composition.Vector2NaturalMotionAnimation::get_InitialVelocity()
@@ -2780,7 +2779,7 @@ class Vector3KeyFrameAnimation(KeyFrameAnimation):
     def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], easing_function: CompositionEasingFunction, /) -> None: ...
 
 class Vector3NaturalMotionAnimation_Static(NaturalMotionAnimation_Static):
-    pass
+    ...
 
 class Vector3NaturalMotionAnimation(NaturalMotionAnimation, metaclass=Vector3NaturalMotionAnimation_Static):
     # Windows.Foundation.Numerics.Vector3 Microsoft.UI.Composition.Vector3NaturalMotionAnimation::get_InitialVelocity()
@@ -2819,7 +2818,7 @@ class Vector4KeyFrameAnimation(KeyFrameAnimation):
     def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector4 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], easing_function: CompositionEasingFunction, /) -> None: ...
 
 class Visual_Static(CompositionObject_Static):
-    pass
+    ...
 
 class Visual(CompositionObject, metaclass=Visual_Static):
     # Windows.Foundation.Numerics.Matrix4x4 Microsoft.UI.Composition.Visual::get_TransformMatrix()
@@ -3022,7 +3021,7 @@ class IAnimationObject(winrt._winrt.IInspectable):
 class _ICompositionAnimationBase: ...
 
 class ICompositionAnimationBase(winrt._winrt.IInspectable):  # type: ignore[misc]
-    pass
+    ...
 
 @typing.final
 class _ICompositionSupportsSystemBackdrop: ...
@@ -3041,7 +3040,7 @@ class ICompositionSupportsSystemBackdrop(winrt._winrt.IInspectable):
 class _ICompositionSurface: ...
 
 class ICompositionSurface(winrt._winrt.IInspectable):  # type: ignore[misc]
-    pass
+    ...
 
 @typing.final
 class _ICompositionSurfaceFacade: ...
@@ -3055,7 +3054,7 @@ class ICompositionSurfaceFacade(winrt._winrt.IInspectable):
 class _IVisualElement: ...
 
 class IVisualElement(winrt._winrt.IInspectable):  # type: ignore[misc]
-    pass
+    ...
 
 @typing.final
 class _IVisualElement2: ...

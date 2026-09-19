@@ -12,11 +12,10 @@ import winrt.windows.applicationmodel.background as windows_applicationmodel_bac
 __all__ = [
     "BackgroundTaskBuilder",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class BackgroundTaskBuilder(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder::AddCondition(Windows.ApplicationModel.Background.IBackgroundCondition)
     def add_condition(self, condition: windows_applicationmodel_background.IBackgroundCondition, /) -> None: ...
     @typing.overload

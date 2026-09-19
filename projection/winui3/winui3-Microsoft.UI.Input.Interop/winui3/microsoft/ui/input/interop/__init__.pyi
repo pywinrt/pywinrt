@@ -10,7 +10,6 @@ import winui3.microsoft.ui.input as microsoft_ui_input
 __all__ = [
     "PenDeviceInterop",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class PenDeviceInterop_Static(winrt._winrt.IInspectable_Static):
@@ -19,5 +18,5 @@ class PenDeviceInterop_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PenDeviceInterop(winrt.system.Object, metaclass=PenDeviceInterop_Static):
-    pass
+    ...
 

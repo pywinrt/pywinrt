@@ -27,7 +27,6 @@ __all__ = [
     "SessionsChangedEventArgs",
     "TimelinePropertiesChangedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class GlobalSystemMediaTransportControlsSessionPlaybackStatus(enum.IntEnum):
     CLOSED = 0
@@ -39,7 +38,7 @@ class GlobalSystemMediaTransportControlsSessionPlaybackStatus(enum.IntEnum):
 
 @typing.final
 class CurrentSessionChangedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class GlobalSystemMediaTransportControlsSession(winrt.system.Object):
@@ -240,17 +239,17 @@ class GlobalSystemMediaTransportControlsSessionTimelineProperties(winrt.system.O
 
 @typing.final
 class MediaPropertiesChangedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class PlaybackInfoChangedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class SessionsChangedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class TimelinePropertiesChangedEventArgs(winrt.system.Object):
-    pass
+    ...
 

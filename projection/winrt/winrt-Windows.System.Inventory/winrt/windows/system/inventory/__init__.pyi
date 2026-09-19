@@ -12,7 +12,6 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 __all__ = [
     "InstalledDesktopApp",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class InstalledDesktopApp_Static(winrt._winrt.IInspectable_Static):
@@ -21,7 +20,6 @@ class InstalledDesktopApp_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class InstalledDesktopApp(winrt.system.Object, windows_foundation.IStringable, metaclass=InstalledDesktopApp_Static):
-    def __str__(self) -> str: ...
     # System.String Windows.System.Inventory.InstalledDesktopApp::ToString()
     def to_string(self) -> str: ...
     # System.String Windows.System.Inventory.InstalledDesktopApp::get_DisplayName()

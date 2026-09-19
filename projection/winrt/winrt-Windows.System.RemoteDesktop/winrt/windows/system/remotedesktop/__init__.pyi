@@ -9,7 +9,6 @@ import winrt.system
 __all__ = [
     "InteractiveSession",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class InteractiveSession_Static(winrt._winrt.IInspectable_Static):
@@ -19,5 +18,5 @@ class InteractiveSession_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class InteractiveSession(winrt.system.Object, metaclass=InteractiveSession_Static):
-    pass
+    ...
 

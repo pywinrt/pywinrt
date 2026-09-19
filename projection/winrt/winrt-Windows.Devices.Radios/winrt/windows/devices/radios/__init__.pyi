@@ -16,7 +16,6 @@ __all__ = [
     "RadioState",
     "Radio",
 ]
-Self = typing.TypeVar('Self')
 
 class RadioAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0

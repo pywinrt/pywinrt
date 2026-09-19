@@ -38,7 +38,6 @@ __all__ = [
     "IXmlNodeSerializer",
     "IXmlText",
 ]
-Self = typing.TypeVar('Self')
 
 class NodeType(enum.IntEnum):
     INVALID = 0
@@ -552,7 +551,7 @@ class XmlDocument_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class XmlDocument(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, metaclass=XmlDocument_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocument::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocument::CloneNode(System.Boolean)
@@ -1059,7 +1058,7 @@ class XmlEntityReference(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXml
 
 @typing.final
 class XmlLoadSettings(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Data.Xml.Dom.XmlLoadSettings::get_ValidateOnParse()
     @_property
     def validate_on_parse(self) -> bool: ...

@@ -21,7 +21,6 @@ __all__ = [
     "AppRecordingStatus",
     "AppRecordingStatusDetails",
 ]
-Self = typing.TypeVar('Self')
 
 class AppRecordingSaveScreenshotOption(enum.IntEnum):
     NONE = 0

@@ -15,7 +15,6 @@ __all__ = [
     "SizeInt32",
     "IGeometrySource2D",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class DisplayAdapterId:
@@ -72,5 +71,5 @@ class SizeInt32:
 class _IGeometrySource2D: ...
 
 class IGeometrySource2D(winrt._winrt.IInspectable):  # type: ignore[misc]
-    pass
+    ...
 

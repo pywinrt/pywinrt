@@ -36,7 +36,6 @@ __all__ = [
     "AdaptiveMediaSourceDownloadStatistics",
     "AdaptiveMediaSourcePlaybackBitrateChangedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class AdaptiveMediaSourceCreationStatus(enum.IntEnum):
     SUCCESS = 0
@@ -102,7 +101,7 @@ class AdaptiveMediaSource_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AdaptiveMediaSource(winrt.system.Object, windows_foundation.IClosable, windows_media_core.IMediaSource, metaclass=AdaptiveMediaSource_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::Close()
     def close(self) -> None: ...

@@ -8,7 +8,6 @@ import winrt.system
 __all__ = [
     "HtmlUtilities",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class HtmlUtilities_Static(winrt._winrt.IInspectable_Static):
@@ -17,5 +16,5 @@ class HtmlUtilities_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class HtmlUtilities(winrt.system.Object, metaclass=HtmlUtilities_Static):
-    pass
+    ...
 

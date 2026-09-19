@@ -32,7 +32,6 @@ __all__ = [
     "SelectableWordSegmentsTokenizingHandler",
     "WordSegmentsTokenizingHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class AlternateNormalizationFormat(enum.IntEnum):
     NOT_NORMALIZED = 0
@@ -117,7 +116,7 @@ class SelectableWordSegment(winrt.system.Object):
 
 @typing.final
 class SelectableWordsSegmenter(winrt.system.Object):
-    def __new__(cls: type[Self], language: str) -> Self: ...
+    def __new__(cls, language: str) -> typing.Self: ...
     # Windows.Data.Text.SelectableWordSegment Windows.Data.Text.SelectableWordsSegmenter::GetTokenAt(System.String,System.UInt32)
     def get_token_at(self, text: str, start_index: winrt.system.UInt32, /) -> SelectableWordSegment: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Data.Text.SelectableWordSegment> Windows.Data.Text.SelectableWordsSegmenter::GetTokens(System.String)
@@ -131,9 +130,9 @@ class SelectableWordsSegmenter(winrt.system.Object):
 @typing.final
 class SemanticTextQuery(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], aqs_filter: str) -> Self: ...
+    def __new__(cls, aqs_filter: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], aqs_filter: str, filter_language: str) -> Self: ...
+    def __new__(cls, aqs_filter: str, filter_language: str) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Data.Text.TextSegment> Windows.Data.Text.SemanticTextQuery::Find(System.String)
     def find(self, content: str, /) -> _cabc.Sequence[TextSegment]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Data.Text.TextSegment> Windows.Data.Text.SemanticTextQuery::FindInProperty(System.String,System.String)
@@ -141,7 +140,7 @@ class SemanticTextQuery(winrt.system.Object):
 
 @typing.final
 class TextConversionGenerator(winrt.system.Object):
-    def __new__(cls: type[Self], language_tag: str) -> Self: ...
+    def __new__(cls, language_tag: str) -> typing.Self: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.Data.Text.TextConversionGenerator::GetCandidatesAsync(System.String)
     def get_candidates_async(self, input: str, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[str]]: ...
@@ -170,7 +169,7 @@ class TextPhoneme(winrt.system.Object):
 
 @typing.final
 class TextPredictionGenerator(winrt.system.Object):
-    def __new__(cls: type[Self], language_tag: str) -> Self: ...
+    def __new__(cls, language_tag: str) -> typing.Self: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.Data.Text.TextPredictionGenerator::GetCandidatesAsync(System.String)
     def get_candidates_async(self, input: str, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[str]]: ...
@@ -205,7 +204,7 @@ class TextPredictionGenerator(winrt.system.Object):
 
 @typing.final
 class TextReverseConversionGenerator(winrt.system.Object):
-    def __new__(cls: type[Self], language_tag: str) -> Self: ...
+    def __new__(cls, language_tag: str) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Data.Text.TextReverseConversionGenerator::ConvertBackAsync(System.String)
     def convert_back_async(self, input: str, /) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Data.Text.TextPhoneme>> Windows.Data.Text.TextReverseConversionGenerator::GetPhonemesAsync(System.String)
@@ -256,7 +255,7 @@ class UnicodeCharacters_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class UnicodeCharacters(winrt.system.Object, metaclass=UnicodeCharacters_Static):
-    pass
+    ...
 
 @typing.final
 class WordSegment(winrt.system.Object):
@@ -272,7 +271,7 @@ class WordSegment(winrt.system.Object):
 
 @typing.final
 class WordsSegmenter(winrt.system.Object):
-    def __new__(cls: type[Self], language: str) -> Self: ...
+    def __new__(cls, language: str) -> typing.Self: ...
     # Windows.Data.Text.WordSegment Windows.Data.Text.WordsSegmenter::GetTokenAt(System.String,System.UInt32)
     def get_token_at(self, text: str, start_index: winrt.system.UInt32, /) -> WordSegment: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Data.Text.WordSegment> Windows.Data.Text.WordsSegmenter::GetTokens(System.String)

@@ -11,7 +11,6 @@ import winui3.microsoft.ui as microsoft_ui
 __all__ = [
     "ThemeSettings",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class ThemeSettings_Static(winrt._winrt.IInspectable_Static):

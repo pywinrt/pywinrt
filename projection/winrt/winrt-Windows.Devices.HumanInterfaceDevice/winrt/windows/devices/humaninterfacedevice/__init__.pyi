@@ -28,7 +28,6 @@ __all__ = [
     "HidNumericControlDescription",
     "HidOutputReport",
 ]
-Self = typing.TypeVar('Self')
 
 class HidCollectionType(enum.IntEnum):
     PHYSICAL = 0
@@ -122,7 +121,7 @@ class HidDevice_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class HidDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=HidDevice_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.HumanInterfaceDevice.HidDevice::Close()
     def close(self) -> None: ...

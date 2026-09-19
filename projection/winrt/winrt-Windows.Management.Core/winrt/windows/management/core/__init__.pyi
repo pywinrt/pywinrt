@@ -9,7 +9,6 @@ import winrt.windows.storage as windows_storage
 __all__ = [
     "ApplicationDataManager",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class ApplicationDataManager_Static(winrt._winrt.IInspectable_Static):
@@ -18,5 +17,5 @@ class ApplicationDataManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ApplicationDataManager(winrt.system.Object, metaclass=ApplicationDataManager_Static):
-    pass
+    ...
 

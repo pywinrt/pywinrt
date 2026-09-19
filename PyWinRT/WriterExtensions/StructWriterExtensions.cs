@@ -24,17 +24,17 @@ static class StructWriterExtensions
             w.WriteLine($"class {type.Name}_Static(type):");
             w.Indent++;
 
-            var pass = true;
+            var isEmpty = true;
 
             if (type.Type.IsCustomNumeric)
             {
-                w.WriteNumberFactoryFunctionPyTyping(type, ref pass);
-                w.WriteNumberCommonValuesPyTyping(type, ref pass);
+                w.WriteNumberFactoryFunctionPyTyping(type, ref isEmpty);
+                w.WriteNumberCommonValuesPyTyping(type, ref isEmpty);
             }
 
-            if (pass)
+            if (isEmpty)
             {
-                w.WriteLine("pass");
+                w.WriteLine("...");
             }
 
             w.Indent--;
@@ -56,7 +56,7 @@ static class StructWriterExtensions
         }
 
         w.WriteLine(
-            $"def __new__(cls, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), packageMap)} = {f.FieldType.GetDefaultPyValue(ns, packageMap)}"))}) -> {type.Name}: ..."
+            $"def __new__(cls, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), packageMap)} = {f.FieldType.GetDefaultPyValueForStub(ns, packageMap)}"))}) -> {type.Name}: ..."
         );
 
         w.WriteLine($"def __replace__(self, /, **changes: typing.Any) -> {type.Name}: ...");

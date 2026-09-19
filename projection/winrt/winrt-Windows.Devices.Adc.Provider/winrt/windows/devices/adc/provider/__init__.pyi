@@ -15,7 +15,6 @@ __all__ = [
     "IAdcControllerProvider",
     "IAdcProvider",
 ]
-Self = typing.TypeVar('Self')
 
 class ProviderAdcChannelMode(enum.IntEnum):
     SINGLE_ENDED = 0

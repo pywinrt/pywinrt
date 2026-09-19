@@ -19,7 +19,6 @@ __all__ = [
     "SimpleHapticsControllerFeedback",
     "VibrationDevice",
 ]
-Self = typing.TypeVar('Self')
 
 class VibrationAccessStatus(enum.IntEnum):
     ALLOWED = 0
@@ -77,7 +76,7 @@ class KnownSimpleHapticsControllerWaveforms_Static(winrt._winrt.IInspectable_Sta
 
 @typing.final
 class KnownSimpleHapticsControllerWaveforms(winrt.system.Object, metaclass=KnownSimpleHapticsControllerWaveforms_Static):
-    pass
+    ...
 
 @typing.final
 class SimpleHapticsController(winrt.system.Object):

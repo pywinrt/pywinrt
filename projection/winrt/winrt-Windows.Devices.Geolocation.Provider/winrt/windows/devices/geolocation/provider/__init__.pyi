@@ -13,7 +13,6 @@ __all__ = [
     "LocationOverrideStatus",
     "GeolocationProvider",
 ]
-Self = typing.TypeVar('Self')
 
 class LocationOverrideStatus(enum.IntEnum):
     SUCCESS = 0
@@ -23,7 +22,7 @@ class LocationOverrideStatus(enum.IntEnum):
 
 @typing.final
 class GeolocationProvider(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Devices.Geolocation.Provider.GeolocationProvider::ClearOverridePosition()
     def clear_override_position(self) -> None: ...
     # Windows.Devices.Geolocation.Provider.LocationOverrideStatus Windows.Devices.Geolocation.Provider.GeolocationProvider::SetOverridePosition(Windows.Devices.Geolocation.BasicGeoposition,Windows.Devices.Geolocation.PositionSource,System.Double)

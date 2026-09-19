@@ -26,7 +26,6 @@ __all__ = [
     "HttpServerCustomValidationRequestedEventArgs",
     "IHttpFilter",
 ]
-Self = typing.TypeVar('Self')
 
 class HttpCacheReadBehavior(enum.IntEnum):
     DEFAULT = 0
@@ -49,9 +48,9 @@ class HttpBaseProtocolFilter_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class HttpBaseProtocolFilter(winrt.system.Object, IHttpFilter, windows_foundation.IClosable, metaclass=HttpBaseProtocolFilter_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Web.Http.Filters.HttpBaseProtocolFilter::ClearAuthenticationCache()
     def clear_authentication_cache(self) -> None: ...
     # System.Void Windows.Web.Http.Filters.HttpBaseProtocolFilter::Close()

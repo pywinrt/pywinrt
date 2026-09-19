@@ -19,7 +19,6 @@ __all__ = [
     "SearchSuggestionManager",
     "SearchSuggestionsRequestedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class SearchSuggestionKind(enum.IntEnum):
     QUERY = 0
@@ -28,7 +27,7 @@ class SearchSuggestionKind(enum.IntEnum):
 
 @typing.final
 class RequestingFocusOnKeyboardInputEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class SearchSuggestion(winrt.system.Object):
@@ -53,7 +52,7 @@ class SearchSuggestion(winrt.system.Object):
 
 @typing.final
 class SearchSuggestionManager(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     @typing.overload
     # System.Void Windows.ApplicationModel.Search.Core.SearchSuggestionManager::AddToHistory(System.String)
     def add_to_history(self, query_text: str, /) -> None: ...

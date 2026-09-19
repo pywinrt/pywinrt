@@ -16,7 +16,6 @@ __all__ = [
     "DisplayMonitorUsageKind",
     "DisplayMonitor",
 ]
-Self = typing.TypeVar('Self')
 
 class DisplayMonitorConnectionKind(enum.IntEnum):
     INTERNAL = 0

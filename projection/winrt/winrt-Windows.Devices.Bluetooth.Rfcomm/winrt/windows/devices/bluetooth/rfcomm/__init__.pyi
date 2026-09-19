@@ -23,7 +23,6 @@ __all__ = [
     "RfcommServiceId",
     "RfcommServiceProvider",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class RfcommDeviceService_Static(winrt._winrt.IInspectable_Static):
@@ -54,7 +53,7 @@ class RfcommDeviceService_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class RfcommDeviceService(winrt.system.Object, windows_foundation.IClosable, metaclass=RfcommDeviceService_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::Close()
     def close(self) -> None: ...

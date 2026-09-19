@@ -52,7 +52,6 @@ __all__ = [
     "SpatialRecognitionStartedEventArgs",
     "SpatialTappedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class SpatialGestureSettings(enum.IntFlag):
     NONE = 0x0
@@ -92,7 +91,7 @@ class SpatialInteractionSourcePositionAccuracy(enum.IntEnum):
 
 @typing.final
 class SpatialGestureRecognizer(winrt.system.Object):
-    def __new__(cls: type[Self], settings: SpatialGestureSettings) -> Self: ...
+    def __new__(cls, settings: SpatialGestureSettings) -> typing.Self: ...
     # System.Void Windows.UI.Input.Spatial.SpatialGestureRecognizer::CancelPendingGestures()
     def cancel_pending_gestures(self) -> None: ...
     # System.Void Windows.UI.Input.Spatial.SpatialGestureRecognizer::CaptureInteraction(Windows.UI.Input.Spatial.SpatialInteraction)

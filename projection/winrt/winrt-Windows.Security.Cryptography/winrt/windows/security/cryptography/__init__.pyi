@@ -11,7 +11,6 @@ __all__ = [
     "BinaryStringEncoding",
     "CryptographicBuffer",
 ]
-Self = typing.TypeVar('Self')
 
 class BinaryStringEncoding(enum.IntEnum):
     UTF8 = 0
@@ -45,5 +44,5 @@ class CryptographicBuffer_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CryptographicBuffer(winrt.system.Object, metaclass=CryptographicBuffer_Static):
-    pass
+    ...
 
