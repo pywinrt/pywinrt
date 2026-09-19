@@ -35,8 +35,6 @@ where = ["python"]
 "*" = ["*.pyi", "py.typed", "*.h"]
 
 [tool.cibuildwheel]
-# use the local winrt-runtime build dependency
-environment = { PYTHONPATH="./python" }
 # don't install winrt-runtime from PyPI
 build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
 before-build = "uv pip install setuptools"

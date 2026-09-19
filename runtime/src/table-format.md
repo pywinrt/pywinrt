@@ -12,7 +12,7 @@ The table has two forms:
 | form | file | written by | where it lives |
 |---|---|---|---|
 | text | `_table.pywinrt.txt` | `PyWinRT.exe` (`PyWinRT/TableWriter.cs`) | the repository, and a package's own source |
-| binary | `_table.pywinrt` | `winrt/table.py` in `winrt-runtime` | whatever a build installs |
+| binary | `_table.pywinrt` | `winrt.table` in `winrt-table` | whatever a build installs |
 
 **The text is the form that is kept.** A generated binary in a commit is a diff
 nobody can read, and so a place to hide things; what a reviewer has to see when
@@ -27,7 +27,7 @@ numbered in, so nothing else in the binary - the pools, the offsets, the sizes -
 is a decision the compiler makes.
 
 This file is the contract between the three ends: the generator that writes the
-text, `winrt/table.py` that compiles it, and `runtime/src/table.cpp` that reads
+text, `winrt.table` that compiles it, and `runtime/src/table.cpp` that reads
 the result. It is the table's equivalent of what `pywinrt/abi.h` is for compiled
 consumers, and it carries a version of its own for the same reason.
 
@@ -42,6 +42,12 @@ The header carries a major and a minor version.
   everything a lower minor says is still said the same way.
 - **Major** is bumped when anything already written changes meaning, moves or
   goes away. A runtime refuses any table whose major is not its own.
+
+The minor starts counting at the first release of the format. Before that there
+is no table anywhere that a runtime has to keep reading, so a change is not an
+addition to anything and the records simply change at the minor the format
+already has. The history of this file below its first release is therefore not a
+sequence of minor bumps and does not read as one.
 
 The refusal is an `ImportError` that names the package and both versions, the
 same shape as the message a compiled module gets from `import_winrt_runtime()`.

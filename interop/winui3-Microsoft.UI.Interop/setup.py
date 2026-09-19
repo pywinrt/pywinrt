@@ -5,26 +5,21 @@ import pathlib
 
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
-from winrt._include import get_include
 
-# The C++/WinRT headers that scripts/generate-cppwinrt.py writes. They are
-# build output rather than a distribution - the only things that compile
-# against them are winrt-runtime and the interop modules - so the build is
-# told where they are rather than finding them in site-packages.
-try:
-    CPPWINRT_PATH = pathlib.Path(os.environ["CPPWINRT_PATH"]).resolve()
-except KeyError:
-    raise RuntimeError("Please set the CPPWINRT_PATH environment variable")
+from winrt._include import get_cppwinrt_include, get_include
 
-CPPWINRT_INCLUDE_DIRS = [os.fspath(CPPWINRT_PATH / "windows-sdk")]
+INCLUDE_DIRS = [get_include(), get_cppwinrt_include()]
 
-CPPWINRT_INCLUDE_DIRS.append(os.fspath(CPPWINRT_PATH / "windows-app-sdk"))
+# the namespaces this package includes that the runtime does not carry
+INCLUDE_DIRS.append(os.fspath(pathlib.Path(__file__).parent / "cppwinrt"))
 
 try:
     WINDOWS_APP_SDK_PATH = pathlib.Path(os.environ["WINDOWS_APP_SDK_PATH"]).resolve()
     print(f"Using Windows App SDK from {WINDOWS_APP_SDK_PATH}")
 except KeyError:
     raise RuntimeError("Please set the WINDOWS_APP_SDK_PATH environment variable")
+
+INCLUDE_DIRS.append(os.fspath(WINDOWS_APP_SDK_PATH / "include"))
 
 
 class build_ext_ex(build_ext):
@@ -57,8 +52,7 @@ setup(
         Extension(
             "winui3._winui3_microsoft_ui_interop",
             sources=["py.Microsoft.UI.Interop.cpp"],
-            include_dirs=[get_include()] + CPPWINRT_INCLUDE_DIRS
-                + [os.fspath(WINDOWS_APP_SDK_PATH / "include")],
+            include_dirs=INCLUDE_DIRS,
             libraries=["windowsapp"],
         )
     ],

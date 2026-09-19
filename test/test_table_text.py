@@ -8,10 +8,9 @@ covers: everything the text can say has to survive being compiled, and a text
 that says something wrong has to be refused where it is written rather than
 where it is read.
 
-The compiler ships in ``winrt-runtime`` (``winrt/table.py``), since that is
-where the other end of the format already lives and where a build can reach it.
-Nothing here touches the file system: a table is compiled in memory and handed
-straight to the runtime's own reader.
+The compiler is ``winrt.table``, which ``winrt-table`` ships for
+whatever builds a projection. Nothing here touches the file system: a table is
+compiled in memory and handed straight to the runtime's own reader.
 """
 
 import unittest
