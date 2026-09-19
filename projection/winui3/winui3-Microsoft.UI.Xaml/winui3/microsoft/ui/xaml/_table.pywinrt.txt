@@ -1205,7 +1205,6 @@ class Microsoft.UI.Xaml.FrameworkElement composable python_type
     requires Microsoft.UI.Xaml.IFrameworkElementOverrides
     factory Microsoft.UI.Xaml.IFrameworkElementStatics
     composable Microsoft.UI.Xaml.IFrameworkElementFactory
-    overridable Microsoft.UI.Xaml.IFrameworkElementProtected
     overridable Microsoft.UI.Xaml.IFrameworkElementOverrides
     property width
         get get_Width slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IFrameworkElement shape=4 reverse=194
@@ -4452,7 +4451,6 @@ class Microsoft.UI.Xaml.StateTriggerBase composable python_type
     requires Microsoft.UI.Xaml.IStateTriggerBase
     requires Microsoft.UI.Xaml.IStateTriggerBaseProtected
     composable Microsoft.UI.Xaml.IStateTriggerBaseFactory
-    overridable Microsoft.UI.Xaml.IStateTriggerBaseProtected
     method _set_active
         method SetActive slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.IStateTriggerBaseProtected shape=4 reverse=22 protected
             in boolean name=IsActive
@@ -4983,7 +4981,6 @@ class Microsoft.UI.Xaml.UIElement composable python_type
     requires Microsoft.UI.Composition.IVisualElement2
     factory Microsoft.UI.Xaml.IUIElementStatics
     composable Microsoft.UI.Xaml.IUIElementFactory
-    overridable Microsoft.UI.Xaml.IUIElementProtected
     overridable Microsoft.UI.Xaml.IUIElementOverrides
     property keyboard_accelerator_placement_mode
         get get_KeyboardAcceleratorPlacementMode slot=81 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IUIElement shape=4 reverse=466
@@ -6110,7 +6107,6 @@ class Microsoft.UI.Xaml.VisualStateManager composable python_type
     requires Microsoft.UI.Xaml.IVisualStateManagerOverrides
     factory Microsoft.UI.Xaml.IVisualStateManagerStatics
     composable Microsoft.UI.Xaml.IVisualStateManagerFactory
-    overridable Microsoft.UI.Xaml.IVisualStateManagerProtected
     overridable Microsoft.UI.Xaml.IVisualStateManagerOverrides
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IVisualStateManagerFactory shape=117 reverse=25

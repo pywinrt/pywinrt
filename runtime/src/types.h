@@ -29,6 +29,8 @@ namespace py::interp
 
     type_entry* ensure_entry(projection& proj, uint32_t index) noexcept;
 
+    type_entry* ensure_named_entry(projection& proj, uint32_t index) noexcept;
+
     PyTypeObject* ensure_type(projection& proj, uint32_t index) noexcept;
 
     PyTypeObject* ensure_referenced_type(projection& proj, uint32_t index) noexcept;

@@ -1,5 +1,11 @@
 from test._util import skip_without_projection
 
+# The composable half of this module works, but one thing that is not the
+# interpreter keeps the whole of it on the skip list: IAsyncInfo.ErrorCode
+# hands back a plain integer rather than the Windows.Foundation.HResult the
+# projection used to give, so test_async_action_with_progress_iter_error
+# raises inside a completion callback and the queue it feeds is never shut
+# down, which hangs the suite.
 skip_without_projection()
 
 import asyncio
@@ -68,6 +74,43 @@ class TestTestComponent(unittest.TestCase):
         )
         self.assertIsInstance(c, tc.Override)
         self.assertIsInstance(c, tc.IRequiredOne)
+
+    def test_composable_subclass_of_a_composed_class(self):
+        # Derived derives from Composable and is composable in turn, so a
+        # Python class composed into it has three objects behind it and the
+        # members of both classes.
+        class C(tc.Derived):
+            pass
+
+        c = C()
+
+        self.assertIsInstance(c, tc.Derived)
+        self.assertIsInstance(c, tc.Composable)
+        self.assertEqual(c.value, 0)
+        self.assertEqual(c.one(), 1)
+
+    def test_composable_runtime_class_name(self):
+        # C++/WinRT names a composed object after the first interface the
+        # derived object implements itself, so a subclass of a class that
+        # leaves nothing to be overridden has no name of its own.
+        class C(tc.Composable):
+            pass
+
+        class D(tc.Override):
+            pass
+
+        self.assertEqual(tc.TestRunner.expect_object(C()), "")
+        self.assertEqual(
+            tc.TestRunner.expect_object(D()), "TestComponent.IOverrideOverrides"
+        )
+
+    def test_declared_runtime_class_name(self):
+        # A class may say what it is called instead, which is what a XAML
+        # metadata provider needs.
+        class C(tc.Composable):
+            _runtime_class_name_ = "Spam.Eggs"
+
+        self.assertEqual(tc.TestRunner.expect_object(C()), "Spam.Eggs")
 
     def test_overriding_new(self):
         class C(tc.Composable):

@@ -1251,7 +1251,6 @@ class Windows.UI.Xaml.FrameworkElement composable python_type
     factory Windows.UI.Xaml.IFrameworkElementStatics4
     factory Windows.UI.Xaml.IFrameworkElementStatics6
     composable Windows.UI.Xaml.IFrameworkElementFactory
-    overridable Windows.UI.Xaml.IFrameworkElementProtected7
     overridable Windows.UI.Xaml.IFrameworkElementOverrides
     overridable Windows.UI.Xaml.IFrameworkElementOverrides2
     property width
@@ -4550,7 +4549,6 @@ class Windows.UI.Xaml.StateTriggerBase composable python_type
     requires Windows.UI.Xaml.IStateTriggerBase
     requires Windows.UI.Xaml.IStateTriggerBaseProtected
     composable Windows.UI.Xaml.IStateTriggerBaseFactory
-    overridable Windows.UI.Xaml.IStateTriggerBaseProtected
     method _set_active
         method SetActive slot=6 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IStateTriggerBaseProtected shape=4 reverse=22 protected
             in boolean name=IsActive
@@ -6087,7 +6085,6 @@ class Windows.UI.Xaml.VisualStateManager composable python_type
     requires Windows.UI.Xaml.IVisualStateManagerOverrides
     factory Windows.UI.Xaml.IVisualStateManagerStatics
     composable Windows.UI.Xaml.IVisualStateManagerFactory
-    overridable Windows.UI.Xaml.IVisualStateManagerProtected
     overridable Windows.UI.Xaml.IVisualStateManagerOverrides
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IVisualStateManagerFactory shape=117 reverse=25

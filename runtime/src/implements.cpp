@@ -33,22 +33,6 @@ namespace py::interp
 {
     namespace
     {
-        struct reverse_object;
-
-        /**
-         * One interface of the object, which is what a WinRT caller that
-         * asked for that interface holds.
-         */
-        struct tearoff final : shapes::reverse_target
-        {
-            shapes::com_head head;
-            /// Borrowed: the object owns its tearoffs and outlives them.
-            reverse_object* owner;
-            type_entry* info;
-
-            int32_t invoke(uint16_t slot, void* args) noexcept override;
-        };
-
         /**
          * The WinRT object that stands for Python state.
          */
@@ -285,51 +269,53 @@ namespace py::interp
             return static_cast<tearoff*>(static_cast<shapes::com_head*>(self)->target);
         }
 
+        /**
+         * The object a tearoff belongs to, as the WinRT caller that holds the
+         * object itself sees it.
+         *
+         * A tearoff answers the six entries every WinRT interface starts with
+         * the way the object does, and the object may be one this file
+         * assembled or one compose.cpp did, so it is entered through its own
+         * vtable rather than called directly.
+         */
+        winrt::impl::inspectable_abi* owner_of(void* self) noexcept
+        {
+            return reinterpret_cast<winrt::impl::inspectable_abi*>(
+                tearoff_of(self)->owner);
+        }
+
         int32_t __stdcall tearoff_query_interface(
             void* self, winrt::guid const& id, void** object) noexcept
         {
-            return object_query_interface(&tearoff_of(self)->owner->head, id, object);
+            return owner_of(self)->QueryInterface(id, object);
         }
 
         uint32_t __stdcall tearoff_add_ref(void* self) noexcept
         {
-            return object_add_ref(&tearoff_of(self)->owner->head);
+            return owner_of(self)->AddRef();
         }
 
         uint32_t __stdcall tearoff_release(void* self) noexcept
         {
-            return object_release(&tearoff_of(self)->owner->head);
+            return owner_of(self)->Release();
         }
 
         int32_t __stdcall tearoff_get_iids(
             void* self, uint32_t* count, winrt::guid** array) noexcept
         {
-            return object_get_iids(&tearoff_of(self)->owner->head, count, array);
+            return owner_of(self)->GetIids(count, array);
         }
 
         int32_t __stdcall tearoff_get_runtime_class_name(
             void* self, void** name) noexcept
         {
-            return object_get_runtime_class_name(&tearoff_of(self)->owner->head, name);
+            return owner_of(self)->GetRuntimeClassName(name);
         }
 
         int32_t __stdcall tearoff_get_trust_level(void* self, int32_t* level) noexcept
         {
-            return object_get_trust_level(&tearoff_of(self)->owner->head, level);
-        }
-
-        int32_t tearoff::invoke(uint16_t slot, void* args) noexcept
-        {
-            auto const& entry = info->reverse->slots[slot];
-
-            if (!entry.member)
-            {
-                return winrt::impl::error_not_implemented;
-            }
-
-            auto gil = ensure_gil();
-
-            return owner->calls->run(entry, args);
+            return owner_of(self)->GetTrustLevel(
+                reinterpret_cast<winrt::Windows::Foundation::TrustLevel*>(level));
         }
 
         int32_t reverse_object::invoke(uint16_t /*slot*/, void* /*args*/) noexcept
@@ -360,6 +346,29 @@ namespace py::interp
         }
 
         /**
+         * Whether @p entry's own vtable is where @p overload belongs, read off
+         * the descriptor rather than off the table record beside it.
+         *
+         * A member read from the interface that declares it names no interface
+         * to query, because the object is already holding that one; a member
+         * read from anything else - a class, or an interface that requires
+         * this one - names the interface it is reached through.
+         */
+        bool declared_by(
+            overload_desc const& overload,
+            type_entry const& entry,
+            type_entry const& source) noexcept
+        {
+            if (!overload.iface)
+            {
+                return &entry == &source;
+            }
+
+            return *static_cast<winrt::guid const*>(overload.iface)
+                   == *static_cast<winrt::guid const*>(entry.guid);
+        }
+
+        /**
          * The interface @p type is the abstract type of, or @c nullptr.
          *
          * Every projected interface has two Python types: the wrapper a value
@@ -374,76 +383,123 @@ namespace py::interp
 
             return entry && entry->implements == type ? entry : nullptr;
         }
+    } // namespace
 
-        /**
-         * Every interface @p type implements, and everything those require,
-         * in the order to try them.
-         */
-        bool collect_interfaces(PyTypeObject* type, std::vector<type_entry*>& found)
+    int32_t tearoff::invoke(uint16_t slot, void* args) noexcept
+    {
+        auto const& entry = info->reverse->slots[slot];
+
+        if (!entry.member)
         {
-            auto* const mro = type->tp_mro;
-            if (!mro)
-            {
-                return true;
-            }
+            return winrt::impl::error_not_implemented;
+        }
 
-            auto const add = [&found](type_entry* entry)
-            {
-                if (std::find(found.begin(), found.end(), entry) == found.end())
-                {
-                    found.push_back(entry);
-                }
-            };
+        auto gil = ensure_gil();
 
-            for (Py_ssize_t i = 0; i < PyTuple_GET_SIZE(mro); i++)
-            {
-                auto* const base = PyTuple_GET_ITEM(mro, i);
-                if (!PyType_Check(base))
-                {
-                    continue;
-                }
+        return calls->run(entry, args);
+    }
 
-                auto* const entry = interface_of(reinterpret_cast<PyTypeObject*>(base));
-                if (!entry)
-                {
-                    continue;
-                }
+    /**
+     * Gives @p tearoffs one entry per interface in @p interfaces, all of them
+     * forwarding to @p owner and answering through @p calls.
+     *
+     * Each interface's vtable has to have been built already. The vector is
+     * never added to again once this has run, because a WinRT caller holds a
+     * pointer into it.
+     */
+    void make_tearoffs(
+        std::span<type_entry* const> interfaces,
+        shapes::com_head& owner,
+        reverse_call& calls,
+        std::vector<tearoff>& tearoffs)
+    {
+        tearoffs.reserve(interfaces.size());
 
-                add(entry);
+        for (auto* const entry : interfaces)
+        {
+            auto& iface = tearoffs.emplace_back();
 
-                // An interface lists what it requires transitively, and an
-                // object that answers one has to answer all of them.
-                auto const required
-                    = entry->owner->table->type(entry->index).interfaces();
+            iface.head.vtable = entry->reverse->entries.data();
+            iface.head.target = &iface;
+            iface.owner = &owner;
+            iface.calls = &calls;
+            iface.info = entry;
+        }
+    }
 
-                for (uint32_t j = 0; j < required.size(); j++)
-                {
-                    type_entry* cache{};
-
-                    auto* const other = resolve(*entry->owner, required[j], cache);
-                    if (!other)
-                    {
-                        return false;
-                    }
-
-                    add(other);
-                }
-            }
-
+    /**
+     * Every interface @p type implements, and everything those require, in the
+     * order to try them.
+     */
+    bool collect_interfaces(PyTypeObject* type, std::vector<type_entry*>& found)
+    {
+        auto* const mro = type->tp_mro;
+        if (!mro)
+        {
             return true;
         }
-    } // namespace
+
+        auto const add = [&found](type_entry* entry)
+        {
+            if (std::find(found.begin(), found.end(), entry) == found.end())
+            {
+                found.push_back(entry);
+            }
+        };
+
+        for (Py_ssize_t i = 0; i < PyTuple_GET_SIZE(mro); i++)
+        {
+            auto* const base = PyTuple_GET_ITEM(mro, i);
+            if (!PyType_Check(base))
+            {
+                continue;
+            }
+
+            auto* const entry = interface_of(reinterpret_cast<PyTypeObject*>(base));
+            if (!entry)
+            {
+                continue;
+            }
+
+            add(entry);
+
+            // An interface lists what it requires transitively, and an object
+            // that answers one has to answer all of them.
+            auto const required = entry->owner->table->type(entry->index).interfaces();
+
+            for (uint32_t j = 0; j < required.size(); j++)
+            {
+                type_entry* cache{};
+
+                auto* const other = resolve(*entry->owner, required[j], cache);
+                if (!other)
+                {
+                    return false;
+                }
+
+                add(other);
+            }
+        }
+
+        return true;
+    }
 
     /**
      * Builds the vtable a WinRT caller enters @p entry's interface through,
-     * once per interface.
+     * once per interface, from the members of @p source that name @p entry as
+     * what declares them.
      *
      * Its entries are the reverse trampolines that the shape ids in the table
-     * name. What each of them comes down to on the Python side is the
-     * object's business and not the interface's, so one vtable serves a class
-     * that implements the interface and a list that stands in for one.
+     * name. What each of them comes down to on the Python side is the object's
+     * business and not the interface's, so one vtable serves a class that
+     * implements the interface and a list that stands in for one.
+     *
+     * The source is the interface itself for one the table describes. An
+     * interface that is exclusive to a class - which every overridable one is
+     * - is written down as a name and an IID, because the class redeclares
+     * every member of it, so for one of those the source is that class.
      */
-    bool ensure_interface_vtable(type_entry& entry)
+    bool ensure_interface_vtable(type_entry& entry, type_entry& source)
     {
         if (entry.reverse)
         {
@@ -459,7 +515,7 @@ namespace py::interp
             return false;
         }
 
-        auto const record = entry.owner->table->type(entry.index);
+        auto const record = source.owner->table->type(source.index);
 
         auto reverse = std::make_unique<reverse_vtable>();
 
@@ -471,10 +527,11 @@ namespace py::interp
                reinterpret_cast<shapes::vtable_entry>(&tearoff_get_runtime_class_name),
                reinterpret_cast<shapes::vtable_entry>(&tearoff_get_trust_level)};
 
-        // An interface's own vtable holds only its own methods: the ones
-        // it inherits are reached through a vtable of their own, so a
-        // record lists them - the wrapper type has to bind them all - at
-        // slots that are this interface's slots for something else.
+        // An interface's own vtable holds only its own methods: the ones it
+        // inherits, and the ones a class reaches through its other interfaces,
+        // are reached through a vtable of their own, so the record lists them -
+        // the wrapper type has to bind them all - at slots that are this
+        // interface's slots for something else.
         for (uint32_t i = 0; i < record.group_count(); i++)
         {
             auto const group = record.group(i);
@@ -528,19 +585,16 @@ namespace py::interp
 
         reverse->slots.resize(reverse->entries.size());
 
-        for (uint16_t i = 0; i < entry.member_count; i++)
+        for (uint16_t i = 0; i < source.member_count; i++)
         {
-            auto& member = entry.members[i];
+            auto& member = source.members[i];
 
             for (uint16_t j = 0; j < member.count; j++)
             {
                 auto& overload = member.overloads[j];
 
-                // The same filter as above, read off the descriptor: an
-                // interface an object is already holding needs no query,
-                // so a member with one named is one this interface
-                // inherited.
-                if (overload.iface)
+                // The same filter as above, read off the descriptor.
+                if (!declared_by(overload, entry, source))
                 {
                     continue;
                 }
@@ -565,6 +619,37 @@ namespace py::interp
         entry.reverse = std::move(reverse);
 
         return true;
+    }
+
+    /**
+     * The Python object @p abi started as, or @c nullptr when it did not start
+     * in Python at all.
+     *
+     * A Python object handed to WinRT is given to it as a COM object that
+     * stands for it, and py::IPywinrtObject is how that object is recognised
+     * on the way back: an object that implements interfaces, a list or dict
+     * read as a collection and a subclass of a composable class all answer it,
+     * so a value that made the round trip is the object that went out.
+     */
+    PyObject* python_object_of(void* abi) noexcept
+    {
+        winrt::com_ptr<py::IPywinrtObject> started;
+
+        if (static_cast<::IUnknown*>(abi)->QueryInterface(
+                winrt::guid_of<py::IPywinrtObject>(), started.put_void())
+            != 0)
+        {
+            return nullptr;
+        }
+
+        PyObject* obj{};
+
+        if (started->GetPyObject(obj) != 0)
+        {
+            return nullptr;
+        }
+
+        return obj;
     }
 
     /**
@@ -614,17 +699,8 @@ namespace py::interp
         owner->py_head.vtable = pywinrt_object_vtable;
         owner->py_head.target = owner.get();
         owner->calls = std::move(calls);
-        owner->tearoffs.reserve(interfaces.size());
 
-        for (auto* const entry : interfaces)
-        {
-            auto& iface = owner->tearoffs.emplace_back();
-
-            iface.head.vtable = entry->reverse->entries.data();
-            iface.head.target = &iface;
-            iface.owner = owner.get();
-            iface.info = entry;
-        }
+        make_tearoffs(interfaces, owner->head, *owner->calls, owner->tearoffs);
 
         void* result{};
 

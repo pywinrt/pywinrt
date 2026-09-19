@@ -2179,7 +2179,6 @@ class TestComponent.OverloadClass composable python_type
     requires TestComponent.IOverloadClassOverrides
     requires TestComponent.IOverloadClassOverrides2
     composable TestComponent.IOverloadClassFactory
-    overridable TestComponent.IOverloadClassProtected
     overridable TestComponent.IOverloadClassOverrides
     overridable TestComponent.IOverloadClassOverrides2
     constructor -
@@ -2210,7 +2209,6 @@ class TestComponent.Override composable python_type
     requires TestComponent.IOverrideProtected
     requires TestComponent.IOverrideOverrides
     composable TestComponent.IOverrideFactory
-    overridable TestComponent.IOverrideProtected
     overridable TestComponent.IOverrideOverrides
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IOverrideFactory shape=117 reverse=25

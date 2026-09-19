@@ -319,6 +319,43 @@ namespace py::interp
     }
 
     /**
+     * The entry of a type that the table names and says nothing else about.
+     *
+     * An interface that is exclusive to a class is written down as a name and
+     * an IID, because the class redeclares every member of it, so there is no
+     * Python type to build and nothing here builds one. What such an entry is
+     * for is the vtable a WinRT caller enters the interface through, which
+     * compose.cpp assembles from the class's members.
+     */
+    type_entry* ensure_named_entry(projection& proj, uint32_t index) noexcept
+    {
+        auto& entry = proj.types[index];
+        if (entry.winrt_name)
+        {
+            return &entry;
+        }
+
+        auto const record = proj.table->type(index);
+
+        entry.owner = &proj;
+        entry.index = index;
+        entry.category = record.get_category();
+        entry.guid = record.guid();
+
+        try
+        {
+            entry.winrt_name = keep(proj, qualified(record));
+        }
+        catch (...)
+        {
+            to_PyErr();
+            return nullptr;
+        }
+
+        return &entry;
+    }
+
+    /**
      * The Python type of one record of this namespace's table, built on the
      * first call.
      */

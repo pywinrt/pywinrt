@@ -12,6 +12,7 @@
 #include <pywinrt/base.h>
 
 #include "arrays.h"
+#include "compose.h"
 #include "implements.h"
 #include "interp.h"
 #include "members.h"
@@ -39,6 +40,13 @@ namespace py::interp
         if (!abi)
         {
             Py_RETURN_NONE;
+        }
+
+        if (auto* const started = python_object_of(abi))
+        {
+            static_cast<::IUnknown*>(abi)->Release();
+
+            return started;
         }
 
         auto const self = type->tp_alloc(type, 0);
@@ -150,6 +158,26 @@ namespace py::interp
             return PyTuple_GET_SIZE(args) == 0 ? nullptr : &PyTuple_GET_ITEM(args, 0);
         }
 
+        /**
+         * The class @p type is, which for a Python class derived from a
+         * composable one is the class it derives from.
+         *
+         * A derived class has a table entry of its own for nothing: what it
+         * activates, and every member it inherits, is the WinRT class's.
+         */
+        type_entry* class_entry_of(PyTypeObject* type) noexcept
+        {
+            for (auto* base = type; base; base = base->tp_base)
+            {
+                if (auto* const entry = get_type_entry(base))
+                {
+                    return entry;
+                }
+            }
+
+            return nullptr;
+        }
+
         PyObject* class_new(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
         {
             if (kwds && PyDict_GET_SIZE(kwds) != 0)
@@ -158,19 +186,10 @@ namespace py::interp
                 return nullptr;
             }
 
-            auto const info = get_type_entry(type);
+            auto const info = class_entry_of(type);
             if (!info || !info->constructor)
             {
                 set_invalid_activation_error(info ? info->winrt_name : type->tp_name);
-                return nullptr;
-            }
-
-            if (type != info->py_type)
-            {
-                PyErr_Format(
-                    PyExc_NotImplementedError,
-                    "'%s' cannot be subclassed in Python yet",
-                    info->py_type->tp_name);
                 return nullptr;
             }
 
@@ -180,6 +199,17 @@ namespace py::interp
             if (!overload)
             {
                 return nullptr;
+            }
+
+            if (type != info->py_type)
+            {
+                return make_composed_object(
+                    type,
+                    *info,
+                    *info->constructor,
+                    *overload,
+                    tuple_items(args),
+                    PyTuple_GET_SIZE(args));
             }
 
             return call_member(
@@ -231,20 +261,6 @@ namespace py::interp
             return convert_guid(*static_cast<winrt::guid const*>(info->guid));
         }
 
-        /**
-         * _make_(): the tearoff for this interface on a Python subclass of a
-         * composable class, which is the one thing implements.cpp does not
-         * stand one up for yet, because there is no composable object for it
-         * to hang off.
-         */
-        PyObject* type_make(PyObject* /*cls*/, PyObject* /*args*/) noexcept
-        {
-            PyErr_SetString(
-                PyExc_NotImplementedError,
-                "a Python subclass of a composable class is not interpreted yet");
-            return nullptr;
-        }
-
         PyMethodDef class_methods[]
             = {{"_from", type_from, METH_O | METH_CLASS, nullptr},
                {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
@@ -254,7 +270,6 @@ namespace py::interp
             = {{"_from", type_from, METH_O | METH_CLASS, nullptr},
                {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
                {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
-               {"_make_", type_make, METH_VARARGS | METH_CLASS, nullptr},
                {}};
 
         // A parameterized interface is only ever named with its type arguments
@@ -272,7 +287,6 @@ namespace py::interp
             = {{"_from", type_from, METH_O | METH_CLASS, nullptr},
                {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
                {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
-               {"_make_", type_make, METH_VARARGS | METH_CLASS, nullptr},
                {"__class_getitem__",
                 Py_GenericAlias,
                 METH_O | METH_CLASS,

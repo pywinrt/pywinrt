@@ -173,7 +173,6 @@ class Microsoft.UI.Xaml.Automation.Peers.AutomationPeer composable python_type
     requires Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerOverrides
     factory Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerStatics
     composable Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerFactory
-    overridable Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerProtected
     overridable Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerOverrides
     property events_source
         get get_EventsSource slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 reverse=22
