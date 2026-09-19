@@ -928,11 +928,8 @@ class Windows.Web.Syndication.SyndicationAttribute activatable python_type
     requires Windows.Web.Syndication.ISyndicationAttribute
     factory Windows.Web.Syndication.ISyndicationAttributeFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationAttributeFactory shape=195 reverse=26
-            in string name=attributeName implicit
-            in string name=attributeNamespace implicit
-            in string name=attributeValue implicit
-            out class type=Windows.Web.Syndication.SyndicationAttribute return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Web.Syndication.ISyndicationAttributeFactory shape=195 reverse=26
             in string name=attributeName
             in string name=attributeNamespace
@@ -962,9 +959,8 @@ class Windows.Web.Syndication.SyndicationCategory activatable python_type
     requires Windows.Web.Syndication.ISyndicationNode
     factory Windows.Web.Syndication.ISyndicationCategoryFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationCategoryFactory shape=51 reverse=24
-            in string name=term implicit
-            out class type=Windows.Web.Syndication.SyndicationCategory return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationCategoryFactory shape=51 reverse=24
             in string name=term
             out class type=Windows.Web.Syndication.SyndicationCategory return
@@ -1031,9 +1027,8 @@ class Windows.Web.Syndication.SyndicationClient activatable python_type
     requires Windows.Web.Syndication.ISyndicationClient
     factory Windows.Web.Syndication.ISyndicationClientFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClientFactory shape=51 reverse=24
-            in class type=Windows.Security.Credentials.PasswordCredential name=serverCredential implicit
-            out class type=Windows.Web.Syndication.SyndicationClient return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationClientFactory shape=51 reverse=24
             in class type=Windows.Security.Credentials.PasswordCredential name=serverCredential
             out class type=Windows.Web.Syndication.SyndicationClient return
@@ -1080,10 +1075,8 @@ class Windows.Web.Syndication.SyndicationContent activatable python_type
     requires Windows.Web.Syndication.ISyndicationContent
     factory Windows.Web.Syndication.ISyndicationContentFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationContentFactory shape=117 reverse=25
-            in string name=text implicit
-            in enum32 type=Windows.Web.Syndication.SyndicationTextType name=type implicit
-            out class type=Windows.Web.Syndication.SyndicationContent return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationContentFactory shape=51 reverse=44
             in class type=Windows.Foundation.Uri name=sourceUri
             out class type=Windows.Web.Syndication.SyndicationContent return
@@ -1167,11 +1160,8 @@ class Windows.Web.Syndication.SyndicationFeed activatable python_type
     requires Windows.Web.Syndication.ISyndicationNode
     factory Windows.Web.Syndication.ISyndicationFeedFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeedFactory shape=195 reverse=26
-            in string name=title implicit
-            in string name=subtitle implicit
-            in class type=Windows.Foundation.Uri name=uri implicit
-            out class type=Windows.Web.Syndication.SyndicationFeed return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Web.Syndication.ISyndicationFeedFactory shape=195 reverse=26
             in string name=title
             in string name=subtitle
@@ -1301,9 +1291,8 @@ class Windows.Web.Syndication.SyndicationGenerator activatable python_type
     requires Windows.Web.Syndication.ISyndicationNode
     factory Windows.Web.Syndication.ISyndicationGeneratorFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationGeneratorFactory shape=51 reverse=24
-            in string name=text implicit
-            out class type=Windows.Web.Syndication.SyndicationGenerator return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationGeneratorFactory shape=51 reverse=24
             in string name=text
             out class type=Windows.Web.Syndication.SyndicationGenerator return
@@ -1366,11 +1355,8 @@ class Windows.Web.Syndication.SyndicationItem activatable python_type
     requires Windows.Web.Syndication.ISyndicationNode
     factory Windows.Web.Syndication.ISyndicationItemFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItemFactory shape=195 reverse=26
-            in string name=title implicit
-            in class type=Windows.Web.Syndication.SyndicationContent name=content implicit
-            in class type=Windows.Foundation.Uri name=uri implicit
-            out class type=Windows.Web.Syndication.SyndicationItem return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Web.Syndication.ISyndicationItemFactory shape=195 reverse=26
             in string name=title
             in class type=Windows.Web.Syndication.SyndicationContent name=content
@@ -1495,9 +1481,8 @@ class Windows.Web.Syndication.SyndicationLink activatable python_type
     requires Windows.Web.Syndication.ISyndicationNode
     factory Windows.Web.Syndication.ISyndicationLinkFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationLinkFactory shape=51 reverse=24
-            in class type=Windows.Foundation.Uri name=uri implicit
-            out class type=Windows.Web.Syndication.SyndicationLink return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationLinkFactory shape=51 reverse=24
             in class type=Windows.Foundation.Uri name=uri
             out class type=Windows.Web.Syndication.SyndicationLink return
@@ -1581,11 +1566,8 @@ class Windows.Web.Syndication.SyndicationNode activatable python_type
     requires Windows.Web.Syndication.ISyndicationNode
     factory Windows.Web.Syndication.ISyndicationNodeFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNodeFactory shape=195 reverse=26
-            in string name=nodeName implicit
-            in string name=nodeNamespace implicit
-            in string name=nodeValue implicit
-            out class type=Windows.Web.Syndication.SyndicationNode return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNodeFactory shape=195 reverse=26
             in string name=nodeName
             in string name=nodeNamespace
@@ -1635,9 +1617,8 @@ class Windows.Web.Syndication.SyndicationPerson activatable python_type
     requires Windows.Web.Syndication.ISyndicationNode
     factory Windows.Web.Syndication.ISyndicationPersonFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationPersonFactory shape=51 reverse=24
-            in string name=name implicit
-            out class type=Windows.Web.Syndication.SyndicationPerson return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationPersonFactory shape=51 reverse=24
             in string name=name
             out class type=Windows.Web.Syndication.SyndicationPerson return
@@ -1705,9 +1686,8 @@ class Windows.Web.Syndication.SyndicationText activatable python_type
     requires Windows.Web.Syndication.ISyndicationNode
     factory Windows.Web.Syndication.ISyndicationTextFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationTextFactory shape=51 reverse=24
-            in string name=text implicit
-            out class type=Windows.Web.Syndication.SyndicationText return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Syndication.ISyndicationTextFactory shape=51 reverse=24
             in string name=text
             out class type=Windows.Web.Syndication.SyndicationText return

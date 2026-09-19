@@ -119,8 +119,7 @@ class Windows.ApplicationModel.Core.CoreApplication static python_type
         remove remove_Suspending slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=26 reverse=82 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_new_view static
-        method CreateNewView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication3 shape=51 reverse=24 static
-            in interface type=Windows.ApplicationModel.Core.IFrameworkViewSource name=viewSource
+        method CreateNewView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication2 shape=4 reverse=22 static
             out class type=Windows.ApplicationModel.Core.CoreApplicationView return
         method CreateNewView slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication3 shape=51 reverse=24 static
             in interface type=Windows.ApplicationModel.Core.IFrameworkViewSource name=viewSource

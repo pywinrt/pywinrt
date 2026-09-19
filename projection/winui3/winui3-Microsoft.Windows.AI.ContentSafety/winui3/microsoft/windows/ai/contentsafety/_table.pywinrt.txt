@@ -48,9 +48,8 @@ class Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity activatable 
     requires Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverity
     factory Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverityFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverityFactory shape=51 reverse=24
-            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=severityForALlCategories implicit
-            out class type=Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.IImageContentFilterSeverityFactory shape=51 reverse=24
             in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=severityForALlCategories
             out class type=Microsoft.Windows.AI.ContentSafety.ImageContentFilterSeverity return
@@ -86,9 +85,8 @@ class Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity activatable p
     requires Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverity
     factory Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverityFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverityFactory shape=51 reverse=24
-            in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=severityForAllCategories implicit
-            out class type=Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.ContentSafety.ITextContentFilterSeverityFactory shape=51 reverse=24
             in enum32 type=Microsoft.Windows.AI.ContentSafety.SeverityLevel name=severityForAllCategories
             out class type=Microsoft.Windows.AI.ContentSafety.TextContentFilterSeverity return

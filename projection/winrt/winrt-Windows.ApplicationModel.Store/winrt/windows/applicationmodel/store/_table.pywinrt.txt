@@ -779,9 +779,8 @@ class Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties activatabl
     requires Windows.ApplicationModel.Store.IProductPurchaseDisplayProperties
     factory Windows.ApplicationModel.Store.IProductPurchaseDisplayPropertiesFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.IProductPurchaseDisplayPropertiesFactory shape=51 reverse=24
-            in string name=name implicit
-            out class type=Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.IProductPurchaseDisplayPropertiesFactory shape=51 reverse=24
             in string name=name
             out class type=Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties return

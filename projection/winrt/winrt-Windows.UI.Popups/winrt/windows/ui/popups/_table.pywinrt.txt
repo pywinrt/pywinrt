@@ -269,9 +269,8 @@ class Windows.UI.Popups.UICommand activatable python_type
     requires Windows.UI.Popups.IUICommand
     factory Windows.UI.Popups.IUICommandFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Popups.IUICommandFactory shape=51 reverse=24
-            in string name=label implicit
-            out class type=Windows.UI.Popups.UICommand return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Popups.IUICommandFactory shape=51 reverse=24
             in string name=label
             out class type=Windows.UI.Popups.UICommand return

@@ -136,10 +136,8 @@ class Windows.Globalization.NumberFormatting.DecimalFormatter activatable python
     requires Windows.Globalization.NumberFormatting.ISignedZeroOption
     factory Windows.Globalization.NumberFormatting.IDecimalFormatterFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.IDecimalFormatterFactory shape=117 reverse=25
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages implicit
-            in string name=geographicRegion implicit
-            out class type=Windows.Globalization.NumberFormatting.DecimalFormatter return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.NumberFormatting.IDecimalFormatterFactory shape=117 reverse=25
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             in string name=geographicRegion
@@ -900,9 +898,8 @@ class Windows.Globalization.NumberFormatting.NumeralSystemTranslator activatable
     requires Windows.Globalization.NumberFormatting.INumeralSystemTranslator
     factory Windows.Globalization.NumberFormatting.INumeralSystemTranslatorFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslatorFactory shape=51 reverse=24
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages implicit
-            out class type=Windows.Globalization.NumberFormatting.NumeralSystemTranslator return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslatorFactory shape=51 reverse=24
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             out class type=Windows.Globalization.NumberFormatting.NumeralSystemTranslator return
@@ -935,10 +932,8 @@ class Windows.Globalization.NumberFormatting.PercentFormatter activatable python
     requires Windows.Globalization.NumberFormatting.ISignedZeroOption
     factory Windows.Globalization.NumberFormatting.IPercentFormatterFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.IPercentFormatterFactory shape=117 reverse=25
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages implicit
-            in string name=geographicRegion implicit
-            out class type=Windows.Globalization.NumberFormatting.PercentFormatter return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.NumberFormatting.IPercentFormatterFactory shape=117 reverse=25
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             in string name=geographicRegion
@@ -1037,10 +1032,8 @@ class Windows.Globalization.NumberFormatting.PermilleFormatter activatable pytho
     requires Windows.Globalization.NumberFormatting.ISignedZeroOption
     factory Windows.Globalization.NumberFormatting.IPermilleFormatterFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.IPermilleFormatterFactory shape=117 reverse=25
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages implicit
-            in string name=geographicRegion implicit
-            out class type=Windows.Globalization.NumberFormatting.PermilleFormatter return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.NumberFormatting.IPermilleFormatterFactory shape=117 reverse=25
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             in string name=geographicRegion

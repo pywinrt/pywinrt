@@ -454,9 +454,8 @@ class Windows.Media.ContentRestrictions.RatedContentRestrictions activatable pyt
     requires Windows.Media.ContentRestrictions.IRatedContentRestrictions
     factory Windows.Media.ContentRestrictions.IRatedContentRestrictionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictionsFactory shape=51 reverse=24
-            in uint32 name=maxAgeRating implicit
-            out class type=Windows.Media.ContentRestrictions.RatedContentRestrictions return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictionsFactory shape=51 reverse=24
             in uint32 name=maxAgeRating
             out class type=Windows.Media.ContentRestrictions.RatedContentRestrictions return

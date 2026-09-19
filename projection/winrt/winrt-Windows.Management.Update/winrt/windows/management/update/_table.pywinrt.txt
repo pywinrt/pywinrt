@@ -1112,13 +1112,8 @@ class Windows.Management.Update.WindowsUpdateRestartRequestOptions activatable p
     requires Windows.Management.Update.IWindowsUpdateRestartRequestOptions
     factory Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory shape=267
-            in string name=title implicit
-            in string name=description implicit
-            in class type=Windows.Foundation.Uri name=moreInfoUrl implicit
-            in int32 name=complianceDeadlineInDays implicit
-            in int32 name=complianceGracePeriodInDays implicit
-            out class type=Windows.Management.Update.WindowsUpdateRestartRequestOptions return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory shape=267
             in string name=title
             in string name=description

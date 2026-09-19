@@ -1039,10 +1039,9 @@ class Windows.Services.Maps.MapRouteFinder static python_type
     factory Windows.Services.Maps.IMapRouteFinderStatics3
     factory Windows.Services.Maps.IMapRouteFinderStatics
     method get_driving_route_async static
-        method GetDrivingRouteAsync slot=6 inputs=2 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics2 shape=195 reverse=26 static
+        method GetDrivingRouteAsync slot=6 inputs=2 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics shape=117 reverse=25 static
             in class type=Windows.Devices.Geolocation.Geopoint name=startPoint
             in class type=Windows.Devices.Geolocation.Geopoint name=endPoint
-            in class type=Windows.Services.Maps.MapRouteDrivingOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinderResult> return
         method GetDrivingRouteAsync slot=6 inputs=3 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics2 shape=195 reverse=26 static default_overload
             in class type=Windows.Devices.Geolocation.Geopoint name=startPoint

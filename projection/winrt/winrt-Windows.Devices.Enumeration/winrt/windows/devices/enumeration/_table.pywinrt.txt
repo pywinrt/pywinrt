@@ -225,15 +225,12 @@ class Windows.Devices.Enumeration.DeviceInformation python_type
         get get_Pairing slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformation2 shape=4 reverse=43
             out class type=Windows.Devices.Enumeration.DeviceInformationPairing return
     method create_from_id_async static
-        method CreateFromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=46 static
+        method CreateFromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics shape=51 reverse=24 static
             in string name=deviceId
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
-            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformation> return
-        method CreateFromIdAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=46 static
+        method CreateFromIdAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics shape=117 reverse=45 static
             in string name=deviceId
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
-            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformation> return
         method CreateFromIdAsync slot=7 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=46 static
             in string name=deviceId
@@ -247,18 +244,14 @@ class Windows.Devices.Enumeration.DeviceInformation python_type
             in interface type=Windows.Devices.Enumeration.IDeviceEnumerationSettings name=settings
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformation> return
     method create_watcher static
-        method CreateWatcher slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=102 static
-            in string name=aqsFilter
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
-            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+        method CreateWatcher slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics shape=4 reverse=162 static
             out class type=Windows.Devices.Enumeration.DeviceWatcher return
         method CreateWatcher slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics shape=51 reverse=174 static default_overload
             in enum32 type=Windows.Devices.Enumeration.DeviceClass name=deviceClass
             out class type=Windows.Devices.Enumeration.DeviceWatcher return
-        method CreateWatcher slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=102 static
+        method CreateWatcher slot=15 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics shape=117 reverse=197 static
             in string name=aqsFilter
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
-            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
             out class type=Windows.Devices.Enumeration.DeviceWatcher return
         method CreateWatcher slot=9 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=102 static
             in string name=aqsFilter
@@ -272,24 +265,18 @@ class Windows.Devices.Enumeration.DeviceInformation python_type
             in interface type=Windows.Devices.Enumeration.IDeviceEnumerationSettings name=settings
             out class type=Windows.Devices.Enumeration.DeviceWatcher return
     method create_watcher_aqs_filter static
-        method CreateWatcher slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=102 static
+        method CreateWatcher slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics shape=51 reverse=187 static
             in string name=aqsFilter
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
-            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
             out class type=Windows.Devices.Enumeration.DeviceWatcher return
     method find_all_async static
-        method FindAllAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=68 static
-            in string name=aqsFilter
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
-            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
+        method FindAllAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics shape=4 reverse=62 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformationCollection> return
         method FindAllAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics shape=51 reverse=100 static default_overload
             in enum32 type=Windows.Devices.Enumeration.DeviceClass name=deviceClass
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformationCollection> return
-        method FindAllAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=68 static
+        method FindAllAsync slot=11 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics shape=117 reverse=145 static
             in string name=aqsFilter
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
-            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformationCollection> return
         method FindAllAsync slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=68 static
             in string name=aqsFilter
@@ -303,10 +290,8 @@ class Windows.Devices.Enumeration.DeviceInformation python_type
             in interface type=Windows.Devices.Enumeration.IDeviceEnumerationSettings name=settings
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformationCollection> return
     method find_all_async_aqs_filter static
-        method FindAllAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=195 reverse=68 static
+        method FindAllAsync slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics shape=51 reverse=124 static
             in string name=aqsFilter
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=additionalProperties
-            in enum32 type=Windows.Devices.Enumeration.DeviceInformationKind name=kind
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceInformationCollection> return
     method get_aqs_filter_from_device_class static
         method GetAqsFilterFromDeviceClass slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationStatics2 shape=51 reverse=24 static

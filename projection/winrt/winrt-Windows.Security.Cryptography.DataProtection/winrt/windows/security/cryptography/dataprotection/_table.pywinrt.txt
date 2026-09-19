@@ -20,9 +20,8 @@ class Windows.Security.Cryptography.DataProtection.DataProtectionProvider activa
     requires Windows.Security.Cryptography.DataProtection.IDataProtectionProvider
     factory Windows.Security.Cryptography.DataProtection.IDataProtectionProviderFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProviderFactory shape=51 reverse=24
-            in string name=protectionDescriptor implicit
-            out class type=Windows.Security.Cryptography.DataProtection.DataProtectionProvider return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProviderFactory shape=51 reverse=24
             in string name=protectionDescriptor
             out class type=Windows.Security.Cryptography.DataProtection.DataProtectionProvider return

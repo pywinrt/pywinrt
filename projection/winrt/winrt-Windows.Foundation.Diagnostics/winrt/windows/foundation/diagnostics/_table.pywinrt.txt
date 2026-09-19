@@ -620,9 +620,8 @@ class Windows.Foundation.Diagnostics.LoggingChannelOptions activatable python_ty
     requires Windows.Foundation.Diagnostics.ILoggingChannelOptions
     factory Windows.Foundation.Diagnostics.ILoggingChannelOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannelOptionsFactory shape=94 reverse=35
-            in guid name=group implicit
-            out class type=Windows.Foundation.Diagnostics.LoggingChannelOptions return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannelOptionsFactory shape=94 reverse=35
             in guid name=group
             out class type=Windows.Foundation.Diagnostics.LoggingChannelOptions return
@@ -1148,9 +1147,8 @@ class Windows.Foundation.Diagnostics.LoggingOptions activatable python_type
     requires Windows.Foundation.Diagnostics.ILoggingOptions
     factory Windows.Foundation.Diagnostics.ILoggingOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingOptionsFactory shape=47 reverse=19
-            in int64 name=keywords implicit
-            out class type=Windows.Foundation.Diagnostics.LoggingOptions return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingOptionsFactory shape=47 reverse=19
             in int64 name=keywords
             out class type=Windows.Foundation.Diagnostics.LoggingOptions return

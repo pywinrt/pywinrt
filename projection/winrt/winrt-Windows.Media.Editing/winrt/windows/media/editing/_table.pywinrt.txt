@@ -1479,9 +1479,8 @@ class Windows.Media.Editing.MediaOverlayLayer activatable python_type
     requires Windows.Media.Editing.IMediaOverlayLayer
     factory Windows.Media.Editing.IMediaOverlayLayerFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayerFactory shape=51 reverse=24
-            in interface type=Windows.Media.Effects.IVideoCompositorDefinition name=compositorDefinition implicit
-            out class type=Windows.Media.Editing.MediaOverlayLayer return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayerFactory shape=51 reverse=24
             in interface type=Windows.Media.Effects.IVideoCompositorDefinition name=compositorDefinition
             out class type=Windows.Media.Editing.MediaOverlayLayer return

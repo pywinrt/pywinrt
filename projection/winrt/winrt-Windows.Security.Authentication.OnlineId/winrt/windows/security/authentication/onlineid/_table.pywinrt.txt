@@ -254,9 +254,8 @@ class Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest pyth
     requires Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequest
     factory Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequestFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequestFactory shape=117 reverse=25
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequestFactory shape=51 reverse=44
             in string name=service
-            in string name=policy implicit
             out class type=Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequestFactory shape=117 reverse=25
             in string name=service

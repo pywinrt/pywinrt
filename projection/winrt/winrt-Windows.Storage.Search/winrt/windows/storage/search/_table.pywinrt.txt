@@ -140,8 +140,7 @@ class Windows.Storage.Search.ContentIndexer python_type
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=contentIds
             out interface type=Windows.Foundation.IAsyncAction return
     method get_indexer static
-        method GetIndexer slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IContentIndexerStatics shape=51 reverse=24 static
-            in string name=indexName
+        method GetIndexer slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Search.IContentIndexerStatics shape=4 reverse=43 static
             out class type=Windows.Storage.Search.ContentIndexer return
         method GetIndexer slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Search.IContentIndexerStatics shape=51 reverse=24 static
             in string name=indexName
@@ -1418,10 +1417,8 @@ class Windows.Storage.Search.QueryOptions activatable python_type
     requires Windows.Storage.Search.IQueryOptionsWithProviderFilter
     factory Windows.Storage.Search.IQueryOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptionsFactory shape=117 reverse=25
-            in enum32 type=Windows.Storage.Search.CommonFileQuery name=query implicit
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=fileTypeFilter implicit
-            out class type=Windows.Storage.Search.QueryOptions return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Search.IQueryOptionsFactory shape=51 reverse=44
             in enum32 type=Windows.Storage.Search.CommonFolderQuery name=query
             out class type=Windows.Storage.Search.QueryOptions return

@@ -828,11 +828,10 @@ class Windows.Security.Authentication.Web.Provider.WebAccountManager static pyth
     factory Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics4
     factory Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics
     method add_web_account_async static
-        method AddWebAccountAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountScopeManagerStatics shape=239 reverse=27 static
+        method AddWebAccountAsync slot=7 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=195 reverse=46 static
             in string name=webAccountId
             in string name=webAccountUserName
             in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=props
-            in enum32 type=Windows.Security.Authentication.Web.Provider.WebAccountScope name=scope
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> return
         method AddWebAccountAsync slot=6 inputs=4 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountScopeManagerStatics shape=239 reverse=27 static
             in string name=webAccountId

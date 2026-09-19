@@ -35,9 +35,8 @@ class Windows.ApplicationModel.Resources.ResourceLoader activatable python_type
     factory Windows.ApplicationModel.Resources.IResourceLoaderStatics
     factory Windows.ApplicationModel.Resources.IResourceLoaderFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderFactory shape=51 reverse=24
-            in string name=name implicit
-            out class type=Windows.ApplicationModel.Resources.ResourceLoader return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderFactory shape=51 reverse=24
             in string name=name
             out class type=Windows.ApplicationModel.Resources.ResourceLoader return

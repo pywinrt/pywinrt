@@ -152,9 +152,8 @@ class Windows.Web.AtomPub.AtomPubClient activatable python_type
     requires Windows.Web.Syndication.ISyndicationClient
     factory Windows.Web.AtomPub.IAtomPubClientFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClientFactory shape=51 reverse=24
-            in class type=Windows.Security.Credentials.PasswordCredential name=serverCredential implicit
-            out class type=Windows.Web.AtomPub.AtomPubClient return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClientFactory shape=51 reverse=24
             in class type=Windows.Security.Credentials.PasswordCredential name=serverCredential
             out class type=Windows.Web.AtomPub.AtomPubClient return

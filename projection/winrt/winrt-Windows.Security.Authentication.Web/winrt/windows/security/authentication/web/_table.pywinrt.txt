@@ -71,10 +71,9 @@ class Windows.Security.Authentication.Web.WebAuthenticationBroker static python_
             in class type=Windows.Foundation.Collections.ValueSet name=continuationData
             in enum_u32 type=Windows.Security.Authentication.Web.WebAuthenticationOptions name=options
     method authenticate_async static
-        method AuthenticateAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=195 reverse=26 static
+        method AuthenticateAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=117 reverse=45 static
             in enum_u32 type=Windows.Security.Authentication.Web.WebAuthenticationOptions name=options
             in class type=Windows.Foundation.Uri name=requestUri
-            in class type=Windows.Foundation.Uri name=callbackUri
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.WebAuthenticationResult> return
         method AuthenticateAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=195 reverse=26 static
             in enum_u32 type=Windows.Security.Authentication.Web.WebAuthenticationOptions name=options

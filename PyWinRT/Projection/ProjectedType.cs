@@ -372,7 +372,7 @@ class ProjectedType
 
             foreach (var candidate in factory.Type.Methods)
             {
-                if (IsFactoryMethodFor(candidate, method))
+                if (IsFactoryMethodFor(candidate, method, factory.IsComposable))
                 {
                     return candidate;
                 }
@@ -389,9 +389,17 @@ class ProjectedType
     /// <remarks>
     /// A composition factory method takes two more parameters than the
     /// constructor it implements - the outer object and the non-delegating inner
-    /// - so only the parameters the constructor declares are compared.
+    /// - so <paramref name="composable"/> says how many trailing parameters the
+    /// candidate is allowed to have beyond the ones that are compared. The
+    /// count has to agree exactly, or a constructor matches a factory method
+    /// that takes everything it declares and more, and the call then passes
+    /// nothing for the parameters it did not declare.
     /// </remarks>
-    private static bool IsFactoryMethodFor(MethodDefinition candidate, ProjectedMethod method)
+    private static bool IsFactoryMethodFor(
+        MethodDefinition candidate,
+        ProjectedMethod method,
+        bool composable
+    )
     {
         if (!method.IsConstructor && candidate.Name != method.Method.Name)
         {
@@ -400,7 +408,7 @@ class ProjectedType
 
         var declared = method.Method.Parameters;
 
-        if (candidate.Parameters.Count < declared.Count)
+        if (candidate.Parameters.Count != declared.Count + (composable ? 2 : 0))
         {
             return false;
         }

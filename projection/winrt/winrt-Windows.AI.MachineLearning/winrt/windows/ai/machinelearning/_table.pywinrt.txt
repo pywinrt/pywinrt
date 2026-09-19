@@ -1412,15 +1412,12 @@ class Windows.AI.MachineLearning.LearningModelSession python_type closeable
     factory Windows.AI.MachineLearning.ILearningModelSessionFactory2
     factory Windows.AI.MachineLearning.ILearningModelSessionFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSessionFactory2 shape=195 reverse=26
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSessionFactory shape=51 reverse=24
             in class type=Windows.AI.MachineLearning.LearningModel name=model
-            in class type=Windows.AI.MachineLearning.LearningModelDevice name=deviceToRunOn implicit
-            in class type=Windows.AI.MachineLearning.LearningModelSessionOptions name=learningModelSessionOptions implicit
             out class type=Windows.AI.MachineLearning.LearningModelSession return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSessionFactory2 shape=195 reverse=26
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSessionFactory shape=117 reverse=45
             in class type=Windows.AI.MachineLearning.LearningModel name=model
             in class type=Windows.AI.MachineLearning.LearningModelDevice name=deviceToRunOn
-            in class type=Windows.AI.MachineLearning.LearningModelSessionOptions name=learningModelSessionOptions implicit
             out class type=Windows.AI.MachineLearning.LearningModelSession return
         ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSessionFactory2 shape=195 reverse=26
             in class type=Windows.AI.MachineLearning.LearningModel name=model
