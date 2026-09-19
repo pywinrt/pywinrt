@@ -1415,13 +1415,10 @@ class Windows.UI.Notifications.NotificationData activatable python_type
     requires Windows.UI.Notifications.INotificationData
     factory Windows.UI.Notifications.INotificationDataFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationDataFactory shape=117 reverse=25
-            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=initialValues implicit
-            in uint32 name=sequenceNumber implicit
-            out class type=Windows.UI.Notifications.NotificationData return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.INotificationDataFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.INotificationDataFactory shape=51 reverse=44
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=initialValues
-            in uint32 name=sequenceNumber implicit
             out class type=Windows.UI.Notifications.NotificationData return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Notifications.INotificationDataFactory shape=117 reverse=25
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=initialValues

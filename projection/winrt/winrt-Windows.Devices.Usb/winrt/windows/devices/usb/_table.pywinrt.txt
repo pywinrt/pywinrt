@@ -1184,10 +1184,9 @@ class Windows.Devices.Usb.UsbDevice python_type closeable
         method GetDeviceSelector slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceStatics shape=94 reverse=54 static
             in guid name=winUsbInterfaceClass
             out string return
-        method GetDeviceSelector slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceStatics shape=202 static
+        method GetDeviceSelector slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceStatics shape=117 reverse=66 static
             in uint32 name=vendorId
             in uint32 name=productId
-            in guid name=winUsbInterfaceClass
             out string return
         method GetDeviceSelector slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Usb.IUsbDeviceStatics shape=202 static
             in uint32 name=vendorId
@@ -1516,9 +1515,8 @@ class Windows.Devices.Usb.UsbSetupPacket activatable python_type
     requires Windows.Devices.Usb.IUsbSetupPacket
     factory Windows.Devices.Usb.IUsbSetupPacketFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbSetupPacketFactory shape=51 reverse=24
-            in interface type=Windows.Storage.Streams.IBuffer name=eightByteBuffer implicit
-            out class type=Windows.Devices.Usb.UsbSetupPacket return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbSetupPacketFactory shape=51 reverse=24
             in interface type=Windows.Storage.Streams.IBuffer name=eightByteBuffer
             out class type=Windows.Devices.Usb.UsbSetupPacket return

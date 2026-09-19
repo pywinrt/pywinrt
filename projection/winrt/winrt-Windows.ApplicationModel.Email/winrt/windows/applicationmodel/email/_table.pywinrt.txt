@@ -220,15 +220,11 @@ class Windows.ApplicationModel.Email.EmailAttachment activatable python_type
     factory Windows.ApplicationModel.Email.IEmailAttachmentFactory2
     factory Windows.ApplicationModel.Email.IEmailAttachmentFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachmentFactory2 shape=195 reverse=26
-            in string name=fileName implicit
-            in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=data implicit
-            in string name=mimeType implicit
-            out class type=Windows.ApplicationModel.Email.EmailAttachment return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachmentFactory2 shape=195 reverse=26
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachmentFactory shape=117 reverse=25
             in string name=fileName
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=data
-            in string name=mimeType implicit
             out class type=Windows.ApplicationModel.Email.EmailAttachment return
         ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailAttachmentFactory2 shape=195 reverse=26
             in string name=fileName
@@ -463,10 +459,8 @@ class Windows.ApplicationModel.Email.EmailIrmInfo activatable python_type
     requires Windows.ApplicationModel.Email.IEmailIrmInfo
     factory Windows.ApplicationModel.Email.IEmailIrmInfoFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfoFactory shape=169
-            in datetime name=expiration implicit
-            in class type=Windows.ApplicationModel.Email.EmailIrmTemplate name=irmTemplate implicit
-            out class type=Windows.ApplicationModel.Email.EmailIrmInfo return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmInfoFactory shape=169
             in datetime name=expiration
             in class type=Windows.ApplicationModel.Email.EmailIrmTemplate name=irmTemplate
@@ -539,11 +533,8 @@ class Windows.ApplicationModel.Email.EmailIrmTemplate activatable python_type
     requires Windows.ApplicationModel.Email.IEmailIrmTemplate
     factory Windows.ApplicationModel.Email.IEmailIrmTemplateFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmTemplateFactory shape=195 reverse=26
-            in string name=id implicit
-            in string name=name implicit
-            in string name=description implicit
-            out class type=Windows.ApplicationModel.Email.EmailIrmTemplate return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailIrmTemplateFactory shape=195 reverse=26
             in string name=id
             in string name=name
@@ -1499,9 +1490,8 @@ class Windows.ApplicationModel.Email.EmailQueryOptions activatable python_type
     requires Windows.ApplicationModel.Email.IEmailQueryOptions
     factory Windows.ApplicationModel.Email.IEmailQueryOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryOptionsFactory shape=51 reverse=24
-            in string name=text implicit
-            out class type=Windows.ApplicationModel.Email.EmailQueryOptions return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryOptionsFactory shape=51 reverse=24
             in string name=text
             out class type=Windows.ApplicationModel.Email.EmailQueryOptions return
@@ -1575,9 +1565,8 @@ class Windows.ApplicationModel.Email.EmailRecipient activatable python_type
     requires Windows.ApplicationModel.Email.IEmailRecipient
     factory Windows.ApplicationModel.Email.IEmailRecipientFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailRecipientFactory shape=51 reverse=24
-            in string name=address implicit
-            out class type=Windows.ApplicationModel.Email.EmailRecipient return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailRecipientFactory shape=51 reverse=24
             in string name=address
             out class type=Windows.ApplicationModel.Email.EmailRecipient return

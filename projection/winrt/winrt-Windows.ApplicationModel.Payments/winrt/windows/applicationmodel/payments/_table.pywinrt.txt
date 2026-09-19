@@ -629,9 +629,8 @@ class Windows.ApplicationModel.Payments.PaymentDetails activatable python_type
     requires Windows.ApplicationModel.Payments.IPaymentDetails
     factory Windows.ApplicationModel.Payments.IPaymentDetailsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetailsFactory shape=51 reverse=24
-            in class type=Windows.ApplicationModel.Payments.PaymentItem name=total implicit
-            out class type=Windows.ApplicationModel.Payments.PaymentDetails return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentDetailsFactory shape=51 reverse=24
             in class type=Windows.ApplicationModel.Payments.PaymentItem name=total
             out class type=Windows.ApplicationModel.Payments.PaymentDetails return
@@ -754,9 +753,8 @@ class Windows.ApplicationModel.Payments.PaymentMerchantInfo activatable python_t
     requires Windows.ApplicationModel.Payments.IPaymentMerchantInfo
     factory Windows.ApplicationModel.Payments.IPaymentMerchantInfoFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMerchantInfoFactory shape=51 reverse=24
-            in class type=Windows.Foundation.Uri name=uri implicit
-            out class type=Windows.ApplicationModel.Payments.PaymentMerchantInfo return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentMerchantInfoFactory shape=51 reverse=24
             in class type=Windows.Foundation.Uri name=uri
             out class type=Windows.ApplicationModel.Payments.PaymentMerchantInfo return

@@ -148,6 +148,25 @@ namespace py::interp
         return result;
     }
 
+    /**
+     * Wraps @p abi in @p type after querying it for @p iid, which is what an
+     * argument marked @c query_interface asks for. Ownership of @p abi moves
+     * to the wrapper either way.
+     */
+    PyObject* wrap_activated_abi(PyTypeObject* type, void const* iid, void* abi)
+    {
+        void* queried{};
+        auto const hr = static_cast<::IUnknown*>(abi)->QueryInterface(
+            *static_cast<winrt::guid const*>(iid), &queried);
+        static_cast<::IUnknown*>(abi)->Release();
+        if (hr != 0)
+        {
+            winrt::check_hresult(hr);
+        }
+
+        return wrap_abi(type, queried);
+    }
+
     namespace
     {
         /**

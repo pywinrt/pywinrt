@@ -747,11 +747,8 @@ class Windows.Media.Audio.AudioNodeEmitter activatable python_type
     requires Windows.Media.Audio.IAudioNodeEmitter2
     factory Windows.Media.Audio.IAudioNodeEmitterFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterFactory shape=195 reverse=26
-            in class type=Windows.Media.Audio.AudioNodeEmitterShape name=shape implicit
-            in class type=Windows.Media.Audio.AudioNodeEmitterDecayModel name=decayModel implicit
-            in enum_u32 type=Windows.Media.Audio.AudioNodeEmitterSettings name=settings implicit
-            out class type=Windows.Media.Audio.AudioNodeEmitter return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterFactory shape=195 reverse=26
             in class type=Windows.Media.Audio.AudioNodeEmitterShape name=shape
             in class type=Windows.Media.Audio.AudioNodeEmitterDecayModel name=decayModel

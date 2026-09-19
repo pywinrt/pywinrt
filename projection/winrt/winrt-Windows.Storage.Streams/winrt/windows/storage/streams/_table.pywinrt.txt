@@ -305,9 +305,8 @@ class Windows.Storage.Streams.DataWriter activatable python_type closeable
     requires Windows.Foundation.IClosable
     factory Windows.Storage.Streams.IDataWriterFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataWriterFactory shape=51 reverse=24
-            in interface type=Windows.Storage.Streams.IOutputStream name=outputStream implicit
-            out class type=Windows.Storage.Streams.DataWriter return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataWriterFactory shape=51 reverse=24
             in interface type=Windows.Storage.Streams.IOutputStream name=outputStream
             out class type=Windows.Storage.Streams.DataWriter return

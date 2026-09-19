@@ -9,9 +9,8 @@ class Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions activatable py
     requires Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions
     factory Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptionsFactory shape=51 reverse=24
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds implicit
-            out class type=Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptionsFactory shape=51 reverse=24
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds
             out class type=Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions return
@@ -51,9 +50,8 @@ class Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions activatabl
     requires Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions
     factory Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptionsFactory shape=51 reverse=24
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds implicit
-            out class type=Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptionsFactory shape=51 reverse=24
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds
             out class type=Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions return
@@ -1352,9 +1350,8 @@ class Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions activatable py
     requires Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions
     factory Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptionsFactory shape=51 reverse=24
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds implicit
-            out class type=Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptionsFactory shape=51 reverse=24
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds
             out class type=Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions return
@@ -1478,9 +1475,8 @@ class Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions activatable py
     requires Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions
     factory Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptionsFactory shape=51 reverse=24
-            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds implicit
-            out class type=Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptionsFactory shape=51 reverse=24
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds
             out class type=Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions return
@@ -1747,10 +1743,8 @@ class Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress activatable py
     requires Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress
     factory Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddressFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddressFactory shape=117 reverse=25
-            in string name=rawAddress implicit
-            in enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryRawAddressKind name=rawAddressKind implicit
-            out class type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddressFactory shape=117 reverse=25
             in string name=rawAddress
             in enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryRawAddressKind name=rawAddressKind

@@ -159,9 +159,8 @@ class Microsoft.Security.Authentication.OAuth.ClientAuthentication activatable p
     factory Microsoft.Security.Authentication.OAuth.IClientAuthenticationFactory
     factory Microsoft.Security.Authentication.OAuth.IClientAuthenticationStatics
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IClientAuthenticationFactory shape=51 reverse=24
-            in class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue name=authorization implicit
-            out class type=Microsoft.Security.Authentication.OAuth.ClientAuthentication return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.IClientAuthenticationFactory shape=51 reverse=24
             in class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue name=authorization
             out class type=Microsoft.Security.Authentication.OAuth.ClientAuthentication return

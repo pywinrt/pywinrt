@@ -629,21 +629,10 @@ class Windows.UI.StartScreen.SecondaryTile activatable python_type
     factory Windows.UI.StartScreen.ISecondaryTileFactory
     factory Windows.UI.StartScreen.ISecondaryTileFactory2
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileFactory shape=278 reverse=28
-            in string name=tileId implicit
-            in string name=shortName implicit
-            in string name=displayName implicit
-            in string name=arguments implicit
-            in enum_u32 type=Windows.UI.StartScreen.TileOptions name=tileOptions implicit
-            in class type=Windows.Foundation.Uri name=logoReference implicit
-            out class type=Windows.UI.StartScreen.SecondaryTile return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileFactory shape=278 reverse=28
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+        ctor .ctor slot=8 inputs=1 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileFactory shape=51 reverse=65
             in string name=tileId
-            in string name=shortName implicit
-            in string name=displayName implicit
-            in string name=arguments implicit
-            in enum_u32 type=Windows.UI.StartScreen.TileOptions name=tileOptions implicit
-            in class type=Windows.Foundation.Uri name=logoReference implicit
             out class type=Windows.UI.StartScreen.SecondaryTile return
         ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.UI.StartScreen.ISecondaryTileFactory2 shape=267
             in string name=tileId

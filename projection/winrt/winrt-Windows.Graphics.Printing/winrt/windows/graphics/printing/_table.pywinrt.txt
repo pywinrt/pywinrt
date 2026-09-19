@@ -524,9 +524,8 @@ class Windows.Graphics.Printing.PrintPageRange python_type
     requires Windows.Graphics.Printing.IPrintPageRange
     factory Windows.Graphics.Printing.IPrintPageRangeFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageRangeFactory shape=117 reverse=25
-            in int32 name=firstPage
-            in int32 name=lastPage implicit
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageRangeFactory shape=51 reverse=44
+            in int32 name=page
             out class type=Windows.Graphics.Printing.PrintPageRange return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.IPrintPageRangeFactory shape=117 reverse=25
             in int32 name=firstPage

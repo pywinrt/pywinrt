@@ -261,9 +261,8 @@ class Microsoft.Windows.ApplicationModel.Resources.ResourceLoader activatable py
     factory Microsoft.Windows.ApplicationModel.Resources.IResourceLoaderFactory
     factory Microsoft.Windows.ApplicationModel.Resources.IResourceLoaderStatics
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceLoaderFactory shape=51 reverse=24
-            in string name=fileName implicit
-            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceLoader return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceLoaderFactory shape=51 reverse=24
             in string name=fileName
             out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceLoader return
@@ -291,9 +290,8 @@ class Microsoft.Windows.ApplicationModel.Resources.ResourceManager activatable p
     requires Microsoft.Windows.ApplicationModel.Resources.IResourceManager
     factory Microsoft.Windows.ApplicationModel.Resources.IResourceManagerFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManagerFactory shape=51 reverse=24
-            in string name=fileName implicit
-            out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceManager return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Resources.IResourceManagerFactory shape=51 reverse=24
             in string name=fileName
             out class type=Microsoft.Windows.ApplicationModel.Resources.ResourceManager return

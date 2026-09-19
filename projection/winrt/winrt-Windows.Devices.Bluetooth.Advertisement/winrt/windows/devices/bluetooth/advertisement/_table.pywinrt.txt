@@ -45,11 +45,8 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePatter
     requires Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern
     factory Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePatternFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePatternFactory shape=195 reverse=26
-            in uint8 name=dataType implicit
-            in int16 name=offset implicit
-            in interface type=Windows.Storage.Streams.IBuffer name=data implicit
-            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePatternFactory shape=195 reverse=26
             in uint8 name=dataType
             in int16 name=offset
@@ -78,10 +75,8 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSectio
     requires Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSection
     factory Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSectionFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSectionFactory shape=117 reverse=25
-            in uint8 name=dataType implicit
-            in interface type=Windows.Storage.Streams.IBuffer name=data implicit
-            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSectionFactory shape=117 reverse=25
             in uint8 name=dataType
             in interface type=Windows.Storage.Streams.IBuffer name=data
@@ -201,9 +196,8 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher 
     requires Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3
     factory Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherFactory shape=51 reverse=24
-            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement name=advertisement implicit
-            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherFactory shape=51 reverse=24
             in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement name=advertisement
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher return
@@ -356,9 +350,8 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher ac
     requires Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3
     factory Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcherFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcherFactory shape=51 reverse=24
-            in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter name=advertisementFilter implicit
-            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcherFactory shape=51 reverse=24
             in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter name=advertisementFilter
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher return
@@ -454,10 +447,8 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData activa
     requires Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerData
     factory Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerDataFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerDataFactory shape=117 reverse=25
-            in uint16 name=companyId implicit
-            in interface type=Windows.Storage.Streams.IBuffer name=data implicit
-            out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerDataFactory shape=117 reverse=25
             in uint16 name=companyId
             in interface type=Windows.Storage.Streams.IBuffer name=data

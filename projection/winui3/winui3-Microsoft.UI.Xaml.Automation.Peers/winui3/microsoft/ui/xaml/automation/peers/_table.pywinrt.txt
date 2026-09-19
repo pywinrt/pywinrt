@@ -511,9 +511,8 @@ class Microsoft.UI.Xaml.Automation.Peers.AutomationPeerAnnotation activatable py
     factory Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationStatics
     factory Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationFactory shape=51 reverse=24
-            in enum32 type=Microsoft.UI.Xaml.Automation.AnnotationType name=type implicit
-            out class type=Microsoft.UI.Xaml.Automation.Peers.AutomationPeerAnnotation return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationFactory shape=51 reverse=24
             in enum32 type=Microsoft.UI.Xaml.Automation.AnnotationType name=type
             out class type=Microsoft.UI.Xaml.Automation.Peers.AutomationPeerAnnotation return

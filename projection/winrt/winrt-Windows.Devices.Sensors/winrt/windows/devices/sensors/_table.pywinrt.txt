@@ -4296,8 +4296,7 @@ class Windows.Devices.Sensors.OrientationSensor python_type
         method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensor shape=4 reverse=22
             out class type=Windows.Devices.Sensors.OrientationSensorReading return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorStatics3 shape=51 reverse=24 static
-            in enum32 type=Windows.Devices.Sensors.SensorReadingType name=sensorReadingtype
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorStatics shape=4 reverse=22 static
             out class type=Windows.Devices.Sensors.OrientationSensor return
         method GetDefault slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensorStatics3 shape=51 reverse=24 static
             in enum32 type=Windows.Devices.Sensors.SensorReadingType name=sensorReadingtype

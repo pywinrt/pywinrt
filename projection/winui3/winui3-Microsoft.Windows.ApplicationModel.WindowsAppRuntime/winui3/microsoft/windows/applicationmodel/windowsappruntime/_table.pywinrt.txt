@@ -30,8 +30,7 @@ class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager sta
         method GetStatus slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics shape=4 reverse=22 static
             out class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult return
     method initialize static
-        method Initialize slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics2 shape=51 reverse=24 static
-            in class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions name=deploymentInitializeOptions
+        method Initialize slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics shape=4 reverse=43 static
             out class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult return
         method Initialize slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics2 shape=51 reverse=24 static
             in class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions name=deploymentInitializeOptions

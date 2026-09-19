@@ -509,8 +509,9 @@ class Microsoft.UI.Xaml.DataTemplateKey composable python_type
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.DataTemplateKey return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.IDataTemplateKeyFactory shape=117 reverse=25
-            in object name=baseInterface
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.IDataTemplateKeyFactory shape=195 reverse=46
+            in object name=dataType
+            in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.DataTemplateKey return
     property data_type
@@ -4284,10 +4285,8 @@ class Microsoft.UI.Xaml.Setter activatable python_type
     requires Microsoft.UI.Xaml.ISetter
     factory Microsoft.UI.Xaml.ISetterFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.ISetterFactory shape=117 reverse=25
-            in class type=Microsoft.UI.Xaml.DependencyProperty name=targetProperty implicit
-            in object name=value implicit
-            out class type=Microsoft.UI.Xaml.Setter return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.ISetterFactory shape=117 reverse=25
             in class type=Microsoft.UI.Xaml.DependencyProperty name=targetProperty
             in object name=value
@@ -4463,9 +4462,8 @@ class Microsoft.UI.Xaml.Style activatable python_type
     requires Microsoft.UI.Xaml.IStyle
     factory Microsoft.UI.Xaml.IStyleFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IStyleFactory shape=91 reverse=34
-            in struct type=Windows.UI.Xaml.Interop.TypeName name=targetType implicit
-            out class type=Microsoft.UI.Xaml.Style return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.IStyleFactory shape=91 reverse=34
             in struct type=Windows.UI.Xaml.Interop.TypeName name=targetType
             out class type=Microsoft.UI.Xaml.Style return
@@ -4506,9 +4504,8 @@ class Microsoft.UI.Xaml.TargetPropertyPath activatable python_type
     requires Microsoft.UI.Xaml.ITargetPropertyPath
     factory Microsoft.UI.Xaml.ITargetPropertyPathFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.ITargetPropertyPathFactory shape=51 reverse=24
-            in class type=Microsoft.UI.Xaml.DependencyProperty name=targetProperty implicit
-            out class type=Microsoft.UI.Xaml.TargetPropertyPath return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.ITargetPropertyPathFactory shape=51 reverse=24
             in class type=Microsoft.UI.Xaml.DependencyProperty name=targetProperty
             out class type=Microsoft.UI.Xaml.TargetPropertyPath return

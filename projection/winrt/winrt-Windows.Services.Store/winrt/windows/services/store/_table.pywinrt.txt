@@ -2051,9 +2051,8 @@ class Windows.Services.Store.StorePurchaseProperties activatable python_type
     requires Windows.Services.Store.IStorePurchaseProperties
     factory Windows.Services.Store.IStorePurchasePropertiesFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePurchasePropertiesFactory shape=51 reverse=24
-            in string name=name implicit
-            out class type=Windows.Services.Store.StorePurchaseProperties return
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Services.Store.IStorePurchasePropertiesFactory shape=51 reverse=24
             in string name=name
             out class type=Windows.Services.Store.StorePurchaseProperties return
