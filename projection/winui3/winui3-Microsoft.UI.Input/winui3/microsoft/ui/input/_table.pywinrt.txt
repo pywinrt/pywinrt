@@ -56,6 +56,13 @@ class Microsoft.UI.Input.CrossSlidingEventArgs python_type
 enum Microsoft.UI.Input.CrossSlidingState python_type
     py CrossSlidingState
     signature enum(Microsoft.UI.Input.CrossSlidingState;i4)
+    constant STARTED 0
+    constant DRAGGING 1
+    constant SELECTING 2
+    constant SELECT_SPEED_BUMPING 3
+    constant SPEED_BUMPING 4
+    constant REARRANGING 5
+    constant COMPLETED 6
 
 class Microsoft.UI.Input.DraggingEventArgs python_type
     py DraggingEventArgs
@@ -75,6 +82,9 @@ class Microsoft.UI.Input.DraggingEventArgs python_type
 enum Microsoft.UI.Input.DraggingState python_type
     py DraggingState
     signature enum(Microsoft.UI.Input.DraggingState;i4)
+    constant STARTED 0
+    constant CONTINUING 1
+    constant COMPLETED 2
 
 class Microsoft.UI.Input.EnteredMoveSizeEventArgs python_type
     py EnteredMoveSizeEventArgs
@@ -131,6 +141,14 @@ class Microsoft.UI.Input.FocusChangedEventArgs python_type
 enum Microsoft.UI.Input.FocusNavigationReason python_type
     py FocusNavigationReason
     signature enum(Microsoft.UI.Input.FocusNavigationReason;i4)
+    constant PROGRAMMATIC 0
+    constant RESTORE 1
+    constant FIRST 2
+    constant LAST 3
+    constant LEFT 4
+    constant UP 5
+    constant RIGHT 6
+    constant DOWN 7
 
 class Microsoft.UI.Input.FocusNavigationRequest python_type
     py FocusNavigationRequest
@@ -178,6 +196,9 @@ class Microsoft.UI.Input.FocusNavigationRequestEventArgs python_type
 enum Microsoft.UI.Input.FocusNavigationResult python_type
     py FocusNavigationResult
     signature enum(Microsoft.UI.Input.FocusNavigationResult;i4)
+    constant NOT_MOVED 0
+    constant MOVED 1
+    constant NO_FOCUSABLE_ELEMENTS 2
 
 class Microsoft.UI.Input.GestureRecognizer activatable python_type
     py GestureRecognizer
@@ -348,9 +369,27 @@ class Microsoft.UI.Input.GestureRecognizer activatable python_type
         method ProcessUpEvent slot=45 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IGestureRecognizer shape=4 reverse=330
             in class type=Microsoft.UI.Input.PointerPoint name=value
 
-enum Microsoft.UI.Input.GestureSettings python_type
+enum Microsoft.UI.Input.GestureSettings python_type flags_enum
     py GestureSettings
     signature enum(Microsoft.UI.Input.GestureSettings;u4)
+    constant NONE 0x0
+    constant TAP 0x1
+    constant DOUBLE_TAP 0x2
+    constant HOLD 0x4
+    constant HOLD_WITH_MOUSE 0x8
+    constant RIGHT_TAP 0x10
+    constant DRAG 0x20
+    constant MANIPULATION_TRANSLATE_X 0x40
+    constant MANIPULATION_TRANSLATE_Y 0x80
+    constant MANIPULATION_TRANSLATE_RAILS_X 0x100
+    constant MANIPULATION_TRANSLATE_RAILS_Y 0x200
+    constant MANIPULATION_ROTATE 0x400
+    constant MANIPULATION_SCALE 0x800
+    constant MANIPULATION_TRANSLATE_INERTIA 0x1000
+    constant MANIPULATION_ROTATE_INERTIA 0x2000
+    constant MANIPULATION_SCALE_INERTIA 0x4000
+    constant CROSS_SLIDE 0x8000
+    constant MANIPULATION_MULTIPLE_FINGER_PANNING 0x10000
 
 class Microsoft.UI.Input.HoldingEventArgs python_type
     py HoldingEventArgs
@@ -370,6 +409,9 @@ class Microsoft.UI.Input.HoldingEventArgs python_type
 enum Microsoft.UI.Input.HoldingState python_type
     py HoldingState
     signature enum(Microsoft.UI.Input.HoldingState;i4)
+    constant STARTED 0
+    constant COMPLETED 1
+    constant CANCELED 2
 
 interface Microsoft.UI.Input.ICharacterReceivedEventArgs
     guid 36122718-9263-592b-8d87-8f86543ffc95
@@ -866,6 +908,9 @@ class Microsoft.UI.Input.InputActivationListenerActivationChangedEventArgs pytho
 enum Microsoft.UI.Input.InputActivationState python_type
     py InputActivationState
     signature enum(Microsoft.UI.Input.InputActivationState;i4)
+    constant NONE 0
+    constant DEACTIVATED 1
+    constant ACTIVATED 2
 
 class Microsoft.UI.Input.InputCursor composable python_type closeable
     py InputCursor
@@ -1283,9 +1328,13 @@ class Microsoft.UI.Input.InputPointerSource python_type
             in class type=Microsoft.UI.Content.ContentIsland name=island
             out class type=Microsoft.UI.Input.InputPointerSource return
 
-enum Microsoft.UI.Input.InputPointerSourceDeviceKinds python_type
+enum Microsoft.UI.Input.InputPointerSourceDeviceKinds python_type flags_enum
     py InputPointerSourceDeviceKinds
     signature enum(Microsoft.UI.Input.InputPointerSourceDeviceKinds;u4)
+    constant NONE 0x0
+    constant TOUCH 0x1
+    constant PEN 0x2
+    constant MOUSE 0x4
 
 class Microsoft.UI.Input.InputPreTranslateKeyboardSource python_type
     py InputPreTranslateKeyboardSource
@@ -1317,6 +1366,22 @@ class Microsoft.UI.Input.InputSystemCursor python_type
 enum Microsoft.UI.Input.InputSystemCursorShape python_type
     py InputSystemCursorShape
     signature enum(Microsoft.UI.Input.InputSystemCursorShape;i4)
+    constant ARROW 0
+    constant CROSS 1
+    constant HAND 3
+    constant HELP 4
+    constant IBEAM 5
+    constant SIZE_ALL 6
+    constant SIZE_NORTHEAST_SOUTHWEST 7
+    constant SIZE_NORTH_SOUTH 8
+    constant SIZE_NORTHWEST_SOUTHEAST 9
+    constant SIZE_WEST_EAST 10
+    constant UNIVERSAL_NO 11
+    constant UP_ARROW 12
+    constant WAIT 13
+    constant PIN 14
+    constant PERSON 15
+    constant APP_STARTING 16
 
 class Microsoft.UI.Input.KeyEventArgs python_type
     py KeyEventArgs
@@ -1457,6 +1522,15 @@ class Microsoft.UI.Input.MouseWheelParameters python_type
 enum Microsoft.UI.Input.MoveSizeOperation python_type
     py MoveSizeOperation
     signature enum(Microsoft.UI.Input.MoveSizeOperation;i4)
+    constant MOVE 0
+    constant SIZE_BOTTOM 1
+    constant SIZE_BOTTOM_LEFT 2
+    constant SIZE_BOTTOM_RIGHT 3
+    constant SIZE_LEFT 4
+    constant SIZE_RIGHT 5
+    constant SIZE_TOP 6
+    constant SIZE_TOP_LEFT 7
+    constant SIZE_TOP_RIGHT 8
 
 class Microsoft.UI.Input.NonClientCaptionTappedEventArgs python_type
     py NonClientCaptionTappedEventArgs
@@ -1491,6 +1565,16 @@ class Microsoft.UI.Input.NonClientPointerEventArgs python_type
 enum Microsoft.UI.Input.NonClientRegionKind python_type
     py NonClientRegionKind
     signature enum(Microsoft.UI.Input.NonClientRegionKind;i4)
+    constant CLOSE 0
+    constant MAXIMIZE 1
+    constant MINIMIZE 2
+    constant ICON 3
+    constant CAPTION 4
+    constant TOP_BORDER 5
+    constant LEFT_BORDER 6
+    constant BOTTOM_BORDER 7
+    constant RIGHT_BORDER 8
+    constant PASSTHROUGH 9
 
 class Microsoft.UI.Input.NonClientRegionsChangedEventArgs python_type
     py NonClientRegionsChangedEventArgs
@@ -1514,6 +1598,10 @@ struct Microsoft.UI.Input.PhysicalKeyStatus python_type
 enum Microsoft.UI.Input.PointerDeviceType python_type
     py PointerDeviceType
     signature enum(Microsoft.UI.Input.PointerDeviceType;i4)
+    constant TOUCH 0
+    constant PEN 1
+    constant MOUSE 2
+    constant TOUCHPAD 3
 
 class Microsoft.UI.Input.PointerEventArgs python_type
     py PointerEventArgs
@@ -1665,6 +1753,17 @@ class Microsoft.UI.Input.PointerPredictor python_type closeable
 enum Microsoft.UI.Input.PointerUpdateKind python_type
     py PointerUpdateKind
     signature enum(Microsoft.UI.Input.PointerUpdateKind;i4)
+    constant OTHER 0
+    constant LEFT_BUTTON_PRESSED 1
+    constant LEFT_BUTTON_RELEASED 2
+    constant RIGHT_BUTTON_PRESSED 3
+    constant RIGHT_BUTTON_RELEASED 4
+    constant MIDDLE_BUTTON_PRESSED 5
+    constant MIDDLE_BUTTON_RELEASED 6
+    constant X_BUTTON1_PRESSED 7
+    constant X_BUTTON1_RELEASED 8
+    constant X_BUTTON2_PRESSED 9
+    constant X_BUTTON2_RELEASED 10
 
 class Microsoft.UI.Input.RightTappedEventArgs python_type
     py RightTappedEventArgs
@@ -2005,9 +2104,12 @@ delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputPointerSou
             in class type=Microsoft.UI.Input.InputPointerSource name=sender
             in class type=Microsoft.UI.Input.PointerEventArgs name=args
 
-enum Microsoft.UI.Input.VirtualKeyStates python_type
+enum Microsoft.UI.Input.VirtualKeyStates python_type flags_enum
     py VirtualKeyStates
     signature enum(Microsoft.UI.Input.VirtualKeyStates;u4)
+    constant NONE 0x0
+    constant DOWN 0x1
+    constant LOCKED 0x2
 
 class Microsoft.UI.Input.WindowRectChangedEventArgs python_type
     py WindowRectChangedEventArgs

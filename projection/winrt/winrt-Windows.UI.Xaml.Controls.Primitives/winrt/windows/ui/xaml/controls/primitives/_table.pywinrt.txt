@@ -5,6 +5,10 @@ namespace Windows.UI.Xaml.Controls.Primitives
 enum Windows.UI.Xaml.Controls.Primitives.AnimationDirection python_type
     py AnimationDirection
     signature enum(Windows.UI.Xaml.Controls.Primitives.AnimationDirection;i4)
+    constant LEFT 0
+    constant TOP 1
+    constant RIGHT 2
+    constant BOTTOM 3
 
 class Windows.UI.Xaml.Controls.Primitives.AppBarButtonTemplateSettings python_type
     py AppBarButtonTemplateSettings
@@ -565,6 +569,8 @@ class Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings python_type
 enum Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation python_type
     py ComponentResourceLocation
     signature enum(Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation;i4)
+    constant APPLICATION 0
+    constant NESTED 1
 
 class Windows.UI.Xaml.Controls.Primitives.DragCompletedEventArgs composable python_type
     py DragCompletedEventArgs
@@ -663,6 +669,10 @@ delegate Windows.UI.Xaml.Controls.Primitives.DragStartedEventHandler python_type
 enum Windows.UI.Xaml.Controls.Primitives.EdgeTransitionLocation python_type
     py EdgeTransitionLocation
     signature enum(Windows.UI.Xaml.Controls.Primitives.EdgeTransitionLocation;i4)
+    constant LEFT 0
+    constant TOP 1
+    constant RIGHT 2
+    constant BOTTOM 3
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
     py winrt.windows.foundation.EventHandler[Object]
@@ -864,10 +874,28 @@ class Windows.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs python_type
 enum Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode python_type
     py FlyoutPlacementMode
     signature enum(Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode;i4)
+    constant TOP 0
+    constant BOTTOM 1
+    constant LEFT 2
+    constant RIGHT 3
+    constant FULL 4
+    constant TOP_EDGE_ALIGNED_LEFT 5
+    constant TOP_EDGE_ALIGNED_RIGHT 6
+    constant BOTTOM_EDGE_ALIGNED_LEFT 7
+    constant BOTTOM_EDGE_ALIGNED_RIGHT 8
+    constant LEFT_EDGE_ALIGNED_TOP 9
+    constant LEFT_EDGE_ALIGNED_BOTTOM 10
+    constant RIGHT_EDGE_ALIGNED_TOP 11
+    constant RIGHT_EDGE_ALIGNED_BOTTOM 12
+    constant AUTO 13
 
 enum Windows.UI.Xaml.Controls.Primitives.FlyoutShowMode python_type
     py FlyoutShowMode
     signature enum(Windows.UI.Xaml.Controls.Primitives.FlyoutShowMode;i4)
+    constant AUTO 0
+    constant STANDARD 1
+    constant TRANSIENT 2
+    constant TRANSIENT_WITH_DISMISS_ON_POINTER_MOVE_AWAY 3
 
 class Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions composable python_type
     py FlyoutShowOptions
@@ -904,6 +932,8 @@ class Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions composable python_ty
 enum Windows.UI.Xaml.Controls.Primitives.GeneratorDirection python_type
     py GeneratorDirection
     signature enum(Windows.UI.Xaml.Controls.Primitives.GeneratorDirection;i4)
+    constant FORWARD 0
+    constant BACKWARD 1
 
 struct Windows.UI.Xaml.Controls.Primitives.GeneratorPosition python_type
     py GeneratorPosition
@@ -1126,6 +1156,8 @@ class Windows.UI.Xaml.Controls.Primitives.GridViewItemTemplateSettings python_ty
 enum Windows.UI.Xaml.Controls.Primitives.GroupHeaderPlacement python_type
     py GroupHeaderPlacement
     signature enum(Windows.UI.Xaml.Controls.Primitives.GroupHeaderPlacement;i4)
+    constant TOP 0
+    constant LEFT 1
 
 interface Windows.UI.Xaml.Controls.Primitives.IAppBarButtonTemplateSettings
     guid cbc9b39d-0c95-4951-bff2-13963691c366
@@ -2732,10 +2764,14 @@ class Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter composable pytho
 enum Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenterCheckMode python_type
     py ListViewItemPresenterCheckMode
     signature enum(Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenterCheckMode;i4)
+    constant INLINE 0
+    constant OVERLAY 1
 
 enum Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenterSelectionIndicatorMode python_type
     py ListViewItemPresenterSelectionIndicatorMode
     signature enum(Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenterSelectionIndicatorMode;i4)
+    constant INLINE 0
+    constant OVERLAY 1
 
 class Windows.UI.Xaml.Controls.Primitives.ListViewItemTemplateSettings python_type
     py ListViewItemTemplateSettings
@@ -3108,6 +3144,11 @@ class Windows.UI.Xaml.Controls.Primitives.PivotPanel activatable python_type
 enum Windows.UI.Xaml.Controls.Primitives.PlacementMode python_type
     py PlacementMode
     signature enum(Windows.UI.Xaml.Controls.Primitives.PlacementMode;i4)
+    constant BOTTOM 2
+    constant LEFT 9
+    constant MOUSE 7
+    constant RIGHT 4
+    constant TOP 10
 
 class Windows.UI.Xaml.Controls.Primitives.Popup activatable python_type
     py Popup
@@ -3233,6 +3274,19 @@ class Windows.UI.Xaml.Controls.Primitives.Popup activatable python_type
 enum Windows.UI.Xaml.Controls.Primitives.PopupPlacementMode python_type
     py PopupPlacementMode
     signature enum(Windows.UI.Xaml.Controls.Primitives.PopupPlacementMode;i4)
+    constant AUTO 0
+    constant TOP 1
+    constant BOTTOM 2
+    constant LEFT 3
+    constant RIGHT 4
+    constant TOP_EDGE_ALIGNED_LEFT 5
+    constant TOP_EDGE_ALIGNED_RIGHT 6
+    constant BOTTOM_EDGE_ALIGNED_LEFT 7
+    constant BOTTOM_EDGE_ALIGNED_RIGHT 8
+    constant LEFT_EDGE_ALIGNED_TOP 9
+    constant LEFT_EDGE_ALIGNED_BOTTOM 10
+    constant RIGHT_EDGE_ALIGNED_TOP 11
+    constant RIGHT_EDGE_ALIGNED_BOTTOM 12
 
 class Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings python_type
     py ProgressBarTemplateSettings
@@ -3465,10 +3519,22 @@ delegate Windows.UI.Xaml.Controls.Primitives.ScrollEventHandler python_type
 enum Windows.UI.Xaml.Controls.Primitives.ScrollEventType python_type
     py ScrollEventType
     signature enum(Windows.UI.Xaml.Controls.Primitives.ScrollEventType;i4)
+    constant SMALL_DECREMENT 0
+    constant SMALL_INCREMENT 1
+    constant LARGE_DECREMENT 2
+    constant LARGE_INCREMENT 3
+    constant THUMB_POSITION 4
+    constant THUMB_TRACK 5
+    constant FIRST 6
+    constant LAST 7
+    constant END_SCROLL 8
 
 enum Windows.UI.Xaml.Controls.Primitives.ScrollingIndicatorMode python_type
     py ScrollingIndicatorMode
     signature enum(Windows.UI.Xaml.Controls.Primitives.ScrollingIndicatorMode;i4)
+    constant NONE 0
+    constant TOUCH_INDICATOR 1
+    constant MOUSE_INDICATOR 2
 
 class Windows.UI.Xaml.Controls.Primitives.Selector composable python_type
     py Selector
@@ -3574,10 +3640,15 @@ class Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings python_
 enum Windows.UI.Xaml.Controls.Primitives.SliderSnapsTo python_type
     py SliderSnapsTo
     signature enum(Windows.UI.Xaml.Controls.Primitives.SliderSnapsTo;i4)
+    constant STEP_VALUES 0
+    constant TICKS 1
 
 enum Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment python_type
     py SnapPointsAlignment
     signature enum(Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment;i4)
+    constant NEAR 0
+    constant CENTER 1
+    constant FAR 2
 
 class Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings python_type
     py SplitViewTemplateSettings
@@ -3663,6 +3734,11 @@ class Windows.UI.Xaml.Controls.Primitives.TickBar activatable python_type
 enum Windows.UI.Xaml.Controls.Primitives.TickPlacement python_type
     py TickPlacement
     signature enum(Windows.UI.Xaml.Controls.Primitives.TickPlacement;i4)
+    constant NONE 0
+    constant TOP_LEFT 1
+    constant BOTTOM_RIGHT 2
+    constant OUTSIDE 3
+    constant INLINE 4
 
 class Windows.UI.Xaml.Controls.Primitives.ToggleButton composable python_type
     py ToggleButton

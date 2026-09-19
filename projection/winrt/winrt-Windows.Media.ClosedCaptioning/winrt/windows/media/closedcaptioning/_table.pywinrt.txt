@@ -5,14 +5,34 @@ namespace Windows.Media.ClosedCaptioning
 enum Windows.Media.ClosedCaptioning.ClosedCaptionColor python_type
     py ClosedCaptionColor
     signature enum(Windows.Media.ClosedCaptioning.ClosedCaptionColor;i4)
+    constant DEFAULT 0
+    constant WHITE 1
+    constant BLACK 2
+    constant RED 3
+    constant GREEN 4
+    constant BLUE 5
+    constant YELLOW 6
+    constant MAGENTA 7
+    constant CYAN 8
 
 enum Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect python_type
     py ClosedCaptionEdgeEffect
     signature enum(Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect;i4)
+    constant DEFAULT 0
+    constant NONE 1
+    constant RAISED 2
+    constant DEPRESSED 3
+    constant UNIFORM 4
+    constant DROP_SHADOW 5
 
 enum Windows.Media.ClosedCaptioning.ClosedCaptionOpacity python_type
     py ClosedCaptionOpacity
     signature enum(Windows.Media.ClosedCaptioning.ClosedCaptionOpacity;i4)
+    constant DEFAULT 0
+    constant ONE_HUNDRED_PERCENT 1
+    constant SEVENTY_FIVE_PERCENT 2
+    constant TWENTY_FIVE_PERCENT 3
+    constant ZERO_PERCENT 4
 
 class Windows.Media.ClosedCaptioning.ClosedCaptionProperties static python_type
     py ClosedCaptionProperties
@@ -64,10 +84,23 @@ class Windows.Media.ClosedCaptioning.ClosedCaptionProperties static python_type
 enum Windows.Media.ClosedCaptioning.ClosedCaptionSize python_type
     py ClosedCaptionSize
     signature enum(Windows.Media.ClosedCaptioning.ClosedCaptionSize;i4)
+    constant DEFAULT 0
+    constant FIFTY_PERCENT 1
+    constant ONE_HUNDRED_PERCENT 2
+    constant ONE_HUNDRED_FIFTY_PERCENT 3
+    constant TWO_HUNDRED_PERCENT 4
 
 enum Windows.Media.ClosedCaptioning.ClosedCaptionStyle python_type
     py ClosedCaptionStyle
     signature enum(Windows.Media.ClosedCaptioning.ClosedCaptionStyle;i4)
+    constant DEFAULT 0
+    constant MONOSPACED_WITH_SERIFS 1
+    constant PROPORTIONAL_WITH_SERIFS 2
+    constant MONOSPACED_WITHOUT_SERIFS 3
+    constant PROPORTIONAL_WITHOUT_SERIFS 4
+    constant CASUAL 5
+    constant CURSIVE 6
+    constant SMALL_CAPITALS 7
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
     py winrt.windows.foundation.EventHandler[Object]

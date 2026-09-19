@@ -931,10 +931,16 @@ class Windows.Services.TargetedContent.TargetedContentAction python_type
 enum Windows.Services.TargetedContent.TargetedContentAppInstallationState python_type
     py TargetedContentAppInstallationState
     signature enum(Windows.Services.TargetedContent.TargetedContentAppInstallationState;i4)
+    constant NOT_APPLICABLE 0
+    constant NOT_INSTALLED 1
+    constant INSTALLED 2
 
 enum Windows.Services.TargetedContent.TargetedContentAvailability python_type
     py TargetedContentAvailability
     signature enum(Windows.Services.TargetedContent.TargetedContentAvailability;i4)
+    constant NONE 0
+    constant PARTIAL 1
+    constant ALL 2
 
 class Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs python_type
     py TargetedContentAvailabilityChangedEventArgs
@@ -1039,6 +1045,19 @@ class Windows.Services.TargetedContent.TargetedContentImage python_type
 enum Windows.Services.TargetedContent.TargetedContentInteraction python_type
     py TargetedContentInteraction
     signature enum(Windows.Services.TargetedContent.TargetedContentInteraction;i4)
+    constant IMPRESSION 0
+    constant CLICK_THROUGH 1
+    constant HOVER 2
+    constant LIKE 3
+    constant DISLIKE 4
+    constant DISMISS 5
+    constant INELIGIBLE 6
+    constant ACCEPT 7
+    constant DECLINE 8
+    constant DEFER 9
+    constant CANCELED 10
+    constant CONVERSION 11
+    constant OPPORTUNITY 12
 
 class Windows.Services.TargetedContent.TargetedContentItem python_type
     py TargetedContentItem
@@ -1097,6 +1116,9 @@ class Windows.Services.TargetedContent.TargetedContentObject python_type
 enum Windows.Services.TargetedContent.TargetedContentObjectKind python_type
     py TargetedContentObjectKind
     signature enum(Windows.Services.TargetedContent.TargetedContentObjectKind;i4)
+    constant COLLECTION 0
+    constant ITEM 1
+    constant VALUE 2
 
 class Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs python_type
     py TargetedContentStateChangedEventArgs
@@ -1225,6 +1247,20 @@ class Windows.Services.TargetedContent.TargetedContentValue python_type
 enum Windows.Services.TargetedContent.TargetedContentValueKind python_type
     py TargetedContentValueKind
     signature enum(Windows.Services.TargetedContent.TargetedContentValueKind;i4)
+    constant STRING 0
+    constant URI 1
+    constant NUMBER 2
+    constant BOOLEAN 3
+    constant FILE 4
+    constant IMAGE_FILE 5
+    constant ACTION 6
+    constant STRINGS 7
+    constant URIS 8
+    constant NUMBERS 9
+    constant BOOLEANS 10
+    constant FILES 11
+    constant IMAGE_FILES 12
+    constant ACTIONS 13
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[TargetedContentSubscription, TargetedContentAvailabilityChangedEventArgs]

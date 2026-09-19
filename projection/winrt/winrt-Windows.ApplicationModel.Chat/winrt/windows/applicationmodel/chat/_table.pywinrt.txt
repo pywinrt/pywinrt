@@ -339,10 +339,16 @@ class Windows.ApplicationModel.Chat.ChatConversationThreadingInfo activatable py
 enum Windows.ApplicationModel.Chat.ChatConversationThreadingKind python_type
     py ChatConversationThreadingKind
     signature enum(Windows.ApplicationModel.Chat.ChatConversationThreadingKind;i4)
+    constant PARTICIPANTS 0
+    constant CONTACT_ID 1
+    constant CONVERSATION_ID 2
+    constant CUSTOM 3
 
 enum Windows.ApplicationModel.Chat.ChatItemKind python_type
     py ChatItemKind
     signature enum(Windows.ApplicationModel.Chat.ChatItemKind;i4)
+    constant MESSAGE 0
+    constant CONVERSATION 1
 
 class Windows.ApplicationModel.Chat.ChatMessage activatable python_type
     py ChatMessage
@@ -583,6 +589,10 @@ class Windows.ApplicationModel.Chat.ChatMessageChangeTracker python_type
 enum Windows.ApplicationModel.Chat.ChatMessageChangeType python_type
     py ChatMessageChangeType
     signature enum(Windows.ApplicationModel.Chat.ChatMessageChangeType;i4)
+    constant MESSAGE_CREATED 0
+    constant MESSAGE_MODIFIED 1
+    constant MESSAGE_DELETED 2
+    constant CHANGE_TRACKING_LOST 3
 
 class Windows.ApplicationModel.Chat.ChatMessageChangedDeferral python_type
     py ChatMessageChangedDeferral
@@ -604,6 +614,13 @@ class Windows.ApplicationModel.Chat.ChatMessageChangedEventArgs python_type
 enum Windows.ApplicationModel.Chat.ChatMessageKind python_type
     py ChatMessageKind
     signature enum(Windows.ApplicationModel.Chat.ChatMessageKind;i4)
+    constant STANDARD 0
+    constant FILE_TRANSFER_REQUEST 1
+    constant TRANSPORT_CUSTOM 2
+    constant JOINED_CONVERSATION 3
+    constant LEFT_CONVERSATION 4
+    constant OTHER_PARTICIPANT_JOINED_CONVERSATION 5
+    constant OTHER_PARTICIPANT_LEFT_CONVERSATION 6
 
 class Windows.ApplicationModel.Chat.ChatMessageManager static python_type
     py ChatMessageManager
@@ -658,6 +675,10 @@ class Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails python
 enum Windows.ApplicationModel.Chat.ChatMessageOperatorKind python_type
     py ChatMessageOperatorKind
     signature enum(Windows.ApplicationModel.Chat.ChatMessageOperatorKind;i4)
+    constant UNSPECIFIED 0
+    constant SMS 1
+    constant MMS 2
+    constant RCS 3
 
 class Windows.ApplicationModel.Chat.ChatMessageReader python_type
     py ChatMessageReader
@@ -675,6 +696,20 @@ class Windows.ApplicationModel.Chat.ChatMessageReader python_type
 enum Windows.ApplicationModel.Chat.ChatMessageStatus python_type
     py ChatMessageStatus
     signature enum(Windows.ApplicationModel.Chat.ChatMessageStatus;i4)
+    constant DRAFT 0
+    constant SENDING 1
+    constant SENT 2
+    constant SEND_RETRY_NEEDED 3
+    constant SEND_FAILED 4
+    constant RECEIVED 5
+    constant RECEIVE_DOWNLOAD_NEEDED 6
+    constant RECEIVE_DOWNLOAD_FAILED 7
+    constant RECEIVE_DOWNLOADING 8
+    constant DELETED 9
+    constant DECLINED 10
+    constant CANCELLED 11
+    constant RECALLED 12
+    constant RECEIVE_RETRY_NEEDED 13
 
 class Windows.ApplicationModel.Chat.ChatMessageStore python_type
     py ChatMessageStore
@@ -857,6 +892,10 @@ class Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration python_typ
 enum Windows.ApplicationModel.Chat.ChatMessageTransportKind python_type
     py ChatMessageTransportKind
     signature enum(Windows.ApplicationModel.Chat.ChatMessageTransportKind;i4)
+    constant TEXT 0
+    constant UNTRIAGED 1
+    constant BLOCKED 2
+    constant CUSTOM 3
 
 class Windows.ApplicationModel.Chat.ChatMessageValidationResult python_type
     py ChatMessageValidationResult
@@ -879,6 +918,20 @@ class Windows.ApplicationModel.Chat.ChatMessageValidationResult python_type
 enum Windows.ApplicationModel.Chat.ChatMessageValidationStatus python_type
     py ChatMessageValidationStatus
     signature enum(Windows.ApplicationModel.Chat.ChatMessageValidationStatus;i4)
+    constant VALID 0
+    constant NO_RECIPIENTS 1
+    constant INVALID_DATA 2
+    constant MESSAGE_TOO_LARGE 3
+    constant TOO_MANY_RECIPIENTS 4
+    constant TRANSPORT_INACTIVE 5
+    constant TRANSPORT_NOT_FOUND 6
+    constant TOO_MANY_ATTACHMENTS 7
+    constant INVALID_RECIPIENTS 8
+    constant INVALID_BODY 9
+    constant INVALID_OTHER 10
+    constant VALID_WITH_LARGE_MESSAGE 11
+    constant VOICE_ROAMING_RESTRICTION 12
+    constant DATA_ROAMING_RESTRICTION 13
 
 class Windows.ApplicationModel.Chat.ChatQueryOptions activatable python_type
     py ChatQueryOptions
@@ -936,6 +989,9 @@ class Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo activatable python
 enum Windows.ApplicationModel.Chat.ChatRestoreHistorySpan python_type
     py ChatRestoreHistorySpan
     signature enum(Windows.ApplicationModel.Chat.ChatRestoreHistorySpan;i4)
+    constant LAST_MONTH 0
+    constant LAST_YEAR 1
+    constant ANY_TIME 2
 
 class Windows.ApplicationModel.Chat.ChatSearchReader python_type
     py ChatSearchReader
@@ -952,6 +1008,14 @@ class Windows.ApplicationModel.Chat.ChatSearchReader python_type
 enum Windows.ApplicationModel.Chat.ChatStoreChangedEventKind python_type
     py ChatStoreChangedEventKind
     signature enum(Windows.ApplicationModel.Chat.ChatStoreChangedEventKind;i4)
+    constant NOTIFICATIONS_MISSED 0
+    constant STORE_MODIFIED 1
+    constant MESSAGE_CREATED 2
+    constant MESSAGE_MODIFIED 3
+    constant MESSAGE_DELETED 4
+    constant CONVERSATION_MODIFIED 5
+    constant CONVERSATION_DELETED 6
+    constant CONVERSATION_TRANSPORT_DELETED 7
 
 class Windows.ApplicationModel.Chat.ChatSyncConfiguration python_type
     py ChatSyncConfiguration
@@ -998,10 +1062,20 @@ class Windows.ApplicationModel.Chat.ChatSyncManager python_type
 enum Windows.ApplicationModel.Chat.ChatTransportErrorCodeCategory python_type
     py ChatTransportErrorCodeCategory
     signature enum(Windows.ApplicationModel.Chat.ChatTransportErrorCodeCategory;i4)
+    constant NONE 0
+    constant HTTP 1
+    constant NETWORK 2
+    constant MMS_SERVER 3
 
 enum Windows.ApplicationModel.Chat.ChatTransportInterpretedErrorCode python_type
     py ChatTransportInterpretedErrorCode
     signature enum(Windows.ApplicationModel.Chat.ChatTransportInterpretedErrorCode;i4)
+    constant NONE 0
+    constant UNKNOWN 1
+    constant INVALID_RECIPIENT_ADDRESS 2
+    constant NETWORK_CONNECTIVITY 3
+    constant SERVICE_DENIED 4
+    constant TIMEOUT 5
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
     py winrt.windows.foundation.EventHandler[Object]
@@ -2876,6 +2950,10 @@ class Windows.ApplicationModel.Chat.RcsManager static python_type
 enum Windows.ApplicationModel.Chat.RcsServiceKind python_type
     py RcsServiceKind
     signature enum(Windows.ApplicationModel.Chat.RcsServiceKind;i4)
+    constant CHAT 0
+    constant GROUP_CHAT 1
+    constant FILE_TRANSFER 2
+    constant CAPABILITY 3
 
 class Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs python_type
     py RcsServiceKindSupportedChangedEventArgs

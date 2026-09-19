@@ -128,10 +128,19 @@ interface Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsUISession
 enum Windows.Graphics.Printing.PrintSupport.IppCommunicationErrorKind python_type
     py IppCommunicationErrorKind
     signature enum(Windows.Graphics.Printing.PrintSupport.IppCommunicationErrorKind;i4)
+    constant OTHER 0
+    constant TIMEOUT 1
+    constant CONNECTION_ERROR 2
+    constant ACCESS_DENIED 3
 
 enum Windows.Graphics.Printing.PrintSupport.IppPrinterCommunicationKind python_type
     py IppPrinterCommunicationKind
     signature enum(Windows.Graphics.Printing.PrintSupport.IppPrinterCommunicationKind;i4)
+    constant NETWORK 0
+    constant USB 1
+    constant PRINTER_CONNECTION 2
+    constant UNIVERSAL_PRINT 3
+    constant VIRTUAL_PRINTER 4
 
 class Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs python_type
     py PrintSupportCommunicationErrorDetectedEventArgs
@@ -460,6 +469,8 @@ class Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession pytho
 enum Windows.Graphics.Printing.PrintSupport.SettingsLaunchKind python_type
     py SettingsLaunchKind
     signature enum(Windows.Graphics.Printing.PrintSupport.SettingsLaunchKind;i4)
+    constant JOB_PRINT_TICKET 0
+    constant USER_DEFAULT_PRINT_TICKET 1
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[PrintSupportExtensionSession, PrintSupportCommunicationErrorDetectedEventArgs]
@@ -512,10 +523,17 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSup
 enum Windows.Graphics.Printing.PrintSupport.WorkflowPrintTicketValidationStatus python_type
     py WorkflowPrintTicketValidationStatus
     signature enum(Windows.Graphics.Printing.PrintSupport.WorkflowPrintTicketValidationStatus;i4)
+    constant RESOLVED 0
+    constant CONFLICTING 1
+    constant INVALID 2
 
 enum Windows.Graphics.Printing.PrintSupport.XpsImageQuality python_type
     py XpsImageQuality
     signature enum(Windows.Graphics.Printing.PrintSupport.XpsImageQuality;i4)
+    constant JPEG_HIGH_COMPRESSION 0
+    constant JPEG_MEDIUM_COMPRESSION 1
+    constant JPEG_LOW_COMPRESSION 2
+    constant PNG 3
 
 class System.String external
     py winrt.system.String

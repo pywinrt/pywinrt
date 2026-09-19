@@ -55,25 +55,49 @@ class Windows.Foundation.Metadata.ApiInformation static python_type
             in string name=propertyName
             out boolean return
 
-enum Windows.Foundation.Metadata.AttributeTargets python_type
+enum Windows.Foundation.Metadata.AttributeTargets python_type flags_enum
     py AttributeTargets
     signature enum(Windows.Foundation.Metadata.AttributeTargets;u4)
+    constant ALL 0xFFFFFFFF
+    constant DELEGATE 0x1
+    constant ENUM 0x2
+    constant EVENT 0x4
+    constant FIELD 0x8
+    constant INTERFACE 0x10
+    constant METHOD 0x40
+    constant PARAMETER 0x80
+    constant PROPERTY 0x100
+    constant RUNTIME_CLASS 0x200
+    constant STRUCT 0x400
+    constant INTERFACE_IMPL 0x800
+    constant API_CONTRACT 0x2000
 
 enum Windows.Foundation.Metadata.CompositionType python_type
     py CompositionType
     signature enum(Windows.Foundation.Metadata.CompositionType;i4)
+    constant PROTECTED 1
+    constant PUBLIC 2
 
 enum Windows.Foundation.Metadata.DeprecationType python_type
     py DeprecationType
     signature enum(Windows.Foundation.Metadata.DeprecationType;i4)
+    constant DEPRECATE 0
+    constant REMOVE 1
 
 enum Windows.Foundation.Metadata.FeatureStage python_type
     py FeatureStage
     signature enum(Windows.Foundation.Metadata.FeatureStage;i4)
+    constant ALWAYS_DISABLED 0
+    constant DISABLED_BY_DEFAULT 1
+    constant ENABLED_BY_DEFAULT 2
+    constant ALWAYS_ENABLED 3
 
 enum Windows.Foundation.Metadata.GCPressureAmount python_type
     py GCPressureAmount
     signature enum(Windows.Foundation.Metadata.GCPressureAmount;i4)
+    constant LOW 0
+    constant MEDIUM 1
+    constant HIGH 2
 
 interface Windows.Foundation.Metadata.IApiInformationStatics
     guid 997439fe-f681-4a11-b416-c13a47e8ba36
@@ -81,11 +105,21 @@ interface Windows.Foundation.Metadata.IApiInformationStatics
 enum Windows.Foundation.Metadata.MarshalingType python_type
     py MarshalingType
     signature enum(Windows.Foundation.Metadata.MarshalingType;i4)
+    constant NONE 1
+    constant AGILE 2
+    constant STANDARD 3
+    constant INVALID_MARSHALING 0
 
 enum Windows.Foundation.Metadata.Platform python_type
     py Platform
     signature enum(Windows.Foundation.Metadata.Platform;i4)
+    constant WINDOWS 0
+    constant WINDOWS_PHONE 1
 
 enum Windows.Foundation.Metadata.ThreadingModel python_type
     py ThreadingModel
     signature enum(Windows.Foundation.Metadata.ThreadingModel;i4)
+    constant STA 1
+    constant MTA 2
+    constant BOTH 3
+    constant INVALID_THREADING 0

@@ -275,6 +275,11 @@ class Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs pyt
 enum Windows.Networking.PushNotifications.PushNotificationType python_type
     py PushNotificationType
     signature enum(Windows.Networking.PushNotifications.PushNotificationType;i4)
+    constant TOAST 0
+    constant TILE 1
+    constant BADGE 2
+    constant RAW 3
+    constant TILE_FLYOUT 4
 
 class Windows.Networking.PushNotifications.RawNotification python_type
     py RawNotification

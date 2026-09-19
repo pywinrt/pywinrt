@@ -37,6 +37,10 @@ class Windows.Media.Devices.AdvancedPhotoControl python_type
 enum Windows.Media.Devices.AdvancedPhotoMode python_type
     py AdvancedPhotoMode
     signature enum(Windows.Media.Devices.AdvancedPhotoMode;i4)
+    constant AUTO 0
+    constant STANDARD 1
+    constant HDR 2
+    constant LOW_LIGHT 3
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Devices.ModuleCommandResult> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[ModuleCommandResult]
@@ -147,10 +151,15 @@ class Windows.Media.Devices.AudioDeviceModulesManager python_type
 enum Windows.Media.Devices.AudioDeviceRole python_type
     py AudioDeviceRole
     signature enum(Windows.Media.Devices.AudioDeviceRole;i4)
+    constant DEFAULT 0
+    constant COMMUNICATIONS 1
 
 enum Windows.Media.Devices.AutoFocusRange python_type
     py AutoFocusRange
     signature enum(Windows.Media.Devices.AutoFocusRange;i4)
+    constant FULL_RANGE 0
+    constant MACRO 1
+    constant NORMAL 2
 
 class Windows.Media.Devices.CallControl python_type
     py CallControl
@@ -249,6 +258,8 @@ class Windows.Media.Devices.CameraOcclusionInfo python_type
 enum Windows.Media.Devices.CameraOcclusionKind python_type
     py CameraOcclusionKind
     signature enum(Windows.Media.Devices.CameraOcclusionKind;i4)
+    constant LID 0
+    constant CAMERA_HARDWARE 1
 
 class Windows.Media.Devices.CameraOcclusionState python_type
     py CameraOcclusionState
@@ -275,18 +286,46 @@ class Windows.Media.Devices.CameraOcclusionStateChangedEventArgs python_type
 enum Windows.Media.Devices.CameraStreamState python_type
     py CameraStreamState
     signature enum(Windows.Media.Devices.CameraStreamState;i4)
+    constant NOT_STREAMING 0
+    constant STREAMING 1
+    constant BLOCKED_FOR_PRIVACY 2
+    constant SHUTDOWN 3
 
 enum Windows.Media.Devices.CaptureSceneMode python_type
     py CaptureSceneMode
     signature enum(Windows.Media.Devices.CaptureSceneMode;i4)
+    constant AUTO 0
+    constant MANUAL 1
+    constant MACRO 2
+    constant PORTRAIT 3
+    constant SPORT 4
+    constant SNOW 5
+    constant NIGHT 6
+    constant BEACH 7
+    constant SUNSET 8
+    constant CANDLELIGHT 9
+    constant LANDSCAPE 10
+    constant NIGHT_PORTRAIT 11
+    constant BACKLIT 12
 
 enum Windows.Media.Devices.CaptureUse python_type
     py CaptureUse
     signature enum(Windows.Media.Devices.CaptureUse;i4)
+    constant NONE 0
+    constant PHOTO 1
+    constant VIDEO 2
 
 enum Windows.Media.Devices.ColorTemperaturePreset python_type
     py ColorTemperaturePreset
     signature enum(Windows.Media.Devices.ColorTemperaturePreset;i4)
+    constant AUTO 0
+    constant MANUAL 1
+    constant CLOUDY 2
+    constant DAYLIGHT 3
+    constant FLASH 4
+    constant FLUORESCENT 5
+    constant TUNGSTEN 6
+    constant CANDLELIGHT 7
 
 class Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs python_type
     py DefaultAudioCaptureDeviceChangedEventArgs
@@ -415,6 +454,9 @@ class Windows.Media.Devices.DigitalWindowControl python_type
 enum Windows.Media.Devices.DigitalWindowMode python_type
     py DigitalWindowMode
     signature enum(Windows.Media.Devices.DigitalWindowMode;i4)
+    constant OFF 0
+    constant ON 1
+    constant AUTO 2
 
 class Windows.Media.Devices.ExposureCompensationControl python_type
     py ExposureCompensationControl
@@ -607,10 +649,20 @@ class Windows.Media.Devices.FocusControl python_type
 enum Windows.Media.Devices.FocusMode python_type
     py FocusMode
     signature enum(Windows.Media.Devices.FocusMode;i4)
+    constant AUTO 0
+    constant SINGLE 1
+    constant CONTINUOUS 2
+    constant MANUAL 3
 
 enum Windows.Media.Devices.FocusPreset python_type
     py FocusPreset
     signature enum(Windows.Media.Devices.FocusPreset;i4)
+    constant AUTO 0
+    constant MANUAL 1
+    constant AUTO_MACRO 2
+    constant AUTO_NORMAL 3
+    constant AUTO_INFINITY 4
+    constant AUTO_HYPERFOCAL 5
 
 class Windows.Media.Devices.FocusSettings activatable python_type
     py FocusSettings
@@ -671,6 +723,9 @@ class Windows.Media.Devices.HdrVideoControl python_type
 enum Windows.Media.Devices.HdrVideoMode python_type
     py HdrVideoMode
     signature enum(Windows.Media.Devices.HdrVideoMode;i4)
+    constant OFF 0
+    constant ON 1
+    constant AUTO 2
 
 interface Windows.Media.Devices.IAdvancedPhotoCaptureSettings
     guid 08f3863a-0018-445b-93d2-646d1c5ed05c
@@ -2109,6 +2164,9 @@ class Windows.Media.Devices.InfraredTorchControl python_type
 enum Windows.Media.Devices.InfraredTorchMode python_type
     py InfraredTorchMode
     signature enum(Windows.Media.Devices.InfraredTorchMode;i4)
+    constant OFF 0
+    constant ON 1
+    constant ALTERNATING_FRAME_ILLUMINATION 2
 
 class Windows.Media.Devices.IsoSpeedControl python_type
     py IsoSpeedControl
@@ -2155,6 +2213,18 @@ class Windows.Media.Devices.IsoSpeedControl python_type
 enum Windows.Media.Devices.IsoSpeedPreset python_type
     py IsoSpeedPreset
     signature enum(Windows.Media.Devices.IsoSpeedPreset;i4)
+    constant AUTO 0
+    constant ISO50 1
+    constant ISO80 2
+    constant ISO100 3
+    constant ISO200 4
+    constant ISO400 5
+    constant ISO800 6
+    constant ISO1600 7
+    constant ISO3200 8
+    constant ISO6400 9
+    constant ISO12800 10
+    constant ISO25600 11
 
 class Windows.Media.Devices.KeypadPressedEventArgs python_type
     py KeypadPressedEventArgs
@@ -2258,18 +2328,35 @@ class Windows.Media.Devices.LowLagPhotoSequenceControl python_type
 enum Windows.Media.Devices.ManualFocusDistance python_type
     py ManualFocusDistance
     signature enum(Windows.Media.Devices.ManualFocusDistance;i4)
+    constant INFINITY 0
+    constant HYPERFOCAL 1
+    constant NEAREST 2
 
 enum Windows.Media.Devices.MediaCaptureFocusState python_type
     py MediaCaptureFocusState
     signature enum(Windows.Media.Devices.MediaCaptureFocusState;i4)
+    constant UNINITIALIZED 0
+    constant LOST 1
+    constant SEARCHING 2
+    constant FOCUSED 3
+    constant FAILED 4
 
 enum Windows.Media.Devices.MediaCaptureOptimization python_type
     py MediaCaptureOptimization
     signature enum(Windows.Media.Devices.MediaCaptureOptimization;i4)
+    constant DEFAULT 0
+    constant QUALITY 1
+    constant LATENCY 2
+    constant POWER 3
+    constant LATENCY_THEN_QUALITY 4
+    constant LATENCY_THEN_POWER 5
+    constant POWER_AND_QUALITY 6
 
 enum Windows.Media.Devices.MediaCapturePauseBehavior python_type
     py MediaCapturePauseBehavior
     signature enum(Windows.Media.Devices.MediaCapturePauseBehavior;i4)
+    constant RETAIN_HARDWARE_RESOURCES 0
+    constant RELEASE_HARDWARE_RESOURCES 1
 
 class Windows.Media.Devices.MediaDevice static python_type
     py MediaDevice
@@ -2385,6 +2472,9 @@ class Windows.Media.Devices.OpticalImageStabilizationControl python_type
 enum Windows.Media.Devices.OpticalImageStabilizationMode python_type
     py OpticalImageStabilizationMode
     signature enum(Windows.Media.Devices.OpticalImageStabilizationMode;i4)
+    constant OFF 0
+    constant ON 1
+    constant AUTO 2
 
 class Windows.Media.Devices.PanelBasedOptimizationControl python_type
     py PanelBasedOptimizationControl
@@ -2484,6 +2574,8 @@ class Windows.Media.Devices.RegionOfInterest activatable python_type
 enum Windows.Media.Devices.RegionOfInterestType python_type
     py RegionOfInterestType
     signature enum(Windows.Media.Devices.RegionOfInterestType;i4)
+    constant UNKNOWN 0
+    constant FACE 1
 
 class Windows.Media.Devices.RegionsOfInterestControl python_type
     py RegionsOfInterestControl
@@ -2533,10 +2625,28 @@ class Windows.Media.Devices.SceneModeControl python_type
 enum Windows.Media.Devices.SendCommandStatus python_type
     py SendCommandStatus
     signature enum(Windows.Media.Devices.SendCommandStatus;i4)
+    constant SUCCESS 0
+    constant DEVICE_NOT_AVAILABLE 1
 
 enum Windows.Media.Devices.TelephonyKey python_type
     py TelephonyKey
     signature enum(Windows.Media.Devices.TelephonyKey;i4)
+    constant D0 0
+    constant D1 1
+    constant D2 2
+    constant D3 3
+    constant D4 4
+    constant D5 5
+    constant D6 6
+    constant D7 7
+    constant D8 8
+    constant D9 9
+    constant STAR 10
+    constant POUND 11
+    constant A 12
+    constant B 13
+    constant C 14
+    constant D 15
 
 class Windows.Media.Devices.TorchControl python_type
     py TorchControl
@@ -2810,10 +2920,23 @@ class Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult python_
 enum Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyStatus python_type
     py VideoDeviceControllerGetDevicePropertyStatus
     signature enum(Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant BUFFER_TOO_SMALL 2
+    constant NOT_SUPPORTED 3
+    constant DEVICE_NOT_AVAILABLE 4
+    constant MAX_PROPERTY_VALUE_SIZE_TOO_SMALL 5
+    constant MAX_PROPERTY_VALUE_SIZE_REQUIRED 6
 
 enum Windows.Media.Devices.VideoDeviceControllerSetDevicePropertyStatus python_type
     py VideoDeviceControllerSetDevicePropertyStatus
     signature enum(Windows.Media.Devices.VideoDeviceControllerSetDevicePropertyStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant NOT_SUPPORTED 2
+    constant INVALID_VALUE 3
+    constant DEVICE_NOT_AVAILABLE 4
+    constant NOT_IN_CONTROL 5
 
 class Windows.Media.Devices.VideoTemporalDenoisingControl python_type
     py VideoTemporalDenoisingControl
@@ -2835,6 +2958,9 @@ class Windows.Media.Devices.VideoTemporalDenoisingControl python_type
 enum Windows.Media.Devices.VideoTemporalDenoisingMode python_type
     py VideoTemporalDenoisingMode
     signature enum(Windows.Media.Devices.VideoTemporalDenoisingMode;i4)
+    constant OFF 0
+    constant ON 1
+    constant AUTO 2
 
 class Windows.Media.Devices.WhiteBalanceControl python_type
     py WhiteBalanceControl
@@ -2923,6 +3049,9 @@ class Windows.Media.Devices.ZoomSettings activatable python_type
 enum Windows.Media.Devices.ZoomTransitionMode python_type
     py ZoomTransitionMode
     signature enum(Windows.Media.Devices.ZoomTransitionMode;i4)
+    constant AUTO 0
+    constant DIRECT 1
+    constant SMOOTH 2
 
 class System.Object external
     py winrt.system.Object

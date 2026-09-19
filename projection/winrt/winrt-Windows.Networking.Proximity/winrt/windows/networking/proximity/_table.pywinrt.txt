@@ -323,9 +323,12 @@ delegate Windows.Networking.Proximity.MessageTransmittedHandler python_type
             in class type=Windows.Networking.Proximity.ProximityDevice name=sender
             in int64 name=messageId
 
-enum Windows.Networking.Proximity.PeerDiscoveryTypes python_type
+enum Windows.Networking.Proximity.PeerDiscoveryTypes python_type flags_enum
     py PeerDiscoveryTypes
     signature enum(Windows.Networking.Proximity.PeerDiscoveryTypes;u4)
+    constant NONE 0x0
+    constant BROWSE 0x1
+    constant TRIGGERED 0x2
 
 class Windows.Networking.Proximity.PeerFinder static python_type
     py PeerFinder
@@ -422,6 +425,9 @@ class Windows.Networking.Proximity.PeerInformation python_type
 enum Windows.Networking.Proximity.PeerRole python_type
     py PeerRole
     signature enum(Windows.Networking.Proximity.PeerRole;i4)
+    constant PEER 0
+    constant HOST 1
+    constant CLIENT 2
 
 class Windows.Networking.Proximity.PeerWatcher python_type
     py PeerWatcher
@@ -469,6 +475,12 @@ class Windows.Networking.Proximity.PeerWatcher python_type
 enum Windows.Networking.Proximity.PeerWatcherStatus python_type
     py PeerWatcherStatus
     signature enum(Windows.Networking.Proximity.PeerWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPING 3
+    constant STOPPED 4
+    constant ABORTED 5
 
 class Windows.Networking.Proximity.ProximityDevice python_type
     py ProximityDevice
@@ -568,6 +580,12 @@ class Windows.Networking.Proximity.ProximityMessage python_type
 enum Windows.Networking.Proximity.TriggeredConnectState python_type
     py TriggeredConnectState
     signature enum(Windows.Networking.Proximity.TriggeredConnectState;i4)
+    constant PEER_FOUND 0
+    constant LISTENING 1
+    constant CONNECTING 2
+    constant COMPLETED 3
+    constant CANCELED 4
+    constant FAILED 5
 
 class Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs python_type
     py TriggeredConnectionStateChangedEventArgs

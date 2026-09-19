@@ -30,6 +30,10 @@ class Windows.ApplicationModel.Core.AppListEntry python_type
 enum Windows.ApplicationModel.Core.AppRestartFailureReason python_type
     py AppRestartFailureReason
     signature enum(Windows.ApplicationModel.Core.AppRestartFailureReason;i4)
+    constant RESTART_PENDING 0
+    constant NOT_IN_FOREGROUND 1
+    constant INVALID_USER 2
+    constant OTHER 3
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]

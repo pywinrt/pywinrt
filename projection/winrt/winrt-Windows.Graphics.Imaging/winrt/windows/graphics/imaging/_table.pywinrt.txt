@@ -141,6 +141,9 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.S
 enum Windows.Graphics.Imaging.BitmapAlphaMode python_type
     py BitmapAlphaMode
     signature enum(Windows.Graphics.Imaging.BitmapAlphaMode;i4)
+    constant PREMULTIPLIED 0
+    constant STRAIGHT 1
+    constant IGNORE 2
 
 struct Windows.Graphics.Imaging.BitmapBounds python_type
     py BitmapBounds
@@ -173,6 +176,9 @@ class Windows.Graphics.Imaging.BitmapBuffer python_type closeable
 enum Windows.Graphics.Imaging.BitmapBufferAccessMode python_type
     py BitmapBufferAccessMode
     signature enum(Windows.Graphics.Imaging.BitmapBufferAccessMode;i4)
+    constant READ 0
+    constant READ_WRITE 1
+    constant WRITE 2
 
 class Windows.Graphics.Imaging.BitmapCodecInformation python_type
     py BitmapCodecInformation
@@ -413,6 +419,9 @@ class Windows.Graphics.Imaging.BitmapEncoder python_type
 enum Windows.Graphics.Imaging.BitmapFlip python_type
     py BitmapFlip
     signature enum(Windows.Graphics.Imaging.BitmapFlip;i4)
+    constant NONE 0
+    constant HORIZONTAL 1
+    constant VERTICAL 2
 
 class Windows.Graphics.Imaging.BitmapFrame python_type
     py BitmapFrame
@@ -478,10 +487,23 @@ class Windows.Graphics.Imaging.BitmapFrame python_type
 enum Windows.Graphics.Imaging.BitmapInterpolationMode python_type
     py BitmapInterpolationMode
     signature enum(Windows.Graphics.Imaging.BitmapInterpolationMode;i4)
+    constant NEAREST_NEIGHBOR 0
+    constant LINEAR 1
+    constant CUBIC 2
+    constant FANT 3
 
 enum Windows.Graphics.Imaging.BitmapPixelFormat python_type
     py BitmapPixelFormat
     signature enum(Windows.Graphics.Imaging.BitmapPixelFormat;i4)
+    constant UNKNOWN 0
+    constant RGBA16 12
+    constant RGBA8 30
+    constant GRAY16 57
+    constant GRAY8 62
+    constant BGRA8 87
+    constant NV12 103
+    constant P010 104
+    constant YUY2 107
 
 struct Windows.Graphics.Imaging.BitmapPlaneDescription python_type
     py BitmapPlaneDescription
@@ -557,6 +579,10 @@ class Windows.Graphics.Imaging.BitmapPropertySet activatable python_type iterabl
 enum Windows.Graphics.Imaging.BitmapRotation python_type
     py BitmapRotation
     signature enum(Windows.Graphics.Imaging.BitmapRotation;i4)
+    constant NONE 0
+    constant CLOCKWISE90_DEGREES 1
+    constant CLOCKWISE180_DEGREES 2
+    constant CLOCKWISE270_DEGREES 3
 
 struct Windows.Graphics.Imaging.BitmapSize python_type
     py BitmapSize
@@ -624,10 +650,14 @@ class Windows.Graphics.Imaging.BitmapTypedValue python_type
 enum Windows.Graphics.Imaging.ColorManagementMode python_type
     py ColorManagementMode
     signature enum(Windows.Graphics.Imaging.ColorManagementMode;i4)
+    constant DO_NOT_COLOR_MANAGE 0
+    constant COLOR_MANAGE_TO_S_RGB 1
 
 enum Windows.Graphics.Imaging.ExifOrientationMode python_type
     py ExifOrientationMode
     signature enum(Windows.Graphics.Imaging.ExifOrientationMode;i4)
+    constant IGNORE_EXIF_ORIENTATION 0
+    constant RESPECT_EXIF_ORIENTATION 1
 
 interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[Boolean]
@@ -1386,6 +1416,10 @@ class Windows.Graphics.Imaging.ImageStream python_type closeable
 enum Windows.Graphics.Imaging.JpegSubsamplingMode python_type
     py JpegSubsamplingMode
     signature enum(Windows.Graphics.Imaging.JpegSubsamplingMode;i4)
+    constant DEFAULT 0
+    constant Y4_CB2_CR0 1
+    constant Y4_CB2_CR2 2
+    constant Y4_CB4_CR4 3
 
 enum K parameterized
 
@@ -1401,6 +1435,13 @@ class Windows.Graphics.Imaging.PixelDataProvider python_type
 enum Windows.Graphics.Imaging.PngFilterMode python_type
     py PngFilterMode
     signature enum(Windows.Graphics.Imaging.PngFilterMode;i4)
+    constant AUTOMATIC 0
+    constant NONE 1
+    constant SUB 2
+    constant UP 3
+    constant AVERAGE 4
+    constant PAETH 5
+    constant ADAPTIVE 6
 
 class Windows.Graphics.Imaging.SoftwareBitmap python_type closeable
     py SoftwareBitmap
@@ -1505,6 +1546,14 @@ class Windows.Graphics.Imaging.SoftwareBitmap python_type closeable
 enum Windows.Graphics.Imaging.TiffCompressionMode python_type
     py TiffCompressionMode
     signature enum(Windows.Graphics.Imaging.TiffCompressionMode;i4)
+    constant AUTOMATIC 0
+    constant NONE 1
+    constant CCITT3 2
+    constant CCITT4 3
+    constant LZW 4
+    constant RLE 5
+    constant ZIP 6
+    constant LZWH_DIFFERENCING 7
 
 enum V parameterized
 

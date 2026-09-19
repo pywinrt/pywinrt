@@ -29,6 +29,10 @@ class Windows.ApplicationModel.Background.ActivitySensorTrigger python_type
 enum Windows.ApplicationModel.Background.AlarmAccessStatus python_type
     py AlarmAccessStatus
     signature enum(Windows.ApplicationModel.Background.AlarmAccessStatus;i4)
+    constant UNSPECIFIED 0
+    constant ALLOWED_WITH_WAKEUP_CAPABILITY 1
+    constant ALLOWED_WITHOUT_WAKEUP_CAPABILITY 2
+    constant DENIED 3
 
 class Windows.ApplicationModel.Background.AlarmApplicationManager static python_type
     py AlarmApplicationManager
@@ -121,6 +125,10 @@ class Windows.ApplicationModel.Background.ApplicationTriggerDetails python_type
 enum Windows.ApplicationModel.Background.ApplicationTriggerResult python_type
     py ApplicationTriggerResult
     signature enum(Windows.ApplicationModel.Background.ApplicationTriggerResult;i4)
+    constant ALLOWED 0
+    constant CURRENTLY_RUNNING 1
+    constant DISABLED_BY_POLICY 2
+    constant UNKNOWN_ERROR 3
 
 class Windows.ApplicationModel.Background.AppointmentStoreNotificationTrigger activatable python_type
     py AppointmentStoreNotificationTrigger
@@ -223,10 +231,20 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationMo
 enum Windows.ApplicationModel.Background.BackgroundAccessRequestKind python_type
     py BackgroundAccessRequestKind
     signature enum(Windows.ApplicationModel.Background.BackgroundAccessRequestKind;i4)
+    constant ALWAYS_ALLOWED 0
+    constant ALLOWED_SUBJECT_TO_SYSTEM_POLICY 1
 
 enum Windows.ApplicationModel.Background.BackgroundAccessStatus python_type
     py BackgroundAccessStatus
     signature enum(Windows.ApplicationModel.Background.BackgroundAccessStatus;i4)
+    constant UNSPECIFIED 0
+    constant ALLOWED_WITH_ALWAYS_ON_REAL_TIME_CONNECTIVITY 1
+    constant ALLOWED_MAY_USE_ACTIVE_REAL_TIME_CONNECTIVITY 2
+    constant DENIED 3
+    constant ALWAYS_ALLOWED 4
+    constant ALLOWED_SUBJECT_TO_SYSTEM_POLICY 5
+    constant DENIED_BY_SYSTEM_POLICY 6
+    constant DENIED_BY_USER 7
 
 class Windows.ApplicationModel.Background.BackgroundExecutionManager static python_type
     py BackgroundExecutionManager
@@ -344,6 +362,18 @@ delegate Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler 
 enum Windows.ApplicationModel.Background.BackgroundTaskCancellationReason python_type
     py BackgroundTaskCancellationReason
     signature enum(Windows.ApplicationModel.Background.BackgroundTaskCancellationReason;i4)
+    constant ABORT 0
+    constant TERMINATING 1
+    constant LOGGING_OFF 2
+    constant SERVICING_UPDATE 3
+    constant IDLE_TASK 4
+    constant UNINSTALL 5
+    constant CONDITION_LOSS 6
+    constant SYSTEM_POLICY 7
+    constant QUIET_HOURS_ENTERED 8
+    constant EXECUTION_TIME_EXCEEDED 9
+    constant RESOURCE_REVOCATION 10
+    constant ENERGY_SAVER 11
 
 class Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs python_type
     py BackgroundTaskCompletedEventArgs
@@ -481,6 +511,9 @@ class Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup python
 enum Windows.ApplicationModel.Background.BackgroundTaskThrottleCounter python_type
     py BackgroundTaskThrottleCounter
     signature enum(Windows.ApplicationModel.Background.BackgroundTaskThrottleCounter;i4)
+    constant ALL 0
+    constant CPU 1
+    constant NETWORK 2
 
 class Windows.ApplicationModel.Background.BackgroundWorkCost static python_type
     py BackgroundWorkCost
@@ -502,6 +535,9 @@ class Windows.ApplicationModel.Background.BackgroundWorkCost static python_type
 enum Windows.ApplicationModel.Background.BackgroundWorkCostValue python_type
     py BackgroundWorkCostValue
     signature enum(Windows.ApplicationModel.Background.BackgroundWorkCostValue;i4)
+    constant LOW 0
+    constant MEDIUM 1
+    constant HIGH 2
 
 class Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger activatable python_type
     py BluetoothLEAdvertisementPublisherTrigger
@@ -715,6 +751,8 @@ class Windows.ApplicationModel.Background.CustomSystemEventTrigger python_type
 enum Windows.ApplicationModel.Background.CustomSystemEventTriggerRecurrence python_type
     py CustomSystemEventTriggerRecurrence
     signature enum(Windows.ApplicationModel.Background.CustomSystemEventTriggerRecurrence;i4)
+    constant ONCE 0
+    constant ALWAYS 1
 
 class Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger python_type
     py DeviceConnectionChangeTrigger
@@ -781,6 +819,10 @@ class Windows.ApplicationModel.Background.DeviceServicingTrigger activatable pyt
 enum Windows.ApplicationModel.Background.DeviceTriggerResult python_type
     py DeviceTriggerResult
     signature enum(Windows.ApplicationModel.Background.DeviceTriggerResult;i4)
+    constant ALLOWED 0
+    constant DENIED_BY_USER 1
+    constant DENIED_BY_SYSTEM 2
+    constant LOW_BATTERY 3
 
 class Windows.ApplicationModel.Background.DeviceUseTrigger activatable python_type
     py DeviceUseTrigger
@@ -820,6 +862,10 @@ class Windows.ApplicationModel.Background.EmailStoreNotificationTrigger activata
 enum Windows.ApplicationModel.Background.EnergyUseLevel python_type
     py EnergyUseLevel
     signature enum(Windows.ApplicationModel.Background.EnergyUseLevel;i4)
+    constant UNKNOWN 0
+    constant UNDER_HALF_OF_BUDGET 1
+    constant OVER_HALF_OF_BUDGET 2
+    constant OVER_BUDGET 3
 
 class Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger python_type
     py GattCharacteristicNotificationTrigger
@@ -2112,6 +2158,7 @@ class Windows.ApplicationModel.Background.LocationTrigger python_type
 enum Windows.ApplicationModel.Background.LocationTriggerType python_type
     py LocationTriggerType
     signature enum(Windows.ApplicationModel.Background.LocationTriggerType;i4)
+    constant GEOFENCE 0
 
 class Windows.ApplicationModel.Background.MaintenanceTrigger python_type
     py MaintenanceTrigger
@@ -2151,6 +2198,10 @@ class Windows.ApplicationModel.Background.MediaProcessingTrigger activatable pyt
 enum Windows.ApplicationModel.Background.MediaProcessingTriggerResult python_type
     py MediaProcessingTriggerResult
     signature enum(Windows.ApplicationModel.Background.MediaProcessingTriggerResult;i4)
+    constant ALLOWED 0
+    constant CURRENTLY_RUNNING 1
+    constant DISABLED_BY_POLICY 2
+    constant UNKNOWN_ERROR 3
 
 class Windows.ApplicationModel.Background.MobileBroadbandDeviceServiceNotificationTrigger activatable python_type
     py MobileBroadbandDeviceServiceNotificationTrigger
@@ -2419,6 +2470,15 @@ class Windows.ApplicationModel.Background.SystemCondition python_type
 enum Windows.ApplicationModel.Background.SystemConditionType python_type
     py SystemConditionType
     signature enum(Windows.ApplicationModel.Background.SystemConditionType;i4)
+    constant INVALID 0
+    constant USER_PRESENT 1
+    constant USER_NOT_PRESENT 2
+    constant INTERNET_AVAILABLE 3
+    constant INTERNET_NOT_AVAILABLE 4
+    constant SESSION_CONNECTED 5
+    constant SESSION_DISCONNECTED 6
+    constant FREE_NETWORK_AVAILABLE 7
+    constant BACKGROUND_WORK_COST_NOT_HIGH 8
 
 class Windows.ApplicationModel.Background.SystemTrigger python_type
     py SystemTrigger
@@ -2442,6 +2502,22 @@ class Windows.ApplicationModel.Background.SystemTrigger python_type
 enum Windows.ApplicationModel.Background.SystemTriggerType python_type
     py SystemTriggerType
     signature enum(Windows.ApplicationModel.Background.SystemTriggerType;i4)
+    constant INVALID 0
+    constant SMS_RECEIVED 1
+    constant USER_PRESENT 2
+    constant USER_AWAY 3
+    constant NETWORK_STATE_CHANGE 4
+    constant CONTROL_CHANNEL_RESET 5
+    constant INTERNET_AVAILABLE 6
+    constant SESSION_CONNECTED 7
+    constant SERVICING_COMPLETE 8
+    constant LOCK_SCREEN_APPLICATION_ADDED 9
+    constant LOCK_SCREEN_APPLICATION_REMOVED 10
+    constant TIME_ZONE_CHANGE 11
+    constant ONLINE_ID_CONNECTED_STATE_CHANGE 12
+    constant BACKGROUND_WORK_COST_CHANGE 13
+    constant POWER_STATE_CHANGE 14
+    constant DEFAULT_SIGN_IN_ACCOUNT_CHANGE 15
 
 class Windows.ApplicationModel.Background.TetheringEntitlementCheckTrigger activatable python_type
     py TetheringEntitlementCheckTrigger

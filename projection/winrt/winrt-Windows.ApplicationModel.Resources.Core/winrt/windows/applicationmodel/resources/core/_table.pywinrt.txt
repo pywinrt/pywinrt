@@ -840,6 +840,9 @@ class Windows.ApplicationModel.Resources.Core.ResourceCandidate python_type
 enum Windows.ApplicationModel.Resources.Core.ResourceCandidateKind python_type
     py ResourceCandidateKind
     signature enum(Windows.ApplicationModel.Resources.Core.ResourceCandidateKind;i4)
+    constant STRING 0
+    constant FILE 1
+    constant EMBEDDED_DATA 2
 
 class Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView python_type iterable sequence
     py ResourceCandidateVectorView
@@ -1202,6 +1205,8 @@ class Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap pyt
 enum Windows.ApplicationModel.Resources.Core.ResourceQualifierPersistence python_type
     py ResourceQualifierPersistence
     signature enum(Windows.ApplicationModel.Resources.Core.ResourceQualifierPersistence;i4)
+    constant NONE 0
+    constant LOCAL_MACHINE 1
 
 class Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView python_type iterable sequence
     py ResourceQualifierVectorView

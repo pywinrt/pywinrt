@@ -125,6 +125,17 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Preview.Inje
 enum Windows.UI.Input.Preview.Injection.InjectedInputButtonChangeKind python_type
     py InjectedInputButtonChangeKind
     signature enum(Windows.UI.Input.Preview.Injection.InjectedInputButtonChangeKind;i4)
+    constant NONE 0
+    constant FIRST_BUTTON_DOWN 1
+    constant FIRST_BUTTON_UP 2
+    constant SECOND_BUTTON_DOWN 3
+    constant SECOND_BUTTON_UP 4
+    constant THIRD_BUTTON_DOWN 5
+    constant THIRD_BUTTON_UP 6
+    constant FOURTH_BUTTON_DOWN 7
+    constant FOURTH_BUTTON_UP 8
+    constant FIFTH_BUTTON_DOWN 9
+    constant FIFTH_BUTTON_UP 10
 
 class Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo activatable python_type
     py InjectedInputGamepadInfo
@@ -174,9 +185,14 @@ class Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo activatable py
         put put_Buttons slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4 reverse=43
             in enum_u32 type=Windows.Gaming.Input.GamepadButtons name=value
 
-enum Windows.UI.Input.Preview.Injection.InjectedInputKeyOptions python_type
+enum Windows.UI.Input.Preview.Injection.InjectedInputKeyOptions python_type flags_enum
     py InjectedInputKeyOptions
     signature enum(Windows.UI.Input.Preview.Injection.InjectedInputKeyOptions;u4)
+    constant NONE 0x0
+    constant EXTENDED_KEY 0x1
+    constant KEY_UP 0x2
+    constant SCAN_CODE 0x8
+    constant UNICODE 0x4
 
 class Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo activatable python_type
     py InjectedInputKeyboardInfo
@@ -236,13 +252,32 @@ class Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo activatable pyth
         put put_DeltaX slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4 reverse=173
             in int32 name=value
 
-enum Windows.UI.Input.Preview.Injection.InjectedInputMouseOptions python_type
+enum Windows.UI.Input.Preview.Injection.InjectedInputMouseOptions python_type flags_enum
     py InjectedInputMouseOptions
     signature enum(Windows.UI.Input.Preview.Injection.InjectedInputMouseOptions;u4)
+    constant NONE 0x0
+    constant MOVE 0x1
+    constant LEFT_DOWN 0x2
+    constant LEFT_UP 0x4
+    constant RIGHT_DOWN 0x8
+    constant RIGHT_UP 0x10
+    constant MIDDLE_DOWN 0x20
+    constant MIDDLE_UP 0x40
+    constant X_DOWN 0x80
+    constant X_UP 0x100
+    constant WHEEL 0x800
+    constant H_WHEEL 0x1000
+    constant MOVE_NO_COALESCE 0x2000
+    constant VIRTUAL_DESK 0x4000
+    constant ABSOLUTE 0x8000
 
-enum Windows.UI.Input.Preview.Injection.InjectedInputPenButtons python_type
+enum Windows.UI.Input.Preview.Injection.InjectedInputPenButtons python_type flags_enum
     py InjectedInputPenButtons
     signature enum(Windows.UI.Input.Preview.Injection.InjectedInputPenButtons;u4)
+    constant NONE 0x0
+    constant BARREL 0x1
+    constant INVERTED 0x2
+    constant ERASER 0x4
 
 class Windows.UI.Input.Preview.Injection.InjectedInputPenInfo activatable python_type
     py InjectedInputPenInfo
@@ -288,9 +323,14 @@ class Windows.UI.Input.Preview.Injection.InjectedInputPenInfo activatable python
         put put_PenButtons slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4 reverse=99
             in enum_u32 type=Windows.UI.Input.Preview.Injection.InjectedInputPenButtons name=value
 
-enum Windows.UI.Input.Preview.Injection.InjectedInputPenParameters python_type
+enum Windows.UI.Input.Preview.Injection.InjectedInputPenParameters python_type flags_enum
     py InjectedInputPenParameters
     signature enum(Windows.UI.Input.Preview.Injection.InjectedInputPenParameters;u4)
+    constant NONE 0x0
+    constant PRESSURE 0x1
+    constant ROTATION 0x2
+    constant TILT_X 0x4
+    constant TILT_Y 0x8
 
 struct Windows.UI.Input.Preview.Injection.InjectedInputPoint python_type
     py InjectedInputPoint
@@ -307,9 +347,22 @@ struct Windows.UI.Input.Preview.Injection.InjectedInputPointerInfo python_type
     field time_offset_in_milliseconds TimeOffsetInMilliseconds uint32
     field performance_count PerformanceCount uint64
 
-enum Windows.UI.Input.Preview.Injection.InjectedInputPointerOptions python_type
+enum Windows.UI.Input.Preview.Injection.InjectedInputPointerOptions python_type flags_enum
     py InjectedInputPointerOptions
     signature enum(Windows.UI.Input.Preview.Injection.InjectedInputPointerOptions;u4)
+    constant NONE 0x0
+    constant NEW 0x1
+    constant IN_RANGE 0x2
+    constant IN_CONTACT 0x4
+    constant FIRST_BUTTON 0x10
+    constant SECOND_BUTTON 0x20
+    constant PRIMARY 0x2000
+    constant CONFIDENCE 0x4000
+    constant CANCELED 0x8000
+    constant POINTER_DOWN 0x10000
+    constant UPDATE 0x20000
+    constant POINTER_UP 0x40000
+    constant CAPTURE_CHANGED 0x200000
 
 struct Windows.UI.Input.Preview.Injection.InjectedInputRectangle python_type
     py InjectedInputRectangle
@@ -322,6 +375,9 @@ struct Windows.UI.Input.Preview.Injection.InjectedInputRectangle python_type
 enum Windows.UI.Input.Preview.Injection.InjectedInputShortcut python_type
     py InjectedInputShortcut
     signature enum(Windows.UI.Input.Preview.Injection.InjectedInputShortcut;i4)
+    constant BACK 0
+    constant START 1
+    constant SEARCH 2
 
 class Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo activatable python_type
     py InjectedInputTouchInfo
@@ -357,13 +413,20 @@ class Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo activatable pyth
         put put_Contact slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=21
             in struct type=Windows.UI.Input.Preview.Injection.InjectedInputRectangle name=value
 
-enum Windows.UI.Input.Preview.Injection.InjectedInputTouchParameters python_type
+enum Windows.UI.Input.Preview.Injection.InjectedInputTouchParameters python_type flags_enum
     py InjectedInputTouchParameters
     signature enum(Windows.UI.Input.Preview.Injection.InjectedInputTouchParameters;u4)
+    constant NONE 0x0
+    constant CONTACT 0x1
+    constant ORIENTATION 0x2
+    constant PRESSURE 0x4
 
 enum Windows.UI.Input.Preview.Injection.InjectedInputVisualizationMode python_type
     py InjectedInputVisualizationMode
     signature enum(Windows.UI.Input.Preview.Injection.InjectedInputVisualizationMode;i4)
+    constant NONE 0
+    constant DEFAULT 1
+    constant INDIRECT 2
 
 class Windows.UI.Input.Preview.Injection.InputInjector python_type
     py InputInjector

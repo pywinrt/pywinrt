@@ -118,6 +118,7 @@ namespace py::table
         inline constexpr uint32_t buffer = 1 << 19;
         inline constexpr uint32_t buffer_length = 1 << 20;
         inline constexpr uint32_t integer = 1 << 21;
+        inline constexpr uint32_t flags_enum = 1 << 22;
     } // namespace type_flags
 
     enum class group_kind : uint32_t
@@ -357,6 +358,33 @@ namespace py::table
         uint32_t index_;
     };
 
+    /**
+     * One constant of an enum: the name it is reached by and the thirty-two
+     * bits it holds.
+     *
+     * What those bits mean is the enum's to say and not the constant's. A
+     * WinRT enum is signed unless it is a set of flags, in which case it is
+     * unsigned, so the @c flags_enum bit of the type record is what decides
+     * how the value is read.
+     */
+    class constant_view
+    {
+      public:
+        constant_view(file const* owner, uint32_t index) noexcept
+            : owner_(owner), index_(index)
+        {
+        }
+
+        std::string_view py_name() const;
+        uint32_t value() const;
+
+      private:
+        uint32_t word(uint32_t position) const;
+
+        file const* owner_;
+        uint32_t index_;
+    };
+
     class type_view
     {
       public:
@@ -394,6 +422,8 @@ namespace py::table
         group_view group(uint32_t position) const;
         uint32_t field_count() const;
         field_view field(uint32_t position) const;
+        uint32_t constant_count() const;
+        constant_view constant(uint32_t position) const;
 
       private:
         uint32_t word(uint32_t position) const;
@@ -488,6 +518,11 @@ namespace py::table
             return field_count_;
         }
 
+        uint32_t constant_count() const noexcept
+        {
+            return constant_count_;
+        }
+
         uint32_t guid_count() const noexcept
         {
             return guid_count_;
@@ -508,6 +543,7 @@ namespace py::table
         uint32_t member_word(uint32_t index, uint32_t position) const;
         uint32_t param_word(uint32_t index, uint32_t position) const;
         uint32_t field_word(uint32_t index, uint32_t position) const;
+        uint32_t constant_word(uint32_t index, uint32_t position) const;
 
       private:
         struct section
@@ -535,11 +571,13 @@ namespace py::table
         section members_;
         section params_;
         section fields_;
+        section constants_;
         uint32_t type_count_;
         uint32_t group_count_;
         uint32_t member_count_;
         uint32_t param_count_;
         uint32_t field_count_;
+        uint32_t constant_count_;
         uint32_t guid_count_;
         uint32_t ref_count_;
     };

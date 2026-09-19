@@ -192,6 +192,9 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Security.DataProtection.Us
 enum Windows.Security.DataProtection.UserDataAvailability python_type
     py UserDataAvailability
     signature enum(Windows.Security.DataProtection.UserDataAvailability;i4)
+    constant ALWAYS 0
+    constant AFTER_FIRST_UNLOCK 1
+    constant WHILE_UNLOCKED 2
 
 class Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs python_type
     py UserDataAvailabilityStateChangedEventArgs
@@ -217,6 +220,8 @@ class Windows.Security.DataProtection.UserDataBufferUnprotectResult python_type
 enum Windows.Security.DataProtection.UserDataBufferUnprotectStatus python_type
     py UserDataBufferUnprotectStatus
     signature enum(Windows.Security.DataProtection.UserDataBufferUnprotectStatus;i4)
+    constant SUCCEEDED 0
+    constant UNAVAILABLE 1
 
 class Windows.Security.DataProtection.UserDataProtectionManager python_type
     py UserDataProtectionManager
@@ -272,6 +277,9 @@ class Windows.Security.DataProtection.UserDataStorageItemProtectionInfo python_t
 enum Windows.Security.DataProtection.UserDataStorageItemProtectionStatus python_type
     py UserDataStorageItemProtectionStatus
     signature enum(Windows.Security.DataProtection.UserDataStorageItemProtectionStatus;i4)
+    constant SUCCEEDED 0
+    constant NOT_PROTECTABLE 1
+    constant DATA_UNAVAILABLE 2
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
     py winrt.windows.foundation.AsyncOperationCompletedHandler

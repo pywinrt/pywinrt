@@ -63,6 +63,10 @@ class Windows.Gaming.Input.ForceFeedback.ConditionForceEffect python_type
 enum Windows.Gaming.Input.ForceFeedback.ConditionForceEffectKind python_type
     py ConditionForceEffectKind
     signature enum(Windows.Gaming.Input.ForceFeedback.ConditionForceEffectKind;i4)
+    constant SPRING 0
+    constant DAMPER 1
+    constant INERTIA 2
+    constant FRICTION 3
 
 class Windows.Gaming.Input.ForceFeedback.ConstantForceEffect activatable python_type
     py ConstantForceEffect
@@ -101,17 +105,28 @@ class Windows.Gaming.Input.ForceFeedback.ConstantForceEffect activatable python_
     method stop
         method Stop slot=10 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=0 reverse=117
 
-enum Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectAxes python_type
+enum Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectAxes python_type flags_enum
     py ForceFeedbackEffectAxes
     signature enum(Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectAxes;u4)
+    constant NONE 0x0
+    constant X 0x1
+    constant Y 0x2
+    constant Z 0x4
 
 enum Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState python_type
     py ForceFeedbackEffectState
     signature enum(Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState;i4)
+    constant STOPPED 0
+    constant RUNNING 1
+    constant PAUSED 2
+    constant FAULTED 3
 
 enum Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult python_type
     py ForceFeedbackLoadEffectResult
     signature enum(Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult;i4)
+    constant SUCCEEDED 0
+    constant EFFECT_STORAGE_FULL 1
+    constant EFFECT_NOT_SUPPORTED 2
 
 class Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor python_type
     py ForceFeedbackMotor
@@ -303,6 +318,11 @@ class Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect python_type
 enum Windows.Gaming.Input.ForceFeedback.PeriodicForceEffectKind python_type
     py PeriodicForceEffectKind
     signature enum(Windows.Gaming.Input.ForceFeedback.PeriodicForceEffectKind;i4)
+    constant SQUARE_WAVE 0
+    constant SINE_WAVE 1
+    constant TRIANGLE_WAVE 2
+    constant SAWTOOTH_WAVE_UP 3
+    constant SAWTOOTH_WAVE_DOWN 4
 
 class Windows.Gaming.Input.ForceFeedback.RampForceEffect activatable python_type
     py RampForceEffect

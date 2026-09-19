@@ -442,6 +442,20 @@ class Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallOptions ac
 enum Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallState python_type
     py AppInstallState
     signature enum(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallState;i4)
+    constant PENDING 0
+    constant STARTING 1
+    constant ACQUIRING_LICENSE 2
+    constant DOWNLOADING 3
+    constant RESTORING_DATA 4
+    constant INSTALLING 5
+    constant COMPLETED 6
+    constant CANCELED 7
+    constant PAUSED 8
+    constant ERROR 9
+    constant PAUSED_LOW_BATTERY 10
+    constant PAUSED_WI_FI_RECOMMENDED 11
+    constant PAUSED_WI_FI_REQUIRED 12
+    constant READY_TO_DOWNLOAD 13
 
 class Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus python_type
     py AppInstallStatus
@@ -478,10 +492,17 @@ class Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus pyt
 enum Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallType python_type
     py AppInstallType
     signature enum(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallType;i4)
+    constant INSTALL 0
+    constant UPDATE 1
+    constant REPAIR 2
 
 enum Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallationToastNotificationMode python_type
     py AppInstallationToastNotificationMode
     signature enum(Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallationToastNotificationMode;i4)
+    constant DEFAULT 0
+    constant TOAST 1
+    constant TOAST_WITHOUT_POPUP 2
+    constant NO_TOAST 3
 
 class Windows.ApplicationModel.Store.Preview.InstallControl.AppUpdateOptions activatable python_type
     py AppUpdateOptions
@@ -555,6 +576,10 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Co
 enum Windows.ApplicationModel.Store.Preview.InstallControl.AutoUpdateSetting python_type
     py AutoUpdateSetting
     signature enum(Windows.ApplicationModel.Store.Preview.InstallControl.AutoUpdateSetting;i4)
+    constant DISABLED 0
+    constant ENABLED 1
+    constant DISABLED_BY_POLICY 2
+    constant ENABLED_BY_POLICY 3
 
 class Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult python_type
     py GetEntitlementResult
@@ -581,6 +606,10 @@ class Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult
 enum Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementStatus python_type
     py GetEntitlementStatus
     signature enum(Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementStatus;i4)
+    constant SUCCEEDED 0
+    constant NO_STORE_ACCOUNT 1
+    constant NETWORK_ERROR 2
+    constant SERVER_ERROR 3
 
 interface Windows.ApplicationModel.Store.Preview.InstallControl.IAppInstallItem
     guid 49d3dfab-168a-4cbf-a93a-9e448c82737d

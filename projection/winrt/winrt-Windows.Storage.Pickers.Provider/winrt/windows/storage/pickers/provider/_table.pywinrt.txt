@@ -5,6 +5,10 @@ namespace Windows.Storage.Pickers.Provider
 enum Windows.Storage.Pickers.Provider.AddFileResult python_type
     py AddFileResult
     signature enum(Windows.Storage.Pickers.Provider.AddFileResult;i4)
+    constant ADDED 0
+    constant ALREADY_ADDED 1
+    constant NOT_ALLOWED 2
+    constant UNAVAILABLE 3
 
 class Windows.Storage.Pickers.Provider.FileOpenPickerUI python_type
     py FileOpenPickerUI
@@ -102,6 +106,8 @@ class Windows.Storage.Pickers.Provider.FileSavePickerUI python_type
 enum Windows.Storage.Pickers.Provider.FileSelectionMode python_type
     py FileSelectionMode
     signature enum(Windows.Storage.Pickers.Provider.FileSelectionMode;i4)
+    constant SINGLE 0
+    constant MULTIPLE 1
 
 interface Windows.Storage.Pickers.Provider.IFileOpenPickerUI
     guid dda45a10-f9d4-40c4-8af5-c5b6b5a61d1d
@@ -223,6 +229,9 @@ class Windows.Storage.Pickers.Provider.PickerClosingOperation python_type
 enum Windows.Storage.Pickers.Provider.SetFileNameResult python_type
     py SetFileNameResult
     signature enum(Windows.Storage.Pickers.Provider.SetFileNameResult;i4)
+    constant SUCCEEDED 0
+    constant NOT_ALLOWED 1
+    constant UNAVAILABLE 2
 
 class Windows.Storage.Pickers.Provider.TargetFileRequest python_type
     py TargetFileRequest

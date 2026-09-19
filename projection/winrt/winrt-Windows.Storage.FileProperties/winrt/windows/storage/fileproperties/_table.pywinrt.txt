@@ -1010,10 +1010,25 @@ class Windows.Storage.FileProperties.MusicProperties python_type
 enum Windows.Storage.FileProperties.PhotoOrientation python_type
     py PhotoOrientation
     signature enum(Windows.Storage.FileProperties.PhotoOrientation;i4)
+    constant UNSPECIFIED 0
+    constant NORMAL 1
+    constant FLIP_HORIZONTAL 2
+    constant ROTATE180 3
+    constant FLIP_VERTICAL 4
+    constant TRANSPOSE 5
+    constant ROTATE270 6
+    constant TRANSVERSE 7
+    constant ROTATE90 8
 
-enum Windows.Storage.FileProperties.PropertyPrefetchOptions python_type
+enum Windows.Storage.FileProperties.PropertyPrefetchOptions python_type flags_enum
     py PropertyPrefetchOptions
     signature enum(Windows.Storage.FileProperties.PropertyPrefetchOptions;u4)
+    constant NONE 0x0
+    constant MUSIC_PROPERTIES 0x1
+    constant VIDEO_PROPERTIES 0x2
+    constant IMAGE_PROPERTIES 0x4
+    constant DOCUMENT_PROPERTIES 0x8
+    constant BASIC_PROPERTIES 0x10
 
 class Windows.Storage.FileProperties.StorageItemContentProperties python_type
     py StorageItemContentProperties
@@ -1117,18 +1132,34 @@ class Windows.Storage.FileProperties.StorageItemThumbnail python_type closeable
 enum Windows.Storage.FileProperties.ThumbnailMode python_type
     py ThumbnailMode
     signature enum(Windows.Storage.FileProperties.ThumbnailMode;i4)
+    constant PICTURES_VIEW 0
+    constant VIDEOS_VIEW 1
+    constant MUSIC_VIEW 2
+    constant DOCUMENTS_VIEW 3
+    constant LIST_VIEW 4
+    constant SINGLE_ITEM 5
 
-enum Windows.Storage.FileProperties.ThumbnailOptions python_type
+enum Windows.Storage.FileProperties.ThumbnailOptions python_type flags_enum
     py ThumbnailOptions
     signature enum(Windows.Storage.FileProperties.ThumbnailOptions;u4)
+    constant NONE 0x0
+    constant RETURN_ONLY_IF_CACHED 0x1
+    constant RESIZE_THUMBNAIL 0x2
+    constant USE_CURRENT_SCALE 0x4
 
 enum Windows.Storage.FileProperties.ThumbnailType python_type
     py ThumbnailType
     signature enum(Windows.Storage.FileProperties.ThumbnailType;i4)
+    constant IMAGE 0
+    constant ICON 1
 
 enum Windows.Storage.FileProperties.VideoOrientation python_type
     py VideoOrientation
     signature enum(Windows.Storage.FileProperties.VideoOrientation;i4)
+    constant NORMAL 0
+    constant ROTATE90 90
+    constant ROTATE180 180
+    constant ROTATE270 270
 
 class Windows.Storage.FileProperties.VideoProperties python_type
     py VideoProperties

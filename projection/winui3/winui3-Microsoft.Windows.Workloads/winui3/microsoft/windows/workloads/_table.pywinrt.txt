@@ -5,3 +5,6 @@ namespace Microsoft.Windows.Workloads
 enum Microsoft.Windows.Workloads.WorkloadPriority python_type
     py WorkloadPriority
     signature enum(Microsoft.Windows.Workloads.WorkloadPriority;i4)
+    constant UNDEFINED 0
+    constant BACKGROUND 1
+    constant FOREGROUND 9

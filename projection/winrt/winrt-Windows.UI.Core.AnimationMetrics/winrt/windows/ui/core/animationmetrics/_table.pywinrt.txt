@@ -32,10 +32,66 @@ class Windows.UI.Core.AnimationMetrics.AnimationDescription python_type
 enum Windows.UI.Core.AnimationMetrics.AnimationEffect python_type
     py AnimationEffect
     signature enum(Windows.UI.Core.AnimationMetrics.AnimationEffect;i4)
+    constant EXPAND 0
+    constant COLLAPSE 1
+    constant REPOSITION 2
+    constant FADE_IN 3
+    constant FADE_OUT 4
+    constant ADD_TO_LIST 5
+    constant DELETE_FROM_LIST 6
+    constant ADD_TO_GRID 7
+    constant DELETE_FROM_GRID 8
+    constant ADD_TO_SEARCH_GRID 9
+    constant DELETE_FROM_SEARCH_GRID 10
+    constant ADD_TO_SEARCH_LIST 11
+    constant DELETE_FROM_SEARCH_LIST 12
+    constant SHOW_EDGE_UI 13
+    constant SHOW_PANEL 14
+    constant HIDE_EDGE_UI 15
+    constant HIDE_PANEL 16
+    constant SHOW_POPUP 17
+    constant HIDE_POPUP 18
+    constant POINTER_DOWN 19
+    constant POINTER_UP 20
+    constant DRAG_SOURCE_START 21
+    constant DRAG_SOURCE_END 22
+    constant TRANSITION_CONTENT 23
+    constant REVEAL 24
+    constant HIDE 25
+    constant DRAG_BETWEEN_ENTER 26
+    constant DRAG_BETWEEN_LEAVE 27
+    constant SWIPE_SELECT 28
+    constant SWIPE_DESELECT 29
+    constant SWIPE_REVEAL 30
+    constant ENTER_PAGE 31
+    constant TRANSITION_PAGE 32
+    constant CROSS_FADE 33
+    constant PEEK 34
+    constant UPDATE_BADGE 35
 
 enum Windows.UI.Core.AnimationMetrics.AnimationEffectTarget python_type
     py AnimationEffectTarget
     signature enum(Windows.UI.Core.AnimationMetrics.AnimationEffectTarget;i4)
+    constant PRIMARY 0
+    constant ADDED 1
+    constant AFFECTED 2
+    constant BACKGROUND 3
+    constant CONTENT 4
+    constant DELETED 5
+    constant DESELECTED 6
+    constant DRAG_SOURCE 7
+    constant HIDDEN 8
+    constant INCOMING 9
+    constant OUTGOING 10
+    constant OUTLINE 11
+    constant REMAINING 12
+    constant REVEALED 13
+    constant ROW_IN 14
+    constant ROW_OUT 15
+    constant SELECTED 16
+    constant SELECTION 17
+    constant SHOWN 18
+    constant TAPPED 19
 
 interface Windows.UI.Core.AnimationMetrics.IAnimationDescription
     guid 7d11a549-be3d-41de-b081-05c149962f9b
@@ -307,6 +363,9 @@ class Windows.UI.Core.AnimationMetrics.PropertyAnimation python_type
 enum Windows.UI.Core.AnimationMetrics.PropertyAnimationType python_type
     py PropertyAnimationType
     signature enum(Windows.UI.Core.AnimationMetrics.PropertyAnimationType;i4)
+    constant SCALE 0
+    constant TRANSLATION 1
+    constant OPACITY 2
 
 class Windows.UI.Core.AnimationMetrics.ScaleAnimation python_type
     py ScaleAnimation

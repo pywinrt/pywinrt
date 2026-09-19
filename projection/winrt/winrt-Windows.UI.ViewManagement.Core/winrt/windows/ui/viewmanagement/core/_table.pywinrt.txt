@@ -183,6 +183,14 @@ class Windows.UI.ViewManagement.Core.CoreInputViewHidingEventArgs python_type
 enum Windows.UI.ViewManagement.Core.CoreInputViewKind python_type
     py CoreInputViewKind
     signature enum(Windows.UI.ViewManagement.Core.CoreInputViewKind;i4)
+    constant DEFAULT 0
+    constant KEYBOARD 1
+    constant HANDWRITING 2
+    constant EMOJI 3
+    constant SYMBOLS 4
+    constant CLIPBOARD 5
+    constant DICTATION 6
+    constant GAMEPAD 7
 
 class Windows.UI.ViewManagement.Core.CoreInputViewOcclusion python_type
     py CoreInputViewOcclusion
@@ -199,6 +207,9 @@ class Windows.UI.ViewManagement.Core.CoreInputViewOcclusion python_type
 enum Windows.UI.ViewManagement.Core.CoreInputViewOcclusionKind python_type
     py CoreInputViewOcclusionKind
     signature enum(Windows.UI.ViewManagement.Core.CoreInputViewOcclusionKind;i4)
+    constant DOCKED 0
+    constant FLOATING 1
+    constant OVERLAY 2
 
 class Windows.UI.ViewManagement.Core.CoreInputViewOcclusionsChangedEventArgs python_type
     py CoreInputViewOcclusionsChangedEventArgs
@@ -248,6 +259,10 @@ class Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs p
 enum Windows.UI.ViewManagement.Core.CoreInputViewXYFocusTransferDirection python_type
     py CoreInputViewXYFocusTransferDirection
     signature enum(Windows.UI.ViewManagement.Core.CoreInputViewXYFocusTransferDirection;i4)
+    constant UP 0
+    constant RIGHT 1
+    constant DOWN 2
+    constant LEFT 3
 
 interface Windows.Foundation.IAsyncOperation<Windows.UI.ViewManagement.Core.UISettingsController> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[UISettingsController]

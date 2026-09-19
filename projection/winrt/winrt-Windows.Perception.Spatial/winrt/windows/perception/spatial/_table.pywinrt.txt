@@ -709,6 +709,8 @@ class Windows.Perception.Spatial.SpatialAnchor python_type
 enum Windows.Perception.Spatial.SpatialAnchorExportPurpose python_type
     py SpatialAnchorExportPurpose
     signature enum(Windows.Perception.Spatial.SpatialAnchorExportPurpose;i4)
+    constant RELOCALIZATION 0
+    constant SHARING 1
 
 class Windows.Perception.Spatial.SpatialAnchorExportSufficiency python_type
     py SpatialAnchorExportSufficiency
@@ -982,10 +984,21 @@ class Windows.Perception.Spatial.SpatialEntityWatcher python_type
 enum Windows.Perception.Spatial.SpatialEntityWatcherStatus python_type
     py SpatialEntityWatcherStatus
     signature enum(Windows.Perception.Spatial.SpatialEntityWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPING 3
+    constant STOPPED 4
+    constant ABORTED 5
 
 enum Windows.Perception.Spatial.SpatialLocatability python_type
     py SpatialLocatability
     signature enum(Windows.Perception.Spatial.SpatialLocatability;i4)
+    constant UNAVAILABLE 0
+    constant ORIENTATION_ONLY 1
+    constant POSITIONAL_TRACKING_ACTIVATING 2
+    constant POSITIONAL_TRACKING_ACTIVE 3
+    constant POSITIONAL_TRACKING_INHIBITED 4
 
 class Windows.Perception.Spatial.SpatialLocation python_type
     py SpatialLocation
@@ -1119,14 +1132,22 @@ class Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEve
 enum Windows.Perception.Spatial.SpatialLookDirectionRange python_type
     py SpatialLookDirectionRange
     signature enum(Windows.Perception.Spatial.SpatialLookDirectionRange;i4)
+    constant FORWARD_ONLY 0
+    constant OMNIDIRECTIONAL 1
 
 enum Windows.Perception.Spatial.SpatialMovementRange python_type
     py SpatialMovementRange
     signature enum(Windows.Perception.Spatial.SpatialMovementRange;i4)
+    constant NO_MOVEMENT 0
+    constant BOUNDED 1
 
 enum Windows.Perception.Spatial.SpatialPerceptionAccessStatus python_type
     py SpatialPerceptionAccessStatus
     signature enum(Windows.Perception.Spatial.SpatialPerceptionAccessStatus;i4)
+    constant UNSPECIFIED 0
+    constant ALLOWED 1
+    constant DENIED_BY_USER 2
+    constant DENIED_BY_SYSTEM 3
 
 struct Windows.Perception.Spatial.SpatialRay python_type
     py SpatialRay

@@ -42,6 +42,13 @@ class Windows.UI.Input.CrossSlidingEventArgs python_type
 enum Windows.UI.Input.CrossSlidingState python_type
     py CrossSlidingState
     signature enum(Windows.UI.Input.CrossSlidingState;i4)
+    constant STARTED 0
+    constant DRAGGING 1
+    constant SELECTING 2
+    constant SELECT_SPEED_BUMPING 3
+    constant SPEED_BUMPING 4
+    constant REARRANGING 5
+    constant COMPLETED 6
 
 class Windows.UI.Input.DraggingEventArgs python_type
     py DraggingEventArgs
@@ -65,6 +72,9 @@ class Windows.UI.Input.DraggingEventArgs python_type
 enum Windows.UI.Input.DraggingState python_type
     py DraggingState
     signature enum(Windows.UI.Input.DraggingState;i4)
+    constant STARTED 0
+    constant CONTINUING 1
+    constant COMPLETED 2
 
 class Windows.UI.Input.EdgeGesture python_type
     py EdgeGesture
@@ -106,10 +116,17 @@ class Windows.UI.Input.EdgeGestureEventArgs python_type
 enum Windows.UI.Input.EdgeGestureKind python_type
     py EdgeGestureKind
     signature enum(Windows.UI.Input.EdgeGestureKind;i4)
+    constant TOUCH 0
+    constant KEYBOARD 1
+    constant MOUSE 2
 
 enum Windows.UI.Input.GazeInputAccessStatus python_type
     py GazeInputAccessStatus
     signature enum(Windows.UI.Input.GazeInputAccessStatus;i4)
+    constant UNSPECIFIED 0
+    constant ALLOWED 1
+    constant DENIED_BY_USER 2
+    constant DENIED_BY_SYSTEM 3
 
 class Windows.UI.Input.GestureRecognizer activatable python_type
     py GestureRecognizer
@@ -321,9 +338,27 @@ class Windows.UI.Input.GestureRecognizer activatable python_type
         method ProcessUpEvent slot=42 inputs=1 outputs=0 declaring=Windows.UI.Input.IGestureRecognizer shape=4 reverse=319
             in class type=Windows.UI.Input.PointerPoint name=value
 
-enum Windows.UI.Input.GestureSettings python_type
+enum Windows.UI.Input.GestureSettings python_type flags_enum
     py GestureSettings
     signature enum(Windows.UI.Input.GestureSettings;u4)
+    constant NONE 0x0
+    constant TAP 0x1
+    constant DOUBLE_TAP 0x2
+    constant HOLD 0x4
+    constant HOLD_WITH_MOUSE 0x8
+    constant RIGHT_TAP 0x10
+    constant DRAG 0x20
+    constant MANIPULATION_TRANSLATE_X 0x40
+    constant MANIPULATION_TRANSLATE_Y 0x80
+    constant MANIPULATION_TRANSLATE_RAILS_X 0x100
+    constant MANIPULATION_TRANSLATE_RAILS_Y 0x200
+    constant MANIPULATION_ROTATE 0x400
+    constant MANIPULATION_SCALE 0x800
+    constant MANIPULATION_TRANSLATE_INERTIA 0x1000
+    constant MANIPULATION_ROTATE_INERTIA 0x2000
+    constant MANIPULATION_SCALE_INERTIA 0x4000
+    constant CROSS_SLIDE 0x8000
+    constant MANIPULATION_MULTIPLE_FINGER_PANNING 0x10000
 
 class Windows.UI.Input.HoldingEventArgs python_type
     py HoldingEventArgs
@@ -350,6 +385,9 @@ class Windows.UI.Input.HoldingEventArgs python_type
 enum Windows.UI.Input.HoldingState python_type
     py HoldingState
     signature enum(Windows.UI.Input.HoldingState;i4)
+    constant STARTED 0
+    constant COMPLETED 1
+    constant CANCELED 2
 
 interface Windows.UI.Input.IAttachableInputObject
     guid 9b822734-a3c1-542a-b2f4-0e32b773fb07
@@ -990,6 +1028,10 @@ class Windows.UI.Input.InputActivationListenerActivationChangedEventArgs python_
 enum Windows.UI.Input.InputActivationState python_type
     py InputActivationState
     signature enum(Windows.UI.Input.InputActivationState;i4)
+    constant NONE 0
+    constant DEACTIVATED 1
+    constant ACTIVATED_NOT_FOREGROUND 2
+    constant ACTIVATED_IN_FOREGROUND 3
 
 class Windows.UI.Input.KeyboardDeliveryInterceptor python_type
     py KeyboardDeliveryInterceptor
@@ -1397,6 +1439,17 @@ class Windows.UI.Input.PointerPointProperties python_type
 enum Windows.UI.Input.PointerUpdateKind python_type
     py PointerUpdateKind
     signature enum(Windows.UI.Input.PointerUpdateKind;i4)
+    constant OTHER 0
+    constant LEFT_BUTTON_PRESSED 1
+    constant LEFT_BUTTON_RELEASED 2
+    constant RIGHT_BUTTON_PRESSED 3
+    constant RIGHT_BUTTON_RELEASED 4
+    constant MIDDLE_BUTTON_PRESSED 5
+    constant MIDDLE_BUTTON_RELEASED 6
+    constant X_BUTTON1_PRESSED 7
+    constant X_BUTTON1_RELEASED 8
+    constant X_BUTTON2_PRESSED 9
+    constant X_BUTTON2_RELEASED 10
 
 class Windows.UI.Input.PointerVisualizationSettings python_type
     py PointerVisualizationSettings
@@ -1681,6 +1734,15 @@ class Windows.UI.Input.RadialControllerMenuItem python_type
 enum Windows.UI.Input.RadialControllerMenuKnownIcon python_type
     py RadialControllerMenuKnownIcon
     signature enum(Windows.UI.Input.RadialControllerMenuKnownIcon;i4)
+    constant SCROLL 0
+    constant ZOOM 1
+    constant UNDO_REDO 2
+    constant VOLUME 3
+    constant NEXT_PREVIOUS_TRACK 4
+    constant RULER 5
+    constant INK_COLOR 6
+    constant INK_THICKNESS 7
+    constant PEN_TYPE 8
 
 class Windows.UI.Input.RadialControllerRotationChangedEventArgs python_type
     py RadialControllerRotationChangedEventArgs
@@ -1760,6 +1822,11 @@ class Windows.UI.Input.RadialControllerScreenContactStartedEventArgs python_type
 enum Windows.UI.Input.RadialControllerSystemMenuItemKind python_type
     py RadialControllerSystemMenuItemKind
     signature enum(Windows.UI.Input.RadialControllerSystemMenuItemKind;i4)
+    constant SCROLL 0
+    constant ZOOM 1
+    constant UNDO_REDO 2
+    constant VOLUME 3
+    constant NEXT_PREVIOUS_TRACK 4
 
 class Windows.UI.Input.RightTappedEventArgs python_type
     py RightTappedEventArgs
@@ -1930,6 +1997,15 @@ class Windows.UI.Input.TouchpadGesturesController python_type
 enum Windows.UI.Input.TouchpadGlobalAction python_type
     py TouchpadGlobalAction
     signature enum(Windows.UI.Input.TouchpadGlobalAction;i4)
+    constant THREE_FINGER_TAP 0
+    constant FOUR_FINGER_TAP 1
+    constant FIVE_FINGER_TAP 2
+    constant THREE_FINGER_PRESS_DOWN 3
+    constant FOUR_FINGER_PRESS_DOWN 4
+    constant FIVE_FINGER_PRESS_DOWN 5
+    constant THREE_FINGER_PRESS_UP 6
+    constant FOUR_FINGER_PRESS_UP 7
+    constant FIVE_FINGER_PRESS_UP 8
 
 class Windows.UI.Input.TouchpadGlobalActionEventArgs python_type
     py TouchpadGlobalActionEventArgs
@@ -1943,9 +2019,16 @@ class Windows.UI.Input.TouchpadGlobalActionEventArgs python_type
         get get_PointerDevice slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.ITouchpadGlobalActionEventArgs shape=4 reverse=43
             out class type=Windows.Devices.Input.PointerDevice return
 
-enum Windows.UI.Input.TouchpadGlobalGestureKinds python_type
+enum Windows.UI.Input.TouchpadGlobalGestureKinds python_type flags_enum
     py TouchpadGlobalGestureKinds
     signature enum(Windows.UI.Input.TouchpadGlobalGestureKinds;u4)
+    constant NONE 0x0
+    constant THREE_FINGER_MANIPULATIONS 0x1
+    constant FOUR_FINGER_MANIPULATIONS 0x2
+    constant FIVE_FINGER_MANIPULATIONS 0x4
+    constant THREE_FINGER_ACTIONS 0x8
+    constant FOUR_FINGER_ACTIONS 0x10
+    constant FIVE_FINGER_ACTIONS 0x20
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Input.EdgeGesture,Windows.UI.Input.EdgeGestureEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[EdgeGesture, EdgeGestureEventArgs]

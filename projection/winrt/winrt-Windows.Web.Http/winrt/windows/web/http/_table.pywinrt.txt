@@ -453,6 +453,8 @@ class Windows.Web.Http.HttpClient activatable python_type closeable stringable
 enum Windows.Web.Http.HttpCompletionOption python_type
     py HttpCompletionOption
     signature enum(Windows.Web.Http.HttpCompletionOption;i4)
+    constant RESPONSE_CONTENT_READ 0
+    constant RESPONSE_HEADERS_READ 1
 
 class Windows.Web.Http.HttpCookie python_type stringable
     py HttpCookie
@@ -840,6 +842,16 @@ struct Windows.Web.Http.HttpProgress python_type
 enum Windows.Web.Http.HttpProgressStage python_type
     py HttpProgressStage
     signature enum(Windows.Web.Http.HttpProgressStage;i4)
+    constant NONE 0
+    constant DETECTING_PROXY 10
+    constant RESOLVING_NAME 20
+    constant CONNECTING_TO_SERVER 30
+    constant NEGOTIATING_SSL 40
+    constant SENDING_HEADERS 50
+    constant SENDING_CONTENT 60
+    constant WAITING_FOR_RESPONSE 70
+    constant RECEIVING_HEADERS 80
+    constant RECEIVING_CONTENT 90
 
 class Windows.Web.Http.HttpRequestMessage activatable python_type closeable stringable
     py HttpRequestMessage
@@ -979,10 +991,71 @@ class Windows.Web.Http.HttpResponseMessage activatable python_type closeable str
 enum Windows.Web.Http.HttpResponseMessageSource python_type
     py HttpResponseMessageSource
     signature enum(Windows.Web.Http.HttpResponseMessageSource;i4)
+    constant NONE 0
+    constant CACHE 1
+    constant NETWORK 2
 
 enum Windows.Web.Http.HttpStatusCode python_type
     py HttpStatusCode
     signature enum(Windows.Web.Http.HttpStatusCode;i4)
+    constant NONE 0
+    constant CONTINUE 100
+    constant SWITCHING_PROTOCOLS 101
+    constant PROCESSING 102
+    constant OK 200
+    constant CREATED 201
+    constant ACCEPTED 202
+    constant NON_AUTHORITATIVE_INFORMATION 203
+    constant NO_CONTENT 204
+    constant RESET_CONTENT 205
+    constant PARTIAL_CONTENT 206
+    constant MULTI_STATUS 207
+    constant ALREADY_REPORTED 208
+    constant IM_USED 226
+    constant MULTIPLE_CHOICES 300
+    constant MOVED_PERMANENTLY 301
+    constant FOUND 302
+    constant SEE_OTHER 303
+    constant NOT_MODIFIED 304
+    constant USE_PROXY 305
+    constant TEMPORARY_REDIRECT 307
+    constant PERMANENT_REDIRECT 308
+    constant BAD_REQUEST 400
+    constant UNAUTHORIZED 401
+    constant PAYMENT_REQUIRED 402
+    constant FORBIDDEN 403
+    constant NOT_FOUND 404
+    constant METHOD_NOT_ALLOWED 405
+    constant NOT_ACCEPTABLE 406
+    constant PROXY_AUTHENTICATION_REQUIRED 407
+    constant REQUEST_TIMEOUT 408
+    constant CONFLICT 409
+    constant GONE 410
+    constant LENGTH_REQUIRED 411
+    constant PRECONDITION_FAILED 412
+    constant REQUEST_ENTITY_TOO_LARGE 413
+    constant REQUEST_URI_TOO_LONG 414
+    constant UNSUPPORTED_MEDIA_TYPE 415
+    constant REQUESTED_RANGE_NOT_SATISFIABLE 416
+    constant EXPECTATION_FAILED 417
+    constant UNPROCESSABLE_ENTITY 422
+    constant LOCKED 423
+    constant FAILED_DEPENDENCY 424
+    constant UPGRADE_REQUIRED 426
+    constant PRECONDITION_REQUIRED 428
+    constant TOO_MANY_REQUESTS 429
+    constant REQUEST_HEADER_FIELDS_TOO_LARGE 431
+    constant INTERNAL_SERVER_ERROR 500
+    constant NOT_IMPLEMENTED 501
+    constant BAD_GATEWAY 502
+    constant SERVICE_UNAVAILABLE 503
+    constant GATEWAY_TIMEOUT 504
+    constant HTTP_VERSION_NOT_SUPPORTED 505
+    constant VARIANT_ALSO_NEGOTIATES 506
+    constant INSUFFICIENT_STORAGE 507
+    constant LOOP_DETECTED 508
+    constant NOT_EXTENDED 510
+    constant NETWORK_AUTHENTICATION_REQUIRED 511
 
 class Windows.Web.Http.HttpStreamContent python_type closeable stringable
     py HttpStreamContent
@@ -1100,6 +1173,10 @@ class Windows.Web.Http.HttpTransportInformation python_type stringable
 enum Windows.Web.Http.HttpVersion python_type
     py HttpVersion
     signature enum(Windows.Web.Http.HttpVersion;i4)
+    constant NONE 0
+    constant HTTP10 1
+    constant HTTP11 2
+    constant HTTP20 3
 
 interface Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> concrete awaitable
     py winrt.windows.foundation._IAsyncOperationWithProgress[String, UInt64]

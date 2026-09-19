@@ -670,6 +670,8 @@ class Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationResponse python
 enum Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode python_type
     py CoreWebView2BoundsMode
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2BoundsMode;i4)
+    constant USE_RAW_PIXELS 0
+    constant USE_RASTERIZATION_SCALE 1
 
 class Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension python_type
     py CoreWebView2BrowserExtension
@@ -696,6 +698,8 @@ class Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2BrowserProcessExitKind python_type
     py CoreWebView2BrowserProcessExitKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2BrowserProcessExitKind;i4)
+    constant NORMAL 0
+    constant FAILED 1
 
 class Microsoft.Web.WebView2.Core.CoreWebView2BrowserProcessExitedEventArgs python_type
     py CoreWebView2BrowserProcessExitedEventArgs
@@ -709,13 +713,31 @@ class Microsoft.Web.WebView2.Core.CoreWebView2BrowserProcessExitedEventArgs pyth
         get get_BrowserProcessId slot=7 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2BrowserProcessExitedEventArgs shape=4 reverse=43
             out uint32 return
 
-enum Microsoft.Web.WebView2.Core.CoreWebView2BrowsingDataKinds python_type
+enum Microsoft.Web.WebView2.Core.CoreWebView2BrowsingDataKinds python_type flags_enum
     py CoreWebView2BrowsingDataKinds
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2BrowsingDataKinds;u4)
+    constant FILE_SYSTEMS 0x1
+    constant INDEXED_DB 0x2
+    constant LOCAL_STORAGE 0x4
+    constant WEB_SQL 0x8
+    constant CACHE_STORAGE 0x10
+    constant ALL_DOM_STORAGE 0x20
+    constant COOKIES 0x40
+    constant ALL_SITE 0x80
+    constant DISK_CACHE 0x100
+    constant DOWNLOAD_HISTORY 0x200
+    constant GENERAL_AUTOFILL 0x400
+    constant PASSWORD_AUTOSAVE 0x800
+    constant BROWSING_HISTORY 0x1000
+    constant SETTINGS 0x2000
+    constant ALL_PROFILE 0x4000
+    constant SERVICE_WORKERS 0x8000
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat python_type
     py CoreWebView2CapturePreviewImageFormat
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2CapturePreviewImageFormat;i4)
+    constant PNG 0
+    constant JPEG 1
 
 class Microsoft.Web.WebView2.Core.CoreWebView2Certificate python_type
     py CoreWebView2Certificate
@@ -757,6 +779,8 @@ interface Microsoft.Web.WebView2.Core.CoreWebView2Certificate_Manual
 enum Microsoft.Web.WebView2.Core.CoreWebView2ChannelSearchKind python_type
     py CoreWebView2ChannelSearchKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2ChannelSearchKind;i4)
+    constant MOST_STABLE 0
+    constant LEAST_STABLE 1
 
 class Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate python_type
     py CoreWebView2ClientCertificate
@@ -798,6 +822,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateKind python_type
     py CoreWebView2ClientCertificateKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateKind;i4)
+    constant SMART_CARD 0
+    constant PIN 1
+    constant OTHER 2
 
 class Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs python_type
     py CoreWebView2ClientCertificateRequestedEventArgs
@@ -965,6 +992,11 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItemKind python_type
     py CoreWebView2ContextMenuItemKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItemKind;i4)
+    constant COMMAND 0
+    constant CHECK_BOX 1
+    constant RADIO 2
+    constant SEPARATOR 3
+    constant SUBMENU 4
 
 class Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs python_type
     py CoreWebView2ContextMenuRequestedEventArgs
@@ -1042,6 +1074,11 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTargetKind python_type
     py CoreWebView2ContextMenuTargetKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTargetKind;i4)
+    constant PAGE 0
+    constant IMAGE 1
+    constant SELECTED_TEXT 2
+    constant AUDIO 3
+    constant VIDEO 4
 
 class Microsoft.Web.WebView2.Core.CoreWebView2Controller composable python_type
     py CoreWebView2Controller
@@ -1280,6 +1317,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2CookieManager python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind python_type
     py CoreWebView2CookieSameSiteKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind;i4)
+    constant NONE 0
+    constant LAX 1
+    constant STRICT 2
 
 class Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration python_type
     py CoreWebView2CustomSchemeRegistration
@@ -1321,6 +1361,10 @@ class Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs python_t
 enum Microsoft.Web.WebView2.Core.CoreWebView2DefaultDownloadDialogCornerAlignment python_type
     py CoreWebView2DefaultDownloadDialogCornerAlignment
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2DefaultDownloadDialogCornerAlignment;i4)
+    constant TOP_LEFT 0
+    constant TOP_RIGHT 1
+    constant BOTTOM_LEFT 2
+    constant BOTTOM_RIGHT 3
 
 class Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs python_type
     py CoreWebView2DevToolsProtocolEventReceivedEventArgs
@@ -1350,6 +1394,36 @@ class Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver pyth
 enum Microsoft.Web.WebView2.Core.CoreWebView2DownloadInterruptReason python_type
     py CoreWebView2DownloadInterruptReason
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2DownloadInterruptReason;i4)
+    constant NONE 0
+    constant FILE_FAILED 1
+    constant FILE_ACCESS_DENIED 2
+    constant FILE_NO_SPACE 3
+    constant FILE_NAME_TOO_LONG 4
+    constant FILE_TOO_LARGE 5
+    constant FILE_MALICIOUS 6
+    constant FILE_TRANSIENT_ERROR 7
+    constant FILE_BLOCKED_BY_POLICY 8
+    constant FILE_SECURITY_CHECK_FAILED 9
+    constant FILE_TOO_SHORT 10
+    constant FILE_HASH_MISMATCH 11
+    constant NETWORK_FAILED 12
+    constant NETWORK_TIMEOUT 13
+    constant NETWORK_DISCONNECTED 14
+    constant NETWORK_SERVER_DOWN 15
+    constant NETWORK_INVALID_REQUEST 16
+    constant SERVER_FAILED 17
+    constant SERVER_NO_RANGE 18
+    constant SERVER_BAD_CONTENT 19
+    constant SERVER_UNAUTHORIZED 20
+    constant SERVER_CERTIFICATE_PROBLEM 21
+    constant SERVER_FORBIDDEN 22
+    constant SERVER_UNEXPECTED_RESPONSE 23
+    constant SERVER_CONTENT_LENGTH_MISMATCH 24
+    constant SERVER_CROSS_ORIGIN_REDIRECT 25
+    constant USER_CANCELED 26
+    constant USER_SHUTDOWN 27
+    constant USER_PAUSED 28
+    constant DOWNLOAD_PROCESS_CRASHED 29
 
 class Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation python_type
     py CoreWebView2DownloadOperation
@@ -1441,6 +1515,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs python_t
 enum Microsoft.Web.WebView2.Core.CoreWebView2DownloadState python_type
     py CoreWebView2DownloadState
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2DownloadState;i4)
+    constant IN_PROGRESS 0
+    constant INTERRUPTED 1
+    constant COMPLETED 2
 
 class Microsoft.Web.WebView2.Core.CoreWebView2Environment python_type
     py CoreWebView2Environment
@@ -1681,6 +1758,8 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ExecuteScriptResult python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2FaviconImageFormat python_type
     py CoreWebView2FaviconImageFormat
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2FaviconImageFormat;i4)
+    constant PNG 0
+    constant JPEG 1
 
 class Microsoft.Web.WebView2.Core.CoreWebView2File python_type
     py CoreWebView2File
@@ -1709,10 +1788,14 @@ class Microsoft.Web.WebView2.Core.CoreWebView2FileSystemHandle python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2FileSystemHandleKind python_type
     py CoreWebView2FileSystemHandleKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2FileSystemHandleKind;i4)
+    constant FILE 0
+    constant DIRECTORY 1
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2FileSystemHandlePermission python_type
     py CoreWebView2FileSystemHandlePermission
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2FileSystemHandlePermission;i4)
+    constant READ_ONLY 0
+    constant READ_WRITE 1
 
 class Microsoft.Web.WebView2.Core.CoreWebView2Frame python_type
     py CoreWebView2Frame
@@ -1847,10 +1930,18 @@ class Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2FrameKind python_type
     py CoreWebView2FrameKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2FrameKind;i4)
+    constant UNKNOWN 0
+    constant MAIN_FRAME 1
+    constant IFRAME 2
+    constant EMBED 3
+    constant OBJECT 4
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind python_type
     py CoreWebView2HostResourceAccessKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2HostResourceAccessKind;i4)
+    constant DENY 0
+    constant ALLOW 1
+    constant DENY_CORS 2
 
 class Microsoft.Web.WebView2.Core.CoreWebView2HttpHeadersCollectionIterator python_type iterable iterator
     py CoreWebView2HttpHeadersCollectionIterator
@@ -1930,6 +2021,10 @@ class Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders python_type it
 enum Microsoft.Web.WebView2.Core.CoreWebView2KeyEventKind python_type
     py CoreWebView2KeyEventKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2KeyEventKind;i4)
+    constant KEY_DOWN 0
+    constant KEY_UP 1
+    constant SYSTEM_KEY_DOWN 2
+    constant SYSTEM_KEY_UP 3
 
 class Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs python_type
     py CoreWebView2LaunchingExternalUriSchemeEventArgs
@@ -1957,18 +2052,49 @@ class Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArg
 enum Microsoft.Web.WebView2.Core.CoreWebView2MemoryUsageTargetLevel python_type
     py CoreWebView2MemoryUsageTargetLevel
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2MemoryUsageTargetLevel;i4)
+    constant NORMAL 0
+    constant LOW 1
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind python_type
     py CoreWebView2MouseEventKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind;i4)
+    constant HORIZONTAL_WHEEL 526
+    constant LEFT_BUTTON_DOUBLE_CLICK 515
+    constant LEFT_BUTTON_DOWN 513
+    constant LEFT_BUTTON_UP 514
+    constant LEAVE 675
+    constant MIDDLE_BUTTON_DOUBLE_CLICK 521
+    constant MIDDLE_BUTTON_DOWN 519
+    constant MIDDLE_BUTTON_UP 520
+    constant MOVE 512
+    constant RIGHT_BUTTON_DOUBLE_CLICK 518
+    constant RIGHT_BUTTON_DOWN 516
+    constant RIGHT_BUTTON_UP 517
+    constant WHEEL 522
+    constant X_BUTTON_DOUBLE_CLICK 525
+    constant X_BUTTON_DOWN 523
+    constant X_BUTTON_UP 524
+    constant NON_CLIENT_RIGHT_BUTTON_DOWN 164
+    constant NON_CLIENT_RIGHT_BUTTON_UP 165
 
-enum Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys python_type
+enum Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys python_type flags_enum
     py CoreWebView2MouseEventVirtualKeys
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys;u4)
+    constant NONE 0x0
+    constant LEFT_BUTTON 0x1
+    constant RIGHT_BUTTON 0x2
+    constant SHIFT 0x4
+    constant CONTROL 0x8
+    constant MIDDLE_BUTTON 0x10
+    constant X_BUTTON1 0x20
+    constant X_BUTTON2 0x40
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason python_type
     py CoreWebView2MoveFocusReason
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusReason;i4)
+    constant PROGRAMMATIC 0
+    constant NEXT 1
+    constant PREVIOUS 2
 
 class Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs python_type
     py CoreWebView2MoveFocusRequestedEventArgs
@@ -2006,6 +2132,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs pytho
 enum Microsoft.Web.WebView2.Core.CoreWebView2NavigationKind python_type
     py CoreWebView2NavigationKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2NavigationKind;i4)
+    constant RELOAD 0
+    constant BACK_OR_FORWARD 1
+    constant NEW_DOCUMENT 2
 
 class Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs python_type
     py CoreWebView2NavigationStartingEventArgs
@@ -2091,6 +2220,12 @@ class Microsoft.Web.WebView2.Core.CoreWebView2NonClientRegionChangedEventArgs py
 enum Microsoft.Web.WebView2.Core.CoreWebView2NonClientRegionKind python_type
     py CoreWebView2NonClientRegionKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2NonClientRegionKind;i4)
+    constant NOWHERE 0
+    constant CLIENT 1
+    constant CAPTION 2
+    constant MINIMIZE 8
+    constant MAXIMIZE 9
+    constant CLOSE 20
 
 class Microsoft.Web.WebView2.Core.CoreWebView2Notification python_type
     py CoreWebView2Notification
@@ -2170,13 +2305,40 @@ class Microsoft.Web.WebView2.Core.CoreWebView2NotificationReceivedEventArgs pyth
         method GetDeferral slot=10 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2NotificationReceivedEventArgs shape=4 reverse=121
             out class type=Windows.Foundation.Deferral return
 
-enum Microsoft.Web.WebView2.Core.CoreWebView2PdfToolbarItems python_type
+enum Microsoft.Web.WebView2.Core.CoreWebView2PdfToolbarItems python_type flags_enum
     py CoreWebView2PdfToolbarItems
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2PdfToolbarItems;u4)
+    constant NONE 0x0
+    constant SAVE 0x1
+    constant PRINT 0x2
+    constant SAVE_AS 0x4
+    constant ZOOM_IN 0x8
+    constant ZOOM_OUT 0x10
+    constant ROTATE 0x20
+    constant FIT_PAGE 0x40
+    constant PAGE_LAYOUT 0x80
+    constant BOOKMARKS 0x100
+    constant PAGE_SELECTOR 0x200
+    constant SEARCH 0x400
+    constant FULL_SCREEN 0x800
+    constant MORE_SETTINGS 0x1000
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind python_type
     py CoreWebView2PermissionKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind;i4)
+    constant UNKNOWN_PERMISSION 0
+    constant MICROPHONE 1
+    constant CAMERA 2
+    constant GEOLOCATION 3
+    constant NOTIFICATIONS 4
+    constant OTHER_SENSORS 5
+    constant CLIPBOARD_READ 6
+    constant MULTIPLE_AUTOMATIC_DOWNLOADS 7
+    constant FILE_READ_WRITE 8
+    constant AUTOPLAY 9
+    constant LOCAL_FONTS 10
+    constant MIDI_SYSTEM_EXCLUSIVE_MESSAGES 11
+    constant WINDOW_MANAGEMENT 12
 
 class Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs python_type
     py CoreWebView2PermissionRequestedEventArgs
@@ -2231,6 +2393,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2PermissionState python_type
     py CoreWebView2PermissionState
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2PermissionState;i4)
+    constant DEFAULT 0
+    constant ALLOW 1
+    constant DENY 2
 
 struct Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus python_type
     py CoreWebView2PhysicalKeyStatus
@@ -2245,6 +2410,12 @@ struct Microsoft.Web.WebView2.Core.CoreWebView2PhysicalKeyStatus python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind python_type
     py CoreWebView2PointerEventKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind;i4)
+    constant ACTIVATE 587
+    constant DOWN 582
+    constant ENTER 585
+    constant LEAVE 586
+    constant UP 583
+    constant UPDATE 581
 
 class Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo python_type
     py CoreWebView2PointerInfo
@@ -2395,30 +2566,49 @@ class Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2PreferredColorScheme python_type
     py CoreWebView2PreferredColorScheme
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2PreferredColorScheme;i4)
+    constant AUTO 0
+    constant LIGHT 1
+    constant DARK 2
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2PrintCollation python_type
     py CoreWebView2PrintCollation
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2PrintCollation;i4)
+    constant DEFAULT 0
+    constant COLLATED 1
+    constant UNCOLLATED 2
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2PrintColorMode python_type
     py CoreWebView2PrintColorMode
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2PrintColorMode;i4)
+    constant DEFAULT 0
+    constant COLOR 1
+    constant GRAYSCALE 2
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2PrintDialogKind python_type
     py CoreWebView2PrintDialogKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2PrintDialogKind;i4)
+    constant BROWSER 0
+    constant SYSTEM 1
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2PrintDuplex python_type
     py CoreWebView2PrintDuplex
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2PrintDuplex;i4)
+    constant DEFAULT 0
+    constant ONE_SIDED 1
+    constant TWO_SIDED_LONG_EDGE 2
+    constant TWO_SIDED_SHORT_EDGE 3
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2PrintMediaSize python_type
     py CoreWebView2PrintMediaSize
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2PrintMediaSize;i4)
+    constant DEFAULT 0
+    constant CUSTOM 1
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2PrintOrientation python_type
     py CoreWebView2PrintOrientation
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2PrintOrientation;i4)
+    constant PORTRAIT 0
+    constant LANDSCAPE 1
 
 class Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings python_type
     py CoreWebView2PrintSettings
@@ -2535,6 +2725,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2PrintStatus python_type
     py CoreWebView2PrintStatus
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2PrintStatus;i4)
+    constant SUCCEEDED 0
+    constant PRINTER_UNAVAILABLE 1
+    constant OTHER_ERROR 2
 
 class Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo python_type
     py CoreWebView2ProcessExtendedInfo
@@ -2577,10 +2770,27 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedKind python_type
     py CoreWebView2ProcessFailedKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedKind;i4)
+    constant BROWSER_PROCESS_EXITED 0
+    constant RENDER_PROCESS_EXITED 1
+    constant RENDER_PROCESS_UNRESPONSIVE 2
+    constant FRAME_RENDER_PROCESS_EXITED 3
+    constant UTILITY_PROCESS_EXITED 4
+    constant SANDBOX_HELPER_PROCESS_EXITED 5
+    constant GPU_PROCESS_EXITED 6
+    constant PPAPI_PLUGIN_PROCESS_EXITED 7
+    constant PPAPI_BROKER_PROCESS_EXITED 8
+    constant UNKNOWN_PROCESS_EXITED 9
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedReason python_type
     py CoreWebView2ProcessFailedReason
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedReason;i4)
+    constant UNEXPECTED 0
+    constant UNRESPONSIVE 1
+    constant TERMINATED 2
+    constant CRASHED 3
+    constant LAUNCH_FAILED 4
+    constant OUT_OF_MEMORY 5
+    constant PROFILE_DELETED 6
 
 class Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo python_type
     py CoreWebView2ProcessInfo
@@ -2597,6 +2807,13 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2ProcessKind python_type
     py CoreWebView2ProcessKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2ProcessKind;i4)
+    constant BROWSER 0
+    constant RENDERER 1
+    constant UTILITY 2
+    constant SANDBOX_HELPER 3
+    constant GPU 4
+    constant PPAPI_PLUGIN 5
+    constant PPAPI_BROKER 6
 
 class Microsoft.Web.WebView2.Core.CoreWebView2Profile python_type
     py CoreWebView2Profile
@@ -2695,17 +2912,31 @@ interface Microsoft.Web.WebView2.Core.CoreWebView2Profile_Manual2
 interface Microsoft.Web.WebView2.Core.CoreWebView2Profile_Manual3
     guid c6129971-9ecc-5634-8896-723c1dbacd6f
 
-enum Microsoft.Web.WebView2.Core.CoreWebView2ReleaseChannels python_type
+enum Microsoft.Web.WebView2.Core.CoreWebView2ReleaseChannels python_type flags_enum
     py CoreWebView2ReleaseChannels
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2ReleaseChannels;u4)
+    constant NONE 0x0
+    constant STABLE 0x1
+    constant BETA 0x2
+    constant DEV 0x4
+    constant CANARY 0x8
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2SaveAsKind python_type
     py CoreWebView2SaveAsKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2SaveAsKind;i4)
+    constant DEFAULT 0
+    constant HTML_ONLY 1
+    constant SINGLE_FILE 2
+    constant COMPLETE 3
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2SaveAsUIResult python_type
     py CoreWebView2SaveAsUIResult
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2SaveAsUIResult;i4)
+    constant SUCCESS 0
+    constant INVALID_PATH 1
+    constant FILE_ALREADY_EXISTS 2
+    constant KIND_NOT_SUPPORTED 3
+    constant CANCELLED 4
 
 class Microsoft.Web.WebView2.Core.CoreWebView2SaveAsUIShowingEventArgs python_type
     py CoreWebView2SaveAsUIShowingEventArgs
@@ -2797,6 +3028,10 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ScreenCaptureStartingEventArgs pyt
 enum Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind python_type
     py CoreWebView2ScriptDialogKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogKind;i4)
+    constant ALERT 0
+    constant CONFIRM 1
+    constant PROMPT 2
+    constant BEFOREUNLOAD 3
 
 class Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs python_type
     py CoreWebView2ScriptDialogOpeningEventArgs
@@ -2850,10 +3085,15 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ScriptException python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2ScrollbarStyle python_type
     py CoreWebView2ScrollbarStyle
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2ScrollbarStyle;i4)
+    constant DEFAULT 0
+    constant FLUENT_OVERLAY 1
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorAction python_type
     py CoreWebView2ServerCertificateErrorAction
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorAction;i4)
+    constant ALWAYS_ALLOW 0
+    constant CANCEL 1
+    constant DEFAULT 2
 
 class Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs python_type
     py CoreWebView2ServerCertificateErrorDetectedEventArgs
@@ -3010,6 +3250,8 @@ class Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer python_type closeable
 enum Microsoft.Web.WebView2.Core.CoreWebView2SharedBufferAccess python_type
     py CoreWebView2SharedBufferAccess
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2SharedBufferAccess;i4)
+    constant READ_ONLY 0
+    constant READ_WRITE 1
 
 class Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs python_type
     py CoreWebView2SourceChangedEventArgs
@@ -3023,14 +3265,40 @@ class Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs python_type
 enum Microsoft.Web.WebView2.Core.CoreWebView2TextDirectionKind python_type
     py CoreWebView2TextDirectionKind
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2TextDirectionKind;i4)
+    constant DEFAULT 0
+    constant LEFT_TO_RIGHT 1
+    constant RIGHT_TO_LEFT 2
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2TrackingPreventionLevel python_type
     py CoreWebView2TrackingPreventionLevel
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2TrackingPreventionLevel;i4)
+    constant NONE 0
+    constant BASIC 1
+    constant BALANCED 2
+    constant STRICT 3
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus python_type
     py CoreWebView2WebErrorStatus
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2WebErrorStatus;i4)
+    constant UNKNOWN 0
+    constant CERTIFICATE_COMMON_NAME_IS_INCORRECT 1
+    constant CERTIFICATE_EXPIRED 2
+    constant CLIENT_CERTIFICATE_CONTAINS_ERRORS 3
+    constant CERTIFICATE_REVOKED 4
+    constant CERTIFICATE_IS_INVALID 5
+    constant SERVER_UNREACHABLE 6
+    constant TIMEOUT 7
+    constant ERROR_HTTP_INVALID_SERVER_RESPONSE 8
+    constant CONNECTION_ABORTED 9
+    constant CONNECTION_RESET 10
+    constant DISCONNECTED 11
+    constant CANNOT_CONNECT 12
+    constant HOST_NAME_NOT_RESOLVED 13
+    constant OPERATION_CANCELED 14
+    constant REDIRECT_FAILED 15
+    constant UNEXPECTED_ERROR 16
+    constant VALID_AUTHENTICATION_CREDENTIALS_REQUIRED 17
+    constant VALID_PROXY_AUTHENTICATION_REQUIRED 18
 
 class Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs python_type
     py CoreWebView2WebMessageReceivedEventArgs
@@ -3054,6 +3322,23 @@ class Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs python
 enum Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext python_type
     py CoreWebView2WebResourceContext
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2WebResourceContext;i4)
+    constant ALL 0
+    constant DOCUMENT 1
+    constant STYLESHEET 2
+    constant IMAGE 3
+    constant MEDIA 4
+    constant FONT 5
+    constant SCRIPT 6
+    constant XML_HTTP_REQUEST 7
+    constant FETCH 8
+    constant TEXT_TRACK 9
+    constant EVENT_SOURCE 10
+    constant WEBSOCKET 11
+    constant MANIFEST 12
+    constant SIGNED_EXCHANGE 13
+    constant PING 14
+    constant CSP_VIOLATION_REPORT 15
+    constant OTHER 16
 
 class Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest python_type
     py CoreWebView2WebResourceRequest
@@ -3079,9 +3364,14 @@ class Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest python_type
         get get_Headers slot=12 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2WebResourceRequest shape=4 reverse=162
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders return
 
-enum Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestSourceKinds python_type
+enum Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestSourceKinds python_type flags_enum
     py CoreWebView2WebResourceRequestSourceKinds
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestSourceKinds;u4)
+    constant NONE 0x0
+    constant DOCUMENT 0x1
+    constant SHARED_WORKER 0x2
+    constant SERVICE_WORKER 0x4
+    constant ALL 0xFFFFFFFF
 
 class Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs python_type
     py CoreWebView2WebResourceRequestedEventArgs

@@ -240,10 +240,17 @@ class Windows.Storage.ApplicationDataContainerSettings python_type iterable mapp
 enum Windows.Storage.ApplicationDataCreateDisposition python_type
     py ApplicationDataCreateDisposition
     signature enum(Windows.Storage.ApplicationDataCreateDisposition;i4)
+    constant ALWAYS 0
+    constant EXISTING 1
 
 enum Windows.Storage.ApplicationDataLocality python_type
     py ApplicationDataLocality
     signature enum(Windows.Storage.ApplicationDataLocality;i4)
+    constant LOCAL 0
+    constant ROAMING 1
+    constant TEMPORARY 2
+    constant LOCAL_CACHE 3
+    constant SHARED_LOCAL 4
 
 delegate Windows.Storage.ApplicationDataSetVersionHandler python_type
     py ApplicationDataSetVersionHandler
@@ -533,6 +540,10 @@ class Windows.Storage.CachedFileManager static python_type
 enum Windows.Storage.CreationCollisionOption python_type
     py CreationCollisionOption
     signature enum(Windows.Storage.CreationCollisionOption;i4)
+    constant GENERATE_UNIQUE_NAME 0
+    constant REPLACE_EXISTING 1
+    constant FAIL_IF_EXISTS 2
+    constant OPEN_IF_EXISTS 3
 
 class Windows.Storage.DownloadsFolder static python_type
     py DownloadsFolder
@@ -578,10 +589,18 @@ class Windows.Storage.DownloadsFolder static python_type
 enum Windows.Storage.FileAccessMode python_type
     py FileAccessMode
     signature enum(Windows.Storage.FileAccessMode;i4)
+    constant READ 0
+    constant READ_WRITE 1
 
-enum Windows.Storage.FileAttributes python_type
+enum Windows.Storage.FileAttributes python_type flags_enum
     py FileAttributes
     signature enum(Windows.Storage.FileAttributes;u4)
+    constant NORMAL 0x0
+    constant READ_ONLY 0x1
+    constant DIRECTORY 0x10
+    constant ARCHIVE 0x20
+    constant TEMPORARY 0x100
+    constant LOCALLY_INCOMPLETE 0x200
 
 class Windows.Storage.FileIO static python_type
     py FileIO
@@ -2602,6 +2621,23 @@ enum K parameterized
 enum Windows.Storage.KnownFolderId python_type
     py KnownFolderId
     signature enum(Windows.Storage.KnownFolderId;i4)
+    constant APP_CAPTURES 0
+    constant CAMERA_ROLL 1
+    constant DOCUMENTS_LIBRARY 2
+    constant HOME_GROUP 3
+    constant MEDIA_SERVER_DEVICES 4
+    constant MUSIC_LIBRARY 5
+    constant OBJECTS_3D 6
+    constant PICTURES_LIBRARY 7
+    constant PLAYLISTS 8
+    constant RECORDED_CALLS 9
+    constant REMOVABLE_DEVICES 10
+    constant SAVED_PICTURES 11
+    constant SCREENSHOTS 12
+    constant VIDEOS_LIBRARY 13
+    constant ALL_APP_MODS 14
+    constant CURRENT_APP_MODS 15
+    constant DOWNLOADS_FOLDER 16
 
 class Windows.Storage.KnownFolders static python_type
     py KnownFolders
@@ -2673,10 +2709,20 @@ class Windows.Storage.KnownFolders static python_type
 enum Windows.Storage.KnownFoldersAccessStatus python_type
     py KnownFoldersAccessStatus
     signature enum(Windows.Storage.KnownFoldersAccessStatus;i4)
+    constant DENIED_BY_SYSTEM 0
+    constant NOT_DECLARED_BY_APP 1
+    constant DENIED_BY_USER 2
+    constant USER_PROMPT_REQUIRED 3
+    constant ALLOWED 4
+    constant ALLOWED_PER_APP_FOLDER 5
 
 enum Windows.Storage.KnownLibraryId python_type
     py KnownLibraryId
     signature enum(Windows.Storage.KnownLibraryId;i4)
+    constant MUSIC 0
+    constant PICTURES 1
+    constant VIDEOS 2
+    constant DOCUMENTS 3
 
 delegate Windows.Foundation.Collections.MapChangedEventHandler<System.String,System.Object> concrete
     py winrt.windows.foundation.collections.MapChangedEventHandler[String, Object]
@@ -2693,6 +2739,9 @@ delegate Windows.Foundation.Collections.MapChangedEventHandler<System.String,Sys
 enum Windows.Storage.NameCollisionOption python_type
     py NameCollisionOption
     signature enum(Windows.Storage.NameCollisionOption;i4)
+    constant GENERATE_UNIQUE_NAME 0
+    constant REPLACE_EXISTING 1
+    constant FAIL_IF_EXISTS 2
 
 class Windows.Storage.PathIO static python_type
     py PathIO
@@ -2794,6 +2843,8 @@ class Windows.Storage.SetVersionRequest python_type
 enum Windows.Storage.StorageDeleteOption python_type
     py StorageDeleteOption
     signature enum(Windows.Storage.StorageDeleteOption;i4)
+    constant DEFAULT 0
+    constant PERMANENT_DELETE 1
 
 class Windows.Storage.StorageFile python_type
     py StorageFile
@@ -3205,9 +3256,12 @@ class Windows.Storage.StorageFolder python_type
             in string name=name
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> return
 
-enum Windows.Storage.StorageItemTypes python_type
+enum Windows.Storage.StorageItemTypes python_type flags_enum
     py StorageItemTypes
     signature enum(Windows.Storage.StorageItemTypes;u4)
+    constant NONE 0x0
+    constant FILE 0x1
+    constant FOLDER 0x2
 
 class Windows.Storage.StorageLibrary python_type
     py StorageLibrary
@@ -3326,6 +3380,16 @@ class Windows.Storage.StorageLibraryChangeTrackerOptions activatable python_type
 enum Windows.Storage.StorageLibraryChangeType python_type
     py StorageLibraryChangeType
     signature enum(Windows.Storage.StorageLibraryChangeType;i4)
+    constant CREATED 0
+    constant DELETED 1
+    constant MOVED_OR_RENAMED 2
+    constant CONTENTS_CHANGED 3
+    constant MOVED_OUT_OF_LIBRARY 4
+    constant MOVED_INTO_LIBRARY 5
+    constant CONTENTS_REPLACED 6
+    constant INDEXING_STATUS_CHANGED 7
+    constant ENCRYPTION_CHANGED 8
+    constant CHANGE_TRACKING_LOST 9
 
 class Windows.Storage.StorageLibraryLastChangeId python_type
     py StorageLibraryLastChangeId
@@ -3337,9 +3401,12 @@ class Windows.Storage.StorageLibraryLastChangeId python_type
         get get_Unknown slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryLastChangeIdStatics shape=4 reverse=22 static
             out uint64 return
 
-enum Windows.Storage.StorageOpenOptions python_type
+enum Windows.Storage.StorageOpenOptions python_type flags_enum
     py StorageOpenOptions
     signature enum(Windows.Storage.StorageOpenOptions;u4)
+    constant NONE 0x0
+    constant ALLOW_ONLY_READERS 0x1
+    constant ALLOW_READERS_AND_WRITERS 0x2
 
 class Windows.Storage.StorageProvider python_type
     py StorageProvider
@@ -3404,6 +3471,9 @@ delegate Windows.Storage.StreamedFileDataRequestedHandler python_type
 enum Windows.Storage.StreamedFileFailureMode python_type
     py StreamedFileFailureMode
     signature enum(Windows.Storage.StreamedFileFailureMode;i4)
+    constant FAILED 0
+    constant CURRENTLY_UNAVAILABLE 1
+    constant INCOMPLETE 2
 
 class Windows.Storage.SystemAudioProperties python_type
     py SystemAudioProperties

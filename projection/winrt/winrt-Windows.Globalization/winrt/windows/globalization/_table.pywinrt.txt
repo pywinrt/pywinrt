@@ -925,6 +925,13 @@ class Windows.Globalization.CurrencyIdentifiers static python_type
 enum Windows.Globalization.DayOfWeek python_type
     py DayOfWeek
     signature enum(Windows.Globalization.DayOfWeek;i4)
+    constant SUNDAY 0
+    constant MONDAY 1
+    constant TUESDAY 2
+    constant WEDNESDAY 3
+    constant THURSDAY 4
+    constant FRIDAY 5
+    constant SATURDAY 6
 
 class Windows.Globalization.GeographicRegion activatable python_type
     py GeographicRegion
@@ -1307,6 +1314,10 @@ class Windows.Globalization.Language python_type
 enum Windows.Globalization.LanguageLayoutDirection python_type
     py LanguageLayoutDirection
     signature enum(Windows.Globalization.LanguageLayoutDirection;i4)
+    constant LTR 0
+    constant RTL 1
+    constant TTB_LTR 2
+    constant TTB_RTL 3
 
 class Windows.Globalization.NumeralSystemIdentifiers static python_type
     py NumeralSystemIdentifiers

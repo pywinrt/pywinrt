@@ -1047,9 +1047,12 @@ class Windows.ApplicationModel.UserDataAccounts.UserDataAccount python_type
         method TryShowCreateContactGroupAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccount4 shape=4 reverse=141
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
 
-enum Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds python_type
+enum Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds python_type flags_enum
     py UserDataAccountContentKinds
     signature enum(Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds;u4)
+    constant EMAIL 0x1
+    constant CONTACT 0x2
+    constant APPOINTMENT 0x4
 
 class Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager static python_type
     py UserDataAccountManager
@@ -1092,6 +1095,9 @@ class Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser py
 enum Windows.ApplicationModel.UserDataAccounts.UserDataAccountOtherAppReadAccess python_type
     py UserDataAccountOtherAppReadAccess
     signature enum(Windows.ApplicationModel.UserDataAccounts.UserDataAccountOtherAppReadAccess;i4)
+    constant SYSTEM_ONLY 0
+    constant FULL 1
+    constant NONE 2
 
 class Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore python_type
     py UserDataAccountStore
@@ -1130,6 +1136,8 @@ class Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore python_type
 enum Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreAccessType python_type
     py UserDataAccountStoreAccessType
     signature enum(Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreAccessType;i4)
+    constant ALL_ACCOUNTS_READ_ONLY 0
+    constant APP_ACCOUNTS_READ_WRITE 1
 
 class Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs python_type
     py UserDataAccountStoreChangedEventArgs

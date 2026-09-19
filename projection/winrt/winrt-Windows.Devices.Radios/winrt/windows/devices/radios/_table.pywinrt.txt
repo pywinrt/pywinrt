@@ -228,14 +228,27 @@ class Windows.Devices.Radios.Radio python_type
 enum Windows.Devices.Radios.RadioAccessStatus python_type
     py RadioAccessStatus
     signature enum(Windows.Devices.Radios.RadioAccessStatus;i4)
+    constant UNSPECIFIED 0
+    constant ALLOWED 1
+    constant DENIED_BY_USER 2
+    constant DENIED_BY_SYSTEM 3
 
 enum Windows.Devices.Radios.RadioKind python_type
     py RadioKind
     signature enum(Windows.Devices.Radios.RadioKind;i4)
+    constant OTHER 0
+    constant WI_FI 1
+    constant MOBILE_BROADBAND 2
+    constant BLUETOOTH 3
+    constant FM 4
 
 enum Windows.Devices.Radios.RadioState python_type
     py RadioState
     signature enum(Windows.Devices.Radios.RadioState;i4)
+    constant UNKNOWN 0
+    constant ON 1
+    constant OFF 2
+    constant DISABLED 3
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Radios.Radio,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[Radio, Object]

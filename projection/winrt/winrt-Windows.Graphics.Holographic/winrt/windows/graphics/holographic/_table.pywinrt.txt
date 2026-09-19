@@ -190,6 +190,8 @@ class Windows.Graphics.Holographic.HolographicCameraViewportParameters python_ty
 enum Windows.Graphics.Holographic.HolographicDepthReprojectionMethod python_type
     py HolographicDepthReprojectionMethod
     signature enum(Windows.Graphics.Holographic.HolographicDepthReprojectionMethod;i4)
+    constant DEPTH_REPROJECTION 0
+    constant AUTO_PLANAR 1
 
 class Windows.Graphics.Holographic.HolographicDisplay python_type
     py HolographicDisplay
@@ -289,10 +291,14 @@ class Windows.Graphics.Holographic.HolographicFramePrediction python_type
 enum Windows.Graphics.Holographic.HolographicFramePresentResult python_type
     py HolographicFramePresentResult
     signature enum(Windows.Graphics.Holographic.HolographicFramePresentResult;i4)
+    constant SUCCESS 0
+    constant DEVICE_REMOVED 1
 
 enum Windows.Graphics.Holographic.HolographicFramePresentWaitBehavior python_type
     py HolographicFramePresentWaitBehavior
     signature enum(Windows.Graphics.Holographic.HolographicFramePresentWaitBehavior;i4)
+    constant WAIT_FOR_FRAME_TO_FINISH 0
+    constant DO_NOT_WAIT_FOR_FRAME_TO_FINISH 1
 
 class Windows.Graphics.Holographic.HolographicFramePresentationMonitor python_type closeable
     py HolographicFramePresentationMonitor
@@ -442,6 +448,9 @@ class Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters python_t
 enum Windows.Graphics.Holographic.HolographicReprojectionMode python_type
     py HolographicReprojectionMode
     signature enum(Windows.Graphics.Holographic.HolographicReprojectionMode;i4)
+    constant POSITION_AND_ORIENTATION 0
+    constant ORIENTATION_ONLY 1
+    constant DISABLED 2
 
 class Windows.Graphics.Holographic.HolographicSpace python_type
     py HolographicSpace
@@ -540,6 +549,9 @@ class Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs python
 enum Windows.Graphics.Holographic.HolographicSpaceUserPresence python_type
     py HolographicSpaceUserPresence
     signature enum(Windows.Graphics.Holographic.HolographicSpaceUserPresence;i4)
+    constant ABSENT 0
+    constant PRESENT_PASSIVE 1
+    constant PRESENT_ACTIVE 2
 
 struct Windows.Graphics.Holographic.HolographicStereoTransform python_type
     py HolographicStereoTransform
@@ -595,6 +607,8 @@ class Windows.Graphics.Holographic.HolographicViewConfiguration python_type
 enum Windows.Graphics.Holographic.HolographicViewConfigurationKind python_type
     py HolographicViewConfigurationKind
     signature enum(Windows.Graphics.Holographic.HolographicViewConfigurationKind;i4)
+    constant DISPLAY 0
+    constant PHOTO_VIDEO_CAMERA 1
 
 interface Windows.Graphics.Holographic.IHolographicCamera
     guid e4e98445-9bed-4980-9ba0-e87680d1cb74

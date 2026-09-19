@@ -38,6 +38,8 @@ class Windows.Gaming.UI.GameBar static python_type
 enum Windows.Gaming.UI.GameChatMessageOrigin python_type
     py GameChatMessageOrigin
     signature enum(Windows.Gaming.UI.GameChatMessageOrigin;i4)
+    constant VOICE 0
+    constant TEXT 1
 
 class Windows.Gaming.UI.GameChatMessageReceivedEventArgs python_type
     py GameChatMessageReceivedEventArgs
@@ -101,6 +103,14 @@ class Windows.Gaming.UI.GameChatOverlayMessageSource activatable python_type
 enum Windows.Gaming.UI.GameChatOverlayPosition python_type
     py GameChatOverlayPosition
     signature enum(Windows.Gaming.UI.GameChatOverlayPosition;i4)
+    constant BOTTOM_CENTER 0
+    constant BOTTOM_LEFT 1
+    constant BOTTOM_RIGHT 2
+    constant MIDDLE_RIGHT 3
+    constant MIDDLE_LEFT 4
+    constant TOP_CENTER 5
+    constant TOP_LEFT 6
+    constant TOP_RIGHT 7
 
 class Windows.Gaming.UI.GameUIProviderActivatedEventArgs python_type
     py GameUIProviderActivatedEventArgs

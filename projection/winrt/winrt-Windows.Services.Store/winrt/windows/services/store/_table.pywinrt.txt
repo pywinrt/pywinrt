@@ -1536,6 +1536,11 @@ class Windows.Services.Store.StoreCanAcquireLicenseResult python_type
 enum Windows.Services.Store.StoreCanLicenseStatus python_type
     py StoreCanLicenseStatus
     signature enum(Windows.Services.Store.StoreCanLicenseStatus;i4)
+    constant NOT_LICENSABLE_TO_USER 0
+    constant LICENSABLE 1
+    constant LICENSE_ACTION_NOT_APPLICABLE_TO_PRODUCT 2
+    constant NETWORK_ERROR 3
+    constant SERVER_ERROR 4
 
 class Windows.Services.Store.StoreCollectionData python_type
     py StoreCollectionData
@@ -1588,6 +1593,10 @@ class Windows.Services.Store.StoreConsumableResult python_type
 enum Windows.Services.Store.StoreConsumableStatus python_type
     py StoreConsumableStatus
     signature enum(Windows.Services.Store.StoreConsumableStatus;i4)
+    constant SUCCEEDED 0
+    constant INSUFFICENT_QUANTITY 1
+    constant NETWORK_ERROR 2
+    constant SERVER_ERROR 3
 
 class Windows.Services.Store.StoreContext python_type
     py StoreContext
@@ -1774,6 +1783,12 @@ class Windows.Services.Store.StoreContext python_type
 enum Windows.Services.Store.StoreDurationUnit python_type
     py StoreDurationUnit
     signature enum(Windows.Services.Store.StoreDurationUnit;i4)
+    constant MINUTE 0
+    constant HOUR 1
+    constant DAY 2
+    constant WEEK 3
+    constant MONTH 4
+    constant YEAR 5
 
 class Windows.Services.Store.StoreImage python_type
     py StoreImage
@@ -1885,6 +1900,15 @@ class Windows.Services.Store.StorePackageUpdateResult python_type
 enum Windows.Services.Store.StorePackageUpdateState python_type
     py StorePackageUpdateState
     signature enum(Windows.Services.Store.StorePackageUpdateState;i4)
+    constant PENDING 0
+    constant DOWNLOADING 1
+    constant DEPLOYING 2
+    constant COMPLETED 3
+    constant CANCELED 4
+    constant OTHER_ERROR 5
+    constant ERROR_LOW_BATTERY 6
+    constant ERROR_WI_FI_RECOMMENDED 7
+    constant ERROR_WI_FI_REQUIRED 8
 
 struct Windows.Services.Store.StorePackageUpdateStatus python_type
     py StorePackageUpdateStatus
@@ -2082,6 +2106,11 @@ class Windows.Services.Store.StorePurchaseResult python_type
 enum Windows.Services.Store.StorePurchaseStatus python_type
     py StorePurchaseStatus
     signature enum(Windows.Services.Store.StorePurchaseStatus;i4)
+    constant SUCCEEDED 0
+    constant ALREADY_PURCHASED 1
+    constant NOT_PURCHASED 2
+    constant NETWORK_ERROR 3
+    constant SERVER_ERROR 4
 
 class Windows.Services.Store.StoreQueueItem python_type
     py StoreQueueItem
@@ -2135,14 +2164,37 @@ class Windows.Services.Store.StoreQueueItemCompletedEventArgs python_type
 enum Windows.Services.Store.StoreQueueItemExtendedState python_type
     py StoreQueueItemExtendedState
     signature enum(Windows.Services.Store.StoreQueueItemExtendedState;i4)
+    constant ACTIVE_PENDING 0
+    constant ACTIVE_STARTING 1
+    constant ACTIVE_ACQUIRING_LICENSE 2
+    constant ACTIVE_DOWNLOADING 3
+    constant ACTIVE_RESTORING_DATA 4
+    constant ACTIVE_INSTALLING 5
+    constant COMPLETED 6
+    constant CANCELED 7
+    constant PAUSED 8
+    constant ERROR 9
+    constant PAUSED_PACKAGES_IN_USE 10
+    constant PAUSED_LOW_BATTERY 11
+    constant PAUSED_WI_FI_RECOMMENDED 12
+    constant PAUSED_WI_FI_REQUIRED 13
+    constant PAUSED_READY_TO_INSTALL 14
 
 enum Windows.Services.Store.StoreQueueItemKind python_type
     py StoreQueueItemKind
     signature enum(Windows.Services.Store.StoreQueueItemKind;i4)
+    constant INSTALL 0
+    constant UPDATE 1
+    constant REPAIR 2
 
 enum Windows.Services.Store.StoreQueueItemState python_type
     py StoreQueueItemState
     signature enum(Windows.Services.Store.StoreQueueItemState;i4)
+    constant ACTIVE 0
+    constant COMPLETED 1
+    constant CANCELED 2
+    constant ERROR 3
+    constant PAUSED 4
 
 class Windows.Services.Store.StoreQueueItemStatus python_type
     py StoreQueueItemStatus
@@ -2183,6 +2235,10 @@ class Windows.Services.Store.StoreRateAndReviewResult python_type
 enum Windows.Services.Store.StoreRateAndReviewStatus python_type
     py StoreRateAndReviewStatus
     signature enum(Windows.Services.Store.StoreRateAndReviewStatus;i4)
+    constant SUCCEEDED 0
+    constant CANCELED_BY_USER 1
+    constant NETWORK_ERROR 2
+    constant ERROR 3
 
 class Windows.Services.Store.StoreRequestHelper static python_type
     py StoreRequestHelper
@@ -2309,6 +2365,11 @@ class Windows.Services.Store.StoreUninstallStorePackageResult python_type
 enum Windows.Services.Store.StoreUninstallStorePackageStatus python_type
     py StoreUninstallStorePackageStatus
     signature enum(Windows.Services.Store.StoreUninstallStorePackageStatus;i4)
+    constant SUCCEEDED 0
+    constant CANCELED_BY_USER 1
+    constant NETWORK_ERROR 2
+    constant UNINSTALL_NOT_APPLICABLE 3
+    constant ERROR 4
 
 class Windows.Services.Store.StoreVideo python_type
     py StoreVideo

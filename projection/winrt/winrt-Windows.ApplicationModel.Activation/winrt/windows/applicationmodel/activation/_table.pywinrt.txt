@@ -5,10 +5,59 @@ namespace Windows.ApplicationModel.Activation
 enum Windows.ApplicationModel.Activation.ActivationKind python_type
     py ActivationKind
     signature enum(Windows.ApplicationModel.Activation.ActivationKind;i4)
+    constant LAUNCH 0
+    constant SEARCH 1
+    constant SHARE_TARGET 2
+    constant FILE 3
+    constant PROTOCOL 4
+    constant FILE_OPEN_PICKER 5
+    constant FILE_SAVE_PICKER 6
+    constant CACHED_FILE_UPDATER 7
+    constant CONTACT_PICKER 8
+    constant DEVICE 9
+    constant PRINT_TASK_SETTINGS 10
+    constant CAMERA_SETTINGS 11
+    constant RESTRICTED_LAUNCH 12
+    constant APPOINTMENTS_PROVIDER 13
+    constant CONTACT 14
+    constant LOCK_SCREEN_CALL 15
+    constant VOICE_COMMAND 16
+    constant LOCK_SCREEN 17
+    constant PICKER_RETURNED 1000
+    constant WALLET_ACTION 1001
+    constant PICK_FILE_CONTINUATION 1002
+    constant PICK_SAVE_FILE_CONTINUATION 1003
+    constant PICK_FOLDER_CONTINUATION 1004
+    constant WEB_AUTHENTICATION_BROKER_CONTINUATION 1005
+    constant WEB_ACCOUNT_PROVIDER 1006
+    constant COMPONENT_UI 1007
+    constant PROTOCOL_FOR_RESULTS 1009
+    constant TOAST_NOTIFICATION 1010
+    constant PRINT_3D_WORKFLOW 1011
+    constant DIAL_RECEIVER 1012
+    constant DEVICE_PAIRING 1013
+    constant USER_DATA_ACCOUNTS_PROVIDER 1014
+    constant FILE_PICKER_EXPERIENCE 1015
+    constant LOCK_SCREEN_COMPONENT 1016
+    constant CONTACT_PANEL 1017
+    constant PRINT_WORKFLOW_FOREGROUND_TASK 1018
+    constant GAME_UI_PROVIDER 1019
+    constant STARTUP_TASK 1020
+    constant COMMAND_LINE_LAUNCH 1021
+    constant BARCODE_SCANNER_PROVIDER 1022
+    constant PRINT_SUPPORT_JOB_UI 1023
+    constant PRINT_SUPPORT_SETTINGS_UI 1024
+    constant PHONE_CALL_ACTIVATION 1025
+    constant VPN_FOREGROUND 1026
 
 enum Windows.ApplicationModel.Activation.ApplicationExecutionState python_type
     py ApplicationExecutionState
     signature enum(Windows.ApplicationModel.Activation.ApplicationExecutionState;i4)
+    constant NOT_RUNNING 0
+    constant RUNNING 1
+    constant SUSPENDED 2
+    constant TERMINATED 3
+    constant CLOSED_BY_USER 4
 
 class Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs python_type
     py AppointmentsProviderAddAppointmentActivatedEventArgs

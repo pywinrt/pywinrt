@@ -5,7 +5,16 @@ namespace Windows.UI.Xaml.Automation.Text
 enum Windows.UI.Xaml.Automation.Text.TextPatternRangeEndpoint python_type
     py TextPatternRangeEndpoint
     signature enum(Windows.UI.Xaml.Automation.Text.TextPatternRangeEndpoint;i4)
+    constant START 0
+    constant END 1
 
 enum Windows.UI.Xaml.Automation.Text.TextUnit python_type
     py TextUnit
     signature enum(Windows.UI.Xaml.Automation.Text.TextUnit;i4)
+    constant CHARACTER 0
+    constant FORMAT 1
+    constant WORD 2
+    constant LINE 3
+    constant PARAGRAPH 4
+    constant PAGE 5
+    constant DOCUMENT 6

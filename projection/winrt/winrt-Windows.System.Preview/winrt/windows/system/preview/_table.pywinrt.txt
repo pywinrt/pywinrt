@@ -27,6 +27,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.Previe
 enum Windows.System.Preview.HingeState python_type
     py HingeState
     signature enum(Windows.System.Preview.HingeState;i4)
+    constant UNKNOWN 0
+    constant CLOSED 1
+    constant CONCAVE 2
+    constant FLAT 3
+    constant CONVEX 4
+    constant FULL 5
 
 interface Windows.Foundation.IAsyncOperation<Windows.System.Preview.TwoPanelHingedDevicePosturePreview> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[TwoPanelHingedDevicePosturePreview]

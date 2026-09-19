@@ -117,10 +117,15 @@ class Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProvider
 enum Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind python_type
     py UserDataAccountProviderOperationKind
     signature enum(Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind;i4)
+    constant ADD_ACCOUNT 0
+    constant SETTINGS 1
+    constant RESOLVE_ERRORS 2
 
 enum Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderPartnerAccountKind python_type
     py UserDataAccountProviderPartnerAccountKind
     signature enum(Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderPartnerAccountKind;i4)
+    constant EXCHANGE 0
+    constant POP_OR_IMAP 1
 
 class Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation python_type
     py UserDataAccountProviderResolveErrorsOperation

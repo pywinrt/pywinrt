@@ -201,6 +201,10 @@ class Microsoft.UI.Windowing.AppWindowPresenter composable python_type
 enum Microsoft.UI.Windowing.AppWindowPresenterKind python_type
     py AppWindowPresenterKind
     signature enum(Microsoft.UI.Windowing.AppWindowPresenterKind;i4)
+    constant DEFAULT 0
+    constant COMPACT_OVERLAY 1
+    constant FULL_SCREEN 2
+    constant OVERLAPPED 3
 
 class Microsoft.UI.Windowing.AppWindowTitleBar python_type
     py AppWindowTitleBar
@@ -327,6 +331,9 @@ class Microsoft.UI.Windowing.CompactOverlayPresenter python_type
 enum Microsoft.UI.Windowing.CompactOverlaySize python_type
     py CompactOverlaySize
     signature enum(Microsoft.UI.Windowing.CompactOverlaySize;i4)
+    constant SMALL 0
+    constant MEDIUM 1
+    constant LARGE 2
 
 class Microsoft.UI.Windowing.DisplayArea python_type
     py DisplayArea
@@ -379,6 +386,9 @@ class Microsoft.UI.Windowing.DisplayArea python_type
 enum Microsoft.UI.Windowing.DisplayAreaFallback python_type
     py DisplayAreaFallback
     signature enum(Microsoft.UI.Windowing.DisplayAreaFallback;i4)
+    constant NONE 0
+    constant PRIMARY 1
+    constant NEAREST 2
 
 class Microsoft.UI.Windowing.DisplayAreaWatcher python_type
     py DisplayAreaWatcher
@@ -426,6 +436,12 @@ class Microsoft.UI.Windowing.DisplayAreaWatcher python_type
 enum Microsoft.UI.Windowing.DisplayAreaWatcherStatus python_type
     py DisplayAreaWatcherStatus
     signature enum(Microsoft.UI.Windowing.DisplayAreaWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPING 3
+    constant STOPPED 4
+    constant ABORTED 5
 
 class Microsoft.UI.Windowing.FullScreenPresenter python_type
     py FullScreenPresenter
@@ -839,6 +855,8 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Windowing.Disp
 enum Microsoft.UI.Windowing.IconShowOptions python_type
     py IconShowOptions
     signature enum(Microsoft.UI.Windowing.IconShowOptions;i4)
+    constant SHOW_ICON_AND_SYSTEM_MENU 0
+    constant HIDE_ICON_AND_SYSTEM_MENU 1
 
 class Microsoft.UI.Windowing.OverlappedPresenter python_type
     py OverlappedPresenter
@@ -937,14 +955,24 @@ class Microsoft.UI.Windowing.OverlappedPresenter python_type
 enum Microsoft.UI.Windowing.OverlappedPresenterState python_type
     py OverlappedPresenterState
     signature enum(Microsoft.UI.Windowing.OverlappedPresenterState;i4)
+    constant MAXIMIZED 0
+    constant MINIMIZED 1
+    constant RESTORED 2
 
 enum Microsoft.UI.Windowing.TitleBarHeightOption python_type
     py TitleBarHeightOption
     signature enum(Microsoft.UI.Windowing.TitleBarHeightOption;i4)
+    constant STANDARD 0
+    constant TALL 1
+    constant COLLAPSED 2
 
 enum Microsoft.UI.Windowing.TitleBarTheme python_type
     py TitleBarTheme
     signature enum(Microsoft.UI.Windowing.TitleBarTheme;i4)
+    constant LEGACY 0
+    constant USE_DEFAULT_APP_MODE 1
+    constant LIGHT 2
+    constant DARK 3
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.AppWindow,Microsoft.UI.Windowing.AppWindowChangedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[AppWindow, AppWindowChangedEventArgs]

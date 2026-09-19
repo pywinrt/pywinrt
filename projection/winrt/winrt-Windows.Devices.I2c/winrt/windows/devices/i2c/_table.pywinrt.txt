@@ -38,6 +38,8 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Co
 enum Windows.Devices.I2c.I2cBusSpeed python_type
     py I2cBusSpeed
     signature enum(Windows.Devices.I2c.I2cBusSpeed;i4)
+    constant STANDARD_MODE 0
+    constant FAST_MODE 1
 
 class Windows.Devices.I2c.I2cConnectionSettings python_type
     py I2cConnectionSettings
@@ -136,6 +138,8 @@ class Windows.Devices.I2c.I2cDevice python_type closeable
 enum Windows.Devices.I2c.I2cSharingMode python_type
     py I2cSharingMode
     signature enum(Windows.Devices.I2c.I2cSharingMode;i4)
+    constant EXCLUSIVE 0
+    constant SHARED 1
 
 struct Windows.Devices.I2c.I2cTransferResult python_type
     py I2cTransferResult
@@ -146,6 +150,11 @@ struct Windows.Devices.I2c.I2cTransferResult python_type
 enum Windows.Devices.I2c.I2cTransferStatus python_type
     py I2cTransferStatus
     signature enum(Windows.Devices.I2c.I2cTransferStatus;i4)
+    constant FULL_TRANSFER 0
+    constant PARTIAL_TRANSFER 1
+    constant SLAVE_ADDRESS_NOT_ACKNOWLEDGED 2
+    constant CLOCK_STRETCH_TIMEOUT 3
+    constant UNKNOWN_ERROR 4
 
 interface Windows.Foundation.IAsyncOperation<Windows.Devices.I2c.I2cController> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[I2cController]

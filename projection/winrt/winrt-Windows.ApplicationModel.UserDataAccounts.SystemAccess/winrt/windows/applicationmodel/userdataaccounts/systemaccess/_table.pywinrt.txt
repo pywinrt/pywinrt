@@ -38,6 +38,9 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Co
 enum Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountAuthenticationType python_type
     py DeviceAccountAuthenticationType
     signature enum(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountAuthenticationType;i4)
+    constant BASIC 0
+    constant O_AUTH 1
+    constant SINGLE_SIGN_ON 2
 
 class Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration activatable python_type
     py DeviceAccountConfiguration
@@ -273,18 +276,39 @@ class Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfig
 enum Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountIconId python_type
     py DeviceAccountIconId
     signature enum(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountIconId;i4)
+    constant EXCHANGE 0
+    constant MSA 1
+    constant OUTLOOK 2
+    constant GENERIC 3
 
 enum Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountMailAgeFilter python_type
     py DeviceAccountMailAgeFilter
     signature enum(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountMailAgeFilter;i4)
+    constant ALL 0
+    constant LAST1_DAY 1
+    constant LAST3_DAYS 2
+    constant LAST7_DAYS 3
+    constant LAST14_DAYS 4
+    constant LAST30_DAYS 5
+    constant LAST90_DAYS 6
 
 enum Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountServerType python_type
     py DeviceAccountServerType
     signature enum(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountServerType;i4)
+    constant EXCHANGE 0
+    constant POP 1
+    constant IMAP 2
 
 enum Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncScheduleKind python_type
     py DeviceAccountSyncScheduleKind
     signature enum(Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncScheduleKind;i4)
+    constant MANUAL 0
+    constant EVERY15_MINUTES 1
+    constant EVERY30_MINUTES 2
+    constant EVERY60_MINUTES 3
+    constant EVERY2_HOURS 4
+    constant DAILY 5
+    constant AS_ITEMS_ARRIVE 6
 
 interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[String]

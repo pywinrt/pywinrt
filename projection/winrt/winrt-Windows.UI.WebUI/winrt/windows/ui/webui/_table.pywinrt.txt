@@ -737,6 +737,10 @@ class Windows.UI.WebUI.NewWebUIViewCreatedEventArgs python_type
 enum Windows.UI.WebUI.PrintContent python_type
     py PrintContent
     signature enum(Windows.UI.WebUI.PrintContent;i4)
+    constant ALL_PAGES 0
+    constant CURRENT_PAGE 1
+    constant CUSTOM_PAGE_RANGE 2
+    constant CURRENT_SELECTION 3
 
 delegate Windows.UI.WebUI.ResumingEventHandler python_type
     py ResumingEventHandler

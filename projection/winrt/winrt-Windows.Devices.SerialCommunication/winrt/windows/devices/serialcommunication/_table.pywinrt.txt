@@ -189,22 +189,44 @@ class Windows.Devices.SerialCommunication.SerialDevice python_type closeable
 enum Windows.Devices.SerialCommunication.SerialError python_type
     py SerialError
     signature enum(Windows.Devices.SerialCommunication.SerialError;i4)
+    constant FRAME 0
+    constant BUFFER_OVERRUN 1
+    constant RECEIVE_FULL 2
+    constant RECEIVE_PARITY 3
+    constant TRANSMIT_FULL 4
 
 enum Windows.Devices.SerialCommunication.SerialHandshake python_type
     py SerialHandshake
     signature enum(Windows.Devices.SerialCommunication.SerialHandshake;i4)
+    constant NONE 0
+    constant REQUEST_TO_SEND 1
+    constant X_ON_X_OFF 2
+    constant REQUEST_TO_SEND_X_ON_X_OFF 3
 
 enum Windows.Devices.SerialCommunication.SerialParity python_type
     py SerialParity
     signature enum(Windows.Devices.SerialCommunication.SerialParity;i4)
+    constant NONE 0
+    constant ODD 1
+    constant EVEN 2
+    constant MARK 3
+    constant SPACE 4
 
 enum Windows.Devices.SerialCommunication.SerialPinChange python_type
     py SerialPinChange
     signature enum(Windows.Devices.SerialCommunication.SerialPinChange;i4)
+    constant BREAK_SIGNAL 0
+    constant CARRIER_DETECT 1
+    constant CLEAR_TO_SEND 2
+    constant DATA_SET_READY 3
+    constant RING_INDICATOR 4
 
 enum Windows.Devices.SerialCommunication.SerialStopBitCount python_type
     py SerialStopBitCount
     signature enum(Windows.Devices.SerialCommunication.SerialStopBitCount;i4)
+    constant ONE 0
+    constant ONE_POINT_FIVE 1
+    constant TWO 2
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.SerialCommunication.SerialDevice,Windows.Devices.SerialCommunication.ErrorReceivedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[SerialDevice, ErrorReceivedEventArgs]

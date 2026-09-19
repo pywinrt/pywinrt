@@ -364,6 +364,10 @@ class Windows.Devices.Haptics.SimpleHapticsControllerFeedback python_type
 enum Windows.Devices.Haptics.VibrationAccessStatus python_type
     py VibrationAccessStatus
     signature enum(Windows.Devices.Haptics.VibrationAccessStatus;i4)
+    constant ALLOWED 0
+    constant DENIED_BY_USER 1
+    constant DENIED_BY_SYSTEM 2
+    constant DENIED_BY_ENERGY_SAVER 3
 
 class Windows.Devices.Haptics.VibrationDevice python_type
     py VibrationDevice

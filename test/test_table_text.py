@@ -26,6 +26,19 @@ format 4.0
 generator 1.2.3
 namespace Test.Sample
 
+enum Test.Sample.Grade python_type
+    py Grade
+    signature enum(Test.Sample.Grade;i4)
+    constant NONE 0
+    constant LOW -10
+    constant HIGH 20
+
+enum Test.Sample.Facet python_type flags_enum
+    py Facet
+    signature enum(Test.Sample.Facet;u4)
+    constant FRONT 0x1
+    constant BACK 0x80000000
+
 struct Test.Sample.Extent python_type
     signature struct(Test.Sample.Extent;i4;f8)
     field width Width int32
@@ -93,6 +106,7 @@ interface Windows.Foundation.Collections.IVector<Test.Sample.Thing> external con
     argument Test.Sample.Thing
 """
 
+CATEGORY_ENUM = 0
 CATEGORY_STRUCT = 1
 CATEGORY_INTERFACE = 2
 CATEGORY_CLASS = 3
@@ -110,6 +124,7 @@ CATEGORY_RECEIVE_ARRAY = 4
 TYPE_EXTERNAL = 1 << 3
 TYPE_CONCRETE = 1 << 7
 TYPE_PYTHON_TYPE = 1 << 9
+TYPE_FLAGS_ENUM = 1 << 22
 
 CODE_UINT32 = 7
 CODE_DOUBLE = 11
@@ -143,6 +158,8 @@ class TestTextTable(unittest.TestCase):
         self.assertEqual(
             [f"{t['namespace']}.{t['name']}" for t in table["types"]],
             [
+                "Test.Sample.Grade",
+                "Test.Sample.Facet",
                 "Test.Sample.Extent",
                 "Test.Sample.IThing",
                 "Test.Sample.Thing",
@@ -195,6 +212,28 @@ class TestTextTable(unittest.TestCase):
         )
         self.assertEqual(extent["size"], 16)
         self.assertEqual(extent["align"], 8)
+
+    def test_an_enum_keeps_its_constants_in_the_order_they_are_written(self) -> None:
+        grade = types(read())["Test.Sample.Grade"]
+
+        self.assertEqual(grade["category"], CATEGORY_ENUM)
+        self.assertFalse(grade["flags"] & TYPE_FLAGS_ENUM)
+        self.assertEqual(
+            [(c["py_name"], c["value"]) for c in grade["constants"]],
+            [("NONE", 0), ("LOW", (-10) & 0xFFFFFFFF), ("HIGH", 20)],
+        )
+
+    def test_a_flags_enum_is_written_in_hexadecimal_and_is_unsigned(self) -> None:
+        facet = types(read())["Test.Sample.Facet"]
+
+        self.assertTrue(facet["flags"] & TYPE_FLAGS_ENUM)
+        self.assertEqual(
+            [(c["py_name"], c["value"]) for c in facet["constants"]],
+            [("FRONT", 1), ("BACK", 0x80000000)],
+        )
+
+    def test_a_type_that_declares_no_constant_has_none(self) -> None:
+        self.assertEqual(types(read())["Test.Sample.Extent"]["constants"], [])
 
     def test_a_member_keeps_its_slot_its_shape_and_its_role(self) -> None:
         thing = types(read())["Test.Sample.IThing"]
@@ -305,6 +344,18 @@ class TestTextErrors(unittest.TestCase):
         )
 
         self.assertIn("'vtable=3' says nothing about a member", message)
+
+    def test_a_constant_that_is_not_a_number(self) -> None:
+        message = self.compile_with("enum Test.Sample.Other", "    constant HIGH up")
+
+        self.assertIn("'up' is not a constant", message)
+
+    def test_a_constant_that_does_not_fit(self) -> None:
+        message = self.compile_with(
+            "enum Test.Sample.Other", "    constant HIGH 4294967296"
+        )
+
+        self.assertIn("does not fit in an enum", message)
 
     def test_an_unknown_type_code(self) -> None:
         message = self.compile_with(

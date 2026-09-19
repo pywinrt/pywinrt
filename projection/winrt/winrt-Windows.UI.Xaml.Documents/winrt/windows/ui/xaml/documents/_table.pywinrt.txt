@@ -1323,6 +1323,8 @@ class Windows.UI.Xaml.Documents.LineBreak activatable python_type
 enum Windows.UI.Xaml.Documents.LogicalDirection python_type
     py LogicalDirection
     signature enum(Windows.UI.Xaml.Documents.LogicalDirection;i4)
+    constant BACKWARD 0
+    constant FORWARD 1
 
 class Windows.UI.Xaml.Documents.Paragraph activatable python_type
     py Paragraph
@@ -2232,6 +2234,8 @@ class Windows.UI.Xaml.Documents.Underline activatable python_type
 enum Windows.UI.Xaml.Documents.UnderlineStyle python_type
     py UnderlineStyle
     signature enum(Windows.UI.Xaml.Documents.UnderlineStyle;i4)
+    constant NONE 0
+    constant SINGLE 1
 
 struct Windows.Foundation.EventRegistrationToken external
     py winrt.windows.foundation.EventRegistrationToken

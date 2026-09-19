@@ -219,6 +219,9 @@ class Windows.ApplicationModel.Search.Core.SearchSuggestion python_type
 enum Windows.ApplicationModel.Search.Core.SearchSuggestionKind python_type
     py SearchSuggestionKind
     signature enum(Windows.ApplicationModel.Search.Core.SearchSuggestionKind;i4)
+    constant QUERY 0
+    constant RESULT 1
+    constant SEPARATOR 2
 
 class Windows.ApplicationModel.Search.Core.SearchSuggestionManager activatable python_type
     py SearchSuggestionManager

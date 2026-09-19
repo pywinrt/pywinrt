@@ -196,6 +196,9 @@ class Windows.UI.Notifications.Management.UserNotificationListener python_type
 enum Windows.UI.Notifications.Management.UserNotificationListenerAccessStatus python_type
     py UserNotificationListenerAccessStatus
     signature enum(Windows.UI.Notifications.Management.UserNotificationListenerAccessStatus;i4)
+    constant UNSPECIFIED 0
+    constant ALLOWED 1
+    constant DENIED 2
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
     py winrt.windows.foundation.AsyncOperationCompletedHandler

@@ -73,10 +73,15 @@ class Windows.Devices.Custom.CustomDevice python_type
 enum Windows.Devices.Custom.DeviceAccessMode python_type
     py DeviceAccessMode
     signature enum(Windows.Devices.Custom.DeviceAccessMode;i4)
+    constant READ 0
+    constant WRITE 1
+    constant READ_WRITE 2
 
 enum Windows.Devices.Custom.DeviceSharingMode python_type
     py DeviceSharingMode
     signature enum(Windows.Devices.Custom.DeviceSharingMode;i4)
+    constant SHARED 0
+    constant EXCLUSIVE 1
 
 interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[Boolean]
@@ -200,10 +205,18 @@ interface Windows.Devices.Custom.IKnownDeviceTypesStatics
 enum Windows.Devices.Custom.IOControlAccessMode python_type
     py IOControlAccessMode
     signature enum(Windows.Devices.Custom.IOControlAccessMode;i4)
+    constant ANY 0
+    constant READ 1
+    constant WRITE 2
+    constant READ_WRITE 3
 
 enum Windows.Devices.Custom.IOControlBufferingMethod python_type
     py IOControlBufferingMethod
     signature enum(Windows.Devices.Custom.IOControlBufferingMethod;i4)
+    constant BUFFERED 0
+    constant DIRECT_INPUT 1
+    constant DIRECT_OUTPUT 2
+    constant NEITHER 3
 
 class Windows.Devices.Custom.IOControlCode python_type
     py IOControlCode

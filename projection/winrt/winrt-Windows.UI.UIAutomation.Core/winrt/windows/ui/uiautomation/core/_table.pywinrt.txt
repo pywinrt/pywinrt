@@ -49,6 +49,11 @@ class Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult python_type
 enum Windows.UI.UIAutomation.Core.AutomationRemoteOperationStatus python_type
     py AutomationRemoteOperationStatus
     signature enum(Windows.UI.UIAutomation.Core.AutomationRemoteOperationStatus;i4)
+    constant SUCCESS 0
+    constant MALFORMED_BYTECODE 1
+    constant INSTRUCTION_LIMIT_EXCEEDED 2
+    constant UNHANDLED_EXCEPTION 3
+    constant EXECUTION_FAILURE 4
 
 class Windows.UI.UIAutomation.Core.CoreAutomationRegistrar static python_type
     py CoreAutomationRegistrar

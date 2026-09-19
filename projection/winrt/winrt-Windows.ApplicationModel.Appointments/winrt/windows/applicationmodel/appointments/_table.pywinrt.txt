@@ -144,6 +144,11 @@ class Windows.ApplicationModel.Appointments.Appointment activatable python_type
 enum Windows.ApplicationModel.Appointments.AppointmentBusyStatus python_type
     py AppointmentBusyStatus
     signature enum(Windows.ApplicationModel.Appointments.AppointmentBusyStatus;i4)
+    constant BUSY 0
+    constant TENTATIVE 1
+    constant FREE 2
+    constant OUT_OF_OFFICE 3
+    constant WORKING_ELSEWHERE 4
 
 class Windows.ApplicationModel.Appointments.AppointmentCalendar python_type
     py AppointmentCalendar
@@ -337,10 +342,17 @@ class Windows.ApplicationModel.Appointments.AppointmentCalendar python_type
 enum Windows.ApplicationModel.Appointments.AppointmentCalendarOtherAppReadAccess python_type
     py AppointmentCalendarOtherAppReadAccess
     signature enum(Windows.ApplicationModel.Appointments.AppointmentCalendarOtherAppReadAccess;i4)
+    constant SYSTEM_ONLY 0
+    constant LIMITED 1
+    constant FULL 2
+    constant NONE 3
 
 enum Windows.ApplicationModel.Appointments.AppointmentCalendarOtherAppWriteAccess python_type
     py AppointmentCalendarOtherAppWriteAccess
     signature enum(Windows.ApplicationModel.Appointments.AppointmentCalendarOtherAppWriteAccess;i4)
+    constant NONE 0
+    constant SYSTEM_ONLY 1
+    constant LIMITED 2
 
 class Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager python_type
     py AppointmentCalendarSyncManager
@@ -376,6 +388,13 @@ class Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager pytho
 enum Windows.ApplicationModel.Appointments.AppointmentCalendarSyncStatus python_type
     py AppointmentCalendarSyncStatus
     signature enum(Windows.ApplicationModel.Appointments.AppointmentCalendarSyncStatus;i4)
+    constant IDLE 0
+    constant SYNCING 1
+    constant UP_TO_DATE 2
+    constant AUTHENTICATION_ERROR 3
+    constant POLICY_ERROR 4
+    constant UNKNOWN_ERROR 5
+    constant MANUAL_ACCOUNT_REMOVAL_REQUIRED 6
 
 class Windows.ApplicationModel.Appointments.AppointmentConflictResult python_type
     py AppointmentConflictResult
@@ -392,14 +411,27 @@ class Windows.ApplicationModel.Appointments.AppointmentConflictResult python_typ
 enum Windows.ApplicationModel.Appointments.AppointmentConflictType python_type
     py AppointmentConflictType
     signature enum(Windows.ApplicationModel.Appointments.AppointmentConflictType;i4)
+    constant NONE 0
+    constant ADJACENT 1
+    constant OVERLAP 2
 
-enum Windows.ApplicationModel.Appointments.AppointmentDaysOfWeek python_type
+enum Windows.ApplicationModel.Appointments.AppointmentDaysOfWeek python_type flags_enum
     py AppointmentDaysOfWeek
     signature enum(Windows.ApplicationModel.Appointments.AppointmentDaysOfWeek;u4)
+    constant NONE 0x0
+    constant SUNDAY 0x1
+    constant MONDAY 0x2
+    constant TUESDAY 0x4
+    constant WEDNESDAY 0x8
+    constant THURSDAY 0x10
+    constant FRIDAY 0x20
+    constant SATURDAY 0x40
 
 enum Windows.ApplicationModel.Appointments.AppointmentDetailsKind python_type
     py AppointmentDetailsKind
     signature enum(Windows.ApplicationModel.Appointments.AppointmentDetailsKind;i4)
+    constant PLAIN_TEXT 0
+    constant HTML 1
 
 class Windows.ApplicationModel.Appointments.AppointmentException python_type
     py AppointmentException
@@ -619,10 +651,18 @@ class Windows.ApplicationModel.Appointments.AppointmentOrganizer activatable pyt
 enum Windows.ApplicationModel.Appointments.AppointmentParticipantResponse python_type
     py AppointmentParticipantResponse
     signature enum(Windows.ApplicationModel.Appointments.AppointmentParticipantResponse;i4)
+    constant NONE 0
+    constant TENTATIVE 1
+    constant ACCEPTED 2
+    constant DECLINED 3
+    constant UNKNOWN 4
 
 enum Windows.ApplicationModel.Appointments.AppointmentParticipantRole python_type
     py AppointmentParticipantRole
     signature enum(Windows.ApplicationModel.Appointments.AppointmentParticipantRole;i4)
+    constant REQUIRED_ATTENDEE 0
+    constant OPTIONAL_ATTENDEE 1
+    constant RESOURCE 2
 
 class Windows.ApplicationModel.Appointments.AppointmentProperties static python_type
     py AppointmentProperties
@@ -772,10 +812,18 @@ class Windows.ApplicationModel.Appointments.AppointmentRecurrence activatable py
 enum Windows.ApplicationModel.Appointments.AppointmentRecurrenceUnit python_type
     py AppointmentRecurrenceUnit
     signature enum(Windows.ApplicationModel.Appointments.AppointmentRecurrenceUnit;i4)
+    constant DAILY 0
+    constant WEEKLY 1
+    constant MONTHLY 2
+    constant MONTHLY_ON_DAY 3
+    constant YEARLY 4
+    constant YEARLY_ON_DAY 5
 
 enum Windows.ApplicationModel.Appointments.AppointmentSensitivity python_type
     py AppointmentSensitivity
     signature enum(Windows.ApplicationModel.Appointments.AppointmentSensitivity;i4)
+    constant PUBLIC 0
+    constant PRIVATE 1
 
 class Windows.ApplicationModel.Appointments.AppointmentStore python_type
     py AppointmentStore
@@ -896,6 +944,9 @@ class Windows.ApplicationModel.Appointments.AppointmentStore python_type
 enum Windows.ApplicationModel.Appointments.AppointmentStoreAccessType python_type
     py AppointmentStoreAccessType
     signature enum(Windows.ApplicationModel.Appointments.AppointmentStoreAccessType;i4)
+    constant APP_CALENDARS_READ_WRITE 0
+    constant ALL_CALENDARS_READ_ONLY 1
+    constant ALL_CALENDARS_READ_WRITE 2
 
 class Windows.ApplicationModel.Appointments.AppointmentStoreChange python_type
     py AppointmentStoreChange
@@ -947,6 +998,13 @@ class Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker python
 enum Windows.ApplicationModel.Appointments.AppointmentStoreChangeType python_type
     py AppointmentStoreChangeType
     signature enum(Windows.ApplicationModel.Appointments.AppointmentStoreChangeType;i4)
+    constant APPOINTMENT_CREATED 0
+    constant APPOINTMENT_MODIFIED 1
+    constant APPOINTMENT_DELETED 2
+    constant CHANGE_TRACKING_LOST 3
+    constant CALENDAR_CREATED 4
+    constant CALENDAR_MODIFIED 5
+    constant CALENDAR_DELETED 6
 
 class Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral python_type
     py AppointmentStoreChangedDeferral
@@ -974,10 +1032,17 @@ class Windows.ApplicationModel.Appointments.AppointmentStoreNotificationTriggerD
 enum Windows.ApplicationModel.Appointments.AppointmentSummaryCardView python_type
     py AppointmentSummaryCardView
     signature enum(Windows.ApplicationModel.Appointments.AppointmentSummaryCardView;i4)
+    constant SYSTEM 0
+    constant APP 1
 
 enum Windows.ApplicationModel.Appointments.AppointmentWeekOfMonth python_type
     py AppointmentWeekOfMonth
     signature enum(Windows.ApplicationModel.Appointments.AppointmentWeekOfMonth;i4)
+    constant FIRST 0
+    constant SECOND 1
+    constant THIRD 2
+    constant FOURTH 3
+    constant LAST 4
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.String> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[String]
@@ -1100,9 +1165,11 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Co
             in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentStoreChange>> name=asyncInfo
             in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-enum Windows.ApplicationModel.Appointments.FindAppointmentCalendarsOptions python_type
+enum Windows.ApplicationModel.Appointments.FindAppointmentCalendarsOptions python_type flags_enum
     py FindAppointmentCalendarsOptions
     signature enum(Windows.ApplicationModel.Appointments.FindAppointmentCalendarsOptions;u4)
+    constant NONE 0x0
+    constant INCLUDE_HIDDEN 0x1
 
 class Windows.ApplicationModel.Appointments.FindAppointmentsOptions activatable python_type
     py FindAppointmentsOptions
@@ -2398,6 +2465,9 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Ap
 enum Windows.ApplicationModel.Appointments.RecurrenceType python_type
     py RecurrenceType
     signature enum(Windows.ApplicationModel.Appointments.RecurrenceType;i4)
+    constant MASTER 0
+    constant INSTANCE 1
+    constant EXCEPTION_INSTANCE 2
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[AppointmentCalendarSyncManager, Object]

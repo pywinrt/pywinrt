@@ -1105,6 +1105,11 @@ class Windows.Devices.Usb.UsbConfigurationDescriptor python_type
 enum Windows.Devices.Usb.UsbControlRecipient python_type
     py UsbControlRecipient
     signature enum(Windows.Devices.Usb.UsbControlRecipient;i4)
+    constant DEVICE 0
+    constant SPECIFIED_INTERFACE 1
+    constant ENDPOINT 2
+    constant OTHER 3
+    constant DEFAULT_INTERFACE 4
 
 class Windows.Devices.Usb.UsbControlRequestType activatable python_type
     py UsbControlRequestType
@@ -1138,6 +1143,9 @@ class Windows.Devices.Usb.UsbControlRequestType activatable python_type
 enum Windows.Devices.Usb.UsbControlTransferType python_type
     py UsbControlTransferType
     signature enum(Windows.Devices.Usb.UsbControlTransferType;i4)
+    constant STANDARD 0
+    constant CLASS 1
+    constant VENDOR 2
 
 class Windows.Devices.Usb.UsbDescriptor python_type
     py UsbDescriptor
@@ -1332,6 +1340,10 @@ class Windows.Devices.Usb.UsbEndpointDescriptor python_type
 enum Windows.Devices.Usb.UsbEndpointType python_type
     py UsbEndpointType
     signature enum(Windows.Devices.Usb.UsbEndpointType;i4)
+    constant CONTROL 0
+    constant ISOCHRONOUS 1
+    constant BULK 2
+    constant INTERRUPT 3
 
 class Windows.Devices.Usb.UsbInterface python_type
     py UsbInterface
@@ -1504,9 +1516,14 @@ class Windows.Devices.Usb.UsbInterruptOutPipe python_type
         method ClearStallAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Usb.IUsbInterruptOutPipe shape=4 reverse=43
             out interface type=Windows.Foundation.IAsyncAction return
 
-enum Windows.Devices.Usb.UsbReadOptions python_type
+enum Windows.Devices.Usb.UsbReadOptions python_type flags_enum
     py UsbReadOptions
     signature enum(Windows.Devices.Usb.UsbReadOptions;u4)
+    constant NONE 0x0
+    constant AUTO_CLEAR_STALL 0x1
+    constant OVERRIDE_AUTOMATIC_BUFFER_MANAGEMENT 0x2
+    constant IGNORE_SHORT_PACKET 0x4
+    constant ALLOW_PARTIAL_READS 0x8
 
 class Windows.Devices.Usb.UsbSetupPacket activatable python_type
     py UsbSetupPacket
@@ -1549,10 +1566,15 @@ class Windows.Devices.Usb.UsbSetupPacket activatable python_type
 enum Windows.Devices.Usb.UsbTransferDirection python_type
     py UsbTransferDirection
     signature enum(Windows.Devices.Usb.UsbTransferDirection;i4)
+    constant OUT 0
+    constant IN 1
 
-enum Windows.Devices.Usb.UsbWriteOptions python_type
+enum Windows.Devices.Usb.UsbWriteOptions python_type flags_enum
     py UsbWriteOptions
     signature enum(Windows.Devices.Usb.UsbWriteOptions;u4)
+    constant NONE 0x0
+    constant AUTO_CLEAR_STALL 0x1
+    constant SHORT_PACKET_TERMINATE 0x2
 
 class System.Byte external
     py winrt.system.Byte

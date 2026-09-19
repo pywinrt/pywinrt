@@ -5,6 +5,7 @@ namespace Windows.UI.Notifications
 enum Windows.UI.Notifications.AdaptiveNotificationContentKind python_type
     py AdaptiveNotificationContentKind
     signature enum(Windows.UI.Notifications.AdaptiveNotificationContentKind;i4)
+    constant TEXT 0
 
 class Windows.UI.Notifications.AdaptiveNotificationText activatable python_type
     py AdaptiveNotificationText
@@ -98,6 +99,8 @@ class Windows.UI.Notifications.BadgeNotification python_type
 enum Windows.UI.Notifications.BadgeTemplateType python_type
     py BadgeTemplateType
     signature enum(Windows.UI.Notifications.BadgeTemplateType;i4)
+    constant BADGE_GLYPH 0
+    constant BADGE_NUMBER 1
 
 class Windows.UI.Notifications.BadgeUpdateManager static python_type
     py BadgeUpdateManager
@@ -1433,21 +1436,33 @@ class Windows.UI.Notifications.NotificationData activatable python_type
         get get_Values slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationData shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
 
-enum Windows.UI.Notifications.NotificationKinds python_type
+enum Windows.UI.Notifications.NotificationKinds python_type flags_enum
     py NotificationKinds
     signature enum(Windows.UI.Notifications.NotificationKinds;u4)
+    constant UNKNOWN 0x0
+    constant TOAST 0x1
 
 enum Windows.UI.Notifications.NotificationMirroring python_type
     py NotificationMirroring
     signature enum(Windows.UI.Notifications.NotificationMirroring;i4)
+    constant ALLOWED 0
+    constant DISABLED 1
 
 enum Windows.UI.Notifications.NotificationSetting python_type
     py NotificationSetting
     signature enum(Windows.UI.Notifications.NotificationSetting;i4)
+    constant ENABLED 0
+    constant DISABLED_FOR_APPLICATION 1
+    constant DISABLED_FOR_USER 2
+    constant DISABLED_BY_GROUP_POLICY 3
+    constant DISABLED_BY_MANIFEST 4
 
 enum Windows.UI.Notifications.NotificationUpdateResult python_type
     py NotificationUpdateResult
     signature enum(Windows.UI.Notifications.NotificationUpdateResult;i4)
+    constant SUCCEEDED 0
+    constant FAILED 1
+    constant NOTIFICATION_NOT_FOUND 2
 
 class Windows.UI.Notifications.NotificationVisual python_type
     py NotificationVisual
@@ -1470,6 +1485,11 @@ class Windows.UI.Notifications.NotificationVisual python_type
 enum Windows.UI.Notifications.PeriodicUpdateRecurrence python_type
     py PeriodicUpdateRecurrence
     signature enum(Windows.UI.Notifications.PeriodicUpdateRecurrence;i4)
+    constant HALF_HOUR 0
+    constant HOUR 1
+    constant SIX_HOURS 2
+    constant TWELVE_HOURS 3
+    constant DAILY 4
 
 class Windows.UI.Notifications.ScheduledTileNotification python_type
     py ScheduledTileNotification
@@ -1620,6 +1640,7 @@ class Windows.UI.Notifications.TileFlyoutNotification python_type
 enum Windows.UI.Notifications.TileFlyoutTemplateType python_type
     py TileFlyoutTemplateType
     signature enum(Windows.UI.Notifications.TileFlyoutTemplateType;i4)
+    constant TILE_FLYOUT_TEMPLATE01 0
 
 class Windows.UI.Notifications.TileFlyoutUpdateManager static python_type
     py TileFlyoutUpdateManager
@@ -1690,6 +1711,132 @@ class Windows.UI.Notifications.TileNotification python_type
 enum Windows.UI.Notifications.TileTemplateType python_type
     py TileTemplateType
     signature enum(Windows.UI.Notifications.TileTemplateType;i4)
+    constant TILE_SQUARE_IMAGE 0
+    constant TILE_SQUARE_BLOCK 1
+    constant TILE_SQUARE_TEXT01 2
+    constant TILE_SQUARE_TEXT02 3
+    constant TILE_SQUARE_TEXT03 4
+    constant TILE_SQUARE_TEXT04 5
+    constant TILE_SQUARE_PEEK_IMAGE_AND_TEXT01 6
+    constant TILE_SQUARE_PEEK_IMAGE_AND_TEXT02 7
+    constant TILE_SQUARE_PEEK_IMAGE_AND_TEXT03 8
+    constant TILE_SQUARE_PEEK_IMAGE_AND_TEXT04 9
+    constant TILE_WIDE_IMAGE 10
+    constant TILE_WIDE_IMAGE_COLLECTION 11
+    constant TILE_WIDE_IMAGE_AND_TEXT01 12
+    constant TILE_WIDE_IMAGE_AND_TEXT02 13
+    constant TILE_WIDE_BLOCK_AND_TEXT01 14
+    constant TILE_WIDE_BLOCK_AND_TEXT02 15
+    constant TILE_WIDE_PEEK_IMAGE_COLLECTION01 16
+    constant TILE_WIDE_PEEK_IMAGE_COLLECTION02 17
+    constant TILE_WIDE_PEEK_IMAGE_COLLECTION03 18
+    constant TILE_WIDE_PEEK_IMAGE_COLLECTION04 19
+    constant TILE_WIDE_PEEK_IMAGE_COLLECTION05 20
+    constant TILE_WIDE_PEEK_IMAGE_COLLECTION06 21
+    constant TILE_WIDE_PEEK_IMAGE_AND_TEXT01 22
+    constant TILE_WIDE_PEEK_IMAGE_AND_TEXT02 23
+    constant TILE_WIDE_PEEK_IMAGE01 24
+    constant TILE_WIDE_PEEK_IMAGE02 25
+    constant TILE_WIDE_PEEK_IMAGE03 26
+    constant TILE_WIDE_PEEK_IMAGE04 27
+    constant TILE_WIDE_PEEK_IMAGE05 28
+    constant TILE_WIDE_PEEK_IMAGE06 29
+    constant TILE_WIDE_SMALL_IMAGE_AND_TEXT01 30
+    constant TILE_WIDE_SMALL_IMAGE_AND_TEXT02 31
+    constant TILE_WIDE_SMALL_IMAGE_AND_TEXT03 32
+    constant TILE_WIDE_SMALL_IMAGE_AND_TEXT04 33
+    constant TILE_WIDE_SMALL_IMAGE_AND_TEXT05 34
+    constant TILE_WIDE_TEXT01 35
+    constant TILE_WIDE_TEXT02 36
+    constant TILE_WIDE_TEXT03 37
+    constant TILE_WIDE_TEXT04 38
+    constant TILE_WIDE_TEXT05 39
+    constant TILE_WIDE_TEXT06 40
+    constant TILE_WIDE_TEXT07 41
+    constant TILE_WIDE_TEXT08 42
+    constant TILE_WIDE_TEXT09 43
+    constant TILE_WIDE_TEXT10 44
+    constant TILE_WIDE_TEXT11 45
+    constant TILE_SQUARE150X150_IMAGE 0
+    constant TILE_SQUARE150X150_BLOCK 1
+    constant TILE_SQUARE150X150_TEXT01 2
+    constant TILE_SQUARE150X150_TEXT02 3
+    constant TILE_SQUARE150X150_TEXT03 4
+    constant TILE_SQUARE150X150_TEXT04 5
+    constant TILE_SQUARE150X150_PEEK_IMAGE_AND_TEXT01 6
+    constant TILE_SQUARE150X150_PEEK_IMAGE_AND_TEXT02 7
+    constant TILE_SQUARE150X150_PEEK_IMAGE_AND_TEXT03 8
+    constant TILE_SQUARE150X150_PEEK_IMAGE_AND_TEXT04 9
+    constant TILE_WIDE310X150_IMAGE 10
+    constant TILE_WIDE310X150_IMAGE_COLLECTION 11
+    constant TILE_WIDE310X150_IMAGE_AND_TEXT01 12
+    constant TILE_WIDE310X150_IMAGE_AND_TEXT02 13
+    constant TILE_WIDE310X150_BLOCK_AND_TEXT01 14
+    constant TILE_WIDE310X150_BLOCK_AND_TEXT02 15
+    constant TILE_WIDE310X150_PEEK_IMAGE_COLLECTION01 16
+    constant TILE_WIDE310X150_PEEK_IMAGE_COLLECTION02 17
+    constant TILE_WIDE310X150_PEEK_IMAGE_COLLECTION03 18
+    constant TILE_WIDE310X150_PEEK_IMAGE_COLLECTION04 19
+    constant TILE_WIDE310X150_PEEK_IMAGE_COLLECTION05 20
+    constant TILE_WIDE310X150_PEEK_IMAGE_COLLECTION06 21
+    constant TILE_WIDE310X150_PEEK_IMAGE_AND_TEXT01 22
+    constant TILE_WIDE310X150_PEEK_IMAGE_AND_TEXT02 23
+    constant TILE_WIDE310X150_PEEK_IMAGE01 24
+    constant TILE_WIDE310X150_PEEK_IMAGE02 25
+    constant TILE_WIDE310X150_PEEK_IMAGE03 26
+    constant TILE_WIDE310X150_PEEK_IMAGE04 27
+    constant TILE_WIDE310X150_PEEK_IMAGE05 28
+    constant TILE_WIDE310X150_PEEK_IMAGE06 29
+    constant TILE_WIDE310X150_SMALL_IMAGE_AND_TEXT01 30
+    constant TILE_WIDE310X150_SMALL_IMAGE_AND_TEXT02 31
+    constant TILE_WIDE310X150_SMALL_IMAGE_AND_TEXT03 32
+    constant TILE_WIDE310X150_SMALL_IMAGE_AND_TEXT04 33
+    constant TILE_WIDE310X150_SMALL_IMAGE_AND_TEXT05 34
+    constant TILE_WIDE310X150_TEXT01 35
+    constant TILE_WIDE310X150_TEXT02 36
+    constant TILE_WIDE310X150_TEXT03 37
+    constant TILE_WIDE310X150_TEXT04 38
+    constant TILE_WIDE310X150_TEXT05 39
+    constant TILE_WIDE310X150_TEXT06 40
+    constant TILE_WIDE310X150_TEXT07 41
+    constant TILE_WIDE310X150_TEXT08 42
+    constant TILE_WIDE310X150_TEXT09 43
+    constant TILE_WIDE310X150_TEXT10 44
+    constant TILE_WIDE310X150_TEXT11 45
+    constant TILE_SQUARE310X310_BLOCK_AND_TEXT01 46
+    constant TILE_SQUARE310X310_BLOCK_AND_TEXT02 47
+    constant TILE_SQUARE310X310_IMAGE 48
+    constant TILE_SQUARE310X310_IMAGE_AND_TEXT01 49
+    constant TILE_SQUARE310X310_IMAGE_AND_TEXT02 50
+    constant TILE_SQUARE310X310_IMAGE_AND_TEXT_OVERLAY01 51
+    constant TILE_SQUARE310X310_IMAGE_AND_TEXT_OVERLAY02 52
+    constant TILE_SQUARE310X310_IMAGE_AND_TEXT_OVERLAY03 53
+    constant TILE_SQUARE310X310_IMAGE_COLLECTION_AND_TEXT01 54
+    constant TILE_SQUARE310X310_IMAGE_COLLECTION_AND_TEXT02 55
+    constant TILE_SQUARE310X310_IMAGE_COLLECTION 56
+    constant TILE_SQUARE310X310_SMALL_IMAGES_AND_TEXT_LIST01 57
+    constant TILE_SQUARE310X310_SMALL_IMAGES_AND_TEXT_LIST02 58
+    constant TILE_SQUARE310X310_SMALL_IMAGES_AND_TEXT_LIST03 59
+    constant TILE_SQUARE310X310_SMALL_IMAGES_AND_TEXT_LIST04 60
+    constant TILE_SQUARE310X310_TEXT01 61
+    constant TILE_SQUARE310X310_TEXT02 62
+    constant TILE_SQUARE310X310_TEXT03 63
+    constant TILE_SQUARE310X310_TEXT04 64
+    constant TILE_SQUARE310X310_TEXT05 65
+    constant TILE_SQUARE310X310_TEXT06 66
+    constant TILE_SQUARE310X310_TEXT07 67
+    constant TILE_SQUARE310X310_TEXT08 68
+    constant TILE_SQUARE310X310_TEXT_LIST01 69
+    constant TILE_SQUARE310X310_TEXT_LIST02 70
+    constant TILE_SQUARE310X310_TEXT_LIST03 71
+    constant TILE_SQUARE310X310_SMALL_IMAGE_AND_TEXT01 72
+    constant TILE_SQUARE310X310_SMALL_IMAGES_AND_TEXT_LIST05 73
+    constant TILE_SQUARE310X310_TEXT09 74
+    constant TILE_SQUARE71X71_ICON_WITH_BADGE 75
+    constant TILE_SQUARE150X150_ICON_WITH_BADGE 76
+    constant TILE_WIDE310X150_ICON_WITH_BADGE_AND_TEXT 77
+    constant TILE_SQUARE71X71_IMAGE 78
+    constant TILE_TALL150X310_IMAGE 79
 
 class Windows.UI.Notifications.TileUpdateManager static python_type
     py TileUpdateManager
@@ -1866,6 +2013,9 @@ class Windows.UI.Notifications.ToastCollectionManager python_type
 enum Windows.UI.Notifications.ToastDismissalReason python_type
     py ToastDismissalReason
     signature enum(Windows.UI.Notifications.ToastDismissalReason;i4)
+    constant USER_CANCELED 0
+    constant APPLICATION_HIDDEN 1
+    constant TIMED_OUT 2
 
 class Windows.UI.Notifications.ToastDismissedEventArgs python_type
     py ToastDismissedEventArgs
@@ -1888,6 +2038,10 @@ class Windows.UI.Notifications.ToastFailedEventArgs python_type
 enum Windows.UI.Notifications.ToastHistoryChangedType python_type
     py ToastHistoryChangedType
     signature enum(Windows.UI.Notifications.ToastHistoryChangedType;i4)
+    constant CLEARED 0
+    constant REMOVED 1
+    constant EXPIRED 2
+    constant ADDED 3
 
 class Windows.UI.Notifications.ToastNotification python_type
     py ToastNotification
@@ -2104,10 +2258,15 @@ class Windows.UI.Notifications.ToastNotificationManagerForUser python_type
 enum Windows.UI.Notifications.ToastNotificationMode python_type
     py ToastNotificationMode
     signature enum(Windows.UI.Notifications.ToastNotificationMode;i4)
+    constant UNRESTRICTED 0
+    constant PRIORITY_ONLY 1
+    constant ALARMS_ONLY 2
 
 enum Windows.UI.Notifications.ToastNotificationPriority python_type
     py ToastNotificationPriority
     signature enum(Windows.UI.Notifications.ToastNotificationPriority;i4)
+    constant DEFAULT 0
+    constant HIGH 1
 
 class Windows.UI.Notifications.ToastNotifier python_type
     py ToastNotifier
@@ -2154,6 +2313,14 @@ class Windows.UI.Notifications.ToastNotifier python_type
 enum Windows.UI.Notifications.ToastTemplateType python_type
     py ToastTemplateType
     signature enum(Windows.UI.Notifications.ToastTemplateType;i4)
+    constant TOAST_IMAGE_AND_TEXT01 0
+    constant TOAST_IMAGE_AND_TEXT02 1
+    constant TOAST_IMAGE_AND_TEXT03 2
+    constant TOAST_IMAGE_AND_TEXT04 3
+    constant TOAST_TEXT01 4
+    constant TOAST_TEXT02 5
+    constant TOAST_TEXT03 6
+    constant TOAST_TEXT04 7
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[ToastNotification, Object]
@@ -2248,6 +2415,8 @@ class Windows.UI.Notifications.UserNotificationChangedEventArgs python_type
 enum Windows.UI.Notifications.UserNotificationChangedKind python_type
     py UserNotificationChangedKind
     signature enum(Windows.UI.Notifications.UserNotificationChangedKind;i4)
+    constant ADDED 0
+    constant REMOVED 1
 
 class System.Object external
     py winrt.system.Object

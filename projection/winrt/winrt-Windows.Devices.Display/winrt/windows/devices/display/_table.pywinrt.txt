@@ -99,18 +99,35 @@ class Windows.Devices.Display.DisplayMonitor python_type
 enum Windows.Devices.Display.DisplayMonitorConnectionKind python_type
     py DisplayMonitorConnectionKind
     signature enum(Windows.Devices.Display.DisplayMonitorConnectionKind;i4)
+    constant INTERNAL 0
+    constant WIRED 1
+    constant WIRELESS 2
+    constant VIRTUAL 3
 
 enum Windows.Devices.Display.DisplayMonitorDescriptorKind python_type
     py DisplayMonitorDescriptorKind
     signature enum(Windows.Devices.Display.DisplayMonitorDescriptorKind;i4)
+    constant EDID 0
+    constant DISPLAY_ID 1
 
 enum Windows.Devices.Display.DisplayMonitorPhysicalConnectorKind python_type
     py DisplayMonitorPhysicalConnectorKind
     signature enum(Windows.Devices.Display.DisplayMonitorPhysicalConnectorKind;i4)
+    constant UNKNOWN 0
+    constant HD15 1
+    constant ANALOG_T_V 2
+    constant DVI 3
+    constant HDMI 4
+    constant LVDS 5
+    constant SDI 6
+    constant DISPLAY_PORT 7
 
 enum Windows.Devices.Display.DisplayMonitorUsageKind python_type
     py DisplayMonitorUsageKind
     signature enum(Windows.Devices.Display.DisplayMonitorUsageKind;i4)
+    constant STANDARD 0
+    constant HEAD_MOUNTED 1
+    constant SPECIAL_PURPOSE 2
 
 interface Windows.Foundation.IAsyncOperation<Windows.Devices.Display.DisplayMonitor> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[DisplayMonitor]

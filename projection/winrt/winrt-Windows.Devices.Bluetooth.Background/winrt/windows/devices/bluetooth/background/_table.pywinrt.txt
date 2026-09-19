@@ -5,6 +5,9 @@ namespace Windows.Devices.Bluetooth.Background
 enum Windows.Devices.Bluetooth.Background.BluetoothEventTriggeringMode python_type
     py BluetoothEventTriggeringMode
     signature enum(Windows.Devices.Bluetooth.Background.BluetoothEventTriggeringMode;i4)
+    constant SERIAL 0
+    constant BATCH 1
+    constant KEEP_LATEST 2
 
 class Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails python_type
     py BluetoothLEAdvertisementPublisherTriggerDetails

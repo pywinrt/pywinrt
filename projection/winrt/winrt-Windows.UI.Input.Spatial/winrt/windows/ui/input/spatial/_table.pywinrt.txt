@@ -641,9 +641,20 @@ class Windows.UI.Input.Spatial.SpatialGestureRecognizer python_type
             in enum_u32 type=Windows.UI.Input.Spatial.SpatialGestureSettings name=settings
             out boolean return
 
-enum Windows.UI.Input.Spatial.SpatialGestureSettings python_type
+enum Windows.UI.Input.Spatial.SpatialGestureSettings python_type flags_enum
     py SpatialGestureSettings
     signature enum(Windows.UI.Input.Spatial.SpatialGestureSettings;u4)
+    constant NONE 0x0
+    constant TAP 0x1
+    constant DOUBLE_TAP 0x2
+    constant HOLD 0x4
+    constant MANIPULATION_TRANSLATE 0x8
+    constant NAVIGATION_X 0x10
+    constant NAVIGATION_Y 0x20
+    constant NAVIGATION_Z 0x40
+    constant NAVIGATION_RAILS_X 0x80
+    constant NAVIGATION_RAILS_Y 0x100
+    constant NAVIGATION_RAILS_Z 0x200
 
 class Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs python_type
     py SpatialHoldCanceledEventArgs
@@ -822,6 +833,12 @@ class Windows.UI.Input.Spatial.SpatialInteractionManager python_type
 enum Windows.UI.Input.Spatial.SpatialInteractionPressKind python_type
     py SpatialInteractionPressKind
     signature enum(Windows.UI.Input.Spatial.SpatialInteractionPressKind;i4)
+    constant NONE 0
+    constant SELECT 1
+    constant MENU 2
+    constant GRASP 3
+    constant TOUCHPAD 4
+    constant THUMBSTICK 5
 
 class Windows.UI.Input.Spatial.SpatialInteractionSource python_type
     py SpatialInteractionSource
@@ -879,10 +896,17 @@ class Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs python_type
 enum Windows.UI.Input.Spatial.SpatialInteractionSourceHandedness python_type
     py SpatialInteractionSourceHandedness
     signature enum(Windows.UI.Input.Spatial.SpatialInteractionSourceHandedness;i4)
+    constant UNSPECIFIED 0
+    constant LEFT 1
+    constant RIGHT 2
 
 enum Windows.UI.Input.Spatial.SpatialInteractionSourceKind python_type
     py SpatialInteractionSourceKind
     signature enum(Windows.UI.Input.Spatial.SpatialInteractionSourceKind;i4)
+    constant OTHER 0
+    constant HAND 1
+    constant VOICE 2
+    constant CONTROLLER 3
 
 class Windows.UI.Input.Spatial.SpatialInteractionSourceLocation python_type
     py SpatialInteractionSourceLocation
@@ -913,6 +937,8 @@ class Windows.UI.Input.Spatial.SpatialInteractionSourceLocation python_type
 enum Windows.UI.Input.Spatial.SpatialInteractionSourcePositionAccuracy python_type
     py SpatialInteractionSourcePositionAccuracy
     signature enum(Windows.UI.Input.Spatial.SpatialInteractionSourcePositionAccuracy;i4)
+    constant HIGH 0
+    constant APPROXIMATE 1
 
 class Windows.UI.Input.Spatial.SpatialInteractionSourceProperties python_type
     py SpatialInteractionSourceProperties

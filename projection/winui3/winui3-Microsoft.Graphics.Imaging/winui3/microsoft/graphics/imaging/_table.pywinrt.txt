@@ -54,6 +54,11 @@ class Microsoft.Graphics.Imaging.ImageBuffer python_type closeable
 enum Microsoft.Graphics.Imaging.ImageBufferPixelFormat python_type
     py ImageBufferPixelFormat
     signature enum(Microsoft.Graphics.Imaging.ImageBufferPixelFormat;i4)
+    constant RGB8 137224
+    constant RGBA8 30
+    constant ARGB8 2498570
+    constant BGRA8 87
+    constant GRAY8 62
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable

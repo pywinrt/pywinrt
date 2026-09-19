@@ -108,6 +108,9 @@ class Microsoft.UI.Content.ChildSiteLink python_type closeable
 enum Microsoft.UI.Content.ContentAutomationOptions python_type
     py ContentAutomationOptions
     signature enum(Microsoft.UI.Content.ContentAutomationOptions;i4)
+    constant NONE 0
+    constant FRAMEWORK_BASED 1
+    constant FRAGMENT_BASED 2
 
 class Microsoft.UI.Content.ContentCoordinateConverter composable python_type
     py ContentCoordinateConverter
@@ -152,6 +155,10 @@ class Microsoft.UI.Content.ContentCoordinateConverter composable python_type
 enum Microsoft.UI.Content.ContentCoordinateRoundingMode python_type
     py ContentCoordinateRoundingMode
     signature enum(Microsoft.UI.Content.ContentCoordinateRoundingMode;i4)
+    constant AUTO 0
+    constant FLOOR 1
+    constant ROUND 2
+    constant CEILING 3
 
 class Microsoft.UI.Content.ContentDeferral python_type
     py ContentDeferral
@@ -437,6 +444,8 @@ class Microsoft.UI.Content.ContentIslandStateChangedEventArgs python_type
 enum Microsoft.UI.Content.ContentLayoutDirection python_type
     py ContentLayoutDirection
     signature enum(Microsoft.UI.Content.ContentLayoutDirection;i4)
+    constant LEFT_TO_RIGHT 0
+    constant RIGHT_TO_LEFT 1
 
 class Microsoft.UI.Content.ContentSite composable python_type closeable
     py ContentSite
@@ -693,6 +702,9 @@ class Microsoft.UI.Content.ContentSiteView composable python_type
 enum Microsoft.UI.Content.ContentSizePolicy python_type
     py ContentSizePolicy
     signature enum(Microsoft.UI.Content.ContentSizePolicy;i4)
+    constant NONE 0
+    constant RESIZE_CONTENT_TO_PARENT_WINDOW 1
+    constant RESIZE_PARENT_WINDOW_TO_CONTENT 2
 
 class Microsoft.UI.Content.DesktopAttachedSiteBridge python_type closeable
     py DesktopAttachedSiteBridge

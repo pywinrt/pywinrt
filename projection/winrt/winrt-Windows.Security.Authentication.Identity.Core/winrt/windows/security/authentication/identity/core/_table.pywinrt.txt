@@ -357,6 +357,8 @@ class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorA
 enum Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType python_type
     py MicrosoftAccountMultiFactorAuthenticationType
     signature enum(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType;i4)
+    constant USER 0
+    constant DEVICE 1
 
 class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult python_type
     py MicrosoftAccountMultiFactorGetSessionsResult
@@ -391,14 +393,41 @@ class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorO
 enum Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse python_type
     py MicrosoftAccountMultiFactorServiceResponse
     signature enum(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse;i4)
+    constant SUCCESS 0
+    constant ERROR 1
+    constant NO_NETWORK_CONNECTION 2
+    constant SERVICE_UNAVAILABLE 3
+    constant TOTP_SETUP_DENIED 4
+    constant NGC_NOT_SETUP 5
+    constant SESSION_ALREADY_DENIED 6
+    constant SESSION_ALREADY_APPROVED 7
+    constant SESSION_EXPIRED 8
+    constant NGC_NONCE_EXPIRED 9
+    constant INVALID_SESSION_ID 10
+    constant INVALID_SESSION_TYPE 11
+    constant INVALID_OPERATION 12
+    constant INVALID_STATE_TRANSITION 13
+    constant DEVICE_NOT_FOUND 14
+    constant FLOW_DISABLED 15
+    constant SESSION_NOT_APPROVED 16
+    constant OPERATION_CANCELED_BY_USER 17
+    constant NGC_DISABLED_BY_SERVER 18
+    constant NGC_KEY_NOT_FOUND_ON_SERVER 19
+    constant UI_REQUIRED 20
+    constant DEVICE_ID_CHANGED 21
 
 enum Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionApprovalStatus python_type
     py MicrosoftAccountMultiFactorSessionApprovalStatus
     signature enum(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionApprovalStatus;i4)
+    constant PENDING 0
+    constant APPROVED 1
+    constant DENIED 2
 
 enum Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus python_type
     py MicrosoftAccountMultiFactorSessionAuthenticationStatus
     signature enum(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus;i4)
+    constant AUTHENTICATED 0
+    constant UNAUTHENTICATED 1
 
 class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo python_type
     py MicrosoftAccountMultiFactorSessionInfo

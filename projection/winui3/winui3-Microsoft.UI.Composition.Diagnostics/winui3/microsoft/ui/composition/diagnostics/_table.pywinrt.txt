@@ -21,9 +21,18 @@ class Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps python_type
         method ShowRedraw slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=4 reverse=99
             in class type=Microsoft.UI.Composition.Visual name=subtree
 
-enum Microsoft.UI.Composition.Diagnostics.CompositionDebugOverdrawContentKinds python_type
+enum Microsoft.UI.Composition.Diagnostics.CompositionDebugOverdrawContentKinds python_type flags_enum
     py CompositionDebugOverdrawContentKinds
     signature enum(Microsoft.UI.Composition.Diagnostics.CompositionDebugOverdrawContentKinds;u4)
+    constant NONE 0x0
+    constant OFFSCREEN_RENDERED 0x1
+    constant COLORS 0x2
+    constant EFFECTS 0x4
+    constant SHADOWS 0x8
+    constant LIGHTS 0x10
+    constant SURFACES 0x20
+    constant SWAP_CHAINS 0x40
+    constant ALL 0xFFFFFFFF
 
 class Microsoft.UI.Composition.Diagnostics.CompositionDebugSettings python_type
     py CompositionDebugSettings

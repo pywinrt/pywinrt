@@ -431,6 +431,11 @@ class Windows.Media.PlayTo.PlayToConnection python_type
 enum Windows.Media.PlayTo.PlayToConnectionError python_type
     py PlayToConnectionError
     signature enum(Windows.Media.PlayTo.PlayToConnectionError;i4)
+    constant NONE 0
+    constant DEVICE_NOT_RESPONDING 1
+    constant DEVICE_ERROR 2
+    constant DEVICE_LOCKED 3
+    constant PROTECTED_PLAYBACK_FAILED 4
 
 class Windows.Media.PlayTo.PlayToConnectionErrorEventArgs python_type
     py PlayToConnectionErrorEventArgs
@@ -447,6 +452,9 @@ class Windows.Media.PlayTo.PlayToConnectionErrorEventArgs python_type
 enum Windows.Media.PlayTo.PlayToConnectionState python_type
     py PlayToConnectionState
     signature enum(Windows.Media.PlayTo.PlayToConnectionState;i4)
+    constant DISCONNECTED 0
+    constant CONNECTED 1
+    constant RENDERING 2
 
 class Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs python_type
     py PlayToConnectionStateChangedEventArgs

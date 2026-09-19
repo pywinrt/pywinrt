@@ -60,10 +60,18 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Strea
 enum Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadMode python_type
     py DeliveryOptimizationDownloadMode
     signature enum(Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadMode;i4)
+    constant SIMPLE 0
+    constant HTTP_ONLY 1
+    constant LAN 2
+    constant GROUP 3
+    constant INTERNET 4
+    constant BYPASS 5
 
 enum Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadModeSource python_type
     py DeliveryOptimizationDownloadModeSource
     signature enum(Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadModeSource;i4)
+    constant DEFAULT 0
+    constant POLICY 1
 
 class Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings python_type
     py DeliveryOptimizationSettings
@@ -695,9 +703,11 @@ class Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo pytho
         get get_StoreContentModifierId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4 reverse=43
             out string return
 
-enum Windows.ApplicationModel.Store.Preview.StoreLogOptions python_type
+enum Windows.ApplicationModel.Store.Preview.StoreLogOptions python_type flags_enum
     py StoreLogOptions
     signature enum(Windows.ApplicationModel.Store.Preview.StoreLogOptions;u4)
+    constant NONE 0x0
+    constant TRY_ELEVATE 0x1
 
 class Windows.ApplicationModel.Store.Preview.StorePreview static python_type
     py StorePreview
@@ -735,6 +745,10 @@ class Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo python_type
 enum Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus python_type
     py StorePreviewProductPurchaseStatus
     signature enum(Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus;i4)
+    constant SUCCEEDED 0
+    constant ALREADY_PURCHASED 1
+    constant NOT_FULFILLED 2
+    constant NOT_PURCHASED 3
 
 class Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults python_type
     py StorePreviewPurchaseResults
@@ -781,6 +795,41 @@ class Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo python_type
 enum Windows.ApplicationModel.Store.Preview.StoreSystemFeature python_type
     py StoreSystemFeature
     signature enum(Windows.ApplicationModel.Store.Preview.StoreSystemFeature;i4)
+    constant ARCHITECTURE_X86 0
+    constant ARCHITECTURE_X64 1
+    constant ARCHITECTURE_ARM 2
+    constant DIRECTX9 3
+    constant DIRECTX10 4
+    constant DIRECTX11 5
+    constant D3D12_HARDWARE_F_L11 6
+    constant D3D12_HARDWARE_F_L12 7
+    constant MEMORY_300_MB 8
+    constant MEMORY_750_MB 9
+    constant MEMORY_1_GB 10
+    constant MEMORY_2_GB 11
+    constant CAMERA_FRONT 12
+    constant CAMERA_REAR 13
+    constant GYROSCOPE 14
+    constant HOVER 15
+    constant MAGNETOMETER 16
+    constant NFC 17
+    constant RESOLUTION720_P 18
+    constant RESOLUTION_WVGA 19
+    constant RESOLUTION_WVGA_OR720_P 20
+    constant RESOLUTION_WXGA 21
+    constant RESOLUTION_WVGA_OR_WXGA 22
+    constant RESOLUTION_WXGA_OR720_P 23
+    constant MEMORY_4_GB 24
+    constant MEMORY_6_GB 25
+    constant MEMORY_8_GB 26
+    constant MEMORY_12_GB 27
+    constant MEMORY_16_GB 28
+    constant MEMORY_20_GB 29
+    constant VIDEO_MEMORY_2_GB 30
+    constant VIDEO_MEMORY_4_GB 31
+    constant VIDEO_MEMORY_6_GB 32
+    constant VIDEO_MEMORY_1_GB 33
+    constant ARCHITECTURE_ARM64 34
 
 class Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper static python_type
     py WebAuthenticationCoreManagerHelper

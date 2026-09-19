@@ -88,9 +88,11 @@ class Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation acti
         method StartAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDragOperation shape=4 reverse=162
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackageOperation> return
 
-enum Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIContentMode python_type
+enum Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIContentMode python_type flags_enum
     py CoreDragUIContentMode
     signature enum(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIContentMode;u4)
+    constant AUTO 0x0
+    constant DEFERRED 0x1
 
 class Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride python_type
     py CoreDragUIOverride

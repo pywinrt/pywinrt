@@ -16,6 +16,11 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concr
 enum Windows.Devices.Input.Preview.GazeDeviceConfigurationStatePreview python_type
     py GazeDeviceConfigurationStatePreview
     signature enum(Windows.Devices.Input.Preview.GazeDeviceConfigurationStatePreview;i4)
+    constant UNKNOWN 0
+    constant READY 1
+    constant CONFIGURING 2
+    constant SCREEN_SETUP_NEEDED 3
+    constant USER_CALIBRATION_NEEDED 4
 
 class Windows.Devices.Input.Preview.GazeDevicePreview python_type
     py GazeDevicePreview

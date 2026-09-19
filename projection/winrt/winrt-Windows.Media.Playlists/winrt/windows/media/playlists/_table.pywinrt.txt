@@ -233,6 +233,9 @@ class Windows.Media.Playlists.Playlist activatable python_type
 enum Windows.Media.Playlists.PlaylistFormat python_type
     py PlaylistFormat
     signature enum(Windows.Media.Playlists.PlaylistFormat;i4)
+    constant WINDOWS_MEDIA 0
+    constant ZUNE 1
+    constant M3U 2
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
     py winrt.windows.foundation.AsyncOperationCompletedHandler

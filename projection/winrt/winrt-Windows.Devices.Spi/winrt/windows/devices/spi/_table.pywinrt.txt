@@ -396,10 +396,16 @@ class Windows.Devices.Spi.SpiDevice python_type closeable
 enum Windows.Devices.Spi.SpiMode python_type
     py SpiMode
     signature enum(Windows.Devices.Spi.SpiMode;i4)
+    constant MODE0 0
+    constant MODE1 1
+    constant MODE2 2
+    constant MODE3 3
 
 enum Windows.Devices.Spi.SpiSharingMode python_type
     py SpiSharingMode
     signature enum(Windows.Devices.Spi.SpiSharingMode;i4)
+    constant EXCLUSIVE 0
+    constant SHARED 1
 
 class System.Int32 external
     py winrt.system.Int32

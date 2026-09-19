@@ -507,6 +507,13 @@ class Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs pyth
 enum Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletionReason python_type
     py VoiceCommandCompletionReason
     signature enum(Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletionReason;i4)
+    constant UNKNOWN 0
+    constant COMMUNICATION_FAILED 1
+    constant RESOURCE_LIMITS_EXCEEDED 2
+    constant CANCELED 3
+    constant TIMEOUT_EXCEEDED 4
+    constant APP_LAUNCHED 5
+    constant COMPLETED 6
 
 class Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult python_type
     py VoiceCommandConfirmationResult
@@ -569,6 +576,14 @@ class Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile activatable
 enum Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTileType python_type
     py VoiceCommandContentTileType
     signature enum(Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTileType;i4)
+    constant TITLE_ONLY 0
+    constant TITLE_WITH_TEXT 1
+    constant TITLE_WITH68X68_ICON 2
+    constant TITLE_WITH68X68_ICON_AND_TEXT 3
+    constant TITLE_WITH68X92_ICON 4
+    constant TITLE_WITH68X92_ICON_AND_TEXT 5
+    constant TITLE_WITH280X140_ICON 6
+    constant TITLE_WITH280X140_ICON_AND_TEXT 7
 
 class Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition python_type
     py VoiceCommandDefinition

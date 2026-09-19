@@ -1036,10 +1036,17 @@ class Windows.Media.Capture.Frames.MediaFrameReader python_type closeable
 enum Windows.Media.Capture.Frames.MediaFrameReaderAcquisitionMode python_type
     py MediaFrameReaderAcquisitionMode
     signature enum(Windows.Media.Capture.Frames.MediaFrameReaderAcquisitionMode;i4)
+    constant REALTIME 0
+    constant BUFFERED 1
 
 enum Windows.Media.Capture.Frames.MediaFrameReaderStartStatus python_type
     py MediaFrameReaderStartStatus
     signature enum(Windows.Media.Capture.Frames.MediaFrameReaderStartStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant DEVICE_NOT_AVAILABLE 2
+    constant OUTPUT_FORMAT_NOT_SUPPORTED 3
+    constant EXCLUSIVE_CONTROL_NOT_AVAILABLE 4
 
 class Windows.Media.Capture.Frames.MediaFrameReference python_type closeable
     py MediaFrameReference
@@ -1158,6 +1165,12 @@ class Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult python_type
 enum Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyStatus python_type
     py MediaFrameSourceGetPropertyStatus
     signature enum(Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant NOT_SUPPORTED 2
+    constant DEVICE_NOT_AVAILABLE 3
+    constant MAX_PROPERTY_VALUE_SIZE_TOO_SMALL 4
+    constant MAX_PROPERTY_VALUE_SIZE_REQUIRED 5
 
 class Windows.Media.Capture.Frames.MediaFrameSourceGroup python_type
     py MediaFrameSourceGroup
@@ -1231,10 +1244,23 @@ class Windows.Media.Capture.Frames.MediaFrameSourceInfo python_type
 enum Windows.Media.Capture.Frames.MediaFrameSourceKind python_type
     py MediaFrameSourceKind
     signature enum(Windows.Media.Capture.Frames.MediaFrameSourceKind;i4)
+    constant CUSTOM 0
+    constant COLOR 1
+    constant INFRARED 2
+    constant DEPTH 3
+    constant AUDIO 4
+    constant IMAGE 5
+    constant METADATA 6
 
 enum Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus python_type
     py MediaFrameSourceSetPropertyStatus
     signature enum(Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant NOT_SUPPORTED 2
+    constant INVALID_VALUE 3
+    constant DEVICE_NOT_AVAILABLE 4
+    constant NOT_IN_CONTROL 5
 
 class Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs python_type
     py MultiSourceMediaFrameArrivedEventArgs
@@ -1275,6 +1301,11 @@ class Windows.Media.Capture.Frames.MultiSourceMediaFrameReader python_type close
 enum Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus python_type
     py MultiSourceMediaFrameReaderStartStatus
     signature enum(Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus;i4)
+    constant SUCCESS 0
+    constant NOT_SUPPORTED 1
+    constant INSUFFICIENT_RESOURCES 2
+    constant DEVICE_NOT_AVAILABLE 3
+    constant UNKNOWN_FAILURE 4
 
 class Windows.Media.Capture.Frames.MultiSourceMediaFrameReference python_type closeable
     py MultiSourceMediaFrameReference

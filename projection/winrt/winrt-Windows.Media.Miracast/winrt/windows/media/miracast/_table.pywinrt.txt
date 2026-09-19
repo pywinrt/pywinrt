@@ -478,10 +478,22 @@ class Windows.Media.Miracast.MiracastReceiverApplySettingsResult python_type
 enum Windows.Media.Miracast.MiracastReceiverApplySettingsStatus python_type
     py MiracastReceiverApplySettingsStatus
     signature enum(Windows.Media.Miracast.MiracastReceiverApplySettingsStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant MIRACAST_NOT_SUPPORTED 2
+    constant ACCESS_DENIED 3
+    constant FRIENDLY_NAME_TOO_LONG 4
+    constant MODEL_NAME_TOO_LONG 5
+    constant MODEL_NUMBER_TOO_LONG 6
+    constant INVALID_SETTINGS 7
 
 enum Windows.Media.Miracast.MiracastReceiverAuthorizationMethod python_type
     py MiracastReceiverAuthorizationMethod
     signature enum(Windows.Media.Miracast.MiracastReceiverAuthorizationMethod;i4)
+    constant NONE 0
+    constant CONFIRM_CONNECTION 1
+    constant PIN_DISPLAY_IF_REQUESTED 2
+    constant PIN_DISPLAY_REQUIRED 3
 
 class Windows.Media.Miracast.MiracastReceiverConnection python_type closeable
     py MiracastReceiverConnection
@@ -584,6 +596,14 @@ class Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings python_t
 enum Windows.Media.Miracast.MiracastReceiverDisconnectReason python_type
     py MiracastReceiverDisconnectReason
     signature enum(Windows.Media.Miracast.MiracastReceiverDisconnectReason;i4)
+    constant FINISHED 0
+    constant APP_SPECIFIC_ERROR 1
+    constant CONNECTION_NOT_ACCEPTED 2
+    constant DISCONNECTED_BY_USER 3
+    constant FAILED_TO_START_STREAMING 4
+    constant MEDIA_DECODING_ERROR 5
+    constant MEDIA_STREAMING_ERROR 6
+    constant MEDIA_DECRYPTION_ERROR 7
 
 class Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs python_type
     py MiracastReceiverDisconnectedEventArgs
@@ -625,6 +645,8 @@ class Windows.Media.Miracast.MiracastReceiverGameControllerDevice python_type
 enum Windows.Media.Miracast.MiracastReceiverGameControllerDeviceUsageMode python_type
     py MiracastReceiverGameControllerDeviceUsageMode
     signature enum(Windows.Media.Miracast.MiracastReceiverGameControllerDeviceUsageMode;i4)
+    constant AS_GAME_CONTROLLER 0
+    constant AS_MOUSE_AND_KEYBOARD 1
 
 class Windows.Media.Miracast.MiracastReceiverInputDevices python_type
     py MiracastReceiverInputDevices
@@ -664,6 +686,12 @@ class Windows.Media.Miracast.MiracastReceiverKeyboardDevice python_type
 enum Windows.Media.Miracast.MiracastReceiverListeningStatus python_type
     py MiracastReceiverListeningStatus
     signature enum(Windows.Media.Miracast.MiracastReceiverListeningStatus;i4)
+    constant NOT_LISTENING 0
+    constant LISTENING 1
+    constant CONNECTION_PENDING 2
+    constant CONNECTED 3
+    constant DISABLED_BY_POLICY 4
+    constant TEMPORARILY_DISABLED 5
 
 class Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs python_type
     py MiracastReceiverMediaSourceCreatedEventArgs
@@ -741,6 +769,10 @@ class Windows.Media.Miracast.MiracastReceiverSessionStartResult python_type
 enum Windows.Media.Miracast.MiracastReceiverSessionStartStatus python_type
     py MiracastReceiverSessionStartStatus
     signature enum(Windows.Media.Miracast.MiracastReceiverSessionStartStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant MIRACAST_NOT_SUPPORTED 2
+    constant ACCESS_DENIED 3
 
 class Windows.Media.Miracast.MiracastReceiverSettings python_type
     py MiracastReceiverSettings
@@ -837,6 +869,10 @@ class Windows.Media.Miracast.MiracastReceiverVideoStreamSettings python_type
 enum Windows.Media.Miracast.MiracastReceiverWiFiStatus python_type
     py MiracastReceiverWiFiStatus
     signature enum(Windows.Media.Miracast.MiracastReceiverWiFiStatus;i4)
+    constant MIRACAST_SUPPORT_UNDETERMINED 0
+    constant MIRACAST_NOT_SUPPORTED 1
+    constant MIRACAST_SUPPORT_NOT_OPTIMIZED 2
+    constant MIRACAST_SUPPORTED 3
 
 class Windows.Media.Miracast.MiracastTransmitter python_type
     py MiracastTransmitter
@@ -866,6 +902,10 @@ class Windows.Media.Miracast.MiracastTransmitter python_type
 enum Windows.Media.Miracast.MiracastTransmitterAuthorizationStatus python_type
     py MiracastTransmitterAuthorizationStatus
     signature enum(Windows.Media.Miracast.MiracastTransmitterAuthorizationStatus;i4)
+    constant UNDECIDED 0
+    constant ALLOWED 1
+    constant ALWAYS_PROMPT 2
+    constant BLOCKED 3
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Miracast.MiracastReceiver,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[MiracastReceiver, Object]

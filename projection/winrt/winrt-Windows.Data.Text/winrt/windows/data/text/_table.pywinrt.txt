@@ -5,6 +5,11 @@ namespace Windows.Data.Text
 enum Windows.Data.Text.AlternateNormalizationFormat python_type
     py AlternateNormalizationFormat
     signature enum(Windows.Data.Text.AlternateNormalizationFormat;i4)
+    constant NOT_NORMALIZED 0
+    constant NUMBER 1
+    constant CURRENCY 3
+    constant DATE 4
+    constant TIME 5
 
 class Windows.Data.Text.AlternateWordForm python_type
     py AlternateWordForm
@@ -698,9 +703,12 @@ class Windows.Data.Text.TextPredictionGenerator python_type
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=previousStrings
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
 
-enum Windows.Data.Text.TextPredictionOptions python_type
+enum Windows.Data.Text.TextPredictionOptions python_type flags_enum
     py TextPredictionOptions
     signature enum(Windows.Data.Text.TextPredictionOptions;u4)
+    constant NONE 0x0
+    constant PREDICTIONS 0x1
+    constant CORRECTIONS 0x2
 
 class Windows.Data.Text.TextReverseConversionGenerator python_type
     py TextReverseConversionGenerator
@@ -811,10 +819,44 @@ class Windows.Data.Text.UnicodeCharacters static python_type
 enum Windows.Data.Text.UnicodeGeneralCategory python_type
     py UnicodeGeneralCategory
     signature enum(Windows.Data.Text.UnicodeGeneralCategory;i4)
+    constant UPPERCASE_LETTER 0
+    constant LOWERCASE_LETTER 1
+    constant TITLECASE_LETTER 2
+    constant MODIFIER_LETTER 3
+    constant OTHER_LETTER 4
+    constant NONSPACING_MARK 5
+    constant SPACING_COMBINING_MARK 6
+    constant ENCLOSING_MARK 7
+    constant DECIMAL_DIGIT_NUMBER 8
+    constant LETTER_NUMBER 9
+    constant OTHER_NUMBER 10
+    constant SPACE_SEPARATOR 11
+    constant LINE_SEPARATOR 12
+    constant PARAGRAPH_SEPARATOR 13
+    constant CONTROL 14
+    constant FORMAT 15
+    constant SURROGATE 16
+    constant PRIVATE_USE 17
+    constant CONNECTOR_PUNCTUATION 18
+    constant DASH_PUNCTUATION 19
+    constant OPEN_PUNCTUATION 20
+    constant CLOSE_PUNCTUATION 21
+    constant INITIAL_QUOTE_PUNCTUATION 22
+    constant FINAL_QUOTE_PUNCTUATION 23
+    constant OTHER_PUNCTUATION 24
+    constant MATH_SYMBOL 25
+    constant CURRENCY_SYMBOL 26
+    constant MODIFIER_SYMBOL 27
+    constant OTHER_SYMBOL 28
+    constant NOT_ASSIGNED 29
 
 enum Windows.Data.Text.UnicodeNumericType python_type
     py UnicodeNumericType
     signature enum(Windows.Data.Text.UnicodeNumericType;i4)
+    constant NONE 0
+    constant DECIMAL 1
+    constant DIGIT 2
+    constant NUMERIC 3
 
 class Windows.Data.Text.WordSegment python_type
     py WordSegment

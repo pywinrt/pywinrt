@@ -133,14 +133,22 @@ class Windows.Globalization.DateTimeFormatting.DateTimeFormatter python_type
 enum Windows.Globalization.DateTimeFormatting.DayFormat python_type
     py DayFormat
     signature enum(Windows.Globalization.DateTimeFormatting.DayFormat;i4)
+    constant NONE 0
+    constant DEFAULT 1
 
 enum Windows.Globalization.DateTimeFormatting.DayOfWeekFormat python_type
     py DayOfWeekFormat
     signature enum(Windows.Globalization.DateTimeFormatting.DayOfWeekFormat;i4)
+    constant NONE 0
+    constant DEFAULT 1
+    constant ABBREVIATED 2
+    constant FULL 3
 
 enum Windows.Globalization.DateTimeFormatting.HourFormat python_type
     py HourFormat
     signature enum(Windows.Globalization.DateTimeFormatting.HourFormat;i4)
+    constant NONE 0
+    constant DEFAULT 1
 
 interface Windows.Globalization.DateTimeFormatting.IDateTimeFormatter
     guid 95eeca10-73e0-4e4b-a183-3d6ad0ba35ec
@@ -215,18 +223,31 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
 enum Windows.Globalization.DateTimeFormatting.MinuteFormat python_type
     py MinuteFormat
     signature enum(Windows.Globalization.DateTimeFormatting.MinuteFormat;i4)
+    constant NONE 0
+    constant DEFAULT 1
 
 enum Windows.Globalization.DateTimeFormatting.MonthFormat python_type
     py MonthFormat
     signature enum(Windows.Globalization.DateTimeFormatting.MonthFormat;i4)
+    constant NONE 0
+    constant DEFAULT 1
+    constant ABBREVIATED 2
+    constant FULL 3
+    constant NUMERIC 4
 
 enum Windows.Globalization.DateTimeFormatting.SecondFormat python_type
     py SecondFormat
     signature enum(Windows.Globalization.DateTimeFormatting.SecondFormat;i4)
+    constant NONE 0
+    constant DEFAULT 1
 
 enum Windows.Globalization.DateTimeFormatting.YearFormat python_type
     py YearFormat
     signature enum(Windows.Globalization.DateTimeFormatting.YearFormat;i4)
+    constant NONE 0
+    constant DEFAULT 1
+    constant ABBREVIATED 2
+    constant FULL 3
 
 class System.String external
     py winrt.system.String
