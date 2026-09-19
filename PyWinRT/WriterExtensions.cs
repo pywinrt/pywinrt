@@ -122,7 +122,9 @@ static class WriterExtensions
         // HACK: There are a couple of problematic methods. Subclasses of
         // DependencyObject like to override SetValue with a different
         // parameter type. Subclasses of FlyoutBase like to override ShowAt.
-        var typeIgnore = method.IsProblematicOverride ? "  # type: ignore[misc,override]" : "";
+        var typeIgnore = method.OverrideIgnoreCodes is string codes
+            ? $"  # type: ignore[{codes}]"
+            : "";
 
         var paramList = "";
 

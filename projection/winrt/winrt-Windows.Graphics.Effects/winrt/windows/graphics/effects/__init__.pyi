@@ -28,6 +28,6 @@ class IGraphicsEffect(IGraphicsEffectSource, winrt._winrt.IInspectable):
 @typing.final
 class _IGraphicsEffectSource: ...
 
-class IGraphicsEffectSource(winrt._winrt.IInspectable):  # type: ignore[misc]
+class IGraphicsEffectSource(winrt._winrt.IInspectable):
     ...
 

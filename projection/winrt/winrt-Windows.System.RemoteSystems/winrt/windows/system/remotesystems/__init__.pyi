@@ -676,6 +676,6 @@ class RemoteSystemWebAccountFilter(winrt.system.Object, IRemoteSystemFilter):
 @typing.final
 class _IRemoteSystemFilter: ...
 
-class IRemoteSystemFilter(winrt._winrt.IInspectable):  # type: ignore[misc]
+class IRemoteSystemFilter(winrt._winrt.IInspectable):
     ...
 
