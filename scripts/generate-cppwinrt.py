@@ -8,9 +8,18 @@ asked for, so the headers are generated in full and then the transitive closure
 of those eleven is copied out. That is about 110 of the 1400 files and 6 MB of
 the 116 MB the three header packages used to carry.
 
-The output is build output: it is regenerated from the NuGet packages that
-``scripts/fetch-tools.ps1`` downloads, it is not committed, and nothing
-publishes it.
+Each package carries the headers it includes, rather than one package carrying
+them for everybody: ``winrt-runtime`` carries what ``pywinrt/base.h`` includes,
+which is what every consumer of the PyWinRT headers gets as well, and each
+interop package carries the closure of its own namespace on top of that. So an
+interop module that starts including another namespace is a release of that
+package and not of the runtime, and the runtime knows about the Windows SDK
+only - the Windows App SDK headers belong to the one interop package that
+includes them.
+
+The headers are committed, like the rest of the generated tree, so this has to
+be run when the NuGet packages that ``scripts/fetch-tools.ps1`` downloads move
+or when a module starts including a namespace that is not listed below.
 """
 
 import json
@@ -46,12 +55,14 @@ CPPWINRT_EXE = (
 if not CPPWINRT_EXE.exists():
     raise RuntimeError("cppwinrt.exe not found. Please run `./scripts/fetch-tools.ps1`")
 
-# Where the headers are written. Both trees are include directories in their own
-# right and the Windows App SDK one references the Windows SDK one, so a module
-# that needs Microsoft.* puts both on its include path, in this order.
-CPPWINRT_PATH = REPO_ROOT_PATH / "_cppwinrt"
-WINDOWS_SDK_OUTPUT_PATH = CPPWINRT_PATH / "windows-sdk"
-WINDOWS_APP_SDK_OUTPUT_PATH = CPPWINRT_PATH / "windows-app-sdk"
+# The runtime's own directory, which is the one
+# winrt._include.get_cppwinrt_include() names. An interop package's is
+# "cppwinrt" beside its setup.py.
+RUNTIME_OUTPUT_PATH = (
+    REPO_ROOT_PATH / "runtime" / "python" / "winrt" / "include" / "cppwinrt"
+)
+INTEROP_PATH = REPO_ROOT_PATH / "interop"
+INTEROP_OUTPUT_DIR = "cppwinrt"
 
 WINDOWS_SDK_METADATA = (
     TOOLS_PATH
@@ -69,25 +80,35 @@ WEBVIEW2_METADATA = (
     / "Microsoft.Web.WebView2.Core.winmd"
 )
 
-# The namespaces the runtime and the interop modules include, which is what
-# decides how much of each projection is kept. `winrt/base.h` is always kept.
-WINDOWS_SDK_NAMESPACES = [
+# What pywinrt/base.h and the runtime's own sources include. Everything that
+# includes the PyWinRT headers gets these, so no interop package carries them
+# again. `winrt/base.h` comes along with them.
+RUNTIME_NAMESPACES = [
     "Windows.Foundation",
     "Windows.Foundation.Collections",
     "Windows.Foundation.Metadata",
-    "Windows.Graphics.Capture",
-    "Windows.Graphics.DirectX.Direct3D11",
-    "Windows.Media",
     "Windows.Storage.Streams",
-    "Windows.System",
-    "Windows.UI.Composition",
-    "Windows.UI.Composition.Desktop",
 ]
 
-# winui3-Microsoft.UI.Interop includes the Windows App SDK's own
-# <winrt/Microsoft.UI.Interop.h>, which is hand-written and ships in the NuGet
-# package; what it needs from here is the namespace header under it.
-WINDOWS_APP_SDK_NAMESPACES = ["Microsoft.UI"]
+# What each interop module includes beyond that. winui3-Microsoft.UI.Interop
+# includes the Windows App SDK's own <winrt/Microsoft.UI.Interop.h>, which is
+# hand-written and ships in the NuGet package; what it needs from here is the
+# namespace header under it.
+INTEROP_NAMESPACES = {
+    "winrt-Windows.Graphics.Capture.Interop": ["Windows.Graphics.Capture"],
+    "winrt-Windows.Graphics.DirectX.Direct3D11.Interop": [
+        "Windows.Graphics.DirectX.Direct3D11"
+    ],
+    "winrt-Windows.Media.Interop": ["Windows.Media"],
+    "winrt-Windows.System.Interop": ["Windows.System"],
+    "winrt-Windows.UI.Composition.Interop": [
+        "Windows.UI.Composition",
+        "Windows.UI.Composition.Desktop",
+    ],
+    "winrt-Windows.UI.Xaml.Hosting.Interop": [],
+    "winui3-Microsoft.UI.Interop": ["Microsoft.UI"],
+    "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [],
+}
 
 INCLUDE_RE = re.compile(r'#include\s+["<](winrt/[^">]+)[">]')
 
@@ -127,30 +148,32 @@ def header_closure(
 
 
 def copy_headers(
-    names: Iterable[str], source_path: pathlib.Path, output_path: pathlib.Path
+    names: Iterable[str],
+    search_paths: Iterable[pathlib.Path],
+    output_path: pathlib.Path,
 ) -> int:
-    """Copies the headers of @p names that are in @p source_path.
+    """Copies the headers of @p names into @p output_path.
 
-    A name that is not there belongs to one of the other trees, so it is
-    skipped. Returns how many were copied.
+    A header keeps the path it has in the tree it was found in, so the two
+    trees flatten into one include directory. Returns how many were copied.
     """
-    count = 0
+    shutil.rmtree(output_path, ignore_errors=True)
 
     for name in sorted(names):
-        header = source_path / name
+        for search_path in search_paths:
+            header = search_path / name
 
-        if not header.exists():
-            continue
+            if header.exists():
+                break
+        else:
+            raise RuntimeError(f"{name} is not in any of {list(search_paths)}")
 
         destination = output_path / name
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(header, destination)
-        count += 1
 
-    return count
+    return len(set(names))
 
-
-shutil.rmtree(CPPWINRT_PATH, ignore_errors=True)
 
 with tempfile.TemporaryDirectory(prefix="pywinrt-cppwinrt-") as temp_dir:
     windows_sdk_path = pathlib.Path(temp_dir) / "windows-sdk"
@@ -193,14 +216,16 @@ with tempfile.TemporaryDirectory(prefix="pywinrt-cppwinrt-") as temp_dir:
     )
 
     search_paths = [windows_app_sdk_path, windows_sdk_path]
-    closure = header_closure(
-        WINDOWS_SDK_NAMESPACES + WINDOWS_APP_SDK_NAMESPACES, search_paths
-    )
 
-    app_sdk_count = copy_headers(
-        closure, windows_app_sdk_path, WINDOWS_APP_SDK_OUTPUT_PATH
-    )
-    sdk_count = copy_headers(closure, windows_sdk_path, WINDOWS_SDK_OUTPUT_PATH)
+    runtime_closure = header_closure(RUNTIME_NAMESPACES, search_paths)
+    count = copy_headers(runtime_closure, search_paths, RUNTIME_OUTPUT_PATH)
+    print(f"{count} headers -> {RUNTIME_OUTPUT_PATH}")
 
-print(f"{sdk_count} Windows SDK headers -> {WINDOWS_SDK_OUTPUT_PATH}")
-print(f"{app_sdk_count} Windows App SDK headers -> {WINDOWS_APP_SDK_OUTPUT_PATH}")
+    for package, namespaces in INTEROP_NAMESPACES.items():
+        output_path = INTEROP_PATH / package / INTEROP_OUTPUT_DIR
+
+        # what the package includes that the runtime does not already carry
+        closure = header_closure(namespaces, search_paths) - runtime_closure
+
+        count = copy_headers(closure, search_paths, output_path)
+        print(f"{count} headers -> {output_path}")

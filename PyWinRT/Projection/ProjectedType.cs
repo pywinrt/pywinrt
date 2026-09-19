@@ -17,9 +17,6 @@ class ProjectedType
         IsComposable = type.CustomAttributes.Any(a =>
             a.AttributeType.FullName == "Windows.Foundation.Metadata.ComposableAttribute"
         );
-        CircularDependencyDepth =
-            Category == Category.Class ? type.GetCircularDependencyDepth() : 0;
-
         PyWrapperTypeName = Category == Category.Interface ? $"_{Name}" : Name;
 
         PyRequiresMetaclass =
@@ -154,16 +151,6 @@ class ProjectedType
     /// True if the type is a composable WinRT runtime class.
     /// </summary>
     public bool IsComposable { get; }
-
-    /// <summary>
-    /// Gets the depth of circular dependencies, if any.
-    /// </summary>
-    /// <remarks>
-    /// A value of 0 indicates no circular dependencies. A value of 1 indicates
-    /// that this type depends on a type in another namespace that depends on
-    /// a type in this namespace.
-    /// </remarks>
-    public int CircularDependencyDepth { get; }
 
     /// <summary>
     /// Gets the Python type name for the wrapper class.

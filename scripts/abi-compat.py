@@ -23,20 +23,23 @@ that each scenario can put the two halves on PYTHONPATH in the order it wants.
 Both ``winrt`` and ``test_winrt`` are namespace packages, so when the same
 module exists in both halves the earlier entry on PYTHONPATH wins.
 
-Three scenarios:
+There are two contracts and one rule each: a compiled consumer against the C
+ABI in ``pywinrt/abi.h``, and a projection table against the table format in
+``runtime/src/table-format.md``. The three scenarios cover both.
 
-  A. old module, new runtime - the baseline's TestComponent against the current
-     runtime, running the baseline's own tests.
+  A. old table, new runtime - the baseline's TestComponent table, compiled by
+     the baseline's own table.py, read by the current runtime. Nothing is
+     compiled here: a projection package is data.
   B. new module, old runtime - the current TestComponent against the baseline
      runtime.
   C. old headers, new hand-written code - a compile-only build of an interop
      package against the baseline's copy of the pywinrt headers.
 
-What each one expects is computed from the two ABI versions rather than written
-down, so that the same script keeps working as the ABI moves: A and B either
-run the tests and require them to pass, or require a refusal that names the
-mismatch, and C is skipped when the baseline is too old for the current sources
-to be compiled against its headers at all.
+What each one expects is computed from the two versions rather than written
+down, so that the same script keeps working as either contract moves: A and B
+either run the tests and require them to pass, or require a refusal that names
+the mismatch, and A and C are skipped when the baseline predates what they
+check.
 """
 
 import argparse
@@ -58,16 +61,11 @@ PROJECT_DIR = Path(__file__).parent.parent
 MAJOR_REFUSAL = "ABI major version mismatch"
 MINOR_REFUSAL = "ABI minor version mismatch"
 
-# The message check_module_abi() in runtime.cpp raises through when a module it
-# resolved a type from does not report an ABI version at all.
-LEGACY_MODULE_REFUSAL = "no usable _abi_version_"
-
-# The ABI minor at which generated modules started reporting _abi_version_ back
-# to Python, which is the same one at which the runtime started requiring it of
-# any module it resolves a type from. A module older than this loads, since the
-# capsule it was built against is a prefix of the current one, but cannot take
-# part in resolving types across modules.
-MODULE_ATTRIBUTE_ABI_MINOR = 3
+# The messages table.cpp raises through when a runtime will not read a table.
+# Both halves have to agree on the wording for this to be checkable, which they
+# have since the table format was introduced.
+TABLE_MAJOR_REFUSAL = "cannot be read by this runtime"
+TABLE_MINOR_REFUSAL = "is newer than this runtime"
 
 
 def run(
@@ -171,6 +169,38 @@ class Tree:
         )
 
     @property
+    def table_header(self) -> Path:
+        return self.runtime_package / "src/table.h"
+
+    @property
+    def table_format(self) -> tuple[int, int] | None:
+        """
+        The table format this tree's runtime reads, or None for a tree that
+        predates the table projection, whose packages are compiled modules
+        rather than data and are not party to this contract at all.
+        """
+        if not self.table_header.is_file():
+            return None
+
+        source = self.table_header.read_text(encoding="utf-8")
+
+        def constant(name: str) -> int:
+            match = re.search(rf"\b{name}\s*=\s*(\d+)", source)
+
+            if not match:
+                raise SystemExit(f"could not read {name} from {self.table_header}")
+
+            return int(match.group(1))
+
+        return constant("format_major"), constant("format_minor")
+
+    @property
+    def test_component_table(self) -> Path:
+        return (
+            self.test_component_package / "test_winrt/testcomponent/_table.pywinrt.txt"
+        )
+
+    @property
     def build_pythonpath(self) -> str:
         """
         What a package in this tree needs on PYTHONPATH to be built without
@@ -228,14 +258,10 @@ def build_wheel(package: Path, out_dir: Path, pythonpath: str) -> Path:
     """
     Builds one package into a wheel, without build isolation so that the
     winrt-runtime build dependency comes from the tree being built rather than
-    from PyPI. The C++/WinRT headers come from the current tree either way,
-    since the sources being compiled are the current ones.
+    from PyPI. The C++/WinRT headers ride inside that same package, so
+    PYTHONPATH decides which tree's headers are compiled against.
     """
-    env = dict(
-        os.environ,
-        PYTHONPATH=pythonpath,
-        CPPWINRT_PATH=os.fspath(PROJECT_DIR / "_cppwinrt"),
-    )
+    env = dict(os.environ, PYTHONPATH=pythonpath)
 
     # A fresh directory per package, so that the wheel that comes out is
     # unambiguous even when pip serves it from its cache and writes no new
@@ -287,6 +313,29 @@ def is_satisfied(required: tuple[int, int], provided: tuple[int, int]) -> bool:
 
 def refusal_message(required: tuple[int, int], provided: tuple[int, int]) -> str:
     return MAJOR_REFUSAL if required[0] != provided[0] else MINOR_REFUSAL
+
+
+def table_refusal_message(required: tuple[int, int], provided: tuple[int, int]) -> str:
+    return TABLE_MAJOR_REFUSAL if required[0] != provided[0] else TABLE_MINOR_REFUSAL
+
+
+def table_format_of(table: Path) -> tuple[int, int] | None:
+    """
+    The format a table's text form is written to, from the header line that
+    says so, or None for a tree that carries no such table.
+    """
+    if not table.is_file():
+        return None
+
+    with open(table, encoding="utf-8") as f:
+        header = f.readline().split()
+
+    if len(header) != 2 or header[0] != "format":
+        raise SystemExit(f"{table} does not start with a format version")
+
+    major, _, minor = header[1].partition(".")
+
+    return int(major), int(minor)
 
 
 def expect_refusal(
@@ -344,22 +393,58 @@ def scenario_a(
     baseline: Tree, current: Tree, current_install: Path, work: Path
 ) -> None:
     """
-    Old module, new runtime. The baseline's TestComponent comes first on
-    PYTHONPATH, so it shadows the one in the current install; everything else,
-    including winrt._winrt, comes from the current install.
+    Old table, new runtime. The baseline's TestComponent package comes first
+    on PYTHONPATH, so it shadows the one in the current install; everything
+    else, including winrt._winrt, comes from the current install.
+
+    Nothing is built here. A projection package is a table and an __init__.py,
+    so the old half is a copy of the baseline's package with its table
+    compiled by the baseline's own winrt/table.py - the writer that wrote the
+    text, paired with the reader being checked.
     """
     print()
-    print("=== scenario A - old module, new runtime ===", flush=True)
+    print("=== scenario A - old table, new runtime ===", flush=True)
 
-    wheel = build_wheel(
-        baseline.test_component_package,
-        work / "wheels/baseline-testcomponent",
-        baseline.build_pythonpath,
+    required = table_format_of(baseline.test_component_table)
+    provided = current.table_format
+
+    if required is None or provided is None:
+        print(
+            f"skipped: {baseline.name} predates the table projection, so its"
+            " packages are compiled modules and say nothing about a table"
+            " format",
+            flush=True,
+        )
+        return
+
+    module_dir = work / "baseline-testcomponent"
+
+    if module_dir.exists():
+        shutil.rmtree(module_dir)
+
+    shutil.copytree(
+        baseline.test_component_package / "test_winrt", module_dir / "test_winrt"
     )
-    module_dir = unpack_wheel(wheel, work / "baseline-testcomponent")
+
+    table = module_dir / baseline.test_component_table.relative_to(
+        baseline.test_component_package
+    )
+
+    # the baseline's compiler, because the text it is reading is the baseline's
+    run(
+        [
+            sys.executable,
+            "-m",
+            "winrt.table",
+            os.fspath(table),
+            os.fspath(table.with_suffix("")),
+        ],
+        env=dict(os.environ, PYTHONPATH=baseline.build_pythonpath),
+    )
+    table.unlink()
 
     # The WinRT component itself is activated registration-free, out of the
-    # directory of the package that imports it, and is not part of the wheel.
+    # directory of the package that imports it, and is not part of the package.
     # It is the same build in both halves - both fetch PyWinRT.TestWinRT at the
     # version scripts/fetch-tools.ps1 pins - so the copy CMake installed is the
     # right one, and it is already the right architecture.
@@ -369,43 +454,21 @@ def scenario_a(
     )
 
     pythonpath = os.pathsep.join([os.fspath(module_dir), os.fspath(current_install)])
-    required = baseline.abi_version
-    provided = current.abi_version
 
-    if not is_satisfied(required, provided):
-        # The current runtime cannot host the baseline's module at all. That is
-        # only allowed to happen across an ABI major, and it has to say so
-        # rather than crash.
-        expect_import_refusal(
-            "test_winrt.testcomponent",
-            refusal_message(required, provided),
-            pythonpath=pythonpath,
-            cwd=baseline.root,
-        )
-    elif required[1] < MODULE_ATTRIBUTE_ABI_MINOR:
-        # The module loads - the capsule is append-only, so the entry points it
-        # was built against are all still there - but it cannot take part in
-        # resolving types by name, because check_module_abi() in runtime.cpp
-        # will not hand a wrapper type back to a module that does not report an
-        # ABI version, and modules only started reporting one at ABI
-        # 4.MODULE_ATTRIBUTE_ABI_MINOR. What is checked here is that the
-        # boundary is a refusal naming the module rather than a crash. This
-        # branch disappears, and the tests below run for real, as soon as the
-        # newest wheels/* tag is one that carries the attribute.
-        print(
-            f"{baseline.name} predates the _abi_version_ module attribute, so"
-            " only the refusal is checked, not the tests",
-            flush=True,
-        )
-        expect_refusal(
-            "import test_winrt.testcomponent as tc\ntc.Derived()",
-            "ImportError",
-            LEGACY_MODULE_REFUSAL,
-            pythonpath=pythonpath,
-            cwd=baseline.root,
-        )
-    else:
+    if is_satisfied(required, provided):
         run_tests("test.test_test_component", pythonpath=pythonpath, cwd=baseline.root)
+    else:
+        # The current runtime will not read the baseline's table. That is only
+        # allowed to happen across a format major, or when the table says
+        # something this runtime would silently ignore, and it has to say so
+        # rather than crash.
+        expect_refusal(
+            "import test_winrt.testcomponent",
+            "ImportError",
+            table_refusal_message(required, provided),
+            pythonpath=pythonpath,
+            cwd=baseline.root,
+        )
 
 
 def scenario_b(

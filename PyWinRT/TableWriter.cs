@@ -284,11 +284,17 @@ sealed class TableWriter
 
     private const uint NoRef = uint.MaxValue;
 
-    // The compatibility generation, which is the same number as the ABI major in
-    // pywinrt/abi.h and the epoch in a projection package's version. The runtime
-    // asserts the two against each other.
-    private const ushort FormatMajor = 4;
-    private const ushort FormatMinor = 0;
+    /// <summary>
+    /// The compatibility generation, which is the same number as the ABI major
+    /// in pywinrt/abi.h and the epoch in a projection package's version. The
+    /// runtime asserts the two against each other.
+    /// </summary>
+    public const ushort FormatMajor = 4;
+
+    /// <summary>
+    /// Counts the additions to the table format within a generation.
+    /// </summary>
+    public const ushort FormatMinor = 0;
 
     private readonly QualifiedNamespace ns;
     private readonly IReadOnlyDictionary<string, string> packageMap;

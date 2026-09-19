@@ -43,6 +43,12 @@ The header carries a major and a minor version.
 - **Major** is bumped when anything already written changes meaning, moves or
   goes away. A runtime refuses any table whose major is not its own.
 
+The minor starts counting at the first release of the format. Before that there
+is no table anywhere that a runtime has to keep reading, so a change is not an
+addition to anything and the records simply change at the minor the format
+already has. The history of this file below its first release is therefore not a
+sequence of minor bumps and does not read as one.
+
 The refusal is an `ImportError` that names the package and both versions, the
 same shape as the message a compiled module gets from `import_winrt_runtime()`.
 

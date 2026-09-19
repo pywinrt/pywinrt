@@ -1,22 +1,11 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
-import os
-import pathlib
-
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
-from winrt._include import get_include
 
-# The C++/WinRT headers that scripts/generate-cppwinrt.py writes. They are
-# build output rather than a distribution - the only things that compile
-# against them are winrt-runtime and the interop modules - so the build is
-# told where they are rather than finding them in site-packages.
-try:
-    CPPWINRT_PATH = pathlib.Path(os.environ["CPPWINRT_PATH"]).resolve()
-except KeyError:
-    raise RuntimeError("Please set the CPPWINRT_PATH environment variable")
+from winrt._include import get_cppwinrt_include, get_include
 
-CPPWINRT_INCLUDE_DIRS = [os.fspath(CPPWINRT_PATH / "windows-sdk")]
+INCLUDE_DIRS = [get_include(), get_cppwinrt_include()]
 
 
 class build_ext_ex(build_ext):
@@ -46,7 +35,7 @@ setup(
         Extension(
             "winrt._winrt_windows_ui_xaml_hosting_interop",
             sources=["py.Windows.UI.Xaml.Hosting.Interop.cpp"],
-            include_dirs=[get_include()] + CPPWINRT_INCLUDE_DIRS,
+            include_dirs=INCLUDE_DIRS,
             libraries=["windowsapp"],
         )
     ],

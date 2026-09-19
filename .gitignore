@@ -37,9 +37,6 @@ bld/
 # Build tools
 /_tools/
 
-# C++/WinRT headers, generated from the NuGet packages in _tools
-/_cppwinrt/
-
 # Visual Studio 2017 auto generated files
 Generated\ Files/
 

@@ -28,7 +28,10 @@ if TYPE_CHECKING:
 
 
 #: The file a projection package keeps its namespace's table in, beside the
-#: ``__init__.py`` that loads it.
+#: ``__init__.py`` that loads it. It is part of the table format, which
+#: ``runtime/src/table-format.md`` is the contract for; the compiler in
+#: winrt-table spells it for itself, as the two ends of the format spell the
+#: magic and the record sizes for themselves.
 TABLE_NAME = "_table.pywinrt"
 
 

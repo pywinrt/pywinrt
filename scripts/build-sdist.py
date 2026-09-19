@@ -1,7 +1,16 @@
+"""Builds the source distribution of every package that is published.
+
+A source distribution has to build on a machine that has nothing but PyPI, so
+nothing here tells a build where to find something in this checkout: the
+C++/WinRT headers that winrt-runtime and the interop modules compile against
+ride inside the packages that include them, and a projection package's only
+build step is compiling its tables, which the hatchling hook that winrt-table
+ships does.
+"""
+
 import json
 import os
 import subprocess
-from glob import iglob
 from itertools import chain
 from pathlib import Path
 
@@ -18,24 +27,18 @@ def versioned_package(package: str) -> str:
 
 
 PROJECTION_PATH = (PROJECT_DIR / "projection").resolve()
-WEBVIEW2_PATH = (
-    PROJECT_DIR / "_tools" / versioned_package("Microsoft.Web.WebView2")
-).resolve()
-MICROSOFT_UI_XAML_PATH = (
-    PROJECT_DIR / "_tools" / versioned_package("Microsoft.UI.Xaml")
-).resolve()
 WINDOWS_APP_SDK_PATH = (
     PROJECT_DIR / "_tools" / versioned_package("Microsoft.WindowsAppSDK")
 ).resolve()
 
-os.environ["WEBVIEW2_PATH"] = os.fspath(WEBVIEW2_PATH)
-os.environ["MICROSOFT_UI_XAML_PATH"] = os.fspath(MICROSOFT_UI_XAML_PATH)
+# the Windows App SDK is redistributed with an app rather than part of
+# Windows, so the two interop modules that call it take its headers and its
+# import libraries from the NuGet package
 os.environ["WINDOWS_APP_SDK_PATH"] = os.fspath(WINDOWS_APP_SDK_PATH)
-os.environ["CPPWINRT_PATH"] = os.fspath(PROJECT_DIR / "_cppwinrt")
 
-# setup.py imports winrt._include to locate the runtime headers, and the
-# runtime is not installed here (its own sdist is one of the things we build),
-# so point at its source tree instead
+# setup.py imports winrt._include to locate the headers it compiles against,
+# and the runtime is not installed here (its own sdist is one of the things we
+# build), so point at its source tree instead
 os.environ["PYTHONPATH"] = os.pathsep.join(
     filter(
         None,
@@ -48,13 +51,13 @@ os.environ["PYTHONPATH"] = os.pathsep.join(
 
 
 for package_path in chain(
-    [os.fspath(PROJECT_DIR / "runtime")],
-    iglob(os.fspath(PROJECT_DIR / "interop" / "winrt-*")),
-    iglob(os.fspath(PROJECT_DIR / "interop" / "winui3-*")),
-    iglob(os.fspath(PROJECTION_PATH / "winrt" / "winrt-*")),
-    iglob(os.fspath(PROJECTION_PATH / "winui2" / "winui2-*")),
-    iglob(os.fspath(PROJECTION_PATH / "winui3" / "winui3-*")),
-    iglob(os.fspath(PROJECTION_PATH / "webview2" / "webview2-*")),
+    [PROJECT_DIR / "table", PROJECT_DIR / "runtime"],
+    (PROJECT_DIR / "interop").glob("winrt-*"),
+    (PROJECT_DIR / "interop").glob("winui3-*"),
+    (PROJECTION_PATH / "winrt").glob("winrt-*"),
+    (PROJECTION_PATH / "winui2").glob("winui2-*"),
+    (PROJECTION_PATH / "winui3").glob("winui3-*"),
+    (PROJECTION_PATH / "webview2").glob("webview2-*"),
 ):
     subprocess.check_call(
         [
@@ -64,6 +67,6 @@ for package_path in chain(
             "--skip-dependency-check",
             "--outdir",
             "wheelhouse",
-            package_path,
+            os.fspath(package_path),
         ],
     )

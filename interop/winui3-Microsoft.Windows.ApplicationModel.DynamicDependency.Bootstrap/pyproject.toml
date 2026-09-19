@@ -28,6 +28,9 @@ Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 version = { file = "version.txt" }
 dependencies = { file = "requirements.txt" }
 
+[tool.setuptools.packages.find]
+include = ["winui3*"]
+
 [tool.setuptools.package-data]
 "*" = ["*.pyi", "py.typed"]
 

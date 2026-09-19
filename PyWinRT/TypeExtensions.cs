@@ -527,40 +527,6 @@ static class TypeExtensions
         }
     }
 
-    public static int GetCircularDependencyDepth(this TypeReference type)
-    {
-        var depth = 0;
-        var isInOwnNamespace = true;
-        var dependsOnOwnSubmodule = false;
-
-        for (
-            var current = TryResolve(type);
-            current != null;
-            current = TryResolve(current.BaseType)
-        )
-        {
-            var wasInOwnNamespace = isInOwnNamespace;
-            isInOwnNamespace = current.Namespace == type.Namespace;
-
-            if (isInOwnNamespace && !wasInOwnNamespace)
-            {
-                depth++;
-            }
-
-            if (current.Namespace.StartsWith(type.Namespace + ".", StringComparison.Ordinal))
-            {
-                dependsOnOwnSubmodule = true;
-            }
-        }
-
-        if (depth == 0 && dependsOnOwnSubmodule)
-        {
-            depth++;
-        }
-
-        return depth;
-    }
-
     extension(ProjectedMethod method)
     {
         public bool IsProblematicOverride

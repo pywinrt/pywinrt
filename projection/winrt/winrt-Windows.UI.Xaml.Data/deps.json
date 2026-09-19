@@ -2,9 +2,9 @@
     "pywinrt": {
         "version": "0.0.0"
     },
-    "runtime_abi": {
+    "table_format": {
         "major": 4,
-        "minor": 5
+        "minor": 0
     },
     "required": [
         "winrt-Windows.UI.Xaml"

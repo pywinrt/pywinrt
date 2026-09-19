@@ -61,19 +61,21 @@ find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)
 # helper functions
 ################################################################################
 
-# The C++/WinRT headers scripts/generate-cppwinrt.py writes. They are build
-# output rather than a package, because the only things that compile against
-# them are the runtime and the interop modules.
-set(CPPWINRT_PATH "../_cppwinrt")
-set(CPPWINRT_WINDOWS_SDK_PATH "${CPPWINRT_PATH}/windows-sdk")
-set(CPPWINRT_WINDOWS_APP_SDK_PATH "${CPPWINRT_PATH}/windows-app-sdk")
 # The runtime is hand-written, so it lives outside of projection/. Its public
 # C++ headers sit inside its Python package, the way numpy and pybind11 ship
 # theirs, so that they are found at the same place in a wheel and here.
 set(WINRT_RUNTIME_PATH "../runtime")
+# The table compiler is a package of its own, because it is pure Python and a
+# projection package should not need a compiler to be built.
+set(WINRT_TABLE_PATH "../table")
 set(WINRT_RUNTIME_SRC_PATH "${WINRT_RUNTIME_PATH}/src")
 set(WINRT_RUNTIME_PYTHON_PATH "${WINRT_RUNTIME_PATH}/python/winrt")
 set(WINRT_RUNTIME_INCLUDE_PATH "${WINRT_RUNTIME_PYTHON_PATH}/include")
+# The C++/WinRT headers scripts/generate-cppwinrt.py writes. The runtime
+# carries what pywinrt/base.h includes, which is what everything compiled
+# against the PyWinRT headers gets; an interop module carries the namespaces it
+# includes beyond those, in a cppwinrt directory of its own.
+set(CPPWINRT_PATH "${WINRT_RUNTIME_INCLUDE_PATH}/cppwinrt")
 set(PYWINRT_CHECK_DLL_IMPORTS "${CMAKE_CURRENT_SOURCE_DIR}/check-dll-imports.cmake")
 set(WEBVIEW2_PATH "../_tools/Microsoft.Web.WebView2.${WEBVIEW2_VERSION}")
 set(WINDOWS_APP_SDK_PATH "../_tools/Microsoft.WindowsAppSDK.${WINDOWS_APP_SDK_VERSION}")
@@ -98,7 +100,7 @@ function(pywinrt_add_library target sources)
     Python3_add_library(${target} MODULE "${sources}")
     target_include_directories(${target} PRIVATE
         "${WINRT_RUNTIME_INCLUDE_PATH}"
-        "${CPPWINRT_WINDOWS_SDK_PATH}"
+        "${CPPWINRT_PATH}"
     )
 
     if (MSVC)
@@ -167,6 +169,9 @@ target_precompile_headers(_winrt PRIVATE "${WINRT_RUNTIME_INCLUDE_PATH}/pywinrt/
 
 install(TARGETS _winrt DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
 install(DIRECTORY "${WINRT_RUNTIME_PYTHON_PATH}/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+# test_table.py and test_table_text.py read the compiler the same way the
+# build does, so it is installed as well
+install(DIRECTORY "${WINRT_TABLE_PATH}/winrt/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
 
 # interop modules
 ################################################################################
@@ -181,6 +186,7 @@ function(pywinrt_add_interop_module target package source root)
     set(package_path "${PYWINRT_INTEROP_PATH}/${package}")
 
     pywinrt_add_library(${target} "${package_path}/${source}")
+    target_include_directories(${target} PRIVATE "${package_path}/cppwinrt")
     install(TARGETS ${target} DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${root}")
     install(DIRECTORY "${package_path}/${root}/"
         DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${root}")
@@ -217,9 +223,7 @@ set(WINDOWS_APP_SDK_LIB_PATH "${WINDOWS_APP_SDK_PATH}/lib/win10-${PYWINRT_TARGET
 pywinrt_add_interop_module(_winui3_microsoft_ui_interop
     "winui3-Microsoft.UI.Interop" "py.Microsoft.UI.Interop.cpp" "winui3")
 target_include_directories(_winui3_microsoft_ui_interop PRIVATE
-    "${CPPWINRT_WINDOWS_APP_SDK_PATH}"
-    "${WINDOWS_APP_SDK_PATH}/include"
-)
+    "${WINDOWS_APP_SDK_PATH}/include")
 if (NOT MSVC)
     # the App SDK's Microsoft.UI.Interop.h uses MSVC-only pragmas
     target_compile_options(_winui3_microsoft_ui_interop PRIVATE -Wno-unknown-pragmas)
@@ -229,9 +233,7 @@ pywinrt_add_interop_module(_winui3_microsoft_windows_applicationmodel_dynamicdep
     "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
     "py.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap.cpp" "winui3")
 target_include_directories(_winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
-    "${CPPWINRT_WINDOWS_APP_SDK_PATH}"
-    "${WINDOWS_APP_SDK_PATH}/include"
-)
+    "${WINDOWS_APP_SDK_PATH}/include")
 target_link_directories(_winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
     "${WINDOWS_APP_SDK_LIB_PATH}")
 target_link_libraries(_winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
@@ -249,12 +251,12 @@ install(FILES "${WINDOWS_APP_SDK_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/nativ
 # do is compile the table and put both where the tests will import them from.
 #
 # The table is carried as text and the runtime reads a binary, so compiling one
-# into the other is a build step: winrt/table.py, which winrt-runtime ships for
+# into the other is a build step: winrt/table.py, which winrt-table ships for
 # whatever builds a projection. Nothing is written back into the source tree,
 # which is what keeps a generated binary out of the repository.
 
 set(PYWINRT_TABLE_DIR "${CMAKE_CURRENT_BINARY_DIR}/tables")
-set(PYWINRT_TABLE_COMPILER "${WINRT_RUNTIME_PYTHON_PATH}/table.py")
+set(PYWINRT_TABLE_COMPILER "${WINRT_TABLE_PATH}/winrt/table/__init__.py")
 
 function(pywinrt_install_namespace_package package)
     # package_name: e.g. winrt-Windows.Foundation, test-winrt-TestComponent
@@ -288,7 +290,7 @@ function(pywinrt_install_namespace_package package)
         add_custom_command(
             OUTPUT "${binary}"
             COMMAND "${CMAKE_COMMAND}" -E env
-                "PYTHONPATH=${CMAKE_CURRENT_SOURCE_DIR}/${WINRT_RUNTIME_PATH}/python"
+                "PYTHONPATH=${CMAKE_CURRENT_SOURCE_DIR}/${WINRT_TABLE_PATH}"
                 "${Python3_EXECUTABLE}" -m winrt.table "${package_dir}/${table}" "${binary}"
             DEPENDS "${package_dir}/${table}" "${PYWINRT_TABLE_COMPILER}"
             COMMENT "Compiling ${package_root_dir}/${ns_dir}/_table.pywinrt"
