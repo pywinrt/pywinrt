@@ -28,7 +28,6 @@ __all__ = [
     "DialDisconnectButtonClickedEventArgs",
     "DialReceiverApp",
 ]
-Self = typing.TypeVar('Self')
 
 class DialAppLaunchResult(enum.IntEnum):
     LAUNCHED = 0
@@ -102,7 +101,7 @@ class DialDevice(winrt.system.Object, metaclass=DialDevice_Static):
 
 @typing.final
 class DialDevicePicker(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Media.DialProtocol.DialDevicePicker::Hide()
     def hide(self) -> None: ...
     @typing.overload

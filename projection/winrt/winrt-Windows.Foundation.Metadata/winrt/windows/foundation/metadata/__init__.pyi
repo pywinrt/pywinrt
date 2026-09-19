@@ -19,7 +19,6 @@ __all__ = [
     "ThreadingModel",
     "ApiInformation",
 ]
-Self = typing.TypeVar('Self')
 
 class AttributeTargets(enum.IntFlag):
     ALL = 0xFFFFFFFF
@@ -112,5 +111,5 @@ class ApiInformation_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ApiInformation(winrt.system.Object, metaclass=ApiInformation_Static):
-    pass
+    ...
 

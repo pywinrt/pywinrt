@@ -13,7 +13,6 @@ __all__ = [
     "IPwmControllerProvider",
     "IPwmProvider",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class _IPwmControllerProvider: ...

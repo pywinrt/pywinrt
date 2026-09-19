@@ -13,7 +13,6 @@ __all__ = [
     "ServiceDevice",
     "StorageDevice",
 ]
-Self = typing.TypeVar('Self')
 
 class ServiceDeviceType(enum.IntEnum):
     CALENDAR_SERVICE = 0
@@ -33,7 +32,7 @@ class ServiceDevice_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ServiceDevice(winrt.system.Object, metaclass=ServiceDevice_Static):
-    pass
+    ...
 
 @typing.final
 class StorageDevice_Static(winrt._winrt.IInspectable_Static):
@@ -44,5 +43,5 @@ class StorageDevice_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class StorageDevice(winrt.system.Object, metaclass=StorageDevice_Static):
-    pass
+    ...
 

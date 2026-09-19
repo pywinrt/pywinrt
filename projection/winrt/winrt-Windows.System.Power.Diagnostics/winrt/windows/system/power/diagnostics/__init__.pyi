@@ -10,7 +10,6 @@ __all__ = [
     "BackgroundEnergyDiagnostics",
     "ForegroundEnergyDiagnostics",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class BackgroundEnergyDiagnostics_Static(winrt._winrt.IInspectable_Static):
@@ -26,7 +25,7 @@ class BackgroundEnergyDiagnostics_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class BackgroundEnergyDiagnostics(winrt.system.Object, metaclass=BackgroundEnergyDiagnostics_Static):
-    pass
+    ...
 
 @typing.final
 class ForegroundEnergyDiagnostics_Static(winrt._winrt.IInspectable_Static):
@@ -42,5 +41,5 @@ class ForegroundEnergyDiagnostics_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ForegroundEnergyDiagnostics(winrt.system.Object, metaclass=ForegroundEnergyDiagnostics_Static):
-    pass
+    ...
 

@@ -8,11 +8,10 @@ import winrt.system
 __all__ = [
     "DisplayRequest",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class DisplayRequest(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.System.Display.DisplayRequest::RequestActive()
     def request_active(self) -> None: ...
     # System.Void Windows.System.Display.DisplayRequest::RequestRelease()

@@ -59,7 +59,6 @@ __all__ = [
     "ValuePatternIdentifiers",
     "WindowPatternIdentifiers",
 ]
-Self = typing.TypeVar('Self')
 
 class AnnotationType(enum.IntEnum):
     UNKNOWN = 60000
@@ -259,7 +258,7 @@ class AnnotationPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AnnotationPatternIdentifiers(winrt.system.Object, metaclass=AnnotationPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class AutomationAnnotation_Static(microsoft_ui_xaml.DependencyObject_Static):
@@ -273,11 +272,11 @@ class AutomationAnnotation_Static(microsoft_ui_xaml.DependencyObject_Static):
 @typing.final
 class AutomationAnnotation(microsoft_ui_xaml.DependencyObject, metaclass=AutomationAnnotation_Static):
     @typing.overload
-    def __new__(cls: type[Self], type: AnnotationType) -> Self: ...
+    def __new__(cls, type: AnnotationType) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], type: AnnotationType, element: microsoft_ui_xaml.UIElement) -> Self: ...
+    def __new__(cls, type: AnnotationType, element: microsoft_ui_xaml.UIElement) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Microsoft.UI.Xaml.Automation.AnnotationType Microsoft.UI.Xaml.Automation.AutomationAnnotation::get_Type()
     @_property
     def type(self) -> AnnotationType: ...
@@ -413,7 +412,7 @@ class AutomationElementIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AutomationElementIdentifiers(winrt.system.Object, metaclass=AutomationElementIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class AutomationProperties_Static(winrt._winrt.IInspectable_Static):
@@ -613,11 +612,11 @@ class AutomationProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AutomationProperties(winrt.system.Object, metaclass=AutomationProperties_Static):
-    pass
+    ...
 
 @typing.final
 class AutomationProperty(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class DockPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -627,7 +626,7 @@ class DockPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DockPatternIdentifiers(winrt.system.Object, metaclass=DockPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class DragPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -646,7 +645,7 @@ class DragPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DragPatternIdentifiers(winrt.system.Object, metaclass=DragPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class DropTargetPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -659,7 +658,7 @@ class DropTargetPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DropTargetPatternIdentifiers(winrt.system.Object, metaclass=DropTargetPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class ExpandCollapsePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -669,7 +668,7 @@ class ExpandCollapsePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ExpandCollapsePatternIdentifiers(winrt.system.Object, metaclass=ExpandCollapsePatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class GridItemPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -691,7 +690,7 @@ class GridItemPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GridItemPatternIdentifiers(winrt.system.Object, metaclass=GridItemPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class GridPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -704,7 +703,7 @@ class GridPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GridPatternIdentifiers(winrt.system.Object, metaclass=GridPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class MultipleViewPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -717,7 +716,7 @@ class MultipleViewPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class MultipleViewPatternIdentifiers(winrt.system.Object, metaclass=MultipleViewPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class RangeValuePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -742,7 +741,7 @@ class RangeValuePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class RangeValuePatternIdentifiers(winrt.system.Object, metaclass=RangeValuePatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class ScrollPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -770,7 +769,7 @@ class ScrollPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ScrollPatternIdentifiers(winrt.system.Object, metaclass=ScrollPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class SelectionItemPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -783,7 +782,7 @@ class SelectionItemPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SelectionItemPatternIdentifiers(winrt.system.Object, metaclass=SelectionItemPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class SelectionPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -799,7 +798,7 @@ class SelectionPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SelectionPatternIdentifiers(winrt.system.Object, metaclass=SelectionPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class SpreadsheetItemPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -809,7 +808,7 @@ class SpreadsheetItemPatternIdentifiers_Static(winrt._winrt.IInspectable_Static)
 
 @typing.final
 class SpreadsheetItemPatternIdentifiers(winrt.system.Object, metaclass=SpreadsheetItemPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class StylesPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -837,7 +836,7 @@ class StylesPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class StylesPatternIdentifiers(winrt.system.Object, metaclass=StylesPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class TableItemPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -850,7 +849,7 @@ class TableItemPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class TableItemPatternIdentifiers(winrt.system.Object, metaclass=TableItemPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class TablePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -866,7 +865,7 @@ class TablePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class TablePatternIdentifiers(winrt.system.Object, metaclass=TablePatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class TogglePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -876,7 +875,7 @@ class TogglePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class TogglePatternIdentifiers(winrt.system.Object, metaclass=TogglePatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class TransformPattern2Identifiers_Static(winrt._winrt.IInspectable_Static):
@@ -895,7 +894,7 @@ class TransformPattern2Identifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class TransformPattern2Identifiers(winrt.system.Object, metaclass=TransformPattern2Identifiers_Static):
-    pass
+    ...
 
 @typing.final
 class TransformPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -911,7 +910,7 @@ class TransformPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class TransformPatternIdentifiers(winrt.system.Object, metaclass=TransformPatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class ValuePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -924,7 +923,7 @@ class ValuePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ValuePatternIdentifiers(winrt.system.Object, metaclass=ValuePatternIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class WindowPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -949,5 +948,5 @@ class WindowPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WindowPatternIdentifiers(winrt.system.Object, metaclass=WindowPatternIdentifiers_Static):
-    pass
+    ...
 

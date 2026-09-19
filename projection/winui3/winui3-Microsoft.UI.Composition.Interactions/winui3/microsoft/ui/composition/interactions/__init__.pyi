@@ -43,7 +43,6 @@ __all__ = [
     "ICompositionInteractionSource",
     "IInteractionTrackerOwner",
 ]
-Self = typing.TypeVar('Self')
 
 class InteractionBindingAxisModes(enum.IntFlag):
     NONE = 0x0
@@ -289,10 +288,10 @@ class InteractionTrackerIdleStateEnteredArgs(winrt.system.Object):
     def is_from_binding(self) -> bool: ...
 
 class InteractionTrackerInertiaModifier_Static(microsoft_ui_composition.CompositionObject_Static):
-    pass
+    ...
 
 class InteractionTrackerInertiaModifier(microsoft_ui_composition.CompositionObject, metaclass=InteractionTrackerInertiaModifier_Static):
-    pass
+    ...
 
 @typing.final
 class InteractionTrackerInertiaMotion_Static(InteractionTrackerInertiaModifier_Static):
@@ -412,10 +411,10 @@ class InteractionTrackerValuesChangedArgs(winrt.system.Object):
     def scale(self) -> winrt.system.Single: ...
 
 class InteractionTrackerVector2InertiaModifier_Static(microsoft_ui_composition.CompositionObject_Static):
-    pass
+    ...
 
 class InteractionTrackerVector2InertiaModifier(microsoft_ui_composition.CompositionObject, metaclass=InteractionTrackerVector2InertiaModifier_Static):
-    pass
+    ...
 
 @typing.final
 class InteractionTrackerVector2InertiaNaturalMotion_Static(InteractionTrackerVector2InertiaModifier_Static):
@@ -562,7 +561,7 @@ class VisualInteractionSource(microsoft_ui_composition.CompositionObject, ICompo
 class _ICompositionInteractionSource: ...
 
 class ICompositionInteractionSource(winrt._winrt.IInspectable):  # type: ignore[misc]
-    pass
+    ...
 
 @typing.final
 class _IInteractionTrackerOwner: ...

@@ -52,7 +52,6 @@ __all__ = [
     "ITextRange",
     "ITextSelection",
 ]
-Self = typing.TypeVar('Self')
 
 class CaretType(enum.IntEnum):
     NORMAL = 0
@@ -391,7 +390,7 @@ class FontWeight:
 
 @typing.final
 class ContentLinkInfo(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Uri Windows.UI.Text.ContentLinkInfo::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
@@ -461,7 +460,7 @@ class FontWeights_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class FontWeights(winrt.system.Object, metaclass=FontWeights_Static):
-    pass
+    ...
 
 @typing.final
 class RichEditTextDocument(winrt.system.Object, ITextDocument):
@@ -709,7 +708,7 @@ class TextConstants_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
-    pass
+    ...
 
 @typing.final
 class _ITextCharacterFormat: ...

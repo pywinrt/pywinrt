@@ -34,7 +34,6 @@ __all__ = [
     "GuidanceTelemetryCollector",
     "GuidanceUpdatedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class GuidanceAudioMeasurementSystem(enum.IntEnum):
     METERS = 0

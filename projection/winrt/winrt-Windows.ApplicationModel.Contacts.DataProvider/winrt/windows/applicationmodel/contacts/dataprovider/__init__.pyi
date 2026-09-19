@@ -20,7 +20,6 @@ __all__ = [
     "ContactListSyncManagerSyncRequest",
     "ContactListSyncManagerSyncRequestEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class ContactDataProviderConnection(winrt.system.Object):

@@ -20,7 +20,6 @@ __all__ = [
     "CameraCaptureUIPhotoCaptureSettings",
     "CameraCaptureUIVideoCaptureSettings",
 ]
-Self = typing.TypeVar('Self')
 
 class CameraCaptureUIMaxPhotoResolution(enum.IntEnum):
     HIGHEST_AVAILABLE = 0
@@ -52,7 +51,7 @@ class CameraCaptureUIVideoFormat(enum.IntEnum):
 
 @typing.final
 class CameraCaptureUI(winrt.system.Object):
-    def __new__(cls: type[Self], window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64]) -> Self: ...
+    def __new__(cls, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64]) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Microsoft.Windows.Media.Capture.CameraCaptureUI::CaptureFileAsync(Microsoft.Windows.Media.Capture.CameraCaptureUIMode)
     def capture_file_async(self, mode: CameraCaptureUIMode, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
     # Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings Microsoft.Windows.Media.Capture.CameraCaptureUI::get_PhotoSettings()
@@ -64,7 +63,7 @@ class CameraCaptureUI(winrt.system.Object):
 
 @typing.final
 class CameraCaptureUIPhotoCaptureSettings(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Microsoft.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings::get_MaxResolution()
     @_property
     def max_resolution(self) -> CameraCaptureUIMaxPhotoResolution: ...
@@ -98,7 +97,7 @@ class CameraCaptureUIPhotoCaptureSettings(winrt.system.Object):
 
 @typing.final
 class CameraCaptureUIVideoCaptureSettings(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Microsoft.Windows.Media.Capture.CameraCaptureUIMaxVideoResolution Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings::get_MaxResolution()
     @_property
     def max_resolution(self) -> CameraCaptureUIMaxVideoResolution: ...

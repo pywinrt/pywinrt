@@ -17,7 +17,6 @@ __all__ = [
     "OcrResult",
     "OcrWord",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class OcrEngine_Static(winrt._winrt.IInspectable_Static):

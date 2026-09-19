@@ -9,11 +9,10 @@ import winrt.windows.applicationmodel.background as windows_applicationmodel_bac
 __all__ = [
     "Task",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class Task(winrt.system.Object, windows_applicationmodel_background.IBackgroundTask):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.ApplicationModel.Background.IBackgroundTask::Run(Windows.ApplicationModel.Background.IBackgroundTaskInstance)
     def run(self, task_instance: windows_applicationmodel_background.IBackgroundTaskInstance, /) -> None: ...
 

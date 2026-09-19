@@ -43,7 +43,6 @@ __all__ = [
     "DetectionConfigurationAvailabilityChangedEventArgs",
     "DetectionConfigurationAvailabilityInfo",
 ]
-Self = typing.TypeVar('Self')
 
 class ActivationSignalDetectionConfigurationCreationStatus(enum.IntEnum):
     SUCCESS = 0
@@ -170,7 +169,7 @@ class SignalDetectorResourceKind(enum.IntEnum):
 
 @typing.final
 class ActivationSignalDetectionConfiguration(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration::ApplyTrainingData(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat,Windows.Storage.Streams.IInputStream)
     def apply_training_data(self, training_data_format: ActivationSignalDetectionTrainingDataFormat, training_data: windows_storage_streams.IInputStream, /) -> DetectionConfigurationTrainingStatus: ...
@@ -337,7 +336,7 @@ class ConversationalAgentSession_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ConversationalAgentSession(winrt.system.Object, windows_foundation.IClosable, metaclass=ConversationalAgentSession_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession::Close()
     def close(self) -> None: ...
@@ -432,7 +431,7 @@ class ConversationalAgentSession(winrt.system.Object, windows_foundation.IClosab
 
 @typing.final
 class ConversationalAgentSessionInterruptedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class ConversationalAgentSignal(winrt.system.Object):
@@ -481,7 +480,7 @@ class ConversationalAgentSignal(winrt.system.Object):
 
 @typing.final
 class ConversationalAgentSignalDetectedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class ConversationalAgentSystemStateChangedEventArgs(winrt.system.Object):

@@ -32,7 +32,6 @@ __all__ = [
     "WebAccountCommandInvokedHandler",
     "WebAccountProviderCommandInvokedHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class SettingsEdgeLocation(enum.IntEnum):
     RIGHT = 0
@@ -109,9 +108,9 @@ class AccountsSettingsPaneEventDeferral(winrt.system.Object):
 @typing.final
 class CredentialCommand(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], password_credential: windows_security_credentials.PasswordCredential) -> Self: ...
+    def __new__(cls, password_credential: windows_security_credentials.PasswordCredential) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], password_credential: windows_security_credentials.PasswordCredential, deleted: CredentialCommandCredentialDeletedHandler) -> Self: ...
+    def __new__(cls, password_credential: windows_security_credentials.PasswordCredential, deleted: CredentialCommandCredentialDeletedHandler) -> typing.Self: ...
     # Windows.UI.ApplicationSettings.CredentialCommandCredentialDeletedHandler Windows.UI.ApplicationSettings.CredentialCommand::get_CredentialDeleted()
     @_property
     def credential_deleted(self) -> CredentialCommandCredentialDeletedHandler: ...
@@ -127,7 +126,7 @@ class SettingsCommand_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SettingsCommand(winrt.system.Object, windows_ui_popups.IUICommand, metaclass=SettingsCommand_Static):
-    def __new__(cls: type[Self], settings_command_id: winrt.system.Object, label: str, handler: windows_ui_popups.UICommandInvokedHandler) -> Self: ...
+    def __new__(cls, settings_command_id: winrt.system.Object, label: str, handler: windows_ui_popups.UICommandInvokedHandler) -> typing.Self: ...
     # System.String Windows.UI.ApplicationSettings.SettingsCommand::get_Label()
     @_property
     def label(self) -> str: ...
@@ -182,7 +181,7 @@ class SettingsPaneCommandsRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class WebAccountCommand(winrt.system.Object):
-    def __new__(cls: type[Self], web_account: windows_security_credentials.WebAccount, invoked: WebAccountCommandInvokedHandler, actions: SupportedWebAccountActions) -> Self: ...
+    def __new__(cls, web_account: windows_security_credentials.WebAccount, invoked: WebAccountCommandInvokedHandler, actions: SupportedWebAccountActions) -> typing.Self: ...
     # Windows.UI.ApplicationSettings.SupportedWebAccountActions Windows.UI.ApplicationSettings.WebAccountCommand::get_Actions()
     @_property
     def actions(self) -> SupportedWebAccountActions: ...
@@ -201,7 +200,7 @@ class WebAccountInvokedArgs(winrt.system.Object):
 
 @typing.final
 class WebAccountProviderCommand(winrt.system.Object):
-    def __new__(cls: type[Self], web_account_provider: windows_security_credentials.WebAccountProvider, invoked: WebAccountProviderCommandInvokedHandler) -> Self: ...
+    def __new__(cls, web_account_provider: windows_security_credentials.WebAccountProvider, invoked: WebAccountProviderCommandInvokedHandler) -> typing.Self: ...
     # Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler Windows.UI.ApplicationSettings.WebAccountProviderCommand::get_Invoked()
     @_property
     def invoked(self) -> WebAccountProviderCommandInvokedHandler: ...

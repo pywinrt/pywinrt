@@ -52,7 +52,6 @@ __all__ = [
     "HostMessageReceivedCallback",
     "MessageReceivedCallback",
 ]
-Self = typing.TypeVar('Self')
 
 class IsolatedWindowsEnvironmentActivator(enum.IntEnum):
     SYSTEM = 0
@@ -162,7 +161,7 @@ class IsolatedWindowsEnvironmentCreateProgress:
     def state(self) -> IsolatedWindowsEnvironmentProgressState: ...
     @_property
     def percent_complete(self) -> winrt.system.UInt32: ...
-    def __new__(cls, state: IsolatedWindowsEnvironmentProgressState = IsolatedWindowsEnvironmentProgressState(0), percent_complete: winrt.system.UInt32 = 0) -> IsolatedWindowsEnvironmentCreateProgress: ...
+    def __new__(cls, state: IsolatedWindowsEnvironmentProgressState = ..., percent_complete: winrt.system.UInt32 = 0) -> IsolatedWindowsEnvironmentCreateProgress: ...
     def __replace__(self, /, **changes: typing.Any) -> IsolatedWindowsEnvironmentCreateProgress: ...
     def unpack(self) -> tuple[IsolatedWindowsEnvironmentProgressState, winrt.system.UInt32]: ...
 
@@ -328,7 +327,7 @@ class IsolatedWindowsEnvironmentHost_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class IsolatedWindowsEnvironmentHost(winrt.system.Object, metaclass=IsolatedWindowsEnvironmentHost_Static):
-    pass
+    ...
 
 @typing.final
 class IsolatedWindowsEnvironmentLaunchFileResult(winrt.system.Object):
@@ -344,7 +343,7 @@ class IsolatedWindowsEnvironmentLaunchFileResult(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions::ShareHostFolderForUntrustedItems(System.String,System.String)
     # @deprecated("IsolatedWindowsEnvironmentOptions is deprecated and might not work on all platforms. For more info, see MSDN.")
     def share_host_folder_for_untrusted_items(self, shared_host_folder_path: str, share_folder_name_in_environment: str, /) -> None: ...
@@ -432,11 +431,11 @@ class IsolatedWindowsEnvironmentOwnerRegistration_Static(winrt._winrt.IInspectab
 
 @typing.final
 class IsolatedWindowsEnvironmentOwnerRegistration(winrt.system.Object, metaclass=IsolatedWindowsEnvironmentOwnerRegistration_Static):
-    pass
+    ...
 
 @typing.final
 class IsolatedWindowsEnvironmentOwnerRegistrationData(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData::get_ActivationFileExtensions()
     @_property
     def activation_file_extensions(self) -> _cabc.MutableSequence[str]: ...
@@ -488,7 +487,7 @@ class IsolatedWindowsEnvironmentProcess(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentShareFileRequestOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions::get_AllowWrite()
     @_property
     def allow_write(self) -> bool: ...
@@ -510,7 +509,7 @@ class IsolatedWindowsEnvironmentShareFileResult(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentShareFolderRequestOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions::get_AllowWrite()
     @_property
     def allow_write(self) -> bool: ...
@@ -541,7 +540,7 @@ class IsolatedWindowsEnvironmentStartProcessResult(winrt.system.Object):
 
 @typing.final
 class IsolatedWindowsEnvironmentTelemetryParameters(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Guid Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters::get_CorrelationId()
     @_property
     def correlation_id(self) -> _uuid.UUID: ...
@@ -581,7 +580,7 @@ class IsolatedWindowsHostMessenger_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class IsolatedWindowsHostMessenger(winrt.system.Object, metaclass=IsolatedWindowsHostMessenger_Static):
-    pass
+    ...
 
 HostMessageReceivedCallback: typing.TypeAlias = typing.Callable[[_uuid.UUID, _cabc.Sequence[winrt.system.Object]], None]
 MessageReceivedCallback: typing.TypeAlias = typing.Callable[[_uuid.UUID, _cabc.Sequence[winrt.system.Object]], None]

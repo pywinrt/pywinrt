@@ -41,7 +41,6 @@ __all__ = [
     "ProtectionPolicyManager",
     "ThreadNetworkContext",
 ]
-Self = typing.TypeVar('Self')
 
 class DataProtectionStatus(enum.IntEnum):
     PROTECTED_TO_OTHER_IDENTITY = 0
@@ -131,7 +130,7 @@ class DataProtectionManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DataProtectionManager(winrt.system.Object, metaclass=DataProtectionManager_Static):
-    pass
+    ...
 
 @typing.final
 class FileProtectionInfo(winrt.system.Object):
@@ -200,7 +199,7 @@ class FileProtectionManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class FileProtectionManager(winrt.system.Object, metaclass=FileProtectionManager_Static):
-    pass
+    ...
 
 @typing.final
 class FileRevocationManager_Static(winrt._winrt.IInspectable_Static):
@@ -219,11 +218,11 @@ class FileRevocationManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class FileRevocationManager(winrt.system.Object, metaclass=FileRevocationManager_Static):
-    pass
+    ...
 
 @typing.final
 class FileUnprotectOptions(winrt.system.Object):
-    def __new__(cls: type[Self], audit: bool) -> Self: ...
+    def __new__(cls, audit: bool) -> typing.Self: ...
     # System.Boolean Windows.Security.EnterpriseData.FileUnprotectOptions::get_Audit()
     @_property
     def audit(self) -> bool: ...
@@ -287,9 +286,9 @@ class ProtectedFileCreateResult(winrt.system.Object):
 @typing.final
 class ProtectionPolicyAuditInfo(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], action: ProtectionPolicyAuditAction, data_description: str, source_description: str, target_description: str) -> Self: ...
+    def __new__(cls, action: ProtectionPolicyAuditAction, data_description: str, source_description: str, target_description: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], action: ProtectionPolicyAuditAction, data_description: str) -> Self: ...
+    def __new__(cls, action: ProtectionPolicyAuditAction, data_description: str) -> typing.Self: ...
     # System.String Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo::get_TargetDescription()
     @_property
     def target_description(self) -> str: ...
@@ -461,7 +460,7 @@ class ProtectionPolicyManager(winrt.system.Object, metaclass=ProtectionPolicyMan
 
 @typing.final
 class ThreadNetworkContext(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Security.EnterpriseData.ThreadNetworkContext::Close()
     def close(self) -> None: ...

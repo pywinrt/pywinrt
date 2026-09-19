@@ -97,7 +97,6 @@ __all__ = [
     "ILauncherViewOptions",
     "DispatcherQueueHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class AppDiagnosticInfoWatcherStatus(enum.IntEnum):
     CREATED = 0
@@ -643,9 +642,9 @@ class AppResourceGroupStateReport(winrt.system.Object):
 @typing.final
 class AppUriHandlerHost(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], name: str) -> Self: ...
+    def __new__(cls, name: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.System.AppUriHandlerHost::get_Name()
     @_property
     def name(self) -> str: ...
@@ -708,7 +707,7 @@ class DateTimeSettings_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DateTimeSettings(winrt.system.Object, metaclass=DateTimeSettings_Static):
-    pass
+    ...
 
 @typing.final
 class DispatcherQueue_Static(winrt._winrt.IInspectable_Static):
@@ -787,7 +786,7 @@ class DispatcherQueueTimer(winrt.system.Object):
 
 @typing.final
 class FolderLauncherOptions(winrt.system.Object, ILauncherViewOptions):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Storage.IStorageItem> Windows.System.FolderLauncherOptions::get_ItemsToSelect()
     @_property
     def items_to_select(self) -> _cabc.MutableSequence[windows_storage.IStorageItem]: ...
@@ -833,7 +832,7 @@ class KnownUserProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KnownUserProperties(winrt.system.Object, metaclass=KnownUserProperties_Static):
-    pass
+    ...
 
 @typing.final
 class LaunchUriResult(winrt.system.Object):
@@ -987,11 +986,11 @@ class Launcher_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Launcher(winrt.system.Object, metaclass=Launcher_Static):
-    pass
+    ...
 
 @typing.final
 class LauncherOptions(winrt.system.Object, ILauncherViewOptions):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.System.LauncherOptions::get_TreatAsUntrusted()
     @_property
     def treat_as_untrusted(self) -> bool: ...
@@ -1118,7 +1117,7 @@ class MemoryManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class MemoryManager(winrt.system.Object, metaclass=MemoryManager_Static):
-    pass
+    ...
 
 @typing.final
 class ProcessLauncher_Static(winrt._winrt.IInspectable_Static):
@@ -1135,11 +1134,11 @@ class ProcessLauncher_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ProcessLauncher(winrt.system.Object, metaclass=ProcessLauncher_Static):
-    pass
+    ...
 
 @typing.final
 class ProcessLauncherOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.System.ProcessLauncherOptions::get_WorkingDirectory()
     @_property
     def working_directory(self) -> str: ...
@@ -1207,11 +1206,11 @@ class RemoteLauncher_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class RemoteLauncher(winrt.system.Object, metaclass=RemoteLauncher_Static):
-    pass
+    ...
 
 @typing.final
 class RemoteLauncherOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Uri Windows.System.RemoteLauncherOptions::get_FallbackUri()
     @_property
     def fallback_uri(self) -> windows_foundation.Uri: ...
@@ -1243,7 +1242,7 @@ class ShutdownManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ShutdownManager(winrt.system.Object, metaclass=ShutdownManager_Static):
-    pass
+    ...
 
 @typing.final
 class TimeZoneSettings_Static(winrt._winrt.IInspectable_Static):
@@ -1263,7 +1262,7 @@ class TimeZoneSettings_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class TimeZoneSettings(winrt.system.Object, metaclass=TimeZoneSettings_Static):
-    pass
+    ...
 
 @typing.final
 class User_Static(winrt._winrt.IInspectable_Static):
@@ -1354,7 +1353,7 @@ class UserDeviceAssociation_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class UserDeviceAssociation(winrt.system.Object, metaclass=UserDeviceAssociation_Static):
-    pass
+    ...
 
 @typing.final
 class UserDeviceAssociationChangedEventArgs(winrt.system.Object):
@@ -1375,7 +1374,7 @@ class UserPicker_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class UserPicker(winrt.system.Object, metaclass=UserPicker_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.System.User> Windows.System.UserPicker::PickSingleUserAsync()
     def pick_single_user_async(self) -> windows_foundation.IAsyncOperation[User]: ...
     # Windows.System.User Windows.System.UserPicker::get_SuggestedSelectedUser()

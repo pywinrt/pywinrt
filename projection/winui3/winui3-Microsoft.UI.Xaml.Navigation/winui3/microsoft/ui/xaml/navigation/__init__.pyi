@@ -24,7 +24,6 @@ __all__ = [
     "NavigationFailedEventHandler",
     "NavigationStoppedEventHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class NavigationCacheMode(enum.IntEnum):
     DISABLED = 0
@@ -38,10 +37,10 @@ class NavigationMode(enum.IntEnum):
     REFRESH = 3
 
 class FrameNavigationOptions_Static(winrt._winrt.IInspectable_Static):
-    pass
+    ...
 
 class FrameNavigationOptions(winrt.system.Object, metaclass=FrameNavigationOptions_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo Microsoft.UI.Xaml.Navigation.FrameNavigationOptions::get_TransitionInfoOverride()
     @_property
     def transition_info_override(self) -> microsoft_ui_xaml_media_animation.NavigationTransitionInfo: ...
@@ -125,7 +124,7 @@ class PageStackEntry_Static(microsoft_ui_xaml.DependencyObject_Static):
 
 @typing.final
 class PageStackEntry(microsoft_ui_xaml.DependencyObject, metaclass=PageStackEntry_Static):
-    def __new__(cls: type[Self], source_page_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], parameter: winrt.system.Object, navigation_transition_info: microsoft_ui_xaml_media_animation.NavigationTransitionInfo) -> Self: ...
+    def __new__(cls, source_page_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], parameter: winrt.system.Object, navigation_transition_info: microsoft_ui_xaml_media_animation.NavigationTransitionInfo) -> typing.Self: ...
     # Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo Microsoft.UI.Xaml.Navigation.PageStackEntry::get_NavigationTransitionInfo()
     @_property
     def navigation_transition_info(self) -> microsoft_ui_xaml_media_animation.NavigationTransitionInfo: ...

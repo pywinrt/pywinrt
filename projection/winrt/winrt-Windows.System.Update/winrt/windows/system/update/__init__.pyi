@@ -20,7 +20,6 @@ __all__ = [
     "SystemUpdateLastErrorInfo",
     "SystemUpdateManager",
 ]
-Self = typing.TypeVar('Self')
 
 class SystemUpdateAttentionRequiredReason(enum.IntEnum):
     NONE = 0
@@ -161,5 +160,5 @@ class SystemUpdateManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SystemUpdateManager(winrt.system.Object, metaclass=SystemUpdateManager_Static):
-    pass
+    ...
 

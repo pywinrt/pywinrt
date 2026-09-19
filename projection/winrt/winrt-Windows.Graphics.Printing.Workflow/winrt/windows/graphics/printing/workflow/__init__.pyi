@@ -61,7 +61,6 @@ __all__ = [
     "PrintWorkflowVirtualPrinterUIEventArgs",
     "PrintWorkflowXpsDataAvailableEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class PdlConversionHostBasedProcessingOperations(enum.IntFlag):
     NONE = 0x0
@@ -318,11 +317,11 @@ class PrintWorkflowJobUISession(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowObjectModelSourceFileContent(winrt.system.Object):
-    def __new__(cls: type[Self], xps_stream: windows_storage_streams.IInputStream) -> Self: ...
+    def __new__(cls, xps_stream: windows_storage_streams.IInputStream) -> typing.Self: ...
 
 @typing.final
 class PrintWorkflowObjectModelTargetPackage(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class PrintWorkflowPdlConverter(winrt.system.Object):

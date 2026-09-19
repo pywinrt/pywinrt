@@ -31,7 +31,6 @@ __all__ = [
     "XboxLiveQualityOfServiceMetricResult",
     "XboxLiveQualityOfServicePrivatePayloadResult",
 ]
-Self = typing.TypeVar('Self')
 
 class XboxLiveEndpointPairCreationBehaviors(enum.IntFlag):
     NONE = 0x0
@@ -301,7 +300,7 @@ class XboxLiveQualityOfServiceMeasurement_Static(winrt._winrt.IInspectable_Stati
 
 @typing.final
 class XboxLiveQualityOfServiceMeasurement(winrt.system.Object, metaclass=XboxLiveQualityOfServiceMeasurement_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement::GetMetricResult(Windows.Networking.XboxLive.XboxLiveDeviceAddress,Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetric)
     def get_metric_result(self, device_address: XboxLiveDeviceAddress, metric: XboxLiveQualityOfServiceMetric, /) -> XboxLiveQualityOfServiceMetricResult: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult> Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement::GetMetricResultsForDevice(Windows.Networking.XboxLive.XboxLiveDeviceAddress)

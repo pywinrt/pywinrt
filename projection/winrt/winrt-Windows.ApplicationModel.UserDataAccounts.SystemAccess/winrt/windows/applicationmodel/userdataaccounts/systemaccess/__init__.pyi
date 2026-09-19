@@ -20,7 +20,6 @@ __all__ = [
     "DeviceAccountConfiguration",
     "UserDataAccountSystemAccessManager",
 ]
-Self = typing.TypeVar('Self')
 
 class DeviceAccountAuthenticationType(enum.IntEnum):
     BASIC = 0
@@ -58,7 +57,7 @@ class DeviceAccountSyncScheduleKind(enum.IntEnum):
 
 @typing.final
 class DeviceAccountConfiguration(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountConfiguration::get_EmailAddress()
     @_property
     def email_address(self) -> str: ...
@@ -339,5 +338,5 @@ class UserDataAccountSystemAccessManager_Static(winrt._winrt.IInspectable_Static
 
 @typing.final
 class UserDataAccountSystemAccessManager(winrt.system.Object, metaclass=UserDataAccountSystemAccessManager_Static):
-    pass
+    ...
 

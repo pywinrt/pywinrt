@@ -26,7 +26,6 @@ __all__ = [
     "GameControllerProviderInfo",
     "LegacyGipGameControllerProvider",
 ]
-Self = typing.TypeVar('Self')
 
 class DeviceCommand(enum.IntEnum):
     RESET = 0
@@ -112,7 +111,7 @@ class GameControllerProviderInfo_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GameControllerProviderInfo(winrt.system.Object, metaclass=GameControllerProviderInfo_Static):
-    pass
+    ...
 
 @typing.final
 class LegacyGipGameControllerProvider_Static(winrt._winrt.IInspectable_Static):

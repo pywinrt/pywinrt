@@ -43,7 +43,6 @@ __all__ = [
     "PhotoImportStorageMedium",
     "PhotoImportVideoSegment",
 ]
-Self = typing.TypeVar('Self')
 
 class PhotoImportAccessMode(enum.IntEnum):
     READ_WRITE = 0
@@ -373,7 +372,7 @@ class PhotoImportManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PhotoImportManager(winrt.system.Object, metaclass=PhotoImportManager_Static):
-    pass
+    ...
 
 @typing.final
 class PhotoImportOperation(winrt.system.Object):
@@ -401,7 +400,7 @@ class PhotoImportSelectionChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class PhotoImportSession(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Import.PhotoImportSession::Close()
     def close(self) -> None: ...

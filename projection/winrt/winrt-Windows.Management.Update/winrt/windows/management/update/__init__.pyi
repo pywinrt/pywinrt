@@ -32,7 +32,6 @@ __all__ = [
     "WindowsUpdateRestartRequestOptions",
     "WindowsUpdateScanCompletedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class WindowsUpdateAdministratorOptions(enum.IntFlag):
     NONE = 0x0
@@ -250,7 +249,7 @@ class WindowsUpdateAdministrator(winrt.system.Object, metaclass=WindowsUpdateAdm
 
 @typing.final
 class WindowsUpdateApprovalData(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IReference`1<System.Boolean> Windows.Management.Update.WindowsUpdateApprovalData::get_Seeker()
     @_property
     def seeker(self) -> bool | None: ...
@@ -338,7 +337,7 @@ class WindowsUpdateItem(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateManager(winrt.system.Object):
-    def __new__(cls: type[Self], client_id: str) -> Self: ...
+    def __new__(cls, client_id: str) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Management.Update.WindowsUpdate> Windows.Management.Update.WindowsUpdateManager::GetApplicableUpdates()
     def get_applicable_updates(self) -> _cabc.Sequence[WindowsUpdate]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Management.Update.WindowsUpdateItem> Windows.Management.Update.WindowsUpdateManager::GetMostRecentCompletedUpdates(System.Int32)
@@ -393,9 +392,9 @@ class WindowsUpdateProgressChangedEventArgs(winrt.system.Object):
 @typing.final
 class WindowsUpdateRestartRequestOptions(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], title: str, description: str, more_info_url: windows_foundation.Uri, compliance_deadline_in_days: winrt.system.Int32, compliance_grace_period_in_days: winrt.system.Int32) -> Self: ...
+    def __new__(cls, title: str, description: str, more_info_url: windows_foundation.Uri, compliance_deadline_in_days: winrt.system.Int32, compliance_grace_period_in_days: winrt.system.Int32) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Management.Update.WindowsUpdateRestartRequestOptions::get_Title()
     @_property
     def title(self) -> str: ...

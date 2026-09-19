@@ -10,7 +10,6 @@ import winrt.windows.graphics.imaging as windows_graphics_imaging
 __all__ = [
     "InkWorkspaceHostedAppManager",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class InkWorkspaceHostedAppManager_Static(winrt._winrt.IInspectable_Static):

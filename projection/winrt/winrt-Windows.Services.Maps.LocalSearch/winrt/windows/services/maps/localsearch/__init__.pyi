@@ -24,7 +24,6 @@ __all__ = [
     "LocalLocationRatingInfo",
     "PlaceInfoHelper",
 ]
-Self = typing.TypeVar('Self')
 
 class LocalLocationFinderStatus(enum.IntEnum):
     SUCCESS = 0
@@ -65,7 +64,7 @@ class LocalCategories_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class LocalCategories(winrt.system.Object, metaclass=LocalCategories_Static):
-    pass
+    ...
 
 @typing.final
 class LocalLocation(winrt.system.Object):
@@ -107,7 +106,7 @@ class LocalLocationFinder_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class LocalLocationFinder(winrt.system.Object, metaclass=LocalLocationFinder_Static):
-    pass
+    ...
 
 @typing.final
 class LocalLocationFinderResult(winrt.system.Object):
@@ -149,5 +148,5 @@ class PlaceInfoHelper_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PlaceInfoHelper(winrt.system.Object, metaclass=PlaceInfoHelper_Static):
-    pass
+    ...
 

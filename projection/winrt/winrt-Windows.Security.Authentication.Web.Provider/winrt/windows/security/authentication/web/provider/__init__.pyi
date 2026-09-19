@@ -45,7 +45,6 @@ __all__ = [
     "IWebAccountProviderTokenOperation",
     "IWebAccountProviderUIReportOperation",
 ]
-Self = typing.TypeVar('Self')
 
 class WebAccountClientViewType(enum.IntEnum):
     ID_ONLY = 0
@@ -71,9 +70,9 @@ class WebAccountSelectionOptions(enum.IntFlag):
 @typing.final
 class WebAccountClientView(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], view_type: WebAccountClientViewType, application_callback_uri: windows_foundation.Uri) -> Self: ...
+    def __new__(cls, view_type: WebAccountClientViewType, application_callback_uri: windows_foundation.Uri) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], view_type: WebAccountClientViewType, application_callback_uri: windows_foundation.Uri, account_pairwise_id: str) -> Self: ...
+    def __new__(cls, view_type: WebAccountClientViewType, application_callback_uri: windows_foundation.Uri, account_pairwise_id: str) -> typing.Self: ...
     # System.String Windows.Security.Authentication.Web.Provider.WebAccountClientView::get_AccountPairwiseId()
     @_property
     def account_pairwise_id(self) -> str: ...
@@ -159,7 +158,7 @@ class WebAccountManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WebAccountManager(winrt.system.Object, metaclass=WebAccountManager_Static):
-    pass
+    ...
 
 @typing.final
 class WebAccountProviderAddAccountOperation(winrt.system.Object, IWebAccountProviderOperation):
@@ -331,7 +330,7 @@ class WebProviderTokenRequest(winrt.system.Object):
 
 @typing.final
 class WebProviderTokenResponse(winrt.system.Object):
-    def __new__(cls: type[Self], web_token_response: windows_security_authentication_web_core.WebTokenResponse) -> Self: ...
+    def __new__(cls, web_token_response: windows_security_authentication_web_core.WebTokenResponse) -> typing.Self: ...
     # Windows.Security.Authentication.Web.Core.WebTokenResponse Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse::get_ClientResponse()
     @_property
     def client_response(self) -> windows_security_authentication_web_core.WebTokenResponse: ...

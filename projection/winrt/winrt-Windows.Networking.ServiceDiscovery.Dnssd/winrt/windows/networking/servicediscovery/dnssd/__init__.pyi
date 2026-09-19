@@ -22,7 +22,6 @@ __all__ = [
     "DnssdServiceInstanceCollection",
     "DnssdServiceWatcher",
 ]
-Self = typing.TypeVar('Self')
 
 class DnssdRegistrationStatus(enum.IntEnum):
     SUCCESS = 0
@@ -40,8 +39,7 @@ class DnssdServiceWatcherStatus(enum.IntEnum):
 
 @typing.final
 class DnssdRegistrationResult(winrt.system.Object, windows_foundation.IStringable):
-    def __str__(self) -> str: ...
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult::ToString()
     def to_string(self) -> str: ...
     # System.Boolean Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult::get_HasInstanceNameChanged()
@@ -56,8 +54,7 @@ class DnssdRegistrationResult(winrt.system.Object, windows_foundation.IStringabl
 
 @typing.final
 class DnssdServiceInstance(winrt.system.Object, windows_foundation.IStringable):
-    def __str__(self) -> str: ...
-    def __new__(cls: type[Self], dnssd_service_instance_name: str, host_name: windows_networking.HostName, port: winrt.system.UInt16) -> Self: ...
+    def __new__(cls, dnssd_service_instance_name: str, host_name: windows_networking.HostName, port: winrt.system.UInt16) -> typing.Self: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance::RegisterDatagramSocketAsync(Windows.Networking.Sockets.DatagramSocket)
     def register_datagram_socket_async(self, socket: windows_networking_sockets.DatagramSocket, /) -> windows_foundation.IAsyncOperation[DnssdRegistrationResult]: ...

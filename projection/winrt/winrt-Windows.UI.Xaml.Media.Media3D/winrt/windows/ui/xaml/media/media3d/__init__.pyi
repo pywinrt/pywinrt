@@ -14,7 +14,6 @@ __all__ = [
     "PerspectiveTransform3D",
     "Transform3D",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class Matrix3D:
@@ -95,7 +94,7 @@ class CompositeTransform3D_Static(Transform3D_Static):
 
 @typing.final
 class CompositeTransform3D(Transform3D, metaclass=CompositeTransform3D_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Double Windows.UI.Xaml.Media.Media3D.CompositeTransform3D::get_TranslateZ()
     @_property
     def translate_z(self) -> winrt.system.Double: ...
@@ -187,7 +186,7 @@ class Matrix3DHelper_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Matrix3DHelper(winrt.system.Object, metaclass=Matrix3DHelper_Static):
-    pass
+    ...
 
 @typing.final
 class PerspectiveTransform3D_Static(Transform3D_Static):
@@ -203,7 +202,7 @@ class PerspectiveTransform3D_Static(Transform3D_Static):
 
 @typing.final
 class PerspectiveTransform3D(Transform3D, metaclass=PerspectiveTransform3D_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Double Windows.UI.Xaml.Media.Media3D.PerspectiveTransform3D::get_OffsetY()
     @_property
     def offset_y(self) -> winrt.system.Double: ...
@@ -224,8 +223,8 @@ class PerspectiveTransform3D(Transform3D, metaclass=PerspectiveTransform3D_Stati
     def depth(self, value: winrt.system.Double) -> None: ...
 
 class Transform3D_Static(windows_ui_xaml.DependencyObject_Static):
-    pass
+    ...
 
 class Transform3D(windows_ui_xaml.DependencyObject, metaclass=Transform3D_Static):
-    pass
+    ...
 

@@ -43,7 +43,6 @@ __all__ = [
     "IAdaptiveCard",
     "IAdaptiveCardBuilderStatics",
 ]
-Self = typing.TypeVar('Self')
 
 class SecurityAppKind(enum.IntEnum):
     WEB_PROTECTION = 0
@@ -70,7 +69,7 @@ class AdaptiveCardBuilder_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AdaptiveCardBuilder(winrt.system.Object, metaclass=AdaptiveCardBuilder_Static):
-    pass
+    ...
 
 @typing.final
 class FocusSession(winrt.system.Object):
@@ -114,7 +113,7 @@ class FocusSessionManager(winrt.system.Object, metaclass=FocusSessionManager_Sta
 
 @typing.final
 class SecurityAppManager(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Guid Windows.UI.Shell.SecurityAppManager::Register(Windows.UI.Shell.SecurityAppKind,System.String,Windows.Foundation.Uri,System.Boolean)
     def register(self, kind: SecurityAppKind, display_name: str, details_uri: windows_foundation.Uri, register_per_user: bool, /) -> _uuid.UUID: ...
     # System.Void Windows.UI.Shell.SecurityAppManager::Unregister(Windows.UI.Shell.SecurityAppKind,System.Guid)
@@ -186,7 +185,7 @@ class TaskbarManager(winrt.system.Object, metaclass=TaskbarManager_Static):
 
 @typing.final
 class WindowTab(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.UI.Shell.WindowTab::ReportThumbnailAvailable()
     def report_thumbnail_available(self) -> None: ...
     # System.String Windows.UI.Shell.WindowTab::get_TreatAsSecondaryTileId()
@@ -274,7 +273,7 @@ class WindowTabCollection(winrt.system.Object, winrt._winrt.MutableSequence[Wind
 
 @typing.final
 class WindowTabGroup(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.UI.Shell.WindowTabGroup::get_Title()
     @_property
     def title(self) -> str: ...
@@ -305,7 +304,7 @@ class WindowTabIcon_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WindowTabIcon(winrt.system.Object, metaclass=WindowTabIcon_Static):
-    pass
+    ...
 
 @typing.final
 class WindowTabManager_Static(winrt._winrt.IInspectable_Static):

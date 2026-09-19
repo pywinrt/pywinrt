@@ -11,7 +11,6 @@ __all__ = [
     "LanguageFont",
     "LanguageFontGroup",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class LanguageFont(winrt.system.Object):
@@ -33,7 +32,7 @@ class LanguageFont(winrt.system.Object):
 
 @typing.final
 class LanguageFontGroup(winrt.system.Object):
-    def __new__(cls: type[Self], language_tag: str) -> Self: ...
+    def __new__(cls, language_tag: str) -> typing.Self: ...
     # Windows.Globalization.Fonts.LanguageFont Windows.Globalization.Fonts.LanguageFontGroup::get_DocumentAlternate1Font()
     @_property
     def document_alternate1_font(self) -> LanguageFont: ...

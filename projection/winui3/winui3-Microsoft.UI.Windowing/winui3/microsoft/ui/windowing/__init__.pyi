@@ -35,7 +35,6 @@ __all__ = [
     "FullScreenPresenter",
     "OverlappedPresenter",
 ]
-Self = typing.TypeVar('Self')
 
 class AppWindowPresenterKind(enum.IntEnum):
     DEFAULT = 0
@@ -257,7 +256,7 @@ class AppWindowClosingEventArgs(winrt.system.Object):
     def cancel(self, value: bool) -> None: ...
 
 class AppWindowPresenter_Static(winrt._winrt.IInspectable_Static):
-    pass
+    ...
 
 class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Static):
     # Microsoft.UI.Windowing.AppWindowPresenterKind Microsoft.UI.Windowing.AppWindowPresenter::get_Kind()
@@ -467,7 +466,7 @@ class FullScreenPresenter_Static(AppWindowPresenter_Static):
 
 @typing.final
 class FullScreenPresenter(AppWindowPresenter, metaclass=FullScreenPresenter_Static):
-    pass
+    ...
 
 @typing.final
 class OverlappedPresenter_Static(AppWindowPresenter_Static):

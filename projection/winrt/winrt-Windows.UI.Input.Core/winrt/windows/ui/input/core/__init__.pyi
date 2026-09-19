@@ -13,7 +13,6 @@ import winrt.windows.ui.input as windows_ui_input
 __all__ = [
     "RadialControllerIndependentInputSource",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class RadialControllerIndependentInputSource_Static(winrt._winrt.IInspectable_Static):

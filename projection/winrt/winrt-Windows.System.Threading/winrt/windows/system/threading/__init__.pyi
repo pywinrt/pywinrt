@@ -19,7 +19,6 @@ __all__ = [
     "TimerElapsedHandler",
     "WorkItemHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class WorkItemOptions(enum.IntFlag):
     NONE = 0x0
@@ -52,7 +51,7 @@ class ThreadPool_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ThreadPool(winrt.system.Object, metaclass=ThreadPool_Static):
-    pass
+    ...
 
 @typing.final
 class ThreadPoolTimer_Static(winrt._winrt.IInspectable_Static):

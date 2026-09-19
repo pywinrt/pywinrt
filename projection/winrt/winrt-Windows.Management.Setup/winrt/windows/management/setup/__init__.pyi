@@ -27,7 +27,6 @@ __all__ = [
     "MachineProvisioningProgressReporter",
     "DeploymentSessionHeartbeatRequested",
 ]
-Self = typing.TypeVar('Self')
 
 class DeploymentAgentProgressState(enum.IntEnum):
     NOT_STARTED = 0
@@ -64,7 +63,7 @@ class DeploymentWorkloadState(enum.IntEnum):
 
 @typing.final
 class AgentProvisioningProgressReport(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Management.Setup.DeploymentAgentProgressState Windows.Management.Setup.AgentProvisioningProgressReport::get_State()
     @_property
     def state(self) -> DeploymentAgentProgressState: ...
@@ -134,7 +133,7 @@ class DeploymentSessionStateChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class DeploymentWorkload(winrt.system.Object):
-    def __new__(cls: type[Self], id: str) -> Self: ...
+    def __new__(cls, id: str) -> typing.Self: ...
     # System.String Windows.Management.Setup.DeploymentWorkload::get_StateDetails()
     @_property
     def state_details(self) -> str: ...
@@ -195,7 +194,7 @@ class DeploymentWorkload(winrt.system.Object):
 
 @typing.final
 class DeploymentWorkloadBatch(winrt.system.Object):
-    def __new__(cls: type[Self], id: winrt.system.UInt32) -> Self: ...
+    def __new__(cls, id: winrt.system.UInt32) -> typing.Self: ...
     # System.String Windows.Management.Setup.DeploymentWorkloadBatch::get_DisplayCategoryTitle()
     @_property
     def display_category_title(self) -> str: ...

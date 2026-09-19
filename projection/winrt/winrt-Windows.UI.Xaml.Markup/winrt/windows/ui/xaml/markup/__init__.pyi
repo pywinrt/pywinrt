@@ -31,7 +31,6 @@ __all__ = [
     "IXamlType",
     "IXamlType2",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class XamlBinaryWriterErrorInformation:
@@ -56,10 +55,10 @@ class XmlnsDefinition:
     def unpack(self) -> tuple[str, str]: ...
 
 class MarkupExtension_Static(winrt._winrt.IInspectable_Static):
-    pass
+    ...
 
 class MarkupExtension(winrt.system.Object, metaclass=MarkupExtension_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Object Windows.UI.Xaml.Markup.MarkupExtension::ProvideValue()
     def _provide_value(self) -> winrt.system.Object: ...
 
@@ -70,7 +69,7 @@ class XamlBinaryWriter_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class XamlBinaryWriter(winrt.system.Object, metaclass=XamlBinaryWriter_Static):
-    pass
+    ...
 
 @typing.final
 class XamlBindingHelper_Static(winrt._winrt.IInspectable_Static):
@@ -124,7 +123,7 @@ class XamlBindingHelper_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class XamlBindingHelper(winrt.system.Object, metaclass=XamlBindingHelper_Static):
-    pass
+    ...
 
 @typing.final
 class XamlMarkupHelper_Static(winrt._winrt.IInspectable_Static):
@@ -133,7 +132,7 @@ class XamlMarkupHelper_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class XamlMarkupHelper(winrt.system.Object, metaclass=XamlMarkupHelper_Static):
-    pass
+    ...
 
 @typing.final
 class XamlReader_Static(winrt._winrt.IInspectable_Static):
@@ -144,7 +143,7 @@ class XamlReader_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class XamlReader(winrt.system.Object, metaclass=XamlReader_Static):
-    pass
+    ...
 
 @typing.final
 class _IComponentConnector: ...

@@ -71,7 +71,6 @@ __all__ = [
     "ISuspendingEventArgs",
     "ISuspendingOperation",
 ]
-Self = typing.TypeVar('Self')
 
 class AddResourcePackageOptions(enum.IntFlag):
     NONE = 0x0
@@ -284,7 +283,7 @@ class DesignMode_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DesignMode(winrt.system.Object, metaclass=DesignMode_Static):
-    pass
+    ...
 
 @typing.final
 class EnteredBackgroundEventArgs(winrt.system.Object, IEnteredBackgroundEventArgs):
@@ -293,7 +292,7 @@ class EnteredBackgroundEventArgs(winrt.system.Object, IEnteredBackgroundEventArg
 
 @typing.final
 class FindRelatedPackagesOptions(winrt.system.Object):
-    def __new__(cls: type[Self], relationship: PackageRelationship) -> Self: ...
+    def __new__(cls, relationship: PackageRelationship) -> typing.Self: ...
     # Windows.ApplicationModel.PackageRelationship Windows.ApplicationModel.FindRelatedPackagesOptions::get_Relationship()
     @_property
     def relationship(self) -> PackageRelationship: ...
@@ -363,7 +362,7 @@ class FullTrustProcessLauncher_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class FullTrustProcessLauncher(winrt.system.Object, metaclass=FullTrustProcessLauncher_Static):
-    pass
+    ...
 
 @typing.final
 class LeavingBackgroundEventArgs(winrt.system.Object, ILeavingBackgroundEventArgs):
@@ -389,7 +388,7 @@ class LimitedAccessFeatures_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class LimitedAccessFeatures(winrt.system.Object, metaclass=LimitedAccessFeatures_Static):
-    pass
+    ...
 
 @typing.final
 class Package_Static(winrt._winrt.IInspectable_Static):

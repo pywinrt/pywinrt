@@ -71,7 +71,6 @@ __all__ = [
     "UserNotificationChangedEventArgs",
     "IAdaptiveNotificationContent",
 ]
-Self = typing.TypeVar('Self')
 
 class AdaptiveNotificationContentKind(enum.IntEnum):
     TEXT = 0
@@ -274,7 +273,7 @@ class UserNotificationChangedKind(enum.IntEnum):
 
 @typing.final
 class AdaptiveNotificationText(winrt.system.Object, IAdaptiveNotificationContent):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Windows.UI.Notifications.AdaptiveNotificationText::get_Hints()
     @_property
     def hints(self) -> _cabc.MutableMapping[str, str]: ...
@@ -296,7 +295,7 @@ class AdaptiveNotificationText(winrt.system.Object, IAdaptiveNotificationContent
 
 @typing.final
 class BadgeNotification(winrt.system.Object):
-    def __new__(cls: type[Self], content: windows_data_xml_dom.XmlDocument) -> Self: ...
+    def __new__(cls, content: windows_data_xml_dom.XmlDocument) -> typing.Self: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.UI.Notifications.BadgeNotification::get_ExpirationTime()
     @_property
     def expiration_time(self) -> datetime.datetime | None: ...
@@ -328,7 +327,7 @@ class BadgeUpdateManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class BadgeUpdateManager(winrt.system.Object, metaclass=BadgeUpdateManager_Static):
-    pass
+    ...
 
 @typing.final
 class BadgeUpdateManagerForUser(winrt.system.Object):
@@ -390,7 +389,7 @@ class KnownAdaptiveNotificationHints_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KnownAdaptiveNotificationHints(winrt.system.Object, metaclass=KnownAdaptiveNotificationHints_Static):
-    pass
+    ...
 
 @typing.final
 class KnownAdaptiveNotificationTextStyles_Static(winrt._winrt.IInspectable_Static):
@@ -454,7 +453,7 @@ class KnownAdaptiveNotificationTextStyles_Static(winrt._winrt.IInspectable_Stati
 
 @typing.final
 class KnownAdaptiveNotificationTextStyles(winrt.system.Object, metaclass=KnownAdaptiveNotificationTextStyles_Static):
-    pass
+    ...
 
 @typing.final
 class KnownNotificationBindings_Static(winrt._winrt.IInspectable_Static):
@@ -464,11 +463,11 @@ class KnownNotificationBindings_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KnownNotificationBindings(winrt.system.Object, metaclass=KnownNotificationBindings_Static):
-    pass
+    ...
 
 @typing.final
 class Notification(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.UI.Notifications.NotificationVisual Windows.UI.Notifications.Notification::get_Visual()
     @_property
     def visual(self) -> NotificationVisual: ...
@@ -505,11 +504,11 @@ class NotificationBinding(winrt.system.Object):
 @typing.final
 class NotificationData(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], initial_values: _cabc.Mapping[str, str] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, str]], sequence_number: winrt.system.UInt32) -> Self: ...
+    def __new__(cls, initial_values: _cabc.Mapping[str, str] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, str]], sequence_number: winrt.system.UInt32) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], initial_values: _cabc.Mapping[str, str] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, str]]) -> Self: ...
+    def __new__(cls, initial_values: _cabc.Mapping[str, str] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, str]]) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.UInt32 Windows.UI.Notifications.NotificationData::get_SequenceNumber()
     @_property
     def sequence_number(self) -> winrt.system.UInt32: ...
@@ -536,7 +535,7 @@ class NotificationVisual(winrt.system.Object):
 
 @typing.final
 class ScheduledTileNotification(winrt.system.Object):
-    def __new__(cls: type[Self], content: windows_data_xml_dom.XmlDocument, delivery_time: datetime.datetime) -> Self: ...
+    def __new__(cls, content: windows_data_xml_dom.XmlDocument, delivery_time: datetime.datetime) -> typing.Self: ...
     # System.String Windows.UI.Notifications.ScheduledTileNotification::get_Tag()
     @_property
     def tag(self) -> str: ...
@@ -565,9 +564,9 @@ class ScheduledTileNotification(winrt.system.Object):
 @typing.final
 class ScheduledToastNotification(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], content: windows_data_xml_dom.XmlDocument, delivery_time: datetime.datetime) -> Self: ...
+    def __new__(cls, content: windows_data_xml_dom.XmlDocument, delivery_time: datetime.datetime) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], content: windows_data_xml_dom.XmlDocument, delivery_time: datetime.datetime, snooze_interval: datetime.timedelta, maximum_snooze_count: winrt.system.UInt32) -> Self: ...
+    def __new__(cls, content: windows_data_xml_dom.XmlDocument, delivery_time: datetime.datetime, snooze_interval: datetime.timedelta, maximum_snooze_count: winrt.system.UInt32) -> typing.Self: ...
     # System.String Windows.UI.Notifications.ScheduledToastNotification::get_Id()
     @_property
     def id(self) -> str: ...
@@ -645,7 +644,7 @@ class ShownTileNotification(winrt.system.Object):
 
 @typing.final
 class TileFlyoutNotification(winrt.system.Object):
-    def __new__(cls: type[Self], content: windows_data_xml_dom.XmlDocument) -> Self: ...
+    def __new__(cls, content: windows_data_xml_dom.XmlDocument) -> typing.Self: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.UI.Notifications.TileFlyoutNotification::get_ExpirationTime()
     @_property
     def expiration_time(self) -> datetime.datetime | None: ...
@@ -675,7 +674,7 @@ class TileFlyoutUpdateManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class TileFlyoutUpdateManager(winrt.system.Object, metaclass=TileFlyoutUpdateManager_Static):
-    pass
+    ...
 
 @typing.final
 class TileFlyoutUpdater(winrt.system.Object):
@@ -701,7 +700,7 @@ class TileFlyoutUpdater(winrt.system.Object):
 
 @typing.final
 class TileNotification(winrt.system.Object):
-    def __new__(cls: type[Self], content: windows_data_xml_dom.XmlDocument) -> Self: ...
+    def __new__(cls, content: windows_data_xml_dom.XmlDocument) -> typing.Self: ...
     # System.String Windows.UI.Notifications.TileNotification::get_Tag()
     @_property
     def tag(self) -> str: ...
@@ -739,7 +738,7 @@ class TileUpdateManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class TileUpdateManager(winrt.system.Object, metaclass=TileUpdateManager_Static):
-    pass
+    ...
 
 @typing.final
 class TileUpdateManagerForUser(winrt.system.Object):
@@ -814,7 +813,7 @@ class ToastActivatedEventArgs(winrt.system.Object):
 
 @typing.final
 class ToastCollection(winrt.system.Object):
-    def __new__(cls: type[Self], collection_id: str, display_name: str, launch_args: str, icon_uri: windows_foundation.Uri) -> Self: ...
+    def __new__(cls, collection_id: str, display_name: str, launch_args: str, icon_uri: windows_foundation.Uri) -> typing.Self: ...
     # System.String Windows.UI.Notifications.ToastCollection::get_LaunchArgs()
     @_property
     def launch_args(self) -> str: ...
@@ -870,7 +869,7 @@ class ToastFailedEventArgs(winrt.system.Object):
 
 @typing.final
 class ToastNotification(winrt.system.Object):
-    def __new__(cls: type[Self], content: windows_data_xml_dom.XmlDocument) -> Self: ...
+    def __new__(cls, content: windows_data_xml_dom.XmlDocument) -> typing.Self: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Notifications.ToastNotification::add_Activated(Windows.Foundation.TypedEventHandler`2<Windows.UI.Notifications.ToastNotification,System.Object>)
     def add_activated(self, handler: windows_foundation.TypedEventHandler[ToastNotification, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Notifications.ToastNotification::remove_Activated(Windows.Foundation.EventRegistrationToken)
@@ -1035,7 +1034,7 @@ class ToastNotificationManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ToastNotificationManager(winrt.system.Object, metaclass=ToastNotificationManager_Static):
-    pass
+    ...
 
 @typing.final
 class ToastNotificationManagerForUser(winrt.system.Object):

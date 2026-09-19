@@ -41,7 +41,6 @@ __all__ = [
     "IPrintOptionDetails",
     "IPrintTextOptionDetails",
 ]
-Self = typing.TypeVar('Self')
 
 class PrintOptionStates(enum.IntFlag):
     NONE = 0x0

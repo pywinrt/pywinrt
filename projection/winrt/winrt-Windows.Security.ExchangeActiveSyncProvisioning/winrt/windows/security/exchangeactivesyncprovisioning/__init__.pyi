@@ -24,7 +24,6 @@ __all__ = [
     "EasClientSecurityPolicy",
     "EasComplianceResults",
 ]
-Self = typing.TypeVar('Self')
 
 class EasDisallowConvenienceLogonResult(enum.IntEnum):
     NOT_EVALUATED = 0
@@ -126,7 +125,7 @@ class EasRequireEncryptionResult(enum.IntEnum):
 
 @typing.final
 class EasClientDeviceInformation(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation::get_FriendlyName()
     @_property
     def friendly_name(self) -> str: ...
@@ -154,7 +153,7 @@ class EasClientDeviceInformation(winrt.system.Object):
 
 @typing.final
 class EasClientSecurityPolicy(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults> Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy::ApplyAsync()
     def apply_async(self) -> windows_foundation.IAsyncOperation[EasComplianceResults]: ...
     # Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy::CheckCompliance()

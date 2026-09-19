@@ -15,7 +15,6 @@ __all__ = [
     "NamedPolicy",
     "NamedPolicyData",
 ]
-Self = typing.TypeVar('Self')
 
 class NamedPolicyKind(enum.IntEnum):
     INVALID = 0
@@ -34,7 +33,7 @@ class NamedPolicy_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class NamedPolicy(winrt.system.Object, metaclass=NamedPolicy_Static):
-    pass
+    ...
 
 @typing.final
 class NamedPolicyData(winrt.system.Object):

@@ -13,7 +13,6 @@ __all__ = [
     "SystemNavigationCloseRequestedPreviewEventArgs",
     "SystemNavigationManagerPreview",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class CoreAppWindowPreview_Static(winrt._winrt.IInspectable_Static):
@@ -22,7 +21,7 @@ class CoreAppWindowPreview_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CoreAppWindowPreview(winrt.system.Object, metaclass=CoreAppWindowPreview_Static):
-    pass
+    ...
 
 @typing.final
 class SystemNavigationCloseRequestedPreviewEventArgs(winrt.system.Object):

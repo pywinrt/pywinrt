@@ -38,7 +38,6 @@ __all__ = [
     "CoreTextTextRequestedEventArgs",
     "CoreTextTextUpdatingEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class CoreTextFormatUpdatingReason(enum.IntEnum):
     NONE = 0
@@ -362,7 +361,7 @@ class CoreTextServicesConstants_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CoreTextServicesConstants(winrt.system.Object, metaclass=CoreTextServicesConstants_Static):
-    pass
+    ...
 
 @typing.final
 class CoreTextServicesManager_Static(winrt._winrt.IInspectable_Static):

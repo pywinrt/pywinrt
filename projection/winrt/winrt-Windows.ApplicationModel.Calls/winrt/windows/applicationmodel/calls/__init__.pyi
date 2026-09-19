@@ -84,7 +84,6 @@ __all__ = [
     "VoipCallCoordinator",
     "VoipPhoneCall",
 ]
-Self = typing.TypeVar('Self')
 
 class CellularDtmfMode(enum.IntEnum):
     CONTINUOUS = 0
@@ -254,9 +253,9 @@ class VoipPhoneCallState(enum.IntEnum):
 @typing.final
 class AcceptedVoipPhoneCallOptions(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], associated_device_ids: _cabc.Iterable[str]) -> Self: ...
+    def __new__(cls, associated_device_ids: _cabc.Iterable[str]) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions::get_ServiceName()
     @_property
     def service_name(self) -> str: ...
@@ -294,9 +293,9 @@ class AcceptedVoipPhoneCallOptions(winrt.system.Object):
 @typing.final
 class AppInitiatedVoipPhoneCallOptions(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], associated_device_ids: _cabc.Iterable[str]) -> Self: ...
+    def __new__(cls, associated_device_ids: _cabc.Iterable[str]) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions::get_ServiceName()
     @_property
     def service_name(self) -> str: ...
@@ -355,9 +354,9 @@ class CallStateChangeEventArgs(winrt.system.Object):
 @typing.final
 class IncomingVoipPhoneCallOptions(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], associated_device_ids: _cabc.Iterable[str]) -> Self: ...
+    def __new__(cls, associated_device_ids: _cabc.Iterable[str]) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions::get_ServiceName()
     @_property
     def service_name(self) -> str: ...
@@ -469,9 +468,9 @@ class MuteChangeEventArgs(winrt.system.Object):
 @typing.final
 class OutgoingVoipPhoneCallOptions(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], associated_device_ids: _cabc.Iterable[str]) -> Self: ...
+    def __new__(cls, associated_device_ids: _cabc.Iterable[str]) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions::get_ServiceName()
     @_property
     def service_name(self) -> str: ...
@@ -591,11 +590,11 @@ class PhoneCallBlocking_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PhoneCallBlocking(winrt.system.Object, metaclass=PhoneCallBlocking_Static):
-    pass
+    ...
 
 @typing.final
 class PhoneCallHistoryEntry(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.ApplicationModel.Calls.PhoneCallHistoryEntryMedia Windows.ApplicationModel.Calls.PhoneCallHistoryEntry::get_Media()
     @_property
     def media(self) -> PhoneCallHistoryEntryMedia: ...
@@ -702,9 +701,9 @@ class PhoneCallHistoryEntry(winrt.system.Object):
 @typing.final
 class PhoneCallHistoryEntryAddress(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], raw_address: str, raw_address_kind: PhoneCallHistoryEntryRawAddressKind) -> Self: ...
+    def __new__(cls, raw_address: str, raw_address_kind: PhoneCallHistoryEntryRawAddressKind) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.ApplicationModel.Calls.PhoneCallHistoryEntryRawAddressKind Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress::get_RawAddressKind()
     @_property
     def raw_address_kind(self) -> PhoneCallHistoryEntryRawAddressKind: ...
@@ -732,7 +731,7 @@ class PhoneCallHistoryEntryAddress(winrt.system.Object):
 
 @typing.final
 class PhoneCallHistoryEntryQueryOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryDesiredMedia Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryOptions::get_DesiredMedia()
     @_property
     def desired_media(self) -> PhoneCallHistoryEntryQueryDesiredMedia: ...
@@ -757,7 +756,7 @@ class PhoneCallHistoryManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PhoneCallHistoryManager(winrt.system.Object, metaclass=PhoneCallHistoryManager_Static):
-    pass
+    ...
 
 @typing.final
 class PhoneCallHistoryManagerForUser(winrt.system.Object):
@@ -842,7 +841,7 @@ class PhoneCallManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PhoneCallManager(winrt.system.Object, metaclass=PhoneCallManager_Static):
-    pass
+    ...
 
 @typing.final
 class PhoneCallStore(winrt.system.Object):
@@ -866,7 +865,7 @@ class PhoneCallVideoCapabilitiesManager_Static(winrt._winrt.IInspectable_Static)
 
 @typing.final
 class PhoneCallVideoCapabilitiesManager(winrt.system.Object, metaclass=PhoneCallVideoCapabilitiesManager_Static):
-    pass
+    ...
 
 @typing.final
 class PhoneCallsResult(winrt.system.Object):
@@ -879,7 +878,7 @@ class PhoneCallsResult(winrt.system.Object):
 
 @typing.final
 class PhoneDialOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Calls.PhoneDialOptions::get_Number()
     @_property
     def number(self) -> str: ...

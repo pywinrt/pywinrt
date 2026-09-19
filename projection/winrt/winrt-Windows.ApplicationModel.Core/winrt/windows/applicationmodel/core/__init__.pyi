@@ -29,7 +29,6 @@ __all__ = [
     "IFrameworkView",
     "IFrameworkViewSource",
 ]
-Self = typing.TypeVar('Self')
 
 class AppRestartFailureReason(enum.IntEnum):
     RESTART_PENDING = 0
@@ -133,7 +132,7 @@ class CoreApplication_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CoreApplication(winrt.system.Object, metaclass=CoreApplication_Static):
-    pass
+    ...
 
 @typing.final
 class CoreApplicationView(winrt.system.Object):

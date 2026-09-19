@@ -40,7 +40,6 @@ __all__ = [
     "PrintSupportSettingsActivatedEventArgs",
     "PrintSupportSettingsUISession",
 ]
-Self = typing.TypeVar('Self')
 
 class IppCommunicationErrorKind(enum.IntEnum):
     OTHER = 0
@@ -230,11 +229,11 @@ class PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static(winrt._winrt.IInspe
 
 @typing.final
 class PrintSupportPrintDeviceCapabilitiesUpdatePolicy(winrt.system.Object, metaclass=PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static):
-    pass
+    ...
 
 @typing.final
 class PrintSupportPrintTicketElement(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement::get_NamespaceUri()
     @_property
     def namespace_uri(self) -> str: ...

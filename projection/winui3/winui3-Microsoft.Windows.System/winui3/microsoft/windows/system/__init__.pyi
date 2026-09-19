@@ -11,7 +11,6 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 __all__ = [
     "EnvironmentManager",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class EnvironmentManager_Static(winrt._winrt.IInspectable_Static):

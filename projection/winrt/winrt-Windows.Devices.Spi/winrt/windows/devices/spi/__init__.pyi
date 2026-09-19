@@ -23,7 +23,6 @@ __all__ = [
     "SpiDevice",
     "ISpiDeviceStatics",
 ]
-Self = typing.TypeVar('Self')
 
 class SpiMode(enum.IntEnum):
     MODE0 = 0
@@ -52,7 +51,7 @@ class SpiBusInfo(winrt.system.Object):
 
 @typing.final
 class SpiConnectionSettings(winrt.system.Object):
-    def __new__(cls: type[Self], chip_select_line: winrt.system.Int32) -> Self: ...
+    def __new__(cls, chip_select_line: winrt.system.Int32) -> typing.Self: ...
     # Windows.Devices.Spi.SpiSharingMode Windows.Devices.Spi.SpiConnectionSettings::get_SharingMode()
     @_property
     def sharing_mode(self) -> SpiSharingMode: ...
@@ -115,7 +114,7 @@ class SpiDevice_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SpiDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=SpiDevice_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Spi.SpiDevice::Close()
     def close(self) -> None: ...

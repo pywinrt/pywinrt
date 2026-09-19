@@ -12,7 +12,6 @@ __all__ = [
     "SceneLightingEffectReflectanceModel",
     "SceneLightingEffect",
 ]
-Self = typing.TypeVar('Self')
 
 class SceneLightingEffectReflectanceModel(enum.IntEnum):
     BLINN_PHONG = 0
@@ -20,7 +19,7 @@ class SceneLightingEffectReflectanceModel(enum.IntEnum):
 
 @typing.final
 class SceneLightingEffect(winrt.system.Object, windows_graphics_effects.IGraphicsEffect, windows_graphics_effects.IGraphicsEffectSource):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.UI.Composition.Effects.SceneLightingEffect::get_Name()
     @_property
     def name(self) -> str: ...

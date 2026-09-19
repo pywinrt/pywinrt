@@ -19,7 +19,6 @@ __all__ = [
     "OfflineMapPackageQueryResult",
     "OfflineMapPackageStartDownloadResult",
 ]
-Self = typing.TypeVar('Self')
 
 class OfflineMapPackageQueryStatus(enum.IntEnum):
     SUCCESS = 0

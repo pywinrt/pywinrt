@@ -19,7 +19,6 @@ __all__ = [
     "ISpiDeviceProvider",
     "ISpiProvider",
 ]
-Self = typing.TypeVar('Self')
 
 class ProviderSpiMode(enum.IntEnum):
     MODE0 = 0
@@ -33,7 +32,7 @@ class ProviderSpiSharingMode(enum.IntEnum):
 
 @typing.final
 class ProviderSpiConnectionSettings(winrt.system.Object):
-    def __new__(cls: type[Self], chip_select_line: winrt.system.Int32) -> Self: ...
+    def __new__(cls, chip_select_line: winrt.system.Int32) -> typing.Self: ...
     # Windows.Devices.Spi.Provider.ProviderSpiSharingMode Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings::get_SharingMode()
     @_property
     def sharing_mode(self) -> ProviderSpiSharingMode: ...

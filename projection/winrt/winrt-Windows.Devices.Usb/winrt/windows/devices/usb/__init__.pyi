@@ -45,7 +45,6 @@ __all__ = [
     "UsbInterruptOutPipe",
     "UsbSetupPacket",
 ]
-Self = typing.TypeVar('Self')
 
 class UsbControlRecipient(enum.IntEnum):
     DEVICE = 0
@@ -180,7 +179,7 @@ class UsbConfigurationDescriptor(winrt.system.Object, metaclass=UsbConfiguration
 
 @typing.final
 class UsbControlRequestType(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Devices.Usb.UsbControlRecipient Windows.Devices.Usb.UsbControlRequestType::get_Recipient()
     @_property
     def recipient(self) -> UsbControlRecipient: ...
@@ -243,7 +242,7 @@ class UsbDevice_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class UsbDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=UsbDevice_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Usb.UsbDevice::Close()
     def close(self) -> None: ...
@@ -279,7 +278,7 @@ class UsbDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=Usb
 
 @typing.final
 class UsbDeviceClass(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IReference`1<System.Byte> Windows.Devices.Usb.UsbDeviceClass::get_SubclassCode()
     @_property
     def subclass_code(self) -> winrt.system.UInt8 | None: ...
@@ -331,7 +330,7 @@ class UsbDeviceClasses_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class UsbDeviceClasses(winrt.system.Object, metaclass=UsbDeviceClasses_Static):
-    pass
+    ...
 
 @typing.final
 class UsbDeviceDescriptor(winrt.system.Object):
@@ -528,9 +527,9 @@ class UsbInterruptOutPipe(winrt.system.Object):
 @typing.final
 class UsbSetupPacket(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], eight_byte_buffer: winrt.system.Buffer) -> Self: ...
+    def __new__(cls, eight_byte_buffer: winrt.system.Buffer) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.UInt32 Windows.Devices.Usb.UsbSetupPacket::get_Value()
     @_property
     def value(self) -> winrt.system.UInt32: ...

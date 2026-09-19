@@ -28,7 +28,6 @@ __all__ = [
     "ICoreAutomationConnectionBoundObjectProvider",
     "ICoreAutomationRemoteOperationExtensionProvider",
 ]
-Self = typing.TypeVar('Self')
 
 class AutomationRemoteOperationStatus(enum.IntEnum):
     SUCCESS = 0
@@ -76,11 +75,11 @@ class CoreAutomationRegistrar_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CoreAutomationRegistrar(winrt.system.Object, metaclass=CoreAutomationRegistrar_Static):
-    pass
+    ...
 
 @typing.final
 class CoreAutomationRemoteOperation(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation::AddToResults(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId)
     def add_to_results(self, operand_id: AutomationRemoteOperationOperandId | tuple[winrt.system.Int32], /) -> None: ...
     # Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation::Execute(System.Byte[])
@@ -112,9 +111,9 @@ class CoreAutomationRemoteOperationContext(winrt.system.Object):
 @typing.final
 class RemoteAutomationClientSession(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], name: str) -> Self: ...
+    def __new__(cls, name: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], name: str, session_id: _uuid.UUID) -> Self: ...
+    def __new__(cls, name: str, session_id: _uuid.UUID) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.UIAutomation.Core.RemoteAutomationWindow> Windows.UI.UIAutomation.Core.RemoteAutomationClientSession::CreateWindowAsync(System.UInt64,System.UInt32,System.Object)
     def create_window_async(self, remote_window_id: winrt.system.UInt64, remote_process_id: winrt.system.UInt32, parent_automation_element: winrt.system.Object, /) -> windows_foundation.IAsyncOperation[RemoteAutomationWindow]: ...
     # System.Void Windows.UI.UIAutomation.Core.RemoteAutomationClientSession::Start()
@@ -155,7 +154,7 @@ class RemoteAutomationServer_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class RemoteAutomationServer(winrt.system.Object, metaclass=RemoteAutomationServer_Static):
-    pass
+    ...
 
 @typing.final
 class RemoteAutomationWindow(winrt.system.Object):

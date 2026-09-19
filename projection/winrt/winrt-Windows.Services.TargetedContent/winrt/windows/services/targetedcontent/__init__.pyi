@@ -33,7 +33,6 @@ __all__ = [
     "TargetedContentSubscriptionOptions",
     "TargetedContentValue",
 ]
-Self = typing.TypeVar('Self')
 
 class TargetedContentAppInstallationState(enum.IntEnum):
     NOT_APPLICABLE = 0

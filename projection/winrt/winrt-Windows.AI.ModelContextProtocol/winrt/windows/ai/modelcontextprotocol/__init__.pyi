@@ -17,10 +17,9 @@ __all__ = [
     "ModelContextProtocolServerInfo",
     "IModelContextProtocolServer",
 ]
-Self = typing.TypeVar('Self')
 
 class ModelContextProtocolClientContext_Static(winrt._winrt.IInspectable_Static):
-    pass
+    ...
 
 class ModelContextProtocolClientContext(winrt.system.Object, metaclass=ModelContextProtocolClientContext_Static):
     # Windows.UI.WindowId Windows.AI.ModelContextProtocol.ModelContextProtocolClientContext::get_OwnerWindowId()
@@ -32,7 +31,7 @@ class ModelContextProtocolClientContext(winrt.system.Object, metaclass=ModelCont
     def owner_window_id(self, value: windows_ui.WindowId | tuple[winrt.system.UInt64]) -> None: ...
 
 class ModelContextProtocolServerCatalog_Static(winrt._winrt.IInspectable_Static):
-    pass
+    ...
 
 class ModelContextProtocolServerCatalog(winrt.system.Object, metaclass=ModelContextProtocolServerCatalog_Static):
     @typing.final
@@ -46,7 +45,7 @@ class ModelContextProtocolServerCatalog(winrt.system.Object, metaclass=ModelCont
     def get_server_infos(self) -> winrt.system.Array[ModelContextProtocolServerInfo]: ...
 
 class ModelContextProtocolServerInfo_Static(winrt._winrt.IInspectable_Static):
-    pass
+    ...
 
 class ModelContextProtocolServerInfo(winrt.system.Object, metaclass=ModelContextProtocolServerInfo_Static):
     @typing.final

@@ -22,7 +22,6 @@ __all__ = [
     "CoreDropOperationTargetRequestedEventArgs",
     "ICoreDropOperationTarget",
 ]
-Self = typing.TypeVar('Self')
 
 class CoreDragUIContentMode(enum.IntFlag):
     AUTO = 0x0
@@ -63,7 +62,7 @@ class CoreDragInfo(winrt.system.Object):
 
 @typing.final
 class CoreDragOperation(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     @typing.overload
     # System.Void Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation::SetDragUIContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap)
     def set_drag_ui_content_from_software_bitmap(self, software_bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> None: ...

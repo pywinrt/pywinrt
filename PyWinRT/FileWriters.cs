@@ -333,8 +333,6 @@ static class FileWriters
         w.WriteBlankLine();
         w.WriteAll(members, allExtensionTypes);
 
-        w.WriteLine("Self = typing.TypeVar('Self')");
-
         foreach (
             var type in members
                 .Interfaces.SelectMany(i => i.Type.GenericParameters.Select(p => p.Name))

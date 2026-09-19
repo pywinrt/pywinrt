@@ -23,7 +23,6 @@ __all__ = [
     "PhoneLineChangedTriggerDetails",
     "PhoneNewVoicemailMessageTriggerDetails",
 ]
-Self = typing.TypeVar('Self')
 
 class PhoneCallBlockedReason(enum.IntEnum):
     IN_CALL_BLOCKING_LIST = 0

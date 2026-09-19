@@ -25,7 +25,6 @@ __all__ = [
     "StorageItemMostRecentlyUsedList",
     "IStorageItemAccessList",
 ]
-Self = typing.TypeVar('Self')
 
 class AccessCacheOptions(enum.IntFlag):
     NONE = 0x0
@@ -89,7 +88,7 @@ class StorageApplicationPermissions_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class StorageApplicationPermissions(winrt.system.Object, metaclass=StorageApplicationPermissions_Static):
-    pass
+    ...
 
 @typing.final
 class StorageItemAccessList(winrt.system.Object, IStorageItemAccessList):

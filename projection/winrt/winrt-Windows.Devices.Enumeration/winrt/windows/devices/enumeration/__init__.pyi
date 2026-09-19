@@ -57,7 +57,6 @@ __all__ = [
     "IDeviceEnumerationSettings",
     "IDevicePairingSettings",
 ]
-Self = typing.TypeVar('Self')
 
 class DeviceAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0
@@ -494,7 +493,7 @@ class DevicePairingSetMembersRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class DevicePicker(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Devices.Enumeration.DevicePicker::Hide()
     def hide(self) -> None: ...
     @typing.overload
@@ -603,7 +602,7 @@ class DeviceSelectedEventArgs(winrt.system.Object):
 
 @typing.final
 class DeviceThumbnail(winrt.system.Object, windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStream Windows.Devices.Enumeration.DeviceThumbnail::CloneStream()
     def clone_stream(self) -> windows_storage_streams.IRandomAccessStream: ...
@@ -715,11 +714,11 @@ class EnclosureLocation(winrt.system.Object):
 class _IDeviceEnumerationSettings: ...
 
 class IDeviceEnumerationSettings(winrt._winrt.IInspectable):  # type: ignore[misc]
-    pass
+    ...
 
 @typing.final
 class _IDevicePairingSettings: ...
 
 class IDevicePairingSettings(winrt._winrt.IInspectable):  # type: ignore[misc]
-    pass
+    ...
 

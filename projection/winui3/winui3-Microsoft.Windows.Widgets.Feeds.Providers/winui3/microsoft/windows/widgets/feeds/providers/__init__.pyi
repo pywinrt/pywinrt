@@ -36,7 +36,6 @@ __all__ = [
     "IFeedProviderMessage",
     "IFeedResourceProvider",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class CustomQueryParametersRequestedArgs(winrt.system.Object):
@@ -46,7 +45,7 @@ class CustomQueryParametersRequestedArgs(winrt.system.Object):
 
 @typing.final
 class CustomQueryParametersUpdateOptions(winrt.system.Object):
-    def __new__(cls: type[Self], feed_provider_definition_id: str, custom_query_parameters: str) -> Self: ...
+    def __new__(cls, feed_provider_definition_id: str, custom_query_parameters: str) -> typing.Self: ...
     # System.String Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersUpdateOptions::get_CustomQueryParameters()
     @_property
     def custom_query_parameters(self) -> str: ...
@@ -191,7 +190,7 @@ class FeedResourceRequestedArgs(winrt.system.Object):
 
 @typing.final
 class FeedResourceResponse(winrt.system.Object):
-    def __new__(cls: type[Self], content: windows_storage_streams.IRandomAccessStreamReference, reason_phrase: str, status_code: winrt.system.Int32) -> Self: ...
+    def __new__(cls, content: windows_storage_streams.IRandomAccessStreamReference, reason_phrase: str, status_code: winrt.system.Int32) -> typing.Self: ...
     # Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>> Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse::get_Headers()
     @_property
     def headers(self) -> _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, str]]: ...

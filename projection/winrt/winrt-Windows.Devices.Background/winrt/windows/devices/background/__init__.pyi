@@ -12,7 +12,6 @@ __all__ = [
     "DeviceServicingDetails",
     "DeviceUseDetails",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class DeviceServicingDetails(winrt.system.Object):

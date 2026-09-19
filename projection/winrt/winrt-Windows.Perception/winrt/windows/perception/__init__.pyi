@@ -12,7 +12,6 @@ __all__ = [
     "PerceptionTimestamp",
     "PerceptionTimestampHelper",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class PerceptionTimestamp(winrt.system.Object):
@@ -35,5 +34,5 @@ class PerceptionTimestampHelper_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PerceptionTimestampHelper(winrt.system.Object, metaclass=PerceptionTimestampHelper_Static):
-    pass
+    ...
 

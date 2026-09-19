@@ -32,7 +32,6 @@ __all__ = [
     "SecondaryAuthenticationFactorRegistration",
     "SecondaryAuthenticationFactorRegistrationResult",
 ]
-Self = typing.TypeVar('Self')
 
 class SecondaryAuthenticationFactorAuthenticationMessage(enum.IntEnum):
     INVALID = 0

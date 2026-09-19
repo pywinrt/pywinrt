@@ -13,7 +13,6 @@ __all__ = [
     "SystemSupportDeviceInfo",
     "SystemSupportInfo",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class OemSupportInfo(winrt.system.Object):
@@ -35,7 +34,7 @@ class SmbiosInformation_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SmbiosInformation(winrt.system.Object, metaclass=SmbiosInformation_Static):
-    pass
+    ...
 
 @typing.final
 class SystemSupportDeviceInfo(winrt.system.Object):
@@ -75,5 +74,5 @@ class SystemSupportInfo_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SystemSupportInfo(winrt.system.Object, metaclass=SystemSupportInfo_Static):
-    pass
+    ...
 
