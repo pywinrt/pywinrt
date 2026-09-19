@@ -148,7 +148,8 @@ class TestDelegate(unittest.TestCase):
             self.assertRaisesRegex(OSError, "Unraisable Python exception") as ctx,
             catch_unraisable() as exceptions,
         ):
-            tests.param7_call(handler)
+            # the handler's signature is wrong on purpose
+            tests.param7_call(handler)  # type: ignore[arg-type]
 
         self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
         self.assertIsInstance(exceptions[0].exc_value, RuntimeError)
@@ -160,7 +161,7 @@ class TestDelegate(unittest.TestCase):
             self.assertRaises(OSError),
             catch_unraisable() as exceptions,
         ):
-            tests.param7_call(lambda value: value)
+            tests.param7_call(lambda value: value)  # type: ignore[arg-type,return-value]
 
         self.assertIsInstance(exceptions[0].exc_value, TypeError)
 

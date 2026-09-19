@@ -60,16 +60,21 @@ class TestClasses(unittest.TestCase):
     def test_as_and_isinstance(self) -> None:
         instance = tc.Class()
 
-        self.assertIsInstance(instance.as_(tc.IRequiredOne), tc._IRequiredOne)
+        # as_() always names an interface, and an interface is abstract
+        self.assertIsInstance(
+            instance.as_(tc.IRequiredOne),  # type: ignore[type-abstract]
+            tc._IRequiredOne,
+        )
         self.assertIsInstance(instance, tc.IRequiredOne)
         self.assertNotIsInstance(instance, tc.IRequiredTwo)
 
     def test_as_an_interface_the_object_does_not_implement(self) -> None:
         with self.assertRaises(OSError):
-            tc.Class().as_(tc.IRequiredTwo)
+            tc.Class().as_(tc.IRequiredTwo)  # type: ignore[type-abstract]
 
     def test_an_interface_carries_its_iid(self) -> None:
-        self.assertIsInstance(tc.IRequiredOne._guid_(), uuid.UUID)
+        # _guid_() is internal to the runtime, so no stub declares it
+        self.assertIsInstance(tc.IRequiredOne._guid_(), uuid.UUID)  # type: ignore[attr-defined]
 
     def test_a_property_reads_and_writes(self) -> None:
         instance = tc.Composable()
@@ -118,21 +123,23 @@ class TestMembers(unittest.TestCase):
 
     def test_the_wrong_number_of_arguments(self) -> None:
         with self.assertRaises(TypeError):
-            self.tests.param7(1, 2)
+            self.tests.param7(1, 2)  # type: ignore[call-arg]
 
     def test_keyword_arguments_are_refused(self) -> None:
         with self.assertRaises(TypeError):
-            self.tests.param7(a=1)
+            self.tests.param7(a=1)  # type: ignore[call-arg]
 
     def test_a_descriptor_names_itself(self) -> None:
-        descriptor = tc._ITests.simple
+        # the members of a wrapper type are built from the table, so its stub
+        # is the interface's and names none of them
+        descriptor = tc._ITests.simple  # type: ignore[attr-defined]
 
         self.assertEqual(descriptor.__name__, "simple")
         self.assertIs(descriptor.__objclass__, tc._ITests)
 
     def test_a_descriptor_refuses_another_type(self) -> None:
         with self.assertRaises(TypeError):
-            tc._ITests.simple(tc.Class())
+            tc._ITests.simple(tc.Class())  # type: ignore[attr-defined]
 
     def test_an_overload_is_chosen_by_argument_count(self) -> None:
         obj = wdj.JsonObject.parse('{ "spam": "eggs" }')
@@ -166,7 +173,7 @@ class TestStructs(unittest.TestCase):
 
     def test_an_unknown_field(self) -> None:
         with self.assertRaises(TypeError):
-            tc.Blittable(nope=1)
+            tc.Blittable(nope=1)  # type: ignore[call-arg]
 
     def test_equality_with_a_tuple(self) -> None:
         self.assertEqual(tc.Blittable(*BLITTABLE_FIELDS), BLITTABLE_FIELDS)
@@ -192,7 +199,8 @@ class TestStructs(unittest.TestCase):
         tests = tc.TestRunner.make_tests()
 
         self.assertEqual(
-            tests.param13(BLITTABLE_FIELDS, BLITTABLE_FIELDS),
+            # the tuple of an in-out struct parameter is not in the stub
+            tests.param13(BLITTABLE_FIELDS, BLITTABLE_FIELDS),  # type: ignore[arg-type]
             (tc.Blittable(*BLITTABLE_FIELDS), tc.Blittable(*BLITTABLE_FIELDS)),
         )
 
@@ -201,7 +209,7 @@ class TestStructs(unittest.TestCase):
         value = tc.Blittable(*BLITTABLE_FIELDS)
 
         with self.assertRaises(TypeError):
-            tests.param13(BLITTABLE_FIELDS[:-1], value)
+            tests.param13(BLITTABLE_FIELDS[:-1], value)  # type: ignore[arg-type]
 
 
 class TestIntegerStructs(unittest.TestCase):
@@ -243,7 +251,7 @@ class TestIntegerStructs(unittest.TestCase):
         self.assertIsInstance(token, wf.EventRegistrationToken)
 
         # and goes back as the integer it is
-        obj.remove_overridable_called(int(token))
+        obj.remove_overridable_called(int(token))  # type: ignore[arg-type]
 
     def test_the_field_the_type_used_to_have(self) -> None:
         error_code = self.failed().error_code
