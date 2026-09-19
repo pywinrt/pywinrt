@@ -46,7 +46,6 @@ __all__ = [
     "EmailMailboxValidateCertificatesRequest",
     "EmailMailboxValidateCertificatesRequestEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class EmailDataProviderConnection(winrt.system.Object):

@@ -17,7 +17,6 @@ __all__ = [
     "PhoneNumberFormatter",
     "PhoneNumberInfo",
 ]
-Self = typing.TypeVar('Self')
 
 class PhoneNumberFormat(enum.IntEnum):
     E164 = 0
@@ -65,7 +64,7 @@ class PhoneNumberFormatter_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PhoneNumberFormatter(winrt.system.Object, metaclass=PhoneNumberFormatter_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     @typing.overload
     # System.String Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter::Format(Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo)
     def format(self, number: PhoneNumberInfo, /) -> str: ...
@@ -98,8 +97,7 @@ class PhoneNumberInfo_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PhoneNumberInfo(winrt.system.Object, windows_foundation.IStringable, metaclass=PhoneNumberInfo_Static):
-    def __str__(self) -> str: ...
-    def __new__(cls: type[Self], number: str) -> Self: ...
+    def __new__(cls, number: str) -> typing.Self: ...
     # Windows.Globalization.PhoneNumberFormatting.PhoneNumberMatchResult Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo::CheckNumberMatch(Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo)
     def check_number_match(self, other_number: PhoneNumberInfo, /) -> PhoneNumberMatchResult: ...
     # System.String Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo::GetGeographicRegionCode()

@@ -17,7 +17,6 @@ __all__ = [
     "LicenseSatisfactionInfo",
     "LicenseSatisfactionResult",
 ]
-Self = typing.TypeVar('Self')
 
 class LicenseRefreshOption(enum.IntEnum):
     RUNNING_LICENSES = 0
@@ -34,7 +33,7 @@ class LicenseManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class LicenseManager(winrt.system.Object, metaclass=LicenseManager_Static):
-    pass
+    ...
 
 @typing.final
 class LicenseSatisfactionInfo(winrt.system.Object):

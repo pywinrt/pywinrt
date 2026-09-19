@@ -11,7 +11,6 @@ import winrt.windows.perception.spatial as windows_perception_spatial
 __all__ = [
     "HolographicKeyboard",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class HolographicKeyboard_Static(winrt._winrt.IInspectable_Static):

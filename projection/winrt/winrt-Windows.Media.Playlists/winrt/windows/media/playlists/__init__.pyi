@@ -16,7 +16,6 @@ __all__ = [
     "PlaylistFormat",
     "Playlist",
 ]
-Self = typing.TypeVar('Self')
 
 class PlaylistFormat(enum.IntEnum):
     WINDOWS_MEDIA = 0
@@ -30,7 +29,7 @@ class Playlist_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Playlist(winrt.system.Object, metaclass=Playlist_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Media.Playlists.Playlist::SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)
     def save_as_async(self, save_location: windows_storage.IStorageFolder, desired_name: str, option: windows_storage.NameCollisionOption, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...

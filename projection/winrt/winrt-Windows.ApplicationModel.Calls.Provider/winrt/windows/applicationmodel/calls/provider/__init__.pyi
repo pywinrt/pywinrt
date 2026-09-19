@@ -13,11 +13,10 @@ __all__ = [
     "PhoneCallOrigin",
     "PhoneCallOriginManager",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class PhoneCallOrigin(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin::get_Location()
     @_property
     def location(self) -> str: ...
@@ -69,5 +68,5 @@ class PhoneCallOriginManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PhoneCallOriginManager(winrt.system.Object, metaclass=PhoneCallOriginManager_Static):
-    pass
+    ...
 

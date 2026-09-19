@@ -28,9 +28,8 @@ static class InterfaceWriterExtensions
 
         var hasMembers = methods.Any() || events.Any() || properties.Any();
 
-        var interfaces = string.Join(
-            ", ",
-            type.Interfaces.Select(i =>
+        var baseTypes = type
+            .Interfaces.Select(i =>
                 i.ToPyTypeName(
                     ns,
                     new TypeRefNullabilityInfo(i),
@@ -38,50 +37,50 @@ static class InterfaceWriterExtensions
                     usePythonCollectionTypes: false
                 )
             )
-        );
-
-        var generic = "";
-
-        if (type.IsGeneric && !type.Interfaces.Any(i => i.ContainsGenericParameter))
-        {
-            generic =
-                $"{(interfaces.Any() ? ", " : "")}typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p), packageMap)))}]";
-        }
+            .ToList();
 
         var mixin = type switch
         {
             { Namespace: "Windows.Foundation.Collections", Name: "IMap" } =>
-                ", winrt._winrt.MutableMapping[K, V]",
+                "winrt._winrt.MutableMapping[K, V]",
             { Namespace: "Windows.Foundation.Collections", Name: "IMapView" } =>
-                ", winrt._winrt.Mapping[K, V]",
+                "winrt._winrt.Mapping[K, V]",
             { Namespace: "Windows.Foundation.Collections", Name: "IVector" } =>
-                ", winrt._winrt.MutableSequence[T]",
+                "winrt._winrt.MutableSequence[T]",
             { Namespace: "Windows.Foundation.Collections", Name: "IVectorView" } =>
-                ", winrt._winrt.Sequence[T]",
-            _ => "",
+                "winrt._winrt.Sequence[T]",
+            _ => null,
         };
 
-        var inspectable =
-            $"{(type.IsGeneric || type.Interfaces.Any() ? ", " : "")}winrt._winrt.IInspectable";
+        if (mixin is not null)
+        {
+            baseTypes.Add(mixin);
+        }
+
+        baseTypes.Add("winrt._winrt.IInspectable");
+
+        // typing.Generic is written last because that is where a stub is
+        // expected to name it and where the type parameters read best
+        if (type.IsGeneric && !type.Interfaces.Any(i => i.ContainsGenericParameter))
+        {
+            baseTypes.Add(
+                $"typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p), packageMap)))}]"
+            );
+        }
 
         // work around https://github.com/python/mypy/issues/17091
         // we can't use abc.ABCMeta because it will cause errors about conflicting metaclasses
         var typeIgnore = hasMembers ? "" : "  # type: ignore[misc]";
 
-        w.WriteLine($"class {type.Name}({interfaces}{generic}{mixin}{inspectable}):{typeIgnore}");
+        w.WriteLine($"class {type.Name}({string.Join(", ", baseTypes)}):{typeIgnore}");
         w.Indent++;
 
         if (type.Namespace == "Windows.Foundation" && type.Name == "IClosable")
         {
-            w.WriteLine("def __enter__(self: Self) -> Self: ...");
+            w.WriteLine("def __enter__(self) -> typing.Self: ...");
             w.WriteLine(
                 "def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ..."
             );
-        }
-
-        if (type.Namespace == "Windows.Foundation" && type.Name == "IStringable")
-        {
-            w.WriteLine("def __str__(self) -> str: ...");
         }
 
         if (
@@ -245,7 +244,7 @@ static class InterfaceWriterExtensions
 
         if (!hasMembers)
         {
-            w.WriteLine("pass");
+            w.WriteLine("...");
         }
 
         w.Indent--;

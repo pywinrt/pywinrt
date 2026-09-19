@@ -148,7 +148,6 @@ __all__ = [
     "IWebAccountProviderActivatedEventArgs",
     "IWebAuthenticationBrokerContinuationEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class ActivationKind(enum.IntEnum):
     LAUNCH = 0

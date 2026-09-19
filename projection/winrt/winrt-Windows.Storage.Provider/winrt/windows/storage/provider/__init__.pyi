@@ -75,7 +75,6 @@ __all__ = [
     "IStorageProviderUriSource",
     "StorageProviderKnownFolderSyncRequestedHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class CachedFileOptions(enum.IntFlag):
     NONE = 0x0
@@ -211,7 +210,7 @@ class CachedFileUpdater_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CachedFileUpdater(winrt.system.Object, metaclass=CachedFileUpdater_Static):
-    pass
+    ...
 
 @typing.final
 class CachedFileUpdaterUI(winrt.system.Object):
@@ -279,7 +278,7 @@ class FileUpdateRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class StorageProviderFileTypeInfo(winrt.system.Object):
-    def __new__(cls: type[Self], file_extension: str, icon_resource: str) -> Self: ...
+    def __new__(cls, file_extension: str, icon_resource: str) -> typing.Self: ...
     # System.String Windows.Storage.Provider.StorageProviderFileTypeInfo::get_FileExtension()
     @_property
     def file_extension(self) -> str: ...
@@ -289,7 +288,7 @@ class StorageProviderFileTypeInfo(winrt.system.Object):
 
 @typing.final
 class StorageProviderGetContentInfoForPathResult(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Storage.Provider.StorageProviderUriSourceStatus Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult::get_Status()
     @_property
     def status(self) -> StorageProviderUriSourceStatus: ...
@@ -311,7 +310,7 @@ class StorageProviderGetContentInfoForPathResult(winrt.system.Object):
 
 @typing.final
 class StorageProviderGetPathForContentUriResult(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Storage.Provider.StorageProviderUriSourceStatus Windows.Storage.Provider.StorageProviderGetPathForContentUriResult::get_Status()
     @_property
     def status(self) -> StorageProviderUriSourceStatus: ...
@@ -332,11 +331,11 @@ class StorageProviderItemProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class StorageProviderItemProperties(winrt.system.Object, metaclass=StorageProviderItemProperties_Static):
-    pass
+    ...
 
 @typing.final
 class StorageProviderItemProperty(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Storage.Provider.StorageProviderItemProperty::get_Value()
     @_property
     def value(self) -> str: ...
@@ -358,7 +357,7 @@ class StorageProviderItemProperty(winrt.system.Object):
 
 @typing.final
 class StorageProviderItemPropertyDefinition(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Int32 Windows.Storage.Provider.StorageProviderItemPropertyDefinition::get_Id()
     @_property
     def id(self) -> winrt.system.Int32: ...
@@ -374,7 +373,7 @@ class StorageProviderItemPropertyDefinition(winrt.system.Object):
 
 @typing.final
 class StorageProviderKnownFolderEntry(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Storage.Provider.StorageProviderKnownFolderSyncStatus Windows.Storage.Provider.StorageProviderKnownFolderEntry::get_Status()
     @_property
     def status(self) -> StorageProviderKnownFolderSyncStatus: ...
@@ -390,7 +389,7 @@ class StorageProviderKnownFolderEntry(winrt.system.Object):
 
 @typing.final
 class StorageProviderKnownFolderSyncInfo(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestedHandler Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo::get_SyncRequested()
     @_property
     def sync_requested(self) -> StorageProviderKnownFolderSyncRequestedHandler: ...
@@ -418,7 +417,7 @@ class StorageProviderKnownFolderSyncRequestArgs(winrt.system.Object):
 
 @typing.final
 class StorageProviderMoreInfoUI(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Storage.Provider.StorageProviderMoreInfoUI::get_Message()
     @_property
     def message(self) -> str: ...
@@ -434,7 +433,7 @@ class StorageProviderMoreInfoUI(winrt.system.Object):
 
 @typing.final
 class StorageProviderQueryResultSet(winrt.system.Object):
-    def __new__(cls: type[Self], results: winrt.system.Array[IStorageProviderQueryResult] | winrt.system.ReadableBuffer) -> Self: ...
+    def __new__(cls, results: winrt.system.Array[IStorageProviderQueryResult] | winrt.system.ReadableBuffer) -> typing.Self: ...
     # Windows.Storage.Provider.IStorageProviderQueryResult[] Windows.Storage.Provider.StorageProviderQueryResultSet::GetResults()
     def get_results(self) -> winrt.system.Array[IStorageProviderQueryResult]: ...
     # Windows.Storage.Provider.StorageProviderSearchQueryStatus Windows.Storage.Provider.StorageProviderQueryResultSet::get_Status()
@@ -452,7 +451,7 @@ class StorageProviderQueryResultSet(winrt.system.Object):
 
 @typing.final
 class StorageProviderQuotaUI(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Storage.Provider.StorageProviderQuotaUI::get_QuotaUsedLabel()
     @_property
     def quota_used_label(self) -> str: ...
@@ -507,7 +506,7 @@ class StorageProviderSearchQueryOptions(winrt.system.Object):
 
 @typing.final
 class StorageProviderSearchResult(winrt.system.Object, IStorageProviderQueryResult):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Storage.Provider.StorageProviderSearchResult::get_ResultId()
     @_property
     def result_id(self) -> str: ...
@@ -556,7 +555,7 @@ class StorageProviderSearchResult(winrt.system.Object, IStorageProviderQueryResu
 
 @typing.final
 class StorageProviderStatusUI(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Storage.Provider.IStorageProviderUICommand Windows.Storage.Provider.StorageProviderStatusUI::get_SyncStatusCommand()
     @_property
     def sync_status_command(self) -> IStorageProviderUICommand: ...
@@ -608,7 +607,7 @@ class StorageProviderStatusUI(winrt.system.Object):
 
 @typing.final
 class StorageProviderSyncRootInfo(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Storage.Provider.StorageProviderSyncRootInfo::get_Version()
     @_property
     def version(self) -> str: ...
@@ -729,7 +728,7 @@ class StorageProviderSyncRootManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class StorageProviderSyncRootManager(winrt.system.Object, metaclass=StorageProviderSyncRootManager_Static):
-    pass
+    ...
 
 @typing.final
 class _IStorageProviderItemPropertySource: ...

@@ -19,14 +19,13 @@ __all__ = [
     "ServiceDocument",
     "Workspace",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class AtomPubClient(winrt.system.Object, windows_web_syndication.ISyndicationClient):
     @typing.overload
-    def __new__(cls: type[Self], server_credential: windows_security_credentials.PasswordCredential) -> Self: ...
+    def __new__(cls, server_credential: windows_security_credentials.PasswordCredential) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Web.AtomPub.AtomPubClient::CancelAsyncOperations()
     def cancel_async_operations(self) -> None: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.TransferProgress> Windows.Web.AtomPub.AtomPubClient::CreateMediaResourceAsync(Windows.Foundation.Uri,System.String,System.String,Windows.Storage.Streams.IInputStream)

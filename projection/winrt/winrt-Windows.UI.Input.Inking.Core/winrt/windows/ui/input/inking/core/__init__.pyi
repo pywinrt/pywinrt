@@ -22,7 +22,6 @@ __all__ = [
     "CoreWetStrokeUpdateEventArgs",
     "CoreWetStrokeUpdateSource",
 ]
-Self = typing.TypeVar('Self')
 
 class CoreWetStrokeDisposition(enum.IntEnum):
     INKING = 0
@@ -31,7 +30,7 @@ class CoreWetStrokeDisposition(enum.IntEnum):
 
 @typing.final
 class CoreIncrementalInkStroke(winrt.system.Object):
-    def __new__(cls: type[Self], drawing_attributes: windows_ui_input_inking.InkDrawingAttributes, point_transform: windows_foundation_numerics.Matrix3x2 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]) -> Self: ...
+    def __new__(cls, drawing_attributes: windows_ui_input_inking.InkDrawingAttributes, point_transform: windows_foundation_numerics.Matrix3x2 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]) -> typing.Self: ...
     # Windows.Foundation.Rect Windows.UI.Input.Inking.Core.CoreIncrementalInkStroke::AppendInkPoints(Windows.Foundation.Collections.IIterable`1<Windows.UI.Input.Inking.InkPoint>)
     def append_ink_points(self, ink_points: _cabc.Iterable[windows_ui_input_inking.InkPoint], /) -> windows_foundation.Rect: ...
     # Windows.UI.Input.Inking.InkStroke Windows.UI.Input.Inking.Core.CoreIncrementalInkStroke::CreateInkStroke()
@@ -93,7 +92,7 @@ class CoreInkIndependentInputSource(winrt.system.Object, metaclass=CoreInkIndepe
 
 @typing.final
 class CoreInkPresenterHost(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.UI.Composition.ContainerVisual Windows.UI.Input.Inking.Core.CoreInkPresenterHost::get_RootVisual()
     @_property
     def root_visual(self) -> windows_ui_composition.ContainerVisual: ...

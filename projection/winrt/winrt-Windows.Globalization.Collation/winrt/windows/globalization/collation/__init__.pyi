@@ -12,7 +12,6 @@ __all__ = [
     "CharacterGrouping",
     "CharacterGroupings",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class CharacterGrouping(winrt.system.Object):
@@ -32,9 +31,9 @@ class CharacterGroupings(winrt.system.Object, winrt._winrt.Sequence[CharacterGro
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[CharacterGrouping]: ...
     @typing.overload
-    def __new__(cls: type[Self], language: str) -> Self: ...
+    def __new__(cls, language: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IIterator`1<Windows.Globalization.Collation.CharacterGrouping> Windows.Globalization.Collation.CharacterGroupings::First()
     def first(self) -> windows_foundation_collections.IIterator[CharacterGrouping]: ...
     # Windows.Globalization.Collation.CharacterGrouping Windows.Globalization.Collation.CharacterGroupings::GetAt(System.UInt32)

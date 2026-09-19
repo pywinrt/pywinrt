@@ -10,7 +10,6 @@ import winui3.microsoft.ui.xaml.markup as microsoft_ui_xaml_markup
 __all__ = [
     "XamlControlsXamlMetaDataProvider",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class XamlControlsXamlMetaDataProvider_Static(winrt._winrt.IInspectable_Static):
@@ -19,7 +18,7 @@ class XamlControlsXamlMetaDataProvider_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class XamlControlsXamlMetaDataProvider(winrt.system.Object, microsoft_ui_xaml_markup.IXamlMetadataProvider, metaclass=XamlControlsXamlMetaDataProvider_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider::GetXamlType(Windows.UI.Xaml.Interop.TypeName)
     def get_xaml_type(self, type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], /) -> microsoft_ui_xaml_markup.IXamlType: ...
     # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider::GetXamlType(System.String)

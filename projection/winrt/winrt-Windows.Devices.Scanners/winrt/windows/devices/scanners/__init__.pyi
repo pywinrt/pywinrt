@@ -29,7 +29,6 @@ __all__ = [
     "IImageScannerFormatConfiguration",
     "IImageScannerSourceConfiguration",
 ]
-Self = typing.TypeVar('Self')
 
 class ImageScannerAutoCroppingMode(enum.IntEnum):
     DISABLED = 0

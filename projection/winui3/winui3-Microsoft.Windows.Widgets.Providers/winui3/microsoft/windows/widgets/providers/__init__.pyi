@@ -36,7 +36,6 @@ __all__ = [
     "IWidgetProviderMessage",
     "IWidgetResourceProvider",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class WidgetActionInvokedArgs(winrt.system.Object):
@@ -191,7 +190,7 @@ class WidgetResourceRequestedArgs(winrt.system.Object):
 
 @typing.final
 class WidgetResourceResponse(winrt.system.Object):
-    def __new__(cls: type[Self], content: windows_storage_streams.IRandomAccessStreamReference, reason_phrase: str, status_code: winrt.system.Int32) -> Self: ...
+    def __new__(cls, content: windows_storage_streams.IRandomAccessStreamReference, reason_phrase: str, status_code: winrt.system.Int32) -> typing.Self: ...
     # Windows.Storage.Streams.IRandomAccessStreamReference Microsoft.Windows.Widgets.Providers.WidgetResourceResponse::get_Content()
     @_property
     def content(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
@@ -213,7 +212,7 @@ class WidgetUpdateRequestOptions_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WidgetUpdateRequestOptions(winrt.system.Object, metaclass=WidgetUpdateRequestOptions_Static):
-    def __new__(cls: type[Self], widget_id: str) -> Self: ...
+    def __new__(cls, widget_id: str) -> typing.Self: ...
     # System.String Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::get_Template()
     @_property
     def template(self) -> str: ...

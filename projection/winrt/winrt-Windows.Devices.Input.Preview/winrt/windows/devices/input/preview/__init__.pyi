@@ -24,7 +24,6 @@ __all__ = [
     "GazeMovedPreviewEventArgs",
     "GazePointPreview",
 ]
-Self = typing.TypeVar('Self')
 
 class GazeDeviceConfigurationStatePreview(enum.IntEnum):
     UNKNOWN = 0

@@ -10,7 +10,6 @@ import winrt.windows.ui.composition as windows_ui_composition
 __all__ = [
     "DesktopWindowTarget",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class DesktopWindowTarget(windows_ui_composition.CompositionTarget):

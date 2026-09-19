@@ -20,7 +20,6 @@ __all__ = [
     "AppExtensionPackageUpdatedEventArgs",
     "AppExtensionPackageUpdatingEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class AppExtension(winrt.system.Object):

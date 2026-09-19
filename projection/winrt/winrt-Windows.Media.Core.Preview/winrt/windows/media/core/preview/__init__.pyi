@@ -11,7 +11,6 @@ import winrt.windows.media as windows_media
 __all__ = [
     "SoundLevelBroker",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class SoundLevelBroker_Static(winrt._winrt.IInspectable_Static):
@@ -25,5 +24,5 @@ class SoundLevelBroker_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SoundLevelBroker(winrt.system.Object, metaclass=SoundLevelBroker_Static):
-    pass
+    ...
 

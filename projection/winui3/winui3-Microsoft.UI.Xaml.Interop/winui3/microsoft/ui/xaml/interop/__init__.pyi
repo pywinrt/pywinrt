@@ -21,7 +21,6 @@ __all__ = [
     "BindableVectorChangedEventHandler",
     "NotifyCollectionChangedEventHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class NotifyCollectionChangedAction(enum.IntEnum):
     ADD = 0
@@ -31,10 +30,10 @@ class NotifyCollectionChangedAction(enum.IntEnum):
     RESET = 4
 
 class NotifyCollectionChangedEventArgs_Static(winrt._winrt.IInspectable_Static):
-    pass
+    ...
 
 class NotifyCollectionChangedEventArgs(winrt.system.Object, metaclass=NotifyCollectionChangedEventArgs_Static):
-    def __new__(cls: type[Self], action: NotifyCollectionChangedAction, new_items: IBindableVector, old_items: IBindableVector, new_index: winrt.system.Int32, old_index: winrt.system.Int32) -> Self: ...
+    def __new__(cls, action: NotifyCollectionChangedAction, new_items: IBindableVector, old_items: IBindableVector, new_index: winrt.system.Int32, old_index: winrt.system.Int32) -> typing.Self: ...
     # Microsoft.UI.Xaml.Interop.NotifyCollectionChangedAction Microsoft.UI.Xaml.Interop.NotifyCollectionChangedEventArgs::get_Action()
     @_property
     @typing.final

@@ -17,7 +17,6 @@ __all__ = [
     "WebAuthenticationBroker",
     "WebAuthenticationResult",
 ]
-Self = typing.TypeVar('Self')
 
 class TokenBindingKeyType(enum.IntEnum):
     RSA2048 = 0
@@ -84,7 +83,7 @@ class WebAuthenticationBroker_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WebAuthenticationBroker(winrt.system.Object, metaclass=WebAuthenticationBroker_Static):
-    pass
+    ...
 
 @typing.final
 class WebAuthenticationResult(winrt.system.Object):

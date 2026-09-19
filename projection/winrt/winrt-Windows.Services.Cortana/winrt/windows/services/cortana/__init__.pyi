@@ -22,7 +22,6 @@ __all__ = [
     "CortanaPermissionsManager",
     "CortanaSettings",
 ]
-Self = typing.TypeVar('Self')
 
 class CortanaPermission(enum.IntEnum):
     BROWSING_HISTORY = 0
@@ -101,7 +100,7 @@ class CortanaActionableInsights(winrt.system.Object, metaclass=CortanaActionable
 
 @typing.final
 class CortanaActionableInsightsOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Services.Cortana.CortanaActionableInsightsOptions::get_SurroundingText()
     @_property
     def surrounding_text(self) -> str: ...

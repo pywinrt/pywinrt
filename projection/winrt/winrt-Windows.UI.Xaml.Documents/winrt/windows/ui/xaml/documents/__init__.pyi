@@ -46,7 +46,6 @@ __all__ = [
     "Typography",
     "Underline",
 ]
-Self = typing.TypeVar('Self')
 
 class LogicalDirection(enum.IntEnum):
     BACKWARD = 0
@@ -171,11 +170,11 @@ class BlockCollection(winrt.system.Object, winrt._winrt.MutableSequence[Block]):
 
 @typing.final
 class Bold(Span):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
 
 @typing.final
 class ContactContentLinkProvider(ContentLinkProvider):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
 
 @typing.final
 class ContentLink_Static(Inline_Static):
@@ -224,7 +223,7 @@ class ContentLink_Static(Inline_Static):
 
 @typing.final
 class ContentLink(Inline, metaclass=ContentLink_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.UI.Xaml.Documents.ContentLink::Focus(Windows.UI.Xaml.FocusState)
     def focus(self, value: windows_ui_xaml.FocusState, /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Documents.ContentLink::add_GotFocus(Windows.UI.Xaml.RoutedEventHandler)
@@ -340,10 +339,10 @@ class ContentLinkInvokedEventArgs(winrt.system.Object):
     def content_link_info(self) -> windows_ui_text.ContentLinkInfo: ...
 
 class ContentLinkProvider_Static(windows_ui_xaml.DependencyObject_Static):
-    pass
+    ...
 
 class ContentLinkProvider(windows_ui_xaml.DependencyObject, metaclass=ContentLinkProvider_Static):
-    pass
+    ...
 
 @typing.final
 class ContentLinkProviderCollection(winrt.system.Object, winrt._winrt.MutableSequence[ContentLinkProvider]):
@@ -361,7 +360,7 @@ class ContentLinkProviderCollection(winrt.system.Object, winrt._winrt.MutableSeq
     def __setitem__(self, index: typing.SupportsIndex, value: ContentLinkProvider) -> None: ...
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[ContentLinkProvider]) -> None: ...
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.UI.Xaml.Documents.ContentLinkProviderCollection::Append(Windows.UI.Xaml.Documents.ContentLinkProvider)
     def append(self, value: ContentLinkProvider, /) -> None: ...
     # System.Void Windows.UI.Xaml.Documents.ContentLinkProviderCollection::Clear()
@@ -425,7 +424,7 @@ class Glyphs_Static(windows_ui_xaml.FrameworkElement_Static):
 
 @typing.final
 class Glyphs(windows_ui_xaml.FrameworkElement, metaclass=Glyphs_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.UI.Xaml.Documents.Glyphs::get_UnicodeString()
     @_property
     def unicode_string(self) -> str: ...
@@ -534,7 +533,7 @@ class Hyperlink_Static(Span_Static):
 
 @typing.final
 class Hyperlink(Span, metaclass=Hyperlink_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.UI.Xaml.Documents.Hyperlink::Focus(Windows.UI.Xaml.FocusState)
     def focus(self, value: windows_ui_xaml.FocusState, /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Documents.Hyperlink::add_Click(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Documents.Hyperlink,Windows.UI.Xaml.Documents.HyperlinkClickEventArgs>)
@@ -633,13 +632,13 @@ class Hyperlink(Span, metaclass=Hyperlink_Static):
 
 @typing.final
 class HyperlinkClickEventArgs(windows_ui_xaml.RoutedEventArgs):
-    pass
+    ...
 
 class Inline_Static(TextElement_Static):
-    pass
+    ...
 
 class Inline(TextElement, metaclass=Inline_Static):
-    pass
+    ...
 
 @typing.final
 class InlineCollection(winrt.system.Object, winrt._winrt.MutableSequence[Inline]):
@@ -687,7 +686,7 @@ class InlineCollection(winrt.system.Object, winrt._winrt.MutableSequence[Inline]
 
 @typing.final
 class InlineUIContainer(Inline):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Documents.InlineUIContainer::get_Child()
     @_property
     def child(self) -> windows_ui_xaml.UIElement: ...
@@ -697,11 +696,11 @@ class InlineUIContainer(Inline):
 
 @typing.final
 class Italic(Span):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
 
 @typing.final
 class LineBreak(Inline):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
 
 @typing.final
 class Paragraph_Static(Block_Static):
@@ -711,7 +710,7 @@ class Paragraph_Static(Block_Static):
 
 @typing.final
 class Paragraph(Block, metaclass=Paragraph_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Double Windows.UI.Xaml.Documents.Paragraph::get_TextIndent()
     @_property
     def text_indent(self) -> winrt.system.Double: ...
@@ -724,7 +723,7 @@ class Paragraph(Block, metaclass=Paragraph_Static):
 
 @typing.final
 class PlaceContentLinkProvider(ContentLinkProvider):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
 
 @typing.final
 class Run_Static(Inline_Static):
@@ -734,7 +733,7 @@ class Run_Static(Inline_Static):
 
 @typing.final
 class Run(Inline, metaclass=Run_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.UI.Xaml.Documents.Run::get_Text()
     @_property
     def text(self) -> str: ...
@@ -749,10 +748,10 @@ class Run(Inline, metaclass=Run_Static):
     def flow_direction(self, value: windows_ui_xaml.FlowDirection) -> None: ...
 
 class Span_Static(Inline_Static):
-    pass
+    ...
 
 class Span(Inline, metaclass=Span_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.UI.Xaml.Documents.InlineCollection Windows.UI.Xaml.Documents.Span::get_Inlines()
     @_property
     def inlines(self) -> InlineCollection: ...
@@ -1024,7 +1023,7 @@ class TextHighlighter_Static(winrt._winrt.IInspectable_Static):
     def foreground_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class TextHighlighter(winrt.system.Object, metaclass=TextHighlighter_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.UI.Xaml.Media.Brush Windows.UI.Xaml.Documents.TextHighlighter::get_Foreground()
     @_property
     def foreground(self) -> windows_ui_xaml_media.Brush: ...
@@ -1045,10 +1044,10 @@ class TextHighlighter(winrt.system.Object, metaclass=TextHighlighter_Static):
     def ranges(self) -> _cabc.MutableSequence[TextRange]: ...
 
 class TextHighlighterBase_Static(windows_ui_xaml.DependencyObject_Static):
-    pass
+    ...
 
 class TextHighlighterBase(windows_ui_xaml.DependencyObject, metaclass=TextHighlighterBase_Static):
-    pass
+    ...
 
 @typing.final
 class TextPointer(winrt.system.Object):
@@ -1375,9 +1374,9 @@ class Typography_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Typography(winrt.system.Object, metaclass=Typography_Static):
-    pass
+    ...
 
 @typing.final
 class Underline(Span):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
 

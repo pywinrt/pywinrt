@@ -21,7 +21,6 @@ __all__ = [
     "RemoteDesktopInfo",
     "RemoteDesktopRegistrar",
 ]
-Self = typing.TypeVar('Self')
 
 class RemoteDesktopConnectionStatus(enum.IntEnum):
     CONNECTING = 0
@@ -65,7 +64,7 @@ class RemoteDesktopConnectionRemoteInfo_Static(winrt._winrt.IInspectable_Static)
 
 @typing.final
 class RemoteDesktopConnectionRemoteInfo(winrt.system.Object, windows_foundation.IClosable, metaclass=RemoteDesktopConnectionRemoteInfo_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo::Close()
     def close(self) -> None: ...
@@ -82,7 +81,7 @@ class RemoteDesktopConnectionRemoteInfo(winrt.system.Object, windows_foundation.
 
 @typing.final
 class RemoteDesktopInfo(winrt.system.Object):
-    def __new__(cls: type[Self], id: str, display_name: str) -> Self: ...
+    def __new__(cls, id: str, display_name: str) -> typing.Self: ...
     # System.String Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
@@ -100,5 +99,5 @@ class RemoteDesktopRegistrar_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class RemoteDesktopRegistrar(winrt.system.Object, metaclass=RemoteDesktopRegistrar_Static):
-    pass
+    ...
 

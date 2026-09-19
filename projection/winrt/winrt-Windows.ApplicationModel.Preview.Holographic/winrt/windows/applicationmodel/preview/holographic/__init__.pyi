@@ -13,7 +13,6 @@ __all__ = [
     "HolographicApplicationPreview",
     "HolographicKeyboardPlacementOverridePreview",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class HolographicApplicationPreview_Static(winrt._winrt.IInspectable_Static):
@@ -24,7 +23,7 @@ class HolographicApplicationPreview_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class HolographicApplicationPreview(winrt.system.Object, metaclass=HolographicApplicationPreview_Static):
-    pass
+    ...
 
 @typing.final
 class HolographicKeyboardPlacementOverridePreview_Static(winrt._winrt.IInspectable_Static):

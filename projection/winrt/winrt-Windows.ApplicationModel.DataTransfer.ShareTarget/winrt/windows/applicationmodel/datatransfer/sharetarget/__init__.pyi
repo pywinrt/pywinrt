@@ -16,11 +16,10 @@ __all__ = [
     "QuickLink",
     "ShareOperation",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class QuickLink(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink::get_Title()
     @_property
     def title(self) -> str: ...

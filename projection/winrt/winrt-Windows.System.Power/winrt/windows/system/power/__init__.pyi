@@ -17,7 +17,6 @@ __all__ = [
     "ForegroundEnergyManager",
     "PowerManager",
 ]
-Self = typing.TypeVar('Self')
 
 class BatteryStatus(enum.IntEnum):
     NOT_PRESENT = 0
@@ -76,7 +75,7 @@ class BackgroundEnergyManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class BackgroundEnergyManager(winrt.system.Object, metaclass=BackgroundEnergyManager_Static):
-    pass
+    ...
 
 @typing.final
 class ForegroundEnergyManager_Static(winrt._winrt.IInspectable_Static):
@@ -113,7 +112,7 @@ class ForegroundEnergyManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ForegroundEnergyManager(winrt.system.Object, metaclass=ForegroundEnergyManager_Static):
-    pass
+    ...
 
 @typing.final
 class PowerManager_Static(winrt._winrt.IInspectable_Static):
@@ -155,5 +154,5 @@ class PowerManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PowerManager(winrt.system.Object, metaclass=PowerManager_Static):
-    pass
+    ...
 

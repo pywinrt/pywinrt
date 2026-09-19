@@ -40,7 +40,6 @@ __all__ = [
     "UserDataTaskRegenerationProperties",
     "UserDataTaskStore",
 ]
-Self = typing.TypeVar('Self')
 
 class UserDataTaskDaysOfWeek(enum.IntFlag):
     NONE = 0x0
@@ -122,7 +121,7 @@ class UserDataTaskWeekOfMonth(enum.IntEnum):
 
 @typing.final
 class UserDataTask(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties Windows.ApplicationModel.UserDataTasks.UserDataTask::get_RegenerationProperties()
     @_property
     def regeneration_properties(self) -> UserDataTaskRegenerationProperties: ...
@@ -324,7 +323,7 @@ class UserDataTaskManager(winrt.system.Object, metaclass=UserDataTaskManager_Sta
 
 @typing.final
 class UserDataTaskQueryOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.ApplicationModel.UserDataTasks.UserDataTaskQuerySortProperty Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions::get_SortProperty()
     @_property
     def sort_property(self) -> UserDataTaskQuerySortProperty: ...
@@ -345,7 +344,7 @@ class UserDataTaskReader(winrt.system.Object):
 
 @typing.final
 class UserDataTaskRecurrenceProperties(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IReference`1<Windows.ApplicationModel.UserDataTasks.UserDataTaskWeekOfMonth> Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties::get_WeekOfMonth()
     @_property
     def week_of_month(self) -> UserDataTaskWeekOfMonth | None: ...
@@ -397,7 +396,7 @@ class UserDataTaskRecurrenceProperties(winrt.system.Object):
 
 @typing.final
 class UserDataTaskRegenerationProperties(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties::get_Until()
     @_property
     def until(self) -> datetime.datetime | None: ...

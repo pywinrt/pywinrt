@@ -37,7 +37,6 @@ __all__ = [
     "WiFiOnDemandHotspotNetworkProperties",
     "WiFiWpsConfigurationResult",
 ]
-Self = typing.TypeVar('Self')
 
 class WiFiAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0

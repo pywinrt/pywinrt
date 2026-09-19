@@ -16,7 +16,6 @@ __all__ = [
     "IndexedResourceQualifier",
     "ResourceIndexer",
 ]
-Self = typing.TypeVar('Self')
 
 class IndexedResourceType(enum.IntEnum):
     STRING = 0
@@ -55,9 +54,9 @@ class IndexedResourceQualifier(winrt.system.Object):
 @typing.final
 class ResourceIndexer(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], project_root: windows_foundation.Uri, extension_dll_path: windows_foundation.Uri) -> Self: ...
+    def __new__(cls, project_root: windows_foundation.Uri, extension_dll_path: windows_foundation.Uri) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], project_root: windows_foundation.Uri) -> Self: ...
+    def __new__(cls, project_root: windows_foundation.Uri) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate>> Windows.ApplicationModel.Resources.Management.ResourceIndexer::IndexFileContentsAsync(Windows.Foundation.Uri)
     # @deprecated("Use IndexFilePath in mrmsupport.dll instead of IResourceIndexer.  For more info, see MSDN.")
     def index_file_contents_async(self, file: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[IndexedResourceCandidate]]: ...

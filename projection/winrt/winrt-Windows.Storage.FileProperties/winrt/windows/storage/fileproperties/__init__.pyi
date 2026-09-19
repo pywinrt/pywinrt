@@ -34,7 +34,6 @@ __all__ = [
     "VideoProperties",
     "IStorageItemExtraProperties",
 ]
-Self = typing.TypeVar('Self')
 
 class PhotoOrientation(enum.IntEnum):
     UNSPECIFIED = 0
@@ -147,7 +146,7 @@ class GeotagHelper_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GeotagHelper(winrt.system.Object, metaclass=GeotagHelper_Static):
-    pass
+    ...
 
 @typing.final
 class ImageProperties(winrt.system.Object, IStorageItemExtraProperties):
@@ -330,7 +329,7 @@ class StorageItemContentProperties(winrt.system.Object, IStorageItemExtraPropert
 
 @typing.final
 class StorageItemThumbnail(winrt.system.Object, windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStream Windows.Storage.FileProperties.StorageItemThumbnail::CloneStream()
     def clone_stream(self) -> windows_storage_streams.IRandomAccessStream: ...

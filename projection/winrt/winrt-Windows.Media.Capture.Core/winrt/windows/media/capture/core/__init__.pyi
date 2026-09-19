@@ -13,7 +13,6 @@ __all__ = [
     "VariablePhotoCapturedEventArgs",
     "VariablePhotoSequenceCapture",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class VariablePhotoCapturedEventArgs(winrt.system.Object):

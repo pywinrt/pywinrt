@@ -14,11 +14,10 @@ __all__ = [
     "AppBroadcastingStatusDetails",
     "AppBroadcastingUI",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class AppBroadcastingMonitor(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.AppBroadcasting.AppBroadcastingMonitor::add_IsCurrentAppBroadcastingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.AppBroadcasting.AppBroadcastingMonitor,System.Object>)
     def add_is_current_app_broadcasting_changed(self, handler: windows_foundation.TypedEventHandler[AppBroadcastingMonitor, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.AppBroadcasting.AppBroadcastingMonitor::remove_IsCurrentAppBroadcastingChanged(Windows.Foundation.EventRegistrationToken)

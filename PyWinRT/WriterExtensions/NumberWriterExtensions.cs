@@ -22,6 +22,12 @@ static class NumberWriterExtensions
     )
     {
         public string ReturnCppWinrtType => cppWinrtTypeFromPyType[ReturnPyType];
+
+        /// <summary>
+        /// Whether this is an augmented assignment operator, like
+        /// <c>__iadd__</c>, which yields the type it was called on.
+        /// </summary>
+        public bool IsInPlaceOperator => Name.StartsWith("__i");
     }
 
     private static readonly IReadOnlyDictionary<string, string> cppWinrtTypeFromPyType =
@@ -748,7 +754,7 @@ static class NumberWriterExtensions
     public static void WriteNumberCommonValuesPyTyping(
         this IndentedTextWriter w,
         ProjectedType type,
-        ref bool pass
+        ref bool isEmpty
     )
     {
         if (!commonValues.TryGetValue(type.Name, out var values))
@@ -756,7 +762,7 @@ static class NumberWriterExtensions
             return;
         }
 
-        pass = false;
+        isEmpty = false;
 
         foreach (var value in values)
         {
@@ -768,7 +774,7 @@ static class NumberWriterExtensions
     public static void WriteNumberFactoryFunctionPyTyping(
         this IndentedTextWriter w,
         ProjectedType type,
-        ref bool pass
+        ref bool isEmpty
     )
     {
         if (!factoryFunctions.TryGetValue(type.Name, out var functions))
@@ -776,7 +782,7 @@ static class NumberWriterExtensions
             return;
         }
 
-        pass = false;
+        isEmpty = false;
 
         foreach (var func in functions)
         {
@@ -808,7 +814,11 @@ static class NumberWriterExtensions
                 w.WriteLine("@typing.overload");
             }
 
-            w.WriteLine($"def {method.Name}(self{parameters}) -> {method.ReturnPyType}: ...");
+            // an augmented assignment yields the type it was called on, which
+            // typing.Self says without naming it a second time
+            var returnPyType = method.IsInPlaceOperator ? "typing.Self" : method.ReturnPyType;
+
+            w.WriteLine($"def {method.Name}(self{parameters}) -> {returnPyType}: ...");
         }
     }
 

@@ -16,7 +16,6 @@ __all__ = [
     "ExtendedExecutionForegroundRevokedEventArgs",
     "ExtendedExecutionForegroundSession",
 ]
-Self = typing.TypeVar('Self')
 
 class ExtendedExecutionForegroundReason(enum.IntEnum):
     UNSPECIFIED = 0
@@ -40,9 +39,9 @@ class ExtendedExecutionForegroundRevokedEventArgs(winrt.system.Object):
 
 @typing.final
 class ExtendedExecutionForegroundSession(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundResult> Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession::RequestExtensionAsync()

@@ -40,7 +40,6 @@ __all__ = [
     "Vp9ProfileIds",
     "IMediaEncodingProperties",
 ]
-Self = typing.TypeVar('Self')
 
 class AudioEncodingQuality(enum.IntEnum):
     AUTO = 0
@@ -109,7 +108,7 @@ class AudioEncodingProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AudioEncodingProperties(winrt.system.Object, IMediaEncodingProperties, metaclass=AudioEncodingProperties_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Media.MediaProperties.AudioEncodingProperties Windows.Media.MediaProperties.AudioEncodingProperties::Copy()
     def copy(self) -> AudioEncodingProperties: ...
     # System.Void Windows.Media.MediaProperties.AudioEncodingProperties::GetFormatUserData(System.Byte[]&)
@@ -197,11 +196,11 @@ class Av1ProfileIds_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Av1ProfileIds(winrt.system.Object, metaclass=Av1ProfileIds_Static):
-    pass
+    ...
 
 @typing.final
 class ContainerEncodingProperties(winrt.system.Object, IMediaEncodingProperties):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Media.MediaProperties.ContainerEncodingProperties Windows.Media.MediaProperties.ContainerEncodingProperties::Copy()
     def copy(self) -> ContainerEncodingProperties: ...
     # System.String Windows.Media.MediaProperties.ContainerEncodingProperties::get_Subtype()
@@ -252,7 +251,7 @@ class H264ProfileIds_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class H264ProfileIds(winrt.system.Object, metaclass=H264ProfileIds_Static):
-    pass
+    ...
 
 @typing.final
 class HevcProfileIds_Static(winrt._winrt.IInspectable_Static):
@@ -325,7 +324,7 @@ class HevcProfileIds_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class HevcProfileIds(winrt.system.Object, metaclass=HevcProfileIds_Static):
-    pass
+    ...
 
 @typing.final
 class ImageEncodingProperties_Static(winrt._winrt.IInspectable_Static):
@@ -344,7 +343,7 @@ class ImageEncodingProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ImageEncodingProperties(winrt.system.Object, IMediaEncodingProperties, metaclass=ImageEncodingProperties_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Media.MediaProperties.ImageEncodingProperties Windows.Media.MediaProperties.ImageEncodingProperties::Copy()
     def copy(self) -> ImageEncodingProperties: ...
     # System.UInt32 Windows.Media.MediaProperties.ImageEncodingProperties::get_Width()
@@ -405,7 +404,7 @@ class MediaEncodingProfile_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class MediaEncodingProfile(winrt.system.Object, metaclass=MediaEncodingProfile_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Media.Core.AudioStreamDescriptor> Windows.Media.MediaProperties.MediaEncodingProfile::GetAudioTracks()
     def get_audio_tracks(self) -> _cabc.MutableSequence[windows_media_core.AudioStreamDescriptor]: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Media.Core.TimedMetadataStreamDescriptor> Windows.Media.MediaProperties.MediaEncodingProfile::GetTimedMetadataTracks()
@@ -601,7 +600,7 @@ class MediaEncodingSubtypes_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class MediaEncodingSubtypes(winrt.system.Object, metaclass=MediaEncodingSubtypes_Static):
-    pass
+    ...
 
 @typing.final
 class MediaPropertySet(winrt.system.Object, winrt._winrt.MutableMapping[_uuid.UUID, winrt.system.Object]):
@@ -611,7 +610,7 @@ class MediaPropertySet(winrt.system.Object, winrt._winrt.MutableMapping[_uuid.UU
     def __getitem__(self, key: _uuid.UUID) -> winrt.system.Object: ...
     def __setitem__(self, key: _uuid.UUID, value: winrt.system.Object) -> None: ...
     def __delitem__(self, key: _uuid.UUID) -> None: ...
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Media.MediaProperties.MediaPropertySet::Clear()
     def clear(self) -> None: ...
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.Guid,System.Object>> Windows.Media.MediaProperties.MediaPropertySet::First()
@@ -665,7 +664,7 @@ class Mpeg2ProfileIds_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Mpeg2ProfileIds(winrt.system.Object, metaclass=Mpeg2ProfileIds_Static):
-    pass
+    ...
 
 @typing.final
 class TimedMetadataEncodingProperties_Static(winrt._winrt.IInspectable_Static):
@@ -680,7 +679,7 @@ class TimedMetadataEncodingProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class TimedMetadataEncodingProperties(winrt.system.Object, IMediaEncodingProperties, metaclass=TimedMetadataEncodingProperties_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Media.MediaProperties.TimedMetadataEncodingProperties Windows.Media.MediaProperties.TimedMetadataEncodingProperties::Copy()
     def copy(self) -> TimedMetadataEncodingProperties: ...
     # System.Void Windows.Media.MediaProperties.TimedMetadataEncodingProperties::GetFormatUserData(System.Byte[]&)
@@ -717,7 +716,7 @@ class VideoEncodingProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class VideoEncodingProperties(winrt.system.Object, IMediaEncodingProperties, metaclass=VideoEncodingProperties_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Media.MediaProperties.VideoEncodingProperties Windows.Media.MediaProperties.VideoEncodingProperties::Copy()
     def copy(self) -> VideoEncodingProperties: ...
     # System.Void Windows.Media.MediaProperties.VideoEncodingProperties::GetFormatUserData(System.Byte[]&)
@@ -787,7 +786,7 @@ class Vp9ProfileIds_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Vp9ProfileIds(winrt.system.Object, metaclass=Vp9ProfileIds_Static):
-    pass
+    ...
 
 @typing.final
 class _IMediaEncodingProperties: ...

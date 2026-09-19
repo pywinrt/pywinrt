@@ -30,7 +30,6 @@ __all__ = [
     "SystemMemoryUsage",
     "SystemMemoryUsageReport",
 ]
-Self = typing.TypeVar('Self')
 
 class DiagnosticActionState(enum.IntEnum):
     INITIALIZING = 0

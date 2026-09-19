@@ -103,7 +103,6 @@ __all__ = [
     "IHumanPresenceSensorExtension",
     "ISensorDataThreshold",
 ]
-Self = typing.TypeVar('Self')
 
 class AccelerometerReadingType(enum.IntEnum):
     STANDARD = 0
@@ -901,7 +900,7 @@ class HumanPresenceSensorReadingChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class HumanPresenceSensorReadingUpdate(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate::get_Timestamp()
     @_property
     def timestamp(self) -> datetime.datetime | None: ...
@@ -1494,7 +1493,7 @@ class Pedometer(winrt.system.Object, metaclass=Pedometer_Static):
 
 @typing.final
 class PedometerDataThreshold(winrt.system.Object, ISensorDataThreshold):
-    def __new__(cls: type[Self], sensor: Pedometer, step_goal: winrt.system.Int32) -> Self: ...
+    def __new__(cls, sensor: Pedometer, step_goal: winrt.system.Int32) -> typing.Self: ...
 
 @typing.final
 class PedometerReading(winrt.system.Object):
@@ -1548,11 +1547,11 @@ class ProximitySensor(winrt.system.Object, metaclass=ProximitySensor_Static):
 
 @typing.final
 class ProximitySensorDataThreshold(winrt.system.Object, ISensorDataThreshold):
-    def __new__(cls: type[Self], sensor: ProximitySensor) -> Self: ...
+    def __new__(cls, sensor: ProximitySensor) -> typing.Self: ...
 
 @typing.final
 class ProximitySensorDisplayOnOffController(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Sensors.ProximitySensorDisplayOnOffController::Close()
     def close(self) -> None: ...
@@ -1710,5 +1709,5 @@ class IHumanPresenceSensorExtension(winrt._winrt.IInspectable):
 class _ISensorDataThreshold: ...
 
 class ISensorDataThreshold(winrt._winrt.IInspectable):  # type: ignore[misc]
-    pass
+    ...
 

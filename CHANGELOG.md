@@ -14,6 +14,13 @@
   `tuple` and `type`, and the abstract collection types come from
   `collections.abc` instead of `typing`. This only affects how the annotations
   read; they mean the same thing to type checkers.
+- The type stubs now follow the conventions that type checkers and stub linters
+  expect of a stub. A method that returns the type it was called on says
+  `typing.Self` instead of naming a type variable, an empty class body is `...`
+  instead of `pass`, a default value that is not a literal is written `...`, and
+  `typing.Generic` comes last in a list of base classes. The redundant `__str__`
+  declaration is gone from the classes that implement `IStringable`; `str()` on
+  them works the same as it always has.
 - `winrt-runtime` no longer ships a copy of `MSVCP140.dll`, and no module in
   the projection needs the Visual C++ redistributable any more. The whole of
   that dependency was two cold standard library helpers, which are now compiled

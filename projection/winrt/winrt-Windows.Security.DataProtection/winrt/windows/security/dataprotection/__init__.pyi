@@ -20,7 +20,6 @@ __all__ = [
     "UserDataProtectionManager",
     "UserDataStorageItemProtectionInfo",
 ]
-Self = typing.TypeVar('Self')
 
 class UserDataAvailability(enum.IntEnum):
     ALWAYS = 0

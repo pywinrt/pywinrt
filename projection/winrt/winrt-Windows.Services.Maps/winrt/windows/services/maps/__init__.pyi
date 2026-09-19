@@ -44,7 +44,6 @@ __all__ = [
     "PlaceInfo",
     "PlaceInfoCreateOptions",
 ]
-Self = typing.TypeVar('Self')
 
 class ManeuverWarningKind(enum.IntEnum):
     NONE = 0
@@ -180,7 +179,7 @@ class WaypointKind(enum.IntEnum):
 
 @typing.final
 class EnhancedWaypoint(winrt.system.Object):
-    def __new__(cls: type[Self], point: windows_devices_geolocation.Geopoint, kind: WaypointKind) -> Self: ...
+    def __new__(cls, point: windows_devices_geolocation.Geopoint, kind: WaypointKind) -> typing.Self: ...
     # Windows.Services.Maps.WaypointKind Windows.Services.Maps.EnhancedWaypoint::get_Kind()
     @_property
     def kind(self) -> WaypointKind: ...
@@ -288,7 +287,7 @@ class MapLocationFinder_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class MapLocationFinder(winrt.system.Object, metaclass=MapLocationFinder_Static):
-    pass
+    ...
 
 @typing.final
 class MapLocationFinderResult(winrt.system.Object):
@@ -308,7 +307,7 @@ class MapManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class MapManager(winrt.system.Object, metaclass=MapManager_Static):
-    pass
+    ...
 
 @typing.final
 class MapRoute(winrt.system.Object):
@@ -348,7 +347,7 @@ class MapRoute(winrt.system.Object):
 
 @typing.final
 class MapRouteDrivingOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Services.Maps.MapRouteRestrictions Windows.Services.Maps.MapRouteDrivingOptions::get_RouteRestrictions()
     @_property
     def route_restrictions(self) -> MapRouteRestrictions: ...
@@ -449,7 +448,7 @@ class MapRouteFinder_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class MapRouteFinder(winrt.system.Object, metaclass=MapRouteFinder_Static):
-    pass
+    ...
 
 @typing.final
 class MapRouteFinderResult(winrt.system.Object):
@@ -543,7 +542,7 @@ class MapService_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class MapService(winrt.system.Object, metaclass=MapService_Static):
-    pass
+    ...
 
 @typing.final
 class PlaceInfo_Static(winrt._winrt.IInspectable_Static):
@@ -610,7 +609,7 @@ class PlaceInfo(winrt.system.Object, metaclass=PlaceInfo_Static):
 
 @typing.final
 class PlaceInfoCreateOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Services.Maps.PlaceInfoCreateOptions::get_DisplayName()
     @_property
     def display_name(self) -> str: ...

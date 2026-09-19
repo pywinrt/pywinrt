@@ -22,7 +22,6 @@ __all__ = [
     "PinChangedEventArgs",
     "SerialDevice",
 ]
-Self = typing.TypeVar('Self')
 
 class SerialError(enum.IntEnum):
     FRAME = 0
@@ -87,7 +86,7 @@ class SerialDevice_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SerialDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=SerialDevice_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.SerialCommunication.SerialDevice::Close()
     def close(self) -> None: ...

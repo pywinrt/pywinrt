@@ -22,7 +22,6 @@ __all__ = [
     "PrintTaskConfigurationSaveRequestedDeferral",
     "PrintTaskConfigurationSaveRequestedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class Print3DWorkflowDetail(enum.IntEnum):
     UNKNOWN = 0
@@ -87,7 +86,7 @@ class PrintExtensionContext_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PrintExtensionContext(winrt.system.Object, metaclass=PrintExtensionContext_Static):
-    pass
+    ...
 
 @typing.final
 class PrintNotificationEventDetails(winrt.system.Object):

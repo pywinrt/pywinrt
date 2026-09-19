@@ -20,7 +20,6 @@ __all__ = [
     "CredentialPickerResults",
     "UserConsentVerifier",
 ]
-Self = typing.TypeVar('Self')
 
 class AuthenticationProtocol(enum.IntEnum):
     BASIC = 0
@@ -78,11 +77,11 @@ class CredentialPicker_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CredentialPicker(winrt.system.Object, metaclass=CredentialPicker_Static):
-    pass
+    ...
 
 @typing.final
 class CredentialPickerOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Security.Credentials.UI.CredentialPickerOptions::get_TargetName()
     @_property
     def target_name(self) -> str: ...
@@ -177,5 +176,5 @@ class UserConsentVerifier_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class UserConsentVerifier(winrt.system.Object, metaclass=UserConsentVerifier_Static):
-    pass
+    ...
 

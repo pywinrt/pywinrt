@@ -24,7 +24,6 @@ __all__ = [
     "WorkflowPrintTicket",
     "WorkflowPrintTicketValidationResult",
 ]
-Self = typing.TypeVar('Self')
 
 class PrintTicketFeatureSelectionType(enum.IntEnum):
     PICK_ONE = 0

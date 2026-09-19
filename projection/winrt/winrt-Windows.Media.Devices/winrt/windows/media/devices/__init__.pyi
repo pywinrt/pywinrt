@@ -99,7 +99,6 @@ __all__ = [
     "KeypadPressedEventHandler",
     "RedialRequestedEventHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class AdvancedPhotoMode(enum.IntEnum):
     AUTO = 0
@@ -284,7 +283,7 @@ class ZoomTransitionMode(enum.IntEnum):
 
 @typing.final
 class AdvancedPhotoCaptureSettings(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Media.Devices.AdvancedPhotoMode Windows.Media.Devices.AdvancedPhotoCaptureSettings::get_Mode()
     @_property
     def mode(self) -> AdvancedPhotoMode: ...
@@ -361,7 +360,7 @@ class AudioDeviceModuleNotificationEventArgs(winrt.system.Object):
 
 @typing.final
 class AudioDeviceModulesManager(winrt.system.Object):
-    def __new__(cls: type[Self], device_id: str) -> Self: ...
+    def __new__(cls, device_id: str) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Devices.AudioDeviceModule> Windows.Media.Devices.AudioDeviceModulesManager::FindAll()
     def find_all(self) -> _cabc.Sequence[AudioDeviceModule]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Devices.AudioDeviceModule> Windows.Media.Devices.AudioDeviceModulesManager::FindAllById(System.String)
@@ -469,7 +468,7 @@ class DialRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class DigitalWindowBounds(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Double Windows.Media.Devices.DigitalWindowBounds::get_Scale()
     @_property
     def scale(self) -> winrt.system.Double: ...
@@ -708,7 +707,7 @@ class FocusControl(winrt.system.Object):
 
 @typing.final
 class FocusSettings(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Media.Devices.FocusSettings::get_WaitForFocus()
     @_property
     def wait_for_focus(self) -> bool: ...
@@ -931,7 +930,7 @@ class MediaDevice_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class MediaDevice(winrt.system.Object, metaclass=MediaDevice_Static):
-    pass
+    ...
 
 @typing.final
 class MediaDeviceControl(winrt.system.Object):
@@ -1029,7 +1028,7 @@ class RedialRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class RegionOfInterest(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Rect Windows.Media.Devices.RegionOfInterest::get_Bounds()
     @_property
     def bounds(self) -> windows_foundation.Rect: ...
@@ -1356,7 +1355,7 @@ class ZoomControl(winrt.system.Object):
 
 @typing.final
 class ZoomSettings(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Single Windows.Media.Devices.ZoomSettings::get_Value()
     @_property
     def value(self) -> winrt.system.Single: ...

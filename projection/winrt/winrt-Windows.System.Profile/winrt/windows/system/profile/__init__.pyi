@@ -36,7 +36,6 @@ __all__ = [
     "UnsupportedAppRequirement",
     "WindowsIntegrityPolicy",
 ]
-Self = typing.TypeVar('Self')
 
 class PlatformAutomaticAppSignInPolicy(enum.IntEnum):
     UNKNOWN = 0
@@ -77,7 +76,7 @@ class AnalyticsInfo_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AnalyticsInfo(winrt.system.Object, metaclass=AnalyticsInfo_Static):
-    pass
+    ...
 
 @typing.final
 class AnalyticsVersionInfo(winrt.system.Object):
@@ -98,7 +97,7 @@ class AppApplicability_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AppApplicability(winrt.system.Object, metaclass=AppApplicability_Static):
-    pass
+    ...
 
 @typing.final
 class EducationSettings_Static(winrt._winrt.IInspectable_Static):
@@ -108,7 +107,7 @@ class EducationSettings_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class EducationSettings(winrt.system.Object, metaclass=EducationSettings_Static):
-    pass
+    ...
 
 @typing.final
 class HardwareIdentification_Static(winrt._winrt.IInspectable_Static):
@@ -117,7 +116,7 @@ class HardwareIdentification_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class HardwareIdentification(winrt.system.Object, metaclass=HardwareIdentification_Static):
-    pass
+    ...
 
 @typing.final
 class HardwareToken(winrt.system.Object):
@@ -202,7 +201,7 @@ class KnownRetailInfoProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KnownRetailInfoProperties(winrt.system.Object, metaclass=KnownRetailInfoProperties_Static):
-    pass
+    ...
 
 @typing.final
 class PlatformAutomaticAppSignInManager_Static(winrt._winrt.IInspectable_Static):
@@ -212,7 +211,7 @@ class PlatformAutomaticAppSignInManager_Static(winrt._winrt.IInspectable_Static)
 
 @typing.final
 class PlatformAutomaticAppSignInManager(winrt.system.Object, metaclass=PlatformAutomaticAppSignInManager_Static):
-    pass
+    ...
 
 @typing.final
 class PlatformDiagnosticsAndUsageDataSettings_Static(winrt._winrt.IInspectable_Static):
@@ -228,7 +227,7 @@ class PlatformDiagnosticsAndUsageDataSettings_Static(winrt._winrt.IInspectable_S
 
 @typing.final
 class PlatformDiagnosticsAndUsageDataSettings(winrt.system.Object, metaclass=PlatformDiagnosticsAndUsageDataSettings_Static):
-    pass
+    ...
 
 @typing.final
 class RetailInfo_Static(winrt._winrt.IInspectable_Static):
@@ -241,7 +240,7 @@ class RetailInfo_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class RetailInfo(winrt.system.Object, metaclass=RetailInfo_Static):
-    pass
+    ...
 
 @typing.final
 class SharedModeSettings_Static(winrt._winrt.IInspectable_Static):
@@ -254,7 +253,7 @@ class SharedModeSettings_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SharedModeSettings(winrt.system.Object, metaclass=SharedModeSettings_Static):
-    pass
+    ...
 
 @typing.final
 class SmartAppControlPolicy_Static(winrt._winrt.IInspectable_Static):
@@ -268,7 +267,7 @@ class SmartAppControlPolicy_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SmartAppControlPolicy(winrt.system.Object, metaclass=SmartAppControlPolicy_Static):
-    pass
+    ...
 
 @typing.final
 class SystemIdentification_Static(winrt._winrt.IInspectable_Static):
@@ -279,7 +278,7 @@ class SystemIdentification_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SystemIdentification(winrt.system.Object, metaclass=SystemIdentification_Static):
-    pass
+    ...
 
 @typing.final
 class SystemIdentificationInfo(winrt.system.Object):
@@ -302,7 +301,7 @@ class SystemSetupInfo_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SystemSetupInfo(winrt.system.Object, metaclass=SystemSetupInfo_Static):
-    pass
+    ...
 
 @typing.final
 class UnsupportedAppRequirement(winrt.system.Object):
@@ -334,5 +333,5 @@ class WindowsIntegrityPolicy_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WindowsIntegrityPolicy(winrt.system.Object, metaclass=WindowsIntegrityPolicy_Static):
-    pass
+    ...
 

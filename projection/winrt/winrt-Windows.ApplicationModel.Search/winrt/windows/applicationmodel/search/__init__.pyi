@@ -30,11 +30,10 @@ __all__ = [
     "SearchSuggestionsRequestDeferral",
     "ISearchPaneQueryChangedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class LocalContentSuggestionSettings(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.ApplicationModel.Search.LocalContentSuggestionSettings::get_Enabled()
     @_property
     def enabled(self) -> bool: ...
@@ -236,7 +235,7 @@ class SearchPaneVisibilityChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class SearchQueryLinguisticDetails(winrt.system.Object):
-    def __new__(cls: type[Self], query_text_alternatives: _cabc.Iterable[str], query_text_composition_start: winrt.system.UInt32, query_text_composition_length: winrt.system.UInt32) -> Self: ...
+    def __new__(cls, query_text_alternatives: _cabc.Iterable[str], query_text_composition_start: winrt.system.UInt32, query_text_composition_length: winrt.system.UInt32) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.ApplicationModel.Search.SearchQueryLinguisticDetails::get_QueryTextAlternatives()
     @_property
     def query_text_alternatives(self) -> _cabc.Sequence[str]: ...

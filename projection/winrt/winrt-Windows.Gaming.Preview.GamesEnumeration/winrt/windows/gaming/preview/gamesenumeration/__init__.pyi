@@ -25,7 +25,6 @@ __all__ = [
     "GameListChangedEventHandler",
     "GameListRemovedEventHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class GameListCategory(enum.IntEnum):
     CANDIDATE = 0
@@ -69,7 +68,7 @@ class GameList_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GameList(winrt.system.Object, metaclass=GameList_Static):
-    pass
+    ...
 
 @typing.final
 class GameListEntry(winrt.system.Object, IGameListEntry):

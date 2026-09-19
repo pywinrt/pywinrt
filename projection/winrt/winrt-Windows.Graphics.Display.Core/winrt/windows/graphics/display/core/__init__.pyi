@@ -19,7 +19,6 @@ __all__ = [
     "HdmiDisplayInformation",
     "HdmiDisplayMode",
 ]
-Self = typing.TypeVar('Self')
 
 class HdmiDisplayColorSpace(enum.IntEnum):
     RGB_LIMITED = 0

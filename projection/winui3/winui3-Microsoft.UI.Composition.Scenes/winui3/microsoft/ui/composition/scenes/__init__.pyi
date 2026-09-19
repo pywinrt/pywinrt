@@ -36,7 +36,6 @@ __all__ = [
     "SceneSurfaceMaterialInput",
     "SceneVisual",
 ]
-Self = typing.TypeVar('Self')
 
 class SceneAlphaMode(enum.IntEnum):
     OPAQUE = 0
@@ -79,7 +78,7 @@ class SceneBoundingBox(SceneObject):
     def size(self) -> windows_foundation_numerics.Vector3: ...
 
 class SceneComponent_Static(SceneObject_Static):
-    pass
+    ...
 
 class SceneComponent(SceneObject, metaclass=SceneComponent_Static):
     # Microsoft.UI.Composition.Scenes.SceneComponentType Microsoft.UI.Composition.Scenes.SceneComponent::get_ComponentType()
@@ -132,16 +131,16 @@ class SceneComponentCollection(SceneObject, winrt._winrt.MutableSequence[SceneCo
     def size(self) -> winrt.system.UInt32: ...
 
 class SceneMaterial_Static(SceneObject_Static):
-    pass
+    ...
 
 class SceneMaterial(SceneObject, metaclass=SceneMaterial_Static):
-    pass
+    ...
 
 class SceneMaterialInput_Static(SceneObject_Static):
-    pass
+    ...
 
 class SceneMaterialInput(SceneObject, metaclass=SceneMaterialInput_Static):
-    pass
+    ...
 
 @typing.final
 class SceneMesh_Static(SceneObject_Static):
@@ -355,13 +354,13 @@ class SceneNodeCollection(SceneObject, winrt._winrt.MutableSequence[SceneNode]):
     def size(self) -> winrt.system.UInt32: ...
 
 class SceneObject_Static(microsoft_ui_composition.CompositionObject_Static):
-    pass
+    ...
 
 class SceneObject(microsoft_ui_composition.CompositionObject, metaclass=SceneObject_Static):
-    pass
+    ...
 
 class ScenePbrMaterial_Static(SceneMaterial_Static):
-    pass
+    ...
 
 class ScenePbrMaterial(SceneMaterial, metaclass=ScenePbrMaterial_Static):
     # System.Single Microsoft.UI.Composition.Scenes.ScenePbrMaterial::get_OcclusionStrength()
@@ -429,10 +428,10 @@ class ScenePbrMaterial(SceneMaterial, metaclass=ScenePbrMaterial_Static):
     def alpha_cutoff(self, value: winrt.system.Single) -> None: ...
 
 class SceneRendererComponent_Static(SceneComponent_Static):
-    pass
+    ...
 
 class SceneRendererComponent(SceneComponent, metaclass=SceneRendererComponent_Static):
-    pass
+    ...
 
 @typing.final
 class SceneSurfaceMaterialInput_Static(SceneMaterialInput_Static):

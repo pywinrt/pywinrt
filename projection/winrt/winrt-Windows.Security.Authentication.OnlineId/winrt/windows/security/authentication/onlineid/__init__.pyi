@@ -27,7 +27,6 @@ __all__ = [
     "UserAuthenticationOperation",
     "UserIdentity",
 ]
-Self = typing.TypeVar('Self')
 
 class CredentialPromptType(enum.IntEnum):
     PROMPT_IF_NEEDED = 0
@@ -41,7 +40,7 @@ class OnlineIdSystemTicketStatus(enum.IntEnum):
 
 @typing.final
 class OnlineIdAuthenticator(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     @typing.overload
     # Windows.Security.Authentication.OnlineId.UserAuthenticationOperation Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator::AuthenticateUserAsync(Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest)
     def authenticate_user_async(self, request: OnlineIdServiceTicketRequest, /) -> UserAuthenticationOperation: ...
@@ -82,9 +81,9 @@ class OnlineIdServiceTicket(winrt.system.Object):
 @typing.final
 class OnlineIdServiceTicketRequest(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], service: str, policy: str) -> Self: ...
+    def __new__(cls, service: str, policy: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], service: str) -> Self: ...
+    def __new__(cls, service: str) -> typing.Self: ...
     # System.String Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest::get_Policy()
     @_property
     def policy(self) -> str: ...
@@ -102,7 +101,7 @@ class OnlineIdSystemAuthenticator_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class OnlineIdSystemAuthenticator(winrt.system.Object, metaclass=OnlineIdSystemAuthenticator_Static):
-    pass
+    ...
 
 @typing.final
 class OnlineIdSystemAuthenticatorForUser(winrt.system.Object):

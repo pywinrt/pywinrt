@@ -21,7 +21,6 @@ __all__ = [
     "KnownDeviceTypes",
     "IIOControlCode",
 ]
-Self = typing.TypeVar('Self')
 
 class DeviceAccessMode(enum.IntEnum):
     READ = 0
@@ -66,7 +65,7 @@ class CustomDevice(winrt.system.Object, metaclass=CustomDevice_Static):
 
 @typing.final
 class IOControlCode(winrt.system.Object, IIOControlCode):
-    def __new__(cls: type[Self], device_type: winrt.system.UInt16, function: winrt.system.UInt16, access_mode: IOControlAccessMode, buffering_method: IOControlBufferingMethod) -> Self: ...
+    def __new__(cls, device_type: winrt.system.UInt16, function: winrt.system.UInt16, access_mode: IOControlAccessMode, buffering_method: IOControlBufferingMethod) -> typing.Self: ...
     # Windows.Devices.Custom.IOControlAccessMode Windows.Devices.Custom.IOControlCode::get_AccessMode()
     @_property
     def access_mode(self) -> IOControlAccessMode: ...
@@ -91,7 +90,7 @@ class KnownDeviceTypes_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KnownDeviceTypes(winrt.system.Object, metaclass=KnownDeviceTypes_Static):
-    pass
+    ...
 
 @typing.final
 class _IIOControlCode: ...

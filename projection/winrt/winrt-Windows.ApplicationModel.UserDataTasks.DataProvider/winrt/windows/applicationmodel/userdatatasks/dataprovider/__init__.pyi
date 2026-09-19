@@ -22,7 +22,6 @@ __all__ = [
     "UserDataTaskListSyncManagerSyncRequest",
     "UserDataTaskListSyncManagerSyncRequestEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class UserDataTaskDataProviderConnection(winrt.system.Object):

@@ -9,7 +9,6 @@ import winrt.windows.foundation as windows_foundation
 __all__ = [
     "CorePerceptionAutomation",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class CorePerceptionAutomation_Static(winrt._winrt.IInspectable_Static):
@@ -18,5 +17,5 @@ class CorePerceptionAutomation_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CorePerceptionAutomation(winrt.system.Object, metaclass=CorePerceptionAutomation_Static):
-    pass
+    ...
 

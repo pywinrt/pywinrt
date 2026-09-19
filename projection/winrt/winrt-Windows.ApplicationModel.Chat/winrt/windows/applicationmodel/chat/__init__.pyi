@@ -68,7 +68,6 @@ __all__ = [
     "RemoteParticipantComposingChangedEventArgs",
     "IChatItem",
 ]
-Self = typing.TypeVar('Self')
 
 class ChatConversationThreadingKind(enum.IntEnum):
     PARTICIPANTS = 0
@@ -217,7 +216,7 @@ class ChatCapabilitiesManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ChatCapabilitiesManager(winrt.system.Object, metaclass=ChatCapabilitiesManager_Static):
-    pass
+    ...
 
 @typing.final
 class ChatConversation(winrt.system.Object, IChatItem):
@@ -297,7 +296,7 @@ class ChatConversationReader(winrt.system.Object):
 
 @typing.final
 class ChatConversationThreadingInfo(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.ApplicationModel.Chat.ChatConversationThreadingKind Windows.ApplicationModel.Chat.ChatConversationThreadingInfo::get_Kind()
     @_property
     def kind(self) -> ChatConversationThreadingKind: ...
@@ -328,7 +327,7 @@ class ChatConversationThreadingInfo(winrt.system.Object):
 
 @typing.final
 class ChatMessage(winrt.system.Object, IChatItem):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.ApplicationModel.Chat.ChatItemKind Windows.ApplicationModel.Chat.ChatMessage::get_ItemKind()
     @_property
     def item_kind(self) -> ChatItemKind: ...
@@ -479,7 +478,7 @@ class ChatMessage(winrt.system.Object, IChatItem):
 
 @typing.final
 class ChatMessageAttachment(winrt.system.Object):
-    def __new__(cls: type[Self], mime_type: str, data_stream_reference: windows_storage_streams.IRandomAccessStreamReference) -> Self: ...
+    def __new__(cls, mime_type: str, data_stream_reference: windows_storage_streams.IRandomAccessStreamReference) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Chat.ChatMessageAttachment::get_Text()
     @_property
     def text(self) -> str: ...
@@ -530,7 +529,7 @@ class ChatMessageBlocking_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ChatMessageBlocking(winrt.system.Object, metaclass=ChatMessageBlocking_Static):
-    pass
+    ...
 
 @typing.final
 class ChatMessageChange(winrt.system.Object):
@@ -588,7 +587,7 @@ class ChatMessageManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ChatMessageManager(winrt.system.Object, metaclass=ChatMessageManager_Static):
-    pass
+    ...
 
 @typing.final
 class ChatMessageNotificationTriggerDetails(winrt.system.Object):
@@ -786,7 +785,7 @@ class ChatMessageValidationResult(winrt.system.Object):
 
 @typing.final
 class ChatQueryOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Chat.ChatQueryOptions::get_SearchString()
     @_property
     def search_string(self) -> str: ...
@@ -796,7 +795,7 @@ class ChatQueryOptions(winrt.system.Object):
 
 @typing.final
 class ChatRecipientDeliveryInfo(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Chat.ChatRecipientDeliveryInfo::get_TransportAddress()
     @_property
     def transport_address(self) -> str: ...
@@ -945,7 +944,7 @@ class RcsManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class RcsManager(winrt.system.Object, metaclass=RcsManager_Static):
-    pass
+    ...
 
 @typing.final
 class RcsServiceKindSupportedChangedEventArgs(winrt.system.Object):

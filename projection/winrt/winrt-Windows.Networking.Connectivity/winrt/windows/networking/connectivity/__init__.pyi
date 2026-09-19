@@ -60,7 +60,6 @@ __all__ = [
     "WwanConnectionProfileDetails",
     "NetworkStatusChangedEventHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class CellularApnAuthenticationType(enum.IntEnum):
     NONE = 0
@@ -189,7 +188,7 @@ class NetworkUsageStates:
     def roaming(self) -> TriStates: ...
     @_property
     def shared(self) -> TriStates: ...
-    def __new__(cls, roaming: TriStates = TriStates(0), shared: TriStates = TriStates(0)) -> NetworkUsageStates: ...
+    def __new__(cls, roaming: TriStates = ..., shared: TriStates = ...) -> NetworkUsageStates: ...
     def __replace__(self, /, **changes: typing.Any) -> NetworkUsageStates: ...
     def unpack(self) -> tuple[TriStates, TriStates]: ...
 
@@ -213,7 +212,7 @@ class AttributedNetworkUsage(winrt.system.Object):
 
 @typing.final
 class CellularApnContext(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Networking.Connectivity.CellularApnContext::get_UserName()
     @_property
     def user_name(self) -> str: ...
@@ -344,7 +343,7 @@ class ConnectionProfile(winrt.system.Object):
 
 @typing.final
 class ConnectionProfileFilter(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IReference`1<System.Guid> Windows.Networking.Connectivity.ConnectionProfileFilter::get_ServiceProviderGuid()
     @_property
     def service_provider_guid(self) -> _uuid.UUID | None: ...
@@ -405,7 +404,7 @@ class ConnectionProfileFilter(winrt.system.Object):
 
 @typing.final
 class ConnectionSession(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Networking.Connectivity.ConnectionSession::Close()
     def close(self) -> None: ...
@@ -433,7 +432,7 @@ class ConnectivityManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ConnectivityManager(winrt.system.Object, metaclass=ConnectivityManager_Static):
-    pass
+    ...
 
 @typing.final
 class DataPlanStatus(winrt.system.Object):
@@ -547,7 +546,7 @@ class NetworkInformation_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class NetworkInformation(winrt.system.Object, metaclass=NetworkInformation_Static):
-    pass
+    ...
 
 @typing.final
 class NetworkItem(winrt.system.Object):
@@ -628,7 +627,7 @@ class ProxyConfiguration(winrt.system.Object):
 
 @typing.final
 class RoutePolicy(winrt.system.Object):
-    def __new__(cls: type[Self], connection_profile: ConnectionProfile, host_name: windows_networking.HostName, type: windows_networking.DomainNameType) -> Self: ...
+    def __new__(cls, connection_profile: ConnectionProfile, host_name: windows_networking.HostName, type: windows_networking.DomainNameType) -> typing.Self: ...
     # Windows.Networking.Connectivity.ConnectionProfile Windows.Networking.Connectivity.RoutePolicy::get_ConnectionProfile()
     @_property
     def connection_profile(self) -> ConnectionProfile: ...

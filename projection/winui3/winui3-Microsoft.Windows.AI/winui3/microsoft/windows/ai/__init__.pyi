@@ -13,7 +13,6 @@ __all__ = [
     "AIFeatureReadyState",
     "AIFeatureReadyResult",
 ]
-Self = typing.TypeVar('Self')
 
 class AIFeatureReadyResultState(enum.IntEnum):
     IN_PROGRESS = 0

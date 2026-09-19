@@ -27,7 +27,6 @@ __all__ = [
     "CastingDeviceSelectedEventArgs",
     "CastingSource",
 ]
-Self = typing.TypeVar('Self')
 
 class CastingConnectionErrorStatus(enum.IntEnum):
     SUCCEEDED = 0
@@ -53,7 +52,7 @@ class CastingPlaybackTypes(enum.IntFlag):
 
 @typing.final
 class CastingConnection(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Casting.CastingConnection::Close()
     def close(self) -> None: ...
@@ -120,7 +119,7 @@ class CastingDevice(winrt.system.Object, metaclass=CastingDevice_Static):
 
 @typing.final
 class CastingDevicePicker(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Media.Casting.CastingDevicePicker::Hide()
     def hide(self) -> None: ...
     @typing.overload

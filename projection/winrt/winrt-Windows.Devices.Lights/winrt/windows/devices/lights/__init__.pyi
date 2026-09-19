@@ -22,7 +22,6 @@ __all__ = [
     "LampAvailabilityChangedEventArgs",
     "LampInfo",
 ]
-Self = typing.TypeVar('Self')
 
 class LampArrayKind(enum.IntEnum):
     UNDEFINED = 0
@@ -60,7 +59,7 @@ class Lamp_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Lamp(winrt.system.Object, windows_foundation.IClosable, metaclass=Lamp_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Lights.Lamp::Close()
     def close(self) -> None: ...

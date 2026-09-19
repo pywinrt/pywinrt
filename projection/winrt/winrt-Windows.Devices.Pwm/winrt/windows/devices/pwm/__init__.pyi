@@ -18,7 +18,6 @@ __all__ = [
     "PwmController",
     "PwmPin",
 ]
-Self = typing.TypeVar('Self')
 
 class PwmPulsePolarity(enum.IntEnum):
     ACTIVE_HIGH = 0
@@ -64,7 +63,7 @@ class PwmController(winrt.system.Object, metaclass=PwmController_Static):
 
 @typing.final
 class PwmPin(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Pwm.PwmPin::Close()
     def close(self) -> None: ...

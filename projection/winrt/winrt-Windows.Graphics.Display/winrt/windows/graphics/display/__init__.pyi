@@ -34,7 +34,6 @@ __all__ = [
     "DisplayServices",
     "DisplayPropertiesEventHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class AdvancedColorKind(enum.IntEnum):
     STANDARD_DYNAMIC_RANGE = 0
@@ -402,7 +401,7 @@ class DisplayProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DisplayProperties(winrt.system.Object, metaclass=DisplayProperties_Static):
-    pass
+    ...
 
 @typing.final
 class DisplayServices_Static(winrt._winrt.IInspectable_Static):
@@ -411,6 +410,6 @@ class DisplayServices_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DisplayServices(winrt.system.Object, metaclass=DisplayServices_Static):
-    pass
+    ...
 
 DisplayPropertiesEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object], None]

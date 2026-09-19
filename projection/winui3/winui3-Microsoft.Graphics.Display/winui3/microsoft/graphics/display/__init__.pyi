@@ -18,7 +18,6 @@ __all__ = [
     "DisplayAdvancedColorInfo",
     "DisplayInformation",
 ]
-Self = typing.TypeVar('Self')
 
 class DisplayAdvancedColorKind(enum.IntEnum):
     STANDARD_DYNAMIC_RANGE = 0
@@ -72,7 +71,7 @@ class DisplayInformation_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DisplayInformation(winrt.system.Object, windows_foundation.IClosable, metaclass=DisplayInformation_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Microsoft.Graphics.Display.DisplayInformation::Close()
     def close(self) -> None: ...

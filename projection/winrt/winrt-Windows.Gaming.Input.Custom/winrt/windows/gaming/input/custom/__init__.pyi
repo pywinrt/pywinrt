@@ -31,7 +31,6 @@ __all__ = [
     "IHidGameControllerInputSink",
     "IXusbGameControllerInputSink",
 ]
-Self = typing.TypeVar('Self')
 
 class GipFirmwareUpdateStatus(enum.IntEnum):
     COMPLETED = 0
@@ -97,7 +96,7 @@ class GameControllerFactoryManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GameControllerFactoryManager(winrt.system.Object, metaclass=GameControllerFactoryManager_Static):
-    pass
+    ...
 
 @typing.final
 class GipFirmwareUpdateResult(winrt.system.Object):

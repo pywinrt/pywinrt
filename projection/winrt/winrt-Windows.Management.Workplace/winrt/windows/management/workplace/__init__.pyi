@@ -12,7 +12,6 @@ __all__ = [
     "MdmPolicy",
     "WorkplaceSettings",
 ]
-Self = typing.TypeVar('Self')
 
 class MessagingSyncPolicy(enum.IntEnum):
     DISALLOWED = 0
@@ -34,7 +33,7 @@ class MdmPolicy_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class MdmPolicy(winrt.system.Object, metaclass=MdmPolicy_Static):
-    pass
+    ...
 
 @typing.final
 class WorkplaceSettings_Static(winrt._winrt.IInspectable_Static):
@@ -44,5 +43,5 @@ class WorkplaceSettings_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WorkplaceSettings(winrt.system.Object, metaclass=WorkplaceSettings_Static):
-    pass
+    ...
 

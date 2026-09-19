@@ -11,7 +11,6 @@ __all__ = [
     "BadgeNotificationGlyph",
     "BadgeNotificationManager",
 ]
-Self = typing.TypeVar('Self')
 
 class BadgeNotificationGlyph(enum.IntEnum):
     NONE = 0

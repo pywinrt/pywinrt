@@ -23,7 +23,6 @@ __all__ = [
     "SpatialSurfaceMeshOptions",
     "SpatialSurfaceObserver",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class SpatialSurfaceInfo(winrt.system.Object):
@@ -96,7 +95,7 @@ class SpatialSurfaceMeshOptions_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SpatialSurfaceMeshOptions(winrt.system.Object, metaclass=SpatialSurfaceMeshOptions_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Graphics.DirectX.DirectXPixelFormat Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions::get_VertexPositionFormat()
     @_property
     def vertex_position_format(self) -> windows_graphics_directx.DirectXPixelFormat: ...
@@ -131,7 +130,7 @@ class SpatialSurfaceObserver_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SpatialSurfaceObserver(winrt.system.Object, metaclass=SpatialSurfaceObserver_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IMapView`2<System.Guid,Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo> Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver::GetObservedSurfaces()
     def get_observed_surfaces(self) -> _cabc.Mapping[_uuid.UUID, SpatialSurfaceInfo]: ...
     # System.Void Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver::SetBoundingVolume(Windows.Perception.Spatial.SpatialBoundingVolume)

@@ -11,7 +11,6 @@ __all__ = [
     "IGraphicsEffect",
     "IGraphicsEffectSource",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class _IGraphicsEffect: ...
@@ -30,5 +29,5 @@ class IGraphicsEffect(IGraphicsEffectSource, winrt._winrt.IInspectable):
 class _IGraphicsEffectSource: ...
 
 class IGraphicsEffectSource(winrt._winrt.IInspectable):  # type: ignore[misc]
-    pass
+    ...
 

@@ -17,7 +17,6 @@ __all__ = [
     "AdcChannel",
     "AdcController",
 ]
-Self = typing.TypeVar('Self')
 
 class AdcChannelMode(enum.IntEnum):
     SINGLE_ENDED = 0
@@ -25,7 +24,7 @@ class AdcChannelMode(enum.IntEnum):
 
 @typing.final
 class AdcChannel(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Adc.AdcChannel::Close()
     def close(self) -> None: ...

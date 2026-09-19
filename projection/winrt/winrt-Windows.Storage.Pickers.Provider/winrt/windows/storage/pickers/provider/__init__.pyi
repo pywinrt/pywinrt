@@ -26,7 +26,6 @@ __all__ = [
     "TargetFileRequestDeferral",
     "TargetFileRequestedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class AddFileResult(enum.IntEnum):
     ADDED = 0

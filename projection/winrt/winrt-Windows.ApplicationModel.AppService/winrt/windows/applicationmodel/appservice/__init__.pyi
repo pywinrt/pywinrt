@@ -29,7 +29,6 @@ __all__ = [
     "AppServiceTriggerDetails",
     "StatelessAppServiceResponse",
 ]
-Self = typing.TypeVar('Self')
 
 class AppServiceClosedStatus(enum.IntEnum):
     COMPLETED = 0
@@ -88,7 +87,7 @@ class AppServiceCatalog_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AppServiceCatalog(winrt.system.Object, metaclass=AppServiceCatalog_Static):
-    pass
+    ...
 
 @typing.final
 class AppServiceClosedEventArgs(winrt.system.Object):
@@ -103,9 +102,9 @@ class AppServiceConnection_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AppServiceConnection(winrt.system.Object, windows_foundation.IClosable, metaclass=AppServiceConnection_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.ApplicationModel.AppService.AppServiceConnection::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> Windows.ApplicationModel.AppService.AppServiceConnection::OpenAsync()

@@ -29,7 +29,6 @@ __all__ = [
     "CoreInputViewTransferringXYFocusEventArgs",
     "UISettingsController",
 ]
-Self = typing.TypeVar('Self')
 
 class CoreInputViewKind(enum.IntEnum):
     DEFAULT = 0

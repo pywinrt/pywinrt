@@ -20,7 +20,6 @@ __all__ = [
     "GameChatOverlayMessageSource",
     "GameUIProviderActivatedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class GameChatMessageOrigin(enum.IntEnum):
     VOICE = 0
@@ -55,7 +54,7 @@ class GameBar_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GameBar(winrt.system.Object, metaclass=GameBar_Static):
-    pass
+    ...
 
 @typing.final
 class GameChatMessageReceivedEventArgs(winrt.system.Object):
@@ -93,7 +92,7 @@ class GameChatOverlay(winrt.system.Object, metaclass=GameChatOverlay_Static):
 
 @typing.final
 class GameChatOverlayMessageSource(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Gaming.UI.GameChatOverlayMessageSource::SetDelayBeforeClosingAfterMessageReceived(Windows.Foundation.TimeSpan)
     def set_delay_before_closing_after_message_received(self, value: datetime.timedelta, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.UI.GameChatOverlayMessageSource::add_MessageReceived(Windows.Foundation.TypedEventHandler`2<Windows.Gaming.UI.GameChatOverlayMessageSource,Windows.Gaming.UI.GameChatMessageReceivedEventArgs>)

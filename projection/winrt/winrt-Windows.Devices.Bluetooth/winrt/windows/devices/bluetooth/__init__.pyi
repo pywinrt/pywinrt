@@ -45,7 +45,6 @@ __all__ = [
     "BluetoothSignalStrengthFilter",
     "BluetoothUuidHelper",
 ]
-Self = typing.TypeVar('Self')
 
 class BluetoothAddressType(enum.IntEnum):
     PUBLIC = 0
@@ -273,7 +272,7 @@ class BluetoothDevice_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class BluetoothDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=BluetoothDevice_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Bluetooth.BluetoothDevice::Close()
     def close(self) -> None: ...
@@ -455,7 +454,7 @@ class BluetoothLEAppearanceCategories_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class BluetoothLEAppearanceCategories(winrt.system.Object, metaclass=BluetoothLEAppearanceCategories_Static):
-    pass
+    ...
 
 @typing.final
 class BluetoothLEAppearanceSubcategories_Static(winrt._winrt.IInspectable_Static):
@@ -546,7 +545,7 @@ class BluetoothLEAppearanceSubcategories_Static(winrt._winrt.IInspectable_Static
 
 @typing.final
 class BluetoothLEAppearanceSubcategories(winrt.system.Object, metaclass=BluetoothLEAppearanceSubcategories_Static):
-    pass
+    ...
 
 @typing.final
 class BluetoothLEConnectionParameters(winrt.system.Object):
@@ -618,7 +617,7 @@ class BluetoothLEDevice_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class BluetoothLEDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=BluetoothLEDevice_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Bluetooth.BluetoothLEDevice::Close()
     def close(self) -> None: ...
@@ -736,7 +735,7 @@ class BluetoothLEPreferredConnectionParameters(winrt.system.Object, metaclass=Bl
 
 @typing.final
 class BluetoothLEPreferredConnectionParametersRequest(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest::Close()
     def close(self) -> None: ...
@@ -746,7 +745,7 @@ class BluetoothLEPreferredConnectionParametersRequest(winrt.system.Object, windo
 
 @typing.final
 class BluetoothSignalStrengthFilter(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter::get_SamplingInterval()
     @_property
     def sampling_interval(self) -> datetime.timedelta | None: ...
@@ -781,5 +780,5 @@ class BluetoothUuidHelper_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class BluetoothUuidHelper(winrt.system.Object, metaclass=BluetoothUuidHelper_Static):
-    pass
+    ...
 

@@ -28,7 +28,6 @@ __all__ = [
     "Language",
     "NumeralSystemIdentifiers",
 ]
-Self = typing.TypeVar('Self')
 
 class DayOfWeek(enum.IntEnum):
     SUNDAY = 0
@@ -64,18 +63,18 @@ class ApplicationLanguages_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ApplicationLanguages(winrt.system.Object, metaclass=ApplicationLanguages_Static):
-    pass
+    ...
 
 @typing.final
 class Calendar(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], languages: _cabc.Iterable[str], calendar: str, clock: str, time_zone_id: str) -> Self: ...
+    def __new__(cls, languages: _cabc.Iterable[str], calendar: str, clock: str, time_zone_id: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], languages: _cabc.Iterable[str]) -> Self: ...
+    def __new__(cls, languages: _cabc.Iterable[str]) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], languages: _cabc.Iterable[str], calendar: str, clock: str) -> Self: ...
+    def __new__(cls, languages: _cabc.Iterable[str], calendar: str, clock: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Globalization.Calendar::AddDays(System.Int32)
     def add_days(self, days: winrt.system.Int32, /) -> None: ...
     # System.Void Windows.Globalization.Calendar::AddEras(System.Int32)
@@ -421,7 +420,7 @@ class CalendarIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CalendarIdentifiers(winrt.system.Object, metaclass=CalendarIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class ClockIdentifiers_Static(winrt._winrt.IInspectable_Static):
@@ -434,11 +433,11 @@ class ClockIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ClockIdentifiers(winrt.system.Object, metaclass=ClockIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class CurrencyAmount(winrt.system.Object):
-    def __new__(cls: type[Self], amount: str, currency: str) -> Self: ...
+    def __new__(cls, amount: str, currency: str) -> typing.Self: ...
     # System.String Windows.Globalization.CurrencyAmount::get_Amount()
     @_property
     def amount(self) -> str: ...
@@ -937,7 +936,7 @@ class CurrencyIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CurrencyIdentifiers(winrt.system.Object, metaclass=CurrencyIdentifiers_Static):
-    pass
+    ...
 
 @typing.final
 class GeographicRegion_Static(winrt._winrt.IInspectable_Static):
@@ -947,9 +946,9 @@ class GeographicRegion_Static(winrt._winrt.IInspectable_Static):
 @typing.final
 class GeographicRegion(winrt.system.Object, metaclass=GeographicRegion_Static):
     @typing.overload
-    def __new__(cls: type[Self], geographic_region_code: str) -> Self: ...
+    def __new__(cls, geographic_region_code: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Globalization.GeographicRegion::get_Code()
     @_property
     def code(self) -> str: ...
@@ -999,7 +998,7 @@ class JapanesePhoneticAnalyzer_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class JapanesePhoneticAnalyzer(winrt.system.Object, metaclass=JapanesePhoneticAnalyzer_Static):
-    pass
+    ...
 
 @typing.final
 class Language_Static(winrt._winrt.IInspectable_Static):
@@ -1015,7 +1014,7 @@ class Language_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Language(winrt.system.Object, metaclass=Language_Static):
-    def __new__(cls: type[Self], language_tag: str) -> Self: ...
+    def __new__(cls, language_tag: str) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Globalization.Language::GetExtensionSubtags(System.String)
     def get_extension_subtags(self, singleton: str, /) -> _cabc.Sequence[str]: ...
     # System.String Windows.Globalization.Language::get_DisplayName()
@@ -1186,5 +1185,5 @@ class NumeralSystemIdentifiers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class NumeralSystemIdentifiers(winrt.system.Object, metaclass=NumeralSystemIdentifiers_Static):
-    pass
+    ...
 

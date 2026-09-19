@@ -14,7 +14,6 @@ __all__ = [
     "SpatialGraphInteropFrameOfReferencePreview",
     "SpatialGraphInteropPreview",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class SpatialGraphInteropFrameOfReferencePreview(winrt.system.Object):
@@ -69,5 +68,5 @@ class SpatialGraphInteropPreview_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SpatialGraphInteropPreview(winrt.system.Object, metaclass=SpatialGraphInteropPreview_Static):
-    pass
+    ...
 

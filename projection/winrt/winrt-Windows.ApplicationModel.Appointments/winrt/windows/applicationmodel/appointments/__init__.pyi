@@ -55,7 +55,6 @@ __all__ = [
     "FindAppointmentsOptions",
     "IAppointmentParticipant",
 ]
-Self = typing.TypeVar('Self')
 
 class AppointmentBusyStatus(enum.IntEnum):
     BUSY = 0
@@ -163,7 +162,7 @@ class RecurrenceType(enum.IntEnum):
 
 @typing.final
 class Appointment(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Appointments.Appointment::get_Location()
     @_property
     def location(self) -> str: ...
@@ -522,7 +521,7 @@ class AppointmentException(winrt.system.Object):
 
 @typing.final
 class AppointmentInvitee(winrt.system.Object, IAppointmentParticipant):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.ApplicationModel.Appointments.AppointmentParticipantRole Windows.ApplicationModel.Appointments.AppointmentInvitee::get_Role()
     @_property
     def role(self) -> AppointmentParticipantRole: ...
@@ -615,7 +614,7 @@ class AppointmentManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AppointmentManager(winrt.system.Object, metaclass=AppointmentManager_Static):
-    pass
+    ...
 
 @typing.final
 class AppointmentManagerForUser(winrt.system.Object):
@@ -685,7 +684,7 @@ class AppointmentManagerForUser(winrt.system.Object):
 
 @typing.final
 class AppointmentOrganizer(winrt.system.Object, IAppointmentParticipant):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Appointments.AppointmentOrganizer::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
@@ -782,11 +781,11 @@ class AppointmentProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AppointmentProperties(winrt.system.Object, metaclass=AppointmentProperties_Static):
-    pass
+    ...
 
 @typing.final
 class AppointmentRecurrence(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.ApplicationModel.Appointments.AppointmentRecurrenceUnit Windows.ApplicationModel.Appointments.AppointmentRecurrence::get_Unit()
     @_property
     def unit(self) -> AppointmentRecurrenceUnit: ...
@@ -989,11 +988,11 @@ class AppointmentStoreChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppointmentStoreNotificationTriggerDetails(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class FindAppointmentsOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.UInt32 Windows.ApplicationModel.Appointments.FindAppointmentsOptions::get_MaxCount()
     @_property
     def max_count(self) -> winrt.system.UInt32: ...

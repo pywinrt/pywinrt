@@ -55,7 +55,6 @@ __all__ = [
     "PerceptionInfraredFrameSourceWatcher",
     "PerceptionVideoProfile",
 ]
-Self = typing.TypeVar('Self')
 
 class PerceptionFrameSourceAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0
@@ -88,7 +87,7 @@ class KnownCameraIntrinsicsProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KnownCameraIntrinsicsProperties(winrt.system.Object, metaclass=KnownCameraIntrinsicsProperties_Static):
-    pass
+    ...
 
 @typing.final
 class KnownPerceptionColorFrameSourceProperties_Static(winrt._winrt.IInspectable_Static):
@@ -104,7 +103,7 @@ class KnownPerceptionColorFrameSourceProperties_Static(winrt._winrt.IInspectable
 
 @typing.final
 class KnownPerceptionColorFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionColorFrameSourceProperties_Static):
-    pass
+    ...
 
 @typing.final
 class KnownPerceptionDepthFrameSourceProperties_Static(winrt._winrt.IInspectable_Static):
@@ -117,7 +116,7 @@ class KnownPerceptionDepthFrameSourceProperties_Static(winrt._winrt.IInspectable
 
 @typing.final
 class KnownPerceptionDepthFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionDepthFrameSourceProperties_Static):
-    pass
+    ...
 
 @typing.final
 class KnownPerceptionFrameSourceProperties_Static(winrt._winrt.IInspectable_Static):
@@ -142,7 +141,7 @@ class KnownPerceptionFrameSourceProperties_Static(winrt._winrt.IInspectable_Stat
 
 @typing.final
 class KnownPerceptionFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionFrameSourceProperties_Static):
-    pass
+    ...
 
 @typing.final
 class KnownPerceptionInfraredFrameSourceProperties_Static(winrt._winrt.IInspectable_Static):
@@ -170,7 +169,7 @@ class KnownPerceptionInfraredFrameSourceProperties_Static(winrt._winrt.IInspecta
 
 @typing.final
 class KnownPerceptionInfraredFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionInfraredFrameSourceProperties_Static):
-    pass
+    ...
 
 @typing.final
 class KnownPerceptionVideoFrameSourceProperties_Static(winrt._winrt.IInspectable_Static):
@@ -192,7 +191,7 @@ class KnownPerceptionVideoFrameSourceProperties_Static(winrt._winrt.IInspectable
 
 @typing.final
 class KnownPerceptionVideoFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionVideoFrameSourceProperties_Static):
-    pass
+    ...
 
 @typing.final
 class KnownPerceptionVideoProfileProperties_Static(winrt._winrt.IInspectable_Static):
@@ -214,11 +213,11 @@ class KnownPerceptionVideoProfileProperties_Static(winrt._winrt.IInspectable_Sta
 
 @typing.final
 class KnownPerceptionVideoProfileProperties(winrt.system.Object, metaclass=KnownPerceptionVideoProfileProperties_Static):
-    pass
+    ...
 
 @typing.final
 class PerceptionColorFrame(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionColorFrame::Close()
     def close(self) -> None: ...
@@ -237,7 +236,7 @@ class PerceptionColorFrameArrivedEventArgs(winrt.system.Object):
 
 @typing.final
 class PerceptionColorFrameReader(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionColorFrameReader::Close()
     def close(self) -> None: ...
@@ -418,7 +417,7 @@ class PerceptionColorFrameSourceWatcher(winrt.system.Object):
 
 @typing.final
 class PerceptionControlSession(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionControlSession::Close()
     def close(self) -> None: ...
@@ -464,7 +463,7 @@ class PerceptionDepthCorrelatedCoordinateMapper(winrt.system.Object):
 
 @typing.final
 class PerceptionDepthFrame(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionDepthFrame::Close()
     def close(self) -> None: ...
@@ -483,7 +482,7 @@ class PerceptionDepthFrameArrivedEventArgs(winrt.system.Object):
 
 @typing.final
 class PerceptionDepthFrameReader(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionDepthFrameReader::Close()
     def close(self) -> None: ...
@@ -682,7 +681,7 @@ class PerceptionFrameSourcePropertyChangeResult(winrt.system.Object):
 
 @typing.final
 class PerceptionInfraredFrame(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionInfraredFrame::Close()
     def close(self) -> None: ...
@@ -701,7 +700,7 @@ class PerceptionInfraredFrameArrivedEventArgs(winrt.system.Object):
 
 @typing.final
 class PerceptionInfraredFrameReader(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionInfraredFrameReader::Close()
     def close(self) -> None: ...

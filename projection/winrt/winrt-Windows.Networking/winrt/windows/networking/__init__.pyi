@@ -16,7 +16,6 @@ __all__ = [
     "EndpointPair",
     "HostName",
 ]
-Self = typing.TypeVar('Self')
 
 class DomainNameType(enum.IntEnum):
     SUFFIX = 0
@@ -34,7 +33,7 @@ class HostNameType(enum.IntEnum):
 
 @typing.final
 class EndpointPair(winrt.system.Object):
-    def __new__(cls: type[Self], local_host_name: HostName, local_service_name: str, remote_host_name: HostName, remote_service_name: str) -> Self: ...
+    def __new__(cls, local_host_name: HostName, local_service_name: str, remote_host_name: HostName, remote_service_name: str) -> typing.Self: ...
     # System.String Windows.Networking.EndpointPair::get_RemoteServiceName()
     @_property
     def remote_service_name(self) -> str: ...
@@ -67,8 +66,7 @@ class HostName_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class HostName(winrt.system.Object, windows_foundation.IStringable, metaclass=HostName_Static):
-    def __str__(self) -> str: ...
-    def __new__(cls: type[Self], host_name: str) -> Self: ...
+    def __new__(cls, host_name: str) -> typing.Self: ...
     # System.Boolean Windows.Networking.HostName::IsEqual(Windows.Networking.HostName)
     def is_equal(self, host_name: HostName, /) -> bool: ...
     # System.String Windows.Networking.HostName::ToString()

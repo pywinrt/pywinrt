@@ -16,7 +16,6 @@ __all__ = [
     "TwoPanelHingedDevicePosturePreviewReading",
     "TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class HingeState(enum.IntEnum):
     UNKNOWN = 0

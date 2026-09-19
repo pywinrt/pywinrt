@@ -29,7 +29,6 @@ __all__ = [
     "UserInformation",
     "UserProfilePersonalizationSettings",
 ]
-Self = typing.TypeVar('Self')
 
 class AccountPictureKind(enum.IntEnum):
     SMALL_IMAGE = 0
@@ -59,7 +58,7 @@ class AdvertisingManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class AdvertisingManager(winrt.system.Object, metaclass=AdvertisingManager_Static):
-    pass
+    ...
 
 @typing.final
 class AdvertisingManagerForUser(winrt.system.Object):
@@ -157,7 +156,7 @@ class GlobalizationPreferences_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GlobalizationPreferences(winrt.system.Object, metaclass=GlobalizationPreferences_Static):
-    pass
+    ...
 
 @typing.final
 class GlobalizationPreferencesForUser(winrt.system.Object):
@@ -201,7 +200,7 @@ class LockScreen_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class LockScreen(winrt.system.Object, metaclass=LockScreen_Static):
-    pass
+    ...
 
 @typing.final
 class UserInformation_Static(winrt._winrt.IInspectable_Static):
@@ -253,7 +252,7 @@ class UserInformation_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class UserInformation(winrt.system.Object, metaclass=UserInformation_Static):
-    pass
+    ...
 
 @typing.final
 class UserProfilePersonalizationSettings_Static(winrt._winrt.IInspectable_Static):

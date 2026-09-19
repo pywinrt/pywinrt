@@ -23,7 +23,6 @@ __all__ = [
     "MicrosoftAccountMultiFactorSessionInfo",
     "MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo",
 ]
-Self = typing.TypeVar('Self')
 
 class MicrosoftAccountMultiFactorAuthenticationType(enum.IntEnum):
     USER = 0

@@ -16,7 +16,6 @@ __all__ = [
     "CustomSensorReading",
     "CustomSensorReadingChangedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class CustomSensor_Static(winrt._winrt.IInspectable_Static):

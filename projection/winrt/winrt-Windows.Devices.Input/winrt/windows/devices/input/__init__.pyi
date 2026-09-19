@@ -31,7 +31,6 @@ __all__ = [
     "PointerDevice",
     "TouchCapabilities",
 ]
-Self = typing.TypeVar('Self')
 
 class PointerDeviceType(enum.IntEnum):
     TOUCH = 0
@@ -73,14 +72,14 @@ class PointerDeviceUsage:
 
 @typing.final
 class KeyboardCapabilities(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Int32 Windows.Devices.Input.KeyboardCapabilities::get_KeyboardPresent()
     @_property
     def keyboard_present(self) -> winrt.system.Int32: ...
 
 @typing.final
 class MouseCapabilities(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Int32 Windows.Devices.Input.MouseCapabilities::get_HorizontalWheelPresent()
     @_property
     def horizontal_wheel_present(self) -> winrt.system.Int32: ...
@@ -179,23 +178,23 @@ class PenDockListener(winrt.system.Object, metaclass=PenDockListener_Static):
 
 @typing.final
 class PenDockedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class PenTailButtonClickedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class PenTailButtonDoubleClickedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class PenTailButtonLongPressedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class PenUndockedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class PointerDevice_Static(winrt._winrt.IInspectable_Static):
@@ -230,7 +229,7 @@ class PointerDevice(winrt.system.Object, metaclass=PointerDevice_Static):
 
 @typing.final
 class TouchCapabilities(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.UInt32 Windows.Devices.Input.TouchCapabilities::get_Contacts()
     @_property
     def contacts(self) -> winrt.system.UInt32: ...

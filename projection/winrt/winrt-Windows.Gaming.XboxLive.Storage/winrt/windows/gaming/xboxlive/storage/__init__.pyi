@@ -28,7 +28,6 @@ __all__ = [
     "GameSaveProvider",
     "GameSaveProviderGetResult",
 ]
-Self = typing.TypeVar('Self')
 
 class GameSaveErrorStatus(enum.IntEnum):
     OK = 0

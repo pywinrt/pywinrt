@@ -21,7 +21,6 @@ __all__ = [
     "MediaTranscoder",
     "PrepareTranscodeResult",
 ]
-Self = typing.TypeVar('Self')
 
 class MediaVideoProcessingAlgorithm(enum.IntEnum):
     DEFAULT = 0
@@ -35,7 +34,7 @@ class TranscodeFailureReason(enum.IntEnum):
 
 @typing.final
 class MediaTranscoder(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     @typing.overload
     # System.Void Windows.Media.Transcoding.MediaTranscoder::AddAudioEffect(System.String)
     def add_audio_effect(self, activatable_class_id: str, /) -> None: ...

@@ -11,7 +11,6 @@ __all__ = [
     "ScreenReaderPositionChangedEventArgs",
     "ScreenReaderService",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class ScreenReaderPositionChangedEventArgs(winrt.system.Object):
@@ -24,7 +23,7 @@ class ScreenReaderPositionChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class ScreenReaderService(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Accessibility.ScreenReaderService::add_ScreenReaderPositionChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Accessibility.ScreenReaderService,Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs>)
     def add_screen_reader_position_changed(self, handler: windows_foundation.TypedEventHandler[ScreenReaderService, ScreenReaderPositionChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Accessibility.ScreenReaderService::remove_ScreenReaderPositionChanged(Windows.Foundation.EventRegistrationToken)

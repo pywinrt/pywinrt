@@ -15,7 +15,6 @@ __all__ = [
     "RemoveAppointmentOperation",
     "ReplaceAppointmentOperation",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class AddAppointmentOperation(winrt.system.Object):
@@ -54,7 +53,7 @@ class AppointmentsProviderLaunchActionVerbs_Static(winrt._winrt.IInspectable_Sta
 
 @typing.final
 class AppointmentsProviderLaunchActionVerbs(winrt.system.Object, metaclass=AppointmentsProviderLaunchActionVerbs_Static):
-    pass
+    ...
 
 @typing.final
 class RemoveAppointmentOperation(winrt.system.Object):

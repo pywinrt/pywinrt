@@ -17,7 +17,6 @@ __all__ = [
     "AppActivationArguments",
     "AppInstance",
 ]
-Self = typing.TypeVar('Self')
 
 class ExtendedActivationKind(enum.IntEnum):
     LAUNCH = 0
@@ -84,7 +83,7 @@ class ActivationRegistrationManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ActivationRegistrationManager(winrt.system.Object, metaclass=ActivationRegistrationManager_Static):
-    pass
+    ...
 
 @typing.final
 class AppActivationArguments(winrt.system.Object):

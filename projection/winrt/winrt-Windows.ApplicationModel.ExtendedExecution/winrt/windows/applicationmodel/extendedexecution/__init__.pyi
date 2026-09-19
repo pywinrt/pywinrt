@@ -16,7 +16,6 @@ __all__ = [
     "ExtendedExecutionRevokedEventArgs",
     "ExtendedExecutionSession",
 ]
-Self = typing.TypeVar('Self')
 
 class ExtendedExecutionReason(enum.IntEnum):
     UNSPECIFIED = 0
@@ -39,9 +38,9 @@ class ExtendedExecutionRevokedEventArgs(winrt.system.Object):
 
 @typing.final
 class ExtendedExecutionSession(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionSession::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionResult> Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionSession::RequestExtensionAsync()

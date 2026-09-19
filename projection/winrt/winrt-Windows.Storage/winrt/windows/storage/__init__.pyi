@@ -81,7 +81,6 @@ __all__ = [
     "ApplicationDataSetVersionHandler",
     "StreamedFileDataRequestedHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class ApplicationDataCreateDisposition(enum.IntEnum):
     ALWAYS = 0
@@ -228,7 +227,7 @@ class ApplicationData_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ApplicationData(winrt.system.Object, windows_foundation.IClosable, metaclass=ApplicationData_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.ApplicationData::ClearAsync()
@@ -290,7 +289,7 @@ class ApplicationDataCompositeValue(winrt.system.Object, windows_foundation_coll
     def __getitem__(self, key: str) -> winrt.system.Object: ...
     def __setitem__(self, key: str, value: winrt.system.Object) -> None: ...
     def __delitem__(self, key: str) -> None: ...
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Storage.ApplicationDataCompositeValue::Clear()
     def clear(self) -> None: ...
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>> Windows.Storage.ApplicationDataCompositeValue::First()
@@ -315,7 +314,7 @@ class ApplicationDataCompositeValue(winrt.system.Object, windows_foundation_coll
 
 @typing.final
 class ApplicationDataContainer(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Storage.ApplicationDataContainer::Close()
     def close(self) -> None: ...
@@ -375,7 +374,7 @@ class CachedFileManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CachedFileManager(winrt.system.Object, metaclass=CachedFileManager_Static):
-    pass
+    ...
 
 @typing.final
 class DownloadsFolder_Static(winrt._winrt.IInspectable_Static):
@@ -422,7 +421,7 @@ class DownloadsFolder_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DownloadsFolder(winrt.system.Object, metaclass=DownloadsFolder_Static):
-    pass
+    ...
 
 @typing.final
 class FileIO_Static(winrt._winrt.IInspectable_Static):
@@ -495,7 +494,7 @@ class FileIO_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class FileIO(winrt.system.Object, metaclass=FileIO_Static):
-    pass
+    ...
 
 @typing.final
 class KnownFolders_Static(winrt._winrt.IInspectable_Static):
@@ -549,7 +548,7 @@ class KnownFolders_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KnownFolders(winrt.system.Object, metaclass=KnownFolders_Static):
-    pass
+    ...
 
 @typing.final
 class PathIO_Static(winrt._winrt.IInspectable_Static):
@@ -622,7 +621,7 @@ class PathIO_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PathIO(winrt.system.Object, metaclass=PathIO_Static):
-    pass
+    ...
 
 @typing.final
 class SetVersionDeferral(winrt.system.Object):
@@ -1112,7 +1111,7 @@ class StorageLibraryChangeTracker(winrt.system.Object):
 
 @typing.final
 class StorageLibraryChangeTrackerOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Storage.StorageLibraryChangeTrackerOptions::get_TrackChangeDetails()
     @_property
     def track_change_details(self) -> bool: ...
@@ -1128,7 +1127,7 @@ class StorageLibraryLastChangeId_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class StorageLibraryLastChangeId(winrt.system.Object, metaclass=StorageLibraryLastChangeId_Static):
-    pass
+    ...
 
 @typing.final
 class StorageProvider(winrt.system.Object):
@@ -1143,7 +1142,7 @@ class StorageProvider(winrt.system.Object):
 
 @typing.final
 class StorageStreamTransaction(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Storage.StorageStreamTransaction::Close()
     def close(self) -> None: ...
@@ -1155,7 +1154,7 @@ class StorageStreamTransaction(winrt.system.Object, windows_foundation.IClosable
 
 @typing.final
 class StreamedFileDataRequest(winrt.system.Object, IStreamedFileDataRequest, windows_storage_streams.IOutputStream, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Storage.StreamedFileDataRequest::Close()
     def close(self) -> None: ...
@@ -1356,7 +1355,7 @@ class SystemProperties_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SystemProperties(winrt.system.Object, metaclass=SystemProperties_Static):
-    pass
+    ...
 
 @typing.final
 class SystemVideoProperties(winrt.system.Object):

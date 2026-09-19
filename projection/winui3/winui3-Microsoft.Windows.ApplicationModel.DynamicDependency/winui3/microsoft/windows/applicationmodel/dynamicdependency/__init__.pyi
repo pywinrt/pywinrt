@@ -19,7 +19,6 @@ __all__ = [
     "PackageDependencyContext",
     "PackageDependencyRank",
 ]
-Self = typing.TypeVar('Self')
 
 class PackageDependencyLifetimeArtifactKind(enum.IntEnum):
     PROCESS = 0
@@ -44,7 +43,7 @@ class PackageDependencyContextId:
 
 @typing.final
 class AddPackageDependencyOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Int32 Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions::get_Rank()
     @_property
     def rank(self) -> winrt.system.Int32: ...
@@ -60,7 +59,7 @@ class AddPackageDependencyOptions(winrt.system.Object):
 
 @typing.final
 class CreatePackageDependencyOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions::get_VerifyDependencyResolution()
     @_property
     def verify_dependency_resolution(self) -> bool: ...
@@ -131,7 +130,7 @@ class PackageDependency(winrt.system.Object, metaclass=PackageDependency_Static)
 
 @typing.final
 class PackageDependencyContext(winrt.system.Object):
-    def __new__(cls: type[Self], context_id: PackageDependencyContextId | tuple[winrt.system.UInt64]) -> Self: ...
+    def __new__(cls, context_id: PackageDependencyContextId | tuple[winrt.system.UInt64]) -> typing.Self: ...
     # System.Void Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext::Remove()
     def remove(self) -> None: ...
     # Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContextId Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext::get_ContextId()
@@ -152,5 +151,5 @@ class PackageDependencyRank_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PackageDependencyRank(winrt.system.Object, metaclass=PackageDependencyRank_Static):
-    pass
+    ...
 

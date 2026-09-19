@@ -16,7 +16,6 @@ __all__ = [
     "AppCapability",
     "AppCapabilityAccessChangedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class AppCapabilityAccessStatus(enum.IntEnum):
     DENIED_BY_SYSTEM = 0
@@ -61,5 +60,5 @@ class AppCapability(winrt.system.Object, metaclass=AppCapability_Static):
 
 @typing.final
 class AppCapabilityAccessChangedEventArgs(winrt.system.Object):
-    pass
+    ...
 

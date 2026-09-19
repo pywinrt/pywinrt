@@ -67,7 +67,6 @@ __all__ = [
     "DisplayView",
     "DisplayWireFormat",
 ]
-Self = typing.TypeVar('Self')
 
 class DisplayBitsPerChannel(enum.IntFlag):
     NONE = 0x0
@@ -197,7 +196,7 @@ class DisplayPresentationRate:
     def vertical_sync_rate(self) -> windows_foundation_numerics.Rational: ...
     @_property
     def vertical_syncs_per_presentation(self) -> winrt.system.Int32: ...
-    def __new__(cls, vertical_sync_rate: windows_foundation_numerics.Rational = windows_foundation_numerics.Rational(), vertical_syncs_per_presentation: winrt.system.Int32 = 0) -> DisplayPresentationRate: ...
+    def __new__(cls, vertical_sync_rate: windows_foundation_numerics.Rational = ..., vertical_syncs_per_presentation: winrt.system.Int32 = 0) -> DisplayPresentationRate: ...
     def __replace__(self, /, **changes: typing.Any) -> DisplayPresentationRate: ...
     def unpack(self) -> tuple[tuple[winrt.system.UInt32, winrt.system.UInt32], winrt.system.Int32]: ...
 
@@ -263,7 +262,7 @@ class DisplayDevice(winrt.system.Object):
 
 @typing.final
 class DisplayFence(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class DisplayManager_Static(winrt._winrt.IInspectable_Static):
@@ -272,7 +271,7 @@ class DisplayManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DisplayManager(winrt.system.Object, windows_foundation.IClosable, metaclass=DisplayManager_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Display.Core.DisplayManager::Close()
     def close(self) -> None: ...
@@ -415,7 +414,7 @@ class DisplayMuxDevice_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DisplayMuxDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=DisplayMuxDevice_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Display.Core.DisplayMuxDevice::Close()
     def close(self) -> None: ...
@@ -531,7 +530,7 @@ class DisplayPrimaryDescription_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DisplayPrimaryDescription(winrt.system.Object, metaclass=DisplayPrimaryDescription_Static):
-    def __new__(cls: type[Self], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: windows_graphics_directx.DirectXPixelFormat, color_space: windows_graphics_directx.DirectXColorSpace, is_stereo: bool, multisample_description: windows_graphics_directx_direct3d11.Direct3DMultisampleDescription | tuple[winrt.system.Int32, winrt.system.Int32]) -> Self: ...
+    def __new__(cls, width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: windows_graphics_directx.DirectXPixelFormat, color_space: windows_graphics_directx.DirectXColorSpace, is_stereo: bool, multisample_description: windows_graphics_directx_direct3d11.Direct3DMultisampleDescription | tuple[winrt.system.Int32, winrt.system.Int32]) -> typing.Self: ...
     # Windows.Graphics.DirectX.DirectXColorSpace Windows.Devices.Display.Core.DisplayPrimaryDescription::get_ColorSpace()
     @_property
     def color_space(self) -> windows_graphics_directx.DirectXColorSpace: ...
@@ -556,7 +555,7 @@ class DisplayPrimaryDescription(winrt.system.Object, metaclass=DisplayPrimaryDes
 
 @typing.final
 class DisplayScanout(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class DisplaySource(winrt.system.Object):
@@ -629,7 +628,7 @@ class DisplayStateOperationResult(winrt.system.Object):
 
 @typing.final
 class DisplaySurface(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class DisplayTarget(winrt.system.Object):
@@ -728,7 +727,7 @@ class DisplayWireFormat_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DisplayWireFormat(winrt.system.Object, metaclass=DisplayWireFormat_Static):
-    def __new__(cls: type[Self], pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata) -> Self: ...
+    def __new__(cls, pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata) -> typing.Self: ...
     # System.Int32 Windows.Devices.Display.Core.DisplayWireFormat::get_BitsPerChannel()
     @_property
     def bits_per_channel(self) -> winrt.system.Int32: ...

@@ -10,7 +10,6 @@ __all__ = [
     "AppContainerNameAndAccess",
     "SecurityDescriptorHelpers",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class AppContainerNameAndAccess:
@@ -31,5 +30,5 @@ class SecurityDescriptorHelpers_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SecurityDescriptorHelpers(winrt.system.Object, metaclass=SecurityDescriptorHelpers_Static):
-    pass
+    ...
 

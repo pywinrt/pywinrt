@@ -11,7 +11,6 @@ import winrt.windows.foundation as windows_foundation
 __all__ = [
     "CoreUserActivityManager",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class CoreUserActivityManager_Static(winrt._winrt.IInspectable_Static):
@@ -22,5 +21,5 @@ class CoreUserActivityManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CoreUserActivityManager(winrt.system.Object, metaclass=CoreUserActivityManager_Static):
-    pass
+    ...
 

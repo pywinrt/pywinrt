@@ -16,7 +16,6 @@ __all__ = [
     "SocialFeedUpdater",
     "SocialInfoProviderManager",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class SocialDashboardItemUpdater(winrt.system.Object):
@@ -86,5 +85,5 @@ class SocialInfoProviderManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SocialInfoProviderManager(winrt.system.Object, metaclass=SocialInfoProviderManager_Static):
-    pass
+    ...
 

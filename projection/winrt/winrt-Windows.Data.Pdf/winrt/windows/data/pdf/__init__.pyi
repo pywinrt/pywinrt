@@ -21,7 +21,6 @@ __all__ = [
     "PdfPageDimensions",
     "PdfPageRenderOptions",
 ]
-Self = typing.TypeVar('Self')
 
 class PdfPageRotation(enum.IntEnum):
     NORMAL = 0
@@ -65,7 +64,7 @@ class PdfDocument(winrt.system.Object, metaclass=PdfDocument_Static):
 
 @typing.final
 class PdfPage(winrt.system.Object, windows_foundation.IClosable):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Data.Pdf.PdfPage::Close()
     def close(self) -> None: ...
@@ -117,7 +116,7 @@ class PdfPageDimensions(winrt.system.Object):
 
 @typing.final
 class PdfPageRenderOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Rect Windows.Data.Pdf.PdfPageRenderOptions::get_SourceRect()
     @_property
     def source_rect(self) -> windows_foundation.Rect: ...

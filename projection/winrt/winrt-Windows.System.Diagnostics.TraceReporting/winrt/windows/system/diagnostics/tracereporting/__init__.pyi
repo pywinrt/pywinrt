@@ -21,7 +21,6 @@ __all__ = [
     "PlatformDiagnosticTraceInfo",
     "PlatformDiagnosticTraceRuntimeInfo",
 ]
-Self = typing.TypeVar('Self')
 
 class PlatformDiagnosticActionState(enum.IntEnum):
     SUCCESS = 0
@@ -72,7 +71,7 @@ class PlatformDiagnosticActions_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PlatformDiagnosticActions(winrt.system.Object, metaclass=PlatformDiagnosticActions_Static):
-    pass
+    ...
 
 @typing.final
 class PlatformDiagnosticTraceInfo(winrt.system.Object):

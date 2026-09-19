@@ -119,7 +119,6 @@ __all__ = [
     "ResumingEventHandler",
     "SuspendingEventHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class PrintContent(enum.IntEnum):
     ALL_PAGES = 0
@@ -150,7 +149,7 @@ class EnteredBackgroundEventArgs(winrt.system.Object, windows_applicationmodel.I
 
 @typing.final
 class HtmlPrintDocumentSource(winrt.system.Object, windows_foundation.IClosable, windows_graphics_printing.IPrintDocumentSource):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.UI.WebUI.HtmlPrintDocumentSource::Close()
     def close(self) -> None: ...
@@ -289,7 +288,7 @@ class WebUIApplication_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WebUIApplication(winrt.system.Object, metaclass=WebUIApplication_Static):
-    pass
+    ...
 
 @typing.final
 class WebUIAppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IAppointmentsProviderAddAppointmentActivatedEventArgs, windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
@@ -428,7 +427,7 @@ class WebUIBackgroundTaskInstance_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WebUIBackgroundTaskInstance(winrt.system.Object, metaclass=WebUIBackgroundTaskInstance_Static):
-    pass
+    ...
 
 @typing.final
 class WebUIBackgroundTaskInstanceRuntimeClass(winrt.system.Object, windows_applicationmodel_background.IBackgroundTaskInstance, IWebUIBackgroundTaskInstance):

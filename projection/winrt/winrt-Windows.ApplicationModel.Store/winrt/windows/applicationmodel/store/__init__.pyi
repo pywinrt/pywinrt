@@ -29,7 +29,6 @@ __all__ = [
     "UnfulfilledConsumable",
     "LicenseChangedEventHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class FulfillmentResult(enum.IntEnum):
     SUCCEEDED = 0
@@ -105,7 +104,7 @@ class CurrentApp_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CurrentApp(winrt.system.Object, metaclass=CurrentApp_Static):
-    pass
+    ...
 
 @typing.final
 class CurrentAppSimulator_Static(winrt._winrt.IInspectable_Static):
@@ -159,7 +158,7 @@ class CurrentAppSimulator_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CurrentAppSimulator(winrt.system.Object, metaclass=CurrentAppSimulator_Static):
-    pass
+    ...
 
 @typing.final
 class LicenseInformation(winrt.system.Object):
@@ -270,9 +269,9 @@ class ProductListing(winrt.system.Object):
 @typing.final
 class ProductPurchaseDisplayProperties(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], name: str) -> Self: ...
+    def __new__(cls, name: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties::get_Name()
     @_property
     def name(self) -> str: ...

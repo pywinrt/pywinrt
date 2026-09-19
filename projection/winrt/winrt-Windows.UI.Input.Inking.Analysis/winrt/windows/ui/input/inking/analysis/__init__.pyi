@@ -31,7 +31,6 @@ __all__ = [
     "IInkAnalysisNode",
     "IInkAnalyzerFactory",
 ]
-Self = typing.TypeVar('Self')
 
 class InkAnalysisDrawingKind(enum.IntEnum):
     DRAWING = 0
@@ -323,7 +322,7 @@ class InkAnalysisWritingRegion(winrt.system.Object, IInkAnalysisNode):
 
 @typing.final
 class InkAnalyzer(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.UI.Input.Inking.Analysis.InkAnalyzer::AddDataForStroke(Windows.UI.Input.Inking.InkStroke)
     def add_data_for_stroke(self, stroke: windows_ui_input_inking.InkStroke, /) -> None: ...
     # System.Void Windows.UI.Input.Inking.Analysis.InkAnalyzer::AddDataForStrokes(Windows.Foundation.Collections.IIterable`1<Windows.UI.Input.Inking.InkStroke>)

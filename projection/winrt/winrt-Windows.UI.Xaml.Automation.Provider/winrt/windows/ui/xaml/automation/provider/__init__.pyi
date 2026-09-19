@@ -51,11 +51,10 @@ __all__ = [
     "IVirtualizedItemProvider",
     "IWindowProvider",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class IRawElementProviderSimple(windows_ui_xaml.DependencyObject):
-    pass
+    ...
 
 @typing.final
 class _IAnnotationProvider: ...

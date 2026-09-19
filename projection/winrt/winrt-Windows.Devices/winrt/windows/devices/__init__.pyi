@@ -17,11 +17,10 @@ __all__ = [
     "LowLevelDevicesController",
     "ILowLevelDevicesAggregateProvider",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class LowLevelDevicesAggregateProvider(winrt.system.Object, ILowLevelDevicesAggregateProvider):
-    def __new__(cls: type[Self], adc: windows_devices_adc_provider.IAdcControllerProvider, pwm: windows_devices_pwm_provider.IPwmControllerProvider, gpio: windows_devices_gpio_provider.IGpioControllerProvider, i2c: windows_devices_i2c_provider.II2cControllerProvider, spi: windows_devices_spi_provider.ISpiControllerProvider) -> Self: ...
+    def __new__(cls, adc: windows_devices_adc_provider.IAdcControllerProvider, pwm: windows_devices_pwm_provider.IPwmControllerProvider, gpio: windows_devices_gpio_provider.IGpioControllerProvider, i2c: windows_devices_i2c_provider.II2cControllerProvider, spi: windows_devices_spi_provider.ISpiControllerProvider) -> typing.Self: ...
     # Windows.Devices.Adc.Provider.IAdcControllerProvider Windows.Devices.LowLevelDevicesAggregateProvider::get_AdcControllerProvider()
     @_property
     def adc_controller_provider(self) -> windows_devices_adc_provider.IAdcControllerProvider: ...
@@ -49,7 +48,7 @@ class LowLevelDevicesController_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class LowLevelDevicesController(winrt.system.Object, metaclass=LowLevelDevicesController_Static):
-    pass
+    ...
 
 @typing.final
 class _ILowLevelDevicesAggregateProvider: ...

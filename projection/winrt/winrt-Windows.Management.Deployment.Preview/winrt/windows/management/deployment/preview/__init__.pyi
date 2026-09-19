@@ -10,7 +10,6 @@ __all__ = [
     "ClassicAppManager",
     "InstalledClassicAppInfo",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class ClassicAppManager_Static(winrt._winrt.IInspectable_Static):
@@ -19,7 +18,7 @@ class ClassicAppManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ClassicAppManager(winrt.system.Object, metaclass=ClassicAppManager_Static):
-    pass
+    ...
 
 @typing.final
 class InstalledClassicAppInfo(winrt.system.Object):

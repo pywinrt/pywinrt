@@ -15,7 +15,6 @@ __all__ = [
     "FeedAnnouncement",
     "FeedAnnouncementInvokedArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class AnnouncementActionKind(enum.IntEnum):
     SHOWN = 0
@@ -32,7 +31,7 @@ class AnnouncementTextColor(enum.IntEnum):
 
 @typing.final
 class FeedAnnouncement(winrt.system.Object):
-    def __new__(cls: type[Self], id: str, primary_text: str, secondary_text: str, light_mode_icon: windows_foundation.Uri, dark_mode_icon: windows_foundation.Uri) -> Self: ...
+    def __new__(cls, id: str, primary_text: str, secondary_text: str, light_mode_icon: windows_foundation.Uri, dark_mode_icon: windows_foundation.Uri) -> typing.Self: ...
     # System.Boolean Microsoft.Windows.Widgets.Notifications.FeedAnnouncement::get_ShowBadgeIfUserNotEngaged()
     @_property
     def show_badge_if_user_not_engaged(self) -> bool: ...

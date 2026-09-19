@@ -14,7 +14,6 @@ __all__ = [
     "WebError",
     "IUriToStreamResolver",
 ]
-Self = typing.TypeVar('Self')
 
 class WebErrorStatus(enum.IntEnum):
     UNKNOWN = 0
@@ -80,7 +79,7 @@ class WebError_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WebError(winrt.system.Object, metaclass=WebError_Static):
-    pass
+    ...
 
 @typing.final
 class _IUriToStreamResolver: ...

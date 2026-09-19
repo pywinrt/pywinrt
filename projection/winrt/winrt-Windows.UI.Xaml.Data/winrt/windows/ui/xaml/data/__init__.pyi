@@ -41,7 +41,6 @@ __all__ = [
     "CurrentChangingEventHandler",
     "PropertyChangedEventHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class BindingMode(enum.IntEnum):
     ONE_WAY = 1
@@ -67,10 +66,10 @@ class LoadMoreItemsResult:
     def __replace__(self, /, **changes: typing.Any) -> LoadMoreItemsResult: ...
 
 class Binding_Static(BindingBase_Static):
-    pass
+    ...
 
 class Binding(BindingBase, metaclass=Binding_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Object Windows.UI.Xaml.Data.Binding::get_Source()
     @_property
     def source(self) -> winrt.system.Object: ...
@@ -150,13 +149,13 @@ class Binding(BindingBase, metaclass=Binding_Static):
     def fallback_value(self, value: winrt.system.Object) -> None: ...
 
 class BindingBase_Static(windows_ui_xaml.DependencyObject_Static):
-    pass
+    ...
 
 class BindingBase(windows_ui_xaml.DependencyObject, metaclass=BindingBase_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
 
 class BindingExpression_Static(BindingExpressionBase_Static):
-    pass
+    ...
 
 class BindingExpression(BindingExpressionBase, metaclass=BindingExpression_Static):
     @typing.final
@@ -172,10 +171,10 @@ class BindingExpression(BindingExpressionBase, metaclass=BindingExpression_Stati
     def parent_binding(self) -> Binding: ...
 
 class BindingExpressionBase_Static(winrt._winrt.IInspectable_Static):
-    pass
+    ...
 
 class BindingExpressionBase(winrt.system.Object, metaclass=BindingExpressionBase_Static):
-    pass
+    ...
 
 @typing.final
 class BindingOperations_Static(winrt._winrt.IInspectable_Static):
@@ -184,7 +183,7 @@ class BindingOperations_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class BindingOperations(winrt.system.Object, metaclass=BindingOperations_Static):
-    pass
+    ...
 
 @typing.final
 class CollectionViewSource_Static(windows_ui_xaml.DependencyObject_Static):
@@ -203,7 +202,7 @@ class CollectionViewSource_Static(windows_ui_xaml.DependencyObject_Static):
 
 @typing.final
 class CollectionViewSource(windows_ui_xaml.DependencyObject, metaclass=CollectionViewSource_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Object Windows.UI.Xaml.Data.CollectionViewSource::get_Source()
     @_property
     def source(self) -> winrt.system.Object: ...
@@ -227,13 +226,13 @@ class CollectionViewSource(windows_ui_xaml.DependencyObject, metaclass=Collectio
     def view(self) -> ICollectionView: ...
 
 class CurrentChangingEventArgs_Static(winrt._winrt.IInspectable_Static):
-    pass
+    ...
 
 class CurrentChangingEventArgs(winrt.system.Object, metaclass=CurrentChangingEventArgs_Static):
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], is_cancelable: bool) -> Self: ...
+    def __new__(cls, is_cancelable: bool) -> typing.Self: ...
     # System.Boolean Windows.UI.Xaml.Data.CurrentChangingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -247,10 +246,10 @@ class CurrentChangingEventArgs(winrt.system.Object, metaclass=CurrentChangingEve
     def is_cancelable(self) -> bool: ...
 
 class ItemIndexRange_Static(winrt._winrt.IInspectable_Static):
-    pass
+    ...
 
 class ItemIndexRange(winrt.system.Object, metaclass=ItemIndexRange_Static):
-    def __new__(cls: type[Self], first_index: winrt.system.Int32, length: winrt.system.UInt32) -> Self: ...
+    def __new__(cls, first_index: winrt.system.Int32, length: winrt.system.UInt32) -> typing.Self: ...
     # System.Int32 Windows.UI.Xaml.Data.ItemIndexRange::get_FirstIndex()
     @_property
     @typing.final
@@ -265,20 +264,20 @@ class ItemIndexRange(winrt.system.Object, metaclass=ItemIndexRange_Static):
     def length(self) -> winrt.system.UInt32: ...
 
 class PropertyChangedEventArgs_Static(winrt._winrt.IInspectable_Static):
-    pass
+    ...
 
 class PropertyChangedEventArgs(winrt.system.Object, metaclass=PropertyChangedEventArgs_Static):
-    def __new__(cls: type[Self], name: str) -> Self: ...
+    def __new__(cls, name: str) -> typing.Self: ...
     # System.String Windows.UI.Xaml.Data.PropertyChangedEventArgs::get_PropertyName()
     @_property
     @typing.final
     def property_name(self) -> str: ...
 
 class RelativeSource_Static(windows_ui_xaml.DependencyObject_Static):
-    pass
+    ...
 
 class RelativeSource(windows_ui_xaml.DependencyObject, metaclass=RelativeSource_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.UI.Xaml.Data.RelativeSourceMode Windows.UI.Xaml.Data.RelativeSource::get_Mode()
     @_property
     def mode(self) -> RelativeSourceMode: ...

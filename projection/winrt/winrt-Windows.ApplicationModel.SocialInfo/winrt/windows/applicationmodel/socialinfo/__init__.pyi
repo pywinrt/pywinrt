@@ -25,7 +25,6 @@ __all__ = [
     "SocialItemThumbnail",
     "SocialUserInfo",
 ]
-Self = typing.TypeVar('Self')
 
 class SocialFeedItemStyle(enum.IntEnum):
     DEFAULT = 0
@@ -47,7 +46,7 @@ class SocialItemBadgeStyle(enum.IntEnum):
 
 @typing.final
 class SocialFeedChildItem(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.DateTime Windows.ApplicationModel.SocialInfo.SocialFeedChildItem::get_Timestamp()
     @_property
     def timestamp(self) -> datetime.datetime: ...
@@ -102,7 +101,7 @@ class SocialFeedContent(winrt.system.Object):
 
 @typing.final
 class SocialFeedItem(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.DateTime Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_Timestamp()
     @_property
     def timestamp(self) -> datetime.datetime: ...
@@ -166,7 +165,7 @@ class SocialFeedItem(winrt.system.Object):
 
 @typing.final
 class SocialFeedSharedItem(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.DateTime Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem::get_Timestamp()
     @_property
     def timestamp(self) -> datetime.datetime: ...
@@ -197,7 +196,7 @@ class SocialFeedSharedItem(winrt.system.Object):
 
 @typing.final
 class SocialItemThumbnail(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.SocialInfo.SocialItemThumbnail::SetImageAsync(Windows.Storage.Streams.IInputStream)
     # @deprecated("ISocialItemThumbnail is deprecated and might not work on all platforms. For more info, see MSDN.")
     def set_image_async(self, image: windows_storage_streams.IInputStream, /) -> windows_foundation.IAsyncAction: ...

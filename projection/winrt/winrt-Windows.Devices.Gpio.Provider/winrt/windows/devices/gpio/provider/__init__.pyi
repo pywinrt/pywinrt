@@ -22,7 +22,6 @@ __all__ = [
     "IGpioPinProvider",
     "IGpioProvider",
 ]
-Self = typing.TypeVar('Self')
 
 class ProviderGpioPinDriveMode(enum.IntEnum):
     INPUT = 0
@@ -48,7 +47,7 @@ class ProviderGpioSharingMode(enum.IntEnum):
 
 @typing.final
 class GpioPinProviderValueChangedEventArgs(winrt.system.Object):
-    def __new__(cls: type[Self], edge: ProviderGpioPinEdge) -> Self: ...
+    def __new__(cls, edge: ProviderGpioPinEdge) -> typing.Self: ...
     # Windows.Devices.Gpio.Provider.ProviderGpioPinEdge Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs::get_Edge()
     @_property
     def edge(self) -> ProviderGpioPinEdge: ...

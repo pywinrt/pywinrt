@@ -12,7 +12,6 @@ import winrt.windows.ui.composition as windows_ui_composition
 __all__ = [
     "PalmRejectionDelayZonePreview",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class PalmRejectionDelayZonePreview_Static(winrt._winrt.IInspectable_Static):
@@ -29,7 +28,7 @@ class PalmRejectionDelayZonePreview_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PalmRejectionDelayZonePreview(winrt.system.Object, windows_foundation.IClosable, metaclass=PalmRejectionDelayZonePreview_Static):
-    def __enter__(self: Self) -> Self: ...
+    def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview::Close()
     def close(self) -> None: ...

@@ -40,7 +40,6 @@ __all__ = [
     "WindowingEnvironmentChangedEventArgs",
     "WindowingEnvironmentRemovedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class AppWindowClosedReason(enum.IntEnum):
     OTHER = 0
@@ -214,7 +213,7 @@ class AppWindowPlacement(winrt.system.Object):
     def size(self) -> windows_foundation.Size: ...
 
 class AppWindowPresentationConfiguration_Static(winrt._winrt.IInspectable_Static):
-    pass
+    ...
 
 class AppWindowPresentationConfiguration(winrt.system.Object, metaclass=AppWindowPresentationConfiguration_Static):
     # Windows.UI.WindowManagement.AppWindowPresentationKind Windows.UI.WindowManagement.AppWindowPresentationConfiguration::get_Kind()
@@ -331,11 +330,11 @@ class AppWindowTitleBarOcclusion(winrt.system.Object):
 
 @typing.final
 class CompactOverlayPresentationConfiguration(AppWindowPresentationConfiguration):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
 
 @typing.final
 class DefaultPresentationConfiguration(AppWindowPresentationConfiguration):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
 
 @typing.final
 class DisplayRegion(winrt.system.Object):
@@ -361,7 +360,7 @@ class DisplayRegion(winrt.system.Object):
 
 @typing.final
 class FullScreenPresentationConfiguration(AppWindowPresentationConfiguration):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.UI.WindowManagement.FullScreenPresentationConfiguration::get_IsExclusive()
     @_property
     def is_exclusive(self) -> bool: ...
@@ -376,7 +375,7 @@ class WindowServices_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WindowServices(winrt.system.Object, metaclass=WindowServices_Static):
-    pass
+    ...
 
 @typing.final
 class WindowingEnvironment_Static(winrt._winrt.IInspectable_Static):
@@ -414,7 +413,7 @@ class WindowingEnvironmentAddedEventArgs(winrt.system.Object):
 
 @typing.final
 class WindowingEnvironmentChangedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class WindowingEnvironmentRemovedEventArgs(winrt.system.Object):

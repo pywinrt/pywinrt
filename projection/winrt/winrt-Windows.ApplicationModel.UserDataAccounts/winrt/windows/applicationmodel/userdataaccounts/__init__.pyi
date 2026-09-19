@@ -27,7 +27,6 @@ __all__ = [
     "UserDataAccountStore",
     "UserDataAccountStoreChangedEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 class UserDataAccountContentKinds(enum.IntFlag):
     EMAIL = 0x1
@@ -133,7 +132,7 @@ class UserDataAccountManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class UserDataAccountManager(winrt.system.Object, metaclass=UserDataAccountManager_Static):
-    pass
+    ...
 
 @typing.final
 class UserDataAccountManagerForUser(winrt.system.Object):

@@ -16,7 +16,6 @@ __all__ = [
     "PaymentTransaction",
     "PaymentTransactionAcceptResult",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class PaymentAppCanMakePaymentTriggerDetails(winrt.system.Object):

@@ -24,7 +24,6 @@ __all__ = [
     "PushNotificationReceivedEventArgs",
     "RawNotification",
 ]
-Self = typing.TypeVar('Self')
 
 class PushNotificationType(enum.IntEnum):
     TOAST = 0
@@ -73,7 +72,7 @@ class PushNotificationChannelManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class PushNotificationChannelManager(winrt.system.Object, metaclass=PushNotificationChannelManager_Static):
-    pass
+    ...
 
 @typing.final
 class PushNotificationChannelManagerForUser(winrt.system.Object):
@@ -105,7 +104,7 @@ class PushNotificationChannelManagerForUser(winrt.system.Object):
 
 @typing.final
 class PushNotificationChannelsRevokedEventArgs(winrt.system.Object):
-    pass
+    ...
 
 @typing.final
 class PushNotificationReceivedEventArgs(winrt.system.Object):

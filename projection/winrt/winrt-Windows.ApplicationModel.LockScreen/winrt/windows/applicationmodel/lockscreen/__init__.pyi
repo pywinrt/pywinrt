@@ -18,7 +18,6 @@ __all__ = [
     "LockScreenUnlockingDeferral",
     "LockScreenUnlockingEventArgs",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class LockApplicationHost_Static(winrt._winrt.IInspectable_Static):

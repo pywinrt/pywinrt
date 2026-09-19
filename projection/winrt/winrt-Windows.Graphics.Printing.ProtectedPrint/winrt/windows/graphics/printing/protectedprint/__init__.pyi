@@ -9,7 +9,6 @@ import winrt.system
 __all__ = [
     "WindowsProtectedPrintInfo",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class WindowsProtectedPrintInfo_Static(winrt._winrt.IInspectable_Static):
@@ -19,5 +18,5 @@ class WindowsProtectedPrintInfo_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WindowsProtectedPrintInfo(winrt.system.Object, metaclass=WindowsProtectedPrintInfo_Static):
-    pass
+    ...
 

@@ -16,7 +16,6 @@ __all__ = [
     "WalletItemSystemStore",
     "WalletManagerSystem",
 ]
-Self = typing.TypeVar('Self')
 
 class WalletItemAppAssociation(enum.IntEnum):
     NONE = 0
@@ -55,5 +54,5 @@ class WalletManagerSystem_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WalletManagerSystem(winrt.system.Object, metaclass=WalletManagerSystem_Static):
-    pass
+    ...
 

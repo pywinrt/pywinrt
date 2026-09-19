@@ -37,7 +37,6 @@ __all__ = [
     "IWebViewControl",
     "IWebViewControl2",
 ]
-Self = typing.TypeVar('Self')
 
 class WebViewControlPermissionState(enum.IntEnum):
     UNKNOWN = 0

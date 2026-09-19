@@ -16,7 +16,6 @@ __all__ = [
     "NotesWindowManagerPreview",
     "NotesWindowManagerPreviewShowNoteOptions",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class NotePlacementChangedPreviewEventArgs(winrt.system.Object):
@@ -94,7 +93,7 @@ class NotesWindowManagerPreview(winrt.system.Object, metaclass=NotesWindowManage
 
 @typing.final
 class NotesWindowManagerPreviewShowNoteOptions(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions::get_ShowWithFocus()
     @_property
     def show_with_focus(self) -> bool: ...

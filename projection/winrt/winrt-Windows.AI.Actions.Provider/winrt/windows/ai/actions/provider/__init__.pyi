@@ -12,7 +12,6 @@ __all__ = [
     "IActionFeedbackHandler",
     "IActionProvider",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class _IActionFeedbackHandler: ...

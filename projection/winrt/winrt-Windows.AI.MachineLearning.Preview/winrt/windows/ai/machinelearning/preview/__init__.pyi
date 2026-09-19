@@ -31,7 +31,6 @@ __all__ = [
     "TensorVariableDescriptorPreview",
     "ILearningModelVariableDescriptorPreview",
 ]
-Self = typing.TypeVar('Self')
 
 class FeatureElementKindPreview(enum.IntEnum):
     UNDEFINED = 0
@@ -129,7 +128,7 @@ class LearningModelBindingPreview(winrt.system.Object, winrt._winrt.Mapping[str,
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
     def __getitem__(self, key: str) -> winrt.system.Object: ...
-    def __new__(cls: type[Self], model: LearningModelPreview) -> Self: ...
+    def __new__(cls, model: LearningModelPreview) -> typing.Self: ...
     @typing.overload
     # System.Void Windows.AI.MachineLearning.Preview.LearningModelBindingPreview::Bind(System.String,System.Object)
     # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")

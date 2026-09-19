@@ -47,7 +47,6 @@ __all__ = [
     "UserCertificateEnrollmentManager",
     "UserCertificateStore",
 ]
-Self = typing.TypeVar('Self')
 
 class CertificateChainPolicy(enum.IntEnum):
     BASE = 0
@@ -106,7 +105,7 @@ class SignatureValidationResult(enum.IntEnum):
 
 @typing.final
 class Certificate(winrt.system.Object):
-    def __new__(cls: type[Self], cert_blob: winrt.system.Buffer) -> Self: ...
+    def __new__(cls, cert_blob: winrt.system.Buffer) -> typing.Self: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Cryptography.Certificates.CertificateChain> Windows.Security.Cryptography.Certificates.Certificate::BuildChainAsync(Windows.Foundation.Collections.IIterable`1<Windows.Security.Cryptography.Certificates.Certificate>)
     def build_chain_async(self, certificates: _cabc.Iterable[Certificate], /) -> windows_foundation.IAsyncOperation[CertificateChain]: ...
@@ -231,11 +230,11 @@ class CertificateEnrollmentManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CertificateEnrollmentManager(winrt.system.Object, metaclass=CertificateEnrollmentManager_Static):
-    pass
+    ...
 
 @typing.final
 class CertificateExtension(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Security.Cryptography.Certificates.CertificateExtension::EncodeValue(System.String)
     def encode_value(self, value: str, /) -> None: ...
     # System.Byte[] Windows.Security.Cryptography.Certificates.CertificateExtension::get_Value()
@@ -259,7 +258,7 @@ class CertificateExtension(winrt.system.Object):
 
 @typing.final
 class CertificateKeyUsages(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Security.Cryptography.Certificates.CertificateKeyUsages::get_NonRepudiation()
     @_property
     def non_repudiation(self) -> bool: ...
@@ -311,7 +310,7 @@ class CertificateKeyUsages(winrt.system.Object):
 
 @typing.final
 class CertificateQuery(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Byte[] Windows.Security.Cryptography.Certificates.CertificateQuery::get_Thumbprint()
     @_property
     def thumbprint(self) -> winrt.system.UInt8: ...
@@ -360,7 +359,7 @@ class CertificateQuery(winrt.system.Object):
 
 @typing.final
 class CertificateRequestProperties(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Security.Cryptography.Certificates.CertificateRequestProperties::get_Subject()
     @_property
     def subject(self) -> str: ...
@@ -508,11 +507,11 @@ class CertificateStores_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CertificateStores(winrt.system.Object, metaclass=CertificateStores_Static):
-    pass
+    ...
 
 @typing.final
 class ChainBuildingParameters(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.DateTime Windows.Security.Cryptography.Certificates.ChainBuildingParameters::get_ValidationTimestamp()
     @_property
     def validation_timestamp(self) -> datetime.datetime: ...
@@ -552,7 +551,7 @@ class ChainBuildingParameters(winrt.system.Object):
 
 @typing.final
 class ChainValidationParameters(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Networking.HostName Windows.Security.Cryptography.Certificates.ChainValidationParameters::get_ServerDnsName()
     @_property
     def server_dns_name(self) -> windows_networking.HostName: ...
@@ -573,7 +572,7 @@ class CmsAttachedSignature_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CmsAttachedSignature(winrt.system.Object, metaclass=CmsAttachedSignature_Static):
-    def __new__(cls: type[Self], input_blob: winrt.system.Buffer) -> Self: ...
+    def __new__(cls, input_blob: winrt.system.Buffer) -> typing.Self: ...
     # Windows.Security.Cryptography.Certificates.SignatureValidationResult Windows.Security.Cryptography.Certificates.CmsAttachedSignature::VerifySignature()
     def verify_signature(self) -> SignatureValidationResult: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Cryptography.Certificates.Certificate> Windows.Security.Cryptography.Certificates.CmsAttachedSignature::get_Certificates()
@@ -593,7 +592,7 @@ class CmsDetachedSignature_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class CmsDetachedSignature(winrt.system.Object, metaclass=CmsDetachedSignature_Static):
-    def __new__(cls: type[Self], input_blob: winrt.system.Buffer) -> Self: ...
+    def __new__(cls, input_blob: winrt.system.Buffer) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Cryptography.Certificates.SignatureValidationResult> Windows.Security.Cryptography.Certificates.CmsDetachedSignature::VerifySignatureAsync(Windows.Storage.Streams.IInputStream)
     def verify_signature_async(self, data: windows_storage_streams.IInputStream, /) -> windows_foundation.IAsyncOperation[SignatureValidationResult]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Cryptography.Certificates.Certificate> Windows.Security.Cryptography.Certificates.CmsDetachedSignature::get_Certificates()
@@ -605,7 +604,7 @@ class CmsDetachedSignature(winrt.system.Object, metaclass=CmsDetachedSignature_S
 
 @typing.final
 class CmsSignerInfo(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Security.Cryptography.Certificates.CmsSignerInfo::get_HashAlgorithmName()
     @_property
     def hash_algorithm_name(self) -> str: ...
@@ -669,7 +668,7 @@ class KeyAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KeyAlgorithmNames(winrt.system.Object, metaclass=KeyAlgorithmNames_Static):
-    pass
+    ...
 
 @typing.final
 class KeyAttestationHelper_Static(winrt._winrt.IInspectable_Static):
@@ -688,7 +687,7 @@ class KeyAttestationHelper_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KeyAttestationHelper(winrt.system.Object, metaclass=KeyAttestationHelper_Static):
-    pass
+    ...
 
 @typing.final
 class KeyStorageProviderNames_Static(winrt._winrt.IInspectable_Static):
@@ -707,11 +706,11 @@ class KeyStorageProviderNames_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class KeyStorageProviderNames(winrt.system.Object, metaclass=KeyStorageProviderNames_Static):
-    pass
+    ...
 
 @typing.final
 class PfxImportParameters(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.String Windows.Security.Cryptography.Certificates.PfxImportParameters::get_ReaderName()
     @_property
     def reader_name(self) -> str: ...
@@ -769,11 +768,11 @@ class StandardCertificateStoreNames_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class StandardCertificateStoreNames(winrt.system.Object, metaclass=StandardCertificateStoreNames_Static):
-    pass
+    ...
 
 @typing.final
 class SubjectAlternativeNameInfo(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo::get_DistinguishedName()
     @_property
     def distinguished_name(self) -> _cabc.Sequence[str]: ...

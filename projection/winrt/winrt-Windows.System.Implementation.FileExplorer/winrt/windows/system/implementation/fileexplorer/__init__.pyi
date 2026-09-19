@@ -15,11 +15,10 @@ __all__ = [
     "ISysStorageProviderHandlerFactory",
     "ISysStorageProviderHttpRequestProvider",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class SysStorageProviderEventReceivedEventArgs(winrt.system.Object):
-    def __new__(cls: type[Self], json: str) -> Self: ...
+    def __new__(cls, json: str) -> typing.Self: ...
     # System.String Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs::get_Json()
     @_property
     def json(self) -> str: ...

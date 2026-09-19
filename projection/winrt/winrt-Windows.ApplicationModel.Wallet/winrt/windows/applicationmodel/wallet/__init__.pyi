@@ -30,7 +30,6 @@ __all__ = [
     "WalletTransaction",
     "WalletVerb",
 ]
-Self = typing.TypeVar('Self')
 
 class WalletActionKind(enum.IntEnum):
     OPEN_ITEM = 0
@@ -87,9 +86,9 @@ class WalletSummaryViewPosition(enum.IntEnum):
 @typing.final
 class WalletBarcode(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], symbology: WalletBarcodeSymbology, value: str) -> Self: ...
+    def __new__(cls, symbology: WalletBarcodeSymbology, value: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self], stream_to_barcode_image: windows_storage_streams.IRandomAccessStreamReference) -> Self: ...
+    def __new__(cls, stream_to_barcode_image: windows_storage_streams.IRandomAccessStreamReference) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamReference> Windows.ApplicationModel.Wallet.WalletBarcode::GetImageAsync()
     # @deprecated("IWalletBarcode is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_image_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamReference]: ...
@@ -102,7 +101,7 @@ class WalletBarcode(winrt.system.Object):
 
 @typing.final
 class WalletItem(winrt.system.Object):
-    def __new__(cls: type[Self], kind: WalletItemKind, display_name: str) -> Self: ...
+    def __new__(cls, kind: WalletItemKind, display_name: str) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Wallet.WalletItem::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
@@ -262,7 +261,7 @@ class WalletItem(winrt.system.Object):
 
 @typing.final
 class WalletItemCustomProperty(winrt.system.Object):
-    def __new__(cls: type[Self], name: str, value: str) -> Self: ...
+    def __new__(cls, name: str, value: str) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Wallet.WalletItemCustomProperty::get_Value()
     @_property
     def value(self) -> str: ...
@@ -349,11 +348,11 @@ class WalletManager_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WalletManager(winrt.system.Object, metaclass=WalletManager_Static):
-    pass
+    ...
 
 @typing.final
 class WalletRelevantLocation(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Devices.Geolocation.BasicGeoposition Windows.ApplicationModel.Wallet.WalletRelevantLocation::get_Position()
     @_property
     def position(self) -> windows_devices_geolocation.BasicGeoposition: ...
@@ -369,7 +368,7 @@ class WalletRelevantLocation(winrt.system.Object):
 
 @typing.final
 class WalletTransaction(winrt.system.Object):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.Wallet.WalletTransaction::get_TransactionDate()
     @_property
     def transaction_date(self) -> datetime.datetime | None: ...
@@ -409,7 +408,7 @@ class WalletTransaction(winrt.system.Object):
 
 @typing.final
 class WalletVerb(winrt.system.Object):
-    def __new__(cls: type[Self], name: str) -> Self: ...
+    def __new__(cls, name: str) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Wallet.WalletVerb::get_Name()
     @_property
     def name(self) -> str: ...

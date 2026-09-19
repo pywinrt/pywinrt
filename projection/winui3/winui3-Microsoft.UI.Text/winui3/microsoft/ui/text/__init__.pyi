@@ -47,7 +47,6 @@ __all__ = [
     "ITextRange",
     "ITextSelection",
 ]
-Self = typing.TypeVar('Self')
 
 class CaretType(enum.IntEnum):
     NORMAL = 0
@@ -393,7 +392,7 @@ class FontWeights_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class FontWeights(winrt.system.Object, metaclass=FontWeights_Static):
-    pass
+    ...
 
 @typing.final
 class RichEditTextDocument(winrt.system.Object):
@@ -637,7 +636,7 @@ class TextConstants_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
-    pass
+    ...
 
 @typing.final
 class _ITextCharacterFormat: ...

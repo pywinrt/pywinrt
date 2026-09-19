@@ -27,7 +27,6 @@ __all__ = [
     "RfcommInboundConnectionInformation",
     "RfcommOutboundConnectionInformation",
 ]
-Self = typing.TypeVar('Self')
 
 class BluetoothEventTriggeringMode(enum.IntEnum):
     SERIAL = 0

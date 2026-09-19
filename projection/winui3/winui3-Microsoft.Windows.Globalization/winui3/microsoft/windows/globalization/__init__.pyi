@@ -11,7 +11,6 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 __all__ = [
     "ApplicationLanguages",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class ApplicationLanguages_Static(winrt._winrt.IInspectable_Static):
@@ -30,5 +29,5 @@ class ApplicationLanguages_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ApplicationLanguages(winrt.system.Object, metaclass=ApplicationLanguages_Static):
-    pass
+    ...
 

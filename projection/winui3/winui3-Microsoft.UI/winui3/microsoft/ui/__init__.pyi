@@ -18,7 +18,6 @@ __all__ = [
     "IClosableNotifier",
     "ClosableNotifierHandler",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class DisplayId:
@@ -50,7 +49,7 @@ class ColorHelper_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class ColorHelper(winrt.system.Object, metaclass=ColorHelper_Static):
-    pass
+    ...
 
 @typing.final
 class Colors_Static(winrt._winrt.IInspectable_Static):
@@ -480,7 +479,7 @@ class Colors_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class Colors(winrt.system.Object, metaclass=Colors_Static):
-    pass
+    ...
 
 @typing.final
 class _IClosableNotifier: ...

@@ -10,14 +10,13 @@ import winrt.windows.storage.streams as windows_storage_streams
 __all__ = [
     "DataProtectionProvider",
 ]
-Self = typing.TypeVar('Self')
 
 @typing.final
 class DataProtectionProvider(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], protection_descriptor: str) -> Self: ...
+    def __new__(cls, protection_descriptor: str) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Security.Cryptography.DataProtection.DataProtectionProvider::ProtectAsync(Windows.Storage.Streams.IBuffer)
     def protect_async(self, data: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[winrt.system.Buffer]: ...
     # Windows.Foundation.IAsyncAction Windows.Security.Cryptography.DataProtection.DataProtectionProvider::ProtectStreamAsync(Windows.Storage.Streams.IInputStream,Windows.Storage.Streams.IOutputStream)

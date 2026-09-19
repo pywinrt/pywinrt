@@ -58,7 +58,6 @@ __all__ = [
     "SmsDeviceStatusChangedEventHandler",
     "SmsMessageReceivedEventHandler",
 ]
-Self = typing.TypeVar('Self')
 
 class CellularClass(enum.IntEnum):
     NONE = 0
@@ -330,7 +329,7 @@ class SendSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncActi
 
 @typing.final
 class SmsAppMessage(winrt.system.Object, ISmsMessageBase):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Int32 Windows.Devices.Sms.SmsAppMessage::get_ProtocolId()
     @_property
     def protocol_id(self) -> winrt.system.Int32: ...
@@ -415,7 +414,7 @@ class SmsAppMessage(winrt.system.Object, ISmsMessageBase):
 
 @typing.final
 class SmsBinaryMessage(winrt.system.Object, ISmsBinaryMessage, ISmsMessage):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # System.Byte[] Windows.Devices.Sms.SmsBinaryMessage::GetData()
     # @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
     def get_data(self) -> winrt.system.Array[winrt.system.UInt8]: ...
@@ -594,7 +593,7 @@ class SmsDeviceMessageStore(winrt.system.Object):
 
 @typing.final
 class SmsFilterRule(winrt.system.Object):
-    def __new__(cls: type[Self], message_type: SmsMessageType) -> Self: ...
+    def __new__(cls, message_type: SmsMessageType) -> typing.Self: ...
     # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.SmsFilterRule::get_CellularClass()
     @_property
     def cellular_class(self) -> CellularClass: ...
@@ -640,7 +639,7 @@ class SmsFilterRule(winrt.system.Object):
 
 @typing.final
 class SmsFilterRules(winrt.system.Object):
-    def __new__(cls: type[Self], action_type: SmsFilterActionType) -> Self: ...
+    def __new__(cls, action_type: SmsFilterActionType) -> typing.Self: ...
     # Windows.Devices.Sms.SmsFilterActionType Windows.Devices.Sms.SmsFilterRules::get_ActionType()
     @_property
     def action_type(self) -> SmsFilterActionType: ...
@@ -794,7 +793,7 @@ class SmsTextMessage_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SmsTextMessage(winrt.system.Object, ISmsTextMessage, ISmsMessage, metaclass=SmsTextMessage_Static):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sms.ISmsBinaryMessage> Windows.Devices.Sms.SmsTextMessage::ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)
     # @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def to_binary_messages(self, format: SmsDataFormat, /) -> _cabc.Sequence[ISmsBinaryMessage]: ...
@@ -843,7 +842,7 @@ class SmsTextMessage(winrt.system.Object, ISmsTextMessage, ISmsMessage, metaclas
 
 @typing.final
 class SmsTextMessage2(winrt.system.Object, ISmsMessageBase):
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Devices.Sms.SmsMessageType Windows.Devices.Sms.SmsTextMessage2::get_MessageType()
     @_property
     def message_type(self) -> SmsMessageType: ...

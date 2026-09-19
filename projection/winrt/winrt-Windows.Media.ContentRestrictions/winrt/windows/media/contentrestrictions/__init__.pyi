@@ -18,7 +18,6 @@ __all__ = [
     "RatedContentDescription",
     "RatedContentRestrictions",
 ]
-Self = typing.TypeVar('Self')
 
 class ContentAccessRestrictionLevel(enum.IntEnum):
     ALLOW = 0
@@ -48,7 +47,7 @@ class ContentRestrictionsBrowsePolicy(winrt.system.Object):
 
 @typing.final
 class RatedContentDescription(winrt.system.Object):
-    def __new__(cls: type[Self], id: str, title: str, category: RatedContentCategory) -> Self: ...
+    def __new__(cls, id: str, title: str, category: RatedContentCategory) -> typing.Self: ...
     # System.String Windows.Media.ContentRestrictions.RatedContentDescription::get_Title()
     @_property
     def title(self) -> str: ...
@@ -83,9 +82,9 @@ class RatedContentDescription(winrt.system.Object):
 @typing.final
 class RatedContentRestrictions(winrt.system.Object):
     @typing.overload
-    def __new__(cls: type[Self], max_age_rating: winrt.system.UInt32) -> Self: ...
+    def __new__(cls, max_age_rating: winrt.system.UInt32) -> typing.Self: ...
     @typing.overload
-    def __new__(cls: type[Self]) -> Self: ...
+    def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy> Windows.Media.ContentRestrictions.RatedContentRestrictions::GetBrowsePolicyAsync()
     def get_browse_policy_async(self) -> windows_foundation.IAsyncOperation[ContentRestrictionsBrowsePolicy]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.ContentRestrictions.ContentAccessRestrictionLevel> Windows.Media.ContentRestrictions.RatedContentRestrictions::GetRestrictionLevelAsync(Windows.Media.ContentRestrictions.RatedContentDescription)
