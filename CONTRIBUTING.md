@@ -66,7 +66,7 @@ In a Visual Studio command prompt, run:
 
     cmake -S projection -B _build/test-projection -G Ninja -DPYWINRT_FULL_PROJECTION=OFF
     cmake --build _build/test-projection
-    cmake --install _build/test-projection --prefix _build/test-install
+    cmake --install _build/test-projection --prefix _install/test
 
 Note: if using MINGW, add the following to the first command:
 
@@ -77,12 +77,12 @@ build uses the debug configuration, so that means we _must_ use `python_d.exe`
 instead of `python.exe`. You can use `py -0p` to find the Python installation
 path if Python is not in `PATH` already.
 
-    $env:PYTHONPATH="_build/test-install"
+    $env:PYTHONPATH="_install/test"
     python_d.exe -X dev -m unittest
 
 If using MSYS2 shell for MINGW, this can be simplified to:
 
-    PYTHONPATH=_build/test-install python -X dev -m unittest
+    PYTHONPATH=_install/test python -X dev -m unittest
 
 ## Building the Nuget package
 
