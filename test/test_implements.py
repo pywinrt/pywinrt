@@ -82,7 +82,8 @@ class TestImplements(unittest.TestCase):
         obj = One()
 
         properties = wfc.PropertySet()
-        properties.insert("one", obj)
+        # a Python object that implements a WinRT interface is not a wrapper
+        properties.insert("one", obj)  # type: ignore[arg-type]
 
         self.assertIs(properties.lookup("one"), obj)
 
@@ -90,7 +91,8 @@ class TestImplements(unittest.TestCase):
         # An object that is not a runtime class answers with the name of the
         # first interface it implements, which is what C++/WinRT does.
         self.assertEqual(
-            tc.TestRunner.expect_object(One()), "TestComponent.IRequiredOne"
+            tc.TestRunner.expect_object(One()),  # type: ignore[arg-type]
+            "TestComponent.IRequiredOne",
         )
 
     def test_property(self) -> None:
@@ -106,7 +108,9 @@ class TestImplements(unittest.TestCase):
             def get_string(self) -> str:
                 return "hi"
 
-        seen = wf.IPropertyValue._from(Value())
+        # _from() is internal to the runtime, so no stub declares it, and
+        # WinRT only ever calls the members this implements
+        seen = wf.IPropertyValue._from(Value())  # type: ignore[attr-defined, abstract]
 
         self.assertEqual(seen.type, wf.PropertyType.STRING)
         self.assertFalse(seen.is_numeric_scalar)
@@ -131,8 +135,8 @@ class TestImplements(unittest.TestCase):
             def get_results(self) -> None:
                 return None
 
-        action = Action()
-        seen = wf.IAsyncAction._from(action)
+        action = Action()  # type: ignore[abstract]
+        seen = wf.IAsyncAction._from(action)  # type: ignore[attr-defined, abstract]
 
         status = []
         seen.completed = lambda sender, value: status.append(value)
@@ -152,7 +156,8 @@ class TestImplements(unittest.TestCase):
             self.assertRaisesRegex(OSError, "Unraisable Python exception") as ctx,
             catch_unraisable() as exceptions,
         ):
-            tc.Composable.expect_required_one(Incomplete())
+            # leaving one() out is the point of the test
+            tc.Composable.expect_required_one(Incomplete())  # type: ignore[abstract]
 
         self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
         self.assertIsInstance(exceptions[0].exc_value, AttributeError)
@@ -162,7 +167,8 @@ class TestImplements(unittest.TestCase):
         ref = weakref.ref(obj)
 
         properties = wfc.PropertySet()
-        properties.insert("one", obj)
+        # a Python object that implements a WinRT interface is not a wrapper
+        properties.insert("one", obj)  # type: ignore[arg-type]
 
         del obj
         gc.collect()
