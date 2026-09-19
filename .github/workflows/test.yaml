@@ -10,6 +10,7 @@ on:
       - next
     paths:
       - .github/workflows/test.yaml
+      - mypy.ini
       - .config/_tools.json
       - patches/**
       - scripts/fetch-tools.ps1
@@ -36,6 +37,7 @@ on:
   pull_request:
     paths:
       - .github/workflows/test.yaml
+      - mypy.ini
       - .config/_tools.json
       - patches/**
       - scripts/fetch-tools.ps1
@@ -154,27 +156,7 @@ jobs:
           # the runtime and the interop packages live outside of projection/,
           # so winrt.system, winrt.runtime and winrt._winrt come from runtime/python
           Get-ChildItem -Path projection/*/*, interop/*, runtime/python -Directory -Recurse | Where-Object Name -IN "winrt", "webview2", "winui2", "winui3", "test_winrt" | ForEach-Object { Copy-Item -Path $_.FullName -Filter "*.py*" -Destination _install/lint/ -Recurse -Force  }
-      - name: Run mypy on winrt
-        env:
-          MYPYPATH: _install/lint
-        run: pipx run mypy -p winrt
-      - name: Run mypy on winui2
-        env:
-          MYPYPATH: _install/lint
-        run: pipx run mypy -p winui2
-      - name: Run mypy on winui3
-        env:
-          MYPYPATH: _install/lint
-        run: pipx run mypy -p winui3
-      - name: Run mypy on webview2
-        env:
-          MYPYPATH: _install/lint
-        run: pipx run mypy -p webview2
-      - name: Run mypy on test-winrt
-        env:
-          MYPYPATH: _install/lint
-        run: pipx run mypy -p test_winrt
-      - name: Run mypy on tests
-        env:
-          MYPYPATH: _install/lint
-        run: pipx run mypy -p test
+      # the packages and the path to them are in mypy.ini, so that the
+      # editor checks the same thing as CI does
+      - name: Run mypy
+        run: pipx run mypy
