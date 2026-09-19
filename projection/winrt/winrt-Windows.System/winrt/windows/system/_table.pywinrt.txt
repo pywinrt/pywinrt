@@ -1557,7 +1557,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -1577,7 +1577,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppI
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInfo> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInfo> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.AppInfo> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.AppInfo name=items
             out uint32 return
     method move_next
@@ -1597,7 +1597,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem>
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=117 reverse=101 role=get_many
             fill_array interface type=Windows.Storage.IStorageItem name=items
             out uint32 return
     method move_next
@@ -1617,7 +1617,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticI
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.System.AppDiagnosticInfo name=items
             out uint32 return
     method move_next
@@ -1637,7 +1637,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.System.AppResourceGro
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppResourceGroupBackgroundTaskReport> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppResourceGroupBackgroundTaskReport> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppResourceGroupBackgroundTaskReport> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.System.AppResourceGroupBackgroundTaskReport name=items
             out uint32 return
     method move_next
@@ -1657,7 +1657,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.System.AppResourceGro
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppResourceGroupInfo> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppResourceGroupInfo> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppResourceGroupInfo> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.System.AppResourceGroupInfo name=items
             out uint32 return
     method move_next
@@ -1677,7 +1677,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.System.AppUriHandlerH
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppUriHandlerHost> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppUriHandlerHost> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.AppUriHandlerHost> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.System.AppUriHandlerHost name=items
             out uint32 return
     method move_next
@@ -1697,7 +1697,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.Pr
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=items
             out uint32 return
     method move_next
@@ -1717,7 +1717,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.System.User> concrete
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.User> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.User> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.User> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.System.User name=items
             out uint32 return
     method move_next
@@ -1737,7 +1737,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.System.UserWatcherUpd
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.UserWatcherUpdateKind> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.UserWatcherUpdateKind> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.System.UserWatcherUpdateKind> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.System.UserWatcherUpdateKind name=items
             out uint32 return
     method move_next
@@ -2144,10 +2144,10 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173 role=append
             in string name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
@@ -2161,10 +2161,10 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             fill_array string name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -2176,9 +2176,9 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211 role=replace_all
             pass_array string name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
@@ -2196,10 +2196,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> c
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=4 reverse=173 role=append
             in interface type=Windows.Storage.IStorageItem name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> return
@@ -2213,10 +2213,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> c
             fill_array interface type=Windows.Storage.IStorageItem name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=117 reverse=101 role=index_of
             in interface type=Windows.Storage.IStorageItem name=value
             out uint32 name=index
             out boolean return
@@ -2228,9 +2228,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> c
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=51 reverse=211 role=replace_all
             pass_array interface type=Windows.Storage.IStorageItem name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> shape=51 reverse=124 role=set_at
@@ -2248,10 +2248,10 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInf
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=4 reverse=173 role=append
             in class type=Windows.System.AppDiagnosticInfo name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.AppDiagnosticInfo> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo> return
@@ -2265,10 +2265,10 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInf
             fill_array class type=Windows.System.AppDiagnosticInfo name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=117 reverse=101 role=index_of
             in class type=Windows.System.AppDiagnosticInfo name=value
             out uint32 name=index
             out boolean return
@@ -2280,9 +2280,9 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInf
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.System.AppDiagnosticInfo name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> shape=51 reverse=124 role=set_at
@@ -2300,10 +2300,10 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroup
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=4 reverse=173 role=append
             in class type=Windows.System.AppResourceGroupBackgroundTaskReport name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.AppResourceGroupBackgroundTaskReport> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.AppResourceGroupBackgroundTaskReport> return
@@ -2317,10 +2317,10 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroup
             fill_array class type=Windows.System.AppResourceGroupBackgroundTaskReport name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceGroupBackgroundTaskReport> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=117 reverse=101 role=index_of
             in class type=Windows.System.AppResourceGroupBackgroundTaskReport name=value
             out uint32 name=index
             out boolean return
@@ -2332,9 +2332,9 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroup
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.System.AppResourceGroupBackgroundTaskReport name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> shape=51 reverse=124 role=set_at
@@ -2352,10 +2352,10 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroup
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=4 reverse=173 role=append
             in class type=Windows.System.AppResourceGroupInfo name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.AppResourceGroupInfo> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.AppResourceGroupInfo> return
@@ -2369,10 +2369,10 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroup
             fill_array class type=Windows.System.AppResourceGroupInfo name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceGroupInfo> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=117 reverse=101 role=index_of
             in class type=Windows.System.AppResourceGroupInfo name=value
             out uint32 name=index
             out boolean return
@@ -2384,9 +2384,9 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroup
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.System.AppResourceGroupInfo name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> shape=51 reverse=124 role=set_at
@@ -2404,10 +2404,10 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHos
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=4 reverse=173 role=append
             in class type=Windows.System.AppUriHandlerHost name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.AppUriHandlerHost> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.AppUriHandlerHost> return
@@ -2421,10 +2421,10 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHos
             fill_array class type=Windows.System.AppUriHandlerHost name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.AppUriHandlerHost> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=117 reverse=101 role=index_of
             in class type=Windows.System.AppUriHandlerHost name=value
             out uint32 name=index
             out boolean return
@@ -2436,9 +2436,9 @@ interface Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHos
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.System.AppUriHandlerHost name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> shape=51 reverse=124 role=set_at
@@ -2456,10 +2456,10 @@ interface Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.Proc
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=173 role=append
             in class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.System.Diagnostics.ProcessDiagnosticInfo> return
@@ -2473,10 +2473,10 @@ interface Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.Proc
             fill_array class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=117 reverse=101 role=index_of
             in class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=value
             out uint32 name=index
             out boolean return
@@ -2488,9 +2488,9 @@ interface Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.Proc
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=51 reverse=124 role=set_at
@@ -2520,7 +2520,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             fill_array string name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -2548,7 +2548,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Ap
             fill_array class type=Windows.ApplicationModel.AppInfo name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.AppInfo name=value
             out uint32 name=index
             out boolean return
@@ -2576,7 +2576,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageIte
             fill_array interface type=Windows.Storage.IStorageItem name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem> shape=117 reverse=66 role=index_of
             in interface type=Windows.Storage.IStorageItem name=value
             out uint32 name=index
             out boolean return
@@ -2604,7 +2604,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosti
             fill_array class type=Windows.System.AppDiagnosticInfo name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> shape=117 reverse=66 role=index_of
             in class type=Windows.System.AppDiagnosticInfo name=value
             out uint32 name=index
             out boolean return
@@ -2632,7 +2632,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceG
             fill_array class type=Windows.System.AppResourceGroupBackgroundTaskReport name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceGroupBackgroundTaskReport> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceGroupBackgroundTaskReport> shape=117 reverse=66 role=index_of
             in class type=Windows.System.AppResourceGroupBackgroundTaskReport name=value
             out uint32 name=index
             out boolean return
@@ -2660,7 +2660,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceG
             fill_array class type=Windows.System.AppResourceGroupInfo name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceGroupInfo> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceGroupInfo> shape=117 reverse=66 role=index_of
             in class type=Windows.System.AppResourceGroupInfo name=value
             out uint32 name=index
             out boolean return
@@ -2688,7 +2688,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.AppUriHandle
             fill_array class type=Windows.System.AppUriHandlerHost name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppUriHandlerHost> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.AppUriHandlerHost> shape=117 reverse=66 role=index_of
             in class type=Windows.System.AppUriHandlerHost name=value
             out uint32 name=index
             out boolean return
@@ -2716,7 +2716,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.
             fill_array class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> shape=117 reverse=66 role=index_of
             in class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=value
             out uint32 name=index
             out boolean return
@@ -2744,7 +2744,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.User> concre
             fill_array class type=Windows.System.User name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.User> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.User> shape=117 reverse=66 role=index_of
             in class type=Windows.System.User name=value
             out uint32 name=index
             out boolean return
@@ -2772,7 +2772,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.System.UserWatcherU
             fill_array enum32 type=Windows.System.UserWatcherUpdateKind name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.UserWatcherUpdateKind> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.System.UserWatcherUpdateKind> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.System.UserWatcherUpdateKind name=value
             out uint32 name=index
             out boolean return

@@ -217,7 +217,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -237,7 +237,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Data.Text.AlternateWo
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.AlternateWordForm> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.AlternateWordForm> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.AlternateWordForm> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Data.Text.AlternateWordForm name=items
             out uint32 return
     method move_next
@@ -257,7 +257,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Data.Text.SelectableW
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.SelectableWordSegment> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.SelectableWordSegment> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.SelectableWordSegment> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Data.Text.SelectableWordSegment name=items
             out uint32 return
     method move_next
@@ -277,7 +277,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextPhoneme
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextPhoneme> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextPhoneme> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextPhoneme> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Data.Text.TextPhoneme name=items
             out uint32 return
     method move_next
@@ -297,7 +297,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=117 reverse=101 role=get_many
             fill_array struct type=Windows.Data.Text.TextSegment name=items
             out uint32 return
     method move_next
@@ -317,7 +317,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Data.Text.WordSegment
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.WordSegment> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.WordSegment> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.WordSegment> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Data.Text.WordSegment name=items
             out uint32 return
     method move_next
@@ -392,7 +392,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             fill_array string name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -420,7 +420,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.Alternate
             fill_array class type=Windows.Data.Text.AlternateWordForm name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.AlternateWordForm> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.AlternateWordForm> shape=117 reverse=66 role=index_of
             in class type=Windows.Data.Text.AlternateWordForm name=value
             out uint32 name=index
             out boolean return
@@ -448,7 +448,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.Selectabl
             fill_array class type=Windows.Data.Text.SelectableWordSegment name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.SelectableWordSegment> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.SelectableWordSegment> shape=117 reverse=66 role=index_of
             in class type=Windows.Data.Text.SelectableWordSegment name=value
             out uint32 name=index
             out boolean return
@@ -476,7 +476,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhone
             fill_array class type=Windows.Data.Text.TextPhoneme name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextPhoneme> shape=117 reverse=66 role=index_of
             in class type=Windows.Data.Text.TextPhoneme name=value
             out uint32 name=index
             out boolean return
@@ -504,7 +504,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegme
             fill_array struct type=Windows.Data.Text.TextSegment name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=181 reverse=90
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=181 reverse=90 role=index_of
             in struct type=Windows.Data.Text.TextSegment name=value
             out uint32 name=index
             out boolean return
@@ -532,7 +532,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegme
             fill_array class type=Windows.Data.Text.WordSegment name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegment> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.WordSegment> shape=117 reverse=66 role=index_of
             in class type=Windows.Data.Text.WordSegment name=value
             out uint32 name=index
             out boolean return

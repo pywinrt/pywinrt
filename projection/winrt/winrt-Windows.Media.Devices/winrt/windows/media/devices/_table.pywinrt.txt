@@ -1005,7 +1005,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Advance
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AdvancedPhotoMode> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AdvancedPhotoMode> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AdvancedPhotoMode> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Media.Devices.AdvancedPhotoMode name=items
             out uint32 return
     method move_next
@@ -1025,7 +1025,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AudioDe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AudioDeviceModule> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AudioDeviceModule> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AudioDeviceModule> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Devices.AudioDeviceModule name=items
             out uint32 return
     method move_next
@@ -1045,7 +1045,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AutoFoc
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AutoFocusRange> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AutoFocusRange> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.AutoFocusRange> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Media.Devices.AutoFocusRange name=items
             out uint32 return
     method move_next
@@ -1065,7 +1065,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Capture
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.CaptureSceneMode> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.CaptureSceneMode> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.CaptureSceneMode> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Media.Devices.CaptureSceneMode name=items
             out uint32 return
     method move_next
@@ -1085,7 +1085,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Digital
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.DigitalWindowCapability> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.DigitalWindowCapability> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.DigitalWindowCapability> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Devices.DigitalWindowCapability name=items
             out uint32 return
     method move_next
@@ -1105,7 +1105,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusMo
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusMode> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusMode> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusMode> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Media.Devices.FocusMode name=items
             out uint32 return
     method move_next
@@ -1125,7 +1125,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusPr
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusPreset> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusPreset> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.FocusPreset> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Media.Devices.FocusPreset name=items
             out uint32 return
     method move_next
@@ -1145,7 +1145,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.HdrVide
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.HdrVideoMode> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.HdrVideoMode> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.HdrVideoMode> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Media.Devices.HdrVideoMode name=items
             out uint32 return
     method move_next
@@ -1165,7 +1165,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Infrare
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.InfraredTorchMode> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.InfraredTorchMode> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.InfraredTorchMode> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Media.Devices.InfraredTorchMode name=items
             out uint32 return
     method move_next
@@ -1185,7 +1185,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.IsoSpee
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.IsoSpeedPreset> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.IsoSpeedPreset> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.IsoSpeedPreset> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Media.Devices.IsoSpeedPreset name=items
             out uint32 return
     method move_next
@@ -1205,7 +1205,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ManualF
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ManualFocusDistance> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ManualFocusDistance> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ManualFocusDistance> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Media.Devices.ManualFocusDistance name=items
             out uint32 return
     method move_next
@@ -1225,7 +1225,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Optical
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.OpticalImageStabilizationMode> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.OpticalImageStabilizationMode> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.OpticalImageStabilizationMode> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Media.Devices.OpticalImageStabilizationMode name=items
             out uint32 return
     method move_next
@@ -1245,7 +1245,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.RegionO
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.RegionOfInterest> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.RegionOfInterest> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.RegionOfInterest> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Devices.RegionOfInterest name=items
             out uint32 return
     method move_next
@@ -1265,7 +1265,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.VideoTe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Media.Devices.VideoTemporalDenoisingMode name=items
             out uint32 return
     method move_next
@@ -1285,7 +1285,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ZoomTra
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ZoomTransitionMode> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ZoomTransitionMode> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.ZoomTransitionMode> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Media.Devices.ZoomTransitionMode name=items
             out uint32 return
     method move_next
@@ -1305,7 +1305,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=117 reverse=101 role=get_many
             fill_array interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=items
             out uint32 return
     method move_next
@@ -1657,7 +1657,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Advan
             fill_array enum32 type=Windows.Media.Devices.AdvancedPhotoMode name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AdvancedPhotoMode> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AdvancedPhotoMode> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Media.Devices.AdvancedPhotoMode name=value
             out uint32 name=index
             out boolean return
@@ -1685,7 +1685,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Audio
             fill_array class type=Windows.Media.Devices.AudioDeviceModule name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AudioDeviceModule> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AudioDeviceModule> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Devices.AudioDeviceModule name=value
             out uint32 name=index
             out boolean return
@@ -1713,7 +1713,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AutoF
             fill_array enum32 type=Windows.Media.Devices.AutoFocusRange name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AutoFocusRange> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.AutoFocusRange> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Media.Devices.AutoFocusRange name=value
             out uint32 name=index
             out boolean return
@@ -1741,7 +1741,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Captu
             fill_array enum32 type=Windows.Media.Devices.CaptureSceneMode name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.CaptureSceneMode> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.CaptureSceneMode> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Media.Devices.CaptureSceneMode name=value
             out uint32 name=index
             out boolean return
@@ -1769,7 +1769,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Digit
             fill_array class type=Windows.Media.Devices.DigitalWindowCapability name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.DigitalWindowCapability> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.DigitalWindowCapability> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Devices.DigitalWindowCapability name=value
             out uint32 name=index
             out boolean return
@@ -1797,7 +1797,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Focus
             fill_array enum32 type=Windows.Media.Devices.FocusMode name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusMode> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusMode> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Media.Devices.FocusMode name=value
             out uint32 name=index
             out boolean return
@@ -1825,7 +1825,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Focus
             fill_array enum32 type=Windows.Media.Devices.FocusPreset name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusPreset> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.FocusPreset> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Media.Devices.FocusPreset name=value
             out uint32 name=index
             out boolean return
@@ -1853,7 +1853,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVi
             fill_array enum32 type=Windows.Media.Devices.HdrVideoMode name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVideoMode> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.HdrVideoMode> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Media.Devices.HdrVideoMode name=value
             out uint32 name=index
             out boolean return
@@ -1881,7 +1881,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Infra
             fill_array enum32 type=Windows.Media.Devices.InfraredTorchMode name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.InfraredTorchMode> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.InfraredTorchMode> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Media.Devices.InfraredTorchMode name=value
             out uint32 name=index
             out boolean return
@@ -1909,7 +1909,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.IsoSp
             fill_array enum32 type=Windows.Media.Devices.IsoSpeedPreset name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.IsoSpeedPreset> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.IsoSpeedPreset> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Media.Devices.IsoSpeedPreset name=value
             out uint32 name=index
             out boolean return
@@ -1937,7 +1937,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Manua
             fill_array enum32 type=Windows.Media.Devices.ManualFocusDistance name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ManualFocusDistance> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ManualFocusDistance> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Media.Devices.ManualFocusDistance name=value
             out uint32 name=index
             out boolean return
@@ -1965,7 +1965,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Optic
             fill_array enum32 type=Windows.Media.Devices.OpticalImageStabilizationMode name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.OpticalImageStabilizationMode> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.OpticalImageStabilizationMode> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Media.Devices.OpticalImageStabilizationMode name=value
             out uint32 name=index
             out boolean return
@@ -1993,7 +1993,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Video
             fill_array enum32 type=Windows.Media.Devices.VideoTemporalDenoisingMode name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.VideoTemporalDenoisingMode> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Media.Devices.VideoTemporalDenoisingMode name=value
             out uint32 name=index
             out boolean return
@@ -2021,7 +2021,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ZoomT
             fill_array enum32 type=Windows.Media.Devices.ZoomTransitionMode name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ZoomTransitionMode> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.ZoomTransitionMode> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Media.Devices.ZoomTransitionMode name=value
             out uint32 name=index
             out boolean return
@@ -2049,7 +2049,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperti
             fill_array interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.MediaProperties.IMediaEncodingProperties> shape=117 reverse=66 role=index_of
             in interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=value
             out uint32 name=index
             out boolean return

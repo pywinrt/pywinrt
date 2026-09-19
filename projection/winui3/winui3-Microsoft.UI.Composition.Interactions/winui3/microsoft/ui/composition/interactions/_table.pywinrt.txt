@@ -235,7 +235,7 @@ interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Inte
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.CompositionConditionalValue> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.CompositionConditionalValue> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.CompositionConditionalValue> shape=117 reverse=101 role=get_many
             fill_array class type=Microsoft.UI.Composition.Interactions.CompositionConditionalValue name=items
             out uint32 return
     method move_next
@@ -255,7 +255,7 @@ interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Inte
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.ICompositionInteractionSource> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.ICompositionInteractionSource> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.ICompositionInteractionSource> shape=117 reverse=101 role=get_many
             fill_array interface type=Microsoft.UI.Composition.Interactions.ICompositionInteractionSource name=items
             out uint32 return
     method move_next
@@ -275,7 +275,7 @@ interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Inte
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier> shape=117 reverse=101 role=get_many
             fill_array class type=Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier name=items
             out uint32 return
     method move_next
@@ -295,7 +295,7 @@ interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Inte
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier> shape=117 reverse=101 role=get_many
             fill_array class type=Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier name=items
             out uint32 return
     method move_next

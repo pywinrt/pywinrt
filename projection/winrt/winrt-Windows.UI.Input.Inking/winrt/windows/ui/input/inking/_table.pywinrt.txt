@@ -479,7 +479,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -499,7 +499,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> con
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> shape=117 reverse=101 role=get_many
             fill_array struct type=Windows.Foundation.Point name=items
             out uint32 return
     method move_next
@@ -519,7 +519,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkPo
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkPoint> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkPoint> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkPoint> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.UI.Input.Inking.InkPoint name=items
             out uint32 return
     method move_next
@@ -539,7 +539,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkRe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkRecognitionResult> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkRecognitionResult> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkRecognitionResult> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.UI.Input.Inking.InkRecognitionResult name=items
             out uint32 return
     method move_next
@@ -559,7 +559,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkRe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkRecognizer> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkRecognizer> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkRecognizer> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.UI.Input.Inking.InkRecognizer name=items
             out uint32 return
     method move_next
@@ -579,7 +579,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkSt
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkStroke> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkStroke> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkStroke> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.UI.Input.Inking.InkStroke name=items
             out uint32 return
     method move_next
@@ -599,7 +599,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkSt
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkStrokeRenderingSegment> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkStrokeRenderingSegment> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Input.Inking.InkStrokeRenderingSegment> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.UI.Input.Inking.InkStrokeRenderingSegment name=items
             out uint32 return
     method move_next
@@ -894,7 +894,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             fill_array string name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -922,7 +922,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Ink
             fill_array class type=Windows.UI.Input.Inking.InkPoint name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkPoint> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkPoint> shape=117 reverse=66 role=index_of
             in class type=Windows.UI.Input.Inking.InkPoint name=value
             out uint32 name=index
             out boolean return
@@ -950,7 +950,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Ink
             fill_array class type=Windows.UI.Input.Inking.InkRecognitionResult name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkRecognitionResult> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkRecognitionResult> shape=117 reverse=66 role=index_of
             in class type=Windows.UI.Input.Inking.InkRecognitionResult name=value
             out uint32 name=index
             out boolean return
@@ -978,7 +978,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Ink
             fill_array class type=Windows.UI.Input.Inking.InkRecognizer name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkRecognizer> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkRecognizer> shape=117 reverse=66 role=index_of
             in class type=Windows.UI.Input.Inking.InkRecognizer name=value
             out uint32 name=index
             out boolean return
@@ -1006,7 +1006,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Ink
             fill_array class type=Windows.UI.Input.Inking.InkStroke name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStroke> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStroke> shape=117 reverse=66 role=index_of
             in class type=Windows.UI.Input.Inking.InkStroke name=value
             out uint32 name=index
             out boolean return
@@ -1034,7 +1034,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Ink
             fill_array class type=Windows.UI.Input.Inking.InkStrokeRenderingSegment name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStrokeRenderingSegment> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStrokeRenderingSegment> shape=117 reverse=66 role=index_of
             in class type=Windows.UI.Input.Inking.InkStrokeRenderingSegment name=value
             out uint32 name=index
             out boolean return

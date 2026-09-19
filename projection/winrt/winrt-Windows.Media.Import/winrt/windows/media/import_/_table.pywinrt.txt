@@ -382,7 +382,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -402,7 +402,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImp
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportItem> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportItem> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportItem> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Import.PhotoImportItem name=items
             out uint32 return
     method move_next
@@ -422,7 +422,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImp
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportOperation> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportOperation> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportOperation> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Import.PhotoImportOperation name=items
             out uint32 return
     method move_next
@@ -442,7 +442,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImp
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportSidecar> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportSidecar> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportSidecar> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Import.PhotoImportSidecar name=items
             out uint32 return
     method move_next
@@ -462,7 +462,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImp
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportSource> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportSource> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportSource> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Import.PhotoImportSource name=items
             out uint32 return
     method move_next
@@ -482,7 +482,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImp
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportStorageMedium> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportStorageMedium> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportStorageMedium> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Import.PhotoImportStorageMedium name=items
             out uint32 return
     method move_next
@@ -502,7 +502,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImp
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportVideoSegment> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportVideoSegment> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Import.PhotoImportVideoSegment> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Import.PhotoImportVideoSegment name=items
             out uint32 return
     method move_next
@@ -967,7 +967,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             fill_array string name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -995,7 +995,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
             fill_array class type=Windows.Media.Import.PhotoImportItem name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportItem> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportItem> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Import.PhotoImportItem name=value
             out uint32 name=index
             out boolean return
@@ -1023,7 +1023,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
             fill_array class type=Windows.Media.Import.PhotoImportOperation name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportOperation> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportOperation> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Import.PhotoImportOperation name=value
             out uint32 name=index
             out boolean return
@@ -1051,7 +1051,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
             fill_array class type=Windows.Media.Import.PhotoImportSidecar name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportSidecar> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportSidecar> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Import.PhotoImportSidecar name=value
             out uint32 name=index
             out boolean return
@@ -1079,7 +1079,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
             fill_array class type=Windows.Media.Import.PhotoImportSource name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportSource> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportSource> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Import.PhotoImportSource name=value
             out uint32 name=index
             out boolean return
@@ -1107,7 +1107,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
             fill_array class type=Windows.Media.Import.PhotoImportStorageMedium name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportStorageMedium> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportStorageMedium> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Import.PhotoImportStorageMedium name=value
             out uint32 name=index
             out boolean return
@@ -1135,7 +1135,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoI
             fill_array class type=Windows.Media.Import.PhotoImportVideoSegment name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportVideoSegment> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportVideoSegment> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Import.PhotoImportVideoSegment name=value
             out uint32 name=index
             out boolean return

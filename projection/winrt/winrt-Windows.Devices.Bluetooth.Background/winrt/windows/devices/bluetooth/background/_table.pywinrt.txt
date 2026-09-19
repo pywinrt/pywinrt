@@ -160,7 +160,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Adv
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs name=items
             out uint32 return
     method move_next
@@ -180,7 +180,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Gen
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs name=items
             out uint32 return
     method move_next
@@ -200,7 +200,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> name=items
             out uint32 return
     method move_next
@@ -215,10 +215,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Dev
     argument System.String
     argument Windows.Devices.Bluetooth.Background.GattServiceProviderConnection
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> shape=4 reverse=43 role=pair_value
             out class type=Windows.Devices.Bluetooth.Background.GattServiceProviderConnection return
 
 interface Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> concrete iterable mapping
@@ -244,7 +244,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.
             in string name=key
             out class type=Windows.Devices.Bluetooth.Background.GattServiceProviderConnection return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> name=second
 
@@ -408,7 +408,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.A
             fill_array class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs name=value
             out uint32 name=index
             out boolean return
@@ -436,7 +436,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.G
             fill_array class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs name=value
             out uint32 name=index
             out boolean return

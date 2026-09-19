@@ -1485,7 +1485,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -1505,7 +1505,7 @@ interface Windows.Foundation.Collections.IIterator<System.UInt32> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=117 reverse=101 role=get_many
             fill_array uint32 name=items
             out uint32 return
     method move_next
@@ -1525,7 +1525,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivi
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.ConnectionProfile> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.ConnectionProfile> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.ConnectionProfile> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.Connectivity.ConnectionProfile name=items
             out uint32 return
     method move_next
@@ -1545,7 +1545,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> 
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.HostName name=items
             out uint32 return
     method move_next
@@ -1565,7 +1565,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.ESimDiscoverEvent> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.ESimDiscoverEvent> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.ESimDiscoverEvent> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.ESimDiscoverEvent name=items
             out uint32 return
     method move_next
@@ -1585,7 +1585,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.ESimProfile> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.ESimProfile> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.ESimProfile> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.ESimProfile name=items
             out uint32 return
     method move_next
@@ -1605,7 +1605,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar name=items
             out uint32 return
     method move_next
@@ -1625,7 +1625,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellCdma> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellCdma> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellCdma> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellCdma name=items
             out uint32 return
     method move_next
@@ -1645,7 +1645,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellGsm> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellGsm> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellGsm> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellGsm name=items
             out uint32 return
     method move_next
@@ -1665,7 +1665,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellLte> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellLte> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellLte> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellLte name=items
             out uint32 return
     method move_next
@@ -1685,7 +1685,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellNR name=items
             out uint32 return
     method move_next
@@ -1705,7 +1705,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma name=items
             out uint32 return
     method move_next
@@ -1725,7 +1725,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellUmts> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellUmts> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandCellUmts> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellUmts name=items
             out uint32 return
     method move_next
@@ -1745,7 +1745,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation name=items
             out uint32 return
     method move_next
@@ -1765,7 +1765,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange name=items
             out uint32 return
     method move_next
@@ -1785,7 +1785,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange name=items
             out uint32 return
     method move_next
@@ -1805,7 +1805,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandPinType> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandPinType> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandPinType> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Networking.NetworkOperators.MobileBroadbandPinType name=items
             out uint32 return
     method move_next
@@ -1825,7 +1825,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange name=items
             out uint32 return
     method move_next
@@ -1845,7 +1845,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo name=items
             out uint32 return
     method move_next
@@ -1865,7 +1865,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandUiccApp> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandUiccApp> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.MobileBroadbandUiccApp> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandUiccApp name=items
             out uint32 return
     method move_next
@@ -1885,7 +1885,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOpe
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient name=items
             out uint32 return
     method move_next
@@ -2715,7 +2715,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             fill_array string name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -2743,7 +2743,7 @@ interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete ite
             fill_array uint32 name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=117 reverse=66 role=index_of
             in uint32 name=value
             out uint32 name=index
             out boolean return
@@ -2771,7 +2771,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             fill_array class type=Windows.Networking.Connectivity.ConnectionProfile name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.Connectivity.ConnectionProfile name=value
             out uint32 name=index
             out boolean return
@@ -2799,7 +2799,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName
             fill_array class type=Windows.Networking.HostName name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.HostName name=value
             out uint32 name=index
             out boolean return
@@ -2827,7 +2827,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.ESimDiscoverEvent name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimDiscoverEvent> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimDiscoverEvent> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.ESimDiscoverEvent name=value
             out uint32 name=index
             out boolean return
@@ -2855,7 +2855,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.ESimProfile name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimProfile> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.ESimProfile> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.ESimProfile name=value
             out uint32 name=index
             out boolean return
@@ -2883,7 +2883,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar name=value
             out uint32 name=index
             out boolean return
@@ -2911,7 +2911,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellCdma name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellCdma> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellCdma> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandCellCdma name=value
             out uint32 name=index
             out boolean return
@@ -2939,7 +2939,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellGsm name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellGsm> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellGsm> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandCellGsm name=value
             out uint32 name=index
             out boolean return
@@ -2967,7 +2967,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellLte name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellLte> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellLte> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandCellLte name=value
             out uint32 name=index
             out boolean return
@@ -2995,7 +2995,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellNR name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandCellNR name=value
             out uint32 name=index
             out boolean return
@@ -3023,7 +3023,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma name=value
             out uint32 name=index
             out boolean return
@@ -3051,7 +3051,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandCellUmts name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellUmts> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellUmts> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandCellUmts name=value
             out uint32 name=index
             out boolean return
@@ -3079,7 +3079,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation name=value
             out uint32 name=index
             out boolean return
@@ -3107,7 +3107,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange name=value
             out uint32 name=index
             out boolean return
@@ -3135,7 +3135,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange name=value
             out uint32 name=index
             out boolean return
@@ -3163,7 +3163,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array enum32 type=Windows.Networking.NetworkOperators.MobileBroadbandPinType name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandPinType> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandPinType> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Networking.NetworkOperators.MobileBroadbandPinType name=value
             out uint32 name=index
             out boolean return
@@ -3191,7 +3191,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange name=value
             out uint32 name=index
             out boolean return
@@ -3219,7 +3219,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo name=value
             out uint32 name=index
             out boolean return
@@ -3247,7 +3247,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.MobileBroadbandUiccApp name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandUiccApp> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandUiccApp> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.MobileBroadbandUiccApp name=value
             out uint32 name=index
             out boolean return
@@ -3275,7 +3275,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
             fill_array class type=Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient name=value
             out uint32 name=index
             out boolean return

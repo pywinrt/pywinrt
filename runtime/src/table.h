@@ -190,6 +190,15 @@ namespace py::table
         value = 18,
         close = 19,
         get_many = 20,
+        get_view = 21,
+        index_of = 22,
+        append = 23,
+        remove_at_end = 24,
+        clear = 25,
+        replace_all = 26,
+        split = 27,
+        pair_key = 28,
+        pair_value = 29,
     };
 
     enum class param_category : uint32_t

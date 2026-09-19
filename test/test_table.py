@@ -82,14 +82,37 @@ ROLE_TO_STRING = 17
 ROLE_VALUE = 18
 ROLE_CLOSE = 19
 ROLE_GET_MANY = 20
+ROLE_GET_VIEW = 21
+ROLE_INDEX_OF = 22
+ROLE_APPEND = 23
+ROLE_REMOVE_AT_END = 24
+ROLE_CLEAR = 25
+ROLE_REPLACE_ALL = 26
 
-# The members each protocol calls, by the type flag that claims it.
+# The members each protocol calls, by the type flag that claims it. A
+# collection is called in both directions - Python reading a WinRT one, and
+# WinRT reading a Python object through the vtable the runtime assembles over
+# it - so the set includes the members that only the second of those uses.
 REQUIRED_ROLES = {
-    TYPE_SEQUENCE: {ROLE_SIZE, ROLE_GET_AT, ROLE_GET_MANY},
-    TYPE_MUTABLE_SEQUENCE: {ROLE_SET_AT, ROLE_INSERT_AT, ROLE_REMOVE_AT},
+    TYPE_SEQUENCE: {ROLE_SIZE, ROLE_GET_AT, ROLE_GET_MANY, ROLE_INDEX_OF},
+    TYPE_MUTABLE_SEQUENCE: {
+        ROLE_SET_AT,
+        ROLE_INSERT_AT,
+        ROLE_REMOVE_AT,
+        ROLE_APPEND,
+        ROLE_REMOVE_AT_END,
+        ROLE_CLEAR,
+        ROLE_REPLACE_ALL,
+        ROLE_GET_VIEW,
+    },
     TYPE_MAPPING: {ROLE_SIZE, ROLE_LOOKUP, ROLE_HAS_KEY},
-    TYPE_MUTABLE_MAPPING: {ROLE_INSERT, ROLE_REMOVE},
-    TYPE_ITERATOR: {ROLE_CURRENT, ROLE_HAS_CURRENT, ROLE_MOVE_NEXT},
+    TYPE_MUTABLE_MAPPING: {ROLE_INSERT, ROLE_REMOVE, ROLE_CLEAR, ROLE_GET_VIEW},
+    TYPE_ITERATOR: {
+        ROLE_CURRENT,
+        ROLE_HAS_CURRENT,
+        ROLE_MOVE_NEXT,
+        ROLE_GET_MANY,
+    },
     TYPE_AWAITABLE: {ROLE_STATUS, ROLE_COMPLETED, ROLE_GET_RESULTS},
     TYPE_STRINGABLE: {ROLE_TO_STRING},
     TYPE_CLOSEABLE: {ROLE_CLOSE},

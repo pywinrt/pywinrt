@@ -1582,7 +1582,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.Activ
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
             out uint32 return
     method move_next
@@ -1602,7 +1602,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> name=items
             out uint32 return
     method move_next
@@ -1622,7 +1622,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> name=items
             out uint32 return
     method move_next
@@ -1642,7 +1642,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> name=items
             out uint32 return
     method move_next
@@ -1662,7 +1662,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Storage.StorageLibrar
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageLibrary> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageLibrary> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageLibrary> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Storage.StorageLibrary name=items
             out uint32 return
     method move_next
@@ -1677,10 +1677,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Appli
     argument System.Guid
     argument Windows.ApplicationModel.Background.BackgroundTaskRegistration
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> shape=4 reverse=22 role=pair_key
             out guid return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> shape=4 reverse=43 role=pair_value
             out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration return
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> concrete
@@ -1691,10 +1691,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.Appli
     argument System.Guid
     argument Windows.ApplicationModel.Background.IBackgroundTaskRegistration
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> shape=4 reverse=22 role=pair_key
             out guid return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> shape=4 reverse=43 role=pair_value
             out interface type=Windows.ApplicationModel.Background.IBackgroundTaskRegistration return
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> concrete
@@ -1705,10 +1705,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.App
     argument System.String
     argument Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> shape=4 reverse=43 role=pair_value
             out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup return
 
 interface Windows.ApplicationModel.Background.ILocationTrigger
@@ -1746,7 +1746,7 @@ interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.Applicatio
             in guid name=key
             out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.BackgroundTaskRegistration> name=second
 
@@ -1773,7 +1773,7 @@ interface Windows.Foundation.Collections.IMapView<System.Guid,Windows.Applicatio
             in guid name=key
             out interface type=Windows.ApplicationModel.Background.IBackgroundTaskRegistration return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> name=second
 
@@ -1800,7 +1800,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,Windows.Applicat
             in string name=key
             out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup> name=second
 
@@ -2027,10 +2027,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.Activit
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=173 role=append
             in enum32 type=Windows.Devices.Sensors.ActivityType name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> return
@@ -2044,10 +2044,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.Activit
             fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=117 reverse=101 role=index_of
             in enum32 type=Windows.Devices.Sensors.ActivityType name=value
             out uint32 name=index
             out boolean return
@@ -2059,9 +2059,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.Activit
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=211 role=replace_all
             pass_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=124 role=set_at
@@ -2091,7 +2091,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Act
             fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Devices.Sensors.ActivityType name=value
             out uint32 name=index
             out boolean return

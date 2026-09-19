@@ -2214,7 +2214,7 @@ interface Windows.Foundation.Collections.IIterator<System.UInt32> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.UInt32> shape=117 reverse=101 role=get_many
             fill_array uint32 name=items
             out uint32 return
     method move_next
@@ -2234,7 +2234,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.Activ
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReading> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReading> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReading> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Sensors.ActivitySensorReading name=items
             out uint32 return
     method move_next
@@ -2254,7 +2254,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.Activ
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Sensors.ActivitySensorReadingChangeReport name=items
             out uint32 return
     method move_next
@@ -2274,7 +2274,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.Activ
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
             out uint32 return
     method move_next
@@ -2294,7 +2294,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.Detec
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.DetectedPerson> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.DetectedPerson> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.DetectedPerson> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Sensors.DetectedPerson name=items
             out uint32 return
     method move_next
@@ -2314,7 +2314,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.Pedom
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.PedometerReading> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.PedometerReading> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.PedometerReading> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Sensors.PedometerReading name=items
             out uint32 return
     method move_next
@@ -2334,7 +2334,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.Proxi
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ProximitySensorReading> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ProximitySensorReading> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ProximitySensorReading> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Sensors.ProximitySensorReading name=items
             out uint32 return
     method move_next
@@ -2354,7 +2354,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
             out uint32 return
     method move_next
@@ -2374,7 +2374,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> name=items
             out uint32 return
     method move_next
@@ -2394,7 +2394,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> 
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=117 reverse=101 role=get_many
             fill_array timespan name=items
             out uint32 return
     method move_next
@@ -2409,10 +2409,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Obje
     argument System.String
     argument System.Object
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43 role=pair_value
             out object return
 
 interface Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> concrete
@@ -2423,10 +2423,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.P
     argument Windows.Devices.Sensors.PedometerStepKind
     argument Windows.Devices.Sensors.PedometerReading
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> shape=4 reverse=22 role=pair_key
             out enum32 type=Windows.Devices.Sensors.PedometerStepKind return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> shape=4 reverse=43 role=pair_value
             out class type=Windows.Devices.Sensors.PedometerReading return
 
 interface Windows.Devices.Sensors.ILightSensor
@@ -2527,7 +2527,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,System.Object> c
             in string name=key
             out object return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
 
@@ -2554,7 +2554,7 @@ interface Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.Pedome
             in enum32 type=Windows.Devices.Sensors.PedometerStepKind name=key
             out class type=Windows.Devices.Sensors.PedometerReading return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> name=second
 
@@ -3575,10 +3575,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.Activit
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=173 role=append
             in enum32 type=Windows.Devices.Sensors.ActivityType name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Sensors.ActivityType> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Sensors.ActivityType> return
@@ -3592,10 +3592,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.Activit
             fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=117 reverse=101 role=index_of
             in enum32 type=Windows.Devices.Sensors.ActivityType name=value
             out uint32 name=index
             out boolean return
@@ -3607,9 +3607,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.Activit
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=211 role=replace_all
             pass_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Devices.Sensors.ActivityType> shape=51 reverse=124 role=set_at
@@ -3639,7 +3639,7 @@ interface Windows.Foundation.Collections.IVectorView<System.UInt32> concrete ite
             fill_array uint32 name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.UInt32> shape=117 reverse=66 role=index_of
             in uint32 name=value
             out uint32 name=index
             out boolean return
@@ -3667,7 +3667,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Act
             fill_array class type=Windows.Devices.Sensors.ActivitySensorReading name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Sensors.ActivitySensorReading name=value
             out uint32 name=index
             out boolean return
@@ -3695,7 +3695,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Act
             fill_array class type=Windows.Devices.Sensors.ActivitySensorReadingChangeReport name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Sensors.ActivitySensorReadingChangeReport name=value
             out uint32 name=index
             out boolean return
@@ -3723,7 +3723,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Act
             fill_array enum32 type=Windows.Devices.Sensors.ActivityType name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivityType> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Devices.Sensors.ActivityType name=value
             out uint32 name=index
             out boolean return
@@ -3751,7 +3751,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Det
             fill_array class type=Windows.Devices.Sensors.DetectedPerson name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.DetectedPerson> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.DetectedPerson> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Sensors.DetectedPerson name=value
             out uint32 name=index
             out boolean return
@@ -3779,7 +3779,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Ped
             fill_array class type=Windows.Devices.Sensors.PedometerReading name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Sensors.PedometerReading name=value
             out uint32 name=index
             out boolean return
@@ -3807,7 +3807,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.Pro
             fill_array class type=Windows.Devices.Sensors.ProximitySensorReading name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ProximitySensorReading> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ProximitySensorReading> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Sensors.ProximitySensorReading name=value
             out uint32 name=index
             out boolean return
@@ -3835,7 +3835,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan
             fill_array timespan name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan> shape=169 reverse=83
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan> shape=169 reverse=83 role=index_of
             in timespan name=value
             out uint32 name=index
             out boolean return

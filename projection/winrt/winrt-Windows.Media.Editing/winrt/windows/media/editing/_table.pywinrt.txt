@@ -445,7 +445,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
             out uint32 return
     method move_next
@@ -465,7 +465,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> 
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.TimeSpan> shape=117 reverse=101 role=get_many
             fill_array timespan name=items
             out uint32 return
     method move_next
@@ -485,7 +485,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.Imag
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.ImageStream> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.ImageStream> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.ImageStream> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Imaging.ImageStream name=items
             out uint32 return
     method move_next
@@ -505,7 +505,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Editing.Backgro
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.BackgroundAudioTrack> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.BackgroundAudioTrack> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Editing.BackgroundAudioTrack name=items
             out uint32 return
     method move_next
@@ -525,7 +525,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Editing.Embedde
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.EmbeddedAudioTrack> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.EmbeddedAudioTrack> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.EmbeddedAudioTrack> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Editing.EmbeddedAudioTrack name=items
             out uint32 return
     method move_next
@@ -545,7 +545,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaCl
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaClip> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaClip> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaClip> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Editing.MediaClip name=items
             out uint32 return
     method move_next
@@ -565,7 +565,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOv
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlay> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlay> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlay> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Editing.MediaOverlay name=items
             out uint32 return
     method move_next
@@ -585,7 +585,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOv
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlayLayer> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlayLayer> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Editing.MediaOverlayLayer name=items
             out uint32 return
     method move_next
@@ -605,7 +605,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioE
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=101 role=get_many
             fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
             out uint32 return
     method move_next
@@ -625,7 +625,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoE
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoEffectDefinition> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoEffectDefinition> shape=117 reverse=101 role=get_many
             fill_array interface type=Windows.Media.Effects.IVideoEffectDefinition name=items
             out uint32 return
     method move_next
@@ -640,10 +640,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Stri
     argument System.String
     argument System.String
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43 role=pair_value
             out string return
 
 interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete iterable mapping mutable_mapping
@@ -658,12 +658,12 @@ interface Windows.Foundation.Collections.IMap<System.String,System.String> concr
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
@@ -705,7 +705,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,System.String> c
             in string name=key
             out string return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
 
@@ -750,10 +750,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.Backgroun
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=173 role=append
             in class type=Windows.Media.Editing.BackgroundAudioTrack name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.BackgroundAudioTrack> return
@@ -767,10 +767,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.Backgroun
             fill_array class type=Windows.Media.Editing.BackgroundAudioTrack name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.BackgroundAudioTrack> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Editing.BackgroundAudioTrack name=value
             out uint32 name=index
             out boolean return
@@ -782,9 +782,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.Backgroun
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Editing.BackgroundAudioTrack name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> shape=51 reverse=124 role=set_at
@@ -802,10 +802,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=4 reverse=173 role=append
             in class type=Windows.Media.Editing.MediaClip name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaClip> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaClip> return
@@ -819,10 +819,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip
             fill_array class type=Windows.Media.Editing.MediaClip name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaClip> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Editing.MediaClip name=value
             out uint32 name=index
             out boolean return
@@ -834,9 +834,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Editing.MediaClip name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> shape=51 reverse=124 role=set_at
@@ -854,10 +854,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOver
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=4 reverse=173 role=append
             in class type=Windows.Media.Editing.MediaOverlay name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlay> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlay> return
@@ -871,10 +871,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOver
             fill_array class type=Windows.Media.Editing.MediaOverlay name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlay> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Editing.MediaOverlay name=value
             out uint32 name=index
             out boolean return
@@ -886,9 +886,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOver
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Editing.MediaOverlay name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> shape=51 reverse=124 role=set_at
@@ -906,10 +906,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOver
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=173 role=append
             in class type=Windows.Media.Editing.MediaOverlayLayer name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Editing.MediaOverlayLayer> return
@@ -923,10 +923,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOver
             fill_array class type=Windows.Media.Editing.MediaOverlayLayer name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlayLayer> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Editing.MediaOverlayLayer name=value
             out uint32 name=index
             out boolean return
@@ -938,9 +938,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOver
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Editing.MediaOverlayLayer name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> shape=51 reverse=124 role=set_at
@@ -958,10 +958,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEff
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=173 role=append
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IAudioEffectDefinition> return
@@ -975,10 +975,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEff
             fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=101 role=index_of
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
             out uint32 name=index
             out boolean return
@@ -990,9 +990,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEff
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=211 role=replace_all
             pass_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> shape=51 reverse=124 role=set_at
@@ -1010,10 +1010,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEff
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=173 role=append
             in interface type=Windows.Media.Effects.IVideoEffectDefinition name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Effects.IVideoEffectDefinition> return
@@ -1027,10 +1027,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEff
             fill_array interface type=Windows.Media.Effects.IVideoEffectDefinition name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVideoEffectDefinition> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=117 reverse=101 role=index_of
             in interface type=Windows.Media.Effects.IVideoEffectDefinition name=value
             out uint32 name=index
             out boolean return
@@ -1042,9 +1042,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEff
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=51 reverse=211 role=replace_all
             pass_array interface type=Windows.Media.Effects.IVideoEffectDefinition name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> shape=51 reverse=124 role=set_at
@@ -1074,7 +1074,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.Im
             fill_array class type=Windows.Graphics.Imaging.ImageStream name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream> shape=117 reverse=66 role=index_of
             in class type=Windows.Graphics.Imaging.ImageStream name=value
             out uint32 name=index
             out boolean return
@@ -1102,7 +1102,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.Backg
             fill_array class type=Windows.Media.Editing.BackgroundAudioTrack name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.BackgroundAudioTrack> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.BackgroundAudioTrack> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Editing.BackgroundAudioTrack name=value
             out uint32 name=index
             out boolean return
@@ -1130,7 +1130,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.Embed
             fill_array class type=Windows.Media.Editing.EmbeddedAudioTrack name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Editing.EmbeddedAudioTrack name=value
             out uint32 name=index
             out boolean return
@@ -1158,7 +1158,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.Media
             fill_array class type=Windows.Media.Editing.MediaClip name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaClip> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaClip> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Editing.MediaClip name=value
             out uint32 name=index
             out boolean return
@@ -1186,7 +1186,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.Media
             fill_array class type=Windows.Media.Editing.MediaOverlay name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlay> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlay> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Editing.MediaOverlay name=value
             out uint32 name=index
             out boolean return
@@ -1214,7 +1214,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.Media
             fill_array class type=Windows.Media.Editing.MediaOverlayLayer name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlayLayer> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.MediaOverlayLayer> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Editing.MediaOverlayLayer name=value
             out uint32 name=index
             out boolean return
@@ -1242,7 +1242,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudi
             fill_array interface type=Windows.Media.Effects.IAudioEffectDefinition name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IAudioEffectDefinition> shape=117 reverse=66 role=index_of
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=value
             out uint32 name=index
             out boolean return
@@ -1270,7 +1270,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVide
             fill_array interface type=Windows.Media.Effects.IVideoEffectDefinition name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVideoEffectDefinition> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.IVideoEffectDefinition> shape=117 reverse=66 role=index_of
             in interface type=Windows.Media.Effects.IVideoEffectDefinition name=value
             out uint32 name=index
             out boolean return

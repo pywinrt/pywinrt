@@ -195,7 +195,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Rfc
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService name=items
             out uint32 return
     method move_next
@@ -215,7 +215,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.UInt32,Windows.Storage.Streams.IBuffer>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.UInt32,Windows.Storage.Streams.IBuffer>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.UInt32,Windows.Storage.Streams.IBuffer>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.UInt32,Windows.Storage.Streams.IBuffer> name=items
             out uint32 return
     method move_next
@@ -230,10 +230,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.UInt32,Windows.Sto
     argument System.UInt32
     argument Windows.Storage.Streams.IBuffer
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.UInt32,Windows.Storage.Streams.IBuffer> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.UInt32,Windows.Storage.Streams.IBuffer> shape=4 reverse=22 role=pair_key
             out uint32 return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.UInt32,Windows.Storage.Streams.IBuffer> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.UInt32,Windows.Storage.Streams.IBuffer> shape=4 reverse=43 role=pair_value
             out interface type=Windows.Storage.Streams.IBuffer return
 
 interface Windows.Foundation.Collections.IMap<System.UInt32,Windows.Storage.Streams.IBuffer> concrete iterable mapping mutable_mapping
@@ -248,12 +248,12 @@ interface Windows.Foundation.Collections.IMap<System.UInt32,Windows.Storage.Stre
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.UInt32,Windows.Storage.Streams.IBuffer> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.UInt32,Windows.Storage.Streams.IBuffer> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.UInt32,Windows.Storage.Streams.IBuffer> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.UInt32,Windows.Storage.Streams.IBuffer>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.UInt32,Windows.Storage.Streams.IBuffer>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.UInt32,Windows.Storage.Streams.IBuffer> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.UInt32,Windows.Storage.Streams.IBuffer> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.UInt32,Windows.Storage.Streams.IBuffer> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.UInt32,Windows.Storage.Streams.IBuffer> shape=51 reverse=65 role=has_key
@@ -295,7 +295,7 @@ interface Windows.Foundation.Collections.IMapView<System.UInt32,Windows.Storage.
             in uint32 name=key
             out interface type=Windows.Storage.Streams.IBuffer return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.UInt32,Windows.Storage.Streams.IBuffer> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.UInt32,Windows.Storage.Streams.IBuffer> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.UInt32,Windows.Storage.Streams.IBuffer> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.UInt32,Windows.Storage.Streams.IBuffer> name=second
 
@@ -355,7 +355,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.R
             fill_array class type=Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService name=value
             out uint32 name=index
             out boolean return

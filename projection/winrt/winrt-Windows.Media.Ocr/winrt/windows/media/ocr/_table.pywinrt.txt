@@ -85,7 +85,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Globalization.Languag
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Globalization.Language> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Globalization.Language> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Globalization.Language> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Globalization.Language name=items
             out uint32 return
     method move_next
@@ -105,7 +105,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Ocr.OcrLine> co
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Ocr.OcrLine> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Ocr.OcrLine> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Ocr.OcrLine> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Ocr.OcrLine name=items
             out uint32 return
     method move_next
@@ -125,7 +125,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Ocr.OcrWord> co
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Ocr.OcrWord> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Ocr.OcrWord> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Ocr.OcrWord> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Ocr.OcrWord name=items
             out uint32 return
     method move_next
@@ -298,7 +298,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Globalization.Langu
             fill_array class type=Windows.Globalization.Language name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> shape=117 reverse=66 role=index_of
             in class type=Windows.Globalization.Language name=value
             out uint32 name=index
             out boolean return
@@ -326,7 +326,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrLine> 
             fill_array class type=Windows.Media.Ocr.OcrLine name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrLine> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrLine> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Ocr.OcrLine name=value
             out uint32 name=index
             out boolean return
@@ -354,7 +354,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrWord> 
             fill_array class type=Windows.Media.Ocr.OcrWord name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrWord> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrWord> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Ocr.OcrWord name=value
             out uint32 name=index
             out boolean return

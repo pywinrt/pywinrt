@@ -375,7 +375,13 @@ Member flags:
 | 8-12 | `role=` | protocol role, see below |
 
 The protocol role says which Python operation, if any, this member is the one
-behind:
+behind. It is read in both directions: `len(v)` on a projected collection calls
+the member whose role is `size`, and a Python list handed to WinRT where an
+`IVector<T>` is expected answers that interface's `Size` slot from the same
+role. The second direction is why roles 21 to 29 are here at all - nothing on
+the Python side of a projected collection calls `GetView` or `IndexOf`, but the
+vtable of a collection the runtime assembles over a Python object has a slot
+for each of them and has to know what to put there.
 
 | value | role | declared by |
 |---|---|---|
@@ -399,7 +405,16 @@ behind:
 | 17 | `to_string` | `IStringable` |
 | 18 | `value` | `IReference<T>` |
 | 19 | `close` | `IClosable` |
-| 20 | `get_many` | `IVector<T>`, `IVectorView<T>` |
+| 20 | `get_many` | `IVector<T>`, `IVectorView<T>`, `IIterator<T>` |
+| 21 | `get_view` | `IVector<T>`, `IMap<K, V>` |
+| 22 | `index_of` | `IVector<T>`, `IVectorView<T>` |
+| 23 | `append` | `IVector<T>` |
+| 24 | `remove_at_end` | `IVector<T>` |
+| 25 | `clear` | `IVector<T>`, `IMap<K, V>` |
+| 26 | `replace_all` | `IVector<T>` |
+| 27 | `split` | `IMapView<K, V>` |
+| 28 | `pair_key` | `IKeyValuePair<K, V>` |
+| 29 | `pair_value` | `IKeyValuePair<K, V>` |
 
 The type flags say which protocols a type implements and the roles say which
 members those protocols call, so the two are written together. A name would
