@@ -242,6 +242,10 @@ class Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate python_type
 enum Microsoft.Windows.ApplicationModel.Resources.ResourceCandidateKind python_type
     py ResourceCandidateKind
     signature enum(Microsoft.Windows.ApplicationModel.Resources.ResourceCandidateKind;i4)
+    constant UNKNOWN 0
+    constant STRING 1
+    constant FILE_PATH 2
+    constant EMBEDDED_DATA 3
 
 class Microsoft.Windows.ApplicationModel.Resources.ResourceContext python_type
     py ResourceContext

@@ -23,6 +23,8 @@ class Windows.Devices.Adc.AdcChannel python_type closeable
 enum Windows.Devices.Adc.AdcChannelMode python_type
     py AdcChannelMode
     signature enum(Windows.Devices.Adc.AdcChannelMode;i4)
+    constant SINGLE_ENDED 0
+    constant DIFFERENTIAL 1
 
 class Windows.Devices.Adc.AdcController python_type
     py AdcController

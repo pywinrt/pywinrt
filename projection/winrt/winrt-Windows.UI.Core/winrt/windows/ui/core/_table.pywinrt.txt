@@ -30,6 +30,9 @@ class Windows.UI.Core.AcceleratorKeyEventArgs python_type
 enum Windows.UI.Core.AppViewBackButtonVisibility python_type
     py AppViewBackButtonVisibility
     signature enum(Windows.UI.Core.AppViewBackButtonVisibility;i4)
+    constant VISIBLE 0
+    constant COLLAPSED 1
+    constant DISABLED 2
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
@@ -119,6 +122,15 @@ class Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs python_type
 enum Windows.UI.Core.CoreAcceleratorKeyEventType python_type
     py CoreAcceleratorKeyEventType
     signature enum(Windows.UI.Core.CoreAcceleratorKeyEventType;i4)
+    constant CHARACTER 2
+    constant DEAD_CHARACTER 3
+    constant KEY_DOWN 0
+    constant KEY_UP 1
+    constant SYSTEM_CHARACTER 6
+    constant SYSTEM_DEAD_CHARACTER 7
+    constant SYSTEM_KEY_DOWN 4
+    constant SYSTEM_KEY_UP 5
+    constant UNICODE_CHARACTER 8
 
 class Windows.UI.Core.CoreAcceleratorKeys python_type
     py CoreAcceleratorKeys
@@ -292,6 +304,22 @@ class Windows.UI.Core.CoreCursor python_type
 enum Windows.UI.Core.CoreCursorType python_type
     py CoreCursorType
     signature enum(Windows.UI.Core.CoreCursorType;i4)
+    constant ARROW 0
+    constant CROSS 1
+    constant CUSTOM 2
+    constant HAND 3
+    constant HELP 4
+    constant IBEAM 5
+    constant SIZE_ALL 6
+    constant SIZE_NORTHEAST_SOUTHWEST 7
+    constant SIZE_NORTH_SOUTH 8
+    constant SIZE_NORTHWEST_SOUTHEAST 9
+    constant SIZE_WEST_EAST 10
+    constant UNIVERSAL_NO 11
+    constant UP_ARROW 12
+    constant WAIT 13
+    constant PIN 14
+    constant PERSON 15
 
 class Windows.UI.Core.CoreDispatcher python_type
     py CoreDispatcher
@@ -348,10 +376,20 @@ class Windows.UI.Core.CoreDispatcher python_type
 enum Windows.UI.Core.CoreDispatcherPriority python_type
     py CoreDispatcherPriority
     signature enum(Windows.UI.Core.CoreDispatcherPriority;i4)
+    constant IDLE -2
+    constant LOW -1
+    constant NORMAL 0
+    constant HIGH 1
 
-enum Windows.UI.Core.CoreIndependentInputFilters python_type
+enum Windows.UI.Core.CoreIndependentInputFilters python_type flags_enum
     py CoreIndependentInputFilters
     signature enum(Windows.UI.Core.CoreIndependentInputFilters;u4)
+    constant NONE 0x0
+    constant MOUSE_BUTTON 0x1
+    constant MOUSE_WHEEL 0x2
+    constant MOUSE_HOVER 0x4
+    constant PEN_WITH_BARREL 0x8
+    constant PEN_INVERTED 0x10
 
 class Windows.UI.Core.CoreIndependentInputSource python_type
     py CoreIndependentInputSource
@@ -492,9 +530,13 @@ class Windows.UI.Core.CoreIndependentInputSourceController python_type closeable
             in enum_u32 type=Windows.UI.Core.CoreIndependentInputFilters name=required
             in enum_u32 type=Windows.UI.Core.CoreIndependentInputFilters name=excluded
 
-enum Windows.UI.Core.CoreInputDeviceTypes python_type
+enum Windows.UI.Core.CoreInputDeviceTypes python_type flags_enum
     py CoreInputDeviceTypes
     signature enum(Windows.UI.Core.CoreInputDeviceTypes;u4)
+    constant NONE 0x0
+    constant TOUCH 0x1
+    constant PEN 0x2
+    constant MOUSE 0x4
 
 struct Windows.UI.Core.CorePhysicalKeyStatus python_type
     py CorePhysicalKeyStatus
@@ -509,6 +551,10 @@ struct Windows.UI.Core.CorePhysicalKeyStatus python_type
 enum Windows.UI.Core.CoreProcessEventsOption python_type
     py CoreProcessEventsOption
     signature enum(Windows.UI.Core.CoreProcessEventsOption;i4)
+    constant PROCESS_ONE_AND_ALL_PENDING 0
+    constant PROCESS_ONE_IF_PRESENT 1
+    constant PROCESS_UNTIL_QUIT 2
+    constant PROCESS_ALL_IF_PRESENT 3
 
 struct Windows.UI.Core.CoreProximityEvaluation python_type
     py CoreProximityEvaluation
@@ -519,10 +565,15 @@ struct Windows.UI.Core.CoreProximityEvaluation python_type
 enum Windows.UI.Core.CoreProximityEvaluationScore python_type
     py CoreProximityEvaluationScore
     signature enum(Windows.UI.Core.CoreProximityEvaluationScore;i4)
+    constant CLOSEST 0
+    constant FARTHEST 2147483647
 
-enum Windows.UI.Core.CoreVirtualKeyStates python_type
+enum Windows.UI.Core.CoreVirtualKeyStates python_type flags_enum
     py CoreVirtualKeyStates
     signature enum(Windows.UI.Core.CoreVirtualKeyStates;u4)
+    constant NONE 0x0
+    constant DOWN 0x1
+    constant LOCKED 0x2
 
 class Windows.UI.Core.CoreWindow python_type
     py CoreWindow
@@ -744,10 +795,17 @@ class Windows.UI.Core.CoreWindow python_type
 enum Windows.UI.Core.CoreWindowActivationMode python_type
     py CoreWindowActivationMode
     signature enum(Windows.UI.Core.CoreWindowActivationMode;i4)
+    constant NONE 0
+    constant DEACTIVATED 1
+    constant ACTIVATED_NOT_FOREGROUND 2
+    constant ACTIVATED_IN_FOREGROUND 3
 
 enum Windows.UI.Core.CoreWindowActivationState python_type
     py CoreWindowActivationState
     signature enum(Windows.UI.Core.CoreWindowActivationState;i4)
+    constant CODE_ACTIVATED 0
+    constant DEACTIVATED 1
+    constant POINTER_ACTIVATED 2
 
 class Windows.UI.Core.CoreWindowDialog activatable python_type
     py CoreWindowDialog
@@ -819,6 +877,8 @@ class Windows.UI.Core.CoreWindowEventArgs python_type
 enum Windows.UI.Core.CoreWindowFlowDirection python_type
     py CoreWindowFlowDirection
     signature enum(Windows.UI.Core.CoreWindowFlowDirection;i4)
+    constant LEFT_TO_RIGHT 0
+    constant RIGHT_TO_LEFT 1
 
 class Windows.UI.Core.CoreWindowFlyout python_type
     py CoreWindowFlyout

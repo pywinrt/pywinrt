@@ -686,10 +686,21 @@ class Windows.Web.UI.WebViewControlPermissionRequestedEventArgs python_type
 enum Windows.Web.UI.WebViewControlPermissionState python_type
     py WebViewControlPermissionState
     signature enum(Windows.Web.UI.WebViewControlPermissionState;i4)
+    constant UNKNOWN 0
+    constant DEFER 1
+    constant ALLOW 2
+    constant DENY 3
 
 enum Windows.Web.UI.WebViewControlPermissionType python_type
     py WebViewControlPermissionType
     signature enum(Windows.Web.UI.WebViewControlPermissionType;i4)
+    constant GEOLOCATION 0
+    constant UNLIMITED_INDEXED_DB_QUOTA 1
+    constant MEDIA 2
+    constant POINTER_LOCK 3
+    constant WEB_NOTIFICATIONS 4
+    constant SCREEN 5
+    constant IMMERSIVE_VIEW 6
 
 class Windows.Web.UI.WebViewControlScriptNotifyEventArgs python_type
     py WebViewControlScriptNotifyEventArgs

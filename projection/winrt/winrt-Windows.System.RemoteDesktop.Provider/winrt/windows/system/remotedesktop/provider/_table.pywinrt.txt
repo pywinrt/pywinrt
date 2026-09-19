@@ -203,6 +203,10 @@ class Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo py
 enum Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionStatus python_type
     py RemoteDesktopConnectionStatus
     signature enum(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionStatus;i4)
+    constant CONNECTING 0
+    constant CONNECTED 1
+    constant USER_INPUT_NEEDED 2
+    constant DISCONNECTED 3
 
 class Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo python_type
     py RemoteDesktopInfo
@@ -225,6 +229,11 @@ class Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo python_type
 enum Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction python_type
     py RemoteDesktopLocalAction
     signature enum(Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction;i4)
+    constant SHOW_BLUETOOTH_SETTINGS 0
+    constant SHOW_SYSTEM_SOUND_SETTINGS 1
+    constant SHOW_SYSTEM_DISPLAY_SETTINGS 2
+    constant SHOW_SYSTEM_ACCOUNT_SETTINGS 3
+    constant SHOW_LOCAL_SETTINGS 4
 
 class Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar static python_type
     py RemoteDesktopRegistrar

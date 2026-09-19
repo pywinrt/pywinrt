@@ -57,10 +57,15 @@ class Microsoft.Graphics.Display.DisplayAdvancedColorInfo python_type
 enum Microsoft.Graphics.Display.DisplayAdvancedColorKind python_type
     py DisplayAdvancedColorKind
     signature enum(Microsoft.Graphics.Display.DisplayAdvancedColorKind;i4)
+    constant STANDARD_DYNAMIC_RANGE 0
+    constant WIDE_COLOR_GAMUT 1
+    constant HIGH_DYNAMIC_RANGE 2
 
 enum Microsoft.Graphics.Display.DisplayHdrMetadataFormat python_type
     py DisplayHdrMetadataFormat
     signature enum(Microsoft.Graphics.Display.DisplayHdrMetadataFormat;i4)
+    constant HDR10 0
+    constant HDR10_PLUS 1
 
 class Microsoft.Graphics.Display.DisplayInformation python_type closeable
     py DisplayInformation

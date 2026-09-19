@@ -76,6 +76,9 @@ class Windows.Gaming.Preview.GamesEnumeration.GameList static python_type
 enum Windows.Gaming.Preview.GamesEnumeration.GameListCategory python_type
     py GameListCategory
     signature enum(Windows.Gaming.Preview.GamesEnumeration.GameListCategory;i4)
+    constant CANDIDATE 0
+    constant CONFIRMED_BY_SYSTEM 1
+    constant CONFIRMED_BY_USER 2
 
 delegate Windows.Gaming.Preview.GamesEnumeration.GameListChangedEventHandler python_type
     py GameListChangedEventHandler
@@ -138,6 +141,10 @@ class Windows.Gaming.Preview.GamesEnumeration.GameListEntry python_type
 enum Windows.Gaming.Preview.GamesEnumeration.GameListEntryLaunchableState python_type
     py GameListEntryLaunchableState
     signature enum(Windows.Gaming.Preview.GamesEnumeration.GameListEntryLaunchableState;i4)
+    constant NOT_LAUNCHABLE 0
+    constant BY_LAST_RUNNING_FULL_PATH 1
+    constant BY_USER_PROVIDED_PATH 2
+    constant BY_TILE 3
 
 delegate Windows.Gaming.Preview.GamesEnumeration.GameListRemovedEventHandler python_type
     py GameListRemovedEventHandler

@@ -101,10 +101,18 @@ class Windows.Media.DialProtocol.DialApp python_type
 enum Windows.Media.DialProtocol.DialAppLaunchResult python_type
     py DialAppLaunchResult
     signature enum(Windows.Media.DialProtocol.DialAppLaunchResult;i4)
+    constant LAUNCHED 0
+    constant FAILED_TO_LAUNCH 1
+    constant NOT_FOUND 2
+    constant NETWORK_FAILURE 3
 
 enum Windows.Media.DialProtocol.DialAppState python_type
     py DialAppState
     signature enum(Windows.Media.DialProtocol.DialAppState;i4)
+    constant UNKNOWN 0
+    constant STOPPED 1
+    constant RUNNING 2
+    constant NETWORK_FAILURE 3
 
 class Windows.Media.DialProtocol.DialAppStateDetails python_type
     py DialAppStateDetails
@@ -121,6 +129,10 @@ class Windows.Media.DialProtocol.DialAppStateDetails python_type
 enum Windows.Media.DialProtocol.DialAppStopResult python_type
     py DialAppStopResult
     signature enum(Windows.Media.DialProtocol.DialAppStopResult;i4)
+    constant STOPPED 0
+    constant STOP_FAILED 1
+    constant OPERATION_NOT_SUPPORTED 2
+    constant NETWORK_FAILURE 3
 
 class Windows.Media.DialProtocol.DialDevice python_type
     py DialDevice
@@ -158,6 +170,12 @@ class Windows.Media.DialProtocol.DialDevice python_type
 enum Windows.Media.DialProtocol.DialDeviceDisplayStatus python_type
     py DialDeviceDisplayStatus
     signature enum(Windows.Media.DialProtocol.DialDeviceDisplayStatus;i4)
+    constant NONE 0
+    constant CONNECTING 1
+    constant CONNECTED 2
+    constant DISCONNECTING 3
+    constant DISCONNECTED 4
+    constant ERROR 5
 
 class Windows.Media.DialProtocol.DialDevicePicker activatable python_type
     py DialDevicePicker

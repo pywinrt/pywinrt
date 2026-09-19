@@ -341,6 +341,13 @@ class Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterConverter activata
 enum Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterKind python_type
     py CornerRadiusFilterKind
     signature enum(Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterKind;i4)
+    constant NONE 0
+    constant TOP 1
+    constant RIGHT 2
+    constant BOTTOM 3
+    constant LEFT 4
+    constant TOP_LEFT_VALUE 5
+    constant BOTTOM_RIGHT_VALUE 6
 
 class Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverter activatable python_type
     py CornerRadiusToThicknessConverter
@@ -387,6 +394,18 @@ class Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverter act
 enum Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverterKind python_type
     py CornerRadiusToThicknessConverterKind
     signature enum(Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverterKind;i4)
+    constant FILTER_TOP_AND_BOTTOM_FROM_LEFT 0
+    constant FILTER_TOP_AND_BOTTOM_FROM_RIGHT 1
+    constant FILTER_LEFT_AND_RIGHT_FROM_TOP 2
+    constant FILTER_LEFT_AND_RIGHT_FROM_BOTTOM 3
+    constant FILTER_TOP_FROM_TOP_LEFT 4
+    constant FILTER_TOP_FROM_TOP_RIGHT 5
+    constant FILTER_RIGHT_FROM_TOP_RIGHT 6
+    constant FILTER_RIGHT_FROM_BOTTOM_RIGHT 7
+    constant FILTER_BOTTOM_FROM_BOTTOM_RIGHT 8
+    constant FILTER_BOTTOM_FROM_BOTTOM_LEFT 9
+    constant FILTER_LEFT_FROM_BOTTOM_LEFT 10
+    constant FILTER_LEFT_FROM_TOP_LEFT 11
 
 interface Microsoft.UI.Xaml.Controls.Primitives.IAutoSuggestBoxHelper
     guid 1e56736c-8248-57d9-ac04-e4e7dcc3f9e1

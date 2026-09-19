@@ -61,10 +61,16 @@ class Microsoft.UI.Xaml.Media.AcrylicBrush composable python_type
 enum Microsoft.UI.Xaml.Media.AlignmentX python_type
     py AlignmentX
     signature enum(Microsoft.UI.Xaml.Media.AlignmentX;i4)
+    constant LEFT 0
+    constant CENTER 1
+    constant RIGHT 2
 
 enum Microsoft.UI.Xaml.Media.AlignmentY python_type
     py AlignmentY
     signature enum(Microsoft.UI.Xaml.Media.AlignmentY;i4)
+    constant TOP 0
+    constant CENTER 1
+    constant BOTTOM 2
 
 class Microsoft.UI.Xaml.Media.ArcSegment activatable python_type
     py ArcSegment
@@ -264,6 +270,8 @@ class Microsoft.UI.Xaml.Media.BrushCollection activatable python_type iterable s
 enum Microsoft.UI.Xaml.Media.BrushMappingMode python_type
     py BrushMappingMode
     signature enum(Microsoft.UI.Xaml.Media.BrushMappingMode;i4)
+    constant ABSOLUTE 0
+    constant RELATIVE_TO_BOUNDING_BOX 1
 
 class Microsoft.UI.Xaml.Media.CacheMode composable python_type
     py CacheMode
@@ -276,6 +284,8 @@ class Microsoft.UI.Xaml.Media.CacheMode composable python_type
 enum Microsoft.UI.Xaml.Media.ColorInterpolationMode python_type
     py ColorInterpolationMode
     signature enum(Microsoft.UI.Xaml.Media.ColorInterpolationMode;i4)
+    constant SC_RGB_LINEAR_INTERPOLATION 0
+    constant S_RGB_LINEAR_INTERPOLATION 1
 
 class Microsoft.UI.Xaml.Media.CompositeTransform activatable python_type
     py CompositeTransform
@@ -459,6 +469,9 @@ class Microsoft.UI.Xaml.Media.DoubleCollection activatable python_type iterable 
 enum Microsoft.UI.Xaml.Media.ElementCompositeMode python_type
     py ElementCompositeMode
     signature enum(Microsoft.UI.Xaml.Media.ElementCompositeMode;i4)
+    constant INHERIT 0
+    constant SOURCE_OVER 1
+    constant MIN_BLEND 2
 
 class Microsoft.UI.Xaml.Media.EllipseGeometry activatable python_type
     py EllipseGeometry
@@ -520,10 +533,15 @@ delegate Windows.Foundation.EventHandler<System.Object> concrete
 enum Microsoft.UI.Xaml.Media.FastPlayFallbackBehaviour python_type
     py FastPlayFallbackBehaviour
     signature enum(Microsoft.UI.Xaml.Media.FastPlayFallbackBehaviour;i4)
+    constant SKIP 0
+    constant HIDE 1
+    constant DISABLE 2
 
 enum Microsoft.UI.Xaml.Media.FillRule python_type
     py FillRule
     signature enum(Microsoft.UI.Xaml.Media.FillRule;i4)
+    constant EVEN_ODD 0
+    constant NONZERO 1
 
 class Microsoft.UI.Xaml.Media.FontFamily composable python_type
     py FontFamily
@@ -732,6 +750,9 @@ class Microsoft.UI.Xaml.Media.GradientBrush composable python_type
 enum Microsoft.UI.Xaml.Media.GradientSpreadMethod python_type
     py GradientSpreadMethod
     signature enum(Microsoft.UI.Xaml.Media.GradientSpreadMethod;i4)
+    constant PAD 0
+    constant REFLECT 1
+    constant REPEAT 2
 
 class Microsoft.UI.Xaml.Media.GradientStop activatable python_type
     py GradientStop
@@ -2480,6 +2501,10 @@ class Microsoft.UI.Xaml.Media.LoadedImageSourceLoadCompletedEventArgs python_typ
 enum Microsoft.UI.Xaml.Media.LoadedImageSourceLoadStatus python_type
     py LoadedImageSourceLoadStatus
     signature enum(Microsoft.UI.Xaml.Media.LoadedImageSourceLoadStatus;i4)
+    constant SUCCESS 0
+    constant NETWORK_ERROR 1
+    constant INVALID_FORMAT 2
+    constant OTHER 3
 
 class Microsoft.UI.Xaml.Media.LoadedImageSurface python_type closeable
     py LoadedImageSurface
@@ -2824,10 +2849,17 @@ class Microsoft.UI.Xaml.Media.PathSegmentCollection activatable python_type iter
 enum Microsoft.UI.Xaml.Media.PenLineCap python_type
     py PenLineCap
     signature enum(Microsoft.UI.Xaml.Media.PenLineCap;i4)
+    constant FLAT 0
+    constant SQUARE 1
+    constant ROUND 2
+    constant TRIANGLE 3
 
 enum Microsoft.UI.Xaml.Media.PenLineJoin python_type
     py PenLineJoin
     signature enum(Microsoft.UI.Xaml.Media.PenLineJoin;i4)
+    constant MITER 0
+    constant BEVEL 1
+    constant ROUND 2
 
 class Microsoft.UI.Xaml.Media.PlaneProjection activatable python_type
     py PlaneProjection
@@ -3354,14 +3386,24 @@ class Microsoft.UI.Xaml.Media.SolidColorBrush activatable python_type
 enum Microsoft.UI.Xaml.Media.Stretch python_type
     py Stretch
     signature enum(Microsoft.UI.Xaml.Media.Stretch;i4)
+    constant NONE 0
+    constant FILL 1
+    constant UNIFORM 2
+    constant UNIFORM_TO_FILL 3
 
 enum Microsoft.UI.Xaml.Media.StyleSimulations python_type
     py StyleSimulations
     signature enum(Microsoft.UI.Xaml.Media.StyleSimulations;i4)
+    constant NONE 0
+    constant BOLD_SIMULATION 1
+    constant ITALIC_SIMULATION 2
+    constant BOLD_ITALIC_SIMULATION 3
 
 enum Microsoft.UI.Xaml.Media.SweepDirection python_type
     py SweepDirection
     signature enum(Microsoft.UI.Xaml.Media.SweepDirection;i4)
+    constant COUNTERCLOCKWISE 0
+    constant CLOCKWISE 1
 
 class Microsoft.UI.Xaml.Media.SystemBackdrop composable python_type
     py SystemBackdrop

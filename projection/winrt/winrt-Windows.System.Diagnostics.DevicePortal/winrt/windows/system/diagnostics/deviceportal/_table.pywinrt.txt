@@ -65,6 +65,12 @@ class Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventA
 enum Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedReason python_type
     py DevicePortalConnectionClosedReason
     signature enum(Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedReason;i4)
+    constant UNKNOWN 0
+    constant RESOURCE_LIMITS_EXCEEDED 1
+    constant PROTOCOL_ERROR 2
+    constant NOT_AUTHORIZED 3
+    constant USER_NOT_PRESENT 4
+    constant SERVICE_TERMINATED 5
 
 class Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs python_type
     py DevicePortalConnectionRequestReceivedEventArgs

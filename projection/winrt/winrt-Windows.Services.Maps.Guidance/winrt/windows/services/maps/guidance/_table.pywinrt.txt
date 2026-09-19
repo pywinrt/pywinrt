@@ -5,10 +5,19 @@ namespace Windows.Services.Maps.Guidance
 enum Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem python_type
     py GuidanceAudioMeasurementSystem
     signature enum(Windows.Services.Maps.Guidance.GuidanceAudioMeasurementSystem;i4)
+    constant METERS 0
+    constant MILES_AND_YARDS 1
+    constant MILES_AND_FEET 2
 
 enum Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind python_type
     py GuidanceAudioNotificationKind
     signature enum(Windows.Services.Maps.Guidance.GuidanceAudioNotificationKind;i4)
+    constant MANEUVER 0
+    constant ROUTE 1
+    constant GPS 2
+    constant SPEED_LIMIT 3
+    constant TRAFFIC 4
+    constant TRAFFIC_CAMERA 5
 
 class Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs python_type
     py GuidanceAudioNotificationRequestedEventArgs
@@ -25,9 +34,16 @@ class Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs
         get get_AudioText slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceAudioNotificationRequestedEventArgs shape=4 reverse=62
             out string return
 
-enum Windows.Services.Maps.Guidance.GuidanceAudioNotifications python_type
+enum Windows.Services.Maps.Guidance.GuidanceAudioNotifications python_type flags_enum
     py GuidanceAudioNotifications
     signature enum(Windows.Services.Maps.Guidance.GuidanceAudioNotifications;u4)
+    constant NONE 0x0
+    constant MANEUVER 0x1
+    constant ROUTE 0x2
+    constant GPS 0x4
+    constant SPEED_LIMIT 0x8
+    constant TRAFFIC 0x10
+    constant TRAFFIC_CAMERA 0x20
 
 class Windows.Services.Maps.Guidance.GuidanceLaneInfo python_type
     py GuidanceLaneInfo
@@ -41,9 +57,20 @@ class Windows.Services.Maps.Guidance.GuidanceLaneInfo python_type
         get get_LaneMarkers slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.Guidance.IGuidanceLaneInfo shape=4 reverse=22
             out enum_u32 type=Windows.Services.Maps.Guidance.GuidanceLaneMarkers return
 
-enum Windows.Services.Maps.Guidance.GuidanceLaneMarkers python_type
+enum Windows.Services.Maps.Guidance.GuidanceLaneMarkers python_type flags_enum
     py GuidanceLaneMarkers
     signature enum(Windows.Services.Maps.Guidance.GuidanceLaneMarkers;u4)
+    constant NONE 0x0
+    constant LIGHT_RIGHT 0x1
+    constant RIGHT 0x2
+    constant HARD_RIGHT 0x4
+    constant STRAIGHT 0x8
+    constant U_TURN_LEFT 0x10
+    constant HARD_LEFT 0x20
+    constant LEFT 0x40
+    constant LIGHT_LEFT 0x80
+    constant U_TURN_RIGHT 0x100
+    constant UNKNOWN 0xFFFFFFFF
 
 class Windows.Services.Maps.Guidance.GuidanceManeuver python_type
     py GuidanceManeuver
@@ -90,6 +117,54 @@ class Windows.Services.Maps.Guidance.GuidanceManeuver python_type
 enum Windows.Services.Maps.Guidance.GuidanceManeuverKind python_type
     py GuidanceManeuverKind
     signature enum(Windows.Services.Maps.Guidance.GuidanceManeuverKind;i4)
+    constant NONE 0
+    constant GO_STRAIGHT 1
+    constant U_TURN_RIGHT 2
+    constant U_TURN_LEFT 3
+    constant TURN_KEEP_RIGHT 4
+    constant TURN_LIGHT_RIGHT 5
+    constant TURN_RIGHT 6
+    constant TURN_HARD_RIGHT 7
+    constant KEEP_MIDDLE 8
+    constant TURN_KEEP_LEFT 9
+    constant TURN_LIGHT_LEFT 10
+    constant TURN_LEFT 11
+    constant TURN_HARD_LEFT 12
+    constant FREEWAY_ENTER_RIGHT 13
+    constant FREEWAY_ENTER_LEFT 14
+    constant FREEWAY_LEAVE_RIGHT 15
+    constant FREEWAY_LEAVE_LEFT 16
+    constant FREEWAY_KEEP_RIGHT 17
+    constant FREEWAY_KEEP_LEFT 18
+    constant TRAFFIC_CIRCLE_RIGHT1 19
+    constant TRAFFIC_CIRCLE_RIGHT2 20
+    constant TRAFFIC_CIRCLE_RIGHT3 21
+    constant TRAFFIC_CIRCLE_RIGHT4 22
+    constant TRAFFIC_CIRCLE_RIGHT5 23
+    constant TRAFFIC_CIRCLE_RIGHT6 24
+    constant TRAFFIC_CIRCLE_RIGHT7 25
+    constant TRAFFIC_CIRCLE_RIGHT8 26
+    constant TRAFFIC_CIRCLE_RIGHT9 27
+    constant TRAFFIC_CIRCLE_RIGHT10 28
+    constant TRAFFIC_CIRCLE_RIGHT11 29
+    constant TRAFFIC_CIRCLE_RIGHT12 30
+    constant TRAFFIC_CIRCLE_LEFT1 31
+    constant TRAFFIC_CIRCLE_LEFT2 32
+    constant TRAFFIC_CIRCLE_LEFT3 33
+    constant TRAFFIC_CIRCLE_LEFT4 34
+    constant TRAFFIC_CIRCLE_LEFT5 35
+    constant TRAFFIC_CIRCLE_LEFT6 36
+    constant TRAFFIC_CIRCLE_LEFT7 37
+    constant TRAFFIC_CIRCLE_LEFT8 38
+    constant TRAFFIC_CIRCLE_LEFT9 39
+    constant TRAFFIC_CIRCLE_LEFT10 40
+    constant TRAFFIC_CIRCLE_LEFT11 41
+    constant TRAFFIC_CIRCLE_LEFT12 42
+    constant START 43
+    constant END 44
+    constant TAKE_FERRY 45
+    constant PASS_TRANSIT_STATION 46
+    constant LEAVE_TRANSIT_STATION 47
 
 class Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate python_type
     py GuidanceMapMatchedCoordinate
@@ -115,6 +190,10 @@ class Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate python_type
 enum Windows.Services.Maps.Guidance.GuidanceMode python_type
     py GuidanceMode
     signature enum(Windows.Services.Maps.Guidance.GuidanceMode;i4)
+    constant NONE 0
+    constant SIMULATION 1
+    constant NAVIGATION 2
+    constant TRACKING 3
 
 class Windows.Services.Maps.Guidance.GuidanceNavigator python_type
     py GuidanceNavigator

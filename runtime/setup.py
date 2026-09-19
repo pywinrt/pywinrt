@@ -56,6 +56,7 @@ setup(
                 "src/collections.cpp",
                 "src/compose.cpp",
                 "src/delegates.cpp",
+                "src/enums.cpp",
                 "src/errors.cpp",
                 "src/generics.cpp",
                 "src/implements.cpp",

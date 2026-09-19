@@ -27,6 +27,9 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Auth
 enum Windows.Security.Authentication.OnlineId.CredentialPromptType python_type
     py CredentialPromptType
     signature enum(Windows.Security.Authentication.OnlineId.CredentialPromptType;i4)
+    constant PROMPT_IF_NEEDED 0
+    constant RETYPE_CREDENTIALS 1
+    constant DO_NOT_PROMPT 2
 
 interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[OnlineIdSystemTicketResult]
@@ -327,6 +330,9 @@ class Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult python
 enum Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketStatus python_type
     py OnlineIdSystemTicketStatus
     signature enum(Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketStatus;i4)
+    constant SUCCESS 0
+    constant ERROR 1
+    constant SERVICE_CONNECTION_ERROR 2
 
 class Windows.Security.Authentication.OnlineId.SignOutUserOperation python_type awaitable
     py SignOutUserOperation

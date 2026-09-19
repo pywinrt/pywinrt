@@ -1151,6 +1151,12 @@ class Windows.Web.Syndication.SyndicationError static python_type
 enum Windows.Web.Syndication.SyndicationErrorStatus python_type
     py SyndicationErrorStatus
     signature enum(Windows.Web.Syndication.SyndicationErrorStatus;i4)
+    constant UNKNOWN 0
+    constant MISSING_REQUIRED_ELEMENT 1
+    constant MISSING_REQUIRED_ATTRIBUTE 2
+    constant INVALID_XML 3
+    constant UNEXPECTED_CONTENT 4
+    constant UNSUPPORTED_FORMAT 5
 
 class Windows.Web.Syndication.SyndicationFeed activatable python_type
     py SyndicationFeed
@@ -1282,6 +1288,12 @@ class Windows.Web.Syndication.SyndicationFeed activatable python_type
 enum Windows.Web.Syndication.SyndicationFormat python_type
     py SyndicationFormat
     signature enum(Windows.Web.Syndication.SyndicationFormat;i4)
+    constant ATOM10 0
+    constant RSS20 1
+    constant RSS10 2
+    constant RSS092 3
+    constant RSS091 4
+    constant ATOM03 5
 
 class Windows.Web.Syndication.SyndicationGenerator activatable python_type
     py SyndicationGenerator
@@ -1749,6 +1761,9 @@ class Windows.Web.Syndication.SyndicationText activatable python_type
 enum Windows.Web.Syndication.SyndicationTextType python_type
     py SyndicationTextType
     signature enum(Windows.Web.Syndication.SyndicationTextType;i4)
+    constant TEXT 0
+    constant HTML 1
+    constant XHTML 2
 
 struct Windows.Web.Syndication.TransferProgress python_type
     py TransferProgress

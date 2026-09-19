@@ -107,6 +107,8 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.Provide
 enum Windows.Devices.Adc.Provider.ProviderAdcChannelMode python_type
     py ProviderAdcChannelMode
     signature enum(Windows.Devices.Adc.Provider.ProviderAdcChannelMode;i4)
+    constant SINGLE_ENDED 0
+    constant DIFFERENTIAL 1
 
 interface Windows.Foundation.Collections.IIterable external parameterized
     py winrt.windows.foundation.collections._IIterable

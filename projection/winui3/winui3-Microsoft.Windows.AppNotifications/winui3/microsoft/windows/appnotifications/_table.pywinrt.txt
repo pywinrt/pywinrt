@@ -142,6 +142,8 @@ class Microsoft.Windows.AppNotifications.AppNotificationManager python_type
 enum Microsoft.Windows.AppNotifications.AppNotificationPriority python_type
     py AppNotificationPriority
     signature enum(Microsoft.Windows.AppNotifications.AppNotificationPriority;i4)
+    constant DEFAULT 0
+    constant HIGH 1
 
 class Microsoft.Windows.AppNotifications.AppNotificationProgressData python_type
     py AppNotificationProgressData
@@ -182,10 +184,19 @@ class Microsoft.Windows.AppNotifications.AppNotificationProgressData python_type
 enum Microsoft.Windows.AppNotifications.AppNotificationProgressResult python_type
     py AppNotificationProgressResult
     signature enum(Microsoft.Windows.AppNotifications.AppNotificationProgressResult;i4)
+    constant SUCCEEDED 0
+    constant APP_NOTIFICATION_NOT_FOUND 1
+    constant UNSUPPORTED 2
 
 enum Microsoft.Windows.AppNotifications.AppNotificationSetting python_type
     py AppNotificationSetting
     signature enum(Microsoft.Windows.AppNotifications.AppNotificationSetting;i4)
+    constant ENABLED 0
+    constant DISABLED_FOR_APPLICATION 1
+    constant DISABLED_FOR_USER 2
+    constant DISABLED_BY_GROUP_POLICY 3
+    constant DISABLED_BY_MANIFEST 4
+    constant UNSUPPORTED 5
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[AppNotificationProgressResult]

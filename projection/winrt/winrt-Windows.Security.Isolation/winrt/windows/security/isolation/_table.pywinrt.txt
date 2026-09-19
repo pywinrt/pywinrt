@@ -845,18 +845,32 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironment python_type
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator python_type
     py IsolatedWindowsEnvironmentActivator
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator;i4)
+    constant SYSTEM 0
+    constant USER 1
 
-enum Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats python_type
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats python_type flags_enum
     py IsolatedWindowsEnvironmentAllowedClipboardFormats
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats;u4)
+    constant NONE 0x0
+    constant TEXT 0x1
+    constant IMAGE 0x2
+    constant RTF 0x4
 
-enum Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters python_type
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters python_type flags_enum
     py IsolatedWindowsEnvironmentAvailablePrinters
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters;u4)
+    constant NONE 0x0
+    constant LOCAL 0x1
+    constant NETWORK 0x2
+    constant SYSTEM_PRINT_TO_PDF 0x4
+    constant SYSTEM_PRINT_TO_XPS 0x8
 
-enum Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections python_type
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections python_type flags_enum
     py IsolatedWindowsEnvironmentClipboardCopyPasteDirections
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections;u4)
+    constant NONE 0x0
+    constant HOST_TO_ISOLATED_WINDOWS_ENVIRONMENT 0x1
+    constant ISOLATED_WINDOWS_ENVIRONMENT_TO_HOST 0x2
 
 struct Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress python_type
     py IsolatedWindowsEnvironmentCreateProgress
@@ -886,10 +900,15 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult python_t
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus python_type
     py IsolatedWindowsEnvironmentCreateStatus
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus;i4)
+    constant SUCCESS 0
+    constant FAILURE_BY_POLICY 1
+    constant UNKNOWN_FAILURE 2
 
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority python_type
     py IsolatedWindowsEnvironmentCreationPriority
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority;i4)
+    constant LOW 0
+    constant NORMAL 1
 
 class Windows.Security.Isolation.IsolatedWindowsEnvironmentFile python_type
     py IsolatedWindowsEnvironmentFile
@@ -925,6 +944,11 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentHost static python_ty
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError python_type
     py IsolatedWindowsEnvironmentHostError
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError;i4)
+    constant ADMIN_POLICY_IS_DISABLED_OR_NOT_PRESENT 0
+    constant FEATURE_NOT_INSTALLED 1
+    constant HARDWARE_REQUIREMENTS_NOT_MET 2
+    constant REBOOT_REQUIRED 3
+    constant UNKNOWN_ERROR 4
 
 class Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult python_type
     py IsolatedWindowsEnvironmentLaunchFileResult
@@ -944,6 +968,12 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult pyth
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileStatus python_type
     py IsolatedWindowsEnvironmentLaunchFileStatus
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant ENVIRONMENT_UNAVAILABLE 2
+    constant FILE_NOT_FOUND 3
+    constant TIMED_OUT 4
+    constant ALREADY_SHARED_WITH_CONFLICTING_OPTIONS 5
 
 class Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions activatable python_type
     py IsolatedWindowsEnvironmentOptions
@@ -1069,6 +1099,11 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResu
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationStatus python_type
     py IsolatedWindowsEnvironmentOwnerRegistrationStatus
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationStatus;i4)
+    constant SUCCESS 0
+    constant INVALID_ARGUMENT 1
+    constant ACCESS_DENIED 2
+    constant INSUFFICIENT_MEMORY 3
+    constant UNKNOWN_FAILURE 4
 
 class Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult python_type
     py IsolatedWindowsEnvironmentPostMessageResult
@@ -1085,6 +1120,9 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult pyt
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageStatus python_type
     py IsolatedWindowsEnvironmentPostMessageStatus
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant ENVIRONMENT_UNAVAILABLE 2
 
 class Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess python_type
     py IsolatedWindowsEnvironmentProcess
@@ -1109,10 +1147,20 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess python_type
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentProcessState python_type
     py IsolatedWindowsEnvironmentProcessState
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentProcessState;i4)
+    constant RUNNING 1
+    constant ABORTED 2
+    constant COMPLETED 3
 
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState python_type
     py IsolatedWindowsEnvironmentProgressState
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState;i4)
+    constant QUEUED 0
+    constant PROCESSING 1
+    constant COMPLETED 2
+    constant CREATING 3
+    constant RETRYING 4
+    constant STARTING 5
+    constant FINALIZING 6
 
 class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions activatable python_type
     py IsolatedWindowsEnvironmentShareFileRequestOptions
@@ -1146,6 +1194,12 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult pytho
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileStatus python_type
     py IsolatedWindowsEnvironmentShareFileStatus
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant ENVIRONMENT_UNAVAILABLE 2
+    constant ALREADY_SHARED_WITH_CONFLICTING_OPTIONS 3
+    constant FILE_NOT_FOUND 4
+    constant ACCESS_DENIED 5
 
 class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions activatable python_type
     py IsolatedWindowsEnvironmentShareFolderRequestOptions
@@ -1176,10 +1230,21 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult pyt
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderStatus python_type
     py IsolatedWindowsEnvironmentShareFolderStatus
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant ENVIRONMENT_UNAVAILABLE 2
+    constant FOLDER_NOT_FOUND 3
+    constant ACCESS_DENIED 4
 
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress python_type
     py IsolatedWindowsEnvironmentSignInProgress
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress;i4)
+    constant CONNECTING 0
+    constant CONNECTED 1
+    constant AUTHENTICATING 2
+    constant SETTING_UP_ACCOUNT 3
+    constant FINALIZING 4
+    constant COMPLETED 5
 
 class Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult python_type
     py IsolatedWindowsEnvironmentStartProcessResult
@@ -1199,6 +1264,11 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult py
 enum Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessStatus python_type
     py IsolatedWindowsEnvironmentStartProcessStatus
     signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant ENVIRONMENT_UNAVAILABLE 2
+    constant FILE_NOT_FOUND 3
+    constant APP_NOT_REGISTERED 4
 
 class Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters activatable python_type
     py IsolatedWindowsEnvironmentTelemetryParameters

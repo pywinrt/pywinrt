@@ -265,6 +265,9 @@ class Windows.Media.Devices.Core.FrameFlashControl python_type
 enum Windows.Media.Devices.Core.FrameFlashMode python_type
     py FrameFlashMode
     signature enum(Windows.Media.Devices.Core.FrameFlashMode;i4)
+    constant DISABLE 0
+    constant ENABLE 1
+    constant GLOBAL 2
 
 class Windows.Media.Devices.Core.FrameFocusCapabilities python_type
     py FrameFocusCapabilities

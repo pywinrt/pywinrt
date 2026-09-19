@@ -610,6 +610,10 @@ class Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator python_type closeab
 enum Microsoft.Windows.AI.Imaging.ImageDescriptionKind python_type
     py ImageDescriptionKind
     signature enum(Microsoft.Windows.AI.Imaging.ImageDescriptionKind;i4)
+    constant BRIEF_DESCRIPTION 0
+    constant DETAILED_DESCRIPTION 1
+    constant DIAGRAM_DESCRIPTION 2
+    constant ACCESSIBLE_DESCRIPTION 3
 
 class Microsoft.Windows.AI.Imaging.ImageDescriptionResult python_type
     py ImageDescriptionResult
@@ -626,6 +630,14 @@ class Microsoft.Windows.AI.Imaging.ImageDescriptionResult python_type
 enum Microsoft.Windows.AI.Imaging.ImageDescriptionResultStatus python_type
     py ImageDescriptionResultStatus
     signature enum(Microsoft.Windows.AI.Imaging.ImageDescriptionResultStatus;i4)
+    constant COMPLETE 0
+    constant IN_PROGRESS 1
+    constant BLOCKED_BY_POLICY 2
+    constant IMAGE_BLOCKED_BY_CONTENT_MODERATION 3
+    constant TEXT_IN_IMAGE_BLOCKED_BY_CONTENT_MODERATION 4
+    constant DESCRIPTION_TEXT_BLOCKED_BY_CONTENT_MODERATION 5
+    constant IMAGE_HAS_TOO_MUCH_TEXT 6
+    constant INTERNAL_ERROR 7
 
 class Microsoft.Windows.AI.Imaging.ImageObjectExtractor python_type closeable
     py ImageObjectExtractor
@@ -739,6 +751,7 @@ class Microsoft.Windows.AI.Imaging.RecognizedLine python_type
 enum Microsoft.Windows.AI.Imaging.RecognizedLineStyle python_type
     py RecognizedLineStyle
     signature enum(Microsoft.Windows.AI.Imaging.RecognizedLineStyle;i4)
+    constant HANDWRITTEN 0
 
 class Microsoft.Windows.AI.Imaging.RecognizedText python_type
     py RecognizedText

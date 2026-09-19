@@ -75,6 +75,10 @@ class Windows.Security.Authentication.Web.Core.FindAllAccountsResult python_type
 enum Windows.Security.Authentication.Web.Core.FindAllWebAccountsStatus python_type
     py FindAllWebAccountsStatus
     signature enum(Windows.Security.Authentication.Web.Core.FindAllWebAccountsStatus;i4)
+    constant SUCCESS 0
+    constant NOT_ALLOWED_BY_PROVIDER 1
+    constant NOT_SUPPORTED_BY_PROVIDER 2
+    constant PROVIDER_ERROR 3
 
 interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[FindAllAccountsResult]
@@ -612,6 +616,11 @@ class Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult
 enum Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountStatus python_type
     py WebAuthenticationAddAccountStatus
     signature enum(Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountStatus;i4)
+    constant SUCCESS 0
+    constant ERROR 1
+    constant NOT_SUPPORTED_BY_PROVIDER 2
+    constant SERVICE_CONNECTION_ERROR 3
+    constant PROVIDER_ERROR 4
 
 class Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager static python_type
     py WebAuthenticationCoreManager
@@ -792,6 +801,8 @@ class Windows.Security.Authentication.Web.Core.WebTokenRequest python_type
 enum Windows.Security.Authentication.Web.Core.WebTokenRequestPromptType python_type
     py WebTokenRequestPromptType
     signature enum(Windows.Security.Authentication.Web.Core.WebTokenRequestPromptType;i4)
+    constant DEFAULT 0
+    constant FORCE_AUTHENTICATION 1
 
 class Windows.Security.Authentication.Web.Core.WebTokenRequestResult python_type
     py WebTokenRequestResult
@@ -814,6 +825,12 @@ class Windows.Security.Authentication.Web.Core.WebTokenRequestResult python_type
 enum Windows.Security.Authentication.Web.Core.WebTokenRequestStatus python_type
     py WebTokenRequestStatus
     signature enum(Windows.Security.Authentication.Web.Core.WebTokenRequestStatus;i4)
+    constant SUCCESS 0
+    constant USER_CANCEL 1
+    constant ACCOUNT_SWITCH 2
+    constant USER_INTERACTION_REQUIRED 3
+    constant ACCOUNT_PROVIDER_NOT_AVAILABLE 4
+    constant PROVIDER_ERROR 5
 
 class Windows.Security.Authentication.Web.Core.WebTokenResponse activatable python_type
     py WebTokenResponse

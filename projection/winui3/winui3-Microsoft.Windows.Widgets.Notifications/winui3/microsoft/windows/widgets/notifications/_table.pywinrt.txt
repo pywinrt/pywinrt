@@ -5,10 +5,19 @@ namespace Microsoft.Windows.Widgets.Notifications
 enum Microsoft.Windows.Widgets.Notifications.AnnouncementActionKind python_type
     py AnnouncementActionKind
     signature enum(Microsoft.Windows.Widgets.Notifications.AnnouncementActionKind;i4)
+    constant SHOWN 0
+    constant ENGAGED 1
 
 enum Microsoft.Windows.Widgets.Notifications.AnnouncementTextColor python_type
     py AnnouncementTextColor
     signature enum(Microsoft.Windows.Widgets.Notifications.AnnouncementTextColor;i4)
+    constant DEFAULT 0
+    constant DARK 1
+    constant LIGHT 2
+    constant ACCENT 3
+    constant GOOD 4
+    constant WARNING 5
+    constant ATTENTION 6
 
 class Microsoft.Windows.Widgets.Notifications.FeedAnnouncement python_type
     py FeedAnnouncement

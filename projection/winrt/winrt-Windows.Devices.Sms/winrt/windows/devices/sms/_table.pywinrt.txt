@@ -62,6 +62,9 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.F
 enum Windows.Devices.Sms.CellularClass python_type
     py CellularClass
     signature enum(Windows.Devices.Sms.CellularClass;i4)
+    constant NONE 0
+    constant GSM 1
+    constant CDMA 2
 
 class Windows.Devices.Sms.DeleteSmsMessageOperation python_type awaitable
     py DeleteSmsMessageOperation
@@ -1575,10 +1578,30 @@ class Windows.Devices.Sms.SmsBroadcastMessage python_type
 enum Windows.Devices.Sms.SmsBroadcastType python_type
     py SmsBroadcastType
     signature enum(Windows.Devices.Sms.SmsBroadcastType;i4)
+    constant OTHER 0
+    constant CMAS_PRESIDENTIAL 1
+    constant CMAS_EXTREME 2
+    constant CMAS_SEVERE 3
+    constant CMAS_AMBER 4
+    constant CMAS_TEST 5
+    constant EU_ALERT1 6
+    constant EU_ALERT2 7
+    constant EU_ALERT3 8
+    constant EU_ALERT_AMBER 9
+    constant EU_ALERT_INFO 10
+    constant ETWS_EARTHQUAKE 11
+    constant ETWS_TSUNAMI 12
+    constant ETWS_TSUNAMI_AND_EARTHQUAKE 13
+    constant LAT_ALERT_LOCAL 14
 
 enum Windows.Devices.Sms.SmsDataFormat python_type
     py SmsDataFormat
     signature enum(Windows.Devices.Sms.SmsDataFormat;i4)
+    constant UNKNOWN 0
+    constant CDMA_SUBMIT 1
+    constant GSM_SUBMIT 2
+    constant CDMA_DELIVER 3
+    constant GSM_DELIVER 4
 
 class Windows.Devices.Sms.SmsDevice python_type
     py SmsDevice
@@ -1717,6 +1740,14 @@ class Windows.Devices.Sms.SmsDeviceMessageStore python_type
 enum Windows.Devices.Sms.SmsDeviceStatus python_type
     py SmsDeviceStatus
     signature enum(Windows.Devices.Sms.SmsDeviceStatus;i4)
+    constant OFF 0
+    constant READY 1
+    constant SIM_NOT_INSERTED 2
+    constant BAD_SIM 3
+    constant DEVICE_FAILURE 4
+    constant SUBSCRIPTION_NOT_ACTIVATED 5
+    constant DEVICE_LOCKED 6
+    constant DEVICE_BLOCKED 7
 
 delegate Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler python_type
     py SmsDeviceStatusChangedEventHandler
@@ -1738,10 +1769,25 @@ struct Windows.Devices.Sms.SmsEncodedLength python_type
 enum Windows.Devices.Sms.SmsEncoding python_type
     py SmsEncoding
     signature enum(Windows.Devices.Sms.SmsEncoding;i4)
+    constant UNKNOWN 0
+    constant OPTIMAL 1
+    constant SEVEN_BIT_ASCII 2
+    constant UNICODE 3
+    constant GSM_SEVEN_BIT 4
+    constant EIGHT_BIT 5
+    constant LATIN 6
+    constant KOREAN 7
+    constant IA5 8
+    constant SHIFT_JIS 9
+    constant LATIN_HEBREW 10
 
 enum Windows.Devices.Sms.SmsFilterActionType python_type
     py SmsFilterActionType
     signature enum(Windows.Devices.Sms.SmsFilterActionType;i4)
+    constant ACCEPT_IMMEDIATELY 0
+    constant DROP 1
+    constant PEEK 2
+    constant ACCEPT 3
 
 class Windows.Devices.Sms.SmsFilterRule python_type
     py SmsFilterRule
@@ -1815,14 +1861,29 @@ class Windows.Devices.Sms.SmsFilterRules python_type
 enum Windows.Devices.Sms.SmsGeographicalScope python_type
     py SmsGeographicalScope
     signature enum(Windows.Devices.Sms.SmsGeographicalScope;i4)
+    constant NONE 0
+    constant CELL_WITH_IMMEDIATE_DISPLAY 1
+    constant LOCATION_AREA 2
+    constant PLMN 3
+    constant CELL 4
 
 enum Windows.Devices.Sms.SmsMessageClass python_type
     py SmsMessageClass
     signature enum(Windows.Devices.Sms.SmsMessageClass;i4)
+    constant NONE 0
+    constant CLASS0 1
+    constant CLASS1 2
+    constant CLASS2 3
+    constant CLASS3 4
 
 enum Windows.Devices.Sms.SmsMessageFilter python_type
     py SmsMessageFilter
     signature enum(Windows.Devices.Sms.SmsMessageFilter;i4)
+    constant ALL 0
+    constant UNREAD 1
+    constant READ 2
+    constant SENT 3
+    constant DRAFT 4
 
 class Windows.Devices.Sms.SmsMessageReceivedEventArgs python_type
     py SmsMessageReceivedEventArgs
@@ -1905,10 +1966,29 @@ class Windows.Devices.Sms.SmsMessageRegistration python_type
 enum Windows.Devices.Sms.SmsMessageType python_type
     py SmsMessageType
     signature enum(Windows.Devices.Sms.SmsMessageType;i4)
+    constant BINARY 0
+    constant TEXT 1
+    constant WAP 2
+    constant APP 3
+    constant BROADCAST 4
+    constant VOICEMAIL 5
+    constant STATUS 6
 
 enum Windows.Devices.Sms.SmsModemErrorCode python_type
     py SmsModemErrorCode
     signature enum(Windows.Devices.Sms.SmsModemErrorCode;i4)
+    constant OTHER 0
+    constant MESSAGING_NETWORK_ERROR 1
+    constant SMS_OPERATION_NOT_SUPPORTED_BY_DEVICE 2
+    constant SMS_SERVICE_NOT_SUPPORTED_BY_NETWORK 3
+    constant DEVICE_FAILURE 4
+    constant MESSAGE_NOT_ENCODED_PROPERLY 5
+    constant MESSAGE_TOO_LARGE 6
+    constant DEVICE_NOT_READY 7
+    constant NETWORK_NOT_READY 8
+    constant INVALID_SMSC_ADDRESS 9
+    constant NETWORK_FAILURE 10
+    constant FIXED_DIALING_NUMBER_RESTRICTED 11
 
 class Windows.Devices.Sms.SmsReceivedEventDetails python_type
     py SmsReceivedEventDetails

@@ -1480,6 +1480,10 @@ class Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher python_type
 enum Windows.Devices.Perception.PerceptionFrameSourceAccessStatus python_type
     py PerceptionFrameSourceAccessStatus
     signature enum(Windows.Devices.Perception.PerceptionFrameSourceAccessStatus;i4)
+    constant UNSPECIFIED 0
+    constant ALLOWED 1
+    constant DENIED_BY_USER 2
+    constant DENIED_BY_SYSTEM 3
 
 class Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs python_type
     py PerceptionFrameSourcePropertiesChangedEventArgs
@@ -1508,6 +1512,12 @@ class Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult pytho
 enum Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus python_type
     py PerceptionFrameSourcePropertyChangeStatus
     signature enum(Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus;i4)
+    constant UNKNOWN 0
+    constant ACCEPTED 1
+    constant LOST_CONTROL 2
+    constant PROPERTY_NOT_SUPPORTED 3
+    constant PROPERTY_READ_ONLY 4
+    constant VALUE_OUT_OF_RANGE 5
 
 class Windows.Devices.Perception.PerceptionInfraredFrame python_type closeable
     py PerceptionInfraredFrame

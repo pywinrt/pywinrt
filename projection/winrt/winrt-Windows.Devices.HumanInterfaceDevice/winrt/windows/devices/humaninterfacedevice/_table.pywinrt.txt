@@ -118,6 +118,14 @@ class Windows.Devices.HumanInterfaceDevice.HidCollection python_type
 enum Windows.Devices.HumanInterfaceDevice.HidCollectionType python_type
     py HidCollectionType
     signature enum(Windows.Devices.HumanInterfaceDevice.HidCollectionType;i4)
+    constant PHYSICAL 0
+    constant APPLICATION 1
+    constant LOGICAL 2
+    constant REPORT 3
+    constant NAMED_ARRAY 4
+    constant USAGE_SWITCH 5
+    constant USAGE_MODIFIER 6
+    constant OTHER 7
 
 class Windows.Devices.HumanInterfaceDevice.HidDevice python_type closeable
     py HidDevice
@@ -407,6 +415,9 @@ class Windows.Devices.HumanInterfaceDevice.HidOutputReport python_type
 enum Windows.Devices.HumanInterfaceDevice.HidReportType python_type
     py HidReportType
     signature enum(Windows.Devices.HumanInterfaceDevice.HidReportType;i4)
+    constant INPUT 0
+    constant OUTPUT 1
+    constant FEATURE 2
 
 interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[UInt32]

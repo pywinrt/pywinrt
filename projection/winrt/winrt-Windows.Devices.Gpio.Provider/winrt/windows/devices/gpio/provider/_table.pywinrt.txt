@@ -142,18 +142,32 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Gpio.Provid
 enum Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode python_type
     py ProviderGpioPinDriveMode
     signature enum(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode;i4)
+    constant INPUT 0
+    constant OUTPUT 1
+    constant INPUT_PULL_UP 2
+    constant INPUT_PULL_DOWN 3
+    constant OUTPUT_OPEN_DRAIN 4
+    constant OUTPUT_OPEN_DRAIN_PULL_UP 5
+    constant OUTPUT_OPEN_SOURCE 6
+    constant OUTPUT_OPEN_SOURCE_PULL_DOWN 7
 
 enum Windows.Devices.Gpio.Provider.ProviderGpioPinEdge python_type
     py ProviderGpioPinEdge
     signature enum(Windows.Devices.Gpio.Provider.ProviderGpioPinEdge;i4)
+    constant FALLING_EDGE 0
+    constant RISING_EDGE 1
 
 enum Windows.Devices.Gpio.Provider.ProviderGpioPinValue python_type
     py ProviderGpioPinValue
     signature enum(Windows.Devices.Gpio.Provider.ProviderGpioPinValue;i4)
+    constant LOW 0
+    constant HIGH 1
 
 enum Windows.Devices.Gpio.Provider.ProviderGpioSharingMode python_type
     py ProviderGpioSharingMode
     signature enum(Windows.Devices.Gpio.Provider.ProviderGpioSharingMode;i4)
+    constant EXCLUSIVE 0
+    constant SHARED_READ_ONLY 1
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Gpio.Provider.IGpioPinProvider,Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[IGpioPinProvider, GpioPinProviderValueChangedEventArgs]

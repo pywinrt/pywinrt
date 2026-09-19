@@ -155,9 +155,11 @@ class Windows.UI.Xaml.Application composable python_type
         method Start slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IApplicationStatics shape=4 reverse=43 static
             in delegate type=Windows.UI.Xaml.ApplicationInitializationCallback name=callback
 
-enum Windows.UI.Xaml.ApplicationHighContrastAdjustment python_type
+enum Windows.UI.Xaml.ApplicationHighContrastAdjustment python_type flags_enum
     py ApplicationHighContrastAdjustment
     signature enum(Windows.UI.Xaml.ApplicationHighContrastAdjustment;u4)
+    constant NONE 0x0
+    constant AUTO 0xFFFFFFFF
 
 delegate Windows.UI.Xaml.ApplicationInitializationCallback python_type
     py ApplicationInitializationCallback
@@ -176,10 +178,14 @@ class Windows.UI.Xaml.ApplicationInitializationCallbackParams python_type
 enum Windows.UI.Xaml.ApplicationRequiresPointerMode python_type
     py ApplicationRequiresPointerMode
     signature enum(Windows.UI.Xaml.ApplicationRequiresPointerMode;i4)
+    constant AUTO 0
+    constant WHEN_REQUESTED 1
 
 enum Windows.UI.Xaml.ApplicationTheme python_type
     py ApplicationTheme
     signature enum(Windows.UI.Xaml.ApplicationTheme;i4)
+    constant LIGHT 0
+    constant DARK 1
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.DataTransfer.DataPackageOperation> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[DataPackageOperation]
@@ -195,6 +201,46 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationMo
 enum Windows.UI.Xaml.AutomationTextAttributesEnum python_type
     py AutomationTextAttributesEnum
     signature enum(Windows.UI.Xaml.AutomationTextAttributesEnum;i4)
+    constant ANIMATION_STYLE_ATTRIBUTE 40000
+    constant BACKGROUND_COLOR_ATTRIBUTE 40001
+    constant BULLET_STYLE_ATTRIBUTE 40002
+    constant CAP_STYLE_ATTRIBUTE 40003
+    constant CULTURE_ATTRIBUTE 40004
+    constant FONT_NAME_ATTRIBUTE 40005
+    constant FONT_SIZE_ATTRIBUTE 40006
+    constant FONT_WEIGHT_ATTRIBUTE 40007
+    constant FOREGROUND_COLOR_ATTRIBUTE 40008
+    constant HORIZONTAL_TEXT_ALIGNMENT_ATTRIBUTE 40009
+    constant INDENTATION_FIRST_LINE_ATTRIBUTE 40010
+    constant INDENTATION_LEADING_ATTRIBUTE 40011
+    constant INDENTATION_TRAILING_ATTRIBUTE 40012
+    constant IS_HIDDEN_ATTRIBUTE 40013
+    constant IS_ITALIC_ATTRIBUTE 40014
+    constant IS_READ_ONLY_ATTRIBUTE 40015
+    constant IS_SUBSCRIPT_ATTRIBUTE 40016
+    constant IS_SUPERSCRIPT_ATTRIBUTE 40017
+    constant MARGIN_BOTTOM_ATTRIBUTE 40018
+    constant MARGIN_LEADING_ATTRIBUTE 40019
+    constant MARGIN_TOP_ATTRIBUTE 40020
+    constant MARGIN_TRAILING_ATTRIBUTE 40021
+    constant OUTLINE_STYLES_ATTRIBUTE 40022
+    constant OVERLINE_COLOR_ATTRIBUTE 40023
+    constant OVERLINE_STYLE_ATTRIBUTE 40024
+    constant STRIKETHROUGH_COLOR_ATTRIBUTE 40025
+    constant STRIKETHROUGH_STYLE_ATTRIBUTE 40026
+    constant TABS_ATTRIBUTE 40027
+    constant TEXT_FLOW_DIRECTIONS_ATTRIBUTE 40028
+    constant UNDERLINE_COLOR_ATTRIBUTE 40029
+    constant UNDERLINE_STYLE_ATTRIBUTE 40030
+    constant ANNOTATION_TYPES_ATTRIBUTE 40031
+    constant ANNOTATION_OBJECTS_ATTRIBUTE 40032
+    constant STYLE_NAME_ATTRIBUTE 40033
+    constant STYLE_ID_ATTRIBUTE 40034
+    constant LINK_ATTRIBUTE 40035
+    constant IS_ACTIVE_ATTRIBUTE 40036
+    constant SELECTION_ACTIVE_END_ATTRIBUTE 40037
+    constant CARET_POSITION_ATTRIBUTE 40038
+    constant CARET_BIDI_MODE_ATTRIBUTE 40039
 
 class Windows.UI.Xaml.BindingFailedEventArgs python_type
     py BindingFailedEventArgs
@@ -1021,6 +1067,9 @@ class Windows.UI.Xaml.DurationHelper python_type
 enum Windows.UI.Xaml.DurationType python_type
     py DurationType
     signature enum(Windows.UI.Xaml.DurationType;i4)
+    constant AUTOMATIC 0
+    constant TIME_SPAN 1
+    constant FOREVER 2
 
 class Windows.UI.Xaml.EffectiveViewportChangedEventArgs python_type
     py EffectiveViewportChangedEventArgs
@@ -1084,17 +1133,30 @@ class Windows.UI.Xaml.ElementFactoryRecycleArgs composable python_type
         put put_Element slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IElementFactoryRecycleArgs shape=4 reverse=43
             in class type=Windows.UI.Xaml.UIElement name=value
 
-enum Windows.UI.Xaml.ElementHighContrastAdjustment python_type
+enum Windows.UI.Xaml.ElementHighContrastAdjustment python_type flags_enum
     py ElementHighContrastAdjustment
     signature enum(Windows.UI.Xaml.ElementHighContrastAdjustment;u4)
+    constant NONE 0x0
+    constant APPLICATION 0x80000000
+    constant AUTO 0xFFFFFFFF
 
 enum Windows.UI.Xaml.ElementSoundKind python_type
     py ElementSoundKind
     signature enum(Windows.UI.Xaml.ElementSoundKind;i4)
+    constant FOCUS 0
+    constant INVOKE 1
+    constant SHOW 2
+    constant HIDE 3
+    constant MOVE_PREVIOUS 4
+    constant MOVE_NEXT 5
+    constant GO_BACK 6
 
 enum Windows.UI.Xaml.ElementSoundMode python_type
     py ElementSoundMode
     signature enum(Windows.UI.Xaml.ElementSoundMode;i4)
+    constant DEFAULT 0
+    constant FOCUS_ONLY 1
+    constant OFF 2
 
 class Windows.UI.Xaml.ElementSoundPlayer python_type
     py ElementSoundPlayer
@@ -1125,14 +1187,23 @@ class Windows.UI.Xaml.ElementSoundPlayer python_type
 enum Windows.UI.Xaml.ElementSoundPlayerState python_type
     py ElementSoundPlayerState
     signature enum(Windows.UI.Xaml.ElementSoundPlayerState;i4)
+    constant AUTO 0
+    constant OFF 1
+    constant ON 2
 
 enum Windows.UI.Xaml.ElementSpatialAudioMode python_type
     py ElementSpatialAudioMode
     signature enum(Windows.UI.Xaml.ElementSpatialAudioMode;i4)
+    constant AUTO 0
+    constant OFF 1
+    constant ON 2
 
 enum Windows.UI.Xaml.ElementTheme python_type
     py ElementTheme
     signature enum(Windows.UI.Xaml.ElementTheme;i4)
+    constant DEFAULT 0
+    constant LIGHT 1
+    constant DARK 2
 
 delegate Windows.UI.Xaml.EnteredBackgroundEventHandler python_type
     py EnteredBackgroundEventHandler
@@ -1195,42 +1266,89 @@ delegate Windows.UI.Xaml.ExceptionRoutedEventHandler python_type
 enum Windows.UI.Xaml.FlowDirection python_type
     py FlowDirection
     signature enum(Windows.UI.Xaml.FlowDirection;i4)
+    constant LEFT_TO_RIGHT 0
+    constant RIGHT_TO_LEFT 1
 
 enum Windows.UI.Xaml.FocusState python_type
     py FocusState
     signature enum(Windows.UI.Xaml.FocusState;i4)
+    constant UNFOCUSED 0
+    constant POINTER 1
+    constant KEYBOARD 2
+    constant PROGRAMMATIC 3
 
 enum Windows.UI.Xaml.FocusVisualKind python_type
     py FocusVisualKind
     signature enum(Windows.UI.Xaml.FocusVisualKind;i4)
+    constant DOTTED_LINE 0
+    constant HIGH_VISIBILITY 1
+    constant REVEAL 2
 
 enum Windows.UI.Xaml.FontCapitals python_type
     py FontCapitals
     signature enum(Windows.UI.Xaml.FontCapitals;i4)
+    constant NORMAL 0
+    constant ALL_SMALL_CAPS 1
+    constant SMALL_CAPS 2
+    constant ALL_PETITE_CAPS 3
+    constant PETITE_CAPS 4
+    constant UNICASE 5
+    constant TITLING 6
 
 enum Windows.UI.Xaml.FontEastAsianLanguage python_type
     py FontEastAsianLanguage
     signature enum(Windows.UI.Xaml.FontEastAsianLanguage;i4)
+    constant NORMAL 0
+    constant HOJO_KANJI 1
+    constant JIS04 2
+    constant JIS78 3
+    constant JIS83 4
+    constant JIS90 5
+    constant NLC_KANJI 6
+    constant SIMPLIFIED 7
+    constant TRADITIONAL 8
+    constant TRADITIONAL_NAMES 9
 
 enum Windows.UI.Xaml.FontEastAsianWidths python_type
     py FontEastAsianWidths
     signature enum(Windows.UI.Xaml.FontEastAsianWidths;i4)
+    constant NORMAL 0
+    constant FULL 1
+    constant HALF 2
+    constant PROPORTIONAL 3
+    constant QUARTER 4
+    constant THIRD 5
 
 enum Windows.UI.Xaml.FontFraction python_type
     py FontFraction
     signature enum(Windows.UI.Xaml.FontFraction;i4)
+    constant NORMAL 0
+    constant STACKED 1
+    constant SLASHED 2
 
 enum Windows.UI.Xaml.FontNumeralAlignment python_type
     py FontNumeralAlignment
     signature enum(Windows.UI.Xaml.FontNumeralAlignment;i4)
+    constant NORMAL 0
+    constant PROPORTIONAL 1
+    constant TABULAR 2
 
 enum Windows.UI.Xaml.FontNumeralStyle python_type
     py FontNumeralStyle
     signature enum(Windows.UI.Xaml.FontNumeralStyle;i4)
+    constant NORMAL 0
+    constant LINING 1
+    constant OLD_STYLE 2
 
 enum Windows.UI.Xaml.FontVariants python_type
     py FontVariants
     signature enum(Windows.UI.Xaml.FontVariants;i4)
+    constant NORMAL 0
+    constant SUPERSCRIPT 1
+    constant SUBSCRIPT 2
+    constant ORDINAL 3
+    constant INFERIOR 4
+    constant RUBY 5
 
 class Windows.UI.Xaml.FrameworkElement composable python_type
     py FrameworkElement
@@ -1643,10 +1761,17 @@ class Windows.UI.Xaml.GridLengthHelper python_type
 enum Windows.UI.Xaml.GridUnitType python_type
     py GridUnitType
     signature enum(Windows.UI.Xaml.GridUnitType;i4)
+    constant AUTO 0
+    constant PIXEL 1
+    constant STAR 2
 
 enum Windows.UI.Xaml.HorizontalAlignment python_type
     py HorizontalAlignment
     signature enum(Windows.UI.Xaml.HorizontalAlignment;i4)
+    constant LEFT 0
+    constant CENTER 1
+    constant RIGHT 2
+    constant STRETCH 3
 
 interface Windows.UI.Xaml.IAdaptiveTrigger
     guid a5f04119-0cd9-49f1-a23f-44e547ab9f1a
@@ -4107,6 +4232,9 @@ delegate Windows.UI.Xaml.LeavingBackgroundEventHandler python_type
 enum Windows.UI.Xaml.LineStackingStrategy python_type
     py LineStackingStrategy
     signature enum(Windows.UI.Xaml.LineStackingStrategy;i4)
+    constant MAX_HEIGHT 0
+    constant BLOCK_LINE_HEIGHT 1
+    constant BASELINE_TO_BASELINE 2
 
 class Windows.UI.Xaml.MediaFailedRoutedEventArgs python_type
     py MediaFailedRoutedEventArgs
@@ -4121,6 +4249,8 @@ class Windows.UI.Xaml.MediaFailedRoutedEventArgs python_type
 enum Windows.UI.Xaml.OpticalMarginAlignment python_type
     py OpticalMarginAlignment
     signature enum(Windows.UI.Xaml.OpticalMarginAlignment;i4)
+    constant NONE 0
+    constant TRIM_SIDE_BEARINGS 1
 
 class Windows.UI.Xaml.PointHelper python_type
     py PointHelper
@@ -4621,22 +4751,43 @@ class Windows.UI.Xaml.TargetPropertyPath activatable python_type
 enum Windows.UI.Xaml.TextAlignment python_type
     py TextAlignment
     signature enum(Windows.UI.Xaml.TextAlignment;i4)
+    constant CENTER 0
+    constant LEFT 1
+    constant START 1
+    constant RIGHT 2
+    constant END 2
+    constant JUSTIFY 3
+    constant DETECT_FROM_CONTENT 4
 
 enum Windows.UI.Xaml.TextLineBounds python_type
     py TextLineBounds
     signature enum(Windows.UI.Xaml.TextLineBounds;i4)
+    constant FULL 0
+    constant TRIM_TO_CAP_HEIGHT 1
+    constant TRIM_TO_BASELINE 2
+    constant TIGHT 3
 
 enum Windows.UI.Xaml.TextReadingOrder python_type
     py TextReadingOrder
     signature enum(Windows.UI.Xaml.TextReadingOrder;i4)
+    constant DEFAULT 0
+    constant USE_FLOW_DIRECTION 0
+    constant DETECT_FROM_CONTENT 1
 
 enum Windows.UI.Xaml.TextTrimming python_type
     py TextTrimming
     signature enum(Windows.UI.Xaml.TextTrimming;i4)
+    constant NONE 0
+    constant CHARACTER_ELLIPSIS 1
+    constant WORD_ELLIPSIS 2
+    constant CLIP 3
 
 enum Windows.UI.Xaml.TextWrapping python_type
     py TextWrapping
     signature enum(Windows.UI.Xaml.TextWrapping;i4)
+    constant NO_WRAP 1
+    constant WRAP 2
+    constant WRAP_WHOLE_WORDS 3
 
 struct Windows.UI.Xaml.Thickness python_type
     py Thickness
@@ -5957,9 +6108,12 @@ class Windows.UI.Xaml.Vector3Transition composable python_type
         put put_Components slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IVector3Transition shape=4 reverse=99
             in enum_u32 type=Windows.UI.Xaml.Vector3TransitionComponents name=value
 
-enum Windows.UI.Xaml.Vector3TransitionComponents python_type
+enum Windows.UI.Xaml.Vector3TransitionComponents python_type flags_enum
     py Vector3TransitionComponents
     signature enum(Windows.UI.Xaml.Vector3TransitionComponents;u4)
+    constant X 0x1
+    constant Y 0x2
+    constant Z 0x4
 
 delegate Windows.Foundation.Collections.VectorChangedEventHandler<Windows.UI.Xaml.DependencyObject> concrete
     py winrt.windows.foundation.collections.VectorChangedEventHandler[DependencyObject]
@@ -5975,10 +6129,16 @@ delegate Windows.Foundation.Collections.VectorChangedEventHandler<Windows.UI.Xam
 enum Windows.UI.Xaml.VerticalAlignment python_type
     py VerticalAlignment
     signature enum(Windows.UI.Xaml.VerticalAlignment;i4)
+    constant TOP 0
+    constant CENTER 1
+    constant BOTTOM 2
+    constant STRETCH 3
 
 enum Windows.UI.Xaml.Visibility python_type
     py Visibility
     signature enum(Windows.UI.Xaml.Visibility;i4)
+    constant VISIBLE 0
+    constant COLLAPSED 1
 
 class Windows.UI.Xaml.VisualState activatable python_type
     py VisualState

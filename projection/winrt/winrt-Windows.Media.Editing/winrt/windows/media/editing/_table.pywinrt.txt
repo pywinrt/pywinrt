@@ -1497,10 +1497,14 @@ class Windows.Media.Editing.MediaOverlayLayer activatable python_type
 enum Windows.Media.Editing.MediaTrimmingPreference python_type
     py MediaTrimmingPreference
     signature enum(Windows.Media.Editing.MediaTrimmingPreference;i4)
+    constant FAST 0
+    constant PRECISE 1
 
 enum Windows.Media.Editing.VideoFramePrecision python_type
     py VideoFramePrecision
     signature enum(Windows.Media.Editing.VideoFramePrecision;i4)
+    constant NEAREST_FRAME 0
+    constant NEAREST_KEY_FRAME 1
 
 class System.Double external
     py winrt.system.Double

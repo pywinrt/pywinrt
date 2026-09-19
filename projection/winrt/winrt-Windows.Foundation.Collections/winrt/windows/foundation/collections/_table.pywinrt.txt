@@ -5,6 +5,10 @@ namespace Windows.Foundation.Collections
 enum Windows.Foundation.Collections.CollectionChange python_type
     py CollectionChange
     signature enum(Windows.Foundation.Collections.CollectionChange;i4)
+    constant RESET 0
+    constant ITEM_INSERTED 1
+    constant ITEM_REMOVED 2
+    constant ITEM_CHANGED 3
 
 interface Windows.Foundation.Collections.IIterable<T> parameterized
     argument T

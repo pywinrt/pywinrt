@@ -45,10 +45,17 @@ class Windows.System.Power.BackgroundEnergyManager static python_type
 enum Windows.System.Power.BatteryStatus python_type
     py BatteryStatus
     signature enum(Windows.System.Power.BatteryStatus;i4)
+    constant NOT_PRESENT 0
+    constant DISCHARGING 1
+    constant IDLE 2
+    constant CHARGING 3
 
 enum Windows.System.Power.EnergySaverStatus python_type
     py EnergySaverStatus
     signature enum(Windows.System.Power.EnergySaverStatus;i4)
+    constant DISABLED 0
+    constant OFF 1
+    constant ON 2
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
     py winrt.windows.foundation.EventHandler[Object]
@@ -156,6 +163,9 @@ class Windows.System.Power.PowerManager static python_type
 enum Windows.System.Power.PowerSupplyStatus python_type
     py PowerSupplyStatus
     signature enum(Windows.System.Power.PowerSupplyStatus;i4)
+    constant NOT_PRESENT 0
+    constant INADEQUATE 1
+    constant ADEQUATE 2
 
 class System.Object external
     py winrt.system.Object

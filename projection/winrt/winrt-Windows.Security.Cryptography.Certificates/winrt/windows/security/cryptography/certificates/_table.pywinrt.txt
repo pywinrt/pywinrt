@@ -173,6 +173,10 @@ class Windows.Security.Cryptography.Certificates.CertificateChain python_type
 enum Windows.Security.Cryptography.Certificates.CertificateChainPolicy python_type
     py CertificateChainPolicy
     signature enum(Windows.Security.Cryptography.Certificates.CertificateChainPolicy;i4)
+    constant BASE 0
+    constant SSL 1
+    constant NT_AUTHENTICATION 2
+    constant MICROSOFT_ROOT 3
 
 class Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager static python_type
     py CertificateEnrollmentManager
@@ -548,6 +552,20 @@ class Windows.Security.Cryptography.Certificates.ChainValidationParameters activ
 enum Windows.Security.Cryptography.Certificates.ChainValidationResult python_type
     py ChainValidationResult
     signature enum(Windows.Security.Cryptography.Certificates.ChainValidationResult;i4)
+    constant SUCCESS 0
+    constant UNTRUSTED 1
+    constant REVOKED 2
+    constant EXPIRED 3
+    constant INCOMPLETE_CHAIN 4
+    constant INVALID_SIGNATURE 5
+    constant WRONG_USAGE 6
+    constant INVALID_NAME 7
+    constant INVALID_CERTIFICATE_AUTHORITY_POLICY 8
+    constant BASIC_CONSTRAINTS_ERROR 9
+    constant UNKNOWN_CRITICAL_EXTENSION 10
+    constant REVOCATION_INFORMATION_MISSING 11
+    constant REVOCATION_FAILURE 12
+    constant OTHER_ERRORS 13
 
 class Windows.Security.Cryptography.Certificates.CmsAttachedSignature python_type
     py CmsAttachedSignature
@@ -644,13 +662,20 @@ class Windows.Security.Cryptography.Certificates.CmsTimestampInfo python_type
         get get_Timestamp slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsTimestampInfo shape=4 reverse=62
             out datetime return
 
-enum Windows.Security.Cryptography.Certificates.EnrollKeyUsages python_type
+enum Windows.Security.Cryptography.Certificates.EnrollKeyUsages python_type flags_enum
     py EnrollKeyUsages
     signature enum(Windows.Security.Cryptography.Certificates.EnrollKeyUsages;u4)
+    constant NONE 0x0
+    constant DECRYPTION 0x1
+    constant SIGNING 0x2
+    constant KEY_AGREEMENT 0x4
+    constant ALL 0xFFFFFF
 
 enum Windows.Security.Cryptography.Certificates.ExportOption python_type
     py ExportOption
     signature enum(Windows.Security.Cryptography.Certificates.ExportOption;i4)
+    constant NOT_EXPORTABLE 0
+    constant EXPORTABLE 1
 
 interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[String]
@@ -1343,9 +1368,11 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptograp
             out uint32 name=index
             out boolean return
 
-enum Windows.Security.Cryptography.Certificates.InstallOptions python_type
+enum Windows.Security.Cryptography.Certificates.InstallOptions python_type flags_enum
     py InstallOptions
     signature enum(Windows.Security.Cryptography.Certificates.InstallOptions;u4)
+    constant NONE 0x0
+    constant DELETE_EXPIRED 0x1
 
 class Windows.Security.Cryptography.Certificates.KeyAlgorithmNames static python_type
     py KeyAlgorithmNames
@@ -1402,10 +1429,17 @@ class Windows.Security.Cryptography.Certificates.KeyAttestationHelper static pyt
 enum Windows.Security.Cryptography.Certificates.KeyProtectionLevel python_type
     py KeyProtectionLevel
     signature enum(Windows.Security.Cryptography.Certificates.KeyProtectionLevel;i4)
+    constant NO_CONSENT 0
+    constant CONSENT_ONLY 1
+    constant CONSENT_WITH_PASSWORD 2
+    constant CONSENT_WITH_FINGERPRINT 3
 
 enum Windows.Security.Cryptography.Certificates.KeySize python_type
     py KeySize
     signature enum(Windows.Security.Cryptography.Certificates.KeySize;i4)
+    constant INVALID 0
+    constant RSA2048 2048
+    constant RSA4096 4096
 
 class Windows.Security.Cryptography.Certificates.KeyStorageProviderNames static python_type
     py KeyStorageProviderNames
@@ -1471,6 +1505,11 @@ class Windows.Security.Cryptography.Certificates.PfxImportParameters activatable
 enum Windows.Security.Cryptography.Certificates.SignatureValidationResult python_type
     py SignatureValidationResult
     signature enum(Windows.Security.Cryptography.Certificates.SignatureValidationResult;i4)
+    constant SUCCESS 0
+    constant INVALID_PARAMETER 1
+    constant BAD_MESSAGE 2
+    constant INVALID_SIGNATURE 3
+    constant OTHER_ERRORS 4
 
 class Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames static python_type
     py StandardCertificateStoreNames

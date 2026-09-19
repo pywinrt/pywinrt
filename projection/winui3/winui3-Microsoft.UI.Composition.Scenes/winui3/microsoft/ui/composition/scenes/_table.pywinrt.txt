@@ -431,10 +431,20 @@ enum K parameterized
 enum Microsoft.UI.Composition.Scenes.SceneAlphaMode python_type
     py SceneAlphaMode
     signature enum(Microsoft.UI.Composition.Scenes.SceneAlphaMode;i4)
+    constant OPAQUE 0
+    constant ALPHA_TEST 1
+    constant BLEND 2
 
 enum Microsoft.UI.Composition.Scenes.SceneAttributeSemantic python_type
     py SceneAttributeSemantic
     signature enum(Microsoft.UI.Composition.Scenes.SceneAttributeSemantic;i4)
+    constant INDEX 0
+    constant VERTEX 1
+    constant NORMAL 2
+    constant TEX_COORD0 3
+    constant TEX_COORD1 4
+    constant COLOR 5
+    constant TANGENT 6
 
 class Microsoft.UI.Composition.Scenes.SceneBoundingBox python_type
     py SceneBoundingBox
@@ -526,6 +536,7 @@ class Microsoft.UI.Composition.Scenes.SceneComponentCollection python_type itera
 enum Microsoft.UI.Composition.Scenes.SceneComponentType python_type
     py SceneComponentType
     signature enum(Microsoft.UI.Composition.Scenes.SceneComponentType;i4)
+    constant MESH_RENDERER_COMPONENT 0
 
 class Microsoft.UI.Composition.Scenes.SceneMaterial composable python_type
     py SceneMaterial
@@ -907,6 +918,9 @@ class Microsoft.UI.Composition.Scenes.SceneVisual python_type
 enum Microsoft.UI.Composition.Scenes.SceneWrappingMode python_type
     py SceneWrappingMode
     signature enum(Microsoft.UI.Composition.Scenes.SceneWrappingMode;i4)
+    constant CLAMP_TO_EDGE 0
+    constant MIRRORED_REPEAT 1
+    constant REPEAT 2
 
 enum T parameterized
 

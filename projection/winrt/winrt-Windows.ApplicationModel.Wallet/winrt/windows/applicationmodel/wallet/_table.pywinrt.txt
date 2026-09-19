@@ -815,6 +815,11 @@ interface Windows.ApplicationModel.Wallet.IWalletVerbFactory
 enum Windows.ApplicationModel.Wallet.WalletActionKind python_type
     py WalletActionKind
     signature enum(Windows.ApplicationModel.Wallet.WalletActionKind;i4)
+    constant OPEN_ITEM 0
+    constant TRANSACTION 1
+    constant MORE_TRANSACTIONS 2
+    constant MESSAGE 3
+    constant VERB 4
 
 class Windows.ApplicationModel.Wallet.WalletBarcode python_type
     py WalletBarcode
@@ -843,10 +848,37 @@ class Windows.ApplicationModel.Wallet.WalletBarcode python_type
 enum Windows.ApplicationModel.Wallet.WalletBarcodeSymbology python_type
     py WalletBarcodeSymbology
     signature enum(Windows.ApplicationModel.Wallet.WalletBarcodeSymbology;i4)
+    constant INVALID 0
+    constant UPCA 1
+    constant UPCE 2
+    constant EAN13 3
+    constant EAN8 4
+    constant ITF 5
+    constant CODE39 6
+    constant CODE128 7
+    constant QR 8
+    constant PDF417 9
+    constant AZTEC 10
+    constant CUSTOM 100000
 
 enum Windows.ApplicationModel.Wallet.WalletDetailViewPosition python_type
     py WalletDetailViewPosition
     signature enum(Windows.ApplicationModel.Wallet.WalletDetailViewPosition;i4)
+    constant HIDDEN 0
+    constant HEADER_FIELD1 1
+    constant HEADER_FIELD2 2
+    constant PRIMARY_FIELD1 3
+    constant PRIMARY_FIELD2 4
+    constant SECONDARY_FIELD1 5
+    constant SECONDARY_FIELD2 6
+    constant SECONDARY_FIELD3 7
+    constant SECONDARY_FIELD4 8
+    constant SECONDARY_FIELD5 9
+    constant CENTER_FIELD1 10
+    constant FOOTER_FIELD1 11
+    constant FOOTER_FIELD2 12
+    constant FOOTER_FIELD3 13
+    constant FOOTER_FIELD4 14
 
 class Windows.ApplicationModel.Wallet.WalletItem python_type
     py WalletItem
@@ -1033,6 +1065,13 @@ class Windows.ApplicationModel.Wallet.WalletItemCustomProperty python_type
 enum Windows.ApplicationModel.Wallet.WalletItemKind python_type
     py WalletItemKind
     signature enum(Windows.ApplicationModel.Wallet.WalletItemKind;i4)
+    constant INVALID 0
+    constant DEAL 1
+    constant GENERAL 2
+    constant PAYMENT_INSTRUMENT 3
+    constant TICKET 4
+    constant BOARDING_PASS 5
+    constant MEMBERSHIP_CARD 6
 
 class Windows.ApplicationModel.Wallet.WalletItemStore python_type
     py WalletItemStore
@@ -1105,6 +1144,9 @@ class Windows.ApplicationModel.Wallet.WalletRelevantLocation activatable python_
 enum Windows.ApplicationModel.Wallet.WalletSummaryViewPosition python_type
     py WalletSummaryViewPosition
     signature enum(Windows.ApplicationModel.Wallet.WalletSummaryViewPosition;i4)
+    constant HIDDEN 0
+    constant FIELD1 1
+    constant FIELD2 2
 
 class Windows.ApplicationModel.Wallet.WalletTransaction activatable python_type
     py WalletTransaction

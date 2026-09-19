@@ -122,6 +122,8 @@ class Windows.Globalization.NumberFormatting.CurrencyFormatter python_type
 enum Windows.Globalization.NumberFormatting.CurrencyFormatterMode python_type
     py CurrencyFormatterMode
     signature enum(Windows.Globalization.NumberFormatting.CurrencyFormatterMode;i4)
+    constant USE_SYMBOL 0
+    constant USE_CURRENCY_CODE 1
 
 class Windows.Globalization.NumberFormatting.DecimalFormatter activatable python_type
     py DecimalFormatter
@@ -1122,6 +1124,17 @@ class Windows.Globalization.NumberFormatting.PermilleFormatter activatable pytho
 enum Windows.Globalization.NumberFormatting.RoundingAlgorithm python_type
     py RoundingAlgorithm
     signature enum(Windows.Globalization.NumberFormatting.RoundingAlgorithm;i4)
+    constant NONE 0
+    constant ROUND_DOWN 1
+    constant ROUND_UP 2
+    constant ROUND_TOWARDS_ZERO 3
+    constant ROUND_AWAY_FROM_ZERO 4
+    constant ROUND_HALF_DOWN 5
+    constant ROUND_HALF_UP 6
+    constant ROUND_HALF_TOWARDS_ZERO 7
+    constant ROUND_HALF_AWAY_FROM_ZERO 8
+    constant ROUND_HALF_TO_EVEN 9
+    constant ROUND_HALF_TO_ODD 10
 
 class Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder activatable python_type
     py SignificantDigitsNumberRounder

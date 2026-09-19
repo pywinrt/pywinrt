@@ -20,6 +20,10 @@ interface Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics
 enum Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormat python_type
     py PhoneNumberFormat
     signature enum(Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormat;i4)
+    constant E164 0
+    constant INTERNATIONAL 1
+    constant NATIONAL 2
+    constant RFC3966 3
 
 class Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter activatable python_type
     py PhoneNumberFormatter
@@ -122,14 +126,35 @@ class Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo python_type st
 enum Windows.Globalization.PhoneNumberFormatting.PhoneNumberMatchResult python_type
     py PhoneNumberMatchResult
     signature enum(Windows.Globalization.PhoneNumberFormatting.PhoneNumberMatchResult;i4)
+    constant NO_MATCH 0
+    constant SHORT_NATIONAL_SIGNIFICANT_NUMBER_MATCH 1
+    constant NATIONAL_SIGNIFICANT_NUMBER_MATCH 2
+    constant EXACT_MATCH 3
 
 enum Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult python_type
     py PhoneNumberParseResult
     signature enum(Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult;i4)
+    constant VALID 0
+    constant NOT_A_NUMBER 1
+    constant INVALID_COUNTRY_CODE 2
+    constant TOO_SHORT 3
+    constant TOO_LONG 4
 
 enum Windows.Globalization.PhoneNumberFormatting.PredictedPhoneNumberKind python_type
     py PredictedPhoneNumberKind
     signature enum(Windows.Globalization.PhoneNumberFormatting.PredictedPhoneNumberKind;i4)
+    constant FIXED_LINE 0
+    constant MOBILE 1
+    constant FIXED_LINE_OR_MOBILE 2
+    constant TOLL_FREE 3
+    constant PREMIUM_RATE 4
+    constant SHARED_COST 5
+    constant VOIP 6
+    constant PERSONAL_NUMBER 7
+    constant PAGER 8
+    constant UNIVERSAL_ACCOUNT_NUMBER 9
+    constant VOICEMAIL 10
+    constant UNKNOWN 11
 
 interface Windows.Foundation.IStringable external
     py winrt.windows.foundation._IStringable

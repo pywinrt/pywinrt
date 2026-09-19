@@ -120,6 +120,9 @@ class Microsoft.UI.Xaml.Data.BindingExpressionBase composable python_type
 enum Microsoft.UI.Xaml.Data.BindingMode python_type
     py BindingMode
     signature enum(Microsoft.UI.Xaml.Data.BindingMode;i4)
+    constant ONE_WAY 1
+    constant ONE_TIME 2
+    constant TWO_WAY 3
 
 class Microsoft.UI.Xaml.Data.BindingOperations python_type
     py BindingOperations
@@ -926,12 +929,19 @@ class Microsoft.UI.Xaml.Data.RelativeSource composable python_type
 enum Microsoft.UI.Xaml.Data.RelativeSourceMode python_type
     py RelativeSourceMode
     signature enum(Microsoft.UI.Xaml.Data.RelativeSourceMode;i4)
+    constant NONE 0
+    constant TEMPLATED_PARENT 1
+    constant SELF 2
 
 enum T parameterized
 
 enum Microsoft.UI.Xaml.Data.UpdateSourceTrigger python_type
     py UpdateSourceTrigger
     signature enum(Microsoft.UI.Xaml.Data.UpdateSourceTrigger;i4)
+    constant DEFAULT 0
+    constant PROPERTY_CHANGED 1
+    constant EXPLICIT 2
+    constant LOST_FOCUS 3
 
 delegate Windows.Foundation.Collections.VectorChangedEventHandler<System.Object> concrete
     py winrt.windows.foundation.collections.VectorChangedEventHandler[Object]

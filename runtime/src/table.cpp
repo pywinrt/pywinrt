@@ -29,11 +29,12 @@ namespace py::table
     {
         constexpr uint32_t header_size = 48;
         constexpr uint32_t section_entry_size = 12;
-        constexpr uint32_t type_record_size = 22 * 4;
+        constexpr uint32_t type_record_size = 24 * 4;
         constexpr uint32_t group_record_size = 4 * 4;
         constexpr uint32_t member_record_size = 10 * 4;
         constexpr uint32_t param_record_size = 4 * 4;
         constexpr uint32_t field_record_size = 4 * 4;
+        constexpr uint32_t constant_record_size = 2 * 4;
 
         constexpr uint32_t make_tag(char const (&tag)[5])
         {
@@ -189,6 +190,7 @@ namespace py::table
         members_ = find_section("MEMB", member_record_size);
         params_ = find_section("PARM", param_record_size);
         fields_ = find_section("FLDS", field_record_size);
+        constants_ = find_section("CNST", constant_record_size);
 
         if (strings_.size < 1 || data_[strings_.offset] != 0
             || data_[strings_.offset + strings_.size - 1] != 0)
@@ -201,6 +203,7 @@ namespace py::table
         member_count_ = members_.size / member_record_size;
         param_count_ = params_.size / param_record_size;
         field_count_ = fields_.size / field_record_size;
+        constant_count_ = constants_.size / constant_record_size;
         guid_count_ = guids_.size / 16;
         ref_count_ = refs_.size / 4;
     }
@@ -334,6 +337,17 @@ namespace py::table
 
         return read_u32(
             data_ + fields_.offset + index * field_record_size + position * 4);
+    }
+
+    uint32_t file::constant_word(uint32_t index, uint32_t position) const
+    {
+        if (index >= constant_count_)
+        {
+            fail("table constant index " + std::to_string(index) + " is out of bounds");
+        }
+
+        return read_u32(
+            data_ + constants_.offset + index * constant_record_size + position * 4);
     }
 
     type_view file::type(uint32_t index) const
@@ -533,6 +547,23 @@ namespace py::table
         return field_view{owner_, word(14) + position};
     }
 
+    uint32_t type_view::constant_count() const
+    {
+        return word(23);
+    }
+
+    constant_view type_view::constant(uint32_t position) const
+    {
+        if (position >= constant_count())
+        {
+            fail(
+                "table constant position " + std::to_string(position)
+                + " is out of bounds");
+        }
+
+        return constant_view{owner_, word(22) + position};
+    }
+
     ref_list type_view::factories() const
     {
         return {owner_, word(16), word(17)};
@@ -721,6 +752,21 @@ namespace py::table
     uint32_t field_view::type() const
     {
         return word(3);
+    }
+
+    uint32_t constant_view::word(uint32_t position) const
+    {
+        return owner_->constant_word(index_, position);
+    }
+
+    std::string_view constant_view::py_name() const
+    {
+        return owner_->string(word(0));
+    }
+
+    uint32_t constant_view::value() const
+    {
+        return word(1);
     }
 } // namespace py::table
 
@@ -1091,6 +1137,46 @@ namespace py::cpp::_winrt
                 }
             }
 
+            pyobj_handle constants{PyList_New(type.constant_count())};
+            if (!constants)
+            {
+                return pyobj_handle{};
+            }
+
+            for (uint32_t i = 0; i < type.constant_count(); i++)
+            {
+                auto const constant = type.constant(i);
+                pyobj_handle item{PyDict_New()};
+                if (!item)
+                {
+                    return pyobj_handle{};
+                }
+
+                if (!set_item(
+                        item.get(),
+                        "py_name",
+                        PyUnicode_FromStringAndSize(
+                            constant.py_name().data(),
+                            static_cast<Py_ssize_t>(constant.py_name().size()))))
+                {
+                    return pyobj_handle{};
+                }
+
+                // The thirty-two bits as they are written, since what they
+                // mean is the enum's to say: the flags_enum bit of the type
+                // record is what decides whether they are signed.
+                if (!set_item(
+                        item.get(), "value", PyLong_FromUnsignedLong(constant.value())))
+                {
+                    return pyobj_handle{};
+                }
+
+                if (PyList_SetItem(constants.get(), i, item.detach()) < 0)
+                {
+                    return pyobj_handle{};
+                }
+            }
+
             auto const guid = type.guid();
             pyobj_handle result{PyDict_New()};
             if (!result)
@@ -1221,6 +1307,11 @@ namespace py::cpp::_winrt
             }
 
             if (!set_item(result.get(), "fields", fields.detach()))
+            {
+                return pyobj_handle{};
+            }
+
+            if (!set_item(result.get(), "constants", constants.detach()))
             {
                 return pyobj_handle{};
             }

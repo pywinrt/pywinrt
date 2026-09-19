@@ -5,3 +5,15 @@ namespace Windows.Media.Render
 enum Windows.Media.Render.AudioRenderCategory python_type
     py AudioRenderCategory
     signature enum(Windows.Media.Render.AudioRenderCategory;i4)
+    constant OTHER 0
+    constant FOREGROUND_ONLY_MEDIA 1
+    constant BACKGROUND_CAPABLE_MEDIA 2
+    constant COMMUNICATIONS 3
+    constant ALERTS 4
+    constant SOUND_EFFECTS 5
+    constant GAME_EFFECTS 6
+    constant GAME_MEDIA 7
+    constant GAME_CHAT 8
+    constant SPEECH 9
+    constant MOVIE 10
+    constant MEDIA 11

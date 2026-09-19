@@ -103,6 +103,9 @@ class Microsoft.UI.Xaml.Media.Animation.CircleEase activatable python_type
 enum Microsoft.UI.Xaml.Media.Animation.ClockState python_type
     py ClockState
     signature enum(Microsoft.UI.Xaml.Media.Animation.ClockState;i4)
+    constant ACTIVE 0
+    constant FILLING 1
+    constant STOPPED 2
 
 class Microsoft.UI.Xaml.Media.Animation.ColorAnimation activatable python_type
     py ColorAnimation
@@ -326,6 +329,10 @@ class Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation python_type
 enum Microsoft.UI.Xaml.Media.Animation.ConnectedAnimationComponent python_type
     py ConnectedAnimationComponent
     signature enum(Microsoft.UI.Xaml.Media.Animation.ConnectedAnimationComponent;i4)
+    constant OFFSET_X 0
+    constant OFFSET_Y 1
+    constant CROSS_FADE 2
+    constant SCALE 3
 
 class Microsoft.UI.Xaml.Media.Animation.ConnectedAnimationConfiguration composable python_type
     py ConnectedAnimationConfiguration
@@ -889,6 +896,9 @@ class Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase composable python_typ
 enum Microsoft.UI.Xaml.Media.Animation.EasingMode python_type
     py EasingMode
     signature enum(Microsoft.UI.Xaml.Media.Animation.EasingMode;i4)
+    constant EASE_OUT 0
+    constant EASE_IN 1
+    constant EASE_IN_OUT 2
 
 class Microsoft.UI.Xaml.Media.Animation.EasingPointKeyFrame activatable python_type
     py EasingPointKeyFrame
@@ -1083,6 +1093,8 @@ class Microsoft.UI.Xaml.Media.Animation.FadeOutThemeAnimation activatable python
 enum Microsoft.UI.Xaml.Media.Animation.FillBehavior python_type
     py FillBehavior
     signature enum(Microsoft.UI.Xaml.Media.Animation.FillBehavior;i4)
+    constant HOLD_END 0
+    constant STOP 1
 
 class Microsoft.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration composable python_type
     py GravityConnectedAnimationConfiguration
@@ -3351,6 +3363,9 @@ class Microsoft.UI.Xaml.Media.Animation.RepeatBehaviorHelper python_type
 enum Microsoft.UI.Xaml.Media.Animation.RepeatBehaviorType python_type
     py RepeatBehaviorType
     signature enum(Microsoft.UI.Xaml.Media.Animation.RepeatBehaviorType;i4)
+    constant COUNT 0
+    constant DURATION 1
+    constant FOREVER 2
 
 class Microsoft.UI.Xaml.Media.Animation.RepositionThemeAnimation activatable python_type
     py RepositionThemeAnimation
@@ -3419,6 +3434,9 @@ class Microsoft.UI.Xaml.Media.Animation.SineEase activatable python_type
 enum Microsoft.UI.Xaml.Media.Animation.SlideNavigationTransitionEffect python_type
     py SlideNavigationTransitionEffect
     signature enum(Microsoft.UI.Xaml.Media.Animation.SlideNavigationTransitionEffect;i4)
+    constant FROM_BOTTOM 0
+    constant FROM_LEFT 1
+    constant FROM_RIGHT 2
 
 class Microsoft.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo activatable python_type
     py SlideNavigationTransitionInfo

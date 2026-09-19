@@ -190,10 +190,16 @@ class Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings python_type
 enum Windows.Devices.Spi.Provider.ProviderSpiMode python_type
     py ProviderSpiMode
     signature enum(Windows.Devices.Spi.Provider.ProviderSpiMode;i4)
+    constant MODE0 0
+    constant MODE1 1
+    constant MODE2 2
+    constant MODE3 3
 
 enum Windows.Devices.Spi.Provider.ProviderSpiSharingMode python_type
     py ProviderSpiSharingMode
     signature enum(Windows.Devices.Spi.Provider.ProviderSpiSharingMode;i4)
+    constant EXCLUSIVE 0
+    constant SHARED 1
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
     py winrt.windows.foundation.AsyncOperationCompletedHandler

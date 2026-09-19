@@ -171,6 +171,8 @@ class Windows.Storage.Streams.Buffer python_type buffer buffer_length
 enum Windows.Storage.Streams.ByteOrder python_type
     py ByteOrder
     signature enum(Windows.Storage.Streams.ByteOrder;i4)
+    constant LITTLE_ENDIAN 0
+    constant BIG_ENDIAN 1
 
 class Windows.Storage.Streams.DataReader python_type closeable
     py DataReader
@@ -441,6 +443,11 @@ class Windows.Storage.Streams.FileInputStream python_type closeable
 enum Windows.Storage.Streams.FileOpenDisposition python_type
     py FileOpenDisposition
     signature enum(Windows.Storage.Streams.FileOpenDisposition;i4)
+    constant OPEN_EXISTING 0
+    constant OPEN_ALWAYS 1
+    constant CREATE_NEW 2
+    constant CREATE_ALWAYS 3
+    constant TRUNCATE_EXISTING 4
 
 class Windows.Storage.Streams.FileOutputStream python_type closeable
     py FileOutputStream
@@ -1269,9 +1276,12 @@ class Windows.Storage.Streams.InMemoryRandomAccessStream activatable python_type
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
 
-enum Windows.Storage.Streams.InputStreamOptions python_type
+enum Windows.Storage.Streams.InputStreamOptions python_type flags_enum
     py InputStreamOptions
     signature enum(Windows.Storage.Streams.InputStreamOptions;u4)
+    constant NONE 0x0
+    constant PARTIAL 0x1
+    constant READ_AHEAD 0x2
 
 class Windows.Storage.Streams.InputStreamOverStream python_type closeable
     py InputStreamOverStream
@@ -1400,6 +1410,9 @@ class Windows.Storage.Streams.RandomAccessStreamReference python_type
 enum Windows.Storage.Streams.UnicodeEncoding python_type
     py UnicodeEncoding
     signature enum(Windows.Storage.Streams.UnicodeEncoding;i4)
+    constant UTF8 0
+    constant UTF16_L_E 1
+    constant UTF16_B_E 2
 
 class System.Boolean external
     py winrt.system.Boolean

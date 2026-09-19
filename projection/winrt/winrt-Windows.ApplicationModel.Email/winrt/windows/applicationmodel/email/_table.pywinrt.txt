@@ -281,14 +281,32 @@ class Windows.ApplicationModel.Email.EmailAttachment activatable python_type
 enum Windows.ApplicationModel.Email.EmailAttachmentDownloadState python_type
     py EmailAttachmentDownloadState
     signature enum(Windows.ApplicationModel.Email.EmailAttachmentDownloadState;i4)
+    constant NOT_DOWNLOADED 0
+    constant DOWNLOADING 1
+    constant DOWNLOADED 2
+    constant FAILED 3
 
 enum Windows.ApplicationModel.Email.EmailBatchStatus python_type
     py EmailBatchStatus
     signature enum(Windows.ApplicationModel.Email.EmailBatchStatus;i4)
+    constant SUCCESS 0
+    constant SERVER_SEARCH_SYNC_MANAGER_ERROR 1
+    constant SERVER_SEARCH_UNKNOWN_ERROR 2
 
 enum Windows.ApplicationModel.Email.EmailCertificateValidationStatus python_type
     py EmailCertificateValidationStatus
     signature enum(Windows.ApplicationModel.Email.EmailCertificateValidationStatus;i4)
+    constant SUCCESS 0
+    constant NO_MATCH 1
+    constant INVALID_USAGE 2
+    constant INVALID_CERTIFICATE 3
+    constant REVOKED 4
+    constant CHAIN_REVOKED 5
+    constant REVOCATION_SERVER_FAILURE 6
+    constant EXPIRED 7
+    constant UNTRUSTED 8
+    constant SERVER_ERROR 9
+    constant UNKNOWN_FAILURE 10
 
 class Windows.ApplicationModel.Email.EmailConversation python_type
     py EmailConversation
@@ -365,6 +383,10 @@ class Windows.ApplicationModel.Email.EmailConversationReader python_type
 enum Windows.ApplicationModel.Email.EmailFlagState python_type
     py EmailFlagState
     signature enum(Windows.ApplicationModel.Email.EmailFlagState;i4)
+    constant UNFLAGGED 0
+    constant FLAGGED 1
+    constant COMPLETED 2
+    constant CLEARED 3
 
 class Windows.ApplicationModel.Email.EmailFolder python_type
     py EmailFolder
@@ -451,6 +473,9 @@ class Windows.ApplicationModel.Email.EmailFolder python_type
 enum Windows.ApplicationModel.Email.EmailImportance python_type
     py EmailImportance
     signature enum(Windows.ApplicationModel.Email.EmailImportance;i4)
+    constant NORMAL 0
+    constant HIGH 1
+    constant LOW 2
 
 class Windows.ApplicationModel.Email.EmailIrmInfo activatable python_type
     py EmailIrmInfo
@@ -829,10 +854,24 @@ class Windows.ApplicationModel.Email.EmailMailboxAction python_type
 enum Windows.ApplicationModel.Email.EmailMailboxActionKind python_type
     py EmailMailboxActionKind
     signature enum(Windows.ApplicationModel.Email.EmailMailboxActionKind;i4)
+    constant MARK_MESSAGE_AS_SEEN 0
+    constant MARK_MESSAGE_READ 1
+    constant CHANGE_MESSAGE_FLAG_STATE 2
+    constant MOVE_MESSAGE 3
+    constant SAVE_DRAFT 4
+    constant SEND_MESSAGE 5
+    constant CREATE_RESPONSE_REPLY_MESSAGE 6
+    constant CREATE_RESPONSE_REPLY_ALL_MESSAGE 7
+    constant CREATE_RESPONSE_FORWARD_MESSAGE 8
+    constant MOVE_FOLDER 9
+    constant MARK_FOLDER_FOR_SYNC_ENABLED 10
 
 enum Windows.ApplicationModel.Email.EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation python_type
     py EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation
     signature enum(Windows.ApplicationModel.Email.EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation;i4)
+    constant NONE 0
+    constant STRONG_ALGORITHM 1
+    constant ANY_ALGORITHM 2
 
 class Windows.ApplicationModel.Email.EmailMailboxAutoReply python_type
     py EmailMailboxAutoReply
@@ -853,6 +892,8 @@ class Windows.ApplicationModel.Email.EmailMailboxAutoReply python_type
 enum Windows.ApplicationModel.Email.EmailMailboxAutoReplyMessageResponseKind python_type
     py EmailMailboxAutoReplyMessageResponseKind
     signature enum(Windows.ApplicationModel.Email.EmailMailboxAutoReplyMessageResponseKind;i4)
+    constant HTML 0
+    constant PLAIN_TEXT 1
 
 class Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings activatable python_type
     py EmailMailboxAutoReplySettings
@@ -1021,6 +1062,13 @@ class Windows.ApplicationModel.Email.EmailMailboxChangeTracker python_type
 enum Windows.ApplicationModel.Email.EmailMailboxChangeType python_type
     py EmailMailboxChangeType
     signature enum(Windows.ApplicationModel.Email.EmailMailboxChangeType;i4)
+    constant MESSAGE_CREATED 0
+    constant MESSAGE_MODIFIED 1
+    constant MESSAGE_DELETED 2
+    constant FOLDER_CREATED 3
+    constant FOLDER_MODIFIED 4
+    constant FOLDER_DELETED 5
+    constant CHANGE_TRACKING_LOST 6
 
 class Windows.ApplicationModel.Email.EmailMailboxChangedDeferral python_type
     py EmailMailboxChangedDeferral
@@ -1054,22 +1102,46 @@ class Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult python_type
 enum Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus python_type
     py EmailMailboxCreateFolderStatus
     signature enum(Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus;i4)
+    constant SUCCESS 0
+    constant NETWORK_ERROR 1
+    constant PERMISSIONS_ERROR 2
+    constant SERVER_ERROR 3
+    constant UNKNOWN_FAILURE 4
+    constant NAME_COLLISION 5
+    constant SERVER_REJECTED 6
 
 enum Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus python_type
     py EmailMailboxDeleteFolderStatus
     signature enum(Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus;i4)
+    constant SUCCESS 0
+    constant NETWORK_ERROR 1
+    constant PERMISSIONS_ERROR 2
+    constant SERVER_ERROR 3
+    constant UNKNOWN_FAILURE 4
+    constant COULD_NOT_DELETE_EVERYTHING 5
 
 enum Windows.ApplicationModel.Email.EmailMailboxEmptyFolderStatus python_type
     py EmailMailboxEmptyFolderStatus
     signature enum(Windows.ApplicationModel.Email.EmailMailboxEmptyFolderStatus;i4)
+    constant SUCCESS 0
+    constant NETWORK_ERROR 1
+    constant PERMISSIONS_ERROR 2
+    constant SERVER_ERROR 3
+    constant UNKNOWN_FAILURE 4
+    constant COULD_NOT_DELETE_EVERYTHING 5
 
 enum Windows.ApplicationModel.Email.EmailMailboxOtherAppReadAccess python_type
     py EmailMailboxOtherAppReadAccess
     signature enum(Windows.ApplicationModel.Email.EmailMailboxOtherAppReadAccess;i4)
+    constant SYSTEM_ONLY 0
+    constant FULL 1
+    constant NONE 2
 
 enum Windows.ApplicationModel.Email.EmailMailboxOtherAppWriteAccess python_type
     py EmailMailboxOtherAppWriteAccess
     signature enum(Windows.ApplicationModel.Email.EmailMailboxOtherAppWriteAccess;i4)
+    constant NONE 0
+    constant LIMITED 1
 
 class Windows.ApplicationModel.Email.EmailMailboxPolicies python_type
     py EmailMailboxPolicies
@@ -1112,10 +1184,19 @@ class Windows.ApplicationModel.Email.EmailMailboxPolicies python_type
 enum Windows.ApplicationModel.Email.EmailMailboxSmimeEncryptionAlgorithm python_type
     py EmailMailboxSmimeEncryptionAlgorithm
     signature enum(Windows.ApplicationModel.Email.EmailMailboxSmimeEncryptionAlgorithm;i4)
+    constant ANY 0
+    constant TRIPLE_DES 1
+    constant DES 2
+    constant R_C2128_BIT 3
+    constant R_C264_BIT 4
+    constant R_C240_BIT 5
 
 enum Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm python_type
     py EmailMailboxSmimeSigningAlgorithm
     signature enum(Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm;i4)
+    constant ANY 0
+    constant SHA1 1
+    constant MD5 2
 
 class Windows.ApplicationModel.Email.EmailMailboxSyncManager python_type
     py EmailMailboxSyncManager
@@ -1151,6 +1232,13 @@ class Windows.ApplicationModel.Email.EmailMailboxSyncManager python_type
 enum Windows.ApplicationModel.Email.EmailMailboxSyncStatus python_type
     py EmailMailboxSyncStatus
     signature enum(Windows.ApplicationModel.Email.EmailMailboxSyncStatus;i4)
+    constant IDLE 0
+    constant SYNCING 1
+    constant UP_TO_DATE 2
+    constant AUTHENTICATION_ERROR 3
+    constant POLICY_ERROR 4
+    constant UNKNOWN_ERROR 5
+    constant MANUAL_ACCOUNT_REMOVAL_REQUIRED 6
 
 class Windows.ApplicationModel.Email.EmailManager static python_type
     py EmailManager
@@ -1268,6 +1356,9 @@ class Windows.ApplicationModel.Email.EmailMeetingInfo activatable python_type
 enum Windows.ApplicationModel.Email.EmailMeetingResponseType python_type
     py EmailMeetingResponseType
     signature enum(Windows.ApplicationModel.Email.EmailMeetingResponseType;i4)
+    constant ACCEPT 0
+    constant DECLINE 1
+    constant TENTATIVE 2
 
 class Windows.ApplicationModel.Email.EmailMessage activatable python_type
     py EmailMessage
@@ -1457,10 +1548,16 @@ class Windows.ApplicationModel.Email.EmailMessageBatch python_type
 enum Windows.ApplicationModel.Email.EmailMessageBodyKind python_type
     py EmailMessageBodyKind
     signature enum(Windows.ApplicationModel.Email.EmailMessageBodyKind;i4)
+    constant HTML 0
+    constant PLAIN_TEXT 1
 
 enum Windows.ApplicationModel.Email.EmailMessageDownloadState python_type
     py EmailMessageDownloadState
     signature enum(Windows.ApplicationModel.Email.EmailMessageDownloadState;i4)
+    constant PARTIALLY_DOWNLOADED 0
+    constant DOWNLOADING 1
+    constant DOWNLOADED 2
+    constant FAILED 3
 
 class Windows.ApplicationModel.Email.EmailMessageReader python_type
     py EmailMessageReader
@@ -1474,14 +1571,28 @@ class Windows.ApplicationModel.Email.EmailMessageReader python_type
 enum Windows.ApplicationModel.Email.EmailMessageResponseKind python_type
     py EmailMessageResponseKind
     signature enum(Windows.ApplicationModel.Email.EmailMessageResponseKind;i4)
+    constant NONE 0
+    constant REPLY 1
+    constant REPLY_ALL 2
+    constant FORWARD 3
 
 enum Windows.ApplicationModel.Email.EmailMessageSmimeKind python_type
     py EmailMessageSmimeKind
     signature enum(Windows.ApplicationModel.Email.EmailMessageSmimeKind;i4)
+    constant NONE 0
+    constant CLEAR_SIGNED 1
+    constant OPAQUE_SIGNED 2
+    constant ENCRYPTED 3
 
 enum Windows.ApplicationModel.Email.EmailQueryKind python_type
     py EmailQueryKind
     signature enum(Windows.ApplicationModel.Email.EmailQueryKind;i4)
+    constant ALL 0
+    constant IMPORTANT 1
+    constant FLAGGED 2
+    constant UNREAD 3
+    constant READ 4
+    constant UNSEEN 5
 
 class Windows.ApplicationModel.Email.EmailQueryOptions activatable python_type
     py EmailQueryOptions
@@ -1521,21 +1632,32 @@ class Windows.ApplicationModel.Email.EmailQueryOptions activatable python_type
         get get_TextSearch slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailQueryOptions shape=4 reverse=22
             out class type=Windows.ApplicationModel.Email.EmailQueryTextSearch return
 
-enum Windows.ApplicationModel.Email.EmailQuerySearchFields python_type
+enum Windows.ApplicationModel.Email.EmailQuerySearchFields python_type flags_enum
     py EmailQuerySearchFields
     signature enum(Windows.ApplicationModel.Email.EmailQuerySearchFields;u4)
+    constant NONE 0x0
+    constant SUBJECT 0x1
+    constant SENDER 0x2
+    constant PREVIEW 0x4
+    constant RECIPIENTS 0x8
+    constant ALL 0xFFFFFFFF
 
 enum Windows.ApplicationModel.Email.EmailQuerySearchScope python_type
     py EmailQuerySearchScope
     signature enum(Windows.ApplicationModel.Email.EmailQuerySearchScope;i4)
+    constant LOCAL 0
+    constant SERVER 1
 
 enum Windows.ApplicationModel.Email.EmailQuerySortDirection python_type
     py EmailQuerySortDirection
     signature enum(Windows.ApplicationModel.Email.EmailQuerySortDirection;i4)
+    constant DESCENDING 0
+    constant ASCENDING 1
 
 enum Windows.ApplicationModel.Email.EmailQuerySortProperty python_type
     py EmailQuerySortProperty
     signature enum(Windows.ApplicationModel.Email.EmailQuerySortProperty;i4)
+    constant DATE 0
 
 class Windows.ApplicationModel.Email.EmailQueryTextSearch python_type
     py EmailQueryTextSearch
@@ -1609,10 +1731,25 @@ class Windows.ApplicationModel.Email.EmailRecipientResolutionResult activatable 
 enum Windows.ApplicationModel.Email.EmailRecipientResolutionStatus python_type
     py EmailRecipientResolutionStatus
     signature enum(Windows.ApplicationModel.Email.EmailRecipientResolutionStatus;i4)
+    constant SUCCESS 0
+    constant RECIPIENT_NOT_FOUND 1
+    constant AMBIGUOUS_RECIPIENT 2
+    constant NO_CERTIFICATE 3
+    constant CERTIFICATE_REQUEST_LIMIT_REACHED 4
+    constant CANNOT_RESOLVE_DISTRIBUTION_LIST 5
+    constant SERVER_ERROR 6
+    constant UNKNOWN_FAILURE 7
 
 enum Windows.ApplicationModel.Email.EmailSpecialFolderKind python_type
     py EmailSpecialFolderKind
     signature enum(Windows.ApplicationModel.Email.EmailSpecialFolderKind;i4)
+    constant NONE 0
+    constant ROOT 1
+    constant INBOX 2
+    constant OUTBOX 3
+    constant DRAFTS 4
+    constant DELETED_ITEMS 5
+    constant SENT 6
 
 class Windows.ApplicationModel.Email.EmailStore python_type
     py EmailStore
@@ -1664,6 +1801,8 @@ class Windows.ApplicationModel.Email.EmailStore python_type
 enum Windows.ApplicationModel.Email.EmailStoreAccessType python_type
     py EmailStoreAccessType
     signature enum(Windows.ApplicationModel.Email.EmailStoreAccessType;i4)
+    constant APP_MAILBOXES_READ_WRITE 0
+    constant ALL_MAILBOXES_LIMITED_READ_WRITE 1
 
 class Windows.ApplicationModel.Email.EmailStoreNotificationTriggerDetails python_type
     py EmailStoreNotificationTriggerDetails

@@ -14,9 +14,14 @@ interface Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory
 interface Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2
     guid 9425c7d9-ed9b-5d00-99cc-b0b8dc9e4c60
 
-enum Windows.System.RemoteDesktop.Input.RemoteKeyEventAttributes python_type
+enum Windows.System.RemoteDesktop.Input.RemoteKeyEventAttributes python_type flags_enum
     py RemoteKeyEventAttributes
     signature enum(Windows.System.RemoteDesktop.Input.RemoteKeyEventAttributes;u4)
+    constant NONE 0x0
+    constant KEY_UP 0x1
+    constant REPEAT 0x2
+    constant EXTENDED 0x4
+    constant EXTENDED1 0x8
 
 class Windows.System.RemoteDesktop.Input.RemoteTextConnection python_type closeable
     py RemoteTextConnection
@@ -67,9 +72,11 @@ delegate Windows.System.RemoteDesktop.Input.RemoteTextConnectionDataHandler pyth
             pass_array uint8 name=pduData
             out boolean return
 
-enum Windows.System.RemoteDesktop.Input.RemoteTextConnectionOptions python_type
+enum Windows.System.RemoteDesktop.Input.RemoteTextConnectionOptions python_type flags_enum
     py RemoteTextConnectionOptions
     signature enum(Windows.System.RemoteDesktop.Input.RemoteTextConnectionOptions;u4)
+    constant NONE 0x0
+    constant ENABLE_PREDICTED_KEY_REPORTING 0x1
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable

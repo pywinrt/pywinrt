@@ -589,6 +589,13 @@ class Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult python_type
 enum Windows.ApplicationModel.Payments.PaymentCanMakePaymentResultStatus python_type
     py PaymentCanMakePaymentResultStatus
     signature enum(Windows.ApplicationModel.Payments.PaymentCanMakePaymentResultStatus;i4)
+    constant UNKNOWN 0
+    constant YES 1
+    constant NO 2
+    constant NOT_ALLOWED 3
+    constant USER_NOT_SIGNED_IN 4
+    constant SPECIFIED_PAYMENT_METHOD_IDS_NOT_SUPPORTED 5
+    constant NO_QUALIFYING_CARD_ON_FILE 6
 
 class Windows.ApplicationModel.Payments.PaymentCurrencyAmount python_type
     py PaymentCurrencyAmount
@@ -789,6 +796,9 @@ class Windows.ApplicationModel.Payments.PaymentMethodData python_type
 enum Windows.ApplicationModel.Payments.PaymentOptionPresence python_type
     py PaymentOptionPresence
     signature enum(Windows.ApplicationModel.Payments.PaymentOptionPresence;i4)
+    constant NONE 0
+    constant OPTIONAL 1
+    constant REQUIRED 2
 
 class Windows.ApplicationModel.Payments.PaymentOptions activatable python_type
     py PaymentOptions
@@ -874,6 +884,8 @@ class Windows.ApplicationModel.Payments.PaymentRequest python_type
 enum Windows.ApplicationModel.Payments.PaymentRequestChangeKind python_type
     py PaymentRequestChangeKind
     signature enum(Windows.ApplicationModel.Payments.PaymentRequestChangeKind;i4)
+    constant SHIPPING_OPTION 0
+    constant SHIPPING_ADDRESS 1
 
 class Windows.ApplicationModel.Payments.PaymentRequestChangedArgs python_type
     py PaymentRequestChangedArgs
@@ -935,10 +947,16 @@ class Windows.ApplicationModel.Payments.PaymentRequestChangedResult python_type
 enum Windows.ApplicationModel.Payments.PaymentRequestCompletionStatus python_type
     py PaymentRequestCompletionStatus
     signature enum(Windows.ApplicationModel.Payments.PaymentRequestCompletionStatus;i4)
+    constant SUCCEEDED 0
+    constant FAILED 1
+    constant UNKNOWN 2
 
 enum Windows.ApplicationModel.Payments.PaymentRequestStatus python_type
     py PaymentRequestStatus
     signature enum(Windows.ApplicationModel.Payments.PaymentRequestStatus;i4)
+    constant SUCCEEDED 0
+    constant FAILED 1
+    constant CANCELED 2
 
 class Windows.ApplicationModel.Payments.PaymentRequestSubmitResult python_type
     py PaymentRequestSubmitResult
@@ -1026,6 +1044,9 @@ class Windows.ApplicationModel.Payments.PaymentShippingOption python_type
 enum Windows.ApplicationModel.Payments.PaymentShippingType python_type
     py PaymentShippingType
     signature enum(Windows.ApplicationModel.Payments.PaymentShippingType;i4)
+    constant SHIPPING 0
+    constant DELIVERY 1
+    constant PICKUP 2
 
 class Windows.ApplicationModel.Payments.PaymentToken python_type
     py PaymentToken

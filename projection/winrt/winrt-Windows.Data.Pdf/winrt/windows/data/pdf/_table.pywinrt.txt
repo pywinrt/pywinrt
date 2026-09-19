@@ -188,6 +188,10 @@ class Windows.Data.Pdf.PdfPageRenderOptions activatable python_type
 enum Windows.Data.Pdf.PdfPageRotation python_type
     py PdfPageRotation
     signature enum(Windows.Data.Pdf.PdfPageRotation;i4)
+    constant NORMAL 0
+    constant ROTATE90 1
+    constant ROTATE180 2
+    constant ROTATE270 3
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
     py winrt.windows.foundation.AsyncOperationCompletedHandler

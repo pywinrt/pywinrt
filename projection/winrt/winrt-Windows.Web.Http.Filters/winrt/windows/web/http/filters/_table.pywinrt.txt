@@ -141,14 +141,22 @@ class Windows.Web.Http.Filters.HttpCacheControl python_type
 enum Windows.Web.Http.Filters.HttpCacheReadBehavior python_type
     py HttpCacheReadBehavior
     signature enum(Windows.Web.Http.Filters.HttpCacheReadBehavior;i4)
+    constant DEFAULT 0
+    constant MOST_RECENT 1
+    constant ONLY_FROM_CACHE 2
+    constant NO_CACHE 3
 
 enum Windows.Web.Http.Filters.HttpCacheWriteBehavior python_type
     py HttpCacheWriteBehavior
     signature enum(Windows.Web.Http.Filters.HttpCacheWriteBehavior;i4)
+    constant DEFAULT 0
+    constant NO_CACHE 1
 
 enum Windows.Web.Http.Filters.HttpCookieUsageBehavior python_type
     py HttpCookieUsageBehavior
     signature enum(Windows.Web.Http.Filters.HttpCookieUsageBehavior;i4)
+    constant DEFAULT 0
+    constant NO_COOKIES 1
 
 class Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs python_type
     py HttpServerCustomValidationRequestedEventArgs

@@ -27,6 +27,22 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.AI.MachineLea
 enum Windows.AI.MachineLearning.Preview.FeatureElementKindPreview python_type
     py FeatureElementKindPreview
     signature enum(Windows.AI.MachineLearning.Preview.FeatureElementKindPreview;i4)
+    constant UNDEFINED 0
+    constant FLOAT 1
+    constant UINT8 2
+    constant INT8 3
+    constant UINT16 4
+    constant INT16 5
+    constant INT32 6
+    constant INT64 7
+    constant STRING 8
+    constant BOOLEAN 9
+    constant FLOAT16 10
+    constant DOUBLE 11
+    constant UINT32 12
+    constant UINT64 13
+    constant COMPLEX64 14
+    constant COMPLEX128 15
 
 interface Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[LearningModelEvaluationResultPreview]
@@ -547,6 +563,12 @@ class Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview python_
 enum Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview python_type
     py LearningModelDeviceKindPreview
     signature enum(Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview;i4)
+    constant LEARNING_DEVICE_ANY 0
+    constant LEARNING_DEVICE_CPU 1
+    constant LEARNING_DEVICE_GPU 2
+    constant LEARNING_DEVICE_NPU 3
+    constant LEARNING_DEVICE_DSP 4
+    constant LEARNING_DEVICE_FPGA 5
 
 class Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview python_type
     py LearningModelEvaluationResultPreview
@@ -563,6 +585,11 @@ class Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview py
 enum Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview python_type
     py LearningModelFeatureKindPreview
     signature enum(Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview;i4)
+    constant UNDEFINED 0
+    constant TENSOR 1
+    constant SEQUENCE 2
+    constant MAP 3
+    constant IMAGE 4
 
 class Windows.AI.MachineLearning.Preview.LearningModelPreview python_type
     py LearningModelPreview

@@ -93,10 +93,21 @@ class Windows.AI.Actions.ActionEntityFactory composable python_type closeable
 enum Windows.AI.Actions.ActionEntityKind python_type
     py ActionEntityKind
     signature enum(Windows.AI.Actions.ActionEntityKind;i4)
+    constant NONE 0
+    constant DOCUMENT 1
+    constant FILE 2
+    constant PHOTO 3
+    constant TEXT 4
+    constant STREAMING_TEXT 5
+    constant REMOTE_FILE 6
+    constant TABLE 7
+    constant CONTACT 8
 
 enum Windows.AI.Actions.ActionEntityTextFormat python_type
     py ActionEntityTextFormat
     signature enum(Windows.AI.Actions.ActionEntityTextFormat;i4)
+    constant PLAIN 0
+    constant MARKDOWN 1
 
 class Windows.AI.Actions.ActionFeedback python_type closeable
     py ActionFeedback
@@ -113,6 +124,8 @@ class Windows.AI.Actions.ActionFeedback python_type closeable
 enum Windows.AI.Actions.ActionFeedbackKind python_type
     py ActionFeedbackKind
     signature enum(Windows.AI.Actions.ActionFeedbackKind;i4)
+    constant POSITIVE 0
+    constant NEGATIVE 1
 
 class Windows.AI.Actions.ActionInvocationContext python_type closeable
     py ActionInvocationContext
@@ -200,10 +213,17 @@ class Windows.AI.Actions.ActionInvocationHelpDetails python_type closeable
 enum Windows.AI.Actions.ActionInvocationHelpKind python_type
     py ActionInvocationHelpKind
     signature enum(Windows.AI.Actions.ActionInvocationHelpKind;i4)
+    constant NONE 0
+    constant ERROR 1
+    constant WARNING 2
 
 enum Windows.AI.Actions.ActionInvocationResult python_type
     py ActionInvocationResult
     signature enum(Windows.AI.Actions.ActionInvocationResult;i4)
+    constant SUCCESS 0
+    constant USER_CANCELED 1
+    constant UNSUPPORTED 2
+    constant UNAVAILABLE 3
 
 class Windows.AI.Actions.ActionRuntime composable python_type closeable
     py ActionRuntime
@@ -428,6 +448,9 @@ class Windows.AI.Actions.RemoteFileActionEntity python_type
 enum Windows.AI.Actions.RemoteFileKind python_type
     py RemoteFileKind
     signature enum(Windows.AI.Actions.RemoteFileKind;i4)
+    constant DOCUMENT 0
+    constant PHOTO 1
+    constant FILE 2
 
 class Windows.AI.Actions.StreamingTextActionEntity python_type
     py StreamingTextActionEntity

@@ -164,14 +164,13 @@ static class FileWriters
     }
 
     /// <summary>
-    /// Writes the enums of a namespace as Python enum classes.
+    /// Writes the enums of a namespace as Python enum classes, for the stub.
     /// </summary>
     /// <remarks>
-    /// An enum is the one kind of projected type that is not built from the
-    /// table: it carries no interface and no members, so a Python class with
-    /// the constants in it is the whole projection. The same text goes into
-    /// <c>__init__.py</c>, which defines them, and into <c>__init__.pyi</c>,
-    /// which has to repeat everything the module binds.
+    /// The constants are in the table and the runtime builds the class, so
+    /// this is not what defines an enum. What it is for is
+    /// <c>__init__.pyi</c>, which a type checker reads instead of the module
+    /// and so has to spell out everything the module binds.
     /// </remarks>
     private static void WriteEnums(this IndentedTextWriter w, Members members)
     {
@@ -294,9 +293,10 @@ static class FileWriters
     /// projection package can have: the module used to re-export an extension
     /// module's contents, and the stub went beside that extension module, but
     /// the types come from the table now and there is no second module to
-    /// describe. So a stub has to say everything the module has, the enums and
-    /// the delegate aliases that <c>__init__.py</c> defines included, because a
-    /// type checker reads the stub instead of the module and not as well as it.
+    /// describe. So a stub has to say everything the module has - the enums
+    /// the runtime builds and the delegate aliases <c>__init__.py</c> defines
+    /// included - because a type checker reads the stub instead of the module
+    /// and not as well as it.
     /// </remarks>
     private static void WriteNamespacePyi(
         DirectoryInfo nsDir,
@@ -463,9 +463,9 @@ static class FileWriters
         bool componentDlls
     )
     {
-        // The stdlib imports depend on what the enums and delegate type
-        // aliases below turn out to use, so the rest of the file is written
-        // first and the imports are prepended once we can see it.
+        // The stdlib imports depend on what the delegate type aliases below
+        // turn out to use, so the rest of the file is written first and the
+        // imports are prepended once we can see it.
         using var bodySw = new StringWriter();
         using var w = new IndentedTextWriter(bodySw) { NewLine = "\n" };
 
@@ -524,8 +524,6 @@ static class FileWriters
         {
             w.WriteLine($"{type} = typing.TypeVar('{type}')");
         }
-
-        w.WriteEnums(members);
 
         w.WriteBlankLine();
 

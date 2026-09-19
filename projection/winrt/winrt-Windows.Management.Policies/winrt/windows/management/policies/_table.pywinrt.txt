@@ -71,6 +71,12 @@ class Windows.Management.Policies.NamedPolicyData python_type
 enum Windows.Management.Policies.NamedPolicyKind python_type
     py NamedPolicyKind
     signature enum(Windows.Management.Policies.NamedPolicyKind;i4)
+    constant INVALID 0
+    constant BINARY 1
+    constant BOOLEAN 2
+    constant INT32 3
+    constant INT64 4
+    constant STRING 5
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Management.Policies.NamedPolicyData,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[NamedPolicyData, Object]

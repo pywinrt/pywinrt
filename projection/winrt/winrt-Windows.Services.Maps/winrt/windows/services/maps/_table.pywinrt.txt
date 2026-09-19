@@ -823,10 +823,51 @@ class Windows.Services.Maps.ManeuverWarning python_type
 enum Windows.Services.Maps.ManeuverWarningKind python_type
     py ManeuverWarningKind
     signature enum(Windows.Services.Maps.ManeuverWarningKind;i4)
+    constant NONE 0
+    constant ACCIDENT 1
+    constant ADMINISTRATIVE_DIVISION_CHANGE 2
+    constant ALERT 3
+    constant BLOCKED_ROAD 4
+    constant CHECK_TIMETABLE 5
+    constant CONGESTION 6
+    constant CONSTRUCTION 7
+    constant COUNTRY_CHANGE 8
+    constant DISABLED_VEHICLE 9
+    constant GATE_ACCESS 10
+    constant GET_OFF_TRANSIT 11
+    constant GET_ON_TRANSIT 12
+    constant ILLEGAL_U_TURN 13
+    constant MASS_TRANSIT 14
+    constant MISCELLANEOUS 15
+    constant NO_INCIDENT 16
+    constant OTHER 17
+    constant OTHER_NEWS 18
+    constant OTHER_TRAFFIC_INCIDENTS 19
+    constant PLANNED_EVENT 20
+    constant PRIVATE_ROAD 21
+    constant RESTRICTED_TURN 22
+    constant ROAD_CLOSURES 23
+    constant ROAD_HAZARD 24
+    constant SCHEDULED_CONSTRUCTION 25
+    constant SEASONAL_CLOSURES 26
+    constant TOLLBOOTH 27
+    constant TOLL_ROAD 28
+    constant TOLL_ZONE_ENTER 29
+    constant TOLL_ZONE_EXIT 30
+    constant TRAFFIC_FLOW 31
+    constant TRANSIT_LINE_CHANGE 32
+    constant UNPAVED_ROAD 33
+    constant UNSCHEDULED_CONSTRUCTION 34
+    constant WEATHER 35
 
 enum Windows.Services.Maps.ManeuverWarningSeverity python_type
     py ManeuverWarningSeverity
     signature enum(Windows.Services.Maps.ManeuverWarningSeverity;i4)
+    constant NONE 0
+    constant LOW_IMPACT 1
+    constant MINOR 2
+    constant MODERATE 3
+    constant SERIOUS 4
 
 class Windows.Services.Maps.MapAddress python_type
     py MapAddress
@@ -904,6 +945,8 @@ class Windows.Services.Maps.MapLocation python_type
 enum Windows.Services.Maps.MapLocationDesiredAccuracy python_type
     py MapLocationDesiredAccuracy
     signature enum(Windows.Services.Maps.MapLocationDesiredAccuracy;i4)
+    constant HIGH 0
+    constant LOW 1
 
 class Windows.Services.Maps.MapLocationFinder static python_type
     py MapLocationFinder
@@ -943,6 +986,13 @@ class Windows.Services.Maps.MapLocationFinderResult python_type
 enum Windows.Services.Maps.MapLocationFinderStatus python_type
     py MapLocationFinderStatus
     signature enum(Windows.Services.Maps.MapLocationFinderStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_ERROR 1
+    constant INVALID_CREDENTIALS 2
+    constant BAD_LOCATION 3
+    constant INDEX_FAILURE 4
+    constant NETWORK_FAILURE 5
+    constant NOT_SUPPORTED 6
 
 class Windows.Services.Maps.MapManager static python_type
     py MapManager
@@ -952,9 +1002,12 @@ class Windows.Services.Maps.MapManager static python_type
     method show_maps_update_ui static
         method ShowMapsUpdateUI slot=7 inputs=0 outputs=0 declaring=Windows.Services.Maps.IMapManagerStatics shape=0 reverse=37 static
 
-enum Windows.Services.Maps.MapManeuverNotices python_type
+enum Windows.Services.Maps.MapManeuverNotices python_type flags_enum
     py MapManeuverNotices
     signature enum(Windows.Services.Maps.MapManeuverNotices;u4)
+    constant NONE 0x0
+    constant TOLL 0x1
+    constant UNPAVED 0x2
 
 class Windows.Services.Maps.MapRoute python_type
     py MapRoute
@@ -1123,6 +1176,16 @@ class Windows.Services.Maps.MapRouteFinderResult python_type
 enum Windows.Services.Maps.MapRouteFinderStatus python_type
     py MapRouteFinderStatus
     signature enum(Windows.Services.Maps.MapRouteFinderStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_ERROR 1
+    constant INVALID_CREDENTIALS 2
+    constant NO_ROUTE_FOUND 3
+    constant NO_ROUTE_FOUND_WITH_GIVEN_OPTIONS 4
+    constant START_POINT_NOT_FOUND 5
+    constant END_POINT_NOT_FOUND 6
+    constant NO_PEDESTRIAN_ROUTE_FOUND 7
+    constant NETWORK_FAILURE 8
+    constant NOT_SUPPORTED 9
 
 class Windows.Services.Maps.MapRouteLeg python_type
     py MapRouteLeg
@@ -1193,14 +1256,50 @@ class Windows.Services.Maps.MapRouteManeuver python_type
 enum Windows.Services.Maps.MapRouteManeuverKind python_type
     py MapRouteManeuverKind
     signature enum(Windows.Services.Maps.MapRouteManeuverKind;i4)
+    constant NONE 0
+    constant START 1
+    constant STOPOVER 2
+    constant STOPOVER_RESUME 3
+    constant END 4
+    constant GO_STRAIGHT 5
+    constant U_TURN_LEFT 6
+    constant U_TURN_RIGHT 7
+    constant TURN_KEEP_LEFT 8
+    constant TURN_KEEP_RIGHT 9
+    constant TURN_LIGHT_LEFT 10
+    constant TURN_LIGHT_RIGHT 11
+    constant TURN_LEFT 12
+    constant TURN_RIGHT 13
+    constant TURN_HARD_LEFT 14
+    constant TURN_HARD_RIGHT 15
+    constant FREEWAY_ENTER_LEFT 16
+    constant FREEWAY_ENTER_RIGHT 17
+    constant FREEWAY_LEAVE_LEFT 18
+    constant FREEWAY_LEAVE_RIGHT 19
+    constant FREEWAY_CONTINUE_LEFT 20
+    constant FREEWAY_CONTINUE_RIGHT 21
+    constant TRAFFIC_CIRCLE_LEFT 22
+    constant TRAFFIC_CIRCLE_RIGHT 23
+    constant TAKE_FERRY 24
 
 enum Windows.Services.Maps.MapRouteOptimization python_type
     py MapRouteOptimization
     signature enum(Windows.Services.Maps.MapRouteOptimization;i4)
+    constant TIME 0
+    constant DISTANCE 1
+    constant TIME_WITH_TRAFFIC 2
+    constant SCENIC 3
 
-enum Windows.Services.Maps.MapRouteRestrictions python_type
+enum Windows.Services.Maps.MapRouteRestrictions python_type flags_enum
     py MapRouteRestrictions
     signature enum(Windows.Services.Maps.MapRouteRestrictions;u4)
+    constant NONE 0x0
+    constant HIGHWAYS 0x1
+    constant TOLL_ROADS 0x2
+    constant FERRIES 0x4
+    constant TUNNELS 0x8
+    constant DIRT_ROADS 0x10
+    constant MOTORAIL 0x20
 
 class Windows.Services.Maps.MapService static python_type
     py MapService
@@ -1228,6 +1327,8 @@ class Windows.Services.Maps.MapService static python_type
 enum Windows.Services.Maps.MapServiceDataUsagePreference python_type
     py MapServiceDataUsagePreference
     signature enum(Windows.Services.Maps.MapServiceDataUsagePreference;i4)
+    constant DEFAULT 0
+    constant OFFLINE_MAP_DATA_ONLY 1
 
 class Windows.Services.Maps.PlaceInfo python_type
     py PlaceInfo
@@ -1309,10 +1410,17 @@ class Windows.Services.Maps.PlaceInfoCreateOptions activatable python_type
 enum Windows.Services.Maps.TrafficCongestion python_type
     py TrafficCongestion
     signature enum(Windows.Services.Maps.TrafficCongestion;i4)
+    constant UNKNOWN 0
+    constant LIGHT 1
+    constant MILD 2
+    constant MEDIUM 3
+    constant HEAVY 4
 
 enum Windows.Services.Maps.WaypointKind python_type
     py WaypointKind
     signature enum(Windows.Services.Maps.WaypointKind;i4)
+    constant STOP 0
+    constant VIA 1
 
 class System.Double external
     py winrt.system.Double

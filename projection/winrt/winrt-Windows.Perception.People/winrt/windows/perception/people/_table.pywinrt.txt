@@ -38,6 +38,32 @@ class Windows.Perception.People.EyesPose python_type
 enum Windows.Perception.People.HandJointKind python_type
     py HandJointKind
     signature enum(Windows.Perception.People.HandJointKind;i4)
+    constant PALM 0
+    constant WRIST 1
+    constant THUMB_METACARPAL 2
+    constant THUMB_PROXIMAL 3
+    constant THUMB_DISTAL 4
+    constant THUMB_TIP 5
+    constant INDEX_METACARPAL 6
+    constant INDEX_PROXIMAL 7
+    constant INDEX_INTERMEDIATE 8
+    constant INDEX_DISTAL 9
+    constant INDEX_TIP 10
+    constant MIDDLE_METACARPAL 11
+    constant MIDDLE_PROXIMAL 12
+    constant MIDDLE_INTERMEDIATE 13
+    constant MIDDLE_DISTAL 14
+    constant MIDDLE_TIP 15
+    constant RING_METACARPAL 16
+    constant RING_PROXIMAL 17
+    constant RING_INTERMEDIATE 18
+    constant RING_DISTAL 19
+    constant RING_TIP 20
+    constant LITTLE_METACARPAL 21
+    constant LITTLE_PROXIMAL 22
+    constant LITTLE_INTERMEDIATE 23
+    constant LITTLE_DISTAL 24
+    constant LITTLE_TIP 25
 
 class Windows.Perception.People.HandMeshObserver python_type
     py HandMeshObserver
@@ -320,6 +346,8 @@ struct Windows.Perception.People.JointPose python_type
 enum Windows.Perception.People.JointPoseAccuracy python_type
     py JointPoseAccuracy
     signature enum(Windows.Perception.People.JointPoseAccuracy;i4)
+    constant HIGH 0
+    constant APPROXIMATE 1
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
     py winrt.windows.foundation.AsyncOperationCompletedHandler

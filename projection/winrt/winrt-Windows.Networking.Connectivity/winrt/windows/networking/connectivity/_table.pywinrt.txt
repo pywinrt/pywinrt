@@ -125,6 +125,10 @@ class Windows.Networking.Connectivity.AttributedNetworkUsage python_type
 enum Windows.Networking.Connectivity.CellularApnAuthenticationType python_type
     py CellularApnAuthenticationType
     signature enum(Windows.Networking.Connectivity.CellularApnAuthenticationType;i4)
+    constant NONE 0
+    constant PAP 1
+    constant CHAP 2
+    constant MSCHAPV2 3
 
 class Windows.Networking.Connectivity.CellularApnContext activatable python_type
     py CellularApnContext
@@ -294,6 +298,10 @@ class Windows.Networking.Connectivity.ConnectionProfile python_type
 enum Windows.Networking.Connectivity.ConnectionProfileDeleteStatus python_type
     py ConnectionProfileDeleteStatus
     signature enum(Windows.Networking.Connectivity.ConnectionProfileDeleteStatus;i4)
+    constant SUCCESS 0
+    constant DENIED_BY_USER 1
+    constant DENIED_BY_SYSTEM 2
+    constant UNKNOWN_ERROR 3
 
 class Windows.Networking.Connectivity.ConnectionProfileFilter activatable python_type
     py ConnectionProfileFilter
@@ -443,14 +451,24 @@ class Windows.Networking.Connectivity.DataUsage python_type
 enum Windows.Networking.Connectivity.DataUsageGranularity python_type
     py DataUsageGranularity
     signature enum(Windows.Networking.Connectivity.DataUsageGranularity;i4)
+    constant PER_MINUTE 0
+    constant PER_HOUR 1
+    constant PER_DAY 2
+    constant TOTAL 3
 
 enum Windows.Networking.Connectivity.DomainAuthenticationKind python_type
     py DomainAuthenticationKind
     signature enum(Windows.Networking.Connectivity.DomainAuthenticationKind;i4)
+    constant NONE 0
+    constant LDAP 1
+    constant TLS 2
 
 enum Windows.Networking.Connectivity.DomainConnectivityLevel python_type
     py DomainConnectivityLevel
     signature enum(Windows.Networking.Connectivity.DomainConnectivityLevel;i4)
+    constant NONE 0
+    constant UNAUTHENTICATED 1
+    constant AUTHENTICATED 2
 
 interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.AttributedNetworkUsage>> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[IVectorView[AttributedNetworkUsage]]
@@ -2357,18 +2375,53 @@ class Windows.Networking.Connectivity.NetworkAdapter python_type
 enum Windows.Networking.Connectivity.NetworkAuthenticationType python_type
     py NetworkAuthenticationType
     signature enum(Windows.Networking.Connectivity.NetworkAuthenticationType;i4)
+    constant NONE 0
+    constant UNKNOWN 1
+    constant OPEN80211 2
+    constant SHARED_KEY80211 3
+    constant WPA 4
+    constant WPA_PSK 5
+    constant WPA_NONE 6
+    constant RSNA 7
+    constant RSNA_PSK 8
+    constant IHV 9
+    constant WPA3 10
+    constant WPA3_ENTERPRISE192_BITS 10
+    constant WPA3_SAE 11
+    constant OWE 12
+    constant WPA3_ENTERPRISE 13
 
 enum Windows.Networking.Connectivity.NetworkConnectivityLevel python_type
     py NetworkConnectivityLevel
     signature enum(Windows.Networking.Connectivity.NetworkConnectivityLevel;i4)
+    constant NONE 0
+    constant LOCAL_ACCESS 1
+    constant CONSTRAINED_INTERNET_ACCESS 2
+    constant INTERNET_ACCESS 3
 
 enum Windows.Networking.Connectivity.NetworkCostType python_type
     py NetworkCostType
     signature enum(Windows.Networking.Connectivity.NetworkCostType;i4)
+    constant UNKNOWN 0
+    constant UNRESTRICTED 1
+    constant FIXED 2
+    constant VARIABLE 3
 
 enum Windows.Networking.Connectivity.NetworkEncryptionType python_type
     py NetworkEncryptionType
     signature enum(Windows.Networking.Connectivity.NetworkEncryptionType;i4)
+    constant NONE 0
+    constant UNKNOWN 1
+    constant WEP 2
+    constant WEP40 3
+    constant WEP104 4
+    constant TKIP 5
+    constant CCMP 6
+    constant WPA_USE_GROUP 7
+    constant RSN_USE_GROUP 8
+    constant IHV 9
+    constant GCMP 10
+    constant GCMP256 11
 
 class Windows.Networking.Connectivity.NetworkInformation static python_type
     py NetworkInformation
@@ -2469,9 +2522,12 @@ delegate Windows.Networking.Connectivity.NetworkStatusChangedEventHandler python
         method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
             in object name=sender
 
-enum Windows.Networking.Connectivity.NetworkTypes python_type
+enum Windows.Networking.Connectivity.NetworkTypes python_type flags_enum
     py NetworkTypes
     signature enum(Windows.Networking.Connectivity.NetworkTypes;u4)
+    constant NONE 0x0
+    constant INTERNET 0x1
+    constant PRIVATE_NETWORK 0x2
 
 class Windows.Networking.Connectivity.NetworkUsage python_type
     py NetworkUsage
@@ -2521,9 +2577,12 @@ class Windows.Networking.Connectivity.ProxyConfiguration python_type
         get get_ProxyUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IProxyConfiguration shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
 
-enum Windows.Networking.Connectivity.RoamingStates python_type
+enum Windows.Networking.Connectivity.RoamingStates python_type flags_enum
     py RoamingStates
     signature enum(Windows.Networking.Connectivity.RoamingStates;u4)
+    constant NONE 0x0
+    constant NOT_ROAMING 0x1
+    constant ROAMING 0x2
 
 class Windows.Networking.Connectivity.RoutePolicy python_type
     py RoutePolicy
@@ -2550,6 +2609,9 @@ class Windows.Networking.Connectivity.RoutePolicy python_type
 enum Windows.Networking.Connectivity.TriStates python_type
     py TriStates
     signature enum(Windows.Networking.Connectivity.TriStates;i4)
+    constant DO_NOT_CARE 0
+    constant NO 1
+    constant YES 2
 
 class Windows.Networking.Connectivity.WlanConnectionProfileDetails python_type
     py WlanConnectionProfileDetails
@@ -2585,17 +2647,46 @@ class Windows.Networking.Connectivity.WwanConnectionProfileDetails python_type
         method GetNetworkRegistrationState slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails shape=4 reverse=62
             out enum32 type=Windows.Networking.Connectivity.WwanNetworkRegistrationState return
 
-enum Windows.Networking.Connectivity.WwanDataClass python_type
+enum Windows.Networking.Connectivity.WwanDataClass python_type flags_enum
     py WwanDataClass
     signature enum(Windows.Networking.Connectivity.WwanDataClass;u4)
+    constant NONE 0x0
+    constant GPRS 0x1
+    constant EDGE 0x2
+    constant UMTS 0x4
+    constant HSDPA 0x8
+    constant HSUPA 0x10
+    constant LTE_ADVANCED 0x20
+    constant NEW_RADIO_NON_STANDALONE 0x40
+    constant NEW_RADIO_STANDALONE 0x80
+    constant CDMA1X_RTT 0x10000
+    constant CDMA1X_EVDO 0x20000
+    constant CDMA1X_EVDO_REV_A 0x40000
+    constant CDMA1X_EVDV 0x80000
+    constant CDMA3X_RTT 0x100000
+    constant CDMA1X_EVDO_REV_B 0x200000
+    constant CDMA_UMB 0x400000
+    constant CUSTOM 0x80000000
 
 enum Windows.Networking.Connectivity.WwanNetworkIPKind python_type
     py WwanNetworkIPKind
     signature enum(Windows.Networking.Connectivity.WwanNetworkIPKind;i4)
+    constant NONE 0
+    constant IPV4 1
+    constant IPV6 2
+    constant IPV4V6 3
+    constant IPV4V6V4_XLAT 4
 
 enum Windows.Networking.Connectivity.WwanNetworkRegistrationState python_type
     py WwanNetworkRegistrationState
     signature enum(Windows.Networking.Connectivity.WwanNetworkRegistrationState;i4)
+    constant NONE 0
+    constant DEREGISTERED 1
+    constant SEARCHING 2
+    constant HOME 3
+    constant ROAMING 4
+    constant PARTNER 5
+    constant DENIED 6
 
 class System.Boolean external
     py winrt.system.Boolean

@@ -283,14 +283,30 @@ class Windows.ApplicationModel.Calls.CallStateChangeEventArgs python_type
 enum Windows.ApplicationModel.Calls.CellularDtmfMode python_type
     py CellularDtmfMode
     signature enum(Windows.ApplicationModel.Calls.CellularDtmfMode;i4)
+    constant CONTINUOUS 0
+    constant BURST 1
 
 enum Windows.ApplicationModel.Calls.DtmfKey python_type
     py DtmfKey
     signature enum(Windows.ApplicationModel.Calls.DtmfKey;i4)
+    constant D0 0
+    constant D1 1
+    constant D2 2
+    constant D3 3
+    constant D4 4
+    constant D5 5
+    constant D6 6
+    constant D7 7
+    constant D8 8
+    constant D9 9
+    constant STAR 10
+    constant POUND 11
 
 enum Windows.ApplicationModel.Calls.DtmfToneAudioPlayback python_type
     py DtmfToneAudioPlayback
     signature enum(Windows.ApplicationModel.Calls.DtmfToneAudioPlayback;i4)
+    constant PLAY 0
+    constant DO_NOT_PLAY 1
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
     py winrt.windows.foundation.EventHandler[Object]
@@ -1507,6 +1523,9 @@ class Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions activatable py
 enum Windows.ApplicationModel.Calls.PhoneAudioRoutingEndpoint python_type
     py PhoneAudioRoutingEndpoint
     signature enum(Windows.ApplicationModel.Calls.PhoneAudioRoutingEndpoint;i4)
+    constant DEFAULT 0
+    constant BLUETOOTH 1
+    constant SPEAKERPHONE 2
 
 class Windows.ApplicationModel.Calls.PhoneCall python_type
     py PhoneCall
@@ -1618,6 +1637,9 @@ class Windows.ApplicationModel.Calls.PhoneCall python_type
 enum Windows.ApplicationModel.Calls.PhoneCallAudioDevice python_type
     py PhoneCallAudioDevice
     signature enum(Windows.ApplicationModel.Calls.PhoneCallAudioDevice;i4)
+    constant UNKNOWN 0
+    constant LOCAL_DEVICE 1
+    constant REMOTE_DEVICE 2
 
 class Windows.ApplicationModel.Calls.PhoneCallBlocking static python_type
     py PhoneCallBlocking
@@ -1640,6 +1662,9 @@ class Windows.ApplicationModel.Calls.PhoneCallBlocking static python_type
 enum Windows.ApplicationModel.Calls.PhoneCallDirection python_type
     py PhoneCallDirection
     signature enum(Windows.ApplicationModel.Calls.PhoneCallDirection;i4)
+    constant UNKNOWN 0
+    constant INCOMING 1
+    constant OUTGOING 2
 
 class Windows.ApplicationModel.Calls.PhoneCallHistoryEntry activatable python_type
     py PhoneCallHistoryEntry
@@ -1773,14 +1798,22 @@ class Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress activatable py
 enum Windows.ApplicationModel.Calls.PhoneCallHistoryEntryMedia python_type
     py PhoneCallHistoryEntryMedia
     signature enum(Windows.ApplicationModel.Calls.PhoneCallHistoryEntryMedia;i4)
+    constant AUDIO 0
+    constant VIDEO 1
 
 enum Windows.ApplicationModel.Calls.PhoneCallHistoryEntryOtherAppReadAccess python_type
     py PhoneCallHistoryEntryOtherAppReadAccess
     signature enum(Windows.ApplicationModel.Calls.PhoneCallHistoryEntryOtherAppReadAccess;i4)
+    constant FULL 0
+    constant SYSTEM_ONLY 1
 
-enum Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryDesiredMedia python_type
+enum Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryDesiredMedia python_type flags_enum
     py PhoneCallHistoryEntryQueryDesiredMedia
     signature enum(Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryDesiredMedia;u4)
+    constant NONE 0x0
+    constant AUDIO 0x1
+    constant VIDEO 0x2
+    constant ALL 0xFFFFFFFF
 
 class Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryOptions activatable python_type
     py PhoneCallHistoryEntryQueryOptions
@@ -1802,6 +1835,8 @@ class Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryOptions activatab
 enum Windows.ApplicationModel.Calls.PhoneCallHistoryEntryRawAddressKind python_type
     py PhoneCallHistoryEntryRawAddressKind
     signature enum(Windows.ApplicationModel.Calls.PhoneCallHistoryEntryRawAddressKind;i4)
+    constant PHONE_NUMBER 0
+    constant CUSTOM 1
 
 class Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader python_type
     py PhoneCallHistoryEntryReader
@@ -1841,6 +1876,8 @@ class Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser python_type
 enum Windows.ApplicationModel.Calls.PhoneCallHistorySourceIdKind python_type
     py PhoneCallHistorySourceIdKind
     signature enum(Windows.ApplicationModel.Calls.PhoneCallHistorySourceIdKind;i4)
+    constant CELLULAR_PHONE_LINE_ID 0
+    constant PACKAGE_FAMILY_NAME 1
 
 class Windows.ApplicationModel.Calls.PhoneCallHistoryStore python_type
     py PhoneCallHistoryStore
@@ -1895,6 +1932,9 @@ class Windows.ApplicationModel.Calls.PhoneCallHistoryStore python_type
 enum Windows.ApplicationModel.Calls.PhoneCallHistoryStoreAccessType python_type
     py PhoneCallHistoryStoreAccessType
     signature enum(Windows.ApplicationModel.Calls.PhoneCallHistoryStoreAccessType;i4)
+    constant APP_ENTRIES_READ_WRITE 0
+    constant ALL_ENTRIES_LIMITED_READ_WRITE 1
+    constant ALL_ENTRIES_READ_WRITE 2
 
 class Windows.ApplicationModel.Calls.PhoneCallInfo python_type
     py PhoneCallInfo
@@ -1949,14 +1989,28 @@ class Windows.ApplicationModel.Calls.PhoneCallManager static python_type
 enum Windows.ApplicationModel.Calls.PhoneCallMedia python_type
     py PhoneCallMedia
     signature enum(Windows.ApplicationModel.Calls.PhoneCallMedia;i4)
+    constant AUDIO 0
+    constant AUDIO_AND_VIDEO 1
+    constant AUDIO_AND_REAL_TIME_TEXT 2
 
 enum Windows.ApplicationModel.Calls.PhoneCallOperationStatus python_type
     py PhoneCallOperationStatus
     signature enum(Windows.ApplicationModel.Calls.PhoneCallOperationStatus;i4)
+    constant SUCCEEDED 0
+    constant OTHER_FAILURE 1
+    constant TIMED_OUT 2
+    constant CONNECTION_LOST 3
+    constant INVALID_CALL_STATE 4
 
 enum Windows.ApplicationModel.Calls.PhoneCallStatus python_type
     py PhoneCallStatus
     signature enum(Windows.ApplicationModel.Calls.PhoneCallStatus;i4)
+    constant LOST 0
+    constant INCOMING 1
+    constant DIALING 2
+    constant TALKING 3
+    constant HELD 4
+    constant ENDED 5
 
 class Windows.ApplicationModel.Calls.PhoneCallStore python_type
     py PhoneCallStore
@@ -2179,14 +2233,26 @@ class Windows.ApplicationModel.Calls.PhoneLineDialResult python_type
 enum Windows.ApplicationModel.Calls.PhoneLineNetworkOperatorDisplayTextLocation python_type
     py PhoneLineNetworkOperatorDisplayTextLocation
     signature enum(Windows.ApplicationModel.Calls.PhoneLineNetworkOperatorDisplayTextLocation;i4)
+    constant DEFAULT 0
+    constant TILE 1
+    constant DIALER 2
+    constant IN_CALL_UI 3
 
 enum Windows.ApplicationModel.Calls.PhoneLineOperationStatus python_type
     py PhoneLineOperationStatus
     signature enum(Windows.ApplicationModel.Calls.PhoneLineOperationStatus;i4)
+    constant SUCCEEDED 0
+    constant OTHER_FAILURE 1
+    constant TIMED_OUT 2
+    constant CONNECTION_LOST 3
+    constant INVALID_CALL_STATE 4
 
 enum Windows.ApplicationModel.Calls.PhoneLineTransport python_type
     py PhoneLineTransport
     signature enum(Windows.ApplicationModel.Calls.PhoneLineTransport;i4)
+    constant CELLULAR 0
+    constant VOIP_APP 1
+    constant BLUETOOTH 2
 
 class Windows.ApplicationModel.Calls.PhoneLineTransportDevice python_type
     py PhoneLineTransportDevice
@@ -2307,14 +2373,34 @@ class Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs python_type
 enum Windows.ApplicationModel.Calls.PhoneLineWatcherStatus python_type
     py PhoneLineWatcherStatus
     signature enum(Windows.ApplicationModel.Calls.PhoneLineWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPED 3
 
 enum Windows.ApplicationModel.Calls.PhoneNetworkState python_type
     py PhoneNetworkState
     signature enum(Windows.ApplicationModel.Calls.PhoneNetworkState;i4)
+    constant UNKNOWN 0
+    constant NO_SIGNAL 1
+    constant DEREGISTERED 2
+    constant DENIED 3
+    constant SEARCHING 4
+    constant HOME 5
+    constant ROAMING_INTERNATIONAL 6
+    constant ROAMING_DOMESTIC 7
 
 enum Windows.ApplicationModel.Calls.PhoneSimState python_type
     py PhoneSimState
     signature enum(Windows.ApplicationModel.Calls.PhoneSimState;i4)
+    constant UNKNOWN 0
+    constant PIN_NOT_REQUIRED 1
+    constant PIN_UNLOCKED 2
+    constant PIN_LOCKED 3
+    constant PUK_LOCKED 4
+    constant NOT_INSERTED 5
+    constant INVALID 6
+    constant DISABLED 7
 
 class Windows.ApplicationModel.Calls.PhoneVoicemail python_type
     py PhoneVoicemail
@@ -2337,10 +2423,16 @@ class Windows.ApplicationModel.Calls.PhoneVoicemail python_type
 enum Windows.ApplicationModel.Calls.PhoneVoicemailType python_type
     py PhoneVoicemailType
     signature enum(Windows.ApplicationModel.Calls.PhoneVoicemailType;i4)
+    constant NONE 0
+    constant TRADITIONAL 1
+    constant VISUAL 2
 
 enum Windows.ApplicationModel.Calls.TransportDeviceAudioRoutingStatus python_type
     py TransportDeviceAudioRoutingStatus
     signature enum(Windows.ApplicationModel.Calls.TransportDeviceAudioRoutingStatus;i4)
+    constant UNKNOWN 0
+    constant CAN_ROUTE_TO_LOCAL_DEVICE 1
+    constant CANNOT_ROUTE_TO_LOCAL_DEVICE 2
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.LockScreenCallUI,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[LockScreenCallUI, Object]
@@ -2477,6 +2569,8 @@ delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.Voi
 enum Windows.ApplicationModel.Calls.VoipCallControlDeviceKind python_type
     py VoipCallControlDeviceKind
     signature enum(Windows.ApplicationModel.Calls.VoipCallControlDeviceKind;i4)
+    constant BLUETOOTH 0
+    constant USB 1
 
 class Windows.ApplicationModel.Calls.VoipCallCoordinator python_type
     py VoipCallCoordinator
@@ -2690,21 +2784,36 @@ class Windows.ApplicationModel.Calls.VoipPhoneCall python_type
     method try_show_app_ui
         method TryShowAppUI slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall2 shape=0 reverse=16
 
-enum Windows.ApplicationModel.Calls.VoipPhoneCallMedia python_type
+enum Windows.ApplicationModel.Calls.VoipPhoneCallMedia python_type flags_enum
     py VoipPhoneCallMedia
     signature enum(Windows.ApplicationModel.Calls.VoipPhoneCallMedia;u4)
+    constant NONE 0x0
+    constant AUDIO 0x1
+    constant VIDEO 0x2
 
 enum Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason python_type
     py VoipPhoneCallRejectReason
     signature enum(Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason;i4)
+    constant USER_IGNORED 0
+    constant TIMED_OUT 1
+    constant OTHER_INCOMING_CALL 2
+    constant EMERGENCY_CALL_EXISTS 3
+    constant INVALID_CALL_STATE 4
 
 enum Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus python_type
     py VoipPhoneCallResourceReservationStatus
     signature enum(Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus;i4)
+    constant SUCCESS 0
+    constant RESOURCES_NOT_AVAILABLE 1
 
 enum Windows.ApplicationModel.Calls.VoipPhoneCallState python_type
     py VoipPhoneCallState
     signature enum(Windows.ApplicationModel.Calls.VoipPhoneCallState;i4)
+    constant ENDED 0
+    constant HELD 1
+    constant ACTIVE 2
+    constant INCOMING 3
+    constant OUTGOING 4
 
 class System.Boolean external
     py winrt.system.Boolean

@@ -38,6 +38,10 @@ class Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult activata
 enum Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationStatus python_type
     py DnssdRegistrationStatus
     signature enum(Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationStatus;i4)
+    constant SUCCESS 0
+    constant INVALID_SERVICE_NAME 1
+    constant SERVER_ERROR 2
+    constant SECURITY_ERROR 3
 
 class Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance python_type stringable
     py DnssdServiceInstance
@@ -162,6 +166,12 @@ class Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher python_type
 enum Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcherStatus python_type
     py DnssdServiceWatcherStatus
     signature enum(Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPING 3
+    constant STOPPED 4
+    constant ABORTED 5
 
 interface Windows.Foundation.IAsyncOperation<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[DnssdRegistrationResult]

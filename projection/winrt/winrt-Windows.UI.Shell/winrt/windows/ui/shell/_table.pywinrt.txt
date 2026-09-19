@@ -294,6 +294,7 @@ interface Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs
 enum Windows.UI.Shell.SecurityAppKind python_type
     py SecurityAppKind
     signature enum(Windows.UI.Shell.SecurityAppKind;i4)
+    constant WEB_PROTECTION 0
 
 class Windows.UI.Shell.SecurityAppManager activatable python_type
     py SecurityAppManager
@@ -325,14 +326,23 @@ class Windows.UI.Shell.SecurityAppManager activatable python_type
 enum Windows.UI.Shell.SecurityAppState python_type
     py SecurityAppState
     signature enum(Windows.UI.Shell.SecurityAppState;i4)
+    constant DISABLED 0
+    constant ENABLED 1
 
 enum Windows.UI.Shell.SecurityAppSubstatus python_type
     py SecurityAppSubstatus
     signature enum(Windows.UI.Shell.SecurityAppSubstatus;i4)
+    constant UNDETERMINED 0
+    constant NO_ACTION_NEEDED 1
+    constant ACTION_RECOMMENDED 2
+    constant ACTION_NEEDED 3
 
 enum Windows.UI.Shell.ShareWindowCommand python_type
     py ShareWindowCommand
     signature enum(Windows.UI.Shell.ShareWindowCommand;i4)
+    constant NONE 0
+    constant START_SHARING 1
+    constant STOP_SHARING 2
 
 class Windows.UI.Shell.ShareWindowCommandEventArgs python_type
     py ShareWindowCommandEventArgs

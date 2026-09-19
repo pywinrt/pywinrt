@@ -223,6 +223,8 @@ class Windows.Networking.BackgroundTransfer.BackgroundDownloader activatable pyt
 enum Windows.Networking.BackgroundTransfer.BackgroundTransferBehavior python_type
     py BackgroundTransferBehavior
     signature enum(Windows.Networking.BackgroundTransfer.BackgroundTransferBehavior;i4)
+    constant PARALLEL 0
+    constant SERIALIZED 1
 
 class Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup activatable python_type
     py BackgroundTransferCompletionGroup
@@ -283,6 +285,9 @@ class Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart activa
 enum Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy python_type
     py BackgroundTransferCostPolicy
     signature enum(Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy;i4)
+    constant DEFAULT 0
+    constant UNRESTRICTED_ONLY 1
+    constant ALWAYS 2
 
 class Windows.Networking.BackgroundTransfer.BackgroundTransferError static python_type
     py BackgroundTransferError
@@ -320,6 +325,9 @@ class Windows.Networking.BackgroundTransfer.BackgroundTransferGroup python_type
 enum Windows.Networking.BackgroundTransfer.BackgroundTransferPriority python_type
     py BackgroundTransferPriority
     signature enum(Windows.Networking.BackgroundTransfer.BackgroundTransferPriority;i4)
+    constant DEFAULT 0
+    constant HIGH 1
+    constant LOW 2
 
 class Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs python_type
     py BackgroundTransferRangesDownloadedEventArgs
@@ -339,6 +347,16 @@ class Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEv
 enum Windows.Networking.BackgroundTransfer.BackgroundTransferStatus python_type
     py BackgroundTransferStatus
     signature enum(Windows.Networking.BackgroundTransfer.BackgroundTransferStatus;i4)
+    constant IDLE 0
+    constant RUNNING 1
+    constant PAUSED_BY_APPLICATION 2
+    constant PAUSED_COSTED_NETWORK 3
+    constant PAUSED_NO_NETWORK 4
+    constant COMPLETED 5
+    constant CANCELED 6
+    constant ERROR 7
+    constant PAUSED_RECOVERABLE_WEB_ERROR_STATUS 8
+    constant PAUSED_SYSTEM_POLICY 32
 
 struct Windows.Networking.BackgroundTransfer.BackgroundUploadProgress python_type
     py BackgroundUploadProgress

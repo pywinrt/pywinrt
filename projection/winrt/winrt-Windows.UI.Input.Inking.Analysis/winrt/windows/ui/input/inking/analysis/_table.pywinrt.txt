@@ -371,6 +371,21 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Ana
 enum Windows.UI.Input.Inking.Analysis.InkAnalysisDrawingKind python_type
     py InkAnalysisDrawingKind
     signature enum(Windows.UI.Input.Inking.Analysis.InkAnalysisDrawingKind;i4)
+    constant DRAWING 0
+    constant CIRCLE 1
+    constant ELLIPSE 2
+    constant TRIANGLE 3
+    constant ISOSCELES_TRIANGLE 4
+    constant EQUILATERAL_TRIANGLE 5
+    constant RIGHT_TRIANGLE 6
+    constant QUADRILATERAL 7
+    constant RECTANGLE 8
+    constant SQUARE 9
+    constant DIAMOND 10
+    constant TRAPEZOID 11
+    constant PARALLELOGRAM 12
+    constant PENTAGON 13
+    constant HEXAGON 14
 
 class Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet python_type
     py InkAnalysisInkBullet
@@ -569,6 +584,15 @@ class Windows.UI.Input.Inking.Analysis.InkAnalysisNode python_type
 enum Windows.UI.Input.Inking.Analysis.InkAnalysisNodeKind python_type
     py InkAnalysisNodeKind
     signature enum(Windows.UI.Input.Inking.Analysis.InkAnalysisNodeKind;i4)
+    constant UNCLASSIFIED_INK 0
+    constant ROOT 1
+    constant WRITING_REGION 2
+    constant PARAGRAPH 3
+    constant LINE 4
+    constant INK_WORD 5
+    constant INK_BULLET 6
+    constant INK_DRAWING 7
+    constant LIST_ITEM 8
 
 class Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph python_type
     py InkAnalysisParagraph
@@ -648,10 +672,15 @@ class Windows.UI.Input.Inking.Analysis.InkAnalysisRoot python_type
 enum Windows.UI.Input.Inking.Analysis.InkAnalysisStatus python_type
     py InkAnalysisStatus
     signature enum(Windows.UI.Input.Inking.Analysis.InkAnalysisStatus;i4)
+    constant UPDATED 0
+    constant UNCHANGED 1
 
 enum Windows.UI.Input.Inking.Analysis.InkAnalysisStrokeKind python_type
     py InkAnalysisStrokeKind
     signature enum(Windows.UI.Input.Inking.Analysis.InkAnalysisStrokeKind;i4)
+    constant AUTO 0
+    constant WRITING 1
+    constant DRAWING 2
 
 class Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion python_type
     py InkAnalysisWritingRegion

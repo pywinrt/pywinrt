@@ -226,6 +226,9 @@ class Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult python_t
 enum Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResultStatus python_type
     py ClipboardHistoryItemsResultStatus
     signature enum(Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResultStatus;i4)
+    constant SUCCESS 0
+    constant ACCESS_DENIED 1
+    constant CLIPBOARD_HISTORY_DISABLED 2
 
 class Windows.ApplicationModel.DataTransfer.DataPackage activatable python_type
     py DataPackage
@@ -312,9 +315,13 @@ class Windows.ApplicationModel.DataTransfer.DataPackage activatable python_type
         method SetWebLink slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage2 shape=4 reverse=43
             in class type=Windows.Foundation.Uri name=value
 
-enum Windows.ApplicationModel.DataTransfer.DataPackageOperation python_type
+enum Windows.ApplicationModel.DataTransfer.DataPackageOperation python_type flags_enum
     py DataPackageOperation
     signature enum(Windows.ApplicationModel.DataTransfer.DataPackageOperation;u4)
+    constant NONE 0x0
+    constant COPY 0x1
+    constant MOVE 0x2
+    constant LINK 0x4
 
 class Windows.ApplicationModel.DataTransfer.DataPackagePropertySet python_type iterable mapping mutable_mapping
     py DataPackagePropertySet
@@ -1813,6 +1820,9 @@ class Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs python_t
 enum Windows.ApplicationModel.DataTransfer.SetHistoryItemAsContentStatus python_type
     py SetHistoryItemAsContentStatus
     signature enum(Windows.ApplicationModel.DataTransfer.SetHistoryItemAsContentStatus;i4)
+    constant SUCCESS 0
+    constant ACCESS_DENIED 1
+    constant ITEM_DELETED 2
 
 class Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs python_type
     py ShareCompletedEventArgs
@@ -1922,6 +1932,9 @@ class Windows.ApplicationModel.DataTransfer.ShareUIOptions activatable python_ty
 enum Windows.ApplicationModel.DataTransfer.ShareUITheme python_type
     py ShareUITheme
     signature enum(Windows.ApplicationModel.DataTransfer.ShareUITheme;i4)
+    constant DEFAULT 0
+    constant LIGHT 1
+    constant DARK 2
 
 class Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager static python_type
     py SharedStorageAccessManager

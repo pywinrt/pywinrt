@@ -210,6 +210,8 @@ class Windows.UI.ViewManagement.ApplicationView python_type
 enum Windows.UI.ViewManagement.ApplicationViewBoundsMode python_type
     py ApplicationViewBoundsMode
     signature enum(Windows.UI.ViewManagement.ApplicationViewBoundsMode;i4)
+    constant USE_VISIBLE 0
+    constant USE_CORE_WINDOW 1
 
 class Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs python_type
     py ApplicationViewConsolidatedEventArgs
@@ -227,10 +229,14 @@ class Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs python_type
 enum Windows.UI.ViewManagement.ApplicationViewMode python_type
     py ApplicationViewMode
     signature enum(Windows.UI.ViewManagement.ApplicationViewMode;i4)
+    constant DEFAULT 0
+    constant COMPACT_OVERLAY 1
 
 enum Windows.UI.ViewManagement.ApplicationViewOrientation python_type
     py ApplicationViewOrientation
     signature enum(Windows.UI.ViewManagement.ApplicationViewOrientation;i4)
+    constant LANDSCAPE 0
+    constant PORTRAIT 1
 
 class Windows.UI.ViewManagement.ApplicationViewScaling python_type
     py ApplicationViewScaling
@@ -249,6 +255,10 @@ class Windows.UI.ViewManagement.ApplicationViewScaling python_type
 enum Windows.UI.ViewManagement.ApplicationViewState python_type
     py ApplicationViewState
     signature enum(Windows.UI.ViewManagement.ApplicationViewState;i4)
+    constant FULL_SCREEN_LANDSCAPE 0
+    constant FILLED 1
+    constant SNAPPED 2
+    constant FULL_SCREEN_PORTRAIT 3
 
 class Windows.UI.ViewManagement.ApplicationViewSwitcher static python_type
     py ApplicationViewSwitcher
@@ -303,9 +313,12 @@ class Windows.UI.ViewManagement.ApplicationViewSwitcher static python_type
             in class type=Windows.UI.ViewManagement.ViewModePreferences name=viewModePreferences
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
-enum Windows.UI.ViewManagement.ApplicationViewSwitchingOptions python_type
+enum Windows.UI.ViewManagement.ApplicationViewSwitchingOptions python_type flags_enum
     py ApplicationViewSwitchingOptions
     signature enum(Windows.UI.ViewManagement.ApplicationViewSwitchingOptions;u4)
+    constant DEFAULT 0x0
+    constant SKIP_ANIMATION 0x1
+    constant CONSOLIDATE_VIEWS 0x2
 
 class Windows.UI.ViewManagement.ApplicationViewTitleBar python_type
     py ApplicationViewTitleBar
@@ -394,6 +407,11 @@ class Windows.UI.ViewManagement.ApplicationViewTransferContext activatable pytho
 enum Windows.UI.ViewManagement.ApplicationViewWindowingMode python_type
     py ApplicationViewWindowingMode
     signature enum(Windows.UI.ViewManagement.ApplicationViewWindowingMode;i4)
+    constant AUTO 0
+    constant PREFERRED_LAUNCH_VIEW_SIZE 1
+    constant FULL_SCREEN 2
+    constant COMPACT_OVERLAY 3
+    constant MAXIMIZED 4
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
@@ -420,10 +438,14 @@ delegate Windows.Foundation.EventHandler<System.Object> concrete
 enum Windows.UI.ViewManagement.FullScreenSystemOverlayMode python_type
     py FullScreenSystemOverlayMode
     signature enum(Windows.UI.ViewManagement.FullScreenSystemOverlayMode;i4)
+    constant STANDARD 0
+    constant MINIMAL 1
 
 enum Windows.UI.ViewManagement.HandPreference python_type
     py HandPreference
     signature enum(Windows.UI.ViewManagement.HandPreference;i4)
+    constant LEFT_HANDED 0
+    constant RIGHT_HANDED 1
 
 interface Windows.UI.ViewManagement.IAccessibilitySettings
     guid fe0e8147-c4c0-4562-b962-1327b52ad5b9
@@ -890,6 +912,8 @@ class Windows.UI.ViewManagement.ProjectionManager static python_type
 enum Windows.UI.ViewManagement.ScreenCaptureDisabledBehavior python_type
     py ScreenCaptureDisabledBehavior
     signature enum(Windows.UI.ViewManagement.ScreenCaptureDisabledBehavior;i4)
+    constant DRAW_AS_BLACK 0
+    constant EXCLUDE_FROM_CAPTURE 1
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.AccessibilitySettings,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[AccessibilitySettings, Object]
@@ -1002,10 +1026,46 @@ delegate Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UIViewSe
 enum Windows.UI.ViewManagement.UIColorType python_type
     py UIColorType
     signature enum(Windows.UI.ViewManagement.UIColorType;i4)
+    constant BACKGROUND 0
+    constant FOREGROUND 1
+    constant ACCENT_DARK3 2
+    constant ACCENT_DARK2 3
+    constant ACCENT_DARK1 4
+    constant ACCENT 5
+    constant ACCENT_LIGHT1 6
+    constant ACCENT_LIGHT2 7
+    constant ACCENT_LIGHT3 8
+    constant COMPLEMENT 9
 
 enum Windows.UI.ViewManagement.UIElementType python_type
     py UIElementType
     signature enum(Windows.UI.ViewManagement.UIElementType;i4)
+    constant ACTIVE_CAPTION 0
+    constant BACKGROUND 1
+    constant BUTTON_FACE 2
+    constant BUTTON_TEXT 3
+    constant CAPTION_TEXT 4
+    constant GRAY_TEXT 5
+    constant HIGHLIGHT 6
+    constant HIGHLIGHT_TEXT 7
+    constant HOTLIGHT 8
+    constant INACTIVE_CAPTION 9
+    constant INACTIVE_CAPTION_TEXT 10
+    constant WINDOW 11
+    constant WINDOW_TEXT 12
+    constant ACCENT_COLOR 1000
+    constant TEXT_HIGH 1001
+    constant TEXT_MEDIUM 1002
+    constant TEXT_LOW 1003
+    constant TEXT_CONTRAST_WITH_HIGH 1004
+    constant NON_TEXT_HIGH 1005
+    constant NON_TEXT_MEDIUM_HIGH 1006
+    constant NON_TEXT_MEDIUM 1007
+    constant NON_TEXT_MEDIUM_LOW 1008
+    constant NON_TEXT_LOW 1009
+    constant PAGE_BACKGROUND 1010
+    constant POPUP_BACKGROUND 1011
+    constant OVERLAY_OUTSIDE_POPUP 1012
 
 class Windows.UI.ViewManagement.UISettings activatable python_type
     py UISettings
@@ -1155,6 +1215,8 @@ class Windows.UI.ViewManagement.UIViewSettings python_type
 enum Windows.UI.ViewManagement.UserInteractionMode python_type
     py UserInteractionMode
     signature enum(Windows.UI.ViewManagement.UserInteractionMode;i4)
+    constant MOUSE 0
+    constant TOUCH 1
 
 class Windows.UI.ViewManagement.ViewModePreferences python_type
     py ViewModePreferences
@@ -1180,6 +1242,13 @@ class Windows.UI.ViewManagement.ViewModePreferences python_type
 enum Windows.UI.ViewManagement.ViewSizePreference python_type
     py ViewSizePreference
     signature enum(Windows.UI.ViewManagement.ViewSizePreference;i4)
+    constant DEFAULT 0
+    constant USE_LESS 1
+    constant USE_HALF 2
+    constant USE_MORE 3
+    constant USE_MINIMUM 4
+    constant USE_NONE 5
+    constant CUSTOM 6
 
 class System.Boolean external
     py winrt.system.Boolean

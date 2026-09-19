@@ -37,14 +37,27 @@ class Microsoft.Windows.Media.Capture.CameraCaptureUI python_type
 enum Microsoft.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution python_type
     py CameraCaptureUIMaxPhotoResolution
     signature enum(Microsoft.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution;i4)
+    constant HIGHEST_AVAILABLE 0
+    constant VERY_SMALL_QVGA 1
+    constant SMALL_VGA 2
+    constant MEDIUM_XGA 3
+    constant LARGE3_M 4
+    constant VERY_LARGE5_M 5
 
 enum Microsoft.Windows.Media.Capture.CameraCaptureUIMaxVideoResolution python_type
     py CameraCaptureUIMaxVideoResolution
     signature enum(Microsoft.Windows.Media.Capture.CameraCaptureUIMaxVideoResolution;i4)
+    constant HIGHEST_AVAILABLE 0
+    constant LOW_DEFINITION 1
+    constant STANDARD_DEFINITION 2
+    constant HIGH_DEFINITION 3
 
 enum Microsoft.Windows.Media.Capture.CameraCaptureUIMode python_type
     py CameraCaptureUIMode
     signature enum(Microsoft.Windows.Media.Capture.CameraCaptureUIMode;i4)
+    constant PHOTO_OR_VIDEO 0
+    constant PHOTO 1
+    constant VIDEO 2
 
 class Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings activatable python_type
     py CameraCaptureUIPhotoCaptureSettings
@@ -83,6 +96,9 @@ class Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings activa
 enum Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoFormat python_type
     py CameraCaptureUIPhotoFormat
     signature enum(Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoFormat;i4)
+    constant JPEG 0
+    constant PNG 1
+    constant JPEG_X_R 2
 
 class Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings activatable python_type
     py CameraCaptureUIVideoCaptureSettings
@@ -116,6 +132,8 @@ class Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings activa
 enum Microsoft.Windows.Media.Capture.CameraCaptureUIVideoFormat python_type
     py CameraCaptureUIVideoFormat
     signature enum(Microsoft.Windows.Media.Capture.CameraCaptureUIVideoFormat;i4)
+    constant MP4 0
+    constant WMV 1
 
 interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[StorageFile]

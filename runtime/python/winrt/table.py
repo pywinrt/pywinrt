@@ -32,11 +32,12 @@ NO_REF = 0xFFFFFFFF
 
 HEADER_SIZE = 48
 SECTION_ENTRY_SIZE = 12
-TYPE_RECORD_WORDS = 22
+TYPE_RECORD_WORDS = 24
 GROUP_RECORD_WORDS = 4
 MEMBER_RECORD_WORDS = 10
 PARAM_RECORD_WORDS = 4
 FIELD_RECORD_WORDS = 4
+CONSTANT_RECORD_WORDS = 2
 
 CATEGORIES = ("enum", "struct", "interface", "class", "delegate")
 
@@ -60,6 +61,7 @@ TYPE_FLAGS = {
     "buffer": 1 << 19,
     "buffer_length": 1 << 20,
     "integer": 1 << 21,
+    "flags_enum": 1 << 22,
 }
 
 GROUP_KINDS = ("method", "property", "event", "constructor")
@@ -124,6 +126,9 @@ PARAM_VALUES = ("type", "name")
 FIELD_VALUES = ("type",)
 
 PARAM_FLAGS = {"return": 1 << 3, "implicit": 1 << 4, "by_reference": 1 << 5}
+
+#: How many bits a WinRT enum constant has, whichever sign it is read with.
+CONSTANT_MASK = 0xFFFFFFFF
 
 TYPE_CODES = (
     "void",
@@ -215,6 +220,12 @@ class Field:
 
 
 @dataclass
+class Constant:
+    py: str
+    value: int
+
+
+@dataclass
 class Type:
     category: int
     name: str
@@ -230,6 +241,7 @@ class Type:
     composable: list[str] = field(default_factory=list)
     overridable: list[str] = field(default_factory=list)
     fields: list[Field] = field(default_factory=list)
+    constants: list[Constant] = field(default_factory=list)
     groups: list[Group] = field(default_factory=list)
 
 
@@ -413,6 +425,8 @@ class _Parser:
             getattr(self._type, TYPE_LISTS[keyword]).append(rest)
         elif keyword == "field":
             self._type.fields.append(self._field(rest))
+        elif keyword == "constant":
+            self._type.constants.append(self._constant(rest))
         else:
             self._fail(f"'{keyword}' says nothing about a type")
 
@@ -426,6 +440,32 @@ class _Parser:
         values, _ = self._values(extra, FIELD_VALUES, {}, "field")
 
         return Field(py=py, winrt=winrt, code=self._code(code), type=values.get("type"))
+
+    def _constant(self, rest: str) -> Constant:
+        """
+        Reads one constant of an enum, which is a name and a number.
+
+        The number is written the way the enum is read: a flags enum is a set
+        of bits and is written in hexadecimal, and every other enum is a signed
+        decimal. Both are kept as the thirty-two bits they occupy, since that
+        is what the ABI passes and what the record has room for.
+        """
+        tokens = rest.split(" ")
+
+        if len(tokens) != 2:
+            self._fail("a constant is a Python name and a value")
+
+        py, text = tokens
+
+        try:
+            value = int(text, 0)
+        except ValueError:
+            self._fail(f"'{text}' is not a constant")
+
+        if not -(1 << 31) <= value < (1 << 32):
+            self._fail(f"'{text}' does not fit in an enum")
+
+        return Constant(py=py, value=value & CONSTANT_MASK)
 
     def _member_line(self, keyword: str, rest: str) -> None:
         if self._group is None:
@@ -578,8 +618,10 @@ def build(table: Table) -> bytes:
     members: list[Member] = []
     params: list[Param] = []
     fields: list[Field] = []
+    constants: list[Constant] = []
     first_group: list[int] = []
     first_field: list[int] = []
+    first_constant: list[int] = []
     first_member: list[int] = []
     first_param: list[int] = []
 
@@ -597,6 +639,8 @@ def build(table: Table) -> bytes:
 
         first_field.append(len(fields))
         fields.extend(type_.fields)
+        first_constant.append(len(constants))
+        constants.extend(type_.constants)
 
     strings = _Strings()
     guids = _Guids()
@@ -631,6 +675,9 @@ def build(table: Table) -> bytes:
         strings.add(struct_field.py)
         strings.add(struct_field.winrt)
 
+    for constant in constants:
+        strings.add(constant.py)
+
     def add_list(names: list[str]) -> int:
         if not names:
             return 0
@@ -652,6 +699,7 @@ def build(table: Table) -> bytes:
     ]
 
     sections = [
+        ("CNST", len(constants) * CONSTANT_RECORD_WORDS * 4),
         ("FLDS", len(fields) * FIELD_RECORD_WORDS * 4),
         ("GRUP", len(groups) * GROUP_RECORD_WORDS * 4),
         ("GUID", len(guids) * 16),
@@ -738,6 +786,8 @@ def build(table: Table) -> bytes:
                 len(type_.composable),
                 overridable,
                 len(type_.overridable),
+                first_constant[position],
+                len(type_.constants),
             ],
         )
 
@@ -793,6 +843,13 @@ def build(table: Table) -> bytes:
                 struct_field.code,
                 ref(struct_field.type),
             ],
+        )
+
+    for position, constant in enumerate(constants):
+        _pack_words(
+            data,
+            offsets["CNST"] + position * CONSTANT_RECORD_WORDS * 4,
+            [strings.add(constant.py), constant.value],
         )
 
     return bytes(data)

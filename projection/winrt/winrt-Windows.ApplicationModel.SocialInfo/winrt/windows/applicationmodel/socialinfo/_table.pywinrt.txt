@@ -251,10 +251,15 @@ class Windows.ApplicationModel.SocialInfo.SocialFeedItem activatable python_type
 enum Windows.ApplicationModel.SocialInfo.SocialFeedItemStyle python_type
     py SocialFeedItemStyle
     signature enum(Windows.ApplicationModel.SocialInfo.SocialFeedItemStyle;i4)
+    constant DEFAULT 0
+    constant PHOTO 1
 
 enum Windows.ApplicationModel.SocialInfo.SocialFeedKind python_type
     py SocialFeedKind
     signature enum(Windows.ApplicationModel.SocialInfo.SocialFeedKind;i4)
+    constant HOME_FEED 0
+    constant CONTACT_FEED 1
+    constant DASHBOARD 2
 
 class Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem activatable python_type
     py SocialFeedSharedItem
@@ -291,10 +296,15 @@ class Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem activatable pytho
 enum Windows.ApplicationModel.SocialInfo.SocialFeedUpdateMode python_type
     py SocialFeedUpdateMode
     signature enum(Windows.ApplicationModel.SocialInfo.SocialFeedUpdateMode;i4)
+    constant APPEND 0
+    constant REPLACE 1
 
 enum Windows.ApplicationModel.SocialInfo.SocialItemBadgeStyle python_type
     py SocialItemBadgeStyle
     signature enum(Windows.ApplicationModel.SocialInfo.SocialItemBadgeStyle;i4)
+    constant HIDDEN 0
+    constant VISIBLE 1
+    constant VISIBLE_WITH_COUNT 2
 
 class Windows.ApplicationModel.SocialInfo.SocialItemThumbnail activatable python_type
     py SocialItemThumbnail

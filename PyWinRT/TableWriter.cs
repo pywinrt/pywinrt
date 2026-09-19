@@ -63,6 +63,7 @@ enum TableTypeFlags : uint
     Buffer = 1 << 19,
     BufferLength = 1 << 20,
     Integer = 1 << 21,
+    FlagsEnum = 1 << 22,
 }
 
 enum TableGroupKind : uint
@@ -193,6 +194,7 @@ sealed class TableType(string key, string name, string ns)
     public List<TableType> GenericArgs { get; } = [];
     public List<TableGroup> Groups { get; } = [];
     public List<TableField> Fields { get; } = [];
+    public List<TableConstant> Constants { get; } = [];
     public List<TableType> Factories { get; } = [];
     public List<TableType> ComposableFactories { get; } = [];
     public List<TableType> Overridables { get; } = [];
@@ -240,6 +242,27 @@ sealed class TableField(string pyName, string winrtName, TypeCode code, TableTyp
     public string WinRtName { get; } = winrtName;
     public TypeCode Code { get; } = code;
     public TableType? Type { get; } = type;
+}
+
+/// <summary>
+/// One constant of a WinRT enum, as the member of a Python enum class that the
+/// runtime builds it into.
+/// </summary>
+/// <param name="pyName">
+/// The name the constant is reached by. It is the only name written down: an
+/// enum constant is never named on the ABI, so, unlike a struct field, the
+/// spelling the metadata gives it is of no use to anyone reading the table.
+/// </param>
+/// <param name="value">
+/// The constant, as the thirty-two bits it occupies. A WinRT enum is a signed
+/// int32 unless it carries FlagsAttribute, in which case it is an unsigned
+/// uint32, so what the two mean by the same bits differs and the type record
+/// is what says which.
+/// </param>
+sealed class TableConstant(string pyName, uint value)
+{
+    public string PyName { get; } = pyName;
+    public uint Value { get; } = value;
 }
 
 /// <summary>
@@ -373,6 +396,7 @@ sealed class TableWriter
         switch (type.Category)
         {
             case Category.Enum:
+                AddConstants(record, type);
                 return record;
             case Category.Struct:
                 AddFields(record, type);
@@ -628,6 +652,38 @@ sealed class TableWriter
         visit(type);
 
         return result;
+    }
+
+    /// <summary>
+    /// Records the constants of an enum, which is the whole of what one is.
+    /// </summary>
+    /// <remarks>
+    /// The metadata spells an enum's constants as static fields of it, and
+    /// prefixes them with the instance field that carries the value, which is
+    /// the one without a constant behind it.
+    /// </remarks>
+    private static void AddConstants(TableType record, ProjectedType type)
+    {
+        var isFlags = type.Type.HasFlagsAttribute;
+
+        if (isFlags)
+        {
+            record.Flags |= TableTypeFlags.FlagsEnum;
+        }
+
+        foreach (var field in type.Type.Fields)
+        {
+            if (field.Constant is null)
+            {
+                continue;
+            }
+
+            var value = isFlags
+                ? Convert.ToUInt32(field.Constant)
+                : unchecked((uint)Convert.ToInt32(field.Constant));
+
+            record.Constants.Add(new TableConstant(field.Name.ToPythonConstant(), value));
+        }
     }
 
     private void AddFields(TableType record, ProjectedType type)
@@ -1433,6 +1489,7 @@ sealed class TableWriter
         ((uint)TableTypeFlags.Buffer, "buffer"),
         ((uint)TableTypeFlags.BufferLength, "buffer_length"),
         ((uint)TableTypeFlags.Integer, "integer"),
+        ((uint)TableTypeFlags.FlagsEnum, "flags_enum"),
     ];
 
     private static readonly string[] groupKindNames =
@@ -1669,6 +1726,17 @@ sealed class TableWriter
                 $"    field {field.PyName} {field.WinRtName} {codeNames[(uint)field.Code]}"
                     + TypeName(field.Type)
             );
+        }
+
+        foreach (var constant in type.Constants)
+        {
+            // A flags enum is unsigned and is read as a set of bits, so it is
+            // written in hexadecimal; every other enum is a signed number.
+            var value = type.Flags.HasFlag(TableTypeFlags.FlagsEnum)
+                ? $"0x{constant.Value:X}"
+                : unchecked((int)constant.Value).ToString();
+
+            sink.Line($"    constant {constant.PyName} {value}");
         }
 
         foreach (var group in type.Groups)

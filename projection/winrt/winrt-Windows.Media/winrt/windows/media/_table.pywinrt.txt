@@ -37,6 +37,9 @@ class Windows.Media.AudioBuffer python_type closeable
 enum Windows.Media.AudioBufferAccessMode python_type
     py AudioBufferAccessMode
     signature enum(Windows.Media.AudioBufferAccessMode;i4)
+    constant READ 0
+    constant READ_WRITE 1
+    constant WRITE 2
 
 class Windows.Media.AudioFrame python_type closeable
     py AudioFrame
@@ -89,6 +92,8 @@ class Windows.Media.AudioFrame python_type closeable
 enum Windows.Media.AudioProcessing python_type
     py AudioProcessing
     signature enum(Windows.Media.AudioProcessing;i4)
+    constant DEFAULT 0
+    constant RAW 1
 
 class Windows.Media.AutoRepeatModeChangeRequestedEventArgs python_type
     py AutoRepeatModeChangeRequestedEventArgs
@@ -926,14 +931,26 @@ class Windows.Media.MediaMarkerTypes static python_type
 enum Windows.Media.MediaPlaybackAutoRepeatMode python_type
     py MediaPlaybackAutoRepeatMode
     signature enum(Windows.Media.MediaPlaybackAutoRepeatMode;i4)
+    constant NONE 0
+    constant TRACK 1
+    constant LIST 2
 
 enum Windows.Media.MediaPlaybackStatus python_type
     py MediaPlaybackStatus
     signature enum(Windows.Media.MediaPlaybackStatus;i4)
+    constant CLOSED 0
+    constant CHANGING 1
+    constant STOPPED 2
+    constant PLAYING 3
+    constant PAUSED 4
 
 enum Windows.Media.MediaPlaybackType python_type
     py MediaPlaybackType
     signature enum(Windows.Media.MediaPlaybackType;i4)
+    constant UNKNOWN 0
+    constant MUSIC 1
+    constant VIDEO 2
+    constant IMAGE 3
 
 class Windows.Media.MediaProcessingTriggerDetails python_type
     py MediaProcessingTriggerDetails
@@ -1025,6 +1042,10 @@ class Windows.Media.MediaTimelineControllerFailedEventArgs python_type
 enum Windows.Media.MediaTimelineControllerState python_type
     py MediaTimelineControllerState
     signature enum(Windows.Media.MediaTimelineControllerState;i4)
+    constant PAUSED 0
+    constant RUNNING 1
+    constant STALLED 2
+    constant ERROR 3
 
 class Windows.Media.MusicDisplayProperties python_type
     py MusicDisplayProperties
@@ -1097,6 +1118,9 @@ class Windows.Media.ShuffleEnabledChangeRequestedEventArgs python_type
 enum Windows.Media.SoundLevel python_type
     py SoundLevel
     signature enum(Windows.Media.SoundLevel;i4)
+    constant MUTED 0
+    constant LOW 1
+    constant FULL 2
 
 class Windows.Media.SystemMediaTransportControls python_type
     py SystemMediaTransportControls
@@ -1232,6 +1256,16 @@ class Windows.Media.SystemMediaTransportControls python_type
 enum Windows.Media.SystemMediaTransportControlsButton python_type
     py SystemMediaTransportControlsButton
     signature enum(Windows.Media.SystemMediaTransportControlsButton;i4)
+    constant PLAY 0
+    constant PAUSE 1
+    constant STOP 2
+    constant RECORD 3
+    constant FAST_FORWARD 4
+    constant REWIND 5
+    constant NEXT 6
+    constant PREVIOUS 7
+    constant CHANNEL_UP 8
+    constant CHANNEL_DOWN 9
 
 class Windows.Media.SystemMediaTransportControlsButtonPressedEventArgs python_type
     py SystemMediaTransportControlsButtonPressedEventArgs
@@ -1284,6 +1318,7 @@ class Windows.Media.SystemMediaTransportControlsDisplayUpdater python_type
 enum Windows.Media.SystemMediaTransportControlsProperty python_type
     py SystemMediaTransportControlsProperty
     signature enum(Windows.Media.SystemMediaTransportControlsProperty;i4)
+    constant SOUND_LEVEL 0
 
 class Windows.Media.SystemMediaTransportControlsPropertyChangedEventArgs python_type
     py SystemMediaTransportControlsPropertyChangedEventArgs

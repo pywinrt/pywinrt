@@ -54,3 +54,6 @@ class Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings
 enum Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationStatus python_type
     py PlatformTelemetryRegistrationStatus
     signature enum(Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationStatus;i4)
+    constant SUCCESS 0
+    constant SETTINGS_OUT_OF_RANGE 1
+    constant UNKNOWN_FAILURE 2

@@ -115,14 +115,27 @@ class Windows.Networking.Sockets.ControlChannelTrigger python_type closeable
 enum Windows.Networking.Sockets.ControlChannelTriggerResetReason python_type
     py ControlChannelTriggerResetReason
     signature enum(Windows.Networking.Sockets.ControlChannelTriggerResetReason;i4)
+    constant FAST_USER_SWITCHED 0
+    constant LOW_POWER_EXIT 1
+    constant QUIET_HOURS_EXIT 2
+    constant APPLICATION_RESTART 3
 
 enum Windows.Networking.Sockets.ControlChannelTriggerResourceType python_type
     py ControlChannelTriggerResourceType
     signature enum(Windows.Networking.Sockets.ControlChannelTriggerResourceType;i4)
+    constant REQUEST_SOFTWARE_SLOT 0
+    constant REQUEST_HARDWARE_SLOT 1
 
 enum Windows.Networking.Sockets.ControlChannelTriggerStatus python_type
     py ControlChannelTriggerStatus
     signature enum(Windows.Networking.Sockets.ControlChannelTriggerStatus;i4)
+    constant HARDWARE_SLOT_REQUESTED 0
+    constant SOFTWARE_SLOT_ALLOCATED 1
+    constant HARDWARE_SLOT_ALLOCATED 2
+    constant POLICY_ERROR 3
+    constant SYSTEM_ERROR 4
+    constant TRANSPORT_DISCONNECTED 5
+    constant SERVICE_UNAVAILABLE 6
 
 class Windows.Networking.Sockets.DatagramSocket activatable python_type closeable
     py DatagramSocket
@@ -1259,6 +1272,8 @@ class Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs python
 enum Windows.Networking.Sockets.MessageWebSocketReceiveMode python_type
     py MessageWebSocketReceiveMode
     signature enum(Windows.Networking.Sockets.MessageWebSocketReceiveMode;i4)
+    constant FULL_MESSAGE 0
+    constant PARTIAL_MESSAGE 1
 
 struct Windows.Networking.Sockets.RoundTripTimeStatistics python_type
     py RoundTripTimeStatistics
@@ -1372,6 +1387,8 @@ class Windows.Networking.Sockets.ServerStreamWebSocketInformation python_type
 enum Windows.Networking.Sockets.SocketActivityConnectedStandbyAction python_type
     py SocketActivityConnectedStandbyAction
     signature enum(Windows.Networking.Sockets.SocketActivityConnectedStandbyAction;i4)
+    constant DO_NOT_WAKE 0
+    constant WAKE 1
 
 class Windows.Networking.Sockets.SocketActivityContext python_type
     py SocketActivityContext
@@ -1421,6 +1438,10 @@ class Windows.Networking.Sockets.SocketActivityInformation python_type
 enum Windows.Networking.Sockets.SocketActivityKind python_type
     py SocketActivityKind
     signature enum(Windows.Networking.Sockets.SocketActivityKind;i4)
+    constant NONE 0
+    constant STREAM_SOCKET_LISTENER 1
+    constant DATAGRAM_SOCKET 2
+    constant STREAM_SOCKET 3
 
 class Windows.Networking.Sockets.SocketActivityTriggerDetails python_type
     py SocketActivityTriggerDetails
@@ -1437,6 +1458,11 @@ class Windows.Networking.Sockets.SocketActivityTriggerDetails python_type
 enum Windows.Networking.Sockets.SocketActivityTriggerReason python_type
     py SocketActivityTriggerReason
     signature enum(Windows.Networking.Sockets.SocketActivityTriggerReason;i4)
+    constant NONE 0
+    constant SOCKET_ACTIVITY 1
+    constant CONNECTION_ACCEPTED 2
+    constant KEEP_ALIVE_TIMER_EXPIRED 3
+    constant SOCKET_CLOSED 4
 
 class Windows.Networking.Sockets.SocketError static python_type
     py SocketError
@@ -1449,22 +1475,71 @@ class Windows.Networking.Sockets.SocketError static python_type
 enum Windows.Networking.Sockets.SocketErrorStatus python_type
     py SocketErrorStatus
     signature enum(Windows.Networking.Sockets.SocketErrorStatus;i4)
+    constant UNKNOWN 0
+    constant OPERATION_ABORTED 1
+    constant HTTP_INVALID_SERVER_RESPONSE 2
+    constant CONNECTION_TIMED_OUT 3
+    constant ADDRESS_FAMILY_NOT_SUPPORTED 4
+    constant SOCKET_TYPE_NOT_SUPPORTED 5
+    constant HOST_NOT_FOUND 6
+    constant NO_DATA_RECORD_OF_REQUESTED_TYPE 7
+    constant NON_AUTHORITATIVE_HOST_NOT_FOUND 8
+    constant CLASS_TYPE_NOT_FOUND 9
+    constant ADDRESS_ALREADY_IN_USE 10
+    constant CANNOT_ASSIGN_REQUESTED_ADDRESS 11
+    constant CONNECTION_REFUSED 12
+    constant NETWORK_IS_UNREACHABLE 13
+    constant UNREACHABLE_HOST 14
+    constant NETWORK_IS_DOWN 15
+    constant NETWORK_DROPPED_CONNECTION_ON_RESET 16
+    constant SOFTWARE_CAUSED_CONNECTION_ABORT 17
+    constant CONNECTION_RESET_BY_PEER 18
+    constant HOST_IS_DOWN 19
+    constant NO_ADDRESSES_FOUND 20
+    constant TOO_MANY_OPEN_FILES 21
+    constant MESSAGE_TOO_LONG 22
+    constant CERTIFICATE_EXPIRED 23
+    constant CERTIFICATE_UNTRUSTED_ROOT 24
+    constant CERTIFICATE_COMMON_NAME_IS_INCORRECT 25
+    constant CERTIFICATE_WRONG_USAGE 26
+    constant CERTIFICATE_REVOKED 27
+    constant CERTIFICATE_NO_REVOCATION_CHECK 28
+    constant CERTIFICATE_REVOCATION_SERVER_OFFLINE 29
+    constant CERTIFICATE_IS_INVALID 30
 
 enum Windows.Networking.Sockets.SocketMessageType python_type
     py SocketMessageType
     signature enum(Windows.Networking.Sockets.SocketMessageType;i4)
+    constant BINARY 0
+    constant UTF8 1
 
 enum Windows.Networking.Sockets.SocketProtectionLevel python_type
     py SocketProtectionLevel
     signature enum(Windows.Networking.Sockets.SocketProtectionLevel;i4)
+    constant PLAIN_SOCKET 0
+    constant SSL 1
+    constant SSL_ALLOW_NULL_ENCRYPTION 2
+    constant BLUETOOTH_ENCRYPTION_ALLOW_NULL_AUTHENTICATION 3
+    constant BLUETOOTH_ENCRYPTION_WITH_AUTHENTICATION 4
+    constant SSL3_ALLOW_WEAK_ENCRYPTION 5
+    constant TLS10 6
+    constant TLS11 7
+    constant TLS12 8
+    constant UNSPECIFIED 9
+    constant TLS13 10
 
 enum Windows.Networking.Sockets.SocketQualityOfService python_type
     py SocketQualityOfService
     signature enum(Windows.Networking.Sockets.SocketQualityOfService;i4)
+    constant NORMAL 0
+    constant LOW_LATENCY 1
 
 enum Windows.Networking.Sockets.SocketSslErrorSeverity python_type
     py SocketSslErrorSeverity
     signature enum(Windows.Networking.Sockets.SocketSslErrorSeverity;i4)
+    constant NONE 0
+    constant IGNORABLE 1
+    constant FATAL 2
 
 class Windows.Networking.Sockets.StreamSocket activatable python_type closeable
     py StreamSocket

@@ -738,10 +738,15 @@ class Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs python
 enum Windows.Web.UI.Interop.WebViewControlAcceleratorKeyRoutingStage python_type
     py WebViewControlAcceleratorKeyRoutingStage
     signature enum(Windows.Web.UI.Interop.WebViewControlAcceleratorKeyRoutingStage;i4)
+    constant TUNNELING 0
+    constant BUBBLING 1
 
 enum Windows.Web.UI.Interop.WebViewControlMoveFocusReason python_type
     py WebViewControlMoveFocusReason
     signature enum(Windows.Web.UI.Interop.WebViewControlMoveFocusReason;i4)
+    constant PROGRAMMATIC 0
+    constant NEXT 1
+    constant PREVIOUS 2
 
 class Windows.Web.UI.Interop.WebViewControlMoveFocusRequestedEventArgs python_type
     py WebViewControlMoveFocusRequestedEventArgs
@@ -793,6 +798,9 @@ class Windows.Web.UI.Interop.WebViewControlProcess activatable python_type
 enum Windows.Web.UI.Interop.WebViewControlProcessCapabilityState python_type
     py WebViewControlProcessCapabilityState
     signature enum(Windows.Web.UI.Interop.WebViewControlProcessCapabilityState;i4)
+    constant DEFAULT 0
+    constant DISABLED 1
+    constant ENABLED 2
 
 class Windows.Web.UI.Interop.WebViewControlProcessOptions activatable python_type
     py WebViewControlProcessOptions

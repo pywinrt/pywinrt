@@ -213,9 +213,26 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.N
             in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Networking.NetworkOperators.ESimOperationResult,Windows.Networking.NetworkOperators.ESimProfileInstallProgress> name=asyncInfo
             in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-enum Windows.Networking.NetworkOperators.DataClasses python_type
+enum Windows.Networking.NetworkOperators.DataClasses python_type flags_enum
     py DataClasses
     signature enum(Windows.Networking.NetworkOperators.DataClasses;u4)
+    constant NONE 0x0
+    constant GPRS 0x1
+    constant EDGE 0x2
+    constant UMTS 0x4
+    constant HSDPA 0x8
+    constant HSUPA 0x10
+    constant LTE_ADVANCED 0x20
+    constant NEW_RADIO_NON_STANDALONE 0x40
+    constant NEW_RADIO_STANDALONE 0x80
+    constant CDMA1X_RTT 0x10000
+    constant CDMA1X_EVDO 0x20000
+    constant CDMA1X_EVDO_REV_A 0x40000
+    constant CDMA1X_EVDV 0x80000
+    constant CDMA3X_RTT 0x100000
+    constant CDMA1X_EVDO_REV_B 0x200000
+    constant CDMA_UMB 0x400000
+    constant CUSTOM 0x80000000
 
 class Windows.Networking.NetworkOperators.ESim python_type
     py ESim
@@ -292,6 +309,9 @@ class Windows.Networking.NetworkOperators.ESimAddedEventArgs python_type
 enum Windows.Networking.NetworkOperators.ESimAuthenticationPreference python_type
     py ESimAuthenticationPreference
     signature enum(Windows.Networking.NetworkOperators.ESimAuthenticationPreference;i4)
+    constant ON_ENTRY 0
+    constant ON_ACTION 1
+    constant NEVER 2
 
 class Windows.Networking.NetworkOperators.ESimDiscoverEvent python_type
     py ESimDiscoverEvent
@@ -326,6 +346,9 @@ class Windows.Networking.NetworkOperators.ESimDiscoverResult python_type
 enum Windows.Networking.NetworkOperators.ESimDiscoverResultKind python_type
     py ESimDiscoverResultKind
     signature enum(Windows.Networking.NetworkOperators.ESimDiscoverResultKind;i4)
+    constant NONE 0
+    constant EVENTS 1
+    constant PROFILE_METADATA 2
 
 class Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult python_type
     py ESimDownloadProfileMetadataResult
@@ -367,6 +390,35 @@ class Windows.Networking.NetworkOperators.ESimOperationResult python_type
 enum Windows.Networking.NetworkOperators.ESimOperationStatus python_type
     py ESimOperationStatus
     signature enum(Windows.Networking.NetworkOperators.ESimOperationStatus;i4)
+    constant SUCCESS 0
+    constant NOT_AUTHORIZED 1
+    constant NOT_FOUND 2
+    constant POLICY_VIOLATION 3
+    constant INSUFFICIENT_SPACE_ON_CARD 4
+    constant SERVER_FAILURE 5
+    constant SERVER_NOT_REACHABLE 6
+    constant TIMEOUT_WAITING_FOR_USER_CONSENT 7
+    constant INCORRECT_CONFIRMATION_CODE 8
+    constant CONFIRMATION_CODE_MAX_RETRIES_EXCEEDED 9
+    constant CARD_REMOVED 10
+    constant CARD_BUSY 11
+    constant OTHER 12
+    constant CARD_GENERAL_FAILURE 13
+    constant CONFIRMATION_CODE_MISSING 14
+    constant INVALID_MATCHING_ID 15
+    constant NO_ELIGIBLE_PROFILE_FOR_THIS_DEVICE 16
+    constant OPERATION_ABORTED 17
+    constant EID_MISMATCH 18
+    constant PROFILE_NOT_AVAILABLE_FOR_NEW_BINDING 19
+    constant PROFILE_NOT_RELEASED_BY_OPERATOR 20
+    constant OPERATION_PROHIBITED_BY_PROFILE_CLASS 21
+    constant PROFILE_NOT_PRESENT 22
+    constant NO_CORRESPONDING_REQUEST 23
+    constant TIMEOUT_WAITING_FOR_RESPONSE 24
+    constant ICCID_ALREADY_EXISTS 25
+    constant PROFILE_PROCESSING_ERROR 26
+    constant SERVER_NOT_TRUSTED 27
+    constant PROFILE_DOWNLOAD_MAX_RETRIES_EXCEEDED 28
 
 class Windows.Networking.NetworkOperators.ESimPolicy python_type
     py ESimPolicy
@@ -420,6 +472,9 @@ class Windows.Networking.NetworkOperators.ESimProfile python_type
 enum Windows.Networking.NetworkOperators.ESimProfileClass python_type
     py ESimProfileClass
     signature enum(Windows.Networking.NetworkOperators.ESimProfileClass;i4)
+    constant OPERATIONAL 0
+    constant TEST 1
+    constant PROVISIONING 2
 
 struct Windows.Networking.NetworkOperators.ESimProfileInstallProgress python_type
     py ESimProfileInstallProgress
@@ -475,6 +530,14 @@ class Windows.Networking.NetworkOperators.ESimProfileMetadata python_type
 enum Windows.Networking.NetworkOperators.ESimProfileMetadataState python_type
     py ESimProfileMetadataState
     signature enum(Windows.Networking.NetworkOperators.ESimProfileMetadataState;i4)
+    constant UNKNOWN 0
+    constant WAITING_FOR_INSTALL 1
+    constant DOWNLOADING 2
+    constant INSTALLING 3
+    constant EXPIRED 4
+    constant REJECTING_DOWNLOAD 5
+    constant NO_LONGER_AVAILABLE 6
+    constant DENIED_BY_POLICY 7
 
 class Windows.Networking.NetworkOperators.ESimProfilePolicy python_type
     py ESimProfilePolicy
@@ -494,6 +557,10 @@ class Windows.Networking.NetworkOperators.ESimProfilePolicy python_type
 enum Windows.Networking.NetworkOperators.ESimProfileState python_type
     py ESimProfileState
     signature enum(Windows.Networking.NetworkOperators.ESimProfileState;i4)
+    constant UNKNOWN 0
+    constant DISABLED 1
+    constant ENABLED 2
+    constant DELETED 3
 
 class Windows.Networking.NetworkOperators.ESimRemovedEventArgs python_type
     py ESimRemovedEventArgs
@@ -519,6 +586,10 @@ class Windows.Networking.NetworkOperators.ESimServiceInfo python_type
 enum Windows.Networking.NetworkOperators.ESimState python_type
     py ESimState
     signature enum(Windows.Networking.NetworkOperators.ESimState;i4)
+    constant UNKNOWN 0
+    constant IDLE 1
+    constant REMOVED 2
+    constant BUSY 3
 
 class Windows.Networking.NetworkOperators.ESimUpdatedEventArgs python_type
     py ESimUpdatedEventArgs
@@ -575,6 +646,11 @@ class Windows.Networking.NetworkOperators.ESimWatcher python_type
 enum Windows.Networking.NetworkOperators.ESimWatcherStatus python_type
     py ESimWatcherStatus
     signature enum(Windows.Networking.NetworkOperators.ESimWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPING 3
+    constant STOPPED 4
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
     py winrt.windows.foundation.EventHandler[Object]
@@ -649,6 +725,13 @@ class Windows.Networking.NetworkOperators.HotspotAuthenticationEventDetails pyth
 enum Windows.Networking.NetworkOperators.HotspotAuthenticationResponseCode python_type
     py HotspotAuthenticationResponseCode
     signature enum(Windows.Networking.NetworkOperators.HotspotAuthenticationResponseCode;i4)
+    constant NO_ERROR 0
+    constant LOGIN_SUCCEEDED 50
+    constant LOGIN_FAILED 100
+    constant RADIUS_SERVER_ERROR 102
+    constant NETWORK_ADMINISTRATOR_ERROR 105
+    constant LOGIN_ABORTED 151
+    constant ACCESS_GATEWAY_INTERNAL_ERROR 255
 
 class Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult python_type
     py HotspotCredentialsAuthenticationResult
@@ -3451,6 +3534,11 @@ class Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher activata
 enum Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcherStatus python_type
     py MobileBroadbandAccountWatcherStatus
     signature enum(Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcherStatus;i4)
+    constant CREATED 0
+    constant STARTED 1
+    constant ENUMERATION_COMPLETED 2
+    constant STOPPED 3
+    constant ABORTED 4
 
 class Windows.Networking.NetworkOperators.MobileBroadbandAntennaSar python_type
     py MobileBroadbandAntennaSar
@@ -3911,6 +3999,10 @@ class Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDet
 enum Windows.Networking.NetworkOperators.MobileBroadbandDeviceType python_type
     py MobileBroadbandDeviceType
     signature enum(Windows.Networking.NetworkOperators.MobileBroadbandDeviceType;i4)
+    constant UNKNOWN 0
+    constant EMBEDDED 1
+    constant REMOVABLE 2
+    constant REMOTE 3
 
 class Windows.Networking.NetworkOperators.MobileBroadbandModem python_type
     py MobileBroadbandModem
@@ -4045,6 +4137,10 @@ class Windows.Networking.NetworkOperators.MobileBroadbandModemIsolation python_t
 enum Windows.Networking.NetworkOperators.MobileBroadbandModemStatus python_type
     py MobileBroadbandModemStatus
     signature enum(Windows.Networking.NetworkOperators.MobileBroadbandModemStatus;i4)
+    constant SUCCESS 0
+    constant OTHER_FAILURE 1
+    constant BUSY 2
+    constant NO_DEVICE_SUPPORT 3
 
 class Windows.Networking.NetworkOperators.MobileBroadbandNetwork python_type
     py MobileBroadbandNetwork
@@ -4189,10 +4285,17 @@ class Windows.Networking.NetworkOperators.MobileBroadbandPin python_type
 enum Windows.Networking.NetworkOperators.MobileBroadbandPinFormat python_type
     py MobileBroadbandPinFormat
     signature enum(Windows.Networking.NetworkOperators.MobileBroadbandPinFormat;i4)
+    constant UNKNOWN 0
+    constant NUMERIC 1
+    constant ALPHANUMERIC 2
 
 enum Windows.Networking.NetworkOperators.MobileBroadbandPinLockState python_type
     py MobileBroadbandPinLockState
     signature enum(Windows.Networking.NetworkOperators.MobileBroadbandPinLockState;i4)
+    constant UNKNOWN 0
+    constant UNLOCKED 1
+    constant PIN_REQUIRED 2
+    constant PIN_UNBLOCK_KEY_REQUIRED 3
 
 class Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange python_type
     py MobileBroadbandPinLockStateChange
@@ -4246,10 +4349,23 @@ class Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult pyth
 enum Windows.Networking.NetworkOperators.MobileBroadbandPinType python_type
     py MobileBroadbandPinType
     signature enum(Windows.Networking.NetworkOperators.MobileBroadbandPinType;i4)
+    constant NONE 0
+    constant CUSTOM 1
+    constant PIN1 2
+    constant PIN2 3
+    constant SIM_PIN 4
+    constant FIRST_SIM_PIN 5
+    constant NETWORK_PIN 6
+    constant NETWORK_SUBSET_PIN 7
+    constant SERVICE_PROVIDER_PIN 8
+    constant CORPORATE_PIN 9
+    constant SUBSIDY_LOCK 10
 
 enum Windows.Networking.NetworkOperators.MobileBroadbandRadioState python_type
     py MobileBroadbandRadioState
     signature enum(Windows.Networking.NetworkOperators.MobileBroadbandRadioState;i4)
+    constant OFF 0
+    constant ON 1
 
 class Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange python_type
     py MobileBroadbandRadioStateChange
@@ -4383,6 +4499,16 @@ class Windows.Networking.NetworkOperators.MobileBroadbandSlotManager python_type
 enum Windows.Networking.NetworkOperators.MobileBroadbandSlotState python_type
     py MobileBroadbandSlotState
     signature enum(Windows.Networking.NetworkOperators.MobileBroadbandSlotState;i4)
+    constant UNMANAGED 0
+    constant UNKNOWN 1
+    constant OFF_EMPTY 2
+    constant OFF 3
+    constant EMPTY 4
+    constant NOT_READY 5
+    constant ACTIVE 6
+    constant ERROR 7
+    constant ACTIVE_ESIM 8
+    constant ACTIVE_ESIM_NO_PROFILE 9
 
 class Windows.Networking.NetworkOperators.MobileBroadbandTransmissionStateChangedEventArgs python_type
     py MobileBroadbandTransmissionStateChangedEventArgs
@@ -4429,6 +4555,10 @@ class Windows.Networking.NetworkOperators.MobileBroadbandUiccApp python_type
 enum Windows.Networking.NetworkOperators.MobileBroadbandUiccAppOperationStatus python_type
     py MobileBroadbandUiccAppOperationStatus
     signature enum(Windows.Networking.NetworkOperators.MobileBroadbandUiccAppOperationStatus;i4)
+    constant SUCCESS 0
+    constant INVALID_UICC_FILE_PATH 1
+    constant ACCESS_CONDITION_NOT_HELD 2
+    constant UICC_BUSY 3
 
 class Windows.Networking.NetworkOperators.MobileBroadbandUiccAppReadRecordResult python_type
     py MobileBroadbandUiccAppReadRecordResult
@@ -4481,10 +4611,19 @@ class Windows.Networking.NetworkOperators.MobileBroadbandUiccAppsResult python_t
 enum Windows.Networking.NetworkOperators.NetworkDeviceStatus python_type
     py NetworkDeviceStatus
     signature enum(Windows.Networking.NetworkOperators.NetworkDeviceStatus;i4)
+    constant DEVICE_NOT_READY 0
+    constant DEVICE_READY 1
+    constant SIM_NOT_INSERTED 2
+    constant BAD_SIM 3
+    constant DEVICE_HARDWARE_FAILURE 4
+    constant ACCOUNT_NOT_ACTIVATED 5
+    constant DEVICE_LOCKED 6
+    constant DEVICE_BLOCKED 7
 
 enum Windows.Networking.NetworkOperators.NetworkOperatorDataUsageNotificationKind python_type
     py NetworkOperatorDataUsageNotificationKind
     signature enum(Windows.Networking.NetworkOperators.NetworkOperatorDataUsageNotificationKind;i4)
+    constant DATA_USAGE_PROGRESS 0
 
 class Windows.Networking.NetworkOperators.NetworkOperatorDataUsageTriggerDetails python_type
     py NetworkOperatorDataUsageTriggerDetails
@@ -4498,6 +4637,19 @@ class Windows.Networking.NetworkOperators.NetworkOperatorDataUsageTriggerDetails
 enum Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType python_type
     py NetworkOperatorEventMessageType
     signature enum(Windows.Networking.NetworkOperators.NetworkOperatorEventMessageType;i4)
+    constant GSM 0
+    constant CDMA 1
+    constant USSD 2
+    constant DATA_PLAN_THRESHOLD_REACHED 3
+    constant DATA_PLAN_RESET 4
+    constant DATA_PLAN_DELETED 5
+    constant PROFILE_CONNECTED 6
+    constant PROFILE_DISCONNECTED 7
+    constant REGISTERED_ROAMING 8
+    constant REGISTERED_HOME 9
+    constant TETHERING_ENTITLEMENT_CHECK 10
+    constant TETHERING_OPERATIONAL_STATE_CHANGED 11
+    constant TETHERING_NUMBER_OF_CLIENTS_CHANGED 12
 
 class Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails python_type
     py NetworkOperatorNotificationEventDetails
@@ -4725,10 +4877,19 @@ class Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessP
 enum Windows.Networking.NetworkOperators.NetworkRegistrationState python_type
     py NetworkRegistrationState
     signature enum(Windows.Networking.NetworkOperators.NetworkRegistrationState;i4)
+    constant NONE 0
+    constant DEREGISTERED 1
+    constant SEARCHING 2
+    constant HOME 3
+    constant ROAMING 4
+    constant PARTNER 5
+    constant DENIED 6
 
 enum Windows.Networking.NetworkOperators.ProfileMediaType python_type
     py ProfileMediaType
     signature enum(Windows.Networking.NetworkOperators.ProfileMediaType;i4)
+    constant WLAN 0
+    constant WWAN 1
 
 struct Windows.Networking.NetworkOperators.ProfileUsage python_type
     py ProfileUsage
@@ -4786,6 +4947,14 @@ class Windows.Networking.NetworkOperators.ProvisioningAgent activatable python_t
 enum Windows.Networking.NetworkOperators.TetheringCapability python_type
     py TetheringCapability
     signature enum(Windows.Networking.NetworkOperators.TetheringCapability;i4)
+    constant ENABLED 0
+    constant DISABLED_BY_GROUP_POLICY 1
+    constant DISABLED_BY_HARDWARE_LIMITATION 2
+    constant DISABLED_BY_OPERATOR 3
+    constant DISABLED_BY_SKU 4
+    constant DISABLED_BY_REQUIRED_APP_NOT_INSTALLED 5
+    constant DISABLED_DUE_TO_UNKNOWN_CAUSE 6
+    constant DISABLED_BY_SYSTEM_CAPABILITY 7
 
 class Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails python_type
     py TetheringEntitlementCheckTriggerDetails
@@ -4804,22 +4973,47 @@ class Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetail
 enum Windows.Networking.NetworkOperators.TetheringOperationStatus python_type
     py TetheringOperationStatus
     signature enum(Windows.Networking.NetworkOperators.TetheringOperationStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN 1
+    constant MOBILE_BROADBAND_DEVICE_OFF 2
+    constant WI_FI_DEVICE_OFF 3
+    constant ENTITLEMENT_CHECK_TIMEOUT 4
+    constant ENTITLEMENT_CHECK_FAILURE 5
+    constant OPERATION_IN_PROGRESS 6
+    constant BLUETOOTH_DEVICE_OFF 7
+    constant NETWORK_LIMITED_CONNECTIVITY 8
+    constant ALREADY_ON 9
+    constant RADIO_RESTRICTION 10
+    constant BAND_INTERFERENCE 11
 
 enum Windows.Networking.NetworkOperators.TetheringOperationalState python_type
     py TetheringOperationalState
     signature enum(Windows.Networking.NetworkOperators.TetheringOperationalState;i4)
+    constant UNKNOWN 0
+    constant ON 1
+    constant OFF 2
+    constant IN_TRANSITION 3
 
 enum Windows.Networking.NetworkOperators.TetheringWiFiAuthenticationKind python_type
     py TetheringWiFiAuthenticationKind
     signature enum(Windows.Networking.NetworkOperators.TetheringWiFiAuthenticationKind;i4)
+    constant WPA2 0
+    constant WPA3_TRANSITION_MODE 1
+    constant WPA3 2
 
 enum Windows.Networking.NetworkOperators.TetheringWiFiBand python_type
     py TetheringWiFiBand
     signature enum(Windows.Networking.NetworkOperators.TetheringWiFiBand;i4)
+    constant AUTO 0
+    constant TWO_POINT_FOUR_GIGAHERTZ 1
+    constant FIVE_GIGAHERTZ 2
+    constant SIX_GIGAHERTZ 3
 
 enum Windows.Networking.NetworkOperators.TetheringWiFiPerformancePriority python_type
     py TetheringWiFiPerformancePriority
     signature enum(Windows.Networking.NetworkOperators.TetheringWiFiPerformancePriority;i4)
+    constant DEFAULT 0
+    constant TETHERING_OVER_STATION 1
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.ESim,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[ESim, Object]
@@ -5004,14 +5198,32 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperator
 enum Windows.Networking.NetworkOperators.UiccAccessCondition python_type
     py UiccAccessCondition
     signature enum(Windows.Networking.NetworkOperators.UiccAccessCondition;i4)
+    constant ALWAYS_ALLOWED 0
+    constant PIN1 1
+    constant PIN2 2
+    constant PIN3 3
+    constant PIN4 4
+    constant ADMINISTRATIVE5 5
+    constant ADMINISTRATIVE6 6
+    constant NEVER_ALLOWED 7
 
 enum Windows.Networking.NetworkOperators.UiccAppKind python_type
     py UiccAppKind
     signature enum(Windows.Networking.NetworkOperators.UiccAppKind;i4)
+    constant UNKNOWN 0
+    constant MF 1
+    constant M_F_SIM 2
+    constant M_F_RUIM 3
+    constant U_SIM 4
+    constant C_SIM 5
+    constant I_SIM 6
 
 enum Windows.Networking.NetworkOperators.UiccAppRecordKind python_type
     py UiccAppRecordKind
     signature enum(Windows.Networking.NetworkOperators.UiccAppRecordKind;i4)
+    constant UNKNOWN 0
+    constant TRANSPARENT 1
+    constant RECORD_ORIENTED 2
 
 class Windows.Networking.NetworkOperators.UssdMessage python_type
     py UssdMessage
@@ -5055,6 +5267,12 @@ class Windows.Networking.NetworkOperators.UssdReply python_type
 enum Windows.Networking.NetworkOperators.UssdResultCode python_type
     py UssdResultCode
     signature enum(Windows.Networking.NetworkOperators.UssdResultCode;i4)
+    constant NO_ACTION_REQUIRED 0
+    constant ACTION_REQUIRED 1
+    constant TERMINATED 2
+    constant OTHER_LOCAL_CLIENT 3
+    constant OPERATION_NOT_SUPPORTED 4
+    constant NETWORK_TIMEOUT 5
 
 class Windows.Networking.NetworkOperators.UssdSession python_type
     py UssdSession

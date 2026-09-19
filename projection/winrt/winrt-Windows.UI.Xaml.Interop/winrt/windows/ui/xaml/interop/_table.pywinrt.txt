@@ -165,6 +165,11 @@ interface Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgsFactory
 enum Windows.UI.Xaml.Interop.NotifyCollectionChangedAction python_type
     py NotifyCollectionChangedAction
     signature enum(Windows.UI.Xaml.Interop.NotifyCollectionChangedAction;i4)
+    constant ADD 0
+    constant REMOVE 1
+    constant REPLACE 2
+    constant MOVE 3
+    constant RESET 4
 
 class Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs composable python_type
     py NotifyCollectionChangedEventArgs
@@ -210,6 +215,9 @@ delegate Windows.UI.Xaml.Interop.NotifyCollectionChangedEventHandler python_type
 enum Windows.UI.Xaml.Interop.TypeKind python_type
     py TypeKind
     signature enum(Windows.UI.Xaml.Interop.TypeKind;i4)
+    constant PRIMITIVE 0
+    constant METADATA 1
+    constant CUSTOM 2
 
 struct Windows.UI.Xaml.Interop.TypeName python_type
     py TypeName

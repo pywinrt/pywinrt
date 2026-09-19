@@ -1734,6 +1734,11 @@ class Windows.Devices.Printers.IppAttributeError python_type
 enum Windows.Devices.Printers.IppAttributeErrorReason python_type
     py IppAttributeErrorReason
     signature enum(Windows.Devices.Printers.IppAttributeErrorReason;i4)
+    constant REQUEST_ENTITY_TOO_LARGE 0
+    constant ATTRIBUTE_NOT_SUPPORTED 1
+    constant ATTRIBUTE_VALUES_NOT_SUPPORTED 2
+    constant ATTRIBUTE_NOT_SETTABLE 3
+    constant CONFLICTING_ATTRIBUTES 4
 
 class Windows.Devices.Printers.IppAttributeValue python_type
     py IppAttributeValue
@@ -1955,6 +1960,27 @@ class Windows.Devices.Printers.IppAttributeValue python_type
 enum Windows.Devices.Printers.IppAttributeValueKind python_type
     py IppAttributeValueKind
     signature enum(Windows.Devices.Printers.IppAttributeValueKind;i4)
+    constant UNSUPPORTED 0
+    constant UNKNOWN 1
+    constant NO_VALUE 2
+    constant INTEGER 3
+    constant BOOLEAN 4
+    constant ENUM 5
+    constant OCTET_STRING 6
+    constant DATE_TIME 7
+    constant RESOLUTION 8
+    constant RANGE_OF_INTEGER 9
+    constant COLLECTION 10
+    constant TEXT_WITH_LANGUAGE 11
+    constant NAME_WITH_LANGUAGE 12
+    constant TEXT_WITHOUT_LANGUAGE 13
+    constant NAME_WITHOUT_LANGUAGE 14
+    constant KEYWORD 15
+    constant URI 16
+    constant URI_SCHEMA 17
+    constant CHARSET 18
+    constant NATURAL_LANGUAGE 19
+    constant MIME_MEDIA_TYPE 20
 
 class Windows.Devices.Printers.IppIntegerRange python_type
     py IppIntegerRange
@@ -2057,6 +2083,9 @@ class Windows.Devices.Printers.IppPrintDevice python_type
 enum Windows.Devices.Printers.IppPrintDeviceKind python_type
     py IppPrintDeviceKind
     signature enum(Windows.Devices.Printers.IppPrintDeviceKind;i4)
+    constant PRINTER 0
+    constant FAX_OUT 1
+    constant VIRTUAL_PRINTER 2
 
 class Windows.Devices.Printers.IppResolution python_type
     py IppResolution
@@ -2083,6 +2112,8 @@ class Windows.Devices.Printers.IppResolution python_type
 enum Windows.Devices.Printers.IppResolutionUnit python_type
     py IppResolutionUnit
     signature enum(Windows.Devices.Printers.IppResolutionUnit;i4)
+    constant DOTS_PER_INCH 0
+    constant DOTS_PER_CENTIMETER 1
 
 class Windows.Devices.Printers.IppSetAttributesResult python_type
     py IppSetAttributesResult
@@ -2136,6 +2167,8 @@ class Windows.Devices.Printers.PageConfigurationSettings activatable python_type
 enum Windows.Devices.Printers.PageConfigurationSource python_type
     py PageConfigurationSource
     signature enum(Windows.Devices.Printers.PageConfigurationSource;i4)
+    constant PRINT_JOB_CONFIGURATION 0
+    constant PDL_CONTENT 1
 
 class Windows.Devices.Printers.PdlPassthroughProvider python_type
     py PdlPassthroughProvider
@@ -2271,6 +2304,10 @@ class Windows.Devices.Printers.VirtualPrinterInstallationResult python_type
 enum Windows.Devices.Printers.VirtualPrinterInstallationStatus python_type
     py VirtualPrinterInstallationStatus
     signature enum(Windows.Devices.Printers.VirtualPrinterInstallationStatus;i4)
+    constant INSTALLATION_SUCCEEDED 0
+    constant PRINTER_ALREADY_INSTALLED 1
+    constant PRINTER_INSTALLATION_ACCESS_DENIED 2
+    constant PRINTER_INSTALLATION_FAILED 3
 
 class Windows.Devices.Printers.VirtualPrinterManager static python_type
     py VirtualPrinterManager
@@ -2309,6 +2346,8 @@ class Windows.Devices.Printers.VirtualPrinterManager static python_type
 enum Windows.Devices.Printers.VirtualPrinterPreferredInputFormat python_type
     py VirtualPrinterPreferredInputFormat
     signature enum(Windows.Devices.Printers.VirtualPrinterPreferredInputFormat;i4)
+    constant OPEN_XPS 0
+    constant POST_SCRIPT 1
 
 class Windows.Devices.Printers.VirtualPrinterSupportedFormat python_type
     py VirtualPrinterSupportedFormat
