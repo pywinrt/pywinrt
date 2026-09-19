@@ -10,6 +10,9 @@ include src/implements.h
 include src/interp.h
 include src/members.h
 include src/module_state.h
+include src/numerics-statics.h
+include src/numerics-values.h
+include src/numerics.h
 include src/objects.h
 include src/protocols.h
 include src/pycollections.h

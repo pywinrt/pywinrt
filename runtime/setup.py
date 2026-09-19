@@ -61,6 +61,8 @@ setup(
                 "src/implements.cpp",
                 "src/interp.cpp",
                 "src/members.cpp",
+                "src/numerics-statics.cpp",
+                "src/numerics.cpp",
                 "src/objects.cpp",
                 "src/protocols.cpp",
                 "src/pycollections.cpp",

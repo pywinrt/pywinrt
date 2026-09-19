@@ -177,6 +177,23 @@ namespace py::interp
     }
 
     /**
+     * Keeps a copy of the method array a type is created with, which CPython
+     * requires to outlive the type the same way a getset array does.
+     *
+     * The array is already terminated when it arrives, because a caller may
+     * have appended to one that was.
+     */
+    PyMethodDef* keep_methods(projection& proj, std::vector<PyMethodDef>& defs)
+    {
+        proj.method_defs.push_back(std::make_unique<PyMethodDef[]>(defs.size()));
+
+        auto* const array = proj.method_defs.back().get();
+        std::copy(defs.begin(), defs.end(), array);
+
+        return array;
+    }
+
+    /**
      * Records which table record @p type was built from, so that a value of it
      * can be converted by a package that only names it.
      */
