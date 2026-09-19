@@ -48,13 +48,21 @@ Some additional files are also generated instead by:
 
     py .\scripts\generate-pyproject.py
 
+## Generating the C++/WinRT headers
+
+`winrt-runtime` and the eight interop modules are the only things here that are
+compiled, and they include C++/WinRT headers. Those are generated from the NuGet
+packages rather than committed, so this has to be run once before building them
+and again whenever `.config/_tools.json` changes:
+
+    py .\scripts\generate-cppwinrt.py
+
+It writes `_cppwinrt\windows-sdk` and `_cppwinrt\windows-app-sdk`, which is
+where CMake looks and where `CPPWINRT_PATH` should point for a `setup.py` build.
+
 ## Regenerating other upstream code
 
 Normally this is not needed unless we need to pull in changes from upstream.
-
-If the CppWinRT version is updated, run:
-
-    py .\scripts\generate-cppwinrt.py
 
 If the pythoncapi compat headers are updated, run:
 
@@ -100,9 +108,7 @@ To only build for a specific Python and target architecture:
 
     py .\scripts\build-bdist.py --only cp312-win_amd64
 
-A release also needs the source distributions. Those are built separately and
-require `winrt-sdk`, `winrt-Microsoft.UI.Xaml` and `winrt-WindowsAppSDK` to be
-installed first, since every package's `setup.py` imports them:
+A release also needs the source distributions:
 
     py .\scripts\build-sdist.py
 

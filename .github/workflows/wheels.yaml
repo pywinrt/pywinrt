@@ -15,24 +15,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements-sdist.txt
-      - name: Build winrt-sdk
-        run: pyproject-build --outdir wheelhouse projection/winrt-sdk
-      - name: Install winrt-sdk
-        run: |
-          $whl = (Get-ChildItem wheelhouse/winrt_sdk-*.whl | Select-Object -First 1).FullName
-          pip install --no-deps $whl
-      - name: Build winrt-Microsoft.UI.Xaml
-        run: pyproject-build --outdir wheelhouse projection/winrt-Microsoft.UI.Xaml
-      - name: Install winrt-Microsoft.UI.Xaml
-        run: |
-          $whl = (Get-ChildItem wheelhouse/winrt_microsoft_ui_xaml-*.whl | Select-Object -First 1).FullName
-          pip install --no-deps $whl
-      - name: Build winrt-WindowsAppSDK
-        run: pyproject-build --outdir wheelhouse projection/winrt-WindowsAppSDK
-      - name: Install winrt-WindowsAppSDK
-        run: |
-          $whl = (Get-ChildItem wheelhouse/winrt_WindowsAppSDK-*.whl | Select-Object -First 1).FullName
-          pip install --no-deps $whl
+      - name: install nuget packages
+        run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml -noTestWinRT
+      - name: generate C++/WinRT headers
+        run: python ./scripts/generate-cppwinrt.py
       - name: Build sdists
         run: python scripts/build-sdist.py
       - name: Upload wheels
@@ -61,7 +47,9 @@ jobs:
           python-version: '3.12'
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: install nuget packages
-        run: ./scripts/fetch-tools.ps1 -noCppWinRT -noWindowsSDK -noMicrosoftUiXaml -noTestWinRT
+        run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml -noTestWinRT
+      - name: generate C++/WinRT headers
+        run: python ./scripts/generate-cppwinrt.py
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip

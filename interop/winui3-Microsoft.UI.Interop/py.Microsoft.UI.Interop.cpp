@@ -5,7 +5,6 @@
 #include <pywinrt/base.h>
 
 #include <winrt/Microsoft.UI.Interop.h>
-#include <py.Microsoft.UI.h>
 
 // https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-microsoft.ui.interop/
 namespace py::cpp::Microsoft::UI::Interop
@@ -23,8 +22,15 @@ namespace py::cpp::Microsoft::UI::Interop
 
         try
         {
+            auto type = py::get_python_type("winui3.microsoft.ui.WindowId");
+            if (!type)
+            {
+                return nullptr;
+            }
+
             auto windowId = winrt::Microsoft::UI::GetWindowIdFromWindow(hwnd);
-            return py::converter<winrt::Microsoft::UI::WindowId>::convert(windowId);
+
+            return py::struct_to_python(type, &windowId);
         }
         catch (...)
         {
@@ -38,8 +44,18 @@ namespace py::cpp::Microsoft::UI::Interop
     {
         try
         {
-            auto windowId
-                = py::converter<winrt::Microsoft::UI::WindowId>::convert_to(arg);
+            auto type = py::get_python_type("winui3.microsoft.ui.WindowId");
+            if (!type)
+            {
+                return nullptr;
+            }
+
+            winrt::Microsoft::UI::WindowId windowId{};
+            if (!py::struct_from_python(type, arg, &windowId))
+            {
+                return nullptr;
+            }
+
             auto hwnd = winrt::Microsoft::UI::GetWindowFromWindowId(windowId);
             return PyLong_FromVoidPtr(static_cast<void*>(hwnd));
         }
@@ -63,8 +79,15 @@ namespace py::cpp::Microsoft::UI::Interop
 
         try
         {
+            auto type = py::get_python_type("winui3.microsoft.ui.DisplayId");
+            if (!type)
+            {
+                return nullptr;
+            }
+
             auto displayId = winrt::Microsoft::UI::GetDisplayIdFromMonitor(hmonitor);
-            return py::converter<winrt::Microsoft::UI::DisplayId>::convert(displayId);
+
+            return py::struct_to_python(type, &displayId);
         }
         catch (...)
         {
@@ -78,8 +101,18 @@ namespace py::cpp::Microsoft::UI::Interop
     {
         try
         {
-            auto displayId
-                = py::converter<winrt::Microsoft::UI::DisplayId>::convert_to(arg);
+            auto type = py::get_python_type("winui3.microsoft.ui.DisplayId");
+            if (!type)
+            {
+                return nullptr;
+            }
+
+            winrt::Microsoft::UI::DisplayId displayId{};
+            if (!py::struct_from_python(type, arg, &displayId))
+            {
+                return nullptr;
+            }
+
             auto hmonitor = winrt::Microsoft::UI::GetMonitorFromDisplayId(displayId);
             return PyLong_FromVoidPtr(static_cast<void*>(hmonitor));
         }
@@ -103,8 +136,15 @@ namespace py::cpp::Microsoft::UI::Interop
 
         try
         {
+            auto type = py::get_python_type("winui3.microsoft.ui.IconId");
+            if (!type)
+            {
+                return nullptr;
+            }
+
             auto iconId = winrt::Microsoft::UI::GetIconIdFromIcon(hicon);
-            return py::converter<winrt::Microsoft::UI::IconId>::convert(iconId);
+
+            return py::struct_to_python(type, &iconId);
         }
         catch (...)
         {
@@ -118,7 +158,18 @@ namespace py::cpp::Microsoft::UI::Interop
     {
         try
         {
-            auto iconId = py::converter<winrt::Microsoft::UI::IconId>::convert_to(arg);
+            auto type = py::get_python_type("winui3.microsoft.ui.IconId");
+            if (!type)
+            {
+                return nullptr;
+            }
+
+            winrt::Microsoft::UI::IconId iconId{};
+            if (!py::struct_from_python(type, arg, &iconId))
+            {
+                return nullptr;
+            }
+
             auto hicon = winrt::Microsoft::UI::GetIconFromIconId(iconId);
             return PyLong_FromVoidPtr(static_cast<void*>(hicon));
         }
