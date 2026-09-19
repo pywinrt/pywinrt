@@ -1042,7 +1042,7 @@ class WiFiOnDemandHotspotUpdateMetadataTrigger(winrt.system.Object, IBackgroundT
 @typing.final
 class _IBackgroundCondition: ...
 
-class IBackgroundCondition(winrt._winrt.IInspectable):  # type: ignore[misc]
+class IBackgroundCondition(winrt._winrt.IInspectable):
     ...
 
 @typing.final
@@ -1157,7 +1157,7 @@ class IBackgroundTaskRegistration3(IBackgroundTaskRegistration, winrt._winrt.IIn
 @typing.final
 class _IBackgroundTrigger: ...
 
-class IBackgroundTrigger(winrt._winrt.IInspectable):  # type: ignore[misc]
+class IBackgroundTrigger(winrt._winrt.IInspectable):
     ...
 
 BackgroundTaskCanceledEventHandler: typing.TypeAlias = typing.Callable[[IBackgroundTaskInstance, BackgroundTaskCancellationReason], None]

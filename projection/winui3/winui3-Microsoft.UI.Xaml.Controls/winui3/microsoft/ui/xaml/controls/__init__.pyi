@@ -9239,7 +9239,7 @@ class MenuFlyout(microsoft_ui_xaml_controls_primitives.FlyoutBase, metaclass=Men
     def __new__(cls) -> typing.Self: ...
     @typing.final  # type: ignore[misc]
     # System.Void Microsoft.UI.Xaml.Controls.MenuFlyout::ShowAt(Microsoft.UI.Xaml.UIElement,Windows.Foundation.Point)
-    def show_at(self, target_element: microsoft_ui_xaml.UIElement, point: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single], /) -> None: ...  # type: ignore[misc,override]
+    def show_at(self, target_element: microsoft_ui_xaml.UIElement, point: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single], /) -> None: ...  # type: ignore[override]
     # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.MenuFlyout::get_MenuFlyoutPresenterStyle()
     @_property
     def menu_flyout_presenter_style(self) -> microsoft_ui_xaml.Style: ...

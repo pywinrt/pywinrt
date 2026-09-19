@@ -941,7 +941,7 @@ class ILearningModelFeatureValue(winrt._winrt.IInspectable):
 @typing.final
 class _ILearningModelOperatorProvider: ...
 
-class ILearningModelOperatorProvider(winrt._winrt.IInspectable):  # type: ignore[misc]
+class ILearningModelOperatorProvider(winrt._winrt.IInspectable):
     ...
 
 @typing.final
