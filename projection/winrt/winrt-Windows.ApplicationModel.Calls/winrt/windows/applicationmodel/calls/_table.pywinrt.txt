@@ -331,7 +331,7 @@ interface Windows.Foundation.IAsyncOperation<System.Guid> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Guid> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -360,7 +360,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -389,7 +389,7 @@ interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -418,7 +418,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.Phon
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Calls.PhoneCallHistoryEntry> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -447,7 +447,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.Phon
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Calls.PhoneCallHistoryStore> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -476,7 +476,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.Phon
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Calls.PhoneCallInfo> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -505,7 +505,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.Phon
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Calls.PhoneCallOperationStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -534,7 +534,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.Phon
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Calls.PhoneCallStore> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -563,7 +563,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.Phon
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Calls.PhoneCallVideoCapabilities> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -592,7 +592,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.Phon
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Calls.PhoneCallsResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -621,7 +621,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.Phon
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Calls.PhoneLine> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -650,7 +650,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.Phon
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Calls.PhoneLineDialResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -679,7 +679,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.Voip
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -708,7 +708,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceA
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Enumeration.DeviceAccessStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -737,7 +737,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Calls.PhoneCallHistoryEntry>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1450,15 +1450,15 @@ class Windows.ApplicationModel.Calls.LockScreenCallUI python_type
     event closed
         add add_Closed slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.LockScreenCallUI,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event end_requested
         add add_EndRequested slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.LockScreenCallUI,Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EndRequested slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method dismiss
         method Dismiss slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=0 reverse=16
 
@@ -1533,21 +1533,21 @@ class Windows.ApplicationModel.Calls.PhoneCall python_type
     event audio_device_changed
         add add_AudioDeviceChanged slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneCall,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AudioDeviceChanged slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_muted_changed
         add add_IsMutedChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneCall,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsMutedChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event status_changed
         add add_StatusChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneCall,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method accept_incoming
         method AcceptIncoming slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=237
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallOperationStatus return
@@ -1939,9 +1939,9 @@ class Windows.ApplicationModel.Calls.PhoneCallManager static python_type
     event call_state_changed static
         add add_CallStateChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CallStateChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method request_store_async static
         method RequestStoreAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=4 reverse=141 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallStore> return
@@ -2098,9 +2098,9 @@ class Windows.ApplicationModel.Calls.PhoneLine python_type
     event line_changed
         add add_LineChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLine,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LineChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method dial
         method Dial slot=21 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=51 reverse=233
             in string name=number
@@ -2216,15 +2216,15 @@ class Windows.ApplicationModel.Calls.PhoneLineTransportDevice python_type
     event audio_routing_status_changed
         add add_AudioRoutingStatusChanged slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineTransportDevice,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AudioRoutingStatusChanged slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event in_band_ringing_enabled_changed
         add add_InBandRingingEnabledChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineTransportDevice,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_InBandRingingEnabledChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method connect
         method Connect slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4 reverse=186
             out boolean return
@@ -2269,33 +2269,33 @@ class Windows.ApplicationModel.Calls.PhoneLineWatcher python_type
     event enumeration_completed
         add add_EnumerationCompleted slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event line_added
         add add_LineAdded slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineWatcher,Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LineAdded slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event line_removed
         add add_LineRemoved slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineWatcher,Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LineRemoved slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event line_updated
         add add_LineUpdated slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineWatcher,Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LineUpdated slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
         add add_Stopped slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Stopped slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=0 reverse=16
     method stop
@@ -2498,9 +2498,9 @@ class Windows.ApplicationModel.Calls.VoipCallCoordinator python_type
     event mute_state_changed
         add add_MuteStateChanged slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.VoipCallCoordinator,Windows.ApplicationModel.Calls.MuteChangeEventArgs> name=muteChangeHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MuteStateChanged slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method cancel_upgrade
         method CancelUpgrade slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=33 reverse=208
             in guid name=callUpgradeGuid
@@ -2641,33 +2641,33 @@ class Windows.ApplicationModel.Calls.VoipPhoneCall python_type
     event answer_requested
         add add_AnswerRequested slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.VoipPhoneCall,Windows.ApplicationModel.Calls.CallAnswerEventArgs> name=acceptHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AnswerRequested slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event end_requested
         add add_EndRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.VoipPhoneCall,Windows.ApplicationModel.Calls.CallStateChangeEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EndRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event hold_requested
         add add_HoldRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.VoipPhoneCall,Windows.ApplicationModel.Calls.CallStateChangeEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HoldRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event reject_requested
         add add_RejectRequested slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.VoipPhoneCall,Windows.ApplicationModel.Calls.CallRejectEventArgs> name=rejectHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RejectRequested slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event resume_requested
         add add_ResumeRequested slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.VoipPhoneCall,Windows.ApplicationModel.Calls.CallStateChangeEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ResumeRequested slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_associated_call_control_device
         method AddAssociatedCallControlDevice slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4 reverse=62
             in string name=deviceId
@@ -2746,6 +2746,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

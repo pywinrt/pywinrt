@@ -287,6 +287,19 @@ namespace py::interp
 
                 break;
             case table::category::struct_:
+                // A struct the projection spells as one integer - an HRESULT,
+                // an event token - is a subclass of int and has no fields to
+                // lay out.
+                if (record.flags() & table::type_flags::integer)
+                {
+                    if (!make_integer_type(proj, entry))
+                    {
+                        return nullptr;
+                    }
+
+                    break;
+                }
+
                 if (!make_struct_type(proj, entry, record))
                 {
                     return nullptr;

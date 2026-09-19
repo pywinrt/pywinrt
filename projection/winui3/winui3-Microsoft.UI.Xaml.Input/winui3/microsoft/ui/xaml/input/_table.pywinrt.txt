@@ -55,9 +55,9 @@ class Microsoft.UI.Xaml.Input.AccessKeyManager python_type
     event is_display_mode_enabled_changed static
         add add_IsDisplayModeEnabledChanged slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.IAccessKeyManagerStatics shape=51 reverse=100 static
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsDisplayModeEnabledChanged slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Input.IAccessKeyManagerStatics shape=26 reverse=134 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method enter_display_mode static
         method EnterDisplayMode slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Input.IAccessKeyManagerStatics2 shape=4 reverse=22 static
             in class type=Microsoft.UI.Xaml.XamlRoot name=XamlRoot
@@ -264,27 +264,27 @@ class Microsoft.UI.Xaml.Input.FocusManager python_type
     event getting_focus static
         add add_GettingFocus slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.IFocusManagerStatics shape=51 reverse=124 static
             in delegate type=Windows.Foundation.EventHandler<Microsoft.UI.Xaml.Input.GettingFocusEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GettingFocus slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Input.IFocusManagerStatics shape=26 reverse=156 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event got_focus static
         add add_GotFocus slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.IFocusManagerStatics shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<Microsoft.UI.Xaml.Input.FocusManagerGotFocusEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GotFocus slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Input.IFocusManagerStatics shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event losing_focus static
         add add_LosingFocus slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.IFocusManagerStatics shape=51 reverse=163 static
             in delegate type=Windows.Foundation.EventHandler<Microsoft.UI.Xaml.Input.LosingFocusEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LosingFocus slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Input.IFocusManagerStatics shape=26 reverse=181 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event lost_focus static
         add add_LostFocus slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.IFocusManagerStatics shape=51 reverse=65 static
             in delegate type=Windows.Foundation.EventHandler<Microsoft.UI.Xaml.Input.FocusManagerLostFocusEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LostFocus slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Input.IFocusManagerStatics shape=26 reverse=110 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_first_focusable_element static
         method FindFirstFocusableElement slot=19 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.IFocusManagerStatics shape=51 reverse=224 static
             in class type=Microsoft.UI.Xaml.DependencyObject name=searchScope
@@ -485,7 +485,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.UI.Xaml.Input.FocusMoveme
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.UI.Xaml.Input.FocusMovementResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -513,9 +513,9 @@ interface Microsoft.UI.Xaml.Input.ICommand python_type
     event can_execute_changed
         add add_CanExecuteChanged slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.ICommand shape=51 reverse=24
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CanExecuteChanged slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Input.ICommand shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method can_execute
         method CanExecute slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.ICommand shape=51 reverse=65
             in object name=parameter
@@ -1153,9 +1153,9 @@ class Microsoft.UI.Xaml.Input.KeyboardAccelerator composable python_type
     event invoked
         add add_Invoked slot=14 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.IKeyboardAccelerator shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Input.KeyboardAccelerator,Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Invoked slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Input.IKeyboardAccelerator shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs python_type
     py KeyboardAcceleratorInvokedEventArgs
@@ -1786,21 +1786,21 @@ class Microsoft.UI.Xaml.Input.XamlUICommand composable python_type
     event can_execute_requested
         add add_CanExecuteRequested slot=19 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.IXamlUICommand shape=51 reverse=224
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Input.XamlUICommand,Microsoft.UI.Xaml.Input.CanExecuteRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CanExecuteRequested slot=20 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Input.IXamlUICommand shape=26 reverse=399
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event execute_requested
         add add_ExecuteRequested slot=17 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.IXamlUICommand shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Input.XamlUICommand,Microsoft.UI.Xaml.Input.ExecuteRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ExecuteRequested slot=18 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Input.IXamlUICommand shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event can_execute_changed
         add add_CanExecuteChanged slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.ICommand shape=51 reverse=24
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CanExecuteChanged slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Input.ICommand shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method can_execute
         method CanExecute slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Input.ICommand shape=51 reverse=65
             in object name=parameter
@@ -1860,6 +1860,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

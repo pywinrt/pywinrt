@@ -261,207 +261,207 @@ class Microsoft.Web.WebView2.Core.CoreWebView2 python_type
     event basic_authentication_requested
         add add_BasicAuthenticationRequested slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_10 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BasicAuthenticationRequested slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_10 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event context_menu_requested
         add add_ContextMenuRequested slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_11 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContextMenuRequested slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_11 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event status_bar_text_changed
         add add_StatusBarTextChanged slot=7 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_12 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusBarTextChanged slot=8 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_12 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event server_certificate_error_detected
         add add_ServerCertificateErrorDetected slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_14 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ServerCertificateErrorDetected slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_14 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event favicon_changed
         add add_FaviconChanged slot=7 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_15 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FaviconChanged slot=8 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_15 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event launching_external_uri_scheme
         add add_LaunchingExternalUriScheme slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_18 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LaunchingExternalUriScheme slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_18 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event dom_content_loaded
         add add_DOMContentLoaded slot=10 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_2 shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DOMContentLoaded slot=11 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_2 shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event web_resource_response_received
         add add_WebResourceResponseReceived slot=8 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_2 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_WebResourceResponseReceived slot=9 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_2 shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event notification_received
         add add_NotificationReceived slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_24 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2NotificationReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NotificationReceived slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_24 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event save_as_ui_showing
         add add_SaveAsUIShowing slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_25 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2SaveAsUIShowingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SaveAsUIShowing slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_25 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event save_file_security_check_starting
         add add_SaveFileSecurityCheckStarting slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_26 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2SaveFileSecurityCheckStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SaveFileSecurityCheckStarting slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_26 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event screen_capture_starting
         add add_ScreenCaptureStarting slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_27 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2ScreenCaptureStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ScreenCaptureStarting slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_27 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event download_starting
         add add_DownloadStarting slot=8 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_4 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DownloadStarting slot=9 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_4 shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event frame_created
         add add_FrameCreated slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_4 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2FrameCreatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameCreated slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_4 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event client_certificate_requested
         add add_ClientCertificateRequested slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_5 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ClientCertificateRequested slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_5 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_document_playing_audio_changed
         add add_IsDocumentPlayingAudioChanged slot=11 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_8 shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsDocumentPlayingAudioChanged slot=12 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_8 shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_muted_changed
         add add_IsMutedChanged slot=9 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_8 shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsMutedChanged slot=10 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_8 shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_default_download_dialog_open_changed
         add add_IsDefaultDownloadDialogOpenChanged slot=11 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_9 shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsDefaultDownloadDialogOpenChanged slot=12 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_9 shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event contains_full_screen_element_changed
         add add_ContainsFullScreenElementChanged slot=39 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=308
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContainsFullScreenElementChanged slot=40 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=314
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event content_loading
         add add_ContentLoading slot=15 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContentLoading slot=16 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event document_title_changed
         add add_DocumentTitleChanged slot=37 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=300
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DocumentTitleChanged slot=38 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=305
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event frame_navigation_completed
         add add_FrameNavigationCompleted slot=25 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=253
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameNavigationCompleted slot=26 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=257
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event frame_navigation_starting
         add add_FrameNavigationStarting slot=23 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=243
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameNavigationStarting slot=24 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event history_changed
         add add_HistoryChanged slot=19 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=224
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HistoryChanged slot=20 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=399
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigation_completed
         add add_NavigationCompleted slot=21 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=233
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NavigationCompleted slot=22 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=400
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigation_starting
         add add_NavigationStarting slot=13 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NavigationStarting slot=14 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event new_window_requested
         add add_NewWindowRequested slot=35 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=293
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NewWindowRequested slot=36 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=298
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event permission_requested
         add add_PermissionRequested slot=29 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=267
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PermissionRequested slot=30 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=272
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event process_failed
         add add_ProcessFailed slot=31 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=274
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ProcessFailed slot=32 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=283
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event script_dialog_opening
         add add_ScriptDialogOpening slot=27 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=260
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ScriptDialogOpening slot=28 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_changed
         add add_SourceChanged slot=17 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceChanged slot=18 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event web_message_received
         add add_WebMessageReceived slot=33 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=286
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_WebMessageReceived slot=34 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=291
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event web_resource_requested
         add add_WebResourceRequested slot=41 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=317
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_WebResourceRequested slot=42 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=321
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event window_close_requested
         add add_WindowCloseRequested slot=43 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=323
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_WindowCloseRequested slot=44 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=26 reverse=328
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_host_object_to_script
         method AddHostObjectToScript slot=59 inputs=2 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2 shape=51 reverse=379
             in string name=name
@@ -863,15 +863,15 @@ class Microsoft.Web.WebView2.Core.CoreWebView2CompositionController python_type
     event non_client_region_changed
         add add_NonClientRegionChanged slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController4 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2CompositionController,Microsoft.Web.WebView2.Core.CoreWebView2NonClientRegionChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NonClientRegionChanged slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController4 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event cursor_changed
         add add_CursorChanged slot=8 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2CompositionController,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CursorChanged slot=9 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method drag_enter
         method DragEnter slot=13 inputs=2 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController shape=117 reverse=175
             in class type=Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo name=dragInfo
@@ -958,9 +958,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem python_type
     event custom_item_selected
         add add_CustomItemSelected slot=17 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ContextMenuItem shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CustomItemSelected slot=18 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ContextMenuItem shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItemKind python_type
     py CoreWebView2ContextMenuItemKind
@@ -1107,39 +1107,39 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Controller composable python_type
     event rasterization_scale_changed
         add add_RasterizationScaleChanged slot=12 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller3 shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Controller,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RasterizationScaleChanged slot=13 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller3 shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event accelerator_key_pressed
         add add_AcceleratorKeyPressed slot=23 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller shape=51 reverse=243
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Controller,Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AcceleratorKeyPressed slot=24 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event got_focus
         add add_GotFocus slot=19 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller shape=51 reverse=224
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Controller,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GotFocus slot=20 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller shape=26 reverse=399
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event lost_focus
         add add_LostFocus slot=21 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller shape=51 reverse=233
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Controller,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LostFocus slot=22 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller shape=26 reverse=400
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event move_focus_requested
         add add_MoveFocusRequested slot=17 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Controller,Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MoveFocusRequested slot=18 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event zoom_factor_changed
         add add_ZoomFactorChanged slot=15 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Controller,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ZoomFactorChanged slot=16 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=28 inputs=0 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Controller shape=0
     method move_focus
@@ -1343,9 +1343,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver pyth
     event dev_tools_protocol_event_received
         add add_DevToolsProtocolEventReceived slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DevToolsProtocolEventReceiver shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DevToolsProtocolEventReceived slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DevToolsProtocolEventReceiver shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2DownloadInterruptReason python_type
     py CoreWebView2DownloadInterruptReason
@@ -1389,21 +1389,21 @@ class Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation python_type
     event bytes_received_changed
         add add_BytesReceivedChanged slot=16 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DownloadOperation shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BytesReceivedChanged slot=17 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DownloadOperation shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event estimated_end_time_changed
         add add_EstimatedEndTimeChanged slot=18 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DownloadOperation shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EstimatedEndTimeChanged slot=19 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DownloadOperation shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event state_changed
         add add_StateChanged slot=20 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DownloadOperation shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=21 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DownloadOperation shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method cancel
         method Cancel slot=22 inputs=0 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DownloadOperation shape=0 reverse=235
     method pause
@@ -1475,21 +1475,21 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Environment python_type
     event browser_process_exited
         add add_BrowserProcessExited slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Environment5 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2BrowserProcessExitedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BrowserProcessExited slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Environment5 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event process_infos_changed
         add add_ProcessInfosChanged slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Environment8 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Environment,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ProcessInfosChanged slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Environment8 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event new_browser_version_available
         add add_NewBrowserVersionAvailable slot=7 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Environment shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Environment,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NewBrowserVersionAvailable slot=8 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Environment shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method compare_browser_version_string static
         method CompareBrowserVersionString slot=10 inputs=2 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2EnvironmentStatics shape=117 reverse=125 static
             in string name=browserVersionString1
@@ -1737,63 +1737,63 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Frame python_type
     event content_loading
         add add_ContentLoading slot=8 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame2 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContentLoading slot=9 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame2 shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event dom_content_loaded
         add add_DOMContentLoaded slot=12 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame2 shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DOMContentLoaded slot=13 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame2 shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigation_completed
         add add_NavigationCompleted slot=10 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame2 shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NavigationCompleted slot=11 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame2 shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigation_starting
         add add_NavigationStarting slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NavigationStarting slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event web_message_received
         add add_WebMessageReceived slot=14 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame2 shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_WebMessageReceived slot=15 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame2 shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event permission_requested
         add add_PermissionRequested slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame3 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PermissionRequested slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame3 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event screen_capture_starting
         add add_ScreenCaptureStarting slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame6 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2ScreenCaptureStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ScreenCaptureStarting slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame6 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event frame_created
         add add_FrameCreated slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame7 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2FrameCreatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameCreated slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame7 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event destroyed
         add add_Destroyed slot=9 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Destroyed slot=10 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event name_changed
         add add_NameChanged slot=7 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NameChanged slot=8 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method execute_script_async
         method ExecuteScriptAsync slot=16 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame2 shape=51 reverse=203
             in string name=javaScript
@@ -2143,9 +2143,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Notification python_type
     event close_requested
         add add_CloseRequested slot=18 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Notification shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Notification,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CloseRequested slot=19 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Notification shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method report_clicked
         method ReportClicked slot=21 inputs=0 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Notification shape=0 reverse=231
     method report_closed
@@ -2656,9 +2656,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Profile python_type
     event deleted
         add add_Deleted slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Profile8 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Profile,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Deleted slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Profile8 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_browser_extension_async
         method AddBrowserExtensionAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Profile7 shape=51 reverse=24
             in string name=extensionFolderPath
@@ -3214,7 +3214,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Web.WebView2.Core.CoreWeb
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3243,7 +3243,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Web.WebView2.Core.CoreWeb
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Web.WebView2.Core.CoreWebView2CompositionController> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3272,7 +3272,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Web.WebView2.Core.CoreWeb
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Web.WebView2.Core.CoreWebView2Controller> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3301,7 +3301,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Web.WebView2.Core.CoreWeb
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Web.WebView2.Core.CoreWebView2Environment> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3330,7 +3330,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Web.WebView2.Core.CoreWeb
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Web.WebView2.Core.CoreWebView2ExecuteScriptResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3359,7 +3359,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Web.WebView2.Core.CoreWeb
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Web.WebView2.Core.CoreWebView2PrintStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3388,7 +3388,7 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Web.WebView2.Core.CoreWeb
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Web.WebView2.Core.CoreWebView2SaveAsUIResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3417,7 +3417,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3446,7 +3446,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3475,7 +3475,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3504,7 +3504,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2Cookie>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3533,7 +3533,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3562,7 +3562,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3591,7 +3591,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAcce
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStream> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -5682,6 +5682,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

@@ -471,27 +471,27 @@ class Windows.Graphics.Holographic.HolographicSpace python_type
     event camera_added
         add add_CameraAdded slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Holographic.HolographicSpace,Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CameraAdded slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicSpace shape=26 reverse=110
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event camera_removed
         add add_CameraRemoved slot=10 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Holographic.HolographicSpace,Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CameraRemoved slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicSpace shape=26 reverse=156
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event user_presence_changed
         add add_UserPresenceChanged slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace2 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Holographic.HolographicSpace,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UserPresenceChanged slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicSpace2 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_available_changed static
         add add_IsAvailableChanged slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpaceStatics2 shape=51 reverse=65 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsAvailableChanged slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Holographic.IHolographicSpaceStatics2 shape=26 reverse=110 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_for_core_window static
         method CreateForCoreWindow slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpaceStatics shape=51 reverse=24 static
             in class type=Windows.UI.Core.CoreWindow name=window
@@ -1527,6 +1527,9 @@ class Windows.Foundation.Deferral external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable

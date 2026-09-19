@@ -148,9 +148,9 @@ class Windows.Networking.Sockets.DatagramSocket activatable python_type closeabl
     event message_received
         add add_MessageReceived slot=16 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.DatagramSocket,Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MessageReceived slot=17 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IDatagramSocket shape=26 reverse=215
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method bind_endpoint_async
         method BindEndpointAsync slot=12 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IDatagramSocket shape=117 reverse=164
             in class type=Windows.Networking.HostName name=localHostName
@@ -301,7 +301,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -330,7 +330,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IOutputStre
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IOutputStream> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -365,7 +365,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UI
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -973,9 +973,9 @@ interface Windows.Networking.Sockets.IWebSocket python_type closeable
     event closed
         add add_Closed slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.IWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=26 reverse=134
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
         method Close slot=11 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=144
@@ -1114,21 +1114,21 @@ class Windows.Networking.Sockets.MessageWebSocket activatable python_type closea
     event message_received
         add add_MessageReceived slot=8 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocket shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.MessageWebSocket,Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MessageReceived slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IMessageWebSocket shape=26 reverse=110
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event closed
         add add_Closed slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.IWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=26 reverse=134
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event server_custom_validation_requested
         add add_ServerCustomValidationRequested slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IMessageWebSocket2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.MessageWebSocket,Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ServerCustomValidationRequested slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IMessageWebSocket2 shape=26 reverse=53
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
         method Close slot=11 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=144
@@ -1286,15 +1286,15 @@ class Windows.Networking.Sockets.ServerMessageWebSocket python_type closeable
     event closed
         add add_Closed slot=11 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.ServerMessageWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=12 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event message_received
         add add_MessageReceived slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.ServerMessageWebSocket,Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MessageReceived slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
         method Close slot=13 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IServerMessageWebSocket shape=51 reverse=174
@@ -1345,9 +1345,9 @@ class Windows.Networking.Sockets.ServerStreamWebSocket python_type closeable
     event closed
         add add_Closed slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IServerStreamWebSocket shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.ServerStreamWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IServerStreamWebSocket shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
         method Close slot=11 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IServerStreamWebSocket shape=51 reverse=144
@@ -1672,9 +1672,9 @@ class Windows.Networking.Sockets.StreamSocketListener activatable python_type cl
     event connection_received
         add add_ConnectionReceived slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListener shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.StreamSocketListener,Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ConnectionReceived slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamSocketListener shape=26 reverse=156
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method bind_endpoint_async
         method BindEndpointAsync slot=9 inputs=2 outputs=1 declaring=Windows.Networking.Sockets.IStreamSocketListener shape=117 reverse=101
             in class type=Windows.Networking.HostName name=localHostName
@@ -1787,15 +1787,15 @@ class Windows.Networking.Sockets.StreamWebSocket activatable python_type closeab
     event closed
         add add_Closed slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.IWebSocket,Windows.Networking.Sockets.WebSocketClosedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=26 reverse=134
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event server_custom_validation_requested
         add add_ServerCustomValidationRequested slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Sockets.IStreamWebSocket2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Sockets.StreamWebSocket,Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ServerCustomValidationRequested slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Sockets.IStreamWebSocket2 shape=26 reverse=53
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
         method Close slot=11 inputs=2 outputs=0 declaring=Windows.Networking.Sockets.IWebSocket shape=51 reverse=144
@@ -2084,6 +2084,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

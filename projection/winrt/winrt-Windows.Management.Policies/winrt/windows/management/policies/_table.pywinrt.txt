@@ -49,9 +49,9 @@ class Windows.Management.Policies.NamedPolicyData python_type
     event changed
         add add_Changed slot=17 inputs=1 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Policies.NamedPolicyData,System.Object> name=changedHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Changed slot=18 inputs=1 outputs=0 declaring=Windows.Management.Policies.INamedPolicyData shape=26 reverse=398
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_binary
         method GetBinary slot=13 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4 reverse=173
             out interface type=Windows.Storage.Streams.IBuffer return
@@ -86,6 +86,9 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Management.Policies.NamedP
 
 class System.Object external
     py winrt.system.Object
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler

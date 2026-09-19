@@ -261,7 +261,7 @@ interface Windows.Foundation.IAsyncActionWithProgress<Windows.Web.Syndication.Tr
             in delegate type=Windows.Foundation.AsyncActionWithProgressCompletedHandler<Windows.Web.Syndication.TransferProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -295,7 +295,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IInputStream,Windows.Web.Syndication.RetrievalProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -330,7 +330,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.AtomPub.Ser
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.AtomPub.ServiceDocument,Windows.Web.Syndication.RetrievalProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -365,7 +365,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -400,7 +400,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.RetrievalProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -435,7 +435,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.TransferProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1088,6 +1088,9 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external 
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncActionWithProgress external parameterized
     py winrt.windows.foundation._IAsyncActionWithProgress

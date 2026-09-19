@@ -24,9 +24,9 @@ class Windows.ApplicationModel.Contacts.Provider.ContactPickerUI python_type
     event contact_removed
         add add_ContactRemoved slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.Provider.ContactPickerUI,Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContactRemoved slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_contact
         method AddContact slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2 shape=51 reverse=24
             in class type=Windows.ApplicationModel.Contacts.Contact name=contact
@@ -252,6 +252,9 @@ enum Windows.ApplicationModel.Contacts.ContactFieldType external
 
 enum Windows.ApplicationModel.Contacts.ContactSelectionMode external
     py winrt.windows.applicationmodel.contacts.ContactSelectionMode
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler

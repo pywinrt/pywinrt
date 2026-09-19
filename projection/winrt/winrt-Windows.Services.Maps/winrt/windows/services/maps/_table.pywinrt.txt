@@ -56,7 +56,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapLocationFi
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Maps.MapLocationFinderResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -85,7 +85,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Services.Maps.MapRouteFinde
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Services.Maps.MapRouteFinderResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1340,6 +1340,9 @@ enum Windows.Foundation.AsyncStatus external
 
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

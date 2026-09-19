@@ -148,7 +148,7 @@ class Windows.UI.Xaml.Navigation.NavigationFailedEventArgs python_type
             in boolean name=value
     property exception
         get get_Exception slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property source_page_type
         get get_SourcePageType slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4 reverse=99
             out struct type=Windows.UI.Xaml.Interop.TypeName return
@@ -201,6 +201,9 @@ class Windows.UI.Xaml.Navigation.PageStackEntry python_type
     property source_page_type_property static
         get get_SourcePageTypeProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IPageStackEntryStatics shape=4 reverse=22 static
             out class type=Windows.UI.Xaml.DependencyProperty return
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri

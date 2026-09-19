@@ -122,7 +122,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMap
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,System.String>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -506,9 +506,9 @@ class Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings static pyth
     event collection_level_changed static
         add add_CollectionLevelChanged slot=7 inputs=1 outputs=1 declaring=Windows.System.Profile.IPlatformDiagnosticsAndUsageDataSettingsStatics shape=51 reverse=44 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CollectionLevelChanged slot=8 inputs=1 outputs=0 declaring=Windows.System.Profile.IPlatformDiagnosticsAndUsageDataSettingsStatics shape=26 reverse=82 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method can_collect_diagnostics static
         method CanCollectDiagnostics slot=9 inputs=1 outputs=1 declaring=Windows.System.Profile.IPlatformDiagnosticsAndUsageDataSettingsStatics shape=51 reverse=100 static
             in enum32 type=Windows.System.Profile.PlatformDataCollectionLevel name=level
@@ -544,9 +544,9 @@ class Windows.System.Profile.SmartAppControlPolicy static python_type
     event changed static
         add add_Changed slot=7 inputs=1 outputs=1 declaring=Windows.System.Profile.ISmartAppControlPolicyStatics shape=51 reverse=44 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Changed slot=8 inputs=1 outputs=0 declaring=Windows.System.Profile.ISmartAppControlPolicyStatics shape=26 reverse=82 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.System.Profile.SystemIdentification static python_type
     py SystemIdentification
@@ -588,9 +588,9 @@ class Windows.System.Profile.SystemSetupInfo static python_type
     event out_of_box_experience_state_changed static
         add add_OutOfBoxExperienceStateChanged slot=7 inputs=1 outputs=1 declaring=Windows.System.Profile.ISystemSetupInfoStatics shape=51 reverse=44 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OutOfBoxExperienceStateChanged slot=8 inputs=1 outputs=0 declaring=Windows.System.Profile.ISystemSetupInfoStatics shape=26 reverse=82 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.System.Profile.UnsupportedAppRequirement python_type
     py UnsupportedAppRequirement
@@ -626,9 +626,9 @@ class Windows.System.Profile.WindowsIntegrityPolicy static python_type
     event policy_changed static
         add add_PolicyChanged slot=10 inputs=1 outputs=1 declaring=Windows.System.Profile.IWindowsIntegrityPolicyStatics shape=51 reverse=124 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PolicyChanged slot=11 inputs=1 outputs=0 declaring=Windows.System.Profile.IWindowsIntegrityPolicyStatics shape=26 reverse=156 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class System.Object external
     py winrt.system.Object
@@ -646,6 +646,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

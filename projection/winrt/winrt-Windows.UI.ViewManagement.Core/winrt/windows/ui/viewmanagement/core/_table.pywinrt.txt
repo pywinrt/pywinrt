@@ -22,15 +22,15 @@ class Windows.UI.ViewManagement.Core.CoreFrameworkInputView python_type
     event occlusions_changed
         add add_OcclusionsChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreFrameworkInputView shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.Core.CoreFrameworkInputView,Windows.UI.ViewManagement.Core.CoreFrameworkInputViewOcclusionsChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OcclusionsChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.Core.ICoreFrameworkInputView shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event primary_view_animation_starting
         add add_PrimaryViewAnimationStarting slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreFrameworkInputView shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.Core.CoreFrameworkInputView,Windows.UI.ViewManagement.Core.CoreFrameworkInputViewAnimationStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PrimaryViewAnimationStarting slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.Core.ICoreFrameworkInputView shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
         method GetForCurrentView slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreFrameworkInputViewStatics shape=4 reverse=43 static
             out class type=Windows.UI.ViewManagement.Core.CoreFrameworkInputView return
@@ -80,45 +80,45 @@ class Windows.UI.ViewManagement.Core.CoreInputView python_type
     event occlusions_changed
         add add_OcclusionsChanged slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreInputView shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.Core.CoreInputView,Windows.UI.ViewManagement.Core.CoreInputViewOcclusionsChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OcclusionsChanged slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.Core.ICoreInputView shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event x_y_focus_transferred_to_primary_view
         add add_XYFocusTransferredToPrimaryView slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreInputView2 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.Core.CoreInputView,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_XYFocusTransferredToPrimaryView slot=9 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.Core.ICoreInputView2 shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event x_y_focus_transferring_from_primary_view
         add add_XYFocusTransferringFromPrimaryView slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreInputView2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.Core.CoreInputView,Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_XYFocusTransferringFromPrimaryView slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.Core.ICoreInputView2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event primary_view_hiding
         add add_PrimaryViewHiding slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreInputView4 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.Core.CoreInputView,Windows.UI.ViewManagement.Core.CoreInputViewHidingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PrimaryViewHiding slot=9 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.Core.ICoreInputView4 shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event primary_view_showing
         add add_PrimaryViewShowing slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreInputView4 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.Core.CoreInputView,Windows.UI.ViewManagement.Core.CoreInputViewShowingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PrimaryViewShowing slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.Core.ICoreInputView4 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event primary_view_animation_starting
         add add_PrimaryViewAnimationStarting slot=9 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreInputView5 shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.Core.CoreInputView,Windows.UI.ViewManagement.Core.CoreInputViewAnimationStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PrimaryViewAnimationStarting slot=10 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.Core.ICoreInputView5 shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event supported_kinds_changed
         add add_SupportedKindsChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreInputView5 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.Core.CoreInputView,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SupportedKindsChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.Core.ICoreInputView5 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_core_input_view_occlusions
         method GetCoreInputViewOcclusions slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreInputView shape=4 reverse=62
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.ViewManagement.Core.CoreInputViewOcclusion> return
@@ -263,7 +263,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.UI.ViewManagement.Core.UISe
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.ViewManagement.Core.UISettingsController> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -523,6 +523,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

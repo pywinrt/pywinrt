@@ -381,7 +381,7 @@ class Windows.ApplicationModel.FullTrustProcessLaunchResult python_type
     requires Windows.ApplicationModel.IFullTrustProcessLaunchResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IFullTrustProcessLaunchResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property launch_result
         get get_LaunchResult slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IFullTrustProcessLaunchResult shape=4 reverse=22
             out enum32 type=Windows.ApplicationModel.FullTrustLaunchResult return
@@ -458,7 +458,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -487,7 +487,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.FullTrustP
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.FullTrustProcessLaunchResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -516,7 +516,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCat
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -545,7 +545,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCat
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -574,7 +574,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCat
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -603,7 +603,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageCon
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageContentGroup> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -632,7 +632,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.PackageUpd
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.PackageUpdateAvailabilityResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -661,7 +661,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTas
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.StartupTask> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -690,7 +690,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.StartupTas
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.StartupTaskState> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -719,7 +719,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.PackageContentGroup>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -748,7 +748,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.AppListEntry>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -777,7 +777,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.StartupTask>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -812,7 +812,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationMode
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1877,39 +1877,39 @@ class Windows.ApplicationModel.PackageCatalog python_type
     event package_installing
         add add_PackageInstalling slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageInstallingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PackageInstalling slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageCatalog shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event package_staging
         add add_PackageStaging slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageStagingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PackageStaging slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageCatalog shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event package_status_changed
         add add_PackageStatusChanged slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageStatusChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PackageStatusChanged slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageCatalog shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event package_uninstalling
         add add_PackageUninstalling slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageUninstallingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PackageUninstalling slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageCatalog shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event package_updating
         add add_PackageUpdating slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageUpdatingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PackageUpdating slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageCatalog shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event package_content_group_staging
         add add_PackageContentGroupStaging slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageContentGroupStagingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PackageContentGroupStaging slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageCatalog2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_optional_package_async
         method AddOptionalPackageAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog2 shape=51 reverse=65
             in string name=optionalPackageFamilyName
@@ -1946,7 +1946,7 @@ class Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult python_typ
     requires Windows.ApplicationModel.IPackageCatalogAddOptionalPackageResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogAddOptionalPackageResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property package
         get get_Package slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogAddOptionalPackageResult shape=4 reverse=22
             out class type=Windows.ApplicationModel.Package return
@@ -1958,7 +1958,7 @@ class Windows.ApplicationModel.PackageCatalogAddResourcePackageResult python_typ
     requires Windows.ApplicationModel.IPackageCatalogAddResourcePackageResult
     property extended_error
         get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogAddResourcePackageResult shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property is_complete
         get get_IsComplete slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogAddResourcePackageResult shape=4 reverse=43
             out boolean return
@@ -1973,7 +1973,7 @@ class Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult python
     requires Windows.ApplicationModel.IPackageCatalogRemoveOptionalPackagesResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogRemoveOptionalPackagesResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property packages_removed
         get get_PackagesRemoved slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogRemoveOptionalPackagesResult shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> return
@@ -1985,7 +1985,7 @@ class Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult python
     requires Windows.ApplicationModel.IPackageCatalogRemoveResourcePackagesResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogRemoveResourcePackagesResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property packages_removed
         get get_PackagesRemoved slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalogRemoveResourcePackagesResult shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> return
@@ -2025,7 +2025,7 @@ class Windows.ApplicationModel.PackageContentGroupStagingEventArgs python_type
             out string return
     property error_code
         get get_ErrorCode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroupStagingEventArgs shape=4 reverse=121
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property is_complete
         get get_IsComplete slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageContentGroupStagingEventArgs shape=4 reverse=99
             out boolean return
@@ -2095,7 +2095,7 @@ class Windows.ApplicationModel.PackageInstallingEventArgs python_type
             out guid return
     property error_code
         get get_ErrorCode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageInstallingEventArgs shape=4 reverse=121
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property is_complete
         get get_IsComplete slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageInstallingEventArgs shape=4 reverse=99
             out boolean return
@@ -2124,7 +2124,7 @@ class Windows.ApplicationModel.PackageStagingEventArgs python_type
             out guid return
     property error_code
         get get_ErrorCode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStagingEventArgs shape=4 reverse=121
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property is_complete
         get get_IsComplete slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageStagingEventArgs shape=4 reverse=99
             out boolean return
@@ -2200,7 +2200,7 @@ class Windows.ApplicationModel.PackageUninstallingEventArgs python_type
             out guid return
     property error_code
         get get_ErrorCode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUninstallingEventArgs shape=4 reverse=121
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property is_complete
         get get_IsComplete slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUninstallingEventArgs shape=4 reverse=99
             out boolean return
@@ -2225,7 +2225,7 @@ class Windows.ApplicationModel.PackageUpdateAvailabilityResult python_type
             out enum32 type=Windows.ApplicationModel.PackageUpdateAvailability return
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUpdateAvailabilityResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.ApplicationModel.PackageUpdatingEventArgs python_type
     py PackageUpdatingEventArgs
@@ -2237,7 +2237,7 @@ class Windows.ApplicationModel.PackageUpdatingEventArgs python_type
             out guid return
     property error_code
         get get_ErrorCode slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUpdatingEventArgs shape=4 reverse=141
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property is_complete
         get get_IsComplete slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageUpdatingEventArgs shape=4 reverse=121
             out boolean return
@@ -2422,6 +2422,12 @@ struct Windows.Foundation.DateTime external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

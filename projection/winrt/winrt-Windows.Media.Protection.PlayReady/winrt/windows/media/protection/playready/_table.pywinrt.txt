@@ -49,7 +49,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Protection.PlayReady.
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Protection.PlayReady.INDLicenseFetchResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -78,7 +78,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Protection.PlayReady.
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Protection.PlayReady.INDSendResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -107,7 +107,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Protection.PlayReady.
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Protection.PlayReady.INDStartResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -713,7 +713,7 @@ interface Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionService
     method process_manual_enabling_response
         method ProcessManualEnablingResponse slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=117 reverse=188
             pass_array uint8 name=responseBytes
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 interface Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest2
     guid b7fa5eb5-fe0c-b225-bc60-5a9edd32ceb5
@@ -819,7 +819,7 @@ interface Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest 
     method process_manual_enabling_response
         method ProcessManualEnablingResponse slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=117 reverse=188
             pass_array uint8 name=responseBytes
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 interface Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequestFactory
     guid 0e448ac9-e67e-494e-9f49-6285438c76cf
@@ -860,7 +860,7 @@ interface Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest python_typ
     method process_manual_enabling_response
         method ProcessManualEnablingResponse slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=117 reverse=188
             pass_array uint8 name=responseBytes
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 interface Windows.Media.Protection.PlayReady.IPlayReadySoapMessage
     guid b659fcb5-ce41-41ba-8a0d-61df5fffa139
@@ -1275,33 +1275,33 @@ class Windows.Media.Protection.PlayReady.NDClient python_type
     event closed_caption_data_received
         add add_ClosedCaptionDataReceived slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 reverse=187 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Protection.PlayReady.NDClient,Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ClosedCaptionDataReceived slot=15 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 reverse=200 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event license_fetch_completed
         add add_LicenseFetchCompleted slot=10 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 reverse=124 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Protection.PlayReady.NDClient,Windows.Media.Protection.PlayReady.INDLicenseFetchCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LicenseFetchCompleted slot=11 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 reverse=156 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event proximity_detection_completed
         add add_ProximityDetectionCompleted slot=8 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 reverse=65 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Protection.PlayReady.NDClient,Windows.Media.Protection.PlayReady.INDProximityDetectionCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ProximityDetectionCompleted slot=9 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 reverse=110 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event re_registration_needed
         add add_ReRegistrationNeeded slot=12 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 reverse=163 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Protection.PlayReady.NDClient,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReRegistrationNeeded slot=13 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 reverse=181 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event registration_completed
         add add_RegistrationCompleted slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Protection.PlayReady.NDClient,Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RegistrationCompleted slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 reverse=53 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close deprecated
         method Close slot=19 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=0 reverse=221 deprecated
     method license_fetch_async deprecated
@@ -1686,7 +1686,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest activ
     method process_manual_enabling_response
         method ProcessManualEnablingResponse slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=117 reverse=188
             pass_array uint8 name=responseBytes
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest activatable python_type
     py PlayReadyDomainLeaveServiceRequest
@@ -1739,7 +1739,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest acti
     method process_manual_enabling_response
         method ProcessManualEnablingResponse slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=117 reverse=188
             pass_array uint8 name=responseBytes
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 enum Windows.Media.Protection.PlayReady.PlayReadyEncryptionAlgorithm python_type
     py PlayReadyEncryptionAlgorithm
@@ -1810,7 +1810,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyIndividualizationServiceReques
     method process_manual_enabling_response
         method ProcessManualEnablingResponse slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=117 reverse=188
             pass_array uint8 name=responseBytes
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Protection.PlayReady.PlayReadyLicense python_type
     py PlayReadyLicense
@@ -1914,7 +1914,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceReque
     method process_manual_enabling_response
         method ProcessManualEnablingResponse slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=117 reverse=188
             pass_array uint8 name=responseBytes
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable activatable python_type iterable
     py PlayReadyLicenseIterable
@@ -2031,7 +2031,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest a
     method process_manual_enabling_response
         method ProcessManualEnablingResponse slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=117 reverse=188
             pass_array uint8 name=responseBytes
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest activatable python_type
     py PlayReadyRevocationServiceRequest
@@ -2074,7 +2074,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyRevocationServiceRequest activ
     method process_manual_enabling_response
         method ProcessManualEnablingResponse slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=117 reverse=188
             pass_array uint8 name=responseBytes
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Protection.PlayReady.PlayReadySecureStopIterable python_type iterable
     py PlayReadySecureStopIterable
@@ -2171,7 +2171,7 @@ class Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest pytho
     method process_manual_enabling_response
         method ProcessManualEnablingResponse slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=117 reverse=188
             pass_array uint8 name=responseBytes
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Protection.PlayReady.PlayReadySoapMessage python_type
     py PlayReadySoapMessage
@@ -2319,6 +2319,12 @@ enum Windows.Foundation.AsyncStatus external
 
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

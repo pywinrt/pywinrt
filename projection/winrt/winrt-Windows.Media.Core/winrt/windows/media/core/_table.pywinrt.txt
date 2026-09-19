@@ -137,9 +137,9 @@ class Windows.Media.Core.AudioTrack python_type
     event open_failed
         add add_OpenFailed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IAudioTrack shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.AudioTrack,Windows.Media.Core.AudioTrackOpenFailedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OpenFailed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IAudioTrack shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_encoding_properties
         method GetEncodingProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrack shape=4 reverse=62
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
@@ -151,7 +151,7 @@ class Windows.Media.Core.AudioTrackOpenFailedEventArgs python_type
     requires Windows.Media.Core.IAudioTrackOpenFailedEventArgs
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrackOpenFailedEventArgs shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Core.AudioTrackSupportInfo python_type
     py AudioTrackSupportInfo
@@ -464,9 +464,9 @@ class Windows.Media.Core.FaceDetectionEffect python_type
     event face_detected
         add add_FaceDetected slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffect shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.FaceDetectionEffect,Windows.Media.Core.FaceDetectedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FaceDetected slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.IFaceDetectionEffect shape=26 reverse=156
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method set_properties
         method SetProperties slot=6 inputs=1 outputs=0 declaring=Windows.Media.IMediaExtension shape=4 reverse=22
             in interface type=Windows.Foundation.Collections.IPropertySet name=configuration
@@ -580,7 +580,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Media.Core.CodecInfo>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -609,7 +609,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Core.MediaStreamSampl
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Core.MediaStreamSample> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -644,7 +644,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Core.LowL
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Media.Core.LowLightFusionResult,System.Double> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1470,9 +1470,9 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.Ti
     event vector_changed
         add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.TimedMetadataTrack> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<Windows.Media.Core.TimedMetadataTrack> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.TimedMetadataTrack> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=173 role=append
             in class type=Windows.Media.Core.TimedMetadataTrack name=value
@@ -1529,9 +1529,9 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.Ti
     event vector_changed
         add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.TimedTextSource> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<Windows.Media.Core.TimedTextSource> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.TimedTextSource> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=173 role=append
             in class type=Windows.Media.Core.TimedTextSource name=value
@@ -2238,9 +2238,9 @@ interface Windows.Media.Core.ISingleSelectMediaTrackList python_type
     event selected_index_changed
         add add_SelectedIndexChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.ISingleSelectMediaTrackList,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SelectedIndexChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ISingleSelectMediaTrackList shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 interface Windows.Media.Core.ISpeechCue
     guid aee254dc-1725-4bad-8043-a98499b017a2
@@ -2983,9 +2983,9 @@ class Windows.Media.Core.MediaBinder activatable python_type
     event binding
         add add_Binding slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaBinder shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaBinder,Windows.Media.Core.MediaBindingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Binding slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBinder shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.Media.Core.MediaBindingEventArgs python_type
     py MediaBindingEventArgs
@@ -3000,9 +3000,9 @@ class Windows.Media.Core.MediaBindingEventArgs python_type
     event canceled
         add add_Canceled slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaBindingEventArgs,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Canceled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_deferral
         method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=4 reverse=99
             out class type=Windows.Foundation.Deferral return
@@ -3090,15 +3090,15 @@ class Windows.Media.Core.MediaSource python_type closeable
     event open_operation_completed
         add add_OpenOperationCompleted slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaSource,Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OpenOperationCompleted slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaSource2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event state_changed
         add add_StateChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSource3 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaSource,Windows.Media.Core.MediaSourceStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaSource3 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_from_adaptive_media_source static
@@ -3166,9 +3166,9 @@ class Windows.Media.Core.MediaSourceAppServiceConnection python_type
     event initialize_media_stream_source_requested
         add add_InitializeMediaStreamSourceRequested slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceAppServiceConnection shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaSourceAppServiceConnection,Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_InitializeMediaStreamSourceRequested slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaSourceAppServiceConnection shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=8 inputs=0 outputs=0 declaring=Windows.Media.Core.IMediaSourceAppServiceConnection shape=0 reverse=55
 
@@ -3179,7 +3179,7 @@ class Windows.Media.Core.MediaSourceError python_type
     requires Windows.Media.Core.IMediaSourceError
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSourceError shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs python_type
     py MediaSourceOpenOperationCompletedEventArgs
@@ -3256,9 +3256,9 @@ class Windows.Media.Core.MediaStreamSample python_type
     event processed
         add add_Processed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSample,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Processed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSample shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_from_buffer static
         method CreateFromBuffer slot=6 inputs=2 outputs=1 declaring=Windows.Media.Core.IMediaStreamSampleStatics shape=135 static
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
@@ -3397,39 +3397,39 @@ class Windows.Media.Core.MediaStreamSource python_type
     event closed
         add add_Closed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSource,Windows.Media.Core.MediaStreamSourceClosedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event paused
         add add_Paused slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Paused slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event sample_requested
         add add_SampleRequested slot=12 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSource,Windows.Media.Core.MediaStreamSourceSampleRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SampleRequested slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event starting
         add add_Starting slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSource,Windows.Media.Core.MediaStreamSourceStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Starting slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event switch_streams_requested
         add add_SwitchStreamsRequested slot=14 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSource,Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SwitchStreamsRequested slot=15 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event sample_rendered
         add add_SampleRendered slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSource,Windows.Media.Core.MediaStreamSourceSampleRenderedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SampleRendered slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_protection_key
         method AddProtectionKey slot=31 inputs=3 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=239
             in interface type=Windows.Media.Core.IMediaStreamDescriptor name=streamDescriptor
@@ -3632,33 +3632,33 @@ class Windows.Media.Core.MseSourceBuffer python_type
     event aborted
         add add_Aborted slot=14 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBuffer,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Aborted slot=15 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event error_occurred
         add add_ErrorOccurred slot=12 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBuffer,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ErrorOccurred slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event update_ended
         add add_UpdateEnded slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBuffer,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UpdateEnded slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event update_starting
         add add_UpdateStarting slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBuffer,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UpdateStarting slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
         add add_Updated slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBuffer,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Updated slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method abort
         method Abort slot=29 inputs=0 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=0 reverse=265
     method append_buffer
@@ -3686,15 +3686,15 @@ class Windows.Media.Core.MseSourceBufferList python_type
     event source_buffer_added
         add add_SourceBufferAdded slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBufferList shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBufferList,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceBufferAdded slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBufferList shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_buffer_removed
         add add_SourceBufferRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBufferList shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBufferList,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceBufferRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBufferList shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.Media.Core.MseStreamSource activatable python_type
     py MseStreamSource
@@ -3729,21 +3729,21 @@ class Windows.Media.Core.MseStreamSource activatable python_type
     event closed
         add add_Closed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseStreamSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event ended
         add add_Ended slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseStreamSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Ended slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event opened
         add add_Opened slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseStreamSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Opened slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_source_buffer
         method AddSourceBuffer slot=17 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=51 reverse=211
             in string name=mimeType
@@ -3782,9 +3782,9 @@ class Windows.Media.Core.SceneAnalysisEffect python_type
     event scene_analyzed
         add add_SceneAnalyzed slot=9 inputs=1 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffect shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.SceneAnalysisEffect,Windows.Media.Core.SceneAnalyzedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SceneAnalyzed slot=10 inputs=1 outputs=0 declaring=Windows.Media.Core.ISceneAnalysisEffect shape=26 reverse=134
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method set_properties
         method SetProperties slot=6 inputs=1 outputs=0 declaring=Windows.Media.IMediaExtension shape=4 reverse=22
             in interface type=Windows.Foundation.Collections.IPropertySet name=configuration
@@ -3998,21 +3998,21 @@ class Windows.Media.Core.TimedMetadataTrack python_type
     event cue_entered
         add add_CueEntered slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.TimedMetadataTrack,Windows.Media.Core.MediaCueEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CueEntered slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event cue_exited
         add add_CueExited slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.TimedMetadataTrack,Windows.Media.Core.MediaCueEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CueExited slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event track_failed
         add add_TrackFailed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.TimedMetadataTrack,Windows.Media.Core.TimedMetadataTrackFailedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TrackFailed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_cue
         method AddCue slot=16 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4 reverse=202
             in interface type=Windows.Media.Core.IMediaCue name=cue
@@ -4030,7 +4030,7 @@ class Windows.Media.Core.TimedMetadataTrackError python_type
             out enum32 type=Windows.Media.Core.TimedMetadataTrackErrorCode return
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrackError shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 enum Windows.Media.Core.TimedMetadataTrackErrorCode python_type
     py TimedMetadataTrackErrorCode
@@ -4295,9 +4295,9 @@ class Windows.Media.Core.TimedTextSource python_type
     event resolved
         add add_Resolved slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedTextSource shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.TimedTextSource,Windows.Media.Core.TimedTextSourceResolveResultEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Resolved slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextSource shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_from_stream static
         method CreateFromStream slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics shape=51 reverse=24 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
@@ -4820,9 +4820,9 @@ class Windows.Media.Core.VideoStabilizationEffect python_type
     event enabled_changed
         add add_EnabledChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.VideoStabilizationEffect,Windows.Media.Core.VideoStabilizationEffectEnabledChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnabledChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=26 reverse=110
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_recommended_stream_configuration
         method GetRecommendedStreamConfiguration slot=10 inputs=2 outputs=1 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=117 reverse=125
             in class type=Windows.Media.Devices.VideoDeviceController name=controller
@@ -4930,9 +4930,9 @@ class Windows.Media.Core.VideoTrack python_type
     event open_failed
         add add_OpenFailed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IVideoTrack shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.VideoTrack,Windows.Media.Core.VideoTrackOpenFailedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OpenFailed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IVideoTrack shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_encoding_properties
         method GetEncodingProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrack shape=4 reverse=62
             out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
@@ -4944,7 +4944,7 @@ class Windows.Media.Core.VideoTrackOpenFailedEventArgs python_type
     requires Windows.Media.Core.IVideoTrackOpenFailedEventArgs
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrackOpenFailedEventArgs shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Core.VideoTrackSupportInfo python_type
     py VideoTrackSupportInfo
@@ -4996,6 +4996,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

@@ -276,7 +276,7 @@ interface Windows.Foundation.IAsyncOperation<System.Guid> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Guid> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -305,7 +305,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -334,7 +334,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -363,7 +363,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -392,7 +392,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -421,7 +421,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardChallengeContext> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -450,7 +450,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardConnection> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -479,7 +479,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -508,7 +508,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -537,7 +537,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -566,7 +566,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -595,7 +595,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -624,7 +624,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -653,7 +653,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -682,7 +682,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardEmulator> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -711,7 +711,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardProvisioning> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -740,7 +740,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardReader> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -769,7 +769,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardReaderStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -798,7 +798,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.SmartCards.SmartCar
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.SmartCards.SmartCardStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -827,7 +827,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -856,7 +856,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -885,7 +885,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> co
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2546,15 +2546,15 @@ class Windows.Devices.SmartCards.SmartCardEmulator python_type
     event apdu_received
         add add_ApduReceived slot=6 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulator2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardEmulator,Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ApduReceived slot=7 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardEmulator2 shape=26 reverse=53
-            in event_token name=value
+            in event_token type=Windows.Foundation.EventRegistrationToken name=value
     event connection_deactivated
         add add_ConnectionDeactivated slot=8 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulator2 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardEmulator,Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ConnectionDeactivated slot=9 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardEmulator2 shape=26 reverse=110
-            in event_token name=value
+            in event_token type=Windows.Foundation.EventRegistrationToken name=value
     method get_applet_id_group_registrations_async static
         method GetAppletIdGroupRegistrationsAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulatorStatics2 shape=4 reverse=22 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> return
@@ -2815,15 +2815,15 @@ class Windows.Devices.SmartCards.SmartCardReader python_type
     event card_added
         add add_CardAdded slot=11 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardReader,Windows.Devices.SmartCards.CardAddedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CardAdded slot=12 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event card_removed
         add add_CardRemoved slot=13 inputs=1 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.SmartCards.SmartCardReader,Windows.Devices.SmartCards.CardRemovedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CardRemoved slot=14 inputs=1 outputs=0 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_all_cards_async
         method FindAllCardsAsync slot=10 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardReader shape=4 reverse=121
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCard>> return
@@ -2958,6 +2958,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

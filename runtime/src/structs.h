@@ -5,7 +5,8 @@
 // that costs is that a struct value is not a blit: the strings and interface
 // pointers in one have to be given back when the last copy of it goes away and
 // duplicated when a copy is made, which is what the pairs below are for.
-// structs.cpp says which of them to reach for when.
+// structs.cpp says which of them to reach for when. A struct that holds one
+// integer is projected as a subclass of int instead and has none of this.
 
 #pragma once
 
@@ -31,4 +32,6 @@ namespace py::interp
 
     bool make_struct_type(
         projection& proj, type_entry& entry, table::type_view const& record);
+
+    bool make_integer_type(projection& proj, type_entry& entry);
 } // namespace py::interp

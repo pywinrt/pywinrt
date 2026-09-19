@@ -232,9 +232,9 @@ class Windows.Devices.PointOfService.BarcodeScanner python_type closeable
     event status_updated
         add add_StatusUpdated slot=15 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IBarcodeScanner shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.BarcodeScanner,Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusUpdated slot=16 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IBarcodeScanner shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method check_health_async
         method CheckHealthAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IBarcodeScanner shape=51 reverse=100
             in enum32 type=Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel name=level
@@ -734,9 +734,9 @@ class Windows.Devices.PointOfService.CashDrawer python_type closeable
     event status_updated
         add add_StatusUpdated slot=14 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawer shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.CashDrawer,Windows.Devices.PointOfService.CashDrawerStatusUpdatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusUpdated slot=15 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.ICashDrawer shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method check_health_async
         method CheckHealthAsync slot=12 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawer shape=51 reverse=163
             in enum32 type=Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel name=level
@@ -817,9 +817,9 @@ class Windows.Devices.PointOfService.CashDrawerCloseAlarm python_type
     event alarm_timeout_expired
         add add_AlarmTimeoutExpired slot=14 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawerCloseAlarm shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.CashDrawerCloseAlarm,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AlarmTimeoutExpired slot=15 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.ICashDrawerCloseAlarm shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start_async
         method StartAsync slot=16 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawerCloseAlarm shape=4 reverse=202
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -841,15 +841,15 @@ class Windows.Devices.PointOfService.CashDrawerEventSource python_type
     event drawer_closed
         add add_DrawerClosed slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawerEventSource shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.CashDrawerEventSource,Windows.Devices.PointOfService.CashDrawerClosedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DrawerClosed slot=7 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.ICashDrawerEventSource shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event drawer_opened
         add add_DrawerOpened slot=8 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawerEventSource shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.CashDrawerEventSource,Windows.Devices.PointOfService.CashDrawerOpenedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DrawerOpened slot=9 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.ICashDrawerEventSource shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.Devices.PointOfService.CashDrawerOpenedEventArgs python_type
     py CashDrawerOpenedEventArgs
@@ -919,45 +919,45 @@ class Windows.Devices.PointOfService.ClaimedBarcodeScanner python_type closeable
     event data_received
         add add_DataReceived slot=19 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=51 reverse=224
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner,Windows.Devices.PointOfService.BarcodeScannerDataReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DataReceived slot=20 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=26 reverse=399
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event error_occurred
         add add_ErrorOccurred slot=29 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=51 reverse=267
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner,Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ErrorOccurred slot=30 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=26 reverse=272
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event image_preview_received
         add add_ImagePreviewReceived slot=27 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=51 reverse=260
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner,Windows.Devices.PointOfService.BarcodeScannerImagePreviewReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ImagePreviewReceived slot=28 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event release_device_requested
         add add_ReleaseDeviceRequested slot=25 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=51 reverse=253
             in delegate type=Windows.Foundation.EventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReleaseDeviceRequested slot=26 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=26 reverse=257
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event trigger_pressed
         add add_TriggerPressed slot=21 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=51 reverse=233
             in delegate type=Windows.Foundation.EventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TriggerPressed slot=22 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=26 reverse=400
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event trigger_released
         add add_TriggerReleased slot=23 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=51 reverse=243
             in delegate type=Windows.Foundation.EventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TriggerReleased slot=24 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner4 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner,Windows.Devices.PointOfService.ClaimedBarcodeScannerClosedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedBarcodeScanner4 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_async
@@ -1033,15 +1033,15 @@ class Windows.Devices.PointOfService.ClaimedCashDrawer python_type closeable
     event release_device_requested
         add add_ReleaseDeviceRequested slot=16 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedCashDrawer shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedCashDrawer,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReleaseDeviceRequested slot=17 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedCashDrawer shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedCashDrawer2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedCashDrawer,Windows.Devices.PointOfService.ClaimedCashDrawerClosedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedCashDrawer2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_async
@@ -1182,21 +1182,21 @@ class Windows.Devices.PointOfService.ClaimedLineDisplay python_type closeable
     event release_device_requested
         add add_ReleaseDeviceRequested slot=15 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedLineDisplay shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedLineDisplay,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReleaseDeviceRequested slot=16 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedLineDisplay shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event status_updated
         add add_StatusUpdated slot=9 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedLineDisplay2 shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedLineDisplay,Windows.Devices.PointOfService.LineDisplayStatusUpdatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusUpdated slot=10 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedLineDisplay2 shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedLineDisplay3 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedLineDisplay,Windows.Devices.PointOfService.ClaimedLineDisplayClosedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedLineDisplay3 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method check_health_async
         method CheckHealthAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedLineDisplay2 shape=51 reverse=44
             in enum32 type=Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel name=level
@@ -1308,39 +1308,39 @@ class Windows.Devices.PointOfService.ClaimedMagneticStripeReader python_type clo
     event aamva_card_data_received
         add add_AamvaCardDataReceived slot=31 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader shape=51 reverse=274
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader,Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AamvaCardDataReceived slot=32 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader shape=26 reverse=283
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event bank_card_data_received
         add add_BankCardDataReceived slot=29 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader shape=51 reverse=267
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader,Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BankCardDataReceived slot=30 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader shape=26 reverse=272
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event error_occurred
         add add_ErrorOccurred slot=37 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader shape=51 reverse=300
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader,Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ErrorOccurred slot=38 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader shape=26 reverse=305
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event release_device_requested
         add add_ReleaseDeviceRequested slot=35 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader shape=51 reverse=293
             in delegate type=Windows.Foundation.EventHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReleaseDeviceRequested slot=36 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader shape=26 reverse=298
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event vendor_specific_data_received
         add add_VendorSpecificDataReceived slot=33 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader shape=51 reverse=286
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader,Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VendorSpecificDataReceived slot=34 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader shape=26 reverse=291
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader,Windows.Devices.PointOfService.ClaimedMagneticStripeReaderClosedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method authenticate_device_async
         method AuthenticateDeviceAsync slot=24 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedMagneticStripeReader shape=117 reverse=249
             pass_array uint8 name=responseToken
@@ -1428,15 +1428,15 @@ class Windows.Devices.PointOfService.ClaimedPosPrinter python_type closeable
     event release_device_requested
         add add_ReleaseDeviceRequested slot=23 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedPosPrinter shape=51 reverse=243
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedPosPrinter,Windows.Devices.PointOfService.PosPrinterReleaseDeviceRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReleaseDeviceRequested slot=24 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedPosPrinter shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IClaimedPosPrinter2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.ClaimedPosPrinter,Windows.Devices.PointOfService.ClaimedPosPrinterClosedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IClaimedPosPrinter2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disable_async
@@ -1676,7 +1676,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1705,7 +1705,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1734,7 +1734,7 @@ interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1763,7 +1763,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Barc
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.BarcodeScanner> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1792,7 +1792,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Barc
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.BarcodeSymbologyAttributes> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1821,7 +1821,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Cash
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.CashDrawer> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1850,7 +1850,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Clai
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedBarcodeScanner> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1879,7 +1879,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Clai
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedCashDrawer> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1908,7 +1908,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Clai
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedLineDisplay> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1937,7 +1937,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Clai
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1966,7 +1966,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Clai
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.ClaimedPosPrinter> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1995,7 +1995,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Line
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplay> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2024,7 +2024,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Line
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplayPowerStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2053,7 +2053,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Line
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplayStoredBitmap> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2082,7 +2082,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Line
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.LineDisplayWindow> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2111,7 +2111,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Magn
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.MagneticStripeReader> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2140,7 +2140,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.PosP
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.PosPrinter> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2169,7 +2169,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.UInt32>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2198,7 +2198,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> co
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3738,9 +3738,9 @@ class Windows.Devices.PointOfService.MagneticStripeReader python_type closeable
     event status_updated
         add add_StatusUpdated slot=14 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IMagneticStripeReader shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.MagneticStripeReader,Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusUpdated slot=15 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IMagneticStripeReader shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method check_health_async
         method CheckHealthAsync slot=10 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IMagneticStripeReader shape=51 reverse=124
             in enum32 type=Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel name=level
@@ -4087,9 +4087,9 @@ class Windows.Devices.PointOfService.PosPrinter python_type closeable
     event status_updated
         add add_StatusUpdated slot=14 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinter shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.PosPrinter,Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusUpdated slot=15 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.IPosPrinter shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method check_health_async
         method CheckHealthAsync slot=12 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinter shape=51 reverse=163
             in enum32 type=Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel name=level
@@ -5101,6 +5101,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

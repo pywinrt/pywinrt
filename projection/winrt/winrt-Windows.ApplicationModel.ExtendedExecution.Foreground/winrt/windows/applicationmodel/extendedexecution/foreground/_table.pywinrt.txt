@@ -56,9 +56,9 @@ class Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionFor
     event revoked
         add add_Revoked slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Revoked slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method request_extension_async
@@ -79,7 +79,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ExtendedEx
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -121,6 +121,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

@@ -248,9 +248,9 @@ class Windows.Networking.NetworkOperators.ESim python_type
     event profile_changed
         add add_ProfileChanged slot=16 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IESim shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.ESim,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ProfileChanged slot=17 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IESim shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method delete_profile_async
         method DeleteProfileAsync slot=13 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IESim shape=51 reverse=174
             in string name=profileId
@@ -348,9 +348,9 @@ class Windows.Networking.NetworkOperators.ESimManager static python_type
     event service_info_changed static
         add add_ServiceInfoChanged slot=8 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IESimManagerStatics shape=51 reverse=65 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ServiceInfoChanged slot=9 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IESimManagerStatics shape=26 reverse=110 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method try_create_e_sim_watcher static
         method TryCreateESimWatcher slot=7 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IESimManagerStatics shape=4 reverse=43 static
             out class type=Windows.Networking.NetworkOperators.ESimWatcher return
@@ -456,9 +456,9 @@ class Windows.Networking.NetworkOperators.ESimProfileMetadata python_type
     event state_changed
         add add_StateChanged slot=17 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IESimProfileMetadata shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.ESimProfileMetadata,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=18 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IESimProfileMetadata shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method confirm_install_async
         method ConfirmInstallAsync slot=14 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IESimProfileMetadata shape=4 reverse=186
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Networking.NetworkOperators.ESimOperationResult,Windows.Networking.NetworkOperators.ESimProfileInstallProgress> return
@@ -540,33 +540,33 @@ class Windows.Networking.NetworkOperators.ESimWatcher python_type
     event added
         add add_Added slot=9 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IESimWatcher shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.ESimWatcher,Windows.Networking.NetworkOperators.ESimAddedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Added slot=10 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IESimWatcher shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
         add add_EnumerationCompleted slot=11 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IESimWatcher shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.ESimWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=12 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IESimWatcher shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
         add add_Removed slot=13 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IESimWatcher shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.ESimWatcher,Windows.Networking.NetworkOperators.ESimRemovedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Removed slot=14 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IESimWatcher shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
         add add_Stopped slot=15 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IESimWatcher shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.ESimWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Stopped slot=16 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IESimWatcher shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
         add add_Updated slot=17 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IESimWatcher shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.ESimWatcher,Windows.Networking.NetworkOperators.ESimUpdatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Updated slot=18 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IESimWatcher shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=7 inputs=0 outputs=0 declaring=Windows.Networking.NetworkOperators.IESimWatcher shape=0 reverse=37
     method stop
@@ -682,7 +682,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -711,7 +711,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.ESimDiscoverResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -740,7 +740,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -769,7 +769,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.ESimOperationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -798,7 +798,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -827,7 +827,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -856,7 +856,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -885,7 +885,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -914,7 +914,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.MobileBroadbandModemStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -943,7 +943,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.MobileBroadbandPco> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -972,7 +972,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1001,7 +1001,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.MobileBroadbandUiccAppReadRecordResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1030,7 +1030,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1059,7 +1059,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.MobileBroadbandUiccAppsResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1088,7 +1088,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1117,7 +1117,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.ProvisionFromXmlDocumentResults> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1146,7 +1146,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.NetworkOperators.UssdReply> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1181,7 +1181,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Networking.Netw
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Networking.NetworkOperators.ESimOperationResult,Windows.Networking.NetworkOperators.ESimProfileInstallProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3416,33 +3416,33 @@ class Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher activata
     event account_added
         add add_AccountAdded slot=6 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher,Windows.Networking.NetworkOperators.MobileBroadbandAccountEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccountAdded slot=7 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher shape=26 reverse=53
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event account_removed
         add add_AccountRemoved slot=10 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher,Windows.Networking.NetworkOperators.MobileBroadbandAccountEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccountRemoved slot=11 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher shape=26 reverse=156
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event account_updated
         add add_AccountUpdated slot=8 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher,Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccountUpdated slot=9 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher shape=26 reverse=110
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event enumeration_completed
         add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher shape=26 reverse=181
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event stopped
         add add_Stopped slot=14 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Stopped slot=15 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher shape=26 reverse=200
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method start
         method Start slot=17 inputs=0 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher shape=0 reverse=209
     method stop
@@ -3831,9 +3831,9 @@ class Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSes
     event command_received
         add add_CommandReceived slot=6 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession,Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CommandReceived slot=7 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close_session
         method CloseSession slot=8 inputs=0 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession shape=0 reverse=55
     method send_query_command_async
@@ -3864,9 +3864,9 @@ class Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSessio
     event data_received
         add add_DataReceived slot=8 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceDataSession shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession,Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DataReceived slot=9 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceDataSession shape=26 reverse=110
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method close_session
         method CloseSession slot=7 inputs=0 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceDataSession shape=0 reverse=37
     method write_data_async
@@ -3948,9 +3948,9 @@ class Windows.Networking.NetworkOperators.MobileBroadbandModem python_type
     event is_in_emergency_call_mode_changed
         add add_IsInEmergencyCallModeChanged slot=8 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandModem3 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandModem,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsInEmergencyCallModeChanged slot=9 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandModem3 shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id static
         method FromId slot=7 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandModemStatics shape=51 reverse=44 static
             in string name=deviceId
@@ -4295,9 +4295,9 @@ class Windows.Networking.NetworkOperators.MobileBroadbandSarManager python_type
     event transmission_state_changed
         add add_TransmissionStateChanged slot=11 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandSarManager shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandSarManager,Windows.Networking.NetworkOperators.MobileBroadbandTransmissionStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TransmissionStateChanged slot=12 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandSarManager shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method disable_backoff_async
         method DisableBackoffAsync slot=14 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandSarManager shape=4 reverse=186
             out interface type=Windows.Foundation.IAsyncAction return
@@ -4362,15 +4362,15 @@ class Windows.Networking.NetworkOperators.MobileBroadbandSlotManager python_type
     event current_slot_index_changed
         add add_CurrentSlotIndexChanged slot=12 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandSlotManager shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandSlotManager,Windows.Networking.NetworkOperators.MobileBroadbandCurrentSlotIndexChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CurrentSlotIndexChanged slot=13 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandSlotManager shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event slot_info_changed
         add add_SlotInfoChanged slot=10 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandSlotManager shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandSlotManager,Windows.Networking.NetworkOperators.MobileBroadbandSlotInfoChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SlotInfoChanged slot=11 inputs=1 outputs=0 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandSlotManager shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method set_current_slot
         method SetCurrentSlot slot=8 inputs=1 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandSlotManager shape=51 reverse=65
             in int32 name=slotIndex
@@ -5126,6 +5126,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

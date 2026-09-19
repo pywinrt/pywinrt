@@ -38,7 +38,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotification
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.PushNotifications.PushNotificationChannel> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -174,9 +174,9 @@ class Windows.Networking.PushNotifications.PushNotificationChannel python_type
     event push_notification_received
         add add_PushNotificationReceived slot=9 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.PushNotifications.PushNotificationChannel,Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PushNotificationReceived slot=10 inputs=1 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=8 inputs=0 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=0 reverse=55
 
@@ -189,9 +189,9 @@ class Windows.Networking.PushNotifications.PushNotificationChannelManager static
     event channels_revoked static
         add add_ChannelsRevoked slot=6 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4 shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ChannelsRevoked slot=7 inputs=1 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4 shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_push_notification_channel_for_application_async static
         method CreatePushNotificationChannelForApplicationAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics shape=4 reverse=22 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
@@ -321,6 +321,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

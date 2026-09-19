@@ -111,9 +111,9 @@ class Windows.UI.Xaml.Controls.Primitives.ButtonBase composable python_type
     event click
         add add_Click slot=14 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IButtonBase shape=51 reverse=187
             in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Click slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IButtonBase shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.Controls.Primitives.CalendarPanel activatable python_type
     py CalendarPanel
@@ -232,15 +232,15 @@ class Windows.UI.Xaml.Controls.Primitives.CarouselPanel composable python_type
     event horizontal_snap_points_changed
         add add_HorizontalSnapPointsChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=51 reverse=65
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HorizontalSnapPointsChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event vertical_snap_points_changed
         add add_VerticalSnapPointsChanged slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=51 reverse=124
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VerticalSnapPointsChanged slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_irregular_snap_points
         method GetIrregularSnapPoints slot=12 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=117 reverse=164
             in enum32 type=Windows.UI.Xaml.Controls.Orientation name=orientation
@@ -406,9 +406,9 @@ class Windows.UI.Xaml.Controls.Primitives.ColorSpectrum composable python_type
     event color_changed
         add add_ColorChanged slot=26 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IColorSpectrum shape=51 reverse=256
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Primitives.ColorSpectrum,Windows.UI.Xaml.Controls.ColorChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ColorChanged slot=27 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IColorSpectrum shape=26 reverse=262
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings python_type
     py ComboBoxTemplateSettings
@@ -800,27 +800,27 @@ class Windows.UI.Xaml.Controls.Primitives.FlyoutBase composable python_type
     event closed
         add add_Closed slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IFlyoutBase shape=51 reverse=124
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IFlyoutBase shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event opened
         add add_Opened slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IFlyoutBase shape=51 reverse=65
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Opened slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IFlyoutBase shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event opening
         add add_Opening slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IFlyoutBase shape=51 reverse=163
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Opening slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IFlyoutBase shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closing
         add add_Closing slot=15 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IFlyoutBase2 shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Primitives.FlyoutBase,Windows.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closing slot=16 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IFlyoutBase2 shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method _create_presenter
         method CreatePresenter slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides shape=4 reverse=22 overridable
             out class type=Windows.UI.Xaml.Controls.Control return
@@ -1920,15 +1920,15 @@ interface Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo python_type
     event horizontal_snap_points_changed
         add add_HorizontalSnapPointsChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=51 reverse=65
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HorizontalSnapPointsChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event vertical_snap_points_changed
         add add_VerticalSnapPointsChanged slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=51 reverse=124
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VerticalSnapPointsChanged slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_irregular_snap_points
         method GetIrregularSnapPoints slot=12 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=117 reverse=164
             in enum32 type=Windows.UI.Xaml.Controls.Orientation name=orientation
@@ -2813,9 +2813,9 @@ class Windows.UI.Xaml.Controls.Primitives.LoopingSelector python_type
     event selection_changed
         add add_SelectionChanged slot=20 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.ILoopingSelector shape=51 reverse=229
             in delegate type=Windows.UI.Xaml.Controls.SelectionChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SelectionChanged slot=21 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.ILoopingSelector shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.Controls.Primitives.LoopingSelectorItem python_type
     py LoopingSelectorItem
@@ -2840,15 +2840,15 @@ class Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel python_type
     event horizontal_snap_points_changed
         add add_HorizontalSnapPointsChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=51 reverse=65
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HorizontalSnapPointsChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event vertical_snap_points_changed
         add add_VerticalSnapPointsChanged slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=51 reverse=124
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VerticalSnapPointsChanged slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_irregular_snap_points
         method GetIrregularSnapPoints slot=12 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=117 reverse=164
             in enum32 type=Windows.UI.Xaml.Controls.Orientation name=orientation
@@ -2954,15 +2954,15 @@ class Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel composable p
     event horizontal_snap_points_changed
         add add_HorizontalSnapPointsChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=51 reverse=65
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HorizontalSnapPointsChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event vertical_snap_points_changed
         add add_VerticalSnapPointsChanged slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=51 reverse=124
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VerticalSnapPointsChanged slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_insertion_indexes
         method GetInsertionIndexes slot=6 inputs=1 outputs=2 declaring=Windows.UI.Xaml.Controls.IInsertionPanel shape=151 reverse=32
             in struct type=Windows.Foundation.Point name=position
@@ -3084,15 +3084,15 @@ class Windows.UI.Xaml.Controls.Primitives.PivotPanel activatable python_type
     event horizontal_snap_points_changed
         add add_HorizontalSnapPointsChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=51 reverse=65
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HorizontalSnapPointsChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event vertical_snap_points_changed
         add add_VerticalSnapPointsChanged slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=51 reverse=124
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VerticalSnapPointsChanged slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_irregular_snap_points
         method GetIrregularSnapPoints slot=12 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo shape=117 reverse=164
             in enum32 type=Windows.UI.Xaml.Controls.Orientation name=orientation
@@ -3214,21 +3214,21 @@ class Windows.UI.Xaml.Controls.Primitives.Popup activatable python_type
     event closed
         add add_Closed slot=20 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IPopup shape=51 reverse=229
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=21 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IPopup shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event opened
         add add_Opened slot=18 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IPopup shape=51 reverse=219
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Opened slot=19 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IPopup shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event actual_placement_changed
         add add_ActualPlacementChanged slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IPopup4 shape=51 reverse=144
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ActualPlacementChanged slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IPopup4 shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Windows.UI.Xaml.Controls.Primitives.PopupPlacementMode python_type
     py PopupPlacementMode
@@ -3331,9 +3331,9 @@ class Windows.UI.Xaml.Controls.Primitives.RangeBase composable python_type
     event value_changed
         add add_ValueChanged slot=16 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IRangeBase shape=51 reverse=203
             in delegate type=Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ValueChanged slot=17 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IRangeBase shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method _on_maximum_changed
         method OnMaximumChanged slot=7 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IRangeBaseOverrides shape=45 reverse=39 overridable
             in double name=oldMaximum
@@ -3433,9 +3433,9 @@ class Windows.UI.Xaml.Controls.Primitives.ScrollBar activatable python_type
     event scroll
         add add_Scroll slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollBar shape=51 reverse=163
             in delegate type=Windows.UI.Xaml.Controls.Primitives.ScrollEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Scroll slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IScrollBar shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.Controls.Primitives.ScrollEventArgs activatable python_type
     py ScrollEventArgs
@@ -3521,9 +3521,9 @@ class Windows.UI.Xaml.Controls.Primitives.Selector composable python_type
     event selection_changed
         add add_SelectionChanged slot=16 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.ISelector shape=51 reverse=203
             in delegate type=Windows.UI.Xaml.Controls.SelectionChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SelectionChanged slot=17 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.ISelector shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_is_selection_active static
         method GetIsSelectionActive slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.ISelectorStatics shape=51 reverse=144 static
             in class type=Windows.UI.Xaml.DependencyObject name=element
@@ -3623,21 +3623,21 @@ class Windows.UI.Xaml.Controls.Primitives.Thumb activatable python_type
     event drag_completed
         add add_DragCompleted slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IThumb shape=51 reverse=144
             in delegate type=Windows.UI.Xaml.Controls.Primitives.DragCompletedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DragCompleted slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IThumb shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event drag_delta
         add add_DragDelta slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IThumb shape=51 reverse=100
             in delegate type=Windows.UI.Xaml.Controls.Primitives.DragDeltaEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DragDelta slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IThumb shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event drag_started
         add add_DragStarted slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IThumb shape=51 reverse=44
             in delegate type=Windows.UI.Xaml.Controls.Primitives.DragStartedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DragStarted slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IThumb shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method cancel_drag
         method CancelDrag slot=13 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IThumb shape=0 reverse=169
 
@@ -3698,21 +3698,21 @@ class Windows.UI.Xaml.Controls.Primitives.ToggleButton composable python_type
     event checked
         add add_Checked slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IToggleButton shape=51 reverse=124
             in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Checked slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IToggleButton shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event indeterminate
         add add_Indeterminate slot=14 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IToggleButton shape=51 reverse=187
             in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Indeterminate slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IToggleButton shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event unchecked
         add add_Unchecked slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IToggleButton shape=51 reverse=163
             in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Unchecked slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IToggleButton shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method _on_toggle
         method OnToggle slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Controls.Primitives.IToggleButtonOverrides shape=0 reverse=16 overridable
 
@@ -3796,6 +3796,9 @@ class System.Single external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IPropertyValue external
     py winrt.windows.foundation._IPropertyValue

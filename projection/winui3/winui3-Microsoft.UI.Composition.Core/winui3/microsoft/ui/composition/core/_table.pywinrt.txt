@@ -17,9 +17,9 @@ class Microsoft.UI.Composition.Core.CompositorController activatable python_type
     event commit_needed
         add add_CommitNeeded slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Core.ICompositorController shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Composition.Core.CompositorController,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CommitNeeded slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Core.ICompositorController shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method commit
@@ -48,6 +48,9 @@ class Microsoft.UI.Composition.Compositor external
 
 class System.Object external
     py winrt.system.Object
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

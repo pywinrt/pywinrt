@@ -128,9 +128,9 @@ class Windows.AI.Actions.ActionInvocationContext python_type closeable
             in enum32 type=Windows.AI.Actions.ActionInvocationResult name=value
     property extended_error
         get get_ExtendedError slot=13 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=4 reverse=173
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
         put put_ExtendedError slot=14 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationContext shape=24
-            in hresult name=value
+            in hresult type=Windows.Foundation.HResult name=value
     property entity_factory
         get get_EntityFactory slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=4 reverse=22
             out class type=Windows.AI.Actions.ActionEntityFactory return
@@ -444,9 +444,9 @@ class Windows.AI.Actions.StreamingTextActionEntity python_type
     event text_changed
         add add_TextChanged slot=9 inputs=1 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.AI.Actions.StreamingTextActionEntity,Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TextChanged slot=10 inputs=1 outputs=0 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_text
         method GetText slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=4 reverse=43
             out string return
@@ -528,6 +528,12 @@ class Windows.AI.Actions.Hosting.ActionCatalog external
 
 class Windows.ApplicationModel.Contacts.Contact external
     py winrt.windows.applicationmodel.contacts.Contact
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable

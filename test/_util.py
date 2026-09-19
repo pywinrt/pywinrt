@@ -27,7 +27,7 @@ def skip_without_projection() -> None:
     Delete the call from a module once the interpreter covers what it tests;
     ``test_projection.py``, ``test_delegates.py``, ``test_implements.py``,
     ``test_array.py``, ``test_buffer.py``, ``test_python_collections.py`` and
-    ``test_test_component.py`` cover the part that is already there.
+    ``test_test_component.py`` cover the part that is there.
     """
     raise unittest.SkipTest("winrt-runtime does not interpret this part of a table yet")
 

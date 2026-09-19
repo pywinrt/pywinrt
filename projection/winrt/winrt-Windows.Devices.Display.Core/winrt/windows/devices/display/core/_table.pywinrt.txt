@@ -132,27 +132,27 @@ class Windows.Devices.Display.Core.DisplayManager python_type closeable
     event changed
         add add_Changed slot=19 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=51 reverse=224
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Changed slot=20 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManager shape=26 reverse=399
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event disabled
         add add_Disabled slot=17 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Disabled slot=18 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManager shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enabled
         add add_Enabled slot=15 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Enabled slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManager shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event paths_failed_or_invalidated
         add add_PathsFailedOrInvalidated slot=21 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManager shape=51 reverse=233
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager,Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PathsFailedOrInvalidated slot=22 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayManager shape=26 reverse=400
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create static
@@ -279,7 +279,7 @@ class Windows.Devices.Display.Core.DisplayManagerResultWithState python_type
             out enum32 type=Windows.Devices.Display.Core.DisplayManagerResult return
     property extended_error_code
         get get_ExtendedErrorCode slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerResultWithState shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property state
         get get_State slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayManagerResultWithState shape=4 reverse=62
             out class type=Windows.Devices.Display.Core.DisplayState return
@@ -352,9 +352,9 @@ class Windows.Devices.Display.Core.DisplayMuxDevice python_type closeable
     event changed
         add add_Changed slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayMuxDevice,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Changed slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayMuxDevice shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
@@ -549,9 +549,9 @@ class Windows.Devices.Display.Core.DisplaySource python_type
     event status_changed
         add add_StatusChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplaySource2 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplaySource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StatusChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplaySource2 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_metadata
         method GetMetadata slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Display.Core.IDisplaySource shape=94 reverse=87
             in guid name=Key
@@ -632,7 +632,7 @@ class Windows.Devices.Display.Core.DisplayStateOperationResult python_type
     requires Windows.Devices.Display.Core.IDisplayStateOperationResult
     property extended_error_code
         get get_ExtendedErrorCode slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayStateOperationResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayStateOperationResult shape=4 reverse=22
             out enum32 type=Windows.Devices.Display.Core.DisplayStateOperationStatus return
@@ -848,7 +848,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Display.Core.Displa
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Display.Core.DisplayMuxDevice> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1893,6 +1893,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

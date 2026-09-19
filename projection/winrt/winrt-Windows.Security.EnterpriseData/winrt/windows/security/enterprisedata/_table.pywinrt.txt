@@ -358,7 +358,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -387,7 +387,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -416,7 +416,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.Buf
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.BufferProtectUnprotectResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -445,7 +445,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.Dat
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.DataProtectionInfo> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -474,7 +474,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.Fil
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.FileProtectionInfo> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -503,7 +503,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.Fil
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.FileProtectionStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -532,7 +532,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.Pro
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectedContainerExportResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -561,7 +561,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.Pro
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectedContainerImportResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -590,7 +590,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.Pro
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectedFileCreateResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -619,7 +619,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.Pro
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -953,27 +953,27 @@ class Windows.Security.EnterpriseData.ProtectionPolicyManager python_type
     event policy_changed static
         add add_PolicyChanged slot=12 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=51 reverse=163 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PolicyChanged slot=13 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=26 reverse=181 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event protected_access_resumed static
         add add_ProtectedAccessResumed slot=15 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 reverse=196 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ProtectedAccessResumed slot=16 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=26 reverse=397 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event protected_access_suspending static
         add add_ProtectedAccessSuspending slot=13 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 reverse=174 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ProtectedAccessSuspending slot=14 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=26 reverse=192 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event protected_content_revoked static
         add add_ProtectedContentRevoked slot=17 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 reverse=211 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ProtectedContentRevoked slot=18 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=26 reverse=398 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method check_access static
         method CheckAccess slot=19 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=117 reverse=225 static
             in string name=sourceIdentity
@@ -1169,6 +1169,12 @@ class Windows.Foundation.Deferral external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

@@ -49,9 +49,9 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.ApplicationMo
     event vector_changed
         add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<Windows.ApplicationModel.Search.Core.SearchSuggestion> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=173 role=append
             in class type=Windows.ApplicationModel.Search.Core.SearchSuggestion name=value
@@ -244,15 +244,15 @@ class Windows.ApplicationModel.Search.Core.SearchSuggestionManager activatable p
     event requesting_focus_on_keyboard_input
         add add_RequestingFocusOnKeyboardInput slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.Core.SearchSuggestionManager,Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RequestingFocusOnKeyboardInput slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event suggestions_requested
         add add_SuggestionsRequested slot=18 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.Core.SearchSuggestionManager,Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SuggestionsRequested slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_to_history
         method AddToHistory slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionManager shape=4 reverse=194
             in string name=queryText
@@ -338,6 +338,9 @@ class Windows.ApplicationModel.Search.SearchQueryLinguisticDetails external
 
 class Windows.ApplicationModel.Search.SearchSuggestionsRequest external
     py winrt.windows.applicationmodel.search.SearchSuggestionsRequest
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler

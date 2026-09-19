@@ -190,15 +190,15 @@ class Windows.Media.Capture.Core.VariablePhotoSequenceCapture python_type
     event photo_captured
         add add_PhotoCaptured slot=9 inputs=1 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Core.VariablePhotoSequenceCapture,Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PhotoCaptured slot=10 inputs=1 outputs=0 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
         add add_Stopped slot=11 inputs=1 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Core.VariablePhotoSequenceCapture,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Stopped slot=12 inputs=1 outputs=0 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method finish_async
         method FinishAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=4 reverse=62
             out interface type=Windows.Foundation.IAsyncAction return
@@ -217,6 +217,9 @@ class System.Object external
 
 class System.UInt32 external
     py winrt.system.UInt32
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

@@ -327,21 +327,21 @@ class Microsoft.UI.Xaml.Documents.Hyperlink activatable python_type
     event click
         add add_Click slot=33 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=51 reverse=286
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Documents.Hyperlink,Microsoft.UI.Xaml.Documents.HyperlinkClickEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Click slot=34 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=26 reverse=291
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event got_focus
         add add_GotFocus slot=35 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=51 reverse=293
             in delegate type=Microsoft.UI.Xaml.RoutedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GotFocus slot=36 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=26 reverse=298
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event lost_focus
         add add_LostFocus slot=37 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=51 reverse=300
             in delegate type=Microsoft.UI.Xaml.RoutedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LostFocus slot=38 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=26 reverse=305
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method focus
         method Focus slot=39 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=51 reverse=308
             in enum32 type=Microsoft.UI.Xaml.FocusState name=value
@@ -1128,21 +1128,21 @@ class Microsoft.UI.Xaml.Documents.TextElement composable python_type
     event access_key_display_dismissed
         add add_AccessKeyDisplayDismissed slot=51 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Documents.ITextElement shape=51 reverse=356
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Documents.TextElement,Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccessKeyDisplayDismissed slot=52 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.ITextElement shape=26 reverse=362
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event access_key_display_requested
         add add_AccessKeyDisplayRequested slot=49 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Documents.ITextElement shape=51 reverse=348
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Documents.TextElement,Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccessKeyDisplayRequested slot=50 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.ITextElement shape=26 reverse=353
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event access_key_invoked
         add add_AccessKeyInvoked slot=53 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Documents.ITextElement shape=51 reverse=365
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Documents.TextElement,Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccessKeyInvoked slot=54 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.ITextElement shape=26 reverse=370
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_name
         method FindName slot=55 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Documents.ITextElement shape=51 reverse=371
             in string name=name
@@ -1849,6 +1849,9 @@ class Microsoft.UI.Xaml.Media.FontFamily external
 
 enum Microsoft.UI.Xaml.Media.StyleSimulations external
     py winui3.microsoft.ui.xaml.media.StyleSimulations
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect

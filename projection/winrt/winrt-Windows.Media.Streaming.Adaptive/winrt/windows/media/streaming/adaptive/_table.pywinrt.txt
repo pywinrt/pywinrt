@@ -75,33 +75,33 @@ class Windows.Media.Streaming.Adaptive.AdaptiveMediaSource python_type closeable
     event download_bitrate_changed
         add add_DownloadBitrateChanged slot=22 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=51 reverse=238
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DownloadBitrateChanged slot=23 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=26 reverse=245
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event download_completed
         add add_DownloadCompleted slot=28 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=51 reverse=264
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DownloadCompleted slot=29 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=26 reverse=268
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event download_failed
         add add_DownloadFailed slot=30 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=51 reverse=271
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DownloadFailed slot=31 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=26 reverse=277
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event download_requested
         add add_DownloadRequested slot=26 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=51 reverse=256
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DownloadRequested slot=27 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=26 reverse=262
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event playback_bitrate_changed
         add add_PlaybackBitrateChanged slot=24 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=51 reverse=248
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSource,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PlaybackBitrateChanged slot=25 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSource shape=26 reverse=254
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_from_stream_async static
@@ -185,7 +185,7 @@ class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult python_
             out enum32 type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus return
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceCreationResult2 shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 enum Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationStatus python_type
     py AdaptiveMediaSourceCreationStatus
@@ -227,7 +227,7 @@ class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEve
             out reference type=Windows.Foundation.IReference<System.UInt64> return
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs2 shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property resource_content_type
         get get_ResourceContentType slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnosticAvailableEventArgs3 shape=4 reverse=43
             out string return
@@ -247,9 +247,9 @@ class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics python_typ
     event diagnostic_available
         add add_DiagnosticAvailable slot=6 inputs=1 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnostics shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DiagnosticAvailable slot=7 inputs=1 outputs=0 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDiagnostics shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs python_type
     py AdaptiveMediaSourceDownloadBitrateChangedEventArgs
@@ -333,7 +333,7 @@ class Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArg
             out class type=Windows.Foundation.Uri return
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2 shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property position
         get get_Position slot=9 inputs=0 outputs=1 declaring=Windows.Media.Streaming.Adaptive.IAdaptiveMediaSourceDownloadFailedEventArgs2 shape=4 reverse=99
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
@@ -584,7 +584,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Streaming.Adaptive.Ad
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1646,6 +1646,12 @@ enum Windows.Foundation.AsyncStatus external
 
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

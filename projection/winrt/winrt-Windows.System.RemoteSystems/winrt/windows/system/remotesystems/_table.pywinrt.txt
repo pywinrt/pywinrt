@@ -71,7 +71,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -100,7 +100,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.Remote
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystem> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -129,7 +129,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.Remote
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystemAccessStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -158,7 +158,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.Remote
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystemSessionCreationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -187,7 +187,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.Remote
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteSystems.RemoteSystemSessionJoinResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1076,9 +1076,9 @@ class Windows.System.RemoteSystems.RemoteSystemSession python_type closeable
     event disconnected
         add add_Disconnected slot=9 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSession,Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Disconnected slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_participant_watcher
@@ -1118,9 +1118,9 @@ class Windows.System.RemoteSystems.RemoteSystemSessionController python_type
     event join_requested
         add add_JoinRequested slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionController shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionController,Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_JoinRequested slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionController shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_session_async
         method CreateSessionAsync slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionController shape=4 reverse=99
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionCreationResult> return
@@ -1196,9 +1196,9 @@ class Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener activat
     event invitation_received
         add add_InvitationReceived slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInvitationListener shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener,Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_InvitationReceived slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInvitationListener shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs python_type
     py RemoteSystemSessionInvitationReceivedEventArgs
@@ -1270,9 +1270,9 @@ class Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel python_type
     event value_set_received
         add add_ValueSetReceived slot=10 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel,Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ValueSetReceived slot=11 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method broadcast_value_set_async
         method BroadcastValueSetAsync slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=51 reverse=44
             in class type=Windows.Foundation.Collections.ValueSet name=messageData
@@ -1347,21 +1347,21 @@ class Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher python_
     event added
         add add_Added slot=9 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher,Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Added slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
         add add_EnumerationCompleted slot=13 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=14 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
         add add_Removed slot=11 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher,Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Removed slot=12 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=6 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=0 reverse=16
     method stop
@@ -1412,21 +1412,21 @@ class Windows.System.RemoteSystems.RemoteSystemSessionWatcher python_type
     event added
         add add_Added slot=9 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionWatcher,Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Added slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
         add add_Removed slot=13 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionWatcher,Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Removed slot=14 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
         add add_Updated slot=11 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionWatcher,Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Updated slot=12 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=6 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=0 reverse=16
     method stop
@@ -1481,33 +1481,33 @@ class Windows.System.RemoteSystems.RemoteSystemWatcher python_type
     event remote_system_added
         add add_RemoteSystemAdded slot=8 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemAddedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RemoteSystemAdded slot=9 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event remote_system_removed
         add add_RemoteSystemRemoved slot=12 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RemoteSystemRemoved slot=13 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event remote_system_updated
         add add_RemoteSystemUpdated slot=10 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RemoteSystemUpdated slot=11 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
         add add_EnumerationCompleted slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemEnumerationCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event error_occurred
         add add_ErrorOccurred slot=8 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher2 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ErrorOccurred slot=9 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher2 shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=6 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=0 reverse=16
     method stop
@@ -1742,6 +1742,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

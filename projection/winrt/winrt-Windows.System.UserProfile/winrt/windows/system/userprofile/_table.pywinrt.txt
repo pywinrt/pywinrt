@@ -262,7 +262,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -291,7 +291,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -320,7 +320,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Uri> concrete aw
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Uri> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -349,7 +349,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.UserProfile.SetAccou
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.UserProfile.SetAccountPictureResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -378,7 +378,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.UserProfile.SetImage
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.UserProfile.SetImageFeedResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -616,9 +616,9 @@ class Windows.System.UserProfile.UserInformation static python_type
     event account_picture_changed static
         add add_AccountPictureChanged slot=13 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=51 reverse=174 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=changeHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccountPictureChanged slot=14 inputs=1 outputs=0 declaring=Windows.System.UserProfile.IUserInformationStatics shape=26 reverse=192 static deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_account_picture static deprecated
         method GetAccountPicture slot=8 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=51 reverse=65 static deprecated
             in enum32 type=Windows.System.UserProfile.AccountPictureKind name=kind
@@ -704,6 +704,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

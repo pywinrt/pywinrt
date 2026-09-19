@@ -49,15 +49,15 @@ class Windows.Devices.Printers.Extensions.Print3DWorkflow python_type
     event print_requested
         add add_PrintRequested slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extensions.Print3DWorkflow,Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PrintRequested slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow shape=26 reverse=156
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event printer_changed
         add add_PrinterChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extensions.Print3DWorkflow,Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PrinterChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow2 shape=26 reverse=53
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method get_print_model_package
         method GetPrintModelPackage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrint3DWorkflow shape=4 reverse=43
             out object return
@@ -130,9 +130,9 @@ class Windows.Devices.Printers.Extensions.PrintTaskConfiguration python_type
     event save_requested
         add add_SaveRequested slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Printers.Extensions.IPrintTaskConfiguration shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extensions.PrintTaskConfiguration,Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SaveRequested slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Printers.Extensions.IPrintTaskConfiguration shape=26 reverse=82
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
 
 class Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest python_type
     py PrintTaskConfigurationSaveRequest
@@ -203,6 +203,9 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Printers.Extension
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in class type=Windows.Devices.Printers.Extensions.PrintTaskConfiguration name=sender
             in class type=Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs name=args
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler

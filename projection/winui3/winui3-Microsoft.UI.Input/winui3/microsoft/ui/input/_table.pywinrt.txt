@@ -274,57 +274,57 @@ class Microsoft.UI.Input.GestureRecognizer activatable python_type
     event cross_sliding
         add add_CrossSliding slot=62 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.GestureRecognizer,Microsoft.UI.Input.CrossSlidingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CrossSliding slot=63 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IGestureRecognizer shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event dragging
         add add_Dragging slot=52 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IGestureRecognizer shape=51 reverse=360
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.GestureRecognizer,Microsoft.UI.Input.DraggingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Dragging slot=53 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IGestureRecognizer shape=26 reverse=367
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event holding
         add add_Holding slot=50 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IGestureRecognizer shape=51 reverse=352
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.GestureRecognizer,Microsoft.UI.Input.HoldingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Holding slot=51 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IGestureRecognizer shape=26 reverse=357
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_completed
         add add_ManipulationCompleted slot=60 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.GestureRecognizer,Microsoft.UI.Input.ManipulationCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ManipulationCompleted slot=61 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IGestureRecognizer shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_inertia_starting
         add add_ManipulationInertiaStarting slot=58 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.GestureRecognizer,Microsoft.UI.Input.ManipulationInertiaStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ManipulationInertiaStarting slot=59 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IGestureRecognizer shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_started
         add add_ManipulationStarted slot=54 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IGestureRecognizer shape=51 reverse=369
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.GestureRecognizer,Microsoft.UI.Input.ManipulationStartedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ManipulationStarted slot=55 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IGestureRecognizer shape=26 reverse=372
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_updated
         add add_ManipulationUpdated slot=56 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IGestureRecognizer shape=51 reverse=373
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.GestureRecognizer,Microsoft.UI.Input.ManipulationUpdatedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ManipulationUpdated slot=57 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IGestureRecognizer shape=26 reverse=377
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event right_tapped
         add add_RightTapped slot=48 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IGestureRecognizer shape=51 reverse=344
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.GestureRecognizer,Microsoft.UI.Input.RightTappedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RightTapped slot=49 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IGestureRecognizer shape=26 reverse=350
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tapped
         add add_Tapped slot=46 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IGestureRecognizer shape=51 reverse=335
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.GestureRecognizer,Microsoft.UI.Input.TappedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Tapped slot=47 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IGestureRecognizer shape=26 reverse=342
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method can_be_double_tap
         method CanBeDoubleTap slot=39 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IGestureRecognizer shape=51 reverse=308
             in class type=Microsoft.UI.Input.PointerPoint name=value
@@ -845,9 +845,9 @@ class Microsoft.UI.Input.InputActivationListener python_type
     event input_activation_changed
         add add_InputActivationChanged slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputActivationListener shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputActivationListener,Microsoft.UI.Input.InputActivationListenerActivationChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_InputActivationChanged slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputActivationListener shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_island static
         method GetForIsland slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputActivationListenerStatics2 shape=51 reverse=24 static
             in class type=Microsoft.UI.Content.ContentIsland name=island
@@ -950,21 +950,21 @@ class Microsoft.UI.Input.InputFocusController python_type
     event got_focus
         add add_GotFocus slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputFocusController shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputFocusController,Microsoft.UI.Input.FocusChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GotFocus slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputFocusController shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event lost_focus
         add add_LostFocus slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputFocusController shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputFocusController,Microsoft.UI.Input.FocusChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LostFocus slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputFocusController shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigate_focus_requested
         add add_NavigateFocusRequested slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputFocusController2 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputFocusController,Microsoft.UI.Input.FocusNavigationRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NavigateFocusRequested slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputFocusController2 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method depart_focus
         method DepartFocus slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputFocusController2 shape=51 reverse=24
             in class type=Microsoft.UI.Input.FocusNavigationRequest name=request
@@ -991,9 +991,9 @@ class Microsoft.UI.Input.InputFocusNavigationHost python_type
     event depart_focus_requested
         add add_DepartFocusRequested slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputFocusNavigationHost shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputFocusNavigationHost,Microsoft.UI.Input.FocusNavigationRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DepartFocusRequested slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputFocusNavigationHost shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_site_bridge static
         method GetForSiteBridge slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputFocusNavigationHostStatics shape=51 reverse=24 static
             in interface type=Microsoft.UI.Content.IContentSiteBridge name=site
@@ -1019,39 +1019,39 @@ class Microsoft.UI.Input.InputKeyboardSource python_type
     event character_received
         add add_CharacterReceived slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputKeyboardSource,Microsoft.UI.Input.CharacterReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CharacterReceived slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event context_menu_key
         add add_ContextMenuKey slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputKeyboardSource,Microsoft.UI.Input.ContextMenuKeyEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContextMenuKey slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event key_down
         add add_KeyDown slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputKeyboardSource,Microsoft.UI.Input.KeyEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_KeyDown slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event key_up
         add add_KeyUp slot=14 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputKeyboardSource,Microsoft.UI.Input.KeyEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_KeyUp slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event system_key_down
         add add_SystemKeyDown slot=16 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputKeyboardSource,Microsoft.UI.Input.KeyEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SystemKeyDown slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event system_key_up
         add add_SystemKeyUp slot=18 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputKeyboardSource,Microsoft.UI.Input.KeyEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SystemKeyUp slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_current_key_state
         method GetCurrentKeyState slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=51 reverse=24
             in enum32 type=Windows.System.VirtualKey name=virtualKey
@@ -1079,9 +1079,9 @@ class Microsoft.UI.Input.InputLightDismissAction python_type
     event dismissed
         add add_Dismissed slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputLightDismissAction shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputLightDismissAction,Microsoft.UI.Input.InputLightDismissEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Dismissed slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputLightDismissAction shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_window_id static
         method GetForWindowId slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputLightDismissActionStatics shape=97 static
             in struct type=Microsoft.UI.WindowId name=windowId
@@ -1106,75 +1106,75 @@ class Microsoft.UI.Input.InputNonClientPointerSource python_type
     event caption_tapped
         add add_CaptionTapped slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputNonClientPointerSource,Microsoft.UI.Input.NonClientCaptionTappedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CaptionTapped slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_entered
         add add_PointerEntered slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputNonClientPointerSource,Microsoft.UI.Input.NonClientPointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerEntered slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_exited
         add add_PointerExited slot=15 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputNonClientPointerSource,Microsoft.UI.Input.NonClientPointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerExited slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_moved
         add add_PointerMoved slot=17 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputNonClientPointerSource,Microsoft.UI.Input.NonClientPointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerMoved slot=18 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_pressed
         add add_PointerPressed slot=19 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=51 reverse=224
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputNonClientPointerSource,Microsoft.UI.Input.NonClientPointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerPressed slot=20 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=26 reverse=399
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_released
         add add_PointerReleased slot=21 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=51 reverse=233
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputNonClientPointerSource,Microsoft.UI.Input.NonClientPointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerReleased slot=22 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=26 reverse=400
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event regions_changed
         add add_RegionsChanged slot=23 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=51 reverse=243
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputNonClientPointerSource,Microsoft.UI.Input.NonClientRegionsChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RegionsChanged slot=24 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event entered_move_size
         add add_EnteredMoveSize slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputNonClientPointerSource2 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputNonClientPointerSource,Microsoft.UI.Input.EnteredMoveSizeEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnteredMoveSize slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource2 shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event entering_move_size
         add add_EnteringMoveSize slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputNonClientPointerSource2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputNonClientPointerSource,Microsoft.UI.Input.EnteringMoveSizeEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnteringMoveSize slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event exited_move_size
         add add_ExitedMoveSize slot=14 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputNonClientPointerSource2 shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputNonClientPointerSource,Microsoft.UI.Input.ExitedMoveSizeEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ExitedMoveSize slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource2 shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event window_rect_changed
         add add_WindowRectChanged slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputNonClientPointerSource2 shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputNonClientPointerSource,Microsoft.UI.Input.WindowRectChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_WindowRectChanged slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource2 shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event window_rect_changing
         add add_WindowRectChanging slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputNonClientPointerSource2 shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputNonClientPointerSource,Microsoft.UI.Input.WindowRectChangingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_WindowRectChanging slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource2 shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear_all_region_rects
         method ClearAllRegionRects slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Input.IInputNonClientPointerSource shape=0 reverse=37
     method clear_region_rects
@@ -1221,63 +1221,63 @@ class Microsoft.UI.Input.InputPointerSource python_type
     event pointer_capture_lost
         add add_PointerCaptureLost slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputPointerSource shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerCaptureLost slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputPointerSource shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_entered
         add add_PointerEntered slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputPointerSource shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerEntered slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputPointerSource shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_exited
         add add_PointerExited slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputPointerSource shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerExited slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputPointerSource shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_moved
         add add_PointerMoved slot=15 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputPointerSource shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerMoved slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputPointerSource shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_pressed
         add add_PointerPressed slot=17 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputPointerSource shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerPressed slot=18 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputPointerSource shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_released
         add add_PointerReleased slot=19 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputPointerSource shape=51 reverse=224
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerReleased slot=20 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputPointerSource shape=26 reverse=399
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_routed_away
         add add_PointerRoutedAway slot=21 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputPointerSource shape=51 reverse=233
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerRoutedAway slot=22 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputPointerSource shape=26 reverse=400
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_routed_released
         add add_PointerRoutedReleased slot=23 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputPointerSource shape=51 reverse=243
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerRoutedReleased slot=24 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputPointerSource shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_routed_to
         add add_PointerRoutedTo slot=25 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputPointerSource shape=51 reverse=253
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerRoutedTo slot=26 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputPointerSource shape=26 reverse=257
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pointer_wheel_changed
         add add_PointerWheelChanged slot=27 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputPointerSource shape=51 reverse=260
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PointerWheelChanged slot=28 inputs=1 outputs=0 declaring=Microsoft.UI.Input.IInputPointerSource shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_island static
         method GetForIsland slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputPointerSourceStatics shape=51 reverse=24 static
             in class type=Microsoft.UI.Content.ContentIsland name=island
@@ -2073,6 +2073,9 @@ interface Microsoft.UI.Content.IContentSiteLink external
 
 class Microsoft.UI.Dispatching.DispatcherQueue external
     py winui3.microsoft.ui.dispatching.DispatcherQueue
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable

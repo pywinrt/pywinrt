@@ -90,7 +90,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.FindAllAccountsResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -119,7 +119,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -148,7 +148,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -177,7 +177,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAcc
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Credentials.WebAccount> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -206,7 +206,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAcc
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Credentials.WebAccountProvider> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -555,27 +555,27 @@ class Windows.Security.Authentication.Web.Core.WebAccountMonitor python_type
     event default_sign_in_account_changed
         add add_DefaultSignInAccountChanged slot=10 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DefaultSignInAccountChanged slot=11 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
         add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor,Windows.Security.Authentication.Web.Core.WebAccountEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
         add add_Updated slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor,Windows.Security.Authentication.Web.Core.WebAccountEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Updated slot=7 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event account_picture_updated
         add add_AccountPictureUpdated slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor,Windows.Security.Authentication.Web.Core.WebAccountEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccountPictureUpdated slot=7 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Core.IWebAccountMonitor2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResponse python_type
     py WebAuthenticationAddAccountResponse
@@ -868,6 +868,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

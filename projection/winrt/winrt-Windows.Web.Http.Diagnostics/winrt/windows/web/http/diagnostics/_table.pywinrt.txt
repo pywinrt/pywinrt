@@ -11,21 +11,21 @@ class Windows.Web.Http.Diagnostics.HttpDiagnosticProvider python_type
     event request_response_completed
         add add_RequestResponseCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider,Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RequestResponseCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event request_sent
         add add_RequestSent slot=8 inputs=1 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider,Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RequestSent slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event response_received
         add add_ResponseReceived slot=10 inputs=1 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider,Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ResponseReceived slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_from_process_diagnostic_info static
         method CreateFromProcessDiagnosticInfo slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Diagnostics.IHttpDiagnosticProviderStatics shape=51 reverse=24 static
             in class type=Windows.System.Diagnostics.ProcessDiagnosticInfo name=processDiagnosticInfo
@@ -401,6 +401,9 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Web.Http.Diagnostics.HttpD
 
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IPropertyValue external
     py winrt.windows.foundation._IPropertyValue

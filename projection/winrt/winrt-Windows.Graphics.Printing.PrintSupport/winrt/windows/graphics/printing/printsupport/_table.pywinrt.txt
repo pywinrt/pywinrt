@@ -146,7 +146,7 @@ class Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetec
             out enum32 type=Windows.Graphics.Printing.PrintSupport.IppCommunicationErrorKind return
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     method get_deferral
         method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs shape=4 reverse=99
             out class type=Windows.Foundation.Deferral return
@@ -164,27 +164,27 @@ class Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession python
     event print_device_capabilities_changed
         add add_PrintDeviceCapabilitiesChanged slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PrintDeviceCapabilitiesChanged slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event print_ticket_validation_requested
         add add_PrintTicketValidationRequested slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PrintTicketValidationRequested slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event printer_selected
         add add_PrinterSelected slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PrinterSelected slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event communication_error_detected
         add add_CommunicationErrorDetected slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession3 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CommunicationErrorDetected slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession3 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=11 inputs=0 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession shape=0 reverse=137
 
@@ -548,6 +548,12 @@ class Windows.Devices.Printers.IppPrintDevice external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler

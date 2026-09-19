@@ -117,6 +117,7 @@ namespace py::table
         inline constexpr uint32_t stringable = 1 << 18;
         inline constexpr uint32_t buffer = 1 << 19;
         inline constexpr uint32_t buffer_length = 1 << 20;
+        inline constexpr uint32_t integer = 1 << 21;
     } // namespace type_flags
 
     enum class group_kind : uint32_t

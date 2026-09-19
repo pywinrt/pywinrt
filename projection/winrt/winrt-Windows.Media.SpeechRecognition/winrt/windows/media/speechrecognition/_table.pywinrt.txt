@@ -49,7 +49,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -78,7 +78,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.Spe
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -107,7 +107,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.SpeechRecognition.Spe
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.SpeechRecognition.SpeechRecognitionResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -662,15 +662,15 @@ class Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession python_
     event completed
         add add_Completed slot=14 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession,Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Completed slot=15 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=26 reverse=200
-            in event_token name=value
+            in event_token type=Windows.Foundation.EventRegistrationToken name=value
     event result_generated
         add add_ResultGenerated slot=16 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession,Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ResultGenerated slot=17 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=26 reverse=215
-            in event_token name=value
+            in event_token type=Windows.Foundation.EventRegistrationToken name=value
     method cancel_async
         method CancelAsync slot=11 inputs=0 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechContinuousRecognitionSession shape=4 reverse=141
             out interface type=Windows.Foundation.IAsyncAction return
@@ -984,21 +984,21 @@ class Windows.Media.SpeechRecognition.SpeechRecognizer activatable python_type c
     event recognition_quality_degrading
         add add_RecognitionQualityDegrading slot=13 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechRecognizer,Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs> name=speechRecognitionQualityDegradingHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RecognitionQualityDegrading slot=14 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=26 reverse=192
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event state_changed
         add add_StateChanged slot=15 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechRecognizer,Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs> name=stateChangedHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=16 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer shape=26 reverse=397
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event hypothesis_generated
         add add_HypothesisGenerated slot=9 inputs=1 outputs=1 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer2 shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SpeechRecognition.SpeechRecognizer,Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HypothesisGenerated slot=10 inputs=1 outputs=0 declaring=Windows.Media.SpeechRecognition.ISpeechRecognizer2 shape=26 reverse=134
-            in event_token name=value
+            in event_token type=Windows.Foundation.EventRegistrationToken name=value
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method compile_constraints_async
@@ -1150,6 +1150,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

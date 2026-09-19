@@ -108,27 +108,27 @@ class Windows.ApplicationModel.DataTransfer.Clipboard static python_type
     event history_changed static
         add add_HistoryChanged slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=51 reverse=174 static
             in delegate type=Windows.Foundation.EventHandler<Windows.ApplicationModel.DataTransfer.ClipboardHistoryChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HistoryChanged slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=26 reverse=192 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event history_enabled_changed static
         add add_HistoryEnabledChanged slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=51 reverse=211 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HistoryEnabledChanged slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=26 reverse=398 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event roaming_enabled_changed static
         add add_RoamingEnabledChanged slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=51 reverse=196 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RoamingEnabledChanged slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=26 reverse=397 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event content_changed static
         add add_ContentChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics shape=51 reverse=124 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContentChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics shape=26 reverse=156 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear static
         method Clear slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics shape=0 reverse=93 static
     method clear_history static
@@ -252,27 +252,27 @@ class Windows.ApplicationModel.DataTransfer.DataPackage activatable python_type
     event destroyed
         add add_Destroyed slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Destroyed slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event operation_completed
         add add_OperationCompleted slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage,Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OperationCompleted slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event share_completed
         add add_ShareCompleted slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage3 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage,Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ShareCompleted slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage3 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event share_canceled
         add add_ShareCanceled slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage4 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ShareCanceled slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage4 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_view
         method GetView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 reverse=22
             out class type=Windows.ApplicationModel.DataTransfer.DataPackageView return
@@ -645,21 +645,21 @@ class Windows.ApplicationModel.DataTransfer.DataTransferManager python_type
     event data_requested
         add add_DataRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataTransferManager,Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DataRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event target_application_chosen
         add add_TargetApplicationChosen slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataTransferManager,Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TargetApplicationChosen slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event share_providers_requested
         add add_ShareProvidersRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataTransferManager,Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ShareProvidersRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
         method GetForCurrentView slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics shape=4 reverse=43 static
             out class type=Windows.ApplicationModel.DataTransfer.DataTransferManager return
@@ -720,7 +720,7 @@ interface Windows.Foundation.IAsyncOperation<System.Object> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Object> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -749,7 +749,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -778,7 +778,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransf
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -807,7 +807,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMap
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IMapView<System.String,Windows.Storage.Streams.RandomAccessStreamReference>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -836,7 +836,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -865,7 +865,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Uri> concrete aw
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Uri> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -894,7 +894,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.Pro
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -923,7 +923,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concre
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -952,7 +952,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.RandomAcces
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.RandomAccessStreamReference> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2074,6 +2074,12 @@ class Windows.Foundation.Deferral external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

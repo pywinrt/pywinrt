@@ -234,9 +234,9 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic pytho
     event value_changed
         add add_ValueChanged slot=20 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs> name=valueChangedHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ValueChanged slot=21 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic shape=26 reverse=234
-            in event_token name=valueChangedEventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=valueChangedEventCookie
     method convert_short_id_to_uuid static deprecated
         method ConvertShortIdToUuid slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristicStatics shape=51 reverse=24 static deprecated
             in uint16 name=shortId
@@ -839,21 +839,21 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic 
     event read_requested
         add add_ReadRequested slot=18 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattLocalCharacteristic shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic,Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadRequested slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattLocalCharacteristic shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event subscribed_clients_changed
         add add_SubscribedClientsChanged slot=16 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattLocalCharacteristic shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SubscribedClientsChanged slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattLocalCharacteristic shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event write_requested
         add add_WriteRequested slot=20 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattLocalCharacteristic shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic,Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_WriteRequested slot=21 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattLocalCharacteristic shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_descriptor_async
         method CreateDescriptorAsync slot=11 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattLocalCharacteristic shape=177
             in guid name=descriptorUuid
@@ -937,15 +937,15 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor pyth
     event read_requested
         add add_ReadRequested slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattLocalDescriptor shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor,Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ReadRequested slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattLocalDescriptor shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event write_requested
         add add_WriteRequested slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattLocalDescriptor shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor,Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_WriteRequested slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattLocalDescriptor shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorParameters activatable python_type
     py GattLocalDescriptorParameters
@@ -1215,9 +1215,9 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest python_t
     event state_changed
         add add_StateChanged slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattReadRequest shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest,Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattReadRequest shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method respond_with_protocol_error
         method RespondWithProtocolError slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattReadRequest shape=4 reverse=162
             in uint8 name=protocolError
@@ -1308,9 +1308,9 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider pyth
     event advertisement_status_changed
         add add_AdvertisementStatusChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProvider shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider,Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisementStatusChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AdvertisementStatusChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProvider shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_async static
         method CreateAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderStatics shape=94 reverse=35 static
             in guid name=serviceUuid
@@ -1487,15 +1487,15 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession python_type 
     event max_pdu_size_changed
         add add_MaxPduSizeChanged slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattSession shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MaxPduSizeChanged slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattSession shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event session_status_changed
         add add_SessionStatusChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattSession shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession,Windows.Devices.Bluetooth.GenericAttributeProfile.GattSessionStatusChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SessionStatusChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattSession shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_device_id_async static
@@ -1537,9 +1537,9 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient pyt
     event max_notification_size_changed
         add add_MaxNotificationSizeChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattSubscribedClient shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MaxNotificationSizeChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattSubscribedClient shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs python_type
     py GattValueChangedEventArgs
@@ -1577,9 +1577,9 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest python_
     event state_changed
         add add_StateChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattWriteRequest shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest,Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattWriteRequest shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method respond
         method Respond slot=12 inputs=0 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattWriteRequest shape=0 reverse=159
     method respond_with_protocol_error
@@ -1627,7 +1627,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1656,7 +1656,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1685,7 +1685,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1714,7 +1714,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1743,7 +1743,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1772,7 +1772,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1801,7 +1801,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1830,7 +1830,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1859,7 +1859,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattOpenStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1888,7 +1888,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1917,7 +1917,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1946,7 +1946,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1975,7 +1975,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2004,7 +2004,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2033,7 +2033,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2062,7 +2062,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2091,7 +2091,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceA
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Enumeration.DeviceAccessStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2120,7 +2120,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3133,6 +3133,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

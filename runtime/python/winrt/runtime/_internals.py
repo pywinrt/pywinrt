@@ -138,6 +138,36 @@ def alias_static_method(typ: type, alias: str, name: str) -> None:
     _add_alias(type(typ), typ, alias, name)
 
 
+def alias_field(typ: type, name: str) -> None:
+    """
+    Adds a deprecated property for the one field a projected type used to have.
+
+    A WinRT struct that holds a single integer - an HRESULT, an event token -
+    is projected as a subclass of ``int`` rather than as a wrapper, so the
+    value is the object itself. Reading the field by the name it had in
+    pywinrt v3.x still works and warns.
+
+    Args:
+        typ: The projected type.
+        name: The name the field had.
+    """
+
+    def field(self: Any) -> Any:
+        warnings.warn(
+            f"{typ.__name__}.{name} is deprecated, "
+            f"the value is the {typ.__name__} itself",
+            _LEGACY_METHOD_WARNING,
+            stacklevel=2,
+        )
+        return int(self)
+
+    field.__name__ = name
+    field.__qualname__ = f"{typ.__name__}.{name}"
+    field.__doc__ = f"Deprecated: the value is the {typ.__name__} itself."
+
+    setattr(typ, name, property(field))
+
+
 # NB: The types implemented in C cannot inherit from abc.ABC since Python 3.12
 # so we have to implement the protocols like this instead.
 # https://github.com/python/cpython/issues/103968#issuecomment-1589928055

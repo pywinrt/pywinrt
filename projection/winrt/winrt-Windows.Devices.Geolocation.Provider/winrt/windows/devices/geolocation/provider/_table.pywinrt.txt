@@ -27,9 +27,9 @@ class Windows.Devices.Geolocation.Provider.GeolocationProvider activatable pytho
     event is_overridden_changed
         add add_IsOverriddenChanged slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=51 reverse=100
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsOverriddenChanged slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear_override_position
         method ClearOverridePosition slot=8 inputs=0 outputs=0 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=0 reverse=55
     method set_override_position
@@ -58,3 +58,6 @@ enum Windows.Devices.Geolocation.PositionSource external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken

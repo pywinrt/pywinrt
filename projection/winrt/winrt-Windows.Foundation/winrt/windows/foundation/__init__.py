@@ -102,6 +102,8 @@ class PropertyType(enum.IntEnum):
     OTHER_TYPE_ARRAY = 1044
 
 winrt.runtime._internals.mixin_sequence(WwwFormUrlDecoder)
+winrt.runtime._internals.alias_field(EventRegistrationToken, "value")
+winrt.runtime._internals.alias_field(HResult, "value")
 AsyncActionCompletedHandler = typing.Callable[[IAsyncAction, AsyncStatus], None]
 AsyncActionProgressHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], TProgress], None]
 AsyncActionWithProgressCompletedHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], AsyncStatus], None]

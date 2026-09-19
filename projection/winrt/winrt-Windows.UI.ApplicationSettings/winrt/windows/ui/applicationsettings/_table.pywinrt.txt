@@ -13,9 +13,9 @@ class Windows.UI.ApplicationSettings.AccountsSettingsPane python_type
     event account_commands_requested
         add add_AccountCommandsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPane shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ApplicationSettings.AccountsSettingsPane,Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccountCommandsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPane shape=26 reverse=53
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_for_current_view static
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics shape=4 reverse=22 static
             out class type=Windows.UI.ApplicationSettings.AccountsSettingsPane return
@@ -651,9 +651,9 @@ class Windows.UI.ApplicationSettings.SettingsPane python_type
     event commands_requested
         add add_CommandsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPane shape=51 reverse=24 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ApplicationSettings.SettingsPane,Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CommandsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.ApplicationSettings.ISettingsPane shape=26 reverse=53 deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_for_current_view static deprecated
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneStatics shape=4 reverse=22 static deprecated
             out class type=Windows.UI.ApplicationSettings.SettingsPane return
@@ -775,6 +775,9 @@ delegate Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler 
     method -
         method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
             in class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand name=command
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

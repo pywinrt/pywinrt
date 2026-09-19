@@ -93,7 +93,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -122,7 +122,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Ide
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -151,7 +151,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Ide
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -180,7 +180,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Ide
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -209,7 +209,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Ide
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -238,7 +238,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Ide
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -365,9 +365,9 @@ class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationF
     event authentication_stage_changed static
         add add_AuthenticationStageChanged slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorAuthenticationStatics shape=51 reverse=65 static deprecated
             in delegate type=Windows.Foundation.EventHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AuthenticationStageChanged slot=9 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorAuthenticationStatics shape=26 reverse=110 static deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method abort_authentication_async deprecated
         method AbortAuthenticationAsync slot=11 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorAuthentication shape=51 reverse=144 deprecated
             in string name=errorLogMessage
@@ -581,6 +581,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

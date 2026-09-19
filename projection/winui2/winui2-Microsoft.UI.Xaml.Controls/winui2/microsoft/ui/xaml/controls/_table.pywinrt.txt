@@ -288,9 +288,9 @@ class Microsoft.UI.Xaml.Controls.BreadcrumbBar composable python_type
     event item_clicked
         add add_ItemClicked slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IBreadcrumbBar shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.BreadcrumbBar,Microsoft.UI.Xaml.Controls.BreadcrumbBarItemClickedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ItemClicked slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IBreadcrumbBar shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Xaml.Controls.BreadcrumbBarItem composable python_type
     py BreadcrumbBarItem
@@ -507,9 +507,9 @@ class Microsoft.UI.Xaml.Controls.ColorPicker composable python_type
     event color_changed
         add add_ColorChanged slot=44 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IColorPicker shape=51 reverse=327
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ColorPicker,Microsoft.UI.Xaml.Controls.ColorChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ColorChanged slot=45 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IColorPicker shape=26 reverse=332
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Microsoft.UI.Xaml.Controls.ColorPickerHsvChannel python_type
     py ColorPickerHsvChannel
@@ -559,7 +559,7 @@ class Microsoft.UI.Xaml.Controls.CoreWebView2InitializedEventArgs python_type
     requires Microsoft.UI.Xaml.Controls.ICoreWebView2InitializedEventArgs
     property exception
         get get_Exception slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ICoreWebView2InitializedEventArgs shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Microsoft.UI.Xaml.Controls.DropDownButton composable python_type
     py DropDownButton
@@ -701,15 +701,15 @@ class Microsoft.UI.Xaml.Controls.Expander composable python_type
     event collapsed
         add add_Collapsed slot=18 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IExpander shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Expander,Microsoft.UI.Xaml.Controls.ExpanderCollapsedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Collapsed slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IExpander shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event expanding
         add add_Expanding slot=16 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IExpander shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Expander,Microsoft.UI.Xaml.Controls.ExpanderExpandingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Expanding slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IExpander shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Xaml.Controls.ExpanderCollapsedEventArgs python_type
     py ExpanderCollapsedEventArgs
@@ -931,7 +931,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1026,9 +1026,9 @@ interface Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource python_type
     event animated_visual_invalidated
         add add_AnimatedVisualInvalidated slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AnimatedVisualInvalidated slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method try_create_animated_visual
         method TryCreateAnimatedVisual slot=6 inputs=1 outputs=2 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualSource shape=117 reverse=25
             in class type=Windows.UI.Composition.Compositor name=compositor
@@ -1694,9 +1694,9 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Contr
     event vector_changed
         add add_VectorChanged slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=51 reverse=24
             in delegate type=Windows.Foundation.Collections.VectorChangedEventHandler<Windows.UI.Xaml.Controls.ICommandBarElement> name=vhnd
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=173 role=append
             in interface type=Windows.UI.Xaml.Controls.ICommandBarElement name=value
@@ -3149,21 +3149,21 @@ class Microsoft.UI.Xaml.Controls.InfoBar composable python_type
     event close_button_click
         add add_CloseButtonClick slot=33 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IInfoBar shape=51 reverse=286
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.InfoBar,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CloseButtonClick slot=34 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IInfoBar shape=26 reverse=291
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=37 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IInfoBar shape=51 reverse=300
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.InfoBar,Microsoft.UI.Xaml.Controls.InfoBarClosedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=38 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IInfoBar shape=26 reverse=305
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closing
         add add_Closing slot=35 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IInfoBar shape=51 reverse=293
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.InfoBar,Microsoft.UI.Xaml.Controls.InfoBarClosingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closing slot=36 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IInfoBar shape=26 reverse=298
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Microsoft.UI.Xaml.Controls.InfoBarCloseReason python_type
     py InfoBarCloseReason
@@ -3287,21 +3287,21 @@ class Microsoft.UI.Xaml.Controls.ItemsRepeater composable python_type
     event element_clearing
         add add_ElementClearing slot=24 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IItemsRepeater shape=51 reverse=248
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ItemsRepeater,Microsoft.UI.Xaml.Controls.ItemsRepeaterElementClearingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ElementClearing slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IItemsRepeater shape=26 reverse=254
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event element_index_changed
         add add_ElementIndexChanged slot=26 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IItemsRepeater shape=51 reverse=256
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ItemsRepeater,Microsoft.UI.Xaml.Controls.ItemsRepeaterElementIndexChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ElementIndexChanged slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IItemsRepeater shape=26 reverse=262
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event element_prepared
         add add_ElementPrepared slot=22 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IItemsRepeater shape=51 reverse=238
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ItemsRepeater,Microsoft.UI.Xaml.Controls.ItemsRepeaterElementPreparedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ElementPrepared slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IItemsRepeater shape=26 reverse=245
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_element_index
         method GetElementIndex slot=19 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IItemsRepeater shape=51 reverse=224
             in class type=Windows.UI.Xaml.UIElement name=element
@@ -3401,9 +3401,9 @@ class Microsoft.UI.Xaml.Controls.ItemsSourceView composable python_type
     event collection_changed
         add add_CollectionChanged slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChanged shape=51 reverse=24
             in delegate type=Windows.UI.Xaml.Interop.NotifyCollectionChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CollectionChanged slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChanged shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_at
         method GetAt slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IItemsSourceView shape=51 reverse=44
             in int32 name=index
@@ -3432,15 +3432,15 @@ class Microsoft.UI.Xaml.Controls.Layout composable python_type
     event arrange_invalidated
         add add_ArrangeInvalidated slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ILayout shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Layout,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ArrangeInvalidated slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ILayout shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event measure_invalidated
         add add_MeasureInvalidated slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ILayout shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Layout,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MeasureInvalidated slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ILayout shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method arrange
         method Arrange slot=9 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ILayout shape=134 reverse=386
             in class type=Microsoft.UI.Xaml.Controls.LayoutContext name=context
@@ -3842,63 +3842,63 @@ class Microsoft.UI.Xaml.Controls.NavigationView composable python_type
     event display_mode_changed
         add add_DisplayModeChanged slot=56 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationView shape=51 reverse=373
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewDisplayModeChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DisplayModeChanged slot=57 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.INavigationView shape=26 reverse=377
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event item_invoked
         add add_ItemInvoked slot=54 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationView shape=51 reverse=369
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ItemInvoked slot=55 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.INavigationView shape=26 reverse=372
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event selection_changed
         add add_SelectionChanged slot=52 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationView shape=51 reverse=360
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SelectionChanged slot=53 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.INavigationView shape=26 reverse=367
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event back_requested
         add add_BackRequested slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BackRequested slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event collapsed
         add add_Collapsed slot=41 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=51 reverse=317
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewItemCollapsedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Collapsed slot=42 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=26 reverse=321
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event expanding
         add add_Expanding slot=39 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=51 reverse=308
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewItemExpandingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Expanding slot=40 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=26 reverse=314
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pane_closed
         add add_PaneClosed slot=14 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PaneClosed slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pane_closing
         add add_PaneClosing slot=16 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PaneClosing slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pane_opened
         add add_PaneOpened slot=18 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PaneOpened slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pane_opening
         add add_PaneOpening slot=20 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NavigationView,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PaneOpening slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method collapse
         method Collapse slot=44 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.INavigationView2 shape=4 reverse=326
             in class type=Microsoft.UI.Xaml.Controls.NavigationViewItem name=item
@@ -4452,9 +4452,9 @@ class Microsoft.UI.Xaml.Controls.NumberBox composable python_type
     event value_changed
         add add_ValueChanged slot=44 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INumberBox shape=51 reverse=327
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.NumberBox,Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ValueChanged slot=45 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.INumberBox shape=26 reverse=332
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode python_type
     py NumberBoxSpinButtonPlacementMode
@@ -4841,9 +4841,9 @@ class Microsoft.UI.Xaml.Controls.PipsPager composable python_type
     event selected_index_changed
         add add_SelectedIndexChanged slot=26 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IPipsPager shape=51 reverse=256
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.PipsPager,Microsoft.UI.Xaml.Controls.PipsPagerSelectedIndexChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SelectedIndexChanged slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IPipsPager shape=26 reverse=262
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Microsoft.UI.Xaml.Controls.PipsPagerButtonVisibility python_type
     py PipsPagerButtonVisibility
@@ -5101,9 +5101,9 @@ class Microsoft.UI.Xaml.Controls.RadioButtons composable python_type
     event selection_changed
         add add_SelectionChanged slot=16 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IRadioButtons shape=51 reverse=203
             in delegate type=Windows.UI.Xaml.Controls.SelectionChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SelectionChanged slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IRadioButtons shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method container_from_index
         method ContainerFromIndex slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IRadioButtons shape=51 reverse=144
             in int32 name=index
@@ -5231,9 +5231,9 @@ class Microsoft.UI.Xaml.Controls.RatingControl composable python_type
     event value_changed
         add add_ValueChanged slot=22 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IRatingControl shape=51 reverse=238
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.RatingControl,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ValueChanged slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IRatingControl shape=26 reverse=245
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Xaml.Controls.RatingItemFontInfo composable python_type
     py RatingItemFontInfo
@@ -5404,9 +5404,9 @@ class Microsoft.UI.Xaml.Controls.RefreshContainer composable python_type
     event refresh_requested
         add add_RefreshRequested slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IRefreshContainer shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.RefreshContainer,Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RefreshRequested slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IRefreshContainer shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method request_refresh
         method RequestRefresh slot=12 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IRefreshContainer shape=0 reverse=159
 
@@ -5485,15 +5485,15 @@ class Microsoft.UI.Xaml.Controls.RefreshVisualizer composable python_type
     event refresh_requested
         add add_RefreshRequested slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IRefreshVisualizer shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.RefreshVisualizer,Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RefreshRequested slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IRefreshVisualizer shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event refresh_state_changed
         add add_RefreshStateChanged slot=14 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IRefreshVisualizer shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.RefreshVisualizer,Microsoft.UI.Xaml.Controls.RefreshStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RefreshStateChanged slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IRefreshVisualizer shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method request_refresh
         method RequestRefresh slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IRefreshVisualizer shape=0 reverse=16
 
@@ -5558,9 +5558,9 @@ class Microsoft.UI.Xaml.Controls.SplitButton composable python_type
     event click
         add add_Click slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISplitButton shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.SplitButton,Microsoft.UI.Xaml.Controls.SplitButtonClickEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Click slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ISplitButton shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Xaml.Controls.SplitButtonClickEventArgs python_type
     py SplitButtonClickEventArgs
@@ -5722,9 +5722,9 @@ class Microsoft.UI.Xaml.Controls.SwipeItem composable python_type
     event invoked
         add add_Invoked slot=20 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISwipeItem shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.SwipeItem,Microsoft.UI.Xaml.Controls.SwipeItemInvokedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Invoked slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ISwipeItem shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Xaml.Controls.SwipeItemInvokedEventArgs python_type
     py SwipeItemInvokedEventArgs
@@ -5990,57 +5990,57 @@ class Microsoft.UI.Xaml.Controls.TabView composable python_type
     event add_tab_button_click
         add add_AddTabButtonClick slot=28 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=51 reverse=264
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabView,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AddTabButtonClick slot=29 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=26 reverse=268
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event selection_changed
         add add_SelectionChanged slot=51 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=51 reverse=356
             in delegate type=Windows.UI.Xaml.Controls.SelectionChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SelectionChanged slot=52 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=26 reverse=362
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_close_requested
         add add_TabCloseRequested slot=24 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=51 reverse=248
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TabCloseRequested slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=26 reverse=254
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_drag_completed
         add add_TabDragCompleted slot=55 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=51 reverse=371
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabDragCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TabDragCompleted slot=56 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=26 reverse=374
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_drag_starting
         add add_TabDragStarting slot=53 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=51 reverse=365
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TabDragStarting slot=54 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=26 reverse=370
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_dropped_outside
         add add_TabDroppedOutside slot=26 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=51 reverse=256
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabView,Microsoft.UI.Xaml.Controls.TabViewTabDroppedOutsideEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TabDroppedOutside slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=26 reverse=262
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_items_changed
         add add_TabItemsChanged slot=30 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=51 reverse=271
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabView,Windows.Foundation.Collections.IVectorChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TabItemsChanged slot=31 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=26 reverse=277
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_strip_drag_over
         add add_TabStripDragOver slot=57 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=51 reverse=375
             in delegate type=Windows.UI.Xaml.DragEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TabStripDragOver slot=58 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=26 reverse=378
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_strip_drop
         add add_TabStripDrop slot=59 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=51 reverse=379
             in delegate type=Windows.UI.Xaml.DragEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TabStripDrop slot=60 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=26 reverse=380
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method container_from_index
         method ContainerFromIndex slot=50 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITabView shape=51 reverse=352
             in int32 name=index
@@ -6108,9 +6108,9 @@ class Microsoft.UI.Xaml.Controls.TabViewItem composable python_type
     event close_requested
         add add_CloseRequested slot=15 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITabViewItem shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TabViewItem,Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CloseRequested slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITabViewItem shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Xaml.Controls.TabViewItemTemplateSettings composable python_type
     py TabViewItemTemplateSettings
@@ -6389,27 +6389,27 @@ class Microsoft.UI.Xaml.Controls.TeachingTip composable python_type
     event action_button_click
         add add_ActionButtonClick slot=47 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITeachingTip shape=51 reverse=340
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TeachingTip,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ActionButtonClick slot=48 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITeachingTip shape=26 reverse=346
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event close_button_click
         add add_CloseButtonClick slot=49 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITeachingTip shape=51 reverse=348
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TeachingTip,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CloseButtonClick slot=50 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITeachingTip shape=26 reverse=353
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=53 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITeachingTip shape=51 reverse=365
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TeachingTip,Microsoft.UI.Xaml.Controls.TeachingTipClosedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=54 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITeachingTip shape=26 reverse=370
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closing
         add add_Closing slot=51 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITeachingTip shape=51 reverse=356
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TeachingTip,Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closing slot=52 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITeachingTip shape=26 reverse=362
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Microsoft.UI.Xaml.Controls.TeachingTipCloseReason python_type
     py TeachingTipCloseReason
@@ -6528,9 +6528,9 @@ class Microsoft.UI.Xaml.Controls.ToggleSplitButton composable python_type
     event is_checked_changed
         add add_IsCheckedChanged slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IToggleSplitButton shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ToggleSplitButton,Microsoft.UI.Xaml.Controls.ToggleSplitButtonIsCheckedChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsCheckedChanged slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IToggleSplitButton shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Xaml.Controls.ToggleSplitButtonIsCheckedChangedEventArgs python_type
     py ToggleSplitButtonIsCheckedChangedEventArgs
@@ -6650,33 +6650,33 @@ class Microsoft.UI.Xaml.Controls.TreeView composable python_type
     event collapsed
         add add_Collapsed slot=17 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITreeView shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewCollapsedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Collapsed slot=18 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITreeView shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event expanding
         add add_Expanding slot=15 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITreeView shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewExpandingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Expanding slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITreeView shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event item_invoked
         add add_ItemInvoked slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITreeView shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewItemInvokedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ItemInvoked slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITreeView shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event drag_items_completed
         add add_DragItemsCompleted slot=28 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITreeView2 shape=51 reverse=264
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewDragItemsCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DragItemsCompleted slot=29 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITreeView2 shape=26 reverse=268
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event drag_items_starting
         add add_DragItemsStarting slot=26 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITreeView2 shape=51 reverse=256
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TreeView,Microsoft.UI.Xaml.Controls.TreeViewDragItemsStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DragItemsStarting slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITreeView2 shape=26 reverse=262
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method collapse
         method Collapse slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITreeView shape=4 reverse=141
             in class type=Microsoft.UI.Xaml.Controls.TreeViewNode name=value
@@ -7063,9 +7063,9 @@ class Microsoft.UI.Xaml.Controls.TwoPaneView composable python_type
     event mode_changed
         add add_ModeChanged slot=25 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITwoPaneView shape=51 reverse=253
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TwoPaneView,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ModeChanged slot=26 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITwoPaneView shape=26 reverse=257
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Microsoft.UI.Xaml.Controls.TwoPaneViewMode python_type
     py TwoPaneViewMode
@@ -7921,33 +7921,33 @@ class Microsoft.UI.Xaml.Controls.WebView2 composable python_type
     event core_process_failed
         add add_CoreProcessFailed slot=26 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IWebView2 shape=51 reverse=256
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CoreProcessFailed slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IWebView2 shape=26 reverse=262
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event core_webview2_initialized
         add add_CoreWebView2Initialized slot=28 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IWebView2 shape=51 reverse=264
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.UI.Xaml.Controls.CoreWebView2InitializedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CoreWebView2Initialized slot=29 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IWebView2 shape=26 reverse=268
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigation_completed
         add add_NavigationCompleted slot=20 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IWebView2 shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NavigationCompleted slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IWebView2 shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigation_starting
         add add_NavigationStarting slot=24 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IWebView2 shape=51 reverse=248
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NavigationStarting slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IWebView2 shape=26 reverse=254
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event web_message_received
         add add_WebMessageReceived slot=22 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IWebView2 shape=51 reverse=238
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.WebView2,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_WebMessageReceived slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IWebView2 shape=26 reverse=245
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=19 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IWebView2 shape=0 reverse=221
     method ensure_core_webview2_async
@@ -8036,6 +8036,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

@@ -27,7 +27,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.PrintTick
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicketValidationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -443,7 +443,7 @@ class Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicketValidationResult 
     requires Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketValidationResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketValidationResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property validated
         get get_Validated slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketValidationResult shape=4 reverse=22
             out boolean return
@@ -458,6 +458,9 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

@@ -71,7 +71,7 @@ class Windows.Devices.Sms.DeleteSmsMessageOperation python_type awaitable
     requires Windows.Foundation.IAsyncInfo
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -98,7 +98,7 @@ class Windows.Devices.Sms.DeleteSmsMessagesOperation python_type awaitable
     requires Windows.Foundation.IAsyncInfo
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -125,7 +125,7 @@ class Windows.Devices.Sms.GetSmsDeviceOperation python_type awaitable
     requires Windows.Foundation.IAsyncInfo
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -153,7 +153,7 @@ class Windows.Devices.Sms.GetSmsMessageOperation python_type awaitable
     requires Windows.Foundation.IAsyncInfo
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -181,7 +181,7 @@ class Windows.Devices.Sms.GetSmsMessagesOperation python_type awaitable
     requires Windows.Foundation.IAsyncInfo
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -220,7 +220,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> co
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.ISmsMessage> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -249,7 +249,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> conc
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsDevice> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -278,7 +278,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsSendMessageR
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Sms.SmsSendMessageResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -313,7 +313,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Coll
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -821,15 +821,15 @@ interface Windows.Devices.Sms.ISmsDevice python_type
     event sms_device_status_changed
         add add_SmsDeviceStatusChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=187 deprecated
             in delegate type=Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SmsDeviceStatusChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice shape=26 reverse=200 deprecated
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event sms_message_received
         add add_SmsMessageReceived slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=163 deprecated
             in delegate type=Windows.Devices.Sms.SmsMessageReceivedEventHandler name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SmsMessageReceived slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice shape=26 reverse=181 deprecated
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method calculate_length deprecated
         method CalculateLength slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=44 deprecated
             in class type=Windows.Devices.Sms.SmsTextMessage name=message
@@ -1393,7 +1393,7 @@ class Windows.Devices.Sms.SendSmsMessageOperation python_type awaitable
     requires Windows.Foundation.IAsyncInfo
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1602,15 +1602,15 @@ class Windows.Devices.Sms.SmsDevice python_type
     event sms_device_status_changed
         add add_SmsDeviceStatusChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=187 deprecated
             in delegate type=Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SmsDeviceStatusChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice shape=26 reverse=200 deprecated
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event sms_message_received
         add add_SmsMessageReceived slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=163 deprecated
             in delegate type=Windows.Devices.Sms.SmsMessageReceivedEventHandler name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SmsMessageReceived slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice shape=26 reverse=181 deprecated
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method calculate_length deprecated
         method CalculateLength slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=44 deprecated
             in class type=Windows.Devices.Sms.SmsTextMessage name=message
@@ -1663,9 +1663,9 @@ class Windows.Devices.Sms.SmsDevice2 python_type
     event device_status_changed
         add add_DeviceStatusChanged slot=15 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sms.SmsDevice2,System.Object> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DeviceStatusChanged slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice2 shape=26 reverse=397
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method calculate_length
         method CalculateLength slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=51 reverse=174
             in interface type=Windows.Devices.Sms.ISmsMessageBase name=message
@@ -1891,9 +1891,9 @@ class Windows.Devices.Sms.SmsMessageRegistration python_type
     event message_received
         add add_MessageReceived slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sms.SmsMessageRegistration,Windows.Devices.Sms.SmsMessageReceivedTriggerDetails> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MessageReceived slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=26 reverse=110
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method register static
         method Register slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistrationStatics shape=117 reverse=45 static
             in string name=id
@@ -2256,6 +2256,12 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external 
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

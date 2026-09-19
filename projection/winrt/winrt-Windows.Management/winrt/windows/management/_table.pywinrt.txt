@@ -187,7 +187,7 @@ class Windows.Management.MdmSession python_type
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.MdmAlert> return
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=8 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4 reverse=62
             out string return
@@ -229,6 +229,9 @@ enum Windows.Management.MdmSessionState python_type
 
 class System.String external
     py winrt.system.String
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

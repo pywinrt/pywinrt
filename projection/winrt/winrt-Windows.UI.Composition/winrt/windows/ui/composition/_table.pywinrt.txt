@@ -367,9 +367,9 @@ class Windows.UI.Composition.CompositionCapabilities python_type
     event changed
         add add_Changed slot=8 inputs=1 outputs=1 declaring=Windows.UI.Composition.ICompositionCapabilities shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Composition.CompositionCapabilities,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Changed slot=9 inputs=1 outputs=0 declaring=Windows.UI.Composition.ICompositionCapabilities shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method are_effects_fast
         method AreEffectsFast slot=7 inputs=0 outputs=1 declaring=Windows.UI.Composition.ICompositionCapabilities shape=4 reverse=43
             out boolean return
@@ -525,9 +525,9 @@ class Windows.UI.Composition.CompositionCommitBatch python_type
     event completed
         add add_Completed slot=8 inputs=1 outputs=1 declaring=Windows.UI.Composition.ICompositionCommitBatch shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Composition.CompositionBatchCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Completed slot=9 inputs=1 outputs=0 declaring=Windows.UI.Composition.ICompositionCommitBatch shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Windows.UI.Composition.CompositionCompositeMode python_type
     py CompositionCompositeMode
@@ -682,7 +682,7 @@ class Windows.UI.Composition.CompositionEffectFactory python_type
     requires Windows.UI.Composition.ICompositionEffectFactory
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.UI.Composition.ICompositionEffectFactory shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property load_status
         get get_LoadStatus slot=8 inputs=0 outputs=1 declaring=Windows.UI.Composition.ICompositionEffectFactory shape=4 reverse=62
             out enum32 type=Windows.UI.Composition.CompositionEffectFactoryLoadStatus return
@@ -848,9 +848,9 @@ class Windows.UI.Composition.CompositionGraphicsDevice python_type
     event rendering_device_replaced
         add add_RenderingDeviceReplaced slot=7 inputs=1 outputs=1 declaring=Windows.UI.Composition.ICompositionGraphicsDevice shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Composition.CompositionGraphicsDevice,Windows.UI.Composition.RenderingDeviceReplacedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RenderingDeviceReplaced slot=8 inputs=1 outputs=0 declaring=Windows.UI.Composition.ICompositionGraphicsDevice shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method capture_async
         method CaptureAsync slot=6 inputs=5 outputs=1 declaring=Windows.UI.Composition.ICompositionGraphicsDevice4 shape=272
             in class type=Windows.UI.Composition.Visual name=captureVisual
@@ -1441,9 +1441,9 @@ class Windows.UI.Composition.CompositionScopedBatch python_type
     event completed
         add add_Completed slot=11 inputs=1 outputs=1 declaring=Windows.UI.Composition.ICompositionScopedBatch shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Composition.CompositionBatchCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Completed slot=12 inputs=1 outputs=0 declaring=Windows.UI.Composition.ICompositionScopedBatch shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method end
         method End slot=8 inputs=0 outputs=0 declaring=Windows.UI.Composition.ICompositionScopedBatch shape=0 reverse=55
     method resume
@@ -2360,7 +2360,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.UI.Composition.IComposition
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Composition.ICompositionSurface> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -4968,6 +4968,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

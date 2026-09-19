@@ -59,6 +59,7 @@ TYPE_FLAGS = {
     "stringable": 1 << 18,
     "buffer": 1 << 19,
     "buffer_length": 1 << 20,
+    "integer": 1 << 21,
 }
 
 GROUP_KINDS = ("method", "property", "event", "constructor")

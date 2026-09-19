@@ -87,21 +87,21 @@ class Windows.Graphics.Display.BrightnessOverride python_type
     event brightness_level_changed
         add add_BrightnessLevelChanged slot=18 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.BrightnessOverride,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BrightnessLevelChanged slot=19 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_override_active_changed
         add add_IsOverrideActiveChanged slot=16 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.BrightnessOverride,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsOverrideActiveChanged slot=17 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_supported_changed
         add add_IsSupportedChanged slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.BrightnessOverride,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsSupportedChanged slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_default_for_system static
         method GetDefaultForSystem slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideStatics shape=4 reverse=22 static
             out class type=Windows.Graphics.Display.BrightnessOverride return
@@ -209,21 +209,21 @@ class Windows.Graphics.Display.DisplayEnhancementOverride python_type
     event can_override_changed
         add add_CanOverrideChanged slot=15 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayEnhancementOverride,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CanOverrideChanged slot=16 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event display_enhancement_override_capabilities_changed
         add add_DisplayEnhancementOverrideCapabilitiesChanged slot=19 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=51 reverse=224
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayEnhancementOverride,Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DisplayEnhancementOverrideCapabilitiesChanged slot=20 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=26 reverse=399
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_override_active_changed
         add add_IsOverrideActiveChanged slot=17 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayEnhancementOverride,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_IsOverrideActiveChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_current_display_enhancement_override_capabilities
         method GetCurrentDisplayEnhancementOverrideCapabilities slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4 reverse=162
             out class type=Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities return
@@ -310,39 +310,39 @@ class Windows.Graphics.Display.DisplayInformation python_type
     event color_profile_changed
         add add_ColorProfileChanged slot=20 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ColorProfileChanged slot=21 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event dpi_changed
         add add_DpiChanged slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DpiChanged slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event orientation_changed
         add add_OrientationChanged slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OrientationChanged slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stereo_enabled_changed
         add add_StereoEnabledChanged slot=17 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StereoEnabledChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event advanced_color_info_changed
         add add_AdvancedColorInfoChanged slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation5 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AdvancedColorInfoChanged slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation5 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event display_contents_invalidated static
         add add_DisplayContentsInvalidated slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=51 reverse=100 static
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DisplayContentsInvalidated slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=26 reverse=134 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_advanced_color_info
         method GetAdvancedColorInfo slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation5 shape=4 reverse=22
             out class type=Windows.Graphics.Display.AdvancedColorInfo return
@@ -383,33 +383,33 @@ class Windows.Graphics.Display.DisplayProperties static python_type
     event color_profile_changed static
         add add_ColorProfileChanged slot=20 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 reverse=229 static deprecated
             in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ColorProfileChanged slot=21 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 reverse=234 static deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event display_contents_invalidated static
         add add_DisplayContentsInvalidated slot=22 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 reverse=238 static deprecated
             in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DisplayContentsInvalidated slot=23 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 reverse=245 static deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event logical_dpi_changed static
         add add_LogicalDpiChanged slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 reverse=187 static deprecated
             in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LogicalDpiChanged slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 reverse=200 static deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event orientation_changed static
         add add_OrientationChanged slot=10 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 reverse=124 static deprecated
             in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OrientationChanged slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 reverse=156 static deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stereo_enabled_changed static
         add add_StereoEnabledChanged slot=17 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 reverse=211 static deprecated
             in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StereoEnabledChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 reverse=398 static deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_color_profile_async static deprecated
         method GetColorProfileAsync slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 reverse=223 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
@@ -453,7 +453,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -482,7 +482,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAcce
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStream> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -814,6 +814,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

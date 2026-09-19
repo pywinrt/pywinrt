@@ -52,21 +52,21 @@ class Microsoft.UI.Windowing.AppWindow python_type
     event changed
         add add_Changed slot=29 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=51 reverse=267
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.AppWindow,Microsoft.UI.Windowing.AppWindowChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Changed slot=30 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=26 reverse=272
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closing
         add add_Closing slot=31 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=51 reverse=274
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.AppWindow,Microsoft.UI.Windowing.AppWindowClosingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closing slot=32 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=26 reverse=283
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event destroying
         add add_Destroying slot=33 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=51 reverse=286
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.AppWindow,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Destroying slot=34 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=26 reverse=291
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method associate_with_dispatcher_queue
         method AssociateWithDispatcherQueue slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow3 shape=4 reverse=22
             in class type=Microsoft.UI.Dispatching.DispatcherQueue name=dispatcherQueue
@@ -397,33 +397,33 @@ class Microsoft.UI.Windowing.DisplayAreaWatcher python_type
     event added
         add add_Added slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.DisplayAreaWatcher,Microsoft.UI.Windowing.DisplayArea> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Added slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
         add add_EnumerationCompleted slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.DisplayAreaWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
         add add_Removed slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.DisplayAreaWatcher,Microsoft.UI.Windowing.DisplayArea> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Removed slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
         add add_Stopped slot=15 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.DisplayAreaWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Stopped slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
         add add_Updated slot=17 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.DisplayAreaWatcher,Microsoft.UI.Windowing.DisplayArea> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Updated slot=18 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=0 reverse=37
     method stop
@@ -1029,6 +1029,9 @@ class System.Int32 external
 
 class System.Object external
     py winrt.system.Object
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IPropertyValue external
     py winrt.windows.foundation._IPropertyValue

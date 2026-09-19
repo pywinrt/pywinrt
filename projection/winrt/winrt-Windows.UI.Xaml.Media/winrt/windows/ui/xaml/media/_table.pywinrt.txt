@@ -390,21 +390,21 @@ class Windows.UI.Xaml.Media.CompositionTarget python_type
     event rendered static
         add add_Rendered slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics3 shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<Windows.UI.Xaml.Media.RenderedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Rendered slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics3 shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event rendering static
         add add_Rendering slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Rendering slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics shape=26 reverse=53 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event surface_contents_lost static
         add add_SurfaceContentsLost slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics shape=51 reverse=65 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SurfaceContentsLost slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics shape=26 reverse=110 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.Media.DoubleCollection activatable python_type iterable sequence mutable_sequence
     py DoubleCollection
@@ -2443,15 +2443,15 @@ class Windows.UI.Xaml.Media.ImageBrush activatable python_type
     event image_failed
         add add_ImageFailed slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IImageBrush shape=51 reverse=65
             in delegate type=Windows.UI.Xaml.ExceptionRoutedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ImageFailed slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IImageBrush shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event image_opened
         add add_ImageOpened slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IImageBrush shape=51 reverse=124
             in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ImageOpened slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IImageBrush shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.Media.ImageSource composable python_type
     py ImageSource
@@ -2574,9 +2574,9 @@ class Windows.UI.Xaml.Media.LoadedImageSurface python_type closeable
     event load_completed
         add add_LoadCompleted slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurface shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Media.LoadedImageSurface,Windows.UI.Xaml.Media.LoadedImageSourceLoadCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LoadCompleted slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ILoadedImageSurface shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method start_load_from_stream static
@@ -2708,7 +2708,7 @@ class Windows.UI.Xaml.Media.PartialMediaFailureDetectedEventArgs activatable pyt
             out enum32 type=Windows.Media.Playback.FailedMediaStreamKind return
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPartialMediaFailureDetectedEventArgs2 shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.UI.Xaml.Media.PathFigure activatable python_type
     py PathFigure
@@ -3890,6 +3890,12 @@ class Windows.Foundation.Deferral external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable

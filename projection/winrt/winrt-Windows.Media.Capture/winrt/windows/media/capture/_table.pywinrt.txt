@@ -29,15 +29,15 @@ class Windows.Media.Capture.AdvancedPhotoCapture python_type
     event all_photos_captured
         add add_AllPhotosCaptured slot=10 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAdvancedPhotoCapture shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AdvancedPhotoCapture,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AllPhotosCaptured slot=11 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAdvancedPhotoCapture shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event optional_reference_photo_captured
         add add_OptionalReferencePhotoCaptured slot=8 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAdvancedPhotoCapture shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AdvancedPhotoCapture,Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OptionalReferencePhotoCaptured slot=9 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAdvancedPhotoCapture shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method capture_async
         method CaptureAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.IAdvancedPhotoCapture shape=4 reverse=22
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Capture.AdvancedCapturedPhoto> return
@@ -98,27 +98,27 @@ class Windows.Media.Capture.AppBroadcastBackgroundService python_type
     event heartbeat_requested
         add add_HeartbeatRequested slot=17 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastBackgroundService shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastBackgroundService,Windows.Media.Capture.AppBroadcastHeartbeatRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeartbeatRequested slot=18 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastBackgroundService shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event broadcast_channel_changed
         add add_BroadcastChannelChanged slot=15 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastBackgroundService2 shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastBackgroundService,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BroadcastChannelChanged slot=16 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastBackgroundService2 shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event broadcast_language_changed
         add add_BroadcastLanguageChanged slot=13 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastBackgroundService2 shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastBackgroundService,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BroadcastLanguageChanged slot=14 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastBackgroundService2 shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event broadcast_title_changed
         add add_BroadcastTitleChanged slot=11 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastBackgroundService2 shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastBackgroundService,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BroadcastTitleChanged slot=12 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastBackgroundService2 shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method terminate_broadcast
         method TerminateBroadcast slot=16 inputs=2 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastBackgroundService shape=51 reverse=203
             in enum32 type=Windows.Media.Capture.AppBroadcastTerminationReason name=reason
@@ -154,15 +154,15 @@ class Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo python_type
     event sign_in_state_changed
         add add_SignInStateChanged slot=14 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastBackgroundServiceSignInInfo shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo,Windows.Media.Capture.AppBroadcastSignInStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SignInStateChanged slot=15 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastBackgroundServiceSignInInfo shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event user_name_changed
         add add_UserNameChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastBackgroundServiceSignInInfo2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UserNameChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastBackgroundServiceSignInInfo2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo python_type
     py AppBroadcastBackgroundServiceStreamInfo
@@ -194,21 +194,21 @@ class Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo python_type
     event stream_state_changed
         add add_StreamStateChanged slot=14 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastBackgroundServiceStreamInfo shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo,Windows.Media.Capture.AppBroadcastStreamStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StreamStateChanged slot=15 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastBackgroundServiceStreamInfo shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event video_encoding_bitrate_changed
         add add_VideoEncodingBitrateChanged slot=18 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastBackgroundServiceStreamInfo shape=51 reverse=219
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VideoEncodingBitrateChanged slot=19 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastBackgroundServiceStreamInfo shape=26 reverse=226
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event video_encoding_resolution_changed
         add add_VideoEncodingResolutionChanged slot=16 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastBackgroundServiceStreamInfo shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VideoEncodingResolutionChanged slot=17 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastBackgroundServiceStreamInfo shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method report_problem_with_stream
         method ReportProblemWithStream slot=6 inputs=0 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastBackgroundServiceStreamInfo2 shape=0 reverse=16
 
@@ -428,9 +428,9 @@ class Windows.Media.Capture.AppBroadcastPreview python_type
     event preview_state_changed
         add add_PreviewStateChanged slot=9 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastPreview shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastPreview,Windows.Media.Capture.AppBroadcastPreviewStateChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PreviewStateChanged slot=10 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastPreview shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method stop_preview
         method StopPreview slot=6 inputs=0 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastPreview shape=0 reverse=16
 
@@ -473,9 +473,9 @@ class Windows.Media.Capture.AppBroadcastPreviewStreamReader python_type
     event video_frame_arrived
         add add_VideoFrameArrived slot=12 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastPreviewStreamReader shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastPreviewStreamReader,System.Object> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VideoFrameArrived slot=13 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastPreviewStreamReader shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method try_get_next_video_frame
         method TryGetNextVideoFrame slot=11 inputs=0 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastPreviewStreamReader shape=4 reverse=141
             out class type=Windows.Media.Capture.AppBroadcastPreviewStreamVideoFrame return
@@ -685,39 +685,39 @@ class Windows.Media.Capture.AppBroadcastState python_type
     event camera_capture_state_changed
         add add_CameraCaptureStateChanged slot=33 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastState shape=51 reverse=286
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastState,Windows.Media.Capture.AppBroadcastCameraCaptureStateChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CameraCaptureStateChanged slot=34 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastState shape=26 reverse=291
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event capture_target_closed
         add add_CaptureTargetClosed slot=39 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastState shape=51 reverse=308
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastState,System.Object> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CaptureTargetClosed slot=40 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastState shape=26 reverse=314
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event microphone_capture_state_changed
         add add_MicrophoneCaptureStateChanged slot=31 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastState shape=51 reverse=274
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastState,Windows.Media.Capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MicrophoneCaptureStateChanged slot=32 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastState shape=26 reverse=283
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event plug_in_state_changed
         add add_PlugInStateChanged slot=35 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastState shape=51 reverse=293
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastState,Windows.Media.Capture.AppBroadcastPlugInStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PlugInStateChanged slot=36 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastState shape=26 reverse=298
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stream_state_changed
         add add_StreamStateChanged slot=37 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastState shape=51 reverse=300
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastState,Windows.Media.Capture.AppBroadcastStreamStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StreamStateChanged slot=38 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastState shape=26 reverse=305
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event viewer_count_changed
         add add_ViewerCountChanged slot=29 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastState shape=51 reverse=267
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastState,Windows.Media.Capture.AppBroadcastViewerCountChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ViewerCountChanged slot=30 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastState shape=26 reverse=272
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method restart_camera_capture
         method RestartCameraCapture slot=13 inputs=0 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastState shape=0 reverse=169
     method restart_microphone_capture
@@ -785,15 +785,15 @@ class Windows.Media.Capture.AppBroadcastStreamReader python_type
     event audio_frame_arrived
         add add_AudioFrameArrived slot=15 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastStreamReader shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastStreamReader,System.Object> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AudioFrameArrived slot=16 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastStreamReader shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event video_frame_arrived
         add add_VideoFrameArrived slot=17 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastStreamReader shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppBroadcastStreamReader,System.Object> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VideoFrameArrived slot=18 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppBroadcastStreamReader shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method try_get_next_audio_frame
         method TryGetNextAudioFrame slot=10 inputs=0 outputs=1 declaring=Windows.Media.Capture.IAppBroadcastStreamReader shape=4 reverse=121
             out class type=Windows.Media.Capture.AppBroadcastStreamAudioFrame return
@@ -896,9 +896,9 @@ class Windows.Media.Capture.AppCapture python_type
     event capturing_changed
         add add_CapturingChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppCapture shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppCapture,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CapturingChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppCapture shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.IAppCaptureStatics shape=4 reverse=22 static
             out class type=Windows.Media.Capture.AppCapture return
@@ -1046,9 +1046,9 @@ class Windows.Media.Capture.AppCaptureMetadataWriter activatable python_type clo
     event metadata_purged
         add add_MetadataPurged slot=15 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppCaptureMetadataWriter shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppCaptureMetadataWriter,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MetadataPurged slot=16 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppCaptureMetadataWriter shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_double_event
         method AddDoubleEvent slot=8 inputs=3 outputs=0 declaring=Windows.Media.Capture.IAppCaptureMetadataWriter shape=111
             in string name=name
@@ -1126,21 +1126,21 @@ class Windows.Media.Capture.AppCaptureRecordOperation python_type
     event duration_generated
         add add_DurationGenerated slot=14 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppCaptureRecordOperation shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppCaptureRecordOperation,Windows.Media.Capture.AppCaptureDurationGeneratedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DurationGenerated slot=15 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppCaptureRecordOperation shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event file_generated
         add add_FileGenerated slot=16 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppCaptureRecordOperation shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppCaptureRecordOperation,Windows.Media.Capture.AppCaptureFileGeneratedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FileGenerated slot=17 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppCaptureRecordOperation shape=26 reverse=215
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event state_changed
         add add_StateChanged slot=12 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppCaptureRecordOperation shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppCaptureRecordOperation,Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=13 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppCaptureRecordOperation shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method stop_recording
         method StopRecording slot=6 inputs=0 outputs=0 declaring=Windows.Media.Capture.IAppCaptureRecordOperation shape=0 reverse=16
 
@@ -1348,15 +1348,15 @@ class Windows.Media.Capture.AppCaptureState python_type
     event capture_target_closed
         add add_CaptureTargetClosed slot=15 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppCaptureState shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppCaptureState,System.Object> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CaptureTargetClosed slot=16 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppCaptureState shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event microphone_capture_state_changed
         add add_MicrophoneCaptureStateChanged slot=13 inputs=1 outputs=1 declaring=Windows.Media.Capture.IAppCaptureState shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.AppCaptureState,Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MicrophoneCaptureStateChanged slot=14 inputs=1 outputs=0 declaring=Windows.Media.Capture.IAppCaptureState shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method restart_microphone_capture
         method RestartMicrophoneCapture slot=10 inputs=0 outputs=0 declaring=Windows.Media.Capture.IAppCaptureState shape=0 reverse=117
 
@@ -1870,9 +1870,9 @@ class Windows.Media.Capture.GameBarServices python_type
     event command_received
         add add_CommandReceived slot=13 inputs=1 outputs=1 declaring=Windows.Media.Capture.IGameBarServices shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.GameBarServices,Windows.Media.Capture.GameBarServicesCommandEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CommandReceived slot=14 inputs=1 outputs=0 declaring=Windows.Media.Capture.IGameBarServices shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method disable_capture
         method DisableCapture slot=8 inputs=0 outputs=0 declaring=Windows.Media.Capture.IGameBarServices shape=0 reverse=55
     method enable_capture
@@ -1903,9 +1903,9 @@ class Windows.Media.Capture.GameBarServicesManager python_type
     event game_bar_services_created
         add add_GameBarServicesCreated slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.IGameBarServicesManager shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.GameBarServicesManager,Windows.Media.Capture.GameBarServicesManagerGameBarServicesCreatedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GameBarServicesCreated slot=7 inputs=1 outputs=0 declaring=Windows.Media.Capture.IGameBarServicesManager shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_default static
         method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.IGameBarServicesManagerStatics shape=4 reverse=22 static
             out class type=Windows.Media.Capture.GameBarServicesManager return
@@ -2120,7 +2120,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2149,7 +2149,7 @@ interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2178,7 +2178,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.AdvancedCaptu
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.AdvancedCapturedPhoto> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2207,7 +2207,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.AdvancedPhoto
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.AdvancedPhotoCapture> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2236,7 +2236,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.CapturedPhoto
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.CapturedPhoto> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2265,7 +2265,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Core.Variable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Core.VariablePhotoSequenceCapture> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2294,7 +2294,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MediaF
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MediaFrameReader> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2323,7 +2323,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MultiS
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.Frames.MultiSourceMediaFrameReader> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2352,7 +2352,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.LowLagMediaRe
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.LowLagMediaRecording> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2381,7 +2381,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.LowLagPhotoCa
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.LowLagPhotoCapture> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2410,7 +2410,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.LowLagPhotoSe
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.LowLagPhotoSequenceCapture> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2439,7 +2439,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.MediaCaptureP
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.MediaCapturePauseResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2468,7 +2468,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Capture.MediaCaptureS
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Capture.MediaCaptureStopResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2497,7 +2497,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.IMediaExtension> conc
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.IMediaExtension> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2526,7 +2526,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.VideoFrame> concrete 
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.VideoFrame> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2555,7 +2555,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concre
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2590,7 +2590,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UI
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt32,System.UInt32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2625,7 +2625,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -4541,9 +4541,9 @@ class Windows.Media.Capture.LowLagPhotoSequenceCapture python_type
     event photo_captured
         add add_PhotoCaptured slot=9 inputs=1 outputs=1 declaring=Windows.Media.Capture.ILowLagPhotoSequenceCapture shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.LowLagPhotoSequenceCapture,Windows.Media.Capture.PhotoCapturedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PhotoCaptured slot=10 inputs=1 outputs=0 declaring=Windows.Media.Capture.ILowLagPhotoSequenceCapture shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method finish_async
         method FinishAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.ILowLagPhotoSequenceCapture shape=4 reverse=62
             out interface type=Windows.Foundation.IAsyncAction return
@@ -4592,45 +4592,45 @@ class Windows.Media.Capture.MediaCapture activatable python_type closeable
     event failed
         add add_Failed slot=19 inputs=1 outputs=1 declaring=Windows.Media.Capture.IMediaCapture shape=51 reverse=224
             in delegate type=Windows.Media.Capture.MediaCaptureFailedEventHandler name=errorEventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Failed slot=20 inputs=1 outputs=0 declaring=Windows.Media.Capture.IMediaCapture shape=26 reverse=399
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event record_limitation_exceeded
         add add_RecordLimitationExceeded slot=21 inputs=1 outputs=1 declaring=Windows.Media.Capture.IMediaCapture shape=51 reverse=233
             in delegate type=Windows.Media.Capture.RecordLimitationExceededEventHandler name=recordLimitationExceededEventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RecordLimitationExceeded slot=22 inputs=1 outputs=0 declaring=Windows.Media.Capture.IMediaCapture shape=26 reverse=400
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event focus_changed
         add add_FocusChanged slot=7 inputs=1 outputs=1 declaring=Windows.Media.Capture.IMediaCapture3 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.MediaCapture,Windows.Media.Capture.MediaCaptureFocusChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FocusChanged slot=8 inputs=1 outputs=0 declaring=Windows.Media.Capture.IMediaCapture3 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event photo_confirmation_captured
         add add_PhotoConfirmationCaptured slot=9 inputs=1 outputs=1 declaring=Windows.Media.Capture.IMediaCapture3 shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.MediaCapture,Windows.Media.Capture.PhotoConfirmationCapturedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PhotoConfirmationCaptured slot=10 inputs=1 outputs=0 declaring=Windows.Media.Capture.IMediaCapture3 shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event camera_stream_state_changed
         add add_CameraStreamStateChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Capture.IMediaCapture4 shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.MediaCapture,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CameraStreamStateChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Capture.IMediaCapture4 shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event thermal_status_changed
         add add_ThermalStatusChanged slot=15 inputs=1 outputs=1 declaring=Windows.Media.Capture.IMediaCapture4 shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.MediaCapture,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ThermalStatusChanged slot=16 inputs=1 outputs=0 declaring=Windows.Media.Capture.IMediaCapture4 shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event capture_device_exclusive_control_status_changed
         add add_CaptureDeviceExclusiveControlStatusChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.IMediaCapture6 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.MediaCapture,Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CaptureDeviceExclusiveControlStatusChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Capture.IMediaCapture6 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_audio_effect_async
         method AddAudioEffectAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.IMediaCapture4 shape=51 reverse=24
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -5027,9 +5027,9 @@ class Windows.Media.Capture.MediaCaptureRelativePanelWatcher python_type closeab
     event changed
         add add_Changed slot=7 inputs=1 outputs=1 declaring=Windows.Media.Capture.IMediaCaptureRelativePanelWatcher shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.MediaCaptureRelativePanelWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Changed slot=8 inputs=1 outputs=0 declaring=Windows.Media.Capture.IMediaCaptureRelativePanelWatcher shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method start
@@ -5688,6 +5688,12 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external 
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

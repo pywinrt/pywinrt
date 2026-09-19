@@ -12,9 +12,9 @@ class Windows.AI.Actions.Hosting.ActionCatalog python_type closeable
     event changed
         add add_Changed slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionCatalog shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.AI.Actions.Hosting.ActionCatalog,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Changed slot=8 inputs=1 outputs=0 declaring=Windows.AI.Actions.Hosting.IActionCatalog shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_actions_for_inputs
@@ -203,6 +203,9 @@ class Windows.AI.Actions.ActionFeedback external
 
 class Windows.AI.Actions.ActionInvocationContext external
     py winrt.windows.ai.actions.ActionInvocationContext
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

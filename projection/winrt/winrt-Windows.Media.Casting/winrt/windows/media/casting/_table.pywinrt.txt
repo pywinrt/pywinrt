@@ -77,15 +77,15 @@ class Windows.Media.Casting.CastingConnection python_type closeable
     event error_occurred
         add add_ErrorOccurred slot=12 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingConnection,Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ErrorOccurred slot=13 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingConnection shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event state_changed
         add add_StateChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingConnection,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingConnection shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disconnect_async
@@ -171,15 +171,15 @@ class Windows.Media.Casting.CastingDevicePicker activatable python_type
     event casting_device_picker_dismissed
         add add_CastingDevicePickerDismissed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingDevicePicker,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CastingDevicePickerDismissed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event casting_device_selected
         add add_CastingDeviceSelected slot=8 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingDevicePicker,Windows.Media.Casting.CastingDeviceSelectedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CastingDeviceSelected slot=9 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method hide
         method Hide slot=14 inputs=0 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=0 reverse=185
     method show
@@ -251,7 +251,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -280,7 +280,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -309,7 +309,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Casting.CastingConnectionErrorStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -338,7 +338,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingDevice
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Casting.CastingDevice> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -367,7 +367,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingPlayba
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Casting.CastingPlaybackTypes> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -585,6 +585,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

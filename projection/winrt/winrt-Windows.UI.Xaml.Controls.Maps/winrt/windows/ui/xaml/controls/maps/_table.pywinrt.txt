@@ -50,9 +50,9 @@ class Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource composable python_ty
     event bitmap_requested
         add add_BitmapRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.ICustomMapTileDataSource shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.CustomMapTileDataSource,Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BitmapRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.ICustomMapTileDataSource shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource composable python_type
     py HttpMapTileDataSource
@@ -87,9 +87,9 @@ class Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource composable python_type
     event uri_requested
         add add_UriRequested slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSource shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource,Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UriRequested slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IHttpMapTileDataSource shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[Boolean]
@@ -105,7 +105,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -134,7 +134,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.MapMo
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Controls.Maps.MapModel3D> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -163,7 +163,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Controls.Maps.Stree
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Controls.Maps.StreetsidePanorama> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1757,9 +1757,9 @@ class Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource composable python_typ
     event uri_requested
         add add_UriRequested slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSource shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource,Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UriRequested slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.ILocalMapTileDataSource shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs activatable python_type
     py MapActualCameraChangedEventArgs
@@ -2250,111 +2250,111 @@ class Windows.UI.Xaml.Controls.Maps.MapControl activatable python_type
     event center_changed
         add add_CenterChanged slot=38 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=51 reverse=303
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CenterChanged slot=39 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=26 reverse=310
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event heading_changed
         add add_HeadingChanged slot=40 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=51 reverse=313
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HeadingChanged slot=41 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=26 reverse=318
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event loading_status_changed
         add add_LoadingStatusChanged slot=42 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=51 reverse=320
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LoadingStatusChanged slot=43 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=26 reverse=325
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event map_double_tapped
         add add_MapDoubleTapped slot=44 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=51 reverse=327
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapInputEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapDoubleTapped slot=45 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=26 reverse=332
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event map_holding
         add add_MapHolding slot=46 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=51 reverse=335
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapInputEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapHolding slot=47 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=26 reverse=342
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event map_tapped
         add add_MapTapped slot=48 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=51 reverse=344
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapInputEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapTapped slot=49 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=26 reverse=350
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pitch_changed
         add add_PitchChanged slot=50 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=51 reverse=352
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PitchChanged slot=51 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=26 reverse=357
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event transform_origin_changed
         add add_TransformOriginChanged slot=52 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=51 reverse=360
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TransformOriginChanged slot=53 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=26 reverse=367
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event zoom_level_changed
         add add_ZoomLevelChanged slot=54 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=51 reverse=369
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ZoomLevelChanged slot=55 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=26 reverse=372
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event actual_camera_changed
         add add_ActualCameraChanged slot=32 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=51 reverse=281
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapActualCameraChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ActualCameraChanged slot=33 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=26 reverse=287
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event actual_camera_changing
         add add_ActualCameraChanging slot=34 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=51 reverse=289
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapActualCameraChangingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ActualCameraChanging slot=35 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=26 reverse=294
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event custom_experience_changed
         add add_CustomExperienceChanged slot=38 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=51 reverse=303
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapCustomExperienceChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CustomExperienceChanged slot=39 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=26 reverse=310
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event map_element_click
         add add_MapElementClick slot=26 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=51 reverse=256
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapElementClickEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapElementClick slot=27 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=26 reverse=262
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event map_element_pointer_entered
         add add_MapElementPointerEntered slot=28 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=51 reverse=264
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapElementPointerEnteredEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapElementPointerEntered slot=29 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=26 reverse=268
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event map_element_pointer_exited
         add add_MapElementPointerExited slot=30 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=51 reverse=271
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapElementPointerExitedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapElementPointerExited slot=31 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=26 reverse=277
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event target_camera_changed
         add add_TargetCameraChanged slot=36 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=51 reverse=297
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TargetCameraChanged slot=37 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl2 shape=26 reverse=301
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event map_right_tapped
         add add_MapRightTapped slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl3 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapRightTappedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapRightTapped slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl3 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event map_context_requested
         add add_MapContextRequested slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl5 shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapContextRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapContextRequested slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl5 shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_map_elements_at_offset
         method FindMapElementsAtOffset slot=56 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControl shape=79
             in struct type=Windows.Foundation.Point name=offset
@@ -2565,51 +2565,51 @@ class Windows.UI.Xaml.Controls.Maps.MapControlDataHelper python_type
     event business_landmark_click
         add add_BusinessLandmarkClick slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BusinessLandmarkClick slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event business_landmark_right_tapped
         add add_BusinessLandmarkRightTapped slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BusinessLandmarkRightTapped slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event transit_feature_click
         add add_TransitFeatureClick slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TransitFeatureClick slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event transit_feature_right_tapped
         add add_TransitFeatureRightTapped slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TransitFeatureRightTapped slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event business_landmark_pointer_entered
         add add_BusinessLandmarkPointerEntered slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BusinessLandmarkPointerEntered slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event business_landmark_pointer_exited
         add add_BusinessLandmarkPointerExited slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2 shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BusinessLandmarkPointerExited slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2 shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event transit_feature_pointer_entered
         add add_TransitFeaturePointerEntered slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TransitFeaturePointerEntered slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2 shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event transit_feature_pointer_exited
         add add_TransitFeaturePointerExited slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2 shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapControl,Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs> name=value
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TransitFeaturePointerExited slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelper2 shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_map_control static
         method CreateMapControl slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapControlDataHelperStatics shape=51 reverse=24 static
             in boolean name=rasterRenderMode
@@ -2920,27 +2920,27 @@ class Windows.UI.Xaml.Controls.Maps.MapElementsLayer activatable python_type
     event map_context_requested
         add add_MapContextRequested slot=14 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapElementsLayer shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapElementsLayer,Windows.UI.Xaml.Controls.Maps.MapElementsLayerContextRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapContextRequested slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapElementsLayer shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event map_element_click
         add add_MapElementClick slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapElementsLayer shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapElementsLayer,Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapElementClick slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapElementsLayer shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event map_element_pointer_entered
         add add_MapElementPointerEntered slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapElementsLayer shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapElementsLayer,Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerEnteredEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapElementPointerEntered slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapElementsLayer shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event map_element_pointer_exited
         add add_MapElementPointerExited slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapElementsLayer shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapElementsLayer,Windows.UI.Xaml.Controls.Maps.MapElementsLayerPointerExitedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MapElementPointerExited slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapElementsLayer shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.Controls.Maps.MapElementsLayerClickEventArgs activatable python_type
     py MapElementsLayerClickEventArgs
@@ -3334,9 +3334,9 @@ class Windows.UI.Xaml.Controls.Maps.MapScene python_type
     event target_camera_changed
         add add_TargetCameraChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapScene shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Controls.Maps.MapScene,Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TargetCameraChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.Maps.IMapScene shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_from_bounding_box static
         method CreateFromBoundingBox slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapSceneStatics shape=51 reverse=24 static
             in class type=Windows.Devices.Geolocation.GeoboundingBox name=bounds
@@ -4376,6 +4376,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

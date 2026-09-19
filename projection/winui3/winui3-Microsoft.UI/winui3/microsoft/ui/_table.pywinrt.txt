@@ -473,15 +473,15 @@ interface Microsoft.UI.IClosableNotifier python_type
     event closed
         add add_Closed slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=44
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_closed
         add add_FrameworkClosed slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=100
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 interface Microsoft.UI.IColorHelper
     guid 3adddccd-3949-585b-a566-ccb8350dd221
@@ -507,6 +507,9 @@ struct Microsoft.UI.WindowId python_type
     py WindowId
     signature struct(Microsoft.UI.WindowId;u8)
     field value Value uint64
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 struct Windows.UI.Color external
     py winrt.windows.ui.Color

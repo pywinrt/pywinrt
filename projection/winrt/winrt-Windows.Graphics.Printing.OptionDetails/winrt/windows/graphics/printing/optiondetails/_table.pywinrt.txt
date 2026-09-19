@@ -1253,15 +1253,15 @@ class Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails python_type
     event begin_validation
         add add_BeginValidation slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails,System.Object> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_BeginValidation slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=26 reverse=167
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event option_changed
         add add_OptionChanged slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails,Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OptionChanged slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=26 reverse=134
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method create_item_list_option
         method CreateItemListOption slot=7 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=117 reverse=45
             in string name=optionId
@@ -1315,6 +1315,9 @@ class System.Object external
 
 class System.String external
     py winrt.system.String
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler

@@ -112,21 +112,21 @@ class Microsoft.UI.Xaml.Printing.PrintDocument composable python_type
     event add_pages
         add add_AddPages slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=51 reverse=144
             in delegate type=Microsoft.UI.Xaml.Printing.AddPagesEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AddPages slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event get_preview_page
         add add_GetPreviewPage slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=51 reverse=100
             in delegate type=Microsoft.UI.Xaml.Printing.GetPreviewPageEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GetPreviewPage slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event paginate
         add add_Paginate slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=51 reverse=44
             in delegate type=Microsoft.UI.Xaml.Printing.PaginateEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Paginate slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_page
         method AddPage slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=4 reverse=173
             in class type=Microsoft.UI.Xaml.UIElement name=pageVisual
@@ -151,6 +151,9 @@ class Microsoft.UI.Xaml.DependencyProperty external
 
 class Microsoft.UI.Xaml.UIElement external
     py winui3.microsoft.ui.xaml.UIElement
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Graphics.Printing.IPrintDocumentSource external
     py winrt.windows.graphics.printing._IPrintDocumentSource

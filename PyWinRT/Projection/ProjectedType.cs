@@ -41,6 +41,7 @@ class ProjectedType
             && type.FullName != "Windows.Foundation.IAsyncInfo";
         IsPyCloseable = type.ImplementsInterface("Windows.Foundation.IClosable");
         IsPyStringable = type.ImplementsInterface("Windows.Foundation.IStringable");
+        IsPyInteger = IsPyIntegerType(type.FullName);
 
         var iMemoryReference = type.ImplementsInterface(
             "Windows.Foundation.IMemoryBufferReference"
@@ -226,6 +227,26 @@ class ProjectedType
     /// True if the type implements Windows.Storage.Streams.IBuffer or Windows.Storage.Streams.IMemoryBufferReference.
     /// </summary>
     public bool IsPyBuffer { get; }
+
+    /// <summary>
+    /// True if the type is a WinRT struct that is projected as a Python int
+    /// rather than as a struct with one field.
+    /// </summary>
+    public bool IsPyInteger { get; }
+
+    /// <summary>
+    /// Tests whether <paramref name="fullName"/> names a WinRT struct that is
+    /// projected as a Python int.
+    /// </summary>
+    /// <remarks>
+    /// Both of them are one integer that WinRT gives a name to, and reading
+    /// that integer is the whole of what anyone does with them, so a wrapper
+    /// with one field in it would only be in the way. They keep types of their
+    /// own rather than becoming plain ints so that the stubs can tell an
+    /// HRESULT from a count.
+    /// </remarks>
+    public static bool IsPyIntegerType(string fullName) =>
+        fullName is "Windows.Foundation.HResult" or "Windows.Foundation.EventRegistrationToken";
 
     /// <summary>
     /// Gets the name of the property that returns the buffer size, e.g. "Length".

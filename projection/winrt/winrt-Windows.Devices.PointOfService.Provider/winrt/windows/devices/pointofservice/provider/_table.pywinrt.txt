@@ -111,9 +111,9 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader python_t
     event frame_arrived
         add add_FrameArrived slot=10 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader,Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReaderFrameArrivedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameArrived slot=11 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method start_async
@@ -237,51 +237,51 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection p
     event disable_scanner_requested
         add add_DisableScannerRequested slot=22 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=238
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DisableScannerRequested slot=23 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=245
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enable_scanner_requested
         add add_EnableScannerRequested slot=20 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=229
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnableScannerRequested slot=21 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=234
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event get_barcode_symbology_attributes_requested
         add add_GetBarcodeSymbologyAttributesRequested slot=30 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=271
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GetBarcodeSymbologyAttributesRequested slot=31 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=277
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event hide_video_preview_requested
         add add_HideVideoPreviewRequested slot=34 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=289
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_HideVideoPreviewRequested slot=35 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=294
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event set_active_symbologies_requested
         add add_SetActiveSymbologiesRequested slot=24 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=248
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SetActiveSymbologiesRequested slot=25 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=254
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event set_barcode_symbology_attributes_requested
         add add_SetBarcodeSymbologyAttributesRequested slot=32 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=281
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SetBarcodeSymbologyAttributesRequested slot=33 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=287
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event start_software_trigger_requested
         add add_StartSoftwareTriggerRequested slot=26 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=256
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StartSoftwareTriggerRequested slot=27 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=262
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stop_software_trigger_requested
         add add_StopSoftwareTriggerRequested slot=28 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=264
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StopSoftwareTriggerRequested slot=29 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=268
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_frame_reader_async
@@ -526,7 +526,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -555,7 +555,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Prov
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -584,7 +584,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Prov
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -934,6 +934,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

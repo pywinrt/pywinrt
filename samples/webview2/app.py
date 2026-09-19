@@ -106,9 +106,7 @@ class App(Application, IXamlMetadataProvider):
 
         def on_env(op: IAsyncOperation[CoreWebView2Environment], status: AsyncStatus):
             if status == AsyncStatus.ERROR:
-                print(
-                    "create_with_options_async failed:", WinError(op.error_code.value)
-                )
+                print("create_with_options_async failed:", WinError(op.error_code))
                 return
 
             if status != AsyncStatus.COMPLETED:
@@ -122,7 +120,7 @@ class App(Application, IXamlMetadataProvider):
                 if status == AsyncStatus.ERROR:
                     print(
                         "ensure_core_webview2_async failed:",
-                        WinError(op.error_code.value),
+                        WinError(op.error_code),
                     )
                     return
 

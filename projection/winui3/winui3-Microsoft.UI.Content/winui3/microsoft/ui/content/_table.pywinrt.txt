@@ -56,39 +56,39 @@ class Microsoft.UI.Content.ChildSiteLink python_type closeable
     event closed
         add add_Closed slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=44
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_closed
         add add_FrameworkClosed slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=100
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event fragment_root_automation_provider_requested
         add add_FragmentRootAutomationProviderRequested slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FragmentRootAutomationProviderRequested slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event next_sibling_automation_provider_requested
         add add_NextSiblingAutomationProviderRequested slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NextSiblingAutomationProviderRequested slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event parent_automation_provider_requested
         add add_ParentAutomationProviderRequested slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ParentAutomationProviderRequested slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event previous_sibling_automation_provider_requested
         add add_PreviousSiblingAutomationProviderRequested slot=15 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PreviousSiblingAutomationProviderRequested slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method connect
@@ -296,27 +296,27 @@ class Microsoft.UI.Content.ContentIsland composable python_type closeable
     event automation_provider_requested
         add add_AutomationProviderRequested slot=28 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=51 reverse=264
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIsland,Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AutomationProviderRequested slot=29 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=26 reverse=268
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event state_changed
         add add_StateChanged slot=30 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=51 reverse=271
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIsland,Microsoft.UI.Content.ContentIslandStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=31 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=26 reverse=277
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=44
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_closed
         add add_FrameworkClosed slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=100
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create static
@@ -396,15 +396,15 @@ class Microsoft.UI.Content.ContentIslandEnvironment composable python_type
     event setting_changed
         add add_SettingChanged slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIslandEnvironment,Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SettingChanged slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event state_changed
         add add_StateChanged slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIslandEnvironment,Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Content.ContentIslandStateChangedEventArgs python_type
     py ContentIslandStateChangedEventArgs
@@ -532,21 +532,21 @@ class Microsoft.UI.Content.ContentSite composable python_type closeable
     event requested_state_changed
         add add_RequestedStateChanged slot=30 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=51 reverse=271
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentSite,Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RequestedStateChanged slot=31 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=26 reverse=277
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=44
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_closed
         add add_FrameworkClosed slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=100
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_island_state_change_deferral
@@ -739,15 +739,15 @@ class Microsoft.UI.Content.DesktopAttachedSiteBridge python_type closeable
     event closed
         add add_Closed slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=44
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_closed
         add add_FrameworkClosed slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=100
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method connect
@@ -839,39 +839,39 @@ class Microsoft.UI.Content.DesktopPopupSiteBridge python_type closeable
     event closed
         add add_Closed slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=44
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_closed
         add add_FrameworkClosed slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=100
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event fragment_root_automation_provider_requested
         add add_FragmentRootAutomationProviderRequested slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FragmentRootAutomationProviderRequested slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event next_sibling_automation_provider_requested
         add add_NextSiblingAutomationProviderRequested slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NextSiblingAutomationProviderRequested slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event parent_automation_provider_requested
         add add_ParentAutomationProviderRequested slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ParentAutomationProviderRequested slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event previous_sibling_automation_provider_requested
         add add_PreviousSiblingAutomationProviderRequested slot=15 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PreviousSiblingAutomationProviderRequested slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method connect
@@ -938,15 +938,15 @@ class Microsoft.UI.Content.DesktopSiteBridge composable python_type closeable
     event closed
         add add_Closed slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=44
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_closed
         add add_FrameworkClosed slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=100
             in delegate type=Microsoft.UI.ClosableNotifierHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameworkClosed slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.IClosableNotifier shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method connect
@@ -1058,27 +1058,27 @@ interface Microsoft.UI.Content.IContentSiteAutomation python_type
     event fragment_root_automation_provider_requested
         add add_FragmentRootAutomationProviderRequested slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FragmentRootAutomationProviderRequested slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event next_sibling_automation_provider_requested
         add add_NextSiblingAutomationProviderRequested slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NextSiblingAutomationProviderRequested slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event parent_automation_provider_requested
         add add_ParentAutomationProviderRequested slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ParentAutomationProviderRequested slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event previous_sibling_automation_provider_requested
         add add_PreviousSiblingAutomationProviderRequested slot=15 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PreviousSiblingAutomationProviderRequested slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 interface Microsoft.UI.Content.IContentSiteAutomationProviderRequestedEventArgs
     guid 73a093b9-55d4-5598-b70e-6250b732f821
@@ -1482,6 +1482,9 @@ class Microsoft.UI.Composition.Visual external
 
 class Microsoft.UI.Dispatching.DispatcherQueue external
     py winui3.microsoft.ui.dispatching.DispatcherQueue
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable

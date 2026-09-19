@@ -39,15 +39,15 @@ class Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource composable python_type c
     event got_focus
         add add_GotFocus slot=14 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource,Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GotFocus slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event take_focus_requested
         add add_TakeFocusRequested slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource,Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TakeFocusRequested slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Hosting.IDesktopWindowXamlSource shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method initialize
@@ -211,9 +211,9 @@ class Microsoft.UI.Xaml.Hosting.WindowsXamlManager python_type closeable
     event xaml_shutdown_completed_on_thread
         add add_XamlShutdownCompletedOnThread slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Hosting.IWindowsXamlManager2 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Hosting.WindowsXamlManager,Microsoft.UI.Xaml.Hosting.XamlShutdownCompletedOnThreadEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_XamlShutdownCompletedOnThread slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Hosting.IWindowsXamlManager2 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_for_current_thread static
@@ -306,6 +306,9 @@ class Microsoft.UI.Xaml.Media.SystemBackdrop external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable

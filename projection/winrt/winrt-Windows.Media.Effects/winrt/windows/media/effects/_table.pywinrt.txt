@@ -19,9 +19,9 @@ class Windows.Media.Effects.AudioCaptureEffectsManager python_type
     event audio_capture_effects_changed
         add add_AudioCaptureEffectsChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Effects.IAudioCaptureEffectsManager shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Effects.AudioCaptureEffectsManager,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AudioCaptureEffectsChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Effects.IAudioCaptureEffectsManager shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_audio_capture_effects
         method GetAudioCaptureEffects slot=8 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioCaptureEffectsManager shape=4 reverse=62
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> return
@@ -116,9 +116,9 @@ class Windows.Media.Effects.AudioRenderEffectsManager python_type
     event audio_render_effects_changed
         add add_AudioRenderEffectsChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Effects.IAudioRenderEffectsManager shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Effects.AudioRenderEffectsManager,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AudioRenderEffectsChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Effects.IAudioRenderEffectsManager shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_audio_render_effects
         method GetAudioRenderEffects slot=8 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioRenderEffectsManager shape=4 reverse=62
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> return
@@ -721,6 +721,9 @@ class Windows.Media.Effects.VideoTransformSphericalProjection python_type
 
 class System.Object external
     py winrt.system.Object
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 struct Windows.Foundation.Rect external
     py winrt.windows.foundation.Rect

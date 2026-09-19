@@ -106,9 +106,9 @@ class Windows.Web.Http.Filters.HttpBaseProtocolFilter activatable python_type cl
     event server_custom_validation_requested
         add add_ServerCustomValidationRequested slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter4 shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.Http.Filters.HttpBaseProtocolFilter,Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ServerCustomValidationRequested slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter4 shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear_authentication_cache
         method ClearAuthenticationCache slot=8 inputs=0 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter4 shape=0 reverse=55
     method close
@@ -196,7 +196,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRe
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -440,6 +440,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

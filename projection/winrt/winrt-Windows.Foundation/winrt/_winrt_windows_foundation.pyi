@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -21,18 +22,16 @@ TProgress = typing.TypeVar('TProgress')
 TResult = typing.TypeVar('TResult')
 
 @typing.final
-class EventRegistrationToken:
+class EventRegistrationToken(int):
+    @deprecated("EventRegistrationToken.value is deprecated, the value is the EventRegistrationToken itself")
     @_property
-    def value(self) -> winrt.system.Int64: ...
-    def __new__(cls, value: winrt.system.Int64 = 0) -> EventRegistrationToken: ...
-    def __replace__(self, /, **changes: typing.Any) -> EventRegistrationToken: ...
+    def value(self) -> int: ...
 
 @typing.final
-class HResult:
+class HResult(int):
+    @deprecated("HResult.value is deprecated, the value is the HResult itself")
     @_property
-    def value(self) -> winrt.system.Int32: ...
-    def __new__(cls, value: winrt.system.Int32 = 0) -> HResult: ...
-    def __replace__(self, /, **changes: typing.Any) -> HResult: ...
+    def value(self) -> int: ...
 
 @typing.final
 class Point:

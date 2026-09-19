@@ -600,7 +600,7 @@ class Windows.Web.Http.HttpGetBufferResult python_type closeable stringable
     requires Windows.Foundation.IStringable
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property request_message
         get get_RequestMessage slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4 reverse=43
             out class type=Windows.Web.Http.HttpRequestMessage return
@@ -628,7 +628,7 @@ class Windows.Web.Http.HttpGetInputStreamResult python_type closeable stringable
     requires Windows.Foundation.IStringable
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property request_message
         get get_RequestMessage slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4 reverse=43
             out class type=Windows.Web.Http.HttpRequestMessage return
@@ -656,7 +656,7 @@ class Windows.Web.Http.HttpGetStringResult python_type closeable stringable
     requires Windows.Foundation.IStringable
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property request_message
         get get_RequestMessage slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4 reverse=43
             out class type=Windows.Web.Http.HttpRequestMessage return
@@ -906,7 +906,7 @@ class Windows.Web.Http.HttpRequestResult python_type closeable stringable
     requires Windows.Foundation.IStringable
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestResult shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property request_message
         get get_RequestMessage slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestResult shape=4 reverse=43
             out class type=Windows.Web.Http.HttpRequestMessage return
@@ -1127,7 +1127,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UI
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.String,System.UInt64> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1162,7 +1162,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<System.String,Windows.W
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.String,Windows.Web.Http.HttpProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1197,7 +1197,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UI
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.UInt64,System.UInt64> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1232,7 +1232,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,System.UInt64> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1267,7 +1267,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1302,7 +1302,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IInputStream,System.UInt64> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1337,7 +1337,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1372,7 +1372,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGe
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1407,7 +1407,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGe
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1442,7 +1442,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGe
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1477,7 +1477,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRe
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1512,7 +1512,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRe
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2280,6 +2280,9 @@ enum Windows.Foundation.AsyncStatus external
 
 struct Windows.Foundation.DateTime external
     py winrt.windows.foundation.DateTime
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

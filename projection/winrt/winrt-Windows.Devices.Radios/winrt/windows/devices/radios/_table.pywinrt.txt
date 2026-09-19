@@ -49,7 +49,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Radios.Radio> concr
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Radios.Radio> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -78,7 +78,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Radios.RadioAccessS
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Radios.RadioAccessStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -107,7 +107,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Radios.Radio>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -204,9 +204,9 @@ class Windows.Devices.Radios.Radio python_type
     event state_changed
         add add_StateChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Radios.Radio,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Radios.IRadio shape=26 reverse=82
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method from_id_async static
         method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=51 reverse=65 static
             in string name=deviceId
@@ -258,6 +258,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

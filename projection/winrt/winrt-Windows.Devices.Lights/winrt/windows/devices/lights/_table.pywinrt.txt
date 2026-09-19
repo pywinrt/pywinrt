@@ -49,7 +49,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Lights.Lamp> concre
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Lights.Lamp> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -78,7 +78,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Devices.Lights.LampArray> c
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Lights.LampArray> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -107,7 +107,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> co
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IBuffer> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -302,9 +302,9 @@ class Windows.Devices.Lights.Lamp python_type closeable
     event availability_changed
         add add_AvailabilityChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.Lamp,Windows.Devices.Lights.LampAvailabilityChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AvailabilityChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILamp shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
@@ -371,9 +371,9 @@ class Windows.Devices.Lights.LampArray python_type
     event availability_changed
         add add_AvailabilityChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray2 shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.LampArray,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AvailabilityChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILampArray2 shape=26 reverse=82
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArrayStatics shape=51 reverse=44 static
             in string name=deviceId
@@ -517,6 +517,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

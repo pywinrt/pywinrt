@@ -8,9 +8,9 @@ class Windows.Foundation.Diagnostics.AsyncCausalityTracer static python_type
     event tracing_status_changed static
         add add_TracingStatusChanged slot=11 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics shape=51 reverse=144 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TracingStatusChanged slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics shape=26 reverse=167 static
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method trace_operation_completion static
         method TraceOperationCompletion slot=7 inputs=5 outputs=0 declaring=Windows.Foundation.Diagnostics.IAsyncCausalityTracerStatics shape=245 static
             in enum32 type=Windows.Foundation.Diagnostics.CausalityTraceLevel name=traceLevel
@@ -136,9 +136,9 @@ class Windows.Foundation.Diagnostics.FileLoggingSession python_type closeable
     event log_file_generated
         add add_LogFileGenerated slot=11 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Foundation.Diagnostics.IFileLoggingSession,Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LogFileGenerated slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_logging_channel
         method AddLoggingChannel slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=4 reverse=43
             in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
@@ -171,7 +171,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Diagnostics.Erro
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Diagnostics.ErrorDetails> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -200,7 +200,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> concre
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.StorageFile> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -243,9 +243,9 @@ interface Windows.Foundation.Diagnostics.IFileLoggingSession python_type closeab
     event log_file_generated
         add add_LogFileGenerated slot=11 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Foundation.Diagnostics.IFileLoggingSession,Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LogFileGenerated slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_logging_channel
         method AddLoggingChannel slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.IFileLoggingSession shape=4 reverse=43
             in interface type=Windows.Foundation.Diagnostics.ILoggingChannel name=loggingChannel
@@ -293,9 +293,9 @@ interface Windows.Foundation.Diagnostics.ILoggingChannel python_type closeable
     event logging_enabled
         add add_LoggingEnabled slot=13 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Foundation.Diagnostics.ILoggingChannel,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LoggingEnabled slot=14 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method log_message
@@ -549,9 +549,9 @@ class Windows.Foundation.Diagnostics.LoggingChannel python_type closeable
     event logging_enabled
         add add_LoggingEnabled slot=13 inputs=1 outputs=1 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Foundation.Diagnostics.ILoggingChannel,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LoggingEnabled slot=14 inputs=1 outputs=0 declaring=Windows.Foundation.Diagnostics.ILoggingChannel shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method is_enabled
@@ -1280,6 +1280,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

@@ -52,21 +52,21 @@ class Windows.Media.Control.GlobalSystemMediaTransportControlsSession python_typ
     event media_properties_changed
         add add_MediaPropertiesChanged slot=29 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=267
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSession,Windows.Media.Control.MediaPropertiesChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MediaPropertiesChanged slot=30 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=26 reverse=272
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event playback_info_changed
         add add_PlaybackInfoChanged slot=27 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=260
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSession,Windows.Media.Control.PlaybackInfoChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PlaybackInfoChanged slot=28 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=26
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event timeline_properties_changed
         add add_TimelinePropertiesChanged slot=25 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=253
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSession,Windows.Media.Control.TimelinePropertiesChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TimelinePropertiesChanged slot=26 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=26 reverse=257
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_playback_info
         method GetPlaybackInfo slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=99
             out class type=Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo return
@@ -135,15 +135,15 @@ class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager pyt
     event current_session_changed
         add add_CurrentSessionChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager,Windows.Media.Control.CurrentSessionChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CurrentSessionChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event sessions_changed
         add add_SessionsChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager,Windows.Media.Control.SessionsChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SessionsChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_current_session
         method GetCurrentSession slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=4 reverse=22
             out class type=Windows.Media.Control.GlobalSystemMediaTransportControlsSession return
@@ -307,7 +307,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -336,7 +336,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Control.GlobalSystemM
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -365,7 +365,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Control.GlobalSystemM
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1143,6 +1143,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

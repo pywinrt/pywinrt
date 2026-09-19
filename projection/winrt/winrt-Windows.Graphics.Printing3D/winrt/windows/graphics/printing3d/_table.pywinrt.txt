@@ -95,7 +95,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -124,7 +124,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing3D.Printin
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing3D.Printing3D3MFPackage> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -153,7 +153,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing3D.Printin
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing3D.Printing3DMeshVerificationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -182,7 +182,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing3D.Printin
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing3D.Printing3DModel> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -211,7 +211,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAcce
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStream> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -246,7 +246,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,System.D
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.Boolean,System.Double> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2477,9 +2477,9 @@ class Windows.Graphics.Printing3D.Print3DManager python_type
     event task_requested
         add add_TaskRequested slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DManager shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing3D.Print3DManager,Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_TaskRequested slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrint3DManager shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DManagerStatics shape=4 reverse=22 static
             out class type=Windows.Graphics.Printing3D.Print3DManager return
@@ -2498,21 +2498,21 @@ class Windows.Graphics.Printing3D.Print3DTask python_type
     event completed
         add add_Completed slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing3D.Print3DTask,Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Completed slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=26 reverse=134
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event source_changed
         add add_SourceChanged slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing3D.Print3DTask,Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceChanged slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=26 reverse=167
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event submitting
         add add_Submitting slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=51 reverse=44
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing3D.Print3DTask,System.Object> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Submitting slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing3D.IPrint3DTask shape=26 reverse=82
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
 
 class Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs python_type
     py Print3DTaskCompletedEventArgs
@@ -3239,6 +3239,12 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external 
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

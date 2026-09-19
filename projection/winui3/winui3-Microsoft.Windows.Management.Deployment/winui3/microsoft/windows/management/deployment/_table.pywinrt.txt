@@ -167,7 +167,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Manag
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1117,13 +1117,13 @@ class Microsoft.Windows.Management.Deployment.PackageDeploymentResult python_typ
             out guid return
     property error
         get get_Error slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property error_text
         get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4 reverse=99
             out string return
     property extended_error
         get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4 reverse=22
             out enum32 type=Microsoft.Windows.Management.Deployment.PackageDeploymentStatus return
@@ -1524,6 +1524,9 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external 
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo

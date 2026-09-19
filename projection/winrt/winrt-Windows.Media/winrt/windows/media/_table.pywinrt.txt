@@ -124,7 +124,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -774,75 +774,75 @@ class Windows.Media.MediaControl static python_type
     event channel_down_pressed static
         add add_ChannelDownPressed slot=28 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=264 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ChannelDownPressed slot=29 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=268 static deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event channel_up_pressed static
         add add_ChannelUpPressed slot=26 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=256 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ChannelUpPressed slot=27 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=262 static deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event fast_forward_pressed static
         add add_FastForwardPressed slot=22 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=238 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FastForwardPressed slot=23 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=245 static deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event next_track_pressed static
         add add_NextTrackPressed slot=18 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=219 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NextTrackPressed slot=19 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=226 static deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pause_pressed static
         add add_PausePressed slot=10 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=124 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PausePressed slot=11 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=156 static deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event play_pause_toggle_pressed static
         add add_PlayPauseTogglePressed slot=14 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=187 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PlayPauseTogglePressed slot=15 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=200 static deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event play_pressed static
         add add_PlayPressed slot=8 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=65 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PlayPressed slot=9 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=110 static deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event previous_track_pressed static
         add add_PreviousTrackPressed slot=20 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=229 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PreviousTrackPressed slot=21 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=234 static deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event record_pressed static
         add add_RecordPressed slot=16 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=203 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RecordPressed slot=17 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=215 static deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event rewind_pressed static
         add add_RewindPressed slot=24 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=248 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RewindPressed slot=25 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=254 static deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event sound_level_changed static
         add add_SoundLevelChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=24 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SoundLevelChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=53 static deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event stop_pressed static
         add add_StopPressed slot=12 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=163 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StopPressed slot=13 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=181 static deprecated
-            in event_token name=cookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
 
 class Windows.Media.MediaExtensionManager activatable python_type
     py MediaExtensionManager
@@ -985,27 +985,27 @@ class Windows.Media.MediaTimelineController activatable python_type
     event position_changed
         add add_PositionChanged slot=14 inputs=1 outputs=1 declaring=Windows.Media.IMediaTimelineController shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.MediaTimelineController,System.Object> name=positionChangedEventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PositionChanged slot=15 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=26 reverse=200
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event state_changed
         add add_StateChanged slot=16 inputs=1 outputs=1 declaring=Windows.Media.IMediaTimelineController shape=51 reverse=203
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.MediaTimelineController,System.Object> name=stateChangedEventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StateChanged slot=17 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=26 reverse=215
-            in event_token name=eventCookie
+            in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event ended
         add add_Ended slot=12 inputs=1 outputs=1 declaring=Windows.Media.IMediaTimelineController2 shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.MediaTimelineController,System.Object> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Ended slot=13 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController2 shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event failed
         add add_Failed slot=10 inputs=1 outputs=1 declaring=Windows.Media.IMediaTimelineController2 shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.MediaTimelineController,Windows.Media.MediaTimelineControllerFailedEventArgs> name=eventHandler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Failed slot=11 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController2 shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method pause
         method Pause slot=8 inputs=0 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=0 reverse=55
     method resume
@@ -1020,7 +1020,7 @@ class Windows.Media.MediaTimelineControllerFailedEventArgs python_type
     requires Windows.Media.IMediaTimelineControllerFailedEventArgs
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineControllerFailedEventArgs shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 enum Windows.Media.MediaTimelineControllerState python_type
     py MediaTimelineControllerState
@@ -1189,39 +1189,39 @@ class Windows.Media.SystemMediaTransportControls python_type
     event button_pressed
         add add_ButtonPressed slot=32 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=51 reverse=281
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SystemMediaTransportControls,Windows.Media.SystemMediaTransportControlsButtonPressedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ButtonPressed slot=33 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=26 reverse=287
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event property_changed
         add add_PropertyChanged slot=34 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=51 reverse=289
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SystemMediaTransportControls,Windows.Media.SystemMediaTransportControlsPropertyChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PropertyChanged slot=35 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=26 reverse=294
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event auto_repeat_mode_change_requested
         add add_AutoRepeatModeChangeRequested slot=19 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=51 reverse=224
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SystemMediaTransportControls,Windows.Media.AutoRepeatModeChangeRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AutoRepeatModeChangeRequested slot=20 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=26 reverse=399
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event playback_position_change_requested
         add add_PlaybackPositionChangeRequested slot=13 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SystemMediaTransportControls,Windows.Media.PlaybackPositionChangeRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PlaybackPositionChangeRequested slot=14 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event playback_rate_change_requested
         add add_PlaybackRateChangeRequested slot=15 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SystemMediaTransportControls,Windows.Media.PlaybackRateChangeRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PlaybackRateChangeRequested slot=16 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event shuffle_enabled_change_requested
         add add_ShuffleEnabledChangeRequested slot=17 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SystemMediaTransportControls,Windows.Media.ShuffleEnabledChangeRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ShuffleEnabledChangeRequested slot=18 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsStatics shape=4 reverse=22 static
             out class type=Windows.Media.SystemMediaTransportControls return
@@ -1562,6 +1562,12 @@ enum Windows.Foundation.AsyncStatus external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

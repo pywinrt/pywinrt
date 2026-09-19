@@ -39,9 +39,9 @@ class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConf
     event availability_changed
         add add_AvailabilityChanged slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration,Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AvailabilityChanged slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method apply_training_data
         method ApplyTrainingData slot=26 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=117
             in enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat name=trainingDataFormat
@@ -571,21 +571,21 @@ class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession py
     event session_interrupted
         add add_SessionInterrupted slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SessionInterrupted slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event signal_detected
         add add_SignalDetected slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SignalDetected slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event system_state_changed
         add add_SystemStateChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SystemStateChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_audio_device_input_node
@@ -832,7 +832,7 @@ interface Windows.Foundation.IAsyncOperation<System.Object> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Object> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -861,7 +861,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -890,7 +890,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -919,7 +919,7 @@ interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -948,7 +948,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -977,7 +977,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1006,7 +1006,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1035,7 +1035,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1064,7 +1064,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1093,7 +1093,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1122,7 +1122,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1151,7 +1151,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1180,7 +1180,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1209,7 +1209,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1238,7 +1238,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<System.String>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1267,7 +1267,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.String>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1296,7 +1296,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<System.UInt32>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1325,7 +1325,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1354,7 +1354,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1383,7 +1383,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1412,7 +1412,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInpu
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Media.Audio.AudioDeviceInputNode> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1441,7 +1441,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStrea
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IInputStream> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2084,6 +2084,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

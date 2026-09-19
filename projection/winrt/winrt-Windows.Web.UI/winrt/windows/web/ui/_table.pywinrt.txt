@@ -38,7 +38,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.String> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -67,7 +67,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransf
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.DataTransfer.DataPackage> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -205,105 +205,105 @@ interface Windows.Web.UI.IWebViewControl python_type
     event contains_full_screen_element_changed
         add add_ContainsFullScreenElementChanged slot=59 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=379
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContainsFullScreenElementChanged slot=60 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=380
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event content_loading
         add add_ContentLoading slot=31 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=274
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlContentLoadingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ContentLoading slot=32 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=283
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event dom_content_loaded
         add add_DOMContentLoaded slot=33 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=286
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_DOMContentLoaded slot=34 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=291
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event frame_content_loading
         add add_FrameContentLoading slot=39 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=308
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlContentLoadingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameContentLoading slot=40 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=314
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event frame_dom_content_loaded
         add add_FrameDOMContentLoaded slot=41 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=317
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameDOMContentLoaded slot=42 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=321
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event frame_navigation_completed
         add add_FrameNavigationCompleted slot=43 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=323
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameNavigationCompleted slot=44 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=328
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event frame_navigation_starting
         add add_FrameNavigationStarting slot=37 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=300
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameNavigationStarting slot=38 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=305
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event long_running_script_detected
         add add_LongRunningScriptDetected slot=47 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=340
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_LongRunningScriptDetected slot=48 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=346
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigation_completed
         add add_NavigationCompleted slot=35 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=293
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationCompletedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NavigationCompleted slot=36 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=298
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigation_starting
         add add_NavigationStarting slot=29 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=267
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNavigationStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NavigationStarting slot=30 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=272
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event new_window_requested
         add add_NewWindowRequested slot=57 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=375
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_NewWindowRequested slot=58 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=378
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event permission_requested
         add add_PermissionRequested slot=53 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=365
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlPermissionRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PermissionRequested slot=54 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=370
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event script_notify
         add add_ScriptNotify slot=45 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=331
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlScriptNotifyEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ScriptNotify slot=46 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=337
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event unsafe_content_warning_displaying
         add add_UnsafeContentWarningDisplaying slot=49 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=348
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UnsafeContentWarningDisplaying slot=50 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=353
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event unsupported_uri_scheme_identified
         add add_UnsupportedUriSchemeIdentified slot=55 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=371
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UnsupportedUriSchemeIdentified slot=56 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=374
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event unviewable_content_identified
         add add_UnviewableContentIdentified slot=51 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=356
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UnviewableContentIdentified slot=52 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=362
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event web_resource_requested
         add add_WebResourceRequested slot=61 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=381
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_WebResourceRequested slot=62 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=382
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method build_local_stream_uri
         method BuildLocalStreamUri slot=27 inputs=2 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=117 reverse=261
             in string name=contentIdentifier
@@ -788,6 +788,12 @@ enum Windows.Foundation.AsyncStatus external
 
 class Windows.Foundation.Deferral external
     py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

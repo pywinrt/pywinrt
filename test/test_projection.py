@@ -19,6 +19,7 @@ import uuid
 import test_winrt.testcomponent as tc
 import winrt.windows.data.json as wdj
 import winrt.windows.foundation as wf
+from winrt.system.hresult import E_FAIL
 
 BLITTABLE_FIELDS = (1, 2, 3, 4, 5, 6, 7, 8.0, 9.0, uuid.UUID(int=10))
 
@@ -201,6 +202,56 @@ class TestStructs(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             tests.param13(BLITTABLE_FIELDS[:-1], value)
+
+
+class TestIntegerStructs(unittest.TestCase):
+    """
+    Two WinRT structs hold one integer each and are projected as subclasses of
+    ``int`` rather than as wrappers with a field in them, which is how the
+    table's ``hresult`` and ``event_token`` codes differ from ``int32`` and
+    ``int64``: the ABI is the integer and the Python value is an instance of
+    the type the record names, the way an enum works.
+    """
+
+    def failed(self) -> wf.IAsyncAction:
+        action = tc.TestRunner.create_async_action_with_error(10, E_FAIL)
+
+        with self.assertRaises(OSError):
+            action.get()
+
+        return action
+
+    def test_an_hresult_is_an_int(self) -> None:
+        self.assertTrue(issubclass(wf.HResult, int))
+        self.assertTrue(issubclass(wf.EventRegistrationToken, int))
+
+    def test_an_output_comes_back_as_the_type(self) -> None:
+        error_code = self.failed().error_code
+
+        self.assertIsInstance(error_code, wf.HResult)
+        self.assertEqual(error_code, E_FAIL)
+
+    def test_an_input_takes_a_plain_int(self) -> None:
+        # E_FAIL is a plain int and the parameter is an HRESULT, which is what
+        # the action above was asked for.
+        self.assertEqual(self.failed().error_code, E_FAIL)
+
+    def test_an_event_token_comes_back_as_the_type(self) -> None:
+        obj = tc.Override()
+        token = obj.add_overridable_called(lambda s, e: None)
+
+        self.assertIsInstance(token, wf.EventRegistrationToken)
+
+        # and goes back as the integer it is
+        obj.remove_overridable_called(int(token))
+
+    def test_the_field_the_type_used_to_have(self) -> None:
+        error_code = self.failed().error_code
+
+        with self.assertWarns(DeprecationWarning):
+            value = error_code.value  # type: ignore[deprecated]
+
+        self.assertEqual(value, E_FAIL)
 
 
 if __name__ == "__main__":

@@ -285,7 +285,7 @@ class Windows.Management.Deployment.CreateSharedPackageContainerResult python_ty
             out class type=Windows.Management.Deployment.SharedPackageContainer return
     property extended_error
         get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ICreateSharedPackageContainerResult shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ICreateSharedPackageContainerResult shape=4 reverse=43
             out enum32 type=Windows.Management.Deployment.SharedPackageContainerOperationStatus return
@@ -316,7 +316,7 @@ class Windows.Management.Deployment.DeleteSharedPackageContainerResult python_ty
     requires Windows.Management.Deployment.IDeleteSharedPackageContainerResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeleteSharedPackageContainerResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeleteSharedPackageContainerResult shape=4 reverse=22
             out enum32 type=Windows.Management.Deployment.SharedPackageContainerOperationStatus return
@@ -349,7 +349,7 @@ class Windows.Management.Deployment.DeploymentResult python_type
             out string return
     property extended_error_code
         get get_ExtendedErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeploymentResult shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property is_registered
         get get_IsRegistered slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeploymentResult2 shape=4 reverse=22
             out boolean return
@@ -399,7 +399,7 @@ interface Windows.Foundation.IAsyncOperation<System.UInt64> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt64> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -428,7 +428,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -457,7 +457,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Management.Deployment.Packa
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Management.Deployment.PackageVolume> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -492,7 +492,7 @@ interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Depl
             in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -2172,7 +2172,7 @@ class Windows.Management.Deployment.UpdateSharedPackageContainerResult python_ty
     requires Windows.Management.Deployment.IUpdateSharedPackageContainerResult
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IUpdateSharedPackageContainerResult shape=4 reverse=43
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IUpdateSharedPackageContainerResult shape=4 reverse=22
             out enum32 type=Windows.Management.Deployment.SharedPackageContainerOperationStatus return
@@ -2209,6 +2209,9 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external 
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

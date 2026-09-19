@@ -12,7 +12,7 @@ class Windows.System.AppActivationResult python_type
             out class type=Windows.System.AppResourceGroupInfo return
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppActivationResult shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.System.AppDiagnosticInfo python_type
     py AppDiagnosticInfo
@@ -66,27 +66,27 @@ class Windows.System.AppDiagnosticInfoWatcher python_type
     event added
         add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,Windows.System.AppDiagnosticInfoWatcherEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
         add add_EnumerationCompleted slot=10 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=11 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
         add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,Windows.System.AppDiagnosticInfoWatcherEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
         add add_Stopped slot=12 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Stopped slot=13 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=15 inputs=0 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=0 reverse=193
     method stop
@@ -112,7 +112,7 @@ class Windows.System.AppExecutionStateChangeResult python_type
     requires Windows.System.IAppExecutionStateChangeResult
     property extended_error
         get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppExecutionStateChangeResult shape=4 reverse=22
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
 
 class Windows.System.AppMemoryReport python_type
     py AppMemoryReport
@@ -223,33 +223,33 @@ class Windows.System.AppResourceGroupInfoWatcher python_type
     event added
         add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,Windows.System.AppResourceGroupInfoWatcherEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=53
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
         add add_EnumerationCompleted slot=10 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=124
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=11 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=156
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event execution_state_changed
         add add_ExecutionStateChanged slot=14 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ExecutionStateChanged slot=15 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=200
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
         add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,Windows.System.AppResourceGroupInfoWatcherEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=110
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
         add add_Stopped slot=12 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=163
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Stopped slot=13 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=181
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=17 inputs=0 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=0 reverse=209
     method stop
@@ -639,15 +639,15 @@ class Windows.System.DispatcherQueue python_type
     event shutdown_completed
         add add_ShutdownCompleted slot=11 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueue shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.DispatcherQueue,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ShutdownCompleted slot=12 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueue shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event shutdown_starting
         add add_ShutdownStarting slot=9 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueue shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.DispatcherQueue,Windows.System.DispatcherQueueShutdownStartingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ShutdownStarting slot=10 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueue shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_timer
         method CreateTimer slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueue shape=4 reverse=22
             out class type=Windows.System.DispatcherQueueTimer return
@@ -720,9 +720,9 @@ class Windows.System.DispatcherQueueTimer python_type
     event tick
         add add_Tick slot=13 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.DispatcherQueueTimer,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Tick slot=14 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=11 inputs=0 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=0 reverse=137
     method stop
@@ -880,7 +880,7 @@ interface Windows.Foundation.IAsyncOperation<System.Object> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Object> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -909,7 +909,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -938,7 +938,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPro
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IPropertySet> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -967,7 +967,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -996,7 +996,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1025,7 +1025,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1054,7 +1054,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.System.User>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1083,7 +1083,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAcce
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStreamReference> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1112,7 +1112,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.AppActivationResult>
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.AppActivationResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1141,7 +1141,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.AppExecutionStateCha
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.AppExecutionStateChangeResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1170,7 +1170,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.AutoUpdateTimeZoneSt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.AutoUpdateTimeZoneStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1199,7 +1199,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.DiagnosticAccessStat
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.DiagnosticAccessStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1228,7 +1228,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportSt
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.LaunchQuerySupportStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1257,7 +1257,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriResult> con
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.LaunchUriResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1286,7 +1286,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriStatus> con
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.LaunchUriStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1315,7 +1315,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.ProcessLauncherResul
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.ProcessLauncherResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1344,7 +1344,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.RemoteLaunchUriStatu
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.RemoteLaunchUriStatus> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1373,7 +1373,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.User> concrete await
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.User> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -1402,7 +1402,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.UserAgeConsentResult
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.UserAgeConsentResult> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -3091,21 +3091,21 @@ class Windows.System.MemoryManager static python_type
     event app_memory_usage_decreased static
         add add_AppMemoryUsageDecreased slot=11 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=51 reverse=144 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AppMemoryUsageDecreased slot=12 inputs=1 outputs=0 declaring=Windows.System.IMemoryManagerStatics shape=26 reverse=167 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event app_memory_usage_increased static
         add add_AppMemoryUsageIncreased slot=9 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=51 reverse=100 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AppMemoryUsageIncreased slot=10 inputs=1 outputs=0 declaring=Windows.System.IMemoryManagerStatics shape=26 reverse=134 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event app_memory_usage_limit_changing static
         add add_AppMemoryUsageLimitChanging slot=13 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=51 reverse=174 static
             in delegate type=Windows.Foundation.EventHandler<Windows.System.AppMemoryUsageLimitChangingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AppMemoryUsageLimitChanging slot=14 inputs=1 outputs=0 declaring=Windows.System.IMemoryManagerStatics shape=26 reverse=192 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_app_memory_report static
         method GetAppMemoryReport slot=6 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics2 shape=4 reverse=22 static
             out class type=Windows.System.AppMemoryReport return
@@ -3528,9 +3528,9 @@ class Windows.System.UserDeviceAssociation static python_type
     event user_device_association_changed static
         add add_UserDeviceAssociationChanged slot=7 inputs=1 outputs=1 declaring=Windows.System.IUserDeviceAssociationStatics shape=51 reverse=44 static
             in delegate type=Windows.Foundation.EventHandler<Windows.System.UserDeviceAssociationChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_UserDeviceAssociationChanged slot=8 inputs=1 outputs=0 declaring=Windows.System.IUserDeviceAssociationStatics shape=26 reverse=82 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_user_from_device_id static
         method FindUserFromDeviceId slot=6 inputs=1 outputs=1 declaring=Windows.System.IUserDeviceAssociationStatics shape=51 reverse=24 static
             in string name=deviceId
@@ -3596,45 +3596,45 @@ class Windows.System.UserWatcher python_type
     event added
         add add_Added slot=9 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=100
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Added slot=10 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=134
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event authentication_status_changed
         add add_AuthenticationStatusChanged slot=15 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=196
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AuthenticationStatusChanged slot=16 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=397
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event authentication_status_changing
         add add_AuthenticationStatusChanging slot=17 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=211
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserAuthenticationStatusChangingEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AuthenticationStatusChanging slot=18 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=398
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
         add add_EnumerationCompleted slot=19 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=224
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_EnumerationCompleted slot=20 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=399
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
         add add_Removed slot=11 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Removed slot=12 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=167
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
         add add_Stopped slot=21 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=233
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,System.Object> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Stopped slot=22 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=400
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
         add add_Updated slot=13 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=174
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_Updated slot=14 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=192
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=7 inputs=0 outputs=0 declaring=Windows.System.IUserWatcher shape=0 reverse=37
     method stop
@@ -3681,6 +3681,12 @@ class Windows.Foundation.Deferral external
 delegate Windows.Foundation.EventHandler external parameterized
     py winrt.windows.foundation.EventHandler
     guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

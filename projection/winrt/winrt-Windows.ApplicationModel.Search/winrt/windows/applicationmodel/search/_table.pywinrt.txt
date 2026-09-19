@@ -351,33 +351,33 @@ class Windows.ApplicationModel.Search.SearchPane python_type
     event query_changed
         add add_QueryChanged slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=51 reverse=211 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_QueryChanged slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=26 reverse=398 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event query_submitted
         add add_QuerySubmitted slot=21 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=51 reverse=233 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_QuerySubmitted slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=26 reverse=400 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event result_suggestion_chosen
         add add_ResultSuggestionChosen slot=23 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=51 reverse=243 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ResultSuggestionChosen slot=24 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=26 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event suggestions_requested
         add add_SuggestionsRequested slot=19 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=51 reverse=224 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SuggestionsRequested slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=26 reverse=399 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event visibility_changed
         add add_VisibilityChanged slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=51 reverse=196 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs> name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VisibilityChanged slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=26 reverse=397 deprecated
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static deprecated
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneStatics shape=4 reverse=22 static deprecated
             out class type=Windows.ApplicationModel.Search.SearchPane return
@@ -633,6 +633,9 @@ delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.Se
 
 class System.String external
     py winrt.system.String
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler

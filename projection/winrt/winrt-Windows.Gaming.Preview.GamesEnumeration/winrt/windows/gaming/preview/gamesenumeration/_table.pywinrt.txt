@@ -42,21 +42,21 @@ class Windows.Gaming.Preview.GamesEnumeration.GameList static python_type
     event game_added static
         add add_GameAdded slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=51 reverse=65 static
             in delegate type=Windows.Gaming.Preview.GamesEnumeration.GameListChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GameAdded slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=26 reverse=110 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event game_removed static
         add add_GameRemoved slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=51 reverse=124 static
             in delegate type=Windows.Gaming.Preview.GamesEnumeration.GameListRemovedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GameRemoved slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=26 reverse=156 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event game_updated static
         add add_GameUpdated slot=12 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=51 reverse=163 static
             in delegate type=Windows.Gaming.Preview.GamesEnumeration.GameListChangedEventHandler name=handler
-            out event_token return
+            out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_GameUpdated slot=13 inputs=1 outputs=0 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=26 reverse=181 static
-            in event_token name=token
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_all_async static
         method FindAllAsync slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=4 reverse=22 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>> return
@@ -229,7 +229,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -258,7 +258,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -287,7 +287,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Gaming.Preview.GamesEnumera
             in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Gaming.Preview.GamesEnumeration.GameListEntry> name=handler
     property error_code
         get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
-            out hresult return
+            out hresult type=Windows.Foundation.HResult return
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
             out uint32 return
@@ -729,6 +729,12 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterize
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction
