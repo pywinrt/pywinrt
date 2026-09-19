@@ -175,12 +175,15 @@ class Tree:
         """
         What a package in this tree needs on PYTHONPATH to be built without
         build isolation: the same directories the generated cibuildwheel
-        configuration puts there.
+        configuration puts there. For a 4.x tree that is winrt-runtime's
+        package; for a 3.x one it is winrt-sdk's, which is where the pywinrt
+        headers were before they moved.
         """
-        paths = [self.sdk_package / "src"]
-
-        if self.include_dir is not None:
-            paths.append(self.runtime_package / "python")
+        paths = (
+            [self.runtime_package / "python"]
+            if self.include_dir is not None
+            else [self.sdk_package / "src"]
+        )
 
         return os.pathsep.join(os.fspath(p) for p in paths)
 
@@ -224,10 +227,15 @@ def add_worktree(ref: str, path: Path) -> Tree:
 def build_wheel(package: Path, out_dir: Path, pythonpath: str) -> Path:
     """
     Builds one package into a wheel, without build isolation so that the
-    winrt-sdk and winrt-runtime build dependencies come from the tree being
-    built rather than from PyPI.
+    winrt-runtime build dependency comes from the tree being built rather than
+    from PyPI. The C++/WinRT headers come from the current tree either way,
+    since the sources being compiled are the current ones.
     """
-    env = dict(os.environ, PYTHONPATH=pythonpath)
+    env = dict(
+        os.environ,
+        PYTHONPATH=pythonpath,
+        CPPWINRT_PATH=os.fspath(PROJECT_DIR / "_cppwinrt"),
+    )
 
     # A fresh directory per package, so that the wheel that comes out is
     # unambiguous even when pip serves it from its cache and writes no new
@@ -459,15 +467,8 @@ def scenario_c(baseline: Tree, current: Tree, work: Path) -> None:
         )
         return
 
-    # winrt-sdk supplies the C++/WinRT headers and comes from the current tree,
-    # since the sources being compiled are the current ones; only the pywinrt
-    # headers come from the baseline.
-    pythonpath = os.pathsep.join(
-        [
-            os.fspath(baseline.runtime_package / "python"),
-            os.fspath(current.sdk_package / "src"),
-        ]
-    )
+    # Only the pywinrt headers come from the baseline.
+    pythonpath = os.fspath(baseline.runtime_package / "python")
 
     package = PROJECT_DIR / "interop/winrt-Windows.System.Interop"
 

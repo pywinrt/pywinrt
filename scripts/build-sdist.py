@@ -31,6 +31,7 @@ WINDOWS_APP_SDK_PATH = (
 os.environ["WEBVIEW2_PATH"] = os.fspath(WEBVIEW2_PATH)
 os.environ["MICROSOFT_UI_XAML_PATH"] = os.fspath(MICROSOFT_UI_XAML_PATH)
 os.environ["WINDOWS_APP_SDK_PATH"] = os.fspath(WINDOWS_APP_SDK_PATH)
+os.environ["CPPWINRT_PATH"] = os.fspath(PROJECT_DIR / "_cppwinrt")
 
 # setup.py imports winrt._include to locate the runtime headers, and the
 # runtime is not installed here (its own sdist is one of the things we build),
@@ -44,17 +45,6 @@ os.environ["PYTHONPATH"] = os.pathsep.join(
         ],
     )
 )
-
-
-try:
-    import winrt_sdk  # noqa: F401
-    import winrt_microsoft_ui_xaml  # noqa: F401
-    import winrt_windows_app_sdk  # noqa: F401
-except ImportError:
-    print(
-        "winrt-sdk, winrt-Microsoft.UI.Xaml and winrt-WindowsAppSDK must be installed first installed in order for build to succeed."
-    )
-    exit(1)
 
 
 for package_path in chain(
