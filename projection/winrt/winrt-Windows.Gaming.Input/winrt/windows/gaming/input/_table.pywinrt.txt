@@ -514,7 +514,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.Haptics.Simpl
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Haptics.SimpleHapticsController> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Haptics.SimpleHapticsController> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Haptics.SimpleHapticsController> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.Haptics.SimpleHapticsController name=items
             out uint32 return
     method move_next
@@ -534,7 +534,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ArcadeSt
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ArcadeStick> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ArcadeStick> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ArcadeStick> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Gaming.Input.ArcadeStick name=items
             out uint32 return
     method move_next
@@ -554,7 +554,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.FlightSt
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.FlightStick> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.FlightStick> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.FlightStick> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Gaming.Input.FlightStick name=items
             out uint32 return
     method move_next
@@ -574,7 +574,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ForceFee
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor name=items
             out uint32 return
     method move_next
@@ -594,7 +594,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.Gamepad>
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.Gamepad> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.Gamepad> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.Gamepad> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Gaming.Input.Gamepad name=items
             out uint32 return
     method move_next
@@ -614,7 +614,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RacingWh
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RacingWheel> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RacingWheel> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RacingWheel> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Gaming.Input.RacingWheel name=items
             out uint32 return
     method move_next
@@ -634,7 +634,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RawGameC
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RawGameController> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RawGameController> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.RawGameController> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Gaming.Input.RawGameController name=items
             out uint32 return
     method move_next
@@ -654,7 +654,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.UINaviga
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.UINavigationController> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.UINavigationController> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Gaming.Input.UINavigationController> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Gaming.Input.UINavigationController name=items
             out uint32 return
     method move_next
@@ -711,7 +711,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.Sim
             fill_array class type=Windows.Devices.Haptics.SimpleHapticsController name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsController> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsController> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.Haptics.SimpleHapticsController name=value
             out uint32 name=index
             out boolean return
@@ -739,7 +739,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Arcade
             fill_array class type=Windows.Gaming.Input.ArcadeStick name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ArcadeStick> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ArcadeStick> shape=117 reverse=66 role=index_of
             in class type=Windows.Gaming.Input.ArcadeStick name=value
             out uint32 name=index
             out boolean return
@@ -767,7 +767,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Flight
             fill_array class type=Windows.Gaming.Input.FlightStick name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.FlightStick> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.FlightStick> shape=117 reverse=66 role=index_of
             in class type=Windows.Gaming.Input.FlightStick name=value
             out uint32 name=index
             out boolean return
@@ -795,7 +795,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceF
             fill_array class type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> shape=117 reverse=66 role=index_of
             in class type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor name=value
             out uint32 name=index
             out boolean return
@@ -823,7 +823,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepa
             fill_array class type=Windows.Gaming.Input.Gamepad name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepad> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepad> shape=117 reverse=66 role=index_of
             in class type=Windows.Gaming.Input.Gamepad name=value
             out uint32 name=index
             out boolean return
@@ -851,7 +851,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Racing
             fill_array class type=Windows.Gaming.Input.RacingWheel name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RacingWheel> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RacingWheel> shape=117 reverse=66 role=index_of
             in class type=Windows.Gaming.Input.RacingWheel name=value
             out uint32 name=index
             out boolean return
@@ -879,7 +879,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGam
             fill_array class type=Windows.Gaming.Input.RawGameController name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGameController> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGameController> shape=117 reverse=66 role=index_of
             in class type=Windows.Gaming.Input.RawGameController name=value
             out uint32 name=index
             out boolean return
@@ -907,7 +907,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavi
             fill_array class type=Windows.Gaming.Input.UINavigationController name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavigationController> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavigationController> shape=117 reverse=66 role=index_of
             in class type=Windows.Gaming.Input.UINavigationController name=value
             out uint32 name=index
             out boolean return

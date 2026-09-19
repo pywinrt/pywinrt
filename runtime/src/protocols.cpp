@@ -860,6 +860,19 @@ namespace py::interp
                 switch (member.overloads[j].role)
                 {
                 case table::member_role::none:
+                // The members that only the other direction calls: what
+                // WinRT asks a Python list or dict standing in for a
+                // collection, which pycollections.cpp reads off the role
+                // itself rather than through a type's protocol.
+                case table::member_role::get_view:
+                case table::member_role::index_of:
+                case table::member_role::append:
+                case table::member_role::remove_at_end:
+                case table::member_role::clear:
+                case table::member_role::replace_all:
+                case table::member_role::split:
+                case table::member_role::pair_key:
+                case table::member_role::pair_value:
                     continue;
                 case table::member_role::size:
                     entry.protocol.size = &member;

@@ -103,6 +103,15 @@ ROLES = (
     "value",
     "close",
     "get_many",
+    "get_view",
+    "index_of",
+    "append",
+    "remove_at_end",
+    "clear",
+    "replace_all",
+    "split",
+    "pair_key",
+    "pair_value",
 )
 
 PARAM_CATEGORIES = ("in", "out", "pass_array", "fill_array", "receive_array")

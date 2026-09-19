@@ -380,7 +380,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.PointInt32> 
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.PointInt32> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.PointInt32> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.PointInt32> shape=117 reverse=101 role=get_many
             fill_array struct type=Windows.Graphics.PointInt32 name=items
             out uint32 return
     method move_next
@@ -400,7 +400,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> c
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=117 reverse=101 role=get_many
             fill_array struct type=Windows.Graphics.RectInt32 name=items
             out uint32 return
     method move_next
@@ -433,10 +433,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> co
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=22 reverse=179
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=22 reverse=179 role=append
             in struct type=Windows.Graphics.PointInt32 name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.PointInt32> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.PointInt32> return
@@ -450,10 +450,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> co
             fill_array struct type=Windows.Graphics.PointInt32 name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.PointInt32> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=162 reverse=108
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=162 reverse=108 role=index_of
             in struct type=Windows.Graphics.PointInt32 name=value
             out uint32 name=index
             out boolean return
@@ -465,9 +465,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> co
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=51 reverse=211 role=replace_all
             pass_array struct type=Windows.Graphics.PointInt32 name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> shape=60 reverse=128 role=set_at
@@ -485,10 +485,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> con
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=21 reverse=396
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=21 reverse=396 role=append
             in struct type=Windows.Graphics.RectInt32 name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> return
@@ -502,10 +502,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> con
             fill_array struct type=Windows.Graphics.RectInt32 name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=161 reverse=390
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=161 reverse=390 role=index_of
             in struct type=Windows.Graphics.RectInt32 name=value
             out uint32 name=index
             out boolean return
@@ -517,9 +517,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> con
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=51 reverse=211 role=replace_all
             pass_array struct type=Windows.Graphics.RectInt32 name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=315 reverse=393 role=set_at
@@ -549,7 +549,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.PointInt32
             fill_array struct type=Windows.Graphics.PointInt32 name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.PointInt32> shape=162 reverse=79
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.PointInt32> shape=162 reverse=79 role=index_of
             in struct type=Windows.Graphics.PointInt32 name=value
             out uint32 name=index
             out boolean return
@@ -577,7 +577,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32>
             fill_array struct type=Windows.Graphics.RectInt32 name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> shape=161 reverse=78
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> shape=161 reverse=78 role=index_of
             in struct type=Windows.Graphics.RectInt32 name=value
             out uint32 name=index
             out boolean return

@@ -881,7 +881,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -901,7 +901,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> name=items
             out uint32 return
     method move_next
@@ -921,7 +921,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.Bitm
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.BitmapPixelFormat> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.BitmapPixelFormat> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.BitmapPixelFormat> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=items
             out uint32 return
     method move_next
@@ -941,7 +941,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.Soft
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.SoftwareBitmap> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.SoftwareBitmap> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.SoftwareBitmap> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Graphics.Imaging.SoftwareBitmap name=items
             out uint32 return
     method move_next
@@ -961,7 +961,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.CodecInfo>
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.CodecInfo> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.CodecInfo> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.CodecInfo> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Core.CodecInfo name=items
             out uint32 return
     method move_next
@@ -981,7 +981,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.IMediaCue>
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.IMediaCue> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.IMediaCue> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.IMediaCue> shape=117 reverse=101 role=get_many
             fill_array interface type=Windows.Media.Core.IMediaCue name=items
             out uint32 return
     method move_next
@@ -1001,7 +1001,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.MseSourceB
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.MseSourceBuffer> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.MseSourceBuffer> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.MseSourceBuffer> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Core.MseSourceBuffer name=items
             out uint32 return
     method move_next
@@ -1021,7 +1021,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.MseTimeRan
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.MseTimeRange> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.MseTimeRange> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.MseTimeRange> shape=117 reverse=101 role=get_many
             fill_array struct type=Windows.Media.Core.MseTimeRange name=items
             out uint32 return
     method move_next
@@ -1041,7 +1041,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetad
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
             out uint32 return
     method move_next
@@ -1061,7 +1061,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextL
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextLine> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextLine> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextLine> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Core.TimedTextLine name=items
             out uint32 return
     method move_next
@@ -1081,7 +1081,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextS
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextSource> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextSource> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextSource> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Core.TimedTextSource name=items
             out uint32 return
     method move_next
@@ -1101,7 +1101,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextS
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextSubformat> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextSubformat> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextSubformat> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Core.TimedTextSubformat name=items
             out uint32 return
     method move_next
@@ -1121,7 +1121,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Core.Fr
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Core.FrameController> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Core.FrameController> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Core.FrameController> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.Devices.Core.FrameController name=items
             out uint32 return
     method move_next
@@ -1141,7 +1141,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Media.FaceAnalysis.De
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.FaceAnalysis.DetectedFace> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.FaceAnalysis.DetectedFace> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.FaceAnalysis.DetectedFace> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Media.FaceAnalysis.DetectedFace name=items
             out uint32 return
     method move_next
@@ -1156,10 +1156,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object
     argument System.Guid
     argument System.Object
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=22 role=pair_key
             out guid return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=43 role=pair_value
             out object return
 
 interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
@@ -1184,12 +1184,12 @@ interface Windows.Foundation.Collections.IMap<System.Guid,System.Object> concret
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=87 role=has_key
@@ -1231,7 +1231,7 @@ interface Windows.Foundation.Collections.IMapView<System.Guid,System.Object> con
             in guid name=key
             out object return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> name=second
 
@@ -1474,10 +1474,10 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.Ti
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.TimedMetadataTrack> shape=26 reverse=53
             in event_token name=token
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=173 role=append
             in class type=Windows.Media.Core.TimedMetadataTrack name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> return
@@ -1491,10 +1491,10 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.Ti
             fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Core.TimedMetadataTrack name=value
             out uint32 name=index
             out boolean return
@@ -1506,9 +1506,9 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.Ti
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Core.TimedMetadataTrack name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=51 reverse=124 role=set_at
@@ -1533,10 +1533,10 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.Ti
         remove remove_VectorChanged slot=7 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.TimedTextSource> shape=26 reverse=53
             in event_token name=token
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=173 role=append
             in class type=Windows.Media.Core.TimedTextSource name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedTextSource> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextSource> return
@@ -1550,10 +1550,10 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.Ti
             fill_array class type=Windows.Media.Core.TimedTextSource name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextSource> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Core.TimedTextSource name=value
             out uint32 name=index
             out boolean return
@@ -1565,9 +1565,9 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.Ti
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Core.TimedTextSource name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=51 reverse=124 role=set_at
@@ -2324,10 +2324,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadat
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=173 role=append
             in class type=Windows.Media.Core.TimedMetadataTrack name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedMetadataTrack> return
@@ -2341,10 +2341,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadat
             fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Core.TimedMetadataTrack name=value
             out uint32 name=index
             out boolean return
@@ -2356,9 +2356,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadat
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Core.TimedMetadataTrack name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=51 reverse=124 role=set_at
@@ -2376,10 +2376,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLin
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=4 reverse=173 role=append
             in class type=Windows.Media.Core.TimedTextLine name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedTextLine> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextLine> return
@@ -2393,10 +2393,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLin
             fill_array class type=Windows.Media.Core.TimedTextLine name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextLine> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Core.TimedTextLine name=value
             out uint32 name=index
             out boolean return
@@ -2408,9 +2408,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLin
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Core.TimedTextLine name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> shape=51 reverse=124 role=set_at
@@ -2428,10 +2428,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSou
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=173 role=append
             in class type=Windows.Media.Core.TimedTextSource name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedTextSource> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextSource> return
@@ -2445,10 +2445,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSou
             fill_array class type=Windows.Media.Core.TimedTextSource name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextSource> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Core.TimedTextSource name=value
             out uint32 name=index
             out boolean return
@@ -2460,9 +2460,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSou
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Core.TimedTextSource name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=51 reverse=124 role=set_at
@@ -2480,10 +2480,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSub
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=4 reverse=173 role=append
             in class type=Windows.Media.Core.TimedTextSubformat name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedTextSubformat> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Core.TimedTextSubformat> return
@@ -2497,10 +2497,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSub
             fill_array class type=Windows.Media.Core.TimedTextSubformat name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextSubformat> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=117 reverse=101 role=index_of
             in class type=Windows.Media.Core.TimedTextSubformat name=value
             out uint32 name=index
             out boolean return
@@ -2512,9 +2512,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSub
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Media.Core.TimedTextSubformat name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> shape=51 reverse=124 role=set_at
@@ -2544,7 +2544,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             fill_array string name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -2572,7 +2572,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.Bi
             fill_array enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=value
             out uint32 name=index
             out boolean return
@@ -2600,7 +2600,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.CodecInf
             fill_array class type=Windows.Media.Core.CodecInfo name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.CodecInfo> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.CodecInfo> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Core.CodecInfo name=value
             out uint32 name=index
             out boolean return
@@ -2628,7 +2628,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.IMediaCu
             fill_array interface type=Windows.Media.Core.IMediaCue name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.IMediaCue> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.IMediaCue> shape=117 reverse=66 role=index_of
             in interface type=Windows.Media.Core.IMediaCue name=value
             out uint32 name=index
             out boolean return
@@ -2656,7 +2656,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseSourc
             fill_array class type=Windows.Media.Core.MseSourceBuffer name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseSourceBuffer> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseSourceBuffer> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Core.MseSourceBuffer name=value
             out uint32 name=index
             out boolean return
@@ -2684,7 +2684,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseTimeR
             fill_array struct type=Windows.Media.Core.MseTimeRange name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseTimeRange> shape=168 reverse=81
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseTimeRange> shape=168 reverse=81 role=index_of
             in struct type=Windows.Media.Core.MseTimeRange name=value
             out uint32 name=index
             out boolean return
@@ -2712,7 +2712,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMet
             fill_array class type=Windows.Media.Core.TimedMetadataTrack name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Core.TimedMetadataTrack name=value
             out uint32 name=index
             out boolean return
@@ -2740,7 +2740,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTex
             fill_array class type=Windows.Media.Core.TimedTextLine name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextLine> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextLine> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Core.TimedTextLine name=value
             out uint32 name=index
             out boolean return
@@ -2768,7 +2768,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTex
             fill_array class type=Windows.Media.Core.TimedTextSource name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextSource> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextSource> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Core.TimedTextSource name=value
             out uint32 name=index
             out boolean return
@@ -2796,7 +2796,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTex
             fill_array class type=Windows.Media.Core.TimedTextSubformat name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextSubformat> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedTextSubformat> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Core.TimedTextSubformat name=value
             out uint32 name=index
             out boolean return
@@ -2824,7 +2824,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.
             fill_array class type=Windows.Media.Devices.Core.FrameController name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.FrameController> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.FrameController> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.Devices.Core.FrameController name=value
             out uint32 name=index
             out boolean return
@@ -2852,7 +2852,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.
             fill_array class type=Windows.Media.FaceAnalysis.DetectedFace name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> shape=117 reverse=66 role=index_of
             in class type=Windows.Media.FaceAnalysis.DetectedFace name=value
             out uint32 name=index
             out boolean return
@@ -3287,12 +3287,12 @@ class Windows.Media.Core.MediaStreamSamplePropertySet python_type iterable mappi
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=43 role=size
             out uint32 return
     method clear
-        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=0 reverse=159
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=0 reverse=159 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
     method get_view
-        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=99
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=99 role=get_view
             out parameterized type=Windows.Foundation.Collections.IMapView<System.Guid,System.Object> return
     method has_key
         method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=94 reverse=87 role=has_key

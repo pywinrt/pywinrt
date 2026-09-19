@@ -3018,7 +3018,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -3038,7 +3038,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.Contact> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.Contact> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.Contact name=items
             out uint32 return
     method move_next
@@ -3058,7 +3058,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactAddress> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactAddress> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactAddress> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactAddress name=items
             out uint32 return
     method move_next
@@ -3078,7 +3078,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactAnnotation> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactAnnotation> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactAnnotation> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactAnnotation name=items
             out uint32 return
     method move_next
@@ -3098,7 +3098,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactAnnotationList> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactAnnotationList> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactAnnotationList> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactAnnotationList name=items
             out uint32 return
     method move_next
@@ -3118,7 +3118,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactChange> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactChange> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactChange> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactChange name=items
             out uint32 return
     method move_next
@@ -3138,7 +3138,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount name=items
             out uint32 return
     method move_next
@@ -3158,7 +3158,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactDate> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactDate> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactDate> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactDate name=items
             out uint32 return
     method move_next
@@ -3178,7 +3178,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactEmail> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactEmail> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactEmail> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactEmail name=items
             out uint32 return
     method move_next
@@ -3198,7 +3198,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactField> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactField> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactField> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactField name=items
             out uint32 return
     method move_next
@@ -3218,7 +3218,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactFieldType> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactFieldType> shape=117 reverse=101 role=get_many
             fill_array enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=items
             out uint32 return
     method move_next
@@ -3238,7 +3238,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactInformation> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactInformation> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactInformation> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactInformation name=items
             out uint32 return
     method move_next
@@ -3258,7 +3258,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactInstantMessageField> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactInstantMessageField> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactInstantMessageField> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactInstantMessageField name=items
             out uint32 return
     method move_next
@@ -3278,7 +3278,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactJobInfo name=items
             out uint32 return
     method move_next
@@ -3298,7 +3298,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactList> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactList> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactList> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactList name=items
             out uint32 return
     method move_next
@@ -3318,7 +3318,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactLocationField> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactLocationField> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactLocationField> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactLocationField name=items
             out uint32 return
     method move_next
@@ -3338,7 +3338,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactMatchReason> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactMatchReason> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactMatchReason> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactMatchReason name=items
             out uint32 return
     method move_next
@@ -3358,7 +3358,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactPhone> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactPhone> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactPhone> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactPhone name=items
             out uint32 return
     method move_next
@@ -3378,7 +3378,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactSignificantOther name=items
             out uint32 return
     method move_next
@@ -3398,7 +3398,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactWebsite> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactWebsite> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactWebsite> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.Contacts.ContactWebsite name=items
             out uint32 return
     method move_next
@@ -3418,7 +3418,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Cont
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.IContactField> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.IContactField> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.IContactField> shape=117 reverse=101 role=get_many
             fill_array interface type=Windows.ApplicationModel.Contacts.IContactField name=items
             out uint32 return
     method move_next
@@ -3438,7 +3438,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Data.Text.TextSegment> shape=117 reverse=101 role=get_many
             fill_array struct type=Windows.Data.Text.TextSegment name=items
             out uint32 return
     method move_next
@@ -3852,10 +3852,10 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173 role=append
             in string name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
@@ -3869,10 +3869,10 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
             fill_array string name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -3884,9 +3884,9 @@ interface Windows.Foundation.Collections.IVector<System.String> concrete iterabl
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211 role=replace_all
             pass_array string name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
@@ -3904,10 +3904,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=173 role=append
             in class type=Windows.ApplicationModel.Contacts.Contact name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.Contact> return
@@ -3921,10 +3921,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
             fill_array class type=Windows.ApplicationModel.Contacts.Contact name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.Contact> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=117 reverse=101 role=index_of
             in class type=Windows.ApplicationModel.Contacts.Contact name=value
             out uint32 name=index
             out boolean return
@@ -3936,9 +3936,9 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.ApplicationModel.Contacts.Contact name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.Contact> shape=51 reverse=124 role=set_at
@@ -3956,10 +3956,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=4 reverse=173 role=append
             in class type=Windows.ApplicationModel.Contacts.ContactAddress name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactAddress> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactAddress> return
@@ -3973,10 +3973,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
             fill_array class type=Windows.ApplicationModel.Contacts.ContactAddress name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAddress> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=117 reverse=101 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactAddress name=value
             out uint32 name=index
             out boolean return
@@ -3988,9 +3988,9 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.ApplicationModel.Contacts.ContactAddress name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactAddress> shape=51 reverse=124 role=set_at
@@ -4008,10 +4008,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=4 reverse=173 role=append
             in class type=Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> return
@@ -4025,10 +4025,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
             fill_array class type=Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=117 reverse=101 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount name=value
             out uint32 name=index
             out boolean return
@@ -4040,9 +4040,9 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=51 reverse=124 role=set_at
@@ -4060,10 +4060,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=4 reverse=173 role=append
             in class type=Windows.ApplicationModel.Contacts.ContactDate name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactDate> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactDate> return
@@ -4077,10 +4077,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
             fill_array class type=Windows.ApplicationModel.Contacts.ContactDate name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactDate> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=117 reverse=101 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactDate name=value
             out uint32 name=index
             out boolean return
@@ -4092,9 +4092,9 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.ApplicationModel.Contacts.ContactDate name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactDate> shape=51 reverse=124 role=set_at
@@ -4112,10 +4112,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=4 reverse=173 role=append
             in class type=Windows.ApplicationModel.Contacts.ContactEmail name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactEmail> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactEmail> return
@@ -4129,10 +4129,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
             fill_array class type=Windows.ApplicationModel.Contacts.ContactEmail name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactEmail> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=117 reverse=101 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactEmail name=value
             out uint32 name=index
             out boolean return
@@ -4144,9 +4144,9 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.ApplicationModel.Contacts.ContactEmail name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactEmail> shape=51 reverse=124 role=set_at
@@ -4164,10 +4164,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=173 role=append
             in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactFieldType> return
@@ -4181,10 +4181,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
             fill_array enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactFieldType> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=117 reverse=101 role=index_of
             in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=value
             out uint32 name=index
             out boolean return
@@ -4196,9 +4196,9 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=51 reverse=211 role=replace_all
             pass_array enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=51 reverse=124 role=set_at
@@ -4216,10 +4216,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=4 reverse=173 role=append
             in class type=Windows.ApplicationModel.Contacts.ContactJobInfo name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactJobInfo> return
@@ -4233,10 +4233,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
             fill_array class type=Windows.ApplicationModel.Contacts.ContactJobInfo name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactJobInfo> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=117 reverse=101 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactJobInfo name=value
             out uint32 name=index
             out boolean return
@@ -4248,9 +4248,9 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.ApplicationModel.Contacts.ContactJobInfo name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=51 reverse=124 role=set_at
@@ -4268,10 +4268,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=4 reverse=173 role=append
             in class type=Windows.ApplicationModel.Contacts.ContactPhone name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactPhone> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactPhone> return
@@ -4285,10 +4285,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
             fill_array class type=Windows.ApplicationModel.Contacts.ContactPhone name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactPhone> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=117 reverse=101 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactPhone name=value
             out uint32 name=index
             out boolean return
@@ -4300,9 +4300,9 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.ApplicationModel.Contacts.ContactPhone name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactPhone> shape=51 reverse=124 role=set_at
@@ -4320,10 +4320,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=4 reverse=173 role=append
             in class type=Windows.ApplicationModel.Contacts.ContactSignificantOther name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactSignificantOther> return
@@ -4337,10 +4337,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
             fill_array class type=Windows.ApplicationModel.Contacts.ContactSignificantOther name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactSignificantOther> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=117 reverse=101 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactSignificantOther name=value
             out uint32 name=index
             out boolean return
@@ -4352,9 +4352,9 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.ApplicationModel.Contacts.ContactSignificantOther name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=51 reverse=124 role=set_at
@@ -4372,10 +4372,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=4 reverse=173 role=append
             in class type=Windows.ApplicationModel.Contacts.ContactWebsite name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactWebsite> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactWebsite> return
@@ -4389,10 +4389,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
             fill_array class type=Windows.ApplicationModel.Contacts.ContactWebsite name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactWebsite> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=117 reverse=101 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactWebsite name=value
             out uint32 name=index
             out boolean return
@@ -4404,9 +4404,9 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.ApplicationModel.Contacts.ContactWebsite name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactWebsite> shape=51 reverse=124 role=set_at
@@ -4424,10 +4424,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=4 reverse=173 role=append
             in interface type=Windows.ApplicationModel.Contacts.IContactField name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.IContactField> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.IContactField> return
@@ -4441,10 +4441,10 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
             fill_array interface type=Windows.ApplicationModel.Contacts.IContactField name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.IContactField> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=117 reverse=101 role=index_of
             in interface type=Windows.ApplicationModel.Contacts.IContactField name=value
             out uint32 name=index
             out boolean return
@@ -4456,9 +4456,9 @@ interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contac
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=51 reverse=211 role=replace_all
             pass_array interface type=Windows.ApplicationModel.Contacts.IContactField name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.IContactField> shape=51 reverse=124 role=set_at
@@ -4488,7 +4488,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             fill_array string name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -4516,7 +4516,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.Contact name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.Contact> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.Contact> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.Contact name=value
             out uint32 name=index
             out boolean return
@@ -4544,7 +4544,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactAddress name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAddress> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAddress> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactAddress name=value
             out uint32 name=index
             out boolean return
@@ -4572,7 +4572,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactAnnotation name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotation> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotation> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactAnnotation name=value
             out uint32 name=index
             out boolean return
@@ -4600,7 +4600,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactAnnotationList name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactAnnotationList> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactAnnotationList name=value
             out uint32 name=index
             out boolean return
@@ -4628,7 +4628,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactChange name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactChange> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactChange> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactChange name=value
             out uint32 name=index
             out boolean return
@@ -4656,7 +4656,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount name=value
             out uint32 name=index
             out boolean return
@@ -4684,7 +4684,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactDate name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactDate> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactDate> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactDate name=value
             out uint32 name=index
             out boolean return
@@ -4712,7 +4712,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactEmail name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactEmail> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactEmail> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactEmail name=value
             out uint32 name=index
             out boolean return
@@ -4740,7 +4740,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactField name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactField> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactField> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactField name=value
             out uint32 name=index
             out boolean return
@@ -4768,7 +4768,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactFieldType> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactFieldType> shape=117 reverse=66 role=index_of
             in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=value
             out uint32 name=index
             out boolean return
@@ -4796,7 +4796,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactInformation name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactInformation> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactInformation> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactInformation name=value
             out uint32 name=index
             out boolean return
@@ -4824,7 +4824,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactInstantMessageField name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactInstantMessageField> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactInstantMessageField> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactInstantMessageField name=value
             out uint32 name=index
             out boolean return
@@ -4852,7 +4852,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactJobInfo name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactJobInfo> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactJobInfo name=value
             out uint32 name=index
             out boolean return
@@ -4880,7 +4880,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactList name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactList> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactList name=value
             out uint32 name=index
             out boolean return
@@ -4908,7 +4908,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactLocationField name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactLocationField> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactLocationField> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactLocationField name=value
             out uint32 name=index
             out boolean return
@@ -4936,7 +4936,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactMatchReason name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactMatchReason> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactMatchReason> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactMatchReason name=value
             out uint32 name=index
             out boolean return
@@ -4964,7 +4964,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactPhone name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactPhone> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactPhone> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactPhone name=value
             out uint32 name=index
             out boolean return
@@ -4992,7 +4992,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactSignificantOther name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactSignificantOther> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactSignificantOther name=value
             out uint32 name=index
             out boolean return
@@ -5020,7 +5020,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array class type=Windows.ApplicationModel.Contacts.ContactWebsite name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactWebsite> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactWebsite> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.Contacts.ContactWebsite name=value
             out uint32 name=index
             out boolean return
@@ -5048,7 +5048,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Co
             fill_array interface type=Windows.ApplicationModel.Contacts.IContactField name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.IContactField> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.IContactField> shape=117 reverse=66 role=index_of
             in interface type=Windows.ApplicationModel.Contacts.IContactField name=value
             out uint32 name=index
             out boolean return
@@ -5076,7 +5076,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegme
             fill_array struct type=Windows.Data.Text.TextSegment name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=181 reverse=90
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Text.TextSegment> shape=181 reverse=90 role=index_of
             in struct type=Windows.Data.Text.TextSegment name=value
             out uint32 name=index
             out boolean return

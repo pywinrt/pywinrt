@@ -315,7 +315,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.User
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataTasks.UserDataTask> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataTasks.UserDataTask> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataTasks.UserDataTask> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.UserDataTasks.UserDataTask name=items
             out uint32 return
     method move_next
@@ -335,7 +335,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.User
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskList name=items
             out uint32 return
     method move_next
@@ -913,7 +913,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Us
             fill_array class type=Windows.ApplicationModel.UserDataTasks.UserDataTask name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTask> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTask> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.UserDataTasks.UserDataTask name=value
             out uint32 name=index
             out boolean return
@@ -941,7 +941,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Us
             fill_array class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskList name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> shape=117 reverse=66 role=index_of
             in class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskList name=value
             out uint32 name=index
             out boolean return

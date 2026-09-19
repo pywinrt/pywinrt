@@ -613,7 +613,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfac
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfaceDevice.HidBooleanControl> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfaceDevice.HidBooleanControl> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfaceDevice.HidBooleanControl> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControl name=items
             out uint32 return
     method move_next
@@ -633,7 +633,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfac
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription name=items
             out uint32 return
     method move_next
@@ -653,7 +653,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfac
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfaceDevice.HidCollection> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfaceDevice.HidCollection> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfaceDevice.HidCollection> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.HumanInterfaceDevice.HidCollection name=items
             out uint32 return
     method move_next
@@ -673,7 +673,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfac
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription name=items
             out uint32 return
     method move_next
@@ -703,7 +703,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterf
             fill_array class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControl name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidBooleanControl> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidBooleanControl> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControl name=value
             out uint32 name=index
             out boolean return
@@ -731,7 +731,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterf
             fill_array class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription name=value
             out uint32 name=index
             out boolean return
@@ -759,7 +759,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterf
             fill_array class type=Windows.Devices.HumanInterfaceDevice.HidCollection name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidCollection> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidCollection> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.HumanInterfaceDevice.HidCollection name=value
             out uint32 name=index
             out boolean return
@@ -787,7 +787,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterf
             fill_array class type=Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription> shape=117 reverse=66 role=index_of
             in class type=Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription name=value
             out uint32 name=index
             out boolean return

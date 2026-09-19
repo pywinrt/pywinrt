@@ -276,7 +276,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor>> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor>> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor>> shape=117 reverse=101 role=get_many
             fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor> name=items
             out uint32 return
     method move_next
@@ -291,10 +291,10 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Per
     argument System.String
     argument Windows.Perception.Spatial.SpatialAnchor
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor> shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor> shape=4 reverse=22 role=pair_key
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor> shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor> shape=4 reverse=43 role=pair_value
             out class type=Windows.Perception.Spatial.SpatialAnchor return
 
 interface Windows.Foundation.Collections.IMapView<System.String,Windows.Perception.Spatial.SpatialAnchor> concrete iterable mapping
@@ -320,7 +320,7 @@ interface Windows.Foundation.Collections.IMapView<System.String,Windows.Percepti
             in string name=key
             out class type=Windows.Perception.Spatial.SpatialAnchor return
     method split
-        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Perception.Spatial.SpatialAnchor> shape=51 reverse=100
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.Perception.Spatial.SpatialAnchor> shape=51 reverse=100 role=split
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Perception.Spatial.SpatialAnchor> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Perception.Spatial.SpatialAnchor> name=second
 

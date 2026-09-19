@@ -66,7 +66,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.Core.AnimationMetr
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Core.AnimationMetrics.IPropertyAnimation> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Core.AnimationMetrics.IPropertyAnimation> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Core.AnimationMetrics.IPropertyAnimation> shape=117 reverse=101 role=get_many
             fill_array interface type=Windows.UI.Core.AnimationMetrics.IPropertyAnimation name=items
             out uint32 return
     method move_next
@@ -250,7 +250,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Core.AnimationMe
             fill_array interface type=Windows.UI.Core.AnimationMetrics.IPropertyAnimation name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Core.AnimationMetrics.IPropertyAnimation> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Core.AnimationMetrics.IPropertyAnimation> shape=117 reverse=66 role=index_of
             in interface type=Windows.UI.Core.AnimationMetrics.IPropertyAnimation name=value
             out uint32 name=index
             out boolean return

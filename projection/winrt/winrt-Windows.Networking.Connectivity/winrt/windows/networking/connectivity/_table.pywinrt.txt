@@ -909,7 +909,7 @@ interface Windows.Foundation.Collections.IIterator<System.Guid> concrete iterabl
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Guid> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Guid> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Guid> shape=117 reverse=101 role=get_many
             fill_array guid name=items
             out uint32 return
     method move_next
@@ -929,7 +929,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -949,7 +949,7 @@ interface Windows.Foundation.Collections.IIterator<System.Byte> concrete iterabl
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Byte> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Byte> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Byte> shape=117 reverse=101 role=get_many
             fill_array uint8 name=items
             out uint32 return
     method move_next
@@ -969,7 +969,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> concr
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Foundation.Uri name=items
             out uint32 return
     method move_next
@@ -989,7 +989,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivi
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.AttributedNetworkUsage> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.AttributedNetworkUsage> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.AttributedNetworkUsage> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.Connectivity.AttributedNetworkUsage name=items
             out uint32 return
     method move_next
@@ -1009,7 +1009,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivi
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.ConnectionProfile> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.ConnectionProfile> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.ConnectionProfile> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.Connectivity.ConnectionProfile name=items
             out uint32 return
     method move_next
@@ -1029,7 +1029,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivi
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.ConnectivityInterval> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.ConnectivityInterval> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.ConnectivityInterval> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.Connectivity.ConnectivityInterval name=items
             out uint32 return
     method move_next
@@ -1049,7 +1049,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivi
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.LanIdentifier> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.LanIdentifier> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.LanIdentifier> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.Connectivity.LanIdentifier name=items
             out uint32 return
     method move_next
@@ -1069,7 +1069,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivi
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.NetworkUsage> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.NetworkUsage> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.NetworkUsage> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.Connectivity.NetworkUsage name=items
             out uint32 return
     method move_next
@@ -1089,7 +1089,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivi
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.ProviderNetworkUsage> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.ProviderNetworkUsage> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.Connectivity.ProviderNetworkUsage> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.Connectivity.ProviderNetworkUsage name=items
             out uint32 return
     method move_next
@@ -1109,7 +1109,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.EndpointPa
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.EndpointPair> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.EndpointPair> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.EndpointPair> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.EndpointPair name=items
             out uint32 return
     method move_next
@@ -1129,7 +1129,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> 
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Networking.HostName> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Networking.HostName name=items
             out uint32 return
     method move_next
@@ -1981,7 +1981,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Guid> concrete itera
             fill_array guid name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=177 reverse=88
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Guid> shape=177 reverse=88 role=index_of
             in guid name=value
             out uint32 name=index
             out boolean return
@@ -2009,7 +2009,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             fill_array string name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -2037,7 +2037,7 @@ interface Windows.Foundation.Collections.IVectorView<System.Byte> concrete itera
             fill_array uint8 name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Byte> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Byte> shape=117 reverse=66 role=index_of
             in uint8 name=value
             out uint32 name=index
             out boolean return
@@ -2065,7 +2065,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> con
             fill_array class type=Windows.Foundation.Uri name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=117 reverse=66 role=index_of
             in class type=Windows.Foundation.Uri name=value
             out uint32 name=index
             out boolean return
@@ -2093,7 +2093,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             fill_array class type=Windows.Networking.Connectivity.AttributedNetworkUsage name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.AttributedNetworkUsage> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.AttributedNetworkUsage> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.Connectivity.AttributedNetworkUsage name=value
             out uint32 name=index
             out boolean return
@@ -2121,7 +2121,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             fill_array class type=Windows.Networking.Connectivity.ConnectionProfile name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.Connectivity.ConnectionProfile name=value
             out uint32 name=index
             out boolean return
@@ -2149,7 +2149,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             fill_array class type=Windows.Networking.Connectivity.ConnectivityInterval name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectivityInterval> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectivityInterval> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.Connectivity.ConnectivityInterval name=value
             out uint32 name=index
             out boolean return
@@ -2177,7 +2177,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             fill_array class type=Windows.Networking.Connectivity.LanIdentifier name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.LanIdentifier> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.LanIdentifier> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.Connectivity.LanIdentifier name=value
             out uint32 name=index
             out boolean return
@@ -2205,7 +2205,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             fill_array class type=Windows.Networking.Connectivity.NetworkUsage name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.NetworkUsage> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.NetworkUsage> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.Connectivity.NetworkUsage name=value
             out uint32 name=index
             out boolean return
@@ -2233,7 +2233,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Connecti
             fill_array class type=Windows.Networking.Connectivity.ProviderNetworkUsage name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ProviderNetworkUsage> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ProviderNetworkUsage> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.Connectivity.ProviderNetworkUsage name=value
             out uint32 name=index
             out boolean return
@@ -2261,7 +2261,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.Endpoint
             fill_array class type=Windows.Networking.EndpointPair name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.EndpointPair name=value
             out uint32 name=index
             out boolean return
@@ -2289,7 +2289,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName
             fill_array class type=Windows.Networking.HostName name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> shape=117 reverse=66 role=index_of
             in class type=Windows.Networking.HostName name=value
             out uint32 name=index
             out boolean return

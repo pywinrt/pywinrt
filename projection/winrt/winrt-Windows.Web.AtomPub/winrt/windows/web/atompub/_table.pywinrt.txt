@@ -529,7 +529,7 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
             fill_array string name=items
             out uint32 return
     method move_next
@@ -549,7 +549,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Web.AtomPub.ResourceC
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.AtomPub.ResourceCollection> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.AtomPub.ResourceCollection> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.AtomPub.ResourceCollection> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Web.AtomPub.ResourceCollection name=items
             out uint32 return
     method move_next
@@ -569,7 +569,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Web.AtomPub.Workspace
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.AtomPub.Workspace> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.AtomPub.Workspace> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.AtomPub.Workspace> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Web.AtomPub.Workspace name=items
             out uint32 return
     method move_next
@@ -589,7 +589,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISynd
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISyndicationNode> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISyndicationNode> shape=117 reverse=101 role=get_many
             fill_array interface type=Windows.Web.Syndication.ISyndicationNode name=items
             out uint32 return
     method move_next
@@ -609,7 +609,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.Syndi
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationAttribute> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationAttribute> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Web.Syndication.SyndicationAttribute name=items
             out uint32 return
     method move_next
@@ -629,7 +629,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.Syndi
         get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationCategory> shape=4 reverse=43 role=has_current
             out boolean return
     method get_many
-        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationCategory> shape=117 reverse=101
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationCategory> shape=117 reverse=101 role=get_many
             fill_array class type=Windows.Web.Syndication.SyndicationCategory name=items
             out uint32 return
     method move_next
@@ -653,10 +653,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndic
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=173 role=append
             in interface type=Windows.Web.Syndication.ISyndicationNode name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.ISyndicationNode> return
@@ -670,10 +670,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndic
             fill_array interface type=Windows.Web.Syndication.ISyndicationNode name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISyndicationNode> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=117 reverse=101 role=index_of
             in interface type=Windows.Web.Syndication.ISyndicationNode name=value
             out uint32 name=index
             out boolean return
@@ -685,9 +685,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndic
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=51 reverse=211 role=replace_all
             pass_array interface type=Windows.Web.Syndication.ISyndicationNode name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.ISyndicationNode> shape=51 reverse=124 role=set_at
@@ -705,10 +705,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.Syndica
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=43 role=size
             out uint32 return
     method append
-        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=173
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=173 role=append
             in class type=Windows.Web.Syndication.SyndicationAttribute name=value
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=0 reverse=193 role=clear
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Web.Syndication.SyndicationAttribute> return
@@ -722,10 +722,10 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.Syndica
             fill_array class type=Windows.Web.Syndication.SyndicationAttribute name=items
             out uint32 return
     method get_view
-        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=62
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=62 role=get_view
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationAttribute> return
     method index_of
-        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=117 reverse=101
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=117 reverse=101 role=index_of
             in class type=Windows.Web.Syndication.SyndicationAttribute name=value
             out uint32 name=index
             out boolean return
@@ -737,9 +737,9 @@ interface Windows.Foundation.Collections.IVector<Windows.Web.Syndication.Syndica
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=4 reverse=162 role=remove_at
             in uint32 name=index
     method remove_at_end
-        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=0 reverse=185
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=0 reverse=185 role=remove_at_end
     method replace_all
-        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=51 reverse=211
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=51 reverse=211 role=replace_all
             pass_array class type=Windows.Web.Syndication.SyndicationAttribute name=items
     method set_at
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Syndication.SyndicationAttribute> shape=51 reverse=124 role=set_at
@@ -769,7 +769,7 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             fill_array string name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
             in string name=value
             out uint32 name=index
             out boolean return
@@ -797,7 +797,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.AtomPub.Resourc
             fill_array class type=Windows.Web.AtomPub.ResourceCollection name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.AtomPub.ResourceCollection> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.AtomPub.ResourceCollection> shape=117 reverse=66 role=index_of
             in class type=Windows.Web.AtomPub.ResourceCollection name=value
             out uint32 name=index
             out boolean return
@@ -825,7 +825,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.AtomPub.Workspa
             fill_array class type=Windows.Web.AtomPub.Workspace name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.AtomPub.Workspace> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.AtomPub.Workspace> shape=117 reverse=66 role=index_of
             in class type=Windows.Web.AtomPub.Workspace name=value
             out uint32 name=index
             out boolean return
@@ -853,7 +853,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISy
             fill_array interface type=Windows.Web.Syndication.ISyndicationNode name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISyndicationNode> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.ISyndicationNode> shape=117 reverse=66 role=index_of
             in interface type=Windows.Web.Syndication.ISyndicationNode name=value
             out uint32 name=index
             out boolean return
@@ -881,7 +881,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.Syn
             fill_array class type=Windows.Web.Syndication.SyndicationAttribute name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationAttribute> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationAttribute> shape=117 reverse=66 role=index_of
             in class type=Windows.Web.Syndication.SyndicationAttribute name=value
             out uint32 name=index
             out boolean return
@@ -909,7 +909,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.Syn
             fill_array class type=Windows.Web.Syndication.SyndicationCategory name=items
             out uint32 return
     method index_of
-        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> shape=117 reverse=66
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> shape=117 reverse=66 role=index_of
             in class type=Windows.Web.Syndication.SyndicationCategory name=value
             out uint32 name=index
             out boolean return
