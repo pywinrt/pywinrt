@@ -54,6 +54,14 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     add_compile_options(-Wno-template-body)
 endif()
 
+# Link time optimization, in the configuration that is timed and shipped. The
+# wheels already have it - setuptools compiles every extension with /O2 /GL and
+# links with /LTCG - so a Release build without it is not what users run, and it
+# is what lets the runtime be laid out one subject per file: the optimizer sees
+# across translation units at link time, so a helper does not have to live in a
+# header to be inlined into its caller.
+set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE ON)
+
 # The interpreter compiles the projection tables from their text form; the
 # module component builds the runtime against the Python it belongs to.
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)

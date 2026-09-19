@@ -24,9 +24,9 @@ same tree is several times slower and needs ``python_d.exe``::
     $env:PYTHONPATH = "_build/bench-install"
     py perf\dispatch.py
 
-That is still not what ships: wheels are compiled with ``/O2 /GL`` and linked
-with ``/LTCG``, which CMake Release does not do.  Only compare numbers taken
-from the same kind of build.
+Release is compiled with ``/O2 /GL`` and linked with ``/LTCG``, the same as the
+wheels, so these are the numbers users get.  They are still one machine on one
+day, so only compare runs taken together.
 
 Any command line arguments are substrings, and only the cases whose name
 contains one of them are run.
