@@ -173,6 +173,7 @@ include src/generics.h
 include src/implements.h
 include src/interp.h
 include src/members.h
+include src/metaclass.h
 include src/module_state.h
 include src/numerics-statics.h
 include src/numerics-values.h
