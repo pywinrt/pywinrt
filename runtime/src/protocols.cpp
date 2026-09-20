@@ -466,6 +466,19 @@ namespace py::interp
                 return nullptr;
             }
 
+            // The three members take nothing and hand back one value each, so
+            // where the table describes them the way IIterator<T> always does
+            // they are called in one crossing rather than three. A table that
+            // describes them some other way is answered below.
+            bool fused{};
+
+            auto* const item = call_iterator_step(*info, abi_of(self), fused);
+
+            if (fused)
+            {
+                return item;
+            }
+
             pyobj_handle has_current{call_protocol(
                 info->protocol.has_current, "iteration", self, nullptr, 0)};
             if (!has_current)

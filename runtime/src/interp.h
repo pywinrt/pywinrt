@@ -372,6 +372,8 @@ namespace py::interp
         Py_ssize_t nargs,
         composing* compose = nullptr) noexcept;
 
+    PyObject* call_iterator_step(type_entry& info, void* self, bool& fused) noexcept;
+
     overload_desc* select_overload(
         member_desc const& member, Py_ssize_t nargs) noexcept;
 
