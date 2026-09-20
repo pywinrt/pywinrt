@@ -140,11 +140,23 @@ before-build = "uv pip install setuptools"
 # projection doesn't support yet
 skip = "pp* cp*t-*"
 # suppress warnings about ARM64 testing
-test-skip = "*-win_arm64"
+test-skip = "*-win_arm64"{test_command}
 
 [tool.cibuildwheel.windows]
 archs = ["x86", "AMD64", "ARM64"]{extra_cibuildwheel_windows}
 """
+
+# Importing the wheel is the only check that it links against nothing that only
+# the machine it was built on happened to have. Python does not look for an
+# extension's dependencies on PATH, so a module that picked one up says so here
+# even though the builder has it - which is what makes this worth running on the
+# machine that just produced it.
+#
+# Only winrt-runtime can be checked this way. An interop package depends on a
+# projection package as well, and those are built by the other half of
+# scripts/build-bdist.py, so its test environment cannot be resolved from what
+# the compiled half has to hand.
+RUNTIME_TEST_COMMAND = '\ntest-command = "python -c \\"import winrt._winrt\\""'
 
 # The runtime keeps its Python package tree in python/ so that src/ can hold the
 # C++ sources of the extension module. The C++ headers that the rest of the
@@ -574,6 +586,7 @@ def write_compiled_project_files(
                     else INTEROP_PACKAGE_FIND.format(root_package=root_package)
                 ),
                 extra_package_data=', "*.h"' if is_runtime else "",
+                test_command=RUNTIME_TEST_COMMAND if is_runtime else "",
                 local_runtime=(
                     ""
                     if is_runtime
