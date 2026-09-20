@@ -1043,13 +1043,14 @@ namespace py::interp
     }
 
     /**
-     * The one overload of a no-argument member that hands back one value,
-     * which is what each of the three members of IIterator<T> is.
+     * The one overload of a member that takes @p in_count inputs and hands
+     * back one value, which is what each of the three members of IIterator<T>
+     * is and what GetAt() is.
      *
      * @returns @c nullptr when @p member is missing or is not shaped that way,
      * with no Python error set: the caller falls back rather than fails.
      */
-    static overload_desc* lone_getter(member_desc* member) noexcept
+    static overload_desc* lone_overload(member_desc* member, uint16_t in_count) noexcept
     {
         if (!member)
         {
@@ -1068,7 +1069,7 @@ namespace py::interp
             return nullptr;
         }
 
-        if (overload.in_count != 0)
+        if (overload.in_count != in_count)
         {
             return nullptr;
         }
@@ -1080,8 +1081,7 @@ namespace py::interp
 
         // A member on another interface would need the instance queried for
         // it, and one a Python subclass can override would have to be called
-        // on the inner object. Neither is true of an iterator, and both are
-        // the ordinary path's business.
+        // on the inner object. Both are the ordinary path's business.
         if (overload.iface)
         {
             return nullptr;
@@ -1102,8 +1102,8 @@ namespace py::interp
     }
 
     /**
-     * The single output of @p overload, which lone_getter() has established
-     * there is exactly one of.
+     * The single output of @p overload, which lone_overload() has
+     * established there is exactly one of.
      */
     static arg_desc& lone_output(overload_desc& overload) noexcept
     {
@@ -1140,6 +1140,107 @@ namespace py::interp
     }
 
     /**
+     * Calls the member that reads one element of a sequence - GetAt(), which
+     * is what a subscript comes down to - with @p index as the number it
+     * already is.
+     *
+     * CPython hands the subscript slot a Py_ssize_t and the ABI wants a
+     * uint32_t, so the ordinary path allocates a Python integer for the
+     * general argument conversion to take apart again. The reverse direction
+     * already skips the same round trip, for the same reason and with the
+     * same reasoning: this is the member a caller reading a whole sequence
+     * spends its time in (raw_index() in pycollections.h).
+     *
+     * @param direct Whether the call was made here at all. A GetAt() the
+     * table describes some other way - reached through another interface, or
+     * taking something that is not a count - is left to the ordinary path.
+     * @returns A new reference to the element, or @c nullptr with a Python
+     * error set.
+     */
+    PyObject* call_indexed(
+        member_desc* member, void* self, uint32_t index, bool& direct) noexcept
+    {
+        direct = false;
+
+        auto* const overload = lone_overload(member, 1);
+
+        if (!overload)
+        {
+            return nullptr;
+        }
+
+        auto* input = static_cast<arg_desc*>(nullptr);
+
+        for (uint16_t i = 0; i < overload->arg_count; i++)
+        {
+            auto& arg = overload->args[i];
+
+            if (arg.category != table::param_category::in)
+            {
+                continue;
+            }
+
+            input = &arg;
+            break;
+        }
+
+        if (!input)
+        {
+            return nullptr;
+        }
+
+        // The index is stored as the number it is rather than converted, so
+        // the table has to say the member counts the way GetAt() always does.
+        if (input->code != table::type_code::uint32)
+        {
+            return nullptr;
+        }
+
+        if (input->by_reference)
+        {
+            return nullptr;
+        }
+
+        direct = true;
+
+        auto& output = lone_output(*overload);
+
+        auto* const instance = static_cast<::IUnknown*>(self);
+        auto const vtable = *reinterpret_cast<void* const* const*>(instance);
+
+        call_frame frame{
+            overload->shape->buffer_size, overload->out_size, overload->arg_count};
+
+        receive_outputs(*overload, frame);
+        store_widened(frame.args, input->offset, index);
+
+        int32_t hr{};
+
+        {
+            auto _gil = release_gil();
+            hr = overload->shape->invoke(vtable[overload->slot], instance, frame.args);
+        }
+
+        if (hr != 0)
+        {
+            auto const site = make_site(*member, *overload);
+
+            try
+            {
+                winrt::check_hresult(hr);
+            }
+            catch (...)
+            {
+                to_PyErr(&site);
+            }
+
+            return nullptr;
+        }
+
+        return convert_result(*member->owner, output, frame.out);
+    }
+
+    /**
      * One step of an iteration: HasCurrent, Current and MoveNext made in a
      * single crossing.
      *
@@ -1162,9 +1263,9 @@ namespace py::interp
     {
         fused = false;
 
-        auto* const has_current = lone_getter(info.protocol.has_current);
-        auto* const current = lone_getter(info.protocol.current);
-        auto* const move_next = lone_getter(info.protocol.move_next);
+        auto* const has_current = lone_overload(info.protocol.has_current, 0);
+        auto* const current = lone_overload(info.protocol.current, 0);
+        auto* const move_next = lone_overload(info.protocol.move_next, 0);
 
         if (!has_current)
         {
