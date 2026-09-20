@@ -1,4 +1,4 @@
-# Fails the build if a module imports the C++ runtime DLL.
+# Fails the build if a module imports something a user's machine will not have.
 #
 # Python ships the C runtime next to python3xx.dll and the UCRT is an operating
 # system component, but the C++ standard library is neither, so a module that
@@ -12,6 +12,12 @@
 # the first sign of it would be a user's ImportError. A newly *linked* library
 # is not like that: it is right there in target_link_libraries, so it needs no
 # guard and there is no allowlist here to keep up to date.
+#
+# The profile-guided optimization runtime is checked for the same reason. An
+# instrumented module imports it and an optimized one does not, and the two are
+# told apart by a linker option and a training run rather than by anything in
+# the sources, so a build that stops halfway through leaves a module that looks
+# finished and loads nowhere.
 #
 # Run as:
 #   cmake -D LINKER=<link.exe> -D CONFIG=<config> -D MODULE=<module.pyd>
@@ -50,6 +56,18 @@ foreach (import IN LISTS imports)
             "Something here now uses a part of the standard library that is not "
             "header-only - see pywinrt/throw_helpers.h, which covers the parts "
             "the projection used to need."
+        )
+    endif()
+
+    if (lower_import MATCHES "^pgort")
+        message(FATAL_ERROR
+            "${MODULE} imports ${import}.\n"
+            "This is an instrumented module: the profile-guided optimization "
+            "runtime ships with Visual Studio and is not redistributable, so "
+            "this would fail to load anywhere Visual Studio is not installed. "
+            "An instrumented module is what a training run is made of rather "
+            "than what a build is meant to produce - the one linked with "
+            "/USEPROFILE afterwards imports nothing the ordinary build does not."
         )
     endif()
 endforeach()
