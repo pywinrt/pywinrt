@@ -151,6 +151,25 @@ namespace py::interp
                 return nullptr;
             }
 
+            // An index this slot was given as a number goes to GetAt() as
+            // one; anything the direct path does not describe, including a
+            // negative index, keeps whatever the ordinary path makes of it.
+            if (index >= 0 && static_cast<uint64_t>(index) <= UINT32_MAX)
+            {
+                bool direct{};
+
+                auto* const item = call_indexed(
+                    info->protocol.get_at,
+                    abi_of(self),
+                    static_cast<uint32_t>(index),
+                    direct);
+
+                if (direct)
+                {
+                    return item;
+                }
+            }
+
             pyobj_handle position{PyLong_FromSsize_t(index)};
             if (!position)
             {

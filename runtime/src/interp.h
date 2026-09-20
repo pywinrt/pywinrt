@@ -374,6 +374,9 @@ namespace py::interp
 
     PyObject* call_iterator_step(type_entry& info, void* self, bool& fused) noexcept;
 
+    PyObject* call_indexed(
+        member_desc* member, void* self, uint32_t index, bool& direct) noexcept;
+
     overload_desc* select_overload(
         member_desc const& member, Py_ssize_t nargs) noexcept;
 
