@@ -1122,22 +1122,31 @@ namespace py::interp
     }
 
     /**
-     * Points the argument buffer of @p frame at where the outputs of
-     * @p overload are received, which is all a no-argument getter needs doing
+     * Points @p args at where in @p out the outputs of @p overload are
+     * received, which is all a member that converts no argument needs doing
      * to its buffer.
      */
-    static void receive_outputs(overload_desc& overload, call_frame& frame) noexcept
+    static void receive_outputs(
+        overload_desc& overload, uint8_t* args, uint8_t* out) noexcept
     {
         for (uint16_t i = 0; i < overload.arg_count; i++)
         {
             auto const& arg = overload.args[i];
 
             store_widened(
-                frame.args,
-                arg.offset,
-                reinterpret_cast<uintptr_t>(frame.out + arg.out_offset));
+                args, arg.offset, reinterpret_cast<uintptr_t>(out + arg.out_offset));
         }
     }
+
+    /**
+     * How much storage the three calls of one step of an iteration share.
+     *
+     * Each of them spills a @c this and one output pointer and receives one
+     * value, so the whole of a step is a few dozen bytes; a table that wanted
+     * more than this is left to the ordinary path rather than given a bigger
+     * buffer nothing would ever fill.
+     */
+    constexpr size_t step_storage = 256;
 
     /**
      * Calls the member that reads one element of a sequence - GetAt(), which
@@ -1211,7 +1220,7 @@ namespace py::interp
         call_frame frame{
             overload->shape->buffer_size, overload->out_size, overload->arg_count};
 
-        receive_outputs(*overload, frame);
+        receive_outputs(*overload, frame.args, frame.out);
         store_widened(frame.args, input->offset, index);
 
         int32_t hr{};
@@ -1292,23 +1301,42 @@ namespace py::interp
             return nullptr;
         }
 
+        // None of the three converts an argument, so none of them can
+        // allocate anything that would have to be given back - which is all a
+        // call_frame carries beyond the bytes themselves. One buffer for the
+        // three of them is a memset and nothing else.
+        size_t const has_current_size
+            = has_current->shape->buffer_size + has_current->out_size;
+        size_t const current_size = current->shape->buffer_size + current->out_size;
+        size_t const move_next_size
+            = move_next->shape->buffer_size + move_next->out_size;
+        size_t const needed = has_current_size + current_size + move_next_size;
+
+        if (needed > step_storage)
+        {
+            return nullptr;
+        }
+
         fused = true;
 
         auto* const instance = static_cast<::IUnknown*>(self);
         auto const vtable = *reinterpret_cast<void* const* const*>(instance);
 
-        call_frame has_frame{
-            has_current->shape->buffer_size,
-            has_current->out_size,
-            has_current->arg_count};
-        call_frame current_frame{
-            current->shape->buffer_size, current->out_size, current->arg_count};
-        call_frame move_frame{
-            move_next->shape->buffer_size, move_next->out_size, move_next->arg_count};
+        alignas(std::max_align_t) uint8_t bytes[step_storage];
+        std::memset(bytes, 0, needed);
 
-        receive_outputs(*has_current, has_frame);
-        receive_outputs(*current, current_frame);
-        receive_outputs(*move_next, move_frame);
+        auto* const has_current_args = bytes;
+        auto* const has_current_out_bytes
+            = has_current_args + has_current->shape->buffer_size;
+        auto* const current_args = bytes + has_current_size;
+        auto* const current_out_bytes = current_args + current->shape->buffer_size;
+        auto* const move_next_args = bytes + has_current_size + current_size;
+        auto* const move_next_out_bytes
+            = move_next_args + move_next->shape->buffer_size;
+
+        receive_outputs(*has_current, has_current_args, has_current_out_bytes);
+        receive_outputs(*current, current_args, current_out_bytes);
+        receive_outputs(*move_next, move_next_args, move_next_out_bytes);
 
         bool on_item = false;
         bool took_item = false;
@@ -1318,7 +1346,7 @@ namespace py::interp
         auto const step = [&]() noexcept
         {
             auto hr = has_current->shape->invoke(
-                vtable[has_current->slot], instance, has_frame.args);
+                vtable[has_current->slot], instance, has_current_args);
 
             if (hr != 0)
             {
@@ -1327,15 +1355,14 @@ namespace py::interp
                 return hr;
             }
 
-            on_item = load<bool>(has_frame.out + has_current_out.out_offset);
+            on_item = load<bool>(has_current_out_bytes + has_current_out.out_offset);
 
             if (!on_item)
             {
                 return hr;
             }
 
-            hr = current->shape->invoke(
-                vtable[current->slot], instance, current_frame.args);
+            hr = current->shape->invoke(vtable[current->slot], instance, current_args);
 
             if (hr != 0)
             {
@@ -1347,7 +1374,7 @@ namespace py::interp
             took_item = true;
 
             hr = move_next->shape->invoke(
-                vtable[move_next->slot], instance, move_frame.args);
+                vtable[move_next->slot], instance, move_next_args);
 
             if (hr != 0)
             {
@@ -1371,7 +1398,7 @@ namespace py::interp
             // and nothing is going to convert it.
             if (took_item)
             {
-                release_output(current_out, current_frame.out);
+                release_output(current_out, current_out_bytes);
             }
 
             auto const site = make_site(*failed_member, *failed);
@@ -1394,7 +1421,7 @@ namespace py::interp
         }
 
         return convert_result(
-            *info.protocol.current->owner, current_out, current_frame.out);
+            *info.protocol.current->owner, current_out, current_out_bytes);
     }
 
     /**
