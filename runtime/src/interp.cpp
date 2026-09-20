@@ -1043,6 +1043,260 @@ namespace py::interp
     }
 
     /**
+     * The one overload of a no-argument member that hands back one value,
+     * which is what each of the three members of IIterator<T> is.
+     *
+     * @returns @c nullptr when @p member is missing or is not shaped that way,
+     * with no Python error set: the caller falls back rather than fails.
+     */
+    static overload_desc* lone_getter(member_desc* member) noexcept
+    {
+        if (!member)
+        {
+            return nullptr;
+        }
+
+        if (member->count != 1)
+        {
+            return nullptr;
+        }
+
+        auto& overload = member->overloads[0];
+
+        if (!overload.shape)
+        {
+            return nullptr;
+        }
+
+        if (overload.in_count != 0)
+        {
+            return nullptr;
+        }
+
+        if (overload.out_count != 1)
+        {
+            return nullptr;
+        }
+
+        // A member on another interface would need the instance queried for
+        // it, and one a Python subclass can override would have to be called
+        // on the inner object. Neither is true of an iterator, and both are
+        // the ordinary path's business.
+        if (overload.iface)
+        {
+            return nullptr;
+        }
+
+        if (overload.overridable)
+        {
+            return nullptr;
+        }
+
+        if (!overload.prepared && !prepare_overload(*member->owner, overload))
+        {
+            PyErr_Clear();
+            return nullptr;
+        }
+
+        return &overload;
+    }
+
+    /**
+     * The single output of @p overload, which lone_getter() has established
+     * there is exactly one of.
+     */
+    static arg_desc& lone_output(overload_desc& overload) noexcept
+    {
+        for (uint16_t i = 0; i < overload.arg_count; i++)
+        {
+            if (is_output(overload.args[i]))
+            {
+                return overload.args[i];
+            }
+        }
+
+        // out_count said there is one, so this is unreachable; handing back
+        // the first argument keeps the signature a reference rather than a
+        // pointer every caller would have to check.
+        return overload.args[0];
+    }
+
+    /**
+     * Points the argument buffer of @p frame at where the outputs of
+     * @p overload are received, which is all a no-argument getter needs doing
+     * to its buffer.
+     */
+    static void receive_outputs(overload_desc& overload, call_frame& frame) noexcept
+    {
+        for (uint16_t i = 0; i < overload.arg_count; i++)
+        {
+            auto const& arg = overload.args[i];
+
+            store_widened(
+                frame.args,
+                arg.offset,
+                reinterpret_cast<uintptr_t>(frame.out + arg.out_offset));
+        }
+    }
+
+    /**
+     * One step of an iteration: HasCurrent, Current and MoveNext made in a
+     * single crossing.
+     *
+     * A for loop is the only place the projection makes three WinRT calls to
+     * hand back one value, and two of them answer with a boolean that is
+     * looked at once and thrown away. Made one at a time, each of the three
+     * builds its own call frame, gives the GIL up and takes it back, and turns
+     * its answer into a Python object. Made together, the three vtable entries
+     * are called back to back with the GIL given up once, and only the item is
+     * converted.
+     *
+     * @param fused Whether the step was made here at all. The three members
+     * are read off the table, so a table that describes them some other way
+     * than IIterator<T> always does is left to the ordinary path.
+     * @returns A new reference to the item; @c nullptr with a Python error set
+     * when a call failed; @c nullptr with none set when the iterator is
+     * exhausted, which is what tp_iternext wants.
+     */
+    PyObject* call_iterator_step(type_entry& info, void* self, bool& fused) noexcept
+    {
+        fused = false;
+
+        auto* const has_current = lone_getter(info.protocol.has_current);
+        auto* const current = lone_getter(info.protocol.current);
+        auto* const move_next = lone_getter(info.protocol.move_next);
+
+        if (!has_current)
+        {
+            return nullptr;
+        }
+
+        if (!current)
+        {
+            return nullptr;
+        }
+
+        if (!move_next)
+        {
+            return nullptr;
+        }
+
+        auto& has_current_out = lone_output(*has_current);
+        auto& current_out = lone_output(*current);
+
+        // Whether the iterator is on an item is the one answer read here
+        // rather than converted, so the table has to say it is a boolean.
+        if (has_current_out.code != table::type_code::boolean)
+        {
+            return nullptr;
+        }
+
+        fused = true;
+
+        auto* const instance = static_cast<::IUnknown*>(self);
+        auto const vtable = *reinterpret_cast<void* const* const*>(instance);
+
+        call_frame has_frame{
+            has_current->shape->buffer_size,
+            has_current->out_size,
+            has_current->arg_count};
+        call_frame current_frame{
+            current->shape->buffer_size, current->out_size, current->arg_count};
+        call_frame move_frame{
+            move_next->shape->buffer_size, move_next->out_size, move_next->arg_count};
+
+        receive_outputs(*has_current, has_frame);
+        receive_outputs(*current, current_frame);
+        receive_outputs(*move_next, move_frame);
+
+        bool on_item = false;
+        bool took_item = false;
+        member_desc* failed_member = nullptr;
+        overload_desc* failed = nullptr;
+
+        auto const step = [&]() noexcept
+        {
+            auto hr = has_current->shape->invoke(
+                vtable[has_current->slot], instance, has_frame.args);
+
+            if (hr != 0)
+            {
+                failed_member = info.protocol.has_current;
+                failed = has_current;
+                return hr;
+            }
+
+            on_item = load<bool>(has_frame.out + has_current_out.out_offset);
+
+            if (!on_item)
+            {
+                return hr;
+            }
+
+            hr = current->shape->invoke(
+                vtable[current->slot], instance, current_frame.args);
+
+            if (hr != 0)
+            {
+                failed_member = info.protocol.current;
+                failed = current;
+                return hr;
+            }
+
+            took_item = true;
+
+            hr = move_next->shape->invoke(
+                vtable[move_next->slot], instance, move_frame.args);
+
+            if (hr != 0)
+            {
+                failed_member = info.protocol.move_next;
+                failed = move_next;
+            }
+
+            return hr;
+        };
+
+        int32_t hr{};
+
+        {
+            auto _gil = release_gil();
+            hr = step();
+        }
+
+        if (hr != 0)
+        {
+            // An item handed over before a later call failed is owned here
+            // and nothing is going to convert it.
+            if (took_item)
+            {
+                release_output(current_out, current_frame.out);
+            }
+
+            auto const site = make_site(*failed_member, *failed);
+
+            try
+            {
+                winrt::check_hresult(hr);
+            }
+            catch (...)
+            {
+                to_PyErr(&site);
+            }
+
+            return nullptr;
+        }
+
+        if (!on_item)
+        {
+            return nullptr;
+        }
+
+        return convert_result(
+            *info.protocol.current->owner, current_out, current_frame.out);
+    }
+
+    /**
      * Calls @p member with @p args, on @p self for an instance member or on the
      * activation factory for a static or a constructor.
      *
