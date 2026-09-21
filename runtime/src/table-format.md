@@ -12,7 +12,7 @@ The table has two forms:
 | form | file | written by | where it lives |
 |---|---|---|---|
 | text | `_table.pywinrt.txt` | `PyWinRT.exe` (`PyWinRT/TableWriter.cs`) | the repository, and a package's own source |
-| binary | `_table.pywinrt` | `winrt.table` in `winrt-table` | whatever a build installs |
+| binary | `_table.pywinrt` | `winrt.table` in `winrt-table-compiler` | whatever a build installs |
 
 **The text is the form that is kept.** A generated binary in a commit is a diff
 nobody can read, and so a place to hide things; what a reviewer has to see when

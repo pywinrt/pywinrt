@@ -7,11 +7,11 @@ with no arguments both of them are built:
     python scripts/build-bdist.py --pure
     python scripts/build-bdist.py --compiled --only cp314-win_amd64
 
-A projection package is data and winrt-table is pure Python, so each of them
-is one py3-none-any wheel built once - that is the pure half. It needs
-winrt-table *installed* rather than merely importable, because hatchling finds
-the hook that compiles the tables through the entry point in its metadata.
-Nothing in that half compiles, so nothing in it needs a compiler.
+A projection package is data and winrt-table-compiler is pure Python, so each
+of them is one py3-none-any wheel built once - that is the pure half. It needs
+winrt-table-compiler *installed* rather than merely importable, because
+hatchling finds the hook that compiles the tables through the entry point in
+its metadata. Nothing in that half compiles, so nothing in it needs a compiler.
 
 winrt-runtime and the eight hand-written interop modules do compile, so they
 are what is left of the 15-build cibuildwheel matrix. Every argument other

@@ -4,8 +4,8 @@ A source distribution has to build on a machine that has nothing but PyPI, so
 nothing here tells a build where to find something in this checkout: the
 C++/WinRT headers that winrt-runtime and the interop modules compile against
 ride inside the packages that include them, and a projection package's only
-build step is compiling its tables, which the hatchling hook that winrt-table
-ships does.
+build step is compiling its tables, which the hatchling hook that
+winrt-table-compiler ships does.
 """
 
 import json
