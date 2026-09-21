@@ -24,8 +24,9 @@ jobs:
         with:
           name: sdist_${{ github.run_id }}
           path: wheelhouse/
-  # A projection package is data and winrt-table is pure Python, so each is one
-  # py3-none-any wheel rather than one per interpreter and architecture.
+  # A projection package is data and winrt-table-compiler is pure Python, so
+  # each is one py3-none-any wheel rather than one per interpreter and
+  # architecture.
   pure:
     runs-on: windows-latest
     steps:
@@ -38,9 +39,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-sdist.txt
       # hatchling finds the hook that compiles the tables through the entry
-      # point in winrt-table's metadata, so it has to be installed rather than
-      # merely on the path
-      - name: install winrt-table
+      # point in winrt-table-compiler's metadata, so it has to be installed
+      # rather than merely on the path
+      - name: install winrt-table-compiler
         run: pip install ./table
       - name: Build the pure wheels
         run: python scripts/build-bdist.py --pure

@@ -1,7 +1,7 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["hatchling", "winrt-table"]
+requires = ["hatchling", "winrt-table-compiler"]
 build-backend = "hatchling.build"
 
 [project]
@@ -54,6 +54,6 @@ exclude = ["**/_table.pywinrt"]
 packages = ["winrt"]
 exclude = ["**/_table.pywinrt.txt"]
 
-# winrt.table.build_hooks in winrt-table, which compiles each table the
-# package carries and puts the result beside the __init__.py that loads it.
-[tool.hatch.build.targets.wheel.hooks.winrt-table]
+# winrt.table.build_hooks in winrt-table-compiler, which compiles each table
+# the package carries and puts the result beside the __init__.py that loads it.
+[tool.hatch.build.targets.wheel.hooks.winrt-table-compiler]

@@ -4,16 +4,16 @@ The hatchling build hook that compiles a projection package's tables.
 A projection package carries the text form of each of its namespace tables and
 the wheel carries the binary the runtime reads, so building one has exactly one
 step. The compiler is :mod:`winrt.table`, which this is part of, so a
-projection package reaches the hook by build-depending on ``winrt-table`` and
-naming it:
+projection package reaches the hook by build-depending on
+``winrt-table-compiler`` and naming it:
 
 .. code-block:: toml
 
     [build-system]
-    requires = ["hatchling", "winrt-table"]
+    requires = ["hatchling", "winrt-table-compiler"]
     build-backend = "hatchling.build"
 
-    [tool.hatch.build.targets.wheel.hooks.winrt-table]
+    [tool.hatch.build.targets.wheel.hooks.winrt-table-compiler]
 
 Nothing is written back into the package being built: the binaries go to a
 temporary directory and into the wheel from there, which is what keeps a
@@ -32,7 +32,7 @@ from winrt.table import TABLE_NAME, TABLE_TEXT_NAME, compile_table
 
 
 class TableBuildHook(BuildHookInterface):
-    PLUGIN_NAME = "winrt-table"
+    PLUGIN_NAME = "winrt-table-compiler"
 
     def initialize(self, version: str, build_data: dict[str, Any]) -> None:
         self.__output = Path(tempfile.mkdtemp(prefix="pywinrt-table-"))

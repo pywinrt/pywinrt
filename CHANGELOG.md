@@ -6,8 +6,8 @@
 
 ### Added
 - Wheels are now published for Python 3.14 and Python 3.15.
-- Added `winrt-table`, a small pure-Python package that compiles the table a
-  projection package carries as text into the binary form that
+- Added `winrt-table-compiler`, a small pure-Python package that compiles the
+  table a projection package carries as text into the binary form that
   `winrt-runtime` reads. It is a build-time dependency of every projection
   package and there is nothing in it to import.
 

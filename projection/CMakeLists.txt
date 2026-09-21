@@ -259,9 +259,9 @@ install(FILES "${WINDOWS_APP_SDK_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/nativ
 # do is compile the table and put both where the tests will import them from.
 #
 # The table is carried as text and the runtime reads a binary, so compiling one
-# into the other is a build step: winrt/table.py, which winrt-table ships for
-# whatever builds a projection. Nothing is written back into the source tree,
-# which is what keeps a generated binary out of the repository.
+# into the other is a build step: winrt/table.py, which winrt-table-compiler
+# ships for whatever builds a projection. Nothing is written back into the
+# source tree, which is what keeps a generated binary out of the repository.
 
 set(PYWINRT_TABLE_DIR "${CMAKE_CURRENT_BINARY_DIR}/tables")
 set(PYWINRT_TABLE_COMPILER "${WINRT_TABLE_PATH}/winrt/table/__init__.py")

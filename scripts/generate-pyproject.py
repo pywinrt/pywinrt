@@ -10,13 +10,13 @@ import re
 
 # A projection package is data - a table, an __init__.py and a type stub - so
 # its metadata is static and its only build step is compiling the table, which
-# winrt-runtime's hatchling build hook does. The packages that compile C++ stay
-# on setuptools, because that is what knows how to drive a compiler.
+# winrt-table-compiler's hatchling build hook does. The packages that compile
+# C++ stay on setuptools, because that is what knows how to drive a compiler.
 PROJECTION_PYPROJECT_TOML_TEMPLATE = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["hatchling", "winrt-table"]
+requires = ["hatchling", "winrt-table-compiler"]
 build-backend = "hatchling.build"
 
 [project]
@@ -52,15 +52,15 @@ exclude = ["**/_table.pywinrt"]
 packages = ["{root_dir}"]
 exclude = ["**/_table.pywinrt.txt"]
 
-# winrt.table.build_hooks in winrt-table, which compiles each table the
-# package carries and puts the result beside the __init__.py that loads it.
-[tool.hatch.build.targets.wheel.hooks.winrt-table]
+# winrt.table.build_hooks in winrt-table-compiler, which compiles each table
+# the package carries and puts the result beside the __init__.py that loads it.
+[tool.hatch.build.targets.wheel.hooks.winrt-table-compiler]
 """
 
-# winrt-table compiles a projection table and is what a projection package
-# builds with. It is pure Python on purpose: a projection package is data, and
-# making it build-depend on winrt-runtime would mean a compiler wherever there
-# is no runtime wheel for the interpreter doing the building.
+# winrt-table-compiler compiles a projection table and is what a projection
+# package builds with. It is pure Python on purpose: a projection package is
+# data, and making it build-depend on winrt-runtime would mean a compiler
+# wherever there is no runtime wheel for the interpreter doing the building.
 TABLE_PYPROJECT_TOML_TEMPLATE = """# WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
@@ -89,7 +89,7 @@ Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 
 # what a projection package's build calls to compile its tables
 [project.entry-points.hatch]
-winrt-table = "winrt.table.build_hooks"
+winrt-table-compiler = "winrt.table.build_hooks"
 
 [tool.hatch.build.targets.sdist]
 only-include = ["winrt", "README.md"]
@@ -763,14 +763,14 @@ for path in chain(INTEROP_PATH.glob("winrt-*"), INTEROP_PATH.glob("winui3-*")):
 with open_if_changed(TABLE_PATH / "pyproject.toml") as f:
     f.write(
         TABLE_PYPROJECT_TOML_TEMPLATE.format(
-            package_name="winrt-table",
+            package_name="winrt-table-compiler",
             version=version,
             description="Compiler for the projection tables of PyWinRT",
         )
     )
 
 with open_if_changed(TABLE_PATH / "README.md") as f:
-    f.write(README_TEMPLATE.format(package_name="winrt-table"))
+    f.write(README_TEMPLATE.format(package_name="winrt-table-compiler"))
     f.write(TABLE_README)
 
 # create pyproject.toml files for the packages that compile

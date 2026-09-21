@@ -5,7 +5,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "winrt-table"
+name = "winrt-table-compiler"
 version = "0.0.0"
 description = "Compiler for the projection tables of PyWinRT"
 readme = "README.md"
@@ -26,7 +26,7 @@ Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 
 # what a projection package's build calls to compile its tables
 [project.entry-points.hatch]
-winrt-table = "winrt.table.build_hooks"
+winrt-table-compiler = "winrt.table.build_hooks"
 
 [tool.hatch.build.targets.sdist]
 only-include = ["winrt", "README.md"]

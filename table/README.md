@@ -1,6 +1,6 @@
 <!-- warning: Please don't edit this file. It was automatically generated. -->
 
-# winrt-table
+# winrt-table-compiler
 
 Compiles the projection tables of Windows Runtime (WinRT) APIs from the
 text form a package carries into the binary form `winrt-runtime` reads.
