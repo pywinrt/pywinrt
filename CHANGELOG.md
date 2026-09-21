@@ -6,8 +6,55 @@
 
 ### Added
 - Wheels are now published for Python 3.14 and Python 3.15.
+- Added `winrt-table`, a small pure-Python package that compiles the table a
+  projection package carries as text into the binary form that
+  `winrt-runtime` reads. It is a build-time dependency of every projection
+  package and there is nothing in it to import.
 
 ### Changed
+- A projection package no longer contains a compiled extension module. Each
+  one is a single `py3-none-any` wheel holding the type stubs, a small
+  `__init__.py` and a table that describes the namespace: its types, their
+  members, and the ABI call each member makes. `winrt-runtime` reads that
+  table and makes the calls, so it and the interop packages are the only parts
+  of the projection that are still compiled. One wheel now serves every
+  supported version of Python and every architecture, where a package used to
+  be built once for each combination of the two, and installing a package from
+  its source distribution needs neither a C++ compiler nor the Windows SDK.
+  All 410 projection packages together are 6.2 MB of wheels; the 420 of v3.2.1
+  were 49.2 MB for each version of Python and each architecture. The largest
+  of them, `winui3-Microsoft.UI.Xaml.Controls`, is 0.28 MB where it was
+  3.54 MB.
+- A tool that freezes an application, such as PyInstaller, has to be told to
+  collect each namespace's table, which is the `_table.pywinrt` file beside
+  its `__init__.py`. Collecting the Python modules and the extension modules
+  of a projection package is no longer enough to make it work, since the table
+  is neither.
+- Calling a WinRT member costs more than it did in v3.2.1. A projection
+  package used to be C++ compiled for the member being called, and it is now a
+  table that the runtime reads at the moment of the call; interpreting it is
+  what pays for the package being data. Measured on one machine with both
+  builds on the same day, most kinds of member cost 10 to 45 % more per call,
+  and two cost about twice as much: a `dict` passed where an `IMap` is
+  expected, and `get()` on an async operation that has already completed. In
+  absolute terms that is tens of nanoseconds added to calls that took 60 to
+  400 ns, so what the member itself does - reaching a device, a file or the
+  display - still dominates by orders of magnitude. Treat any single one of
+  these figures as approximate: a benchmark row moves by up to 20 % between
+  builds of code that cannot affect it.
+- Generating a projection of your own WinRT component now requires
+  `--emit-shapes <dir>`. The table names the ABI call shape of each member by
+  an id, and `<dir>` is where the census that assigns those ids
+  (`shapes.json`) and the trampolines `winrt-runtime` compiles from it
+  (`shapes-generated.h`) live. The census in this repository, under
+  `runtime/src`, is the one the published `winrt-runtime` is built from, so a
+  component whose members all have shapes it already lists works with the
+  published wheel. A component that needs a new shape makes the tool append
+  one, and its projection then needs a `winrt-runtime` built from that census;
+  importing it against an older one fails with a message that says so rather
+  than calling the wrong trampoline. What the tool writes for your component
+  is a table and the type stubs beside it, so projecting one needs no compiler
+  either.
 - The type stubs now use modern annotation syntax. Optional and union types are
   spelled `X | None` and `X | Y` instead of `typing.Optional[X]` and
   `typing.Union[X, Y]`, `typing.Tuple` and `typing.Type` are now the builtin
@@ -40,133 +87,54 @@
   now `create_tile_updater_for_application_for_user()`. The old name is the
   overload that takes an application id, so it could not be kept as an alias.
 - Greatly improved the speed of the `PyWinRT` code generation tool.
-- Greatly reduced the compile time of the projection. The generated `py.*.h`
-  headers now only include the full C++/WinRT header of the namespaces whose
-  delegates, generic types or interface methods they use; everything else
-  comes from a new light `py.*.types.h` header that only maps C++/WinRT types
-  to their Python types.
-- The CMake build now uses embedded (`/Z7`) debug information on MSVC, which
-  roughly halves the time to build the precompiled header, and shares the
-  precompiled header with the interop and test packages too.
-- The GUIDs of parameterized interfaces such as `IAsyncOperation[StorageFile]`
-  are now computed by the code generator and written to a new
-  `py.<package>.guids.h` header instead of being recomputed by a constexpr
-  SHA-1 in every module that uses them. Run `py .\scripts\verify-guids.py`
-  after regenerating to check them against C++/WinRT.
-- The generated C++/WinRT headers now refer to the declarations of their parent
-  namespace instead of including its full header, which C++/WinRT does by
-  default even though it only uses the declarations. The full header is
-  included by the generated PyWinRT code where it is actually needed.
-- The CMake build now precompiles headers per group of packages instead of once
-  for everything. The XAML packages share a large amount of header material
-  with each other but not with the rest of the projection, so they each get a
-  precompiled header of their own. Groups too small to pay for one fall back to
-  the common precompiled header, so this does not slow down
-  `PYWINRT_FULL_PROJECTION=OFF` builds.
-- The CMake build now gives the `winrt-runtime` module a precompiled header
-  too. It cannot share the one the other packages use because its sources define
-  `PYWINRT_RUNTIME_MODULE`, so it gets one of its own, built from the same
-  headers.
-- Members of a runtime class or interface that are declared by another interface
-  are now reached by querying that interface instead of by first asking
-  `ApiInformation` whether this version of Windows has the member. C++/WinRT
-  performs the same query on every such call anyway, so this costs nothing and
-  answers the question the call actually depends on. Members declared by the
-  default interface of a class are no longer checked at all, since an object
-  cannot exist without implementing it. This removes 43,320 of the 52,777
-  checks and makes the projection 13.5 % smaller: 151.95 MB to 131.49 MB over
-  all 424 modules, with the largest packages gaining the most
-  (`winrt-Microsoft.UI.Xaml.Controls` 12.1 MB to 11.0 MB).
-- Static members are no longer checked against `ApiInformation` before they are
-  called either. There is no object to query for one, so the call is simply
-  made: reaching a static that this version of Windows does not have fails in
-  the activation factory, and the metadata is consulted only then, to say so.
-  That removes the remaining 9,457 checks and, with them, the metadata
-  machinery they linked into every module - 2.8 % of the compiled code across
-  the 35 modules of the reduced projection, and 19 % for a small package such
-  as `winrt-Windows.UI`, most of whose size was that machinery. Two things
-  change in what you see: the `AttributeError` now names the member, as in
-  `method 'Windows.Media.Ocr.OcrEngine.IsLanguageSupported' is not available in
-  this version of Windows`, and an argument that cannot be converted raises
-  `TypeError` before it, where the version error used to come first.
-- A projection generated with `--component-dlls` now gets that check as well.
-  It was left out because `ApiInformation` cannot always answer for a
-  third-party component; now that the question is only asked after a call has
-  failed, an unanswerable one costs nothing and falls back to reporting the
-  `HRESULT`.
-- The `winrt-runtime` C API now also exports the function that formats the error
-  for a member an object does not implement, so that the metadata machinery it
-  needs is linked into one module instead of all of them. This raises the minor
-  ABI version, so this version of the projection packages needs at least this
-  version of `winrt-runtime`.
-- The `winrt-runtime` C API now also decides which Python exception a failed
-  call raises and what it says. A projection module still catches its own C++
-  exception, but it now passes on what it caught rather than the finished
-  Python exception, so the wording of an error, the mapping from `HRESULT` to
-  exception type and the details carried by `IRestrictedErrorInfo` can all
-  improve in a `winrt-runtime` release without rebuilding the projection
-  packages. This raises the minor ABI version again.
-- Building a projection package from source no longer requires the exact
-  version of `winrt-runtime` that generated it. The generated headers used to
-  fail with "Mismatched Py/WinRT headers." unless the two version strings
-  matched; they now check the ABI version of the headers they are compiled
-  against - the same major version, and at least the minor version the
-  generated code calls into - which is the same contract a module checks when
-  it is imported. Each package's `deps.json` now records that ABI version too.
-- BREAKING: The hand-written C++ headers that the projection compiles against
-  are now published by `winrt-runtime` instead of `winrt-sdk`, and `pybase.h`
-  is now `#include <pywinrt/base.h>`, mirroring C++/WinRT's own
-  `<winrt/base.h>`. The path to them comes from the new
-  `winrt._include.get_include()`, the way NumPy and pybind11 publish theirs, so
-  a projection module built against these headers was built against the runtime
-  that ships them. `winrt_sdk.get_include_dirs()` keeps returning the generated
-  headers, so a package that builds against a custom component needs both:
+- A member is no longer checked against `ApiInformation` before it is called.
+  A member that another interface declares is reached by querying that
+  interface, which answers the question the call actually depends on; a member
+  declared by the default interface of a class is not checked at all, since an
+  object cannot exist without implementing it; and a static member is simply
+  called, since there is no object to query for one. Reaching a member that
+  this version of Windows does not have therefore fails in the call or in the
+  activation factory, and the metadata is consulted only then, to say so. Two
+  things change in what you see: the `AttributeError` now names the member, as
+  in `method 'Windows.Media.Ocr.OcrEngine.IsLanguageSupported' is not available
+  in this version of Windows`, and an argument that cannot be converted raises
+  `TypeError` before it, where the version error used to come first. A
+  projection of your own component is answered the same way. The check used to
+  be left out of a `--component-dlls` build because `ApiInformation` cannot
+  always answer for a third-party component, and now that the question is only
+  asked after a call has failed, an unanswerable one costs nothing and falls
+  back to reporting the `HRESULT`.
+- BREAKING: The `winrt-sdk` package is gone. It shipped the C++/WinRT headers
+  and the hand-written PyWinRT headers that a generated projection compiled
+  against, and no projection package compiles any more. A module written by
+  hand to pass WinRT values to Python - the interop packages here are the
+  examples - includes `<pywinrt/base.h>`, which `winrt-runtime` ships
+  and `winrt._include.get_include()` locates, the way NumPy and pybind11
+  publish their headers:
 
   ```python
+  from setuptools import setup
   from winrt._include import get_include
-  from winrt_sdk import get_include_dirs
 
-  setup(..., include_dirs=[get_include()] + get_include_dirs())
+  setup(..., include_dirs=[get_include(), "path/to/cppwinrt"])
   ```
 
-  `winrt-runtime` is therefore now a build-time dependency of every projection
-  package as well as a runtime one.
-- The hand-written runtime moved out of `projection/` to a top-level `runtime/`
-  directory: `runtime/python/winrt/` for the Python package and the public
-  headers it ships, `runtime/src/` for the C++ sources of the extension module.
-  `pyruntime.h`, which is private to the runtime's own translation units, moved
-  there as `module_state.h` and is no longer shipped in the `winrt-sdk` wheel.
-- The hand-written interop modules moved out of `projection/` as well, to a
-  top-level `interop/`, so everything remaining under `projection/` is
-  generated. Their distribution names, module names and source file names are
-  unchanged, and their packaging is still emitted by `generate-pyproject.py`.
+  Such a module needs nothing generated: it names the WinRT type it is handing
+  over and the runtime resolves the name. `pybase.h` is now
+  `<pywinrt/base.h>`, mirroring C++/WinRT's own `<winrt/base.h>`.
 - `<pywinrt/base.h>` is now an umbrella header over ten smaller ones - among
-  them `<pywinrt/abi.h>`, which holds the ABI struct that a projection module
+  them `<pywinrt/abi.h>`, which holds the ABI struct that a compiled module
   and `winrt-runtime` agree on, and `<pywinrt/convert.h>`, which holds the
   Python-to-WinRT conversions. Code that includes `<pywinrt/base.h>` needs no
   change: it still provides everything.
-- The projection is now compiled without RTTI (`/GR-` on MSVC, `-fno-rtti`
-  otherwise). Nothing in it uses `dynamic_cast`, and the only uses of `typeid`
-  were a dozen `typeid(T).name()` calls in the messages of
-  `NotImplementedError`, which now name the WinRT type instead of giving an
-  MSVC mangled name. The type descriptors that the compiler emitted anyway
-  cost more than the vtables they describe, so this makes the projection
-  20.9 % smaller: 131.49 MB to 103.97 MB over all 424 modules, and no module
-  grew. The XAML packages gain the most, since they have the most types
-  (`winrt-Windows.UI.Xaml.Automation.Peers` 3.99 MB to 1.62 MB).
+- `winrt-runtime` and the interop modules are compiled without RTTI (`/GR-`
+  on MSVC, `-fno-rtti` otherwise). Nothing in them uses `dynamic_cast`, and
+  the only uses of `typeid` were a dozen `typeid(T).name()` calls in the
+  messages of `NotImplementedError`, which now name the WinRT type instead of
+  giving an MSVC mangled name.
 - The `PyWinRT` dotnet tool now targets .NET 10 and needs the .NET 10 runtime
   to run. This only affects generating your own projection with the tool; the
   published wheels are unchanged and have never needed .NET installed.
-- The `winrt-runtime` C API now also does the Python side of a collection that
-  a Python object backs. When a list or a dict is passed to a WinRT method that
-  takes an `IVector`, `IMap` or one of their relatives, it is wrapped rather
-  than copied, and WinRT then calls back into Python for every element it
-  reads; the projection package still converts the elements, but what it does
-  to the Python object, and what a Python exception raised while WinRT is
-  reading it means, now belong to `winrt-runtime`. This raises the minor ABI
-  version again. Iterating a `dict` from WinRT is also about 9 % faster per
-  entry, because the parts of an iteration that touch no Python object no
-  longer take the GIL.
 - An index that a Python sequence does not have is now reported to WinRT as
   `E_BOUNDS`, which is what a WinRT collection raises for an index out of
   range, instead of being written out as an unraisable `IndexError`. A WinRT
@@ -174,15 +142,16 @@
   rather than the generic "Unraisable Python exception". Everything else a
   Python object can raise while WinRT is reading it still goes to
   `sys.unraisablehook`, since WinRT has no way to report it.
-- Calls that pass or return a WinRT object, interface or struct are faster.
-  Each such value used to be converted by looking its Python type up by name
-  in a table in `winrt-runtime` - once in each direction, and twice in each
-  direction for a struct - and the answer is now remembered after the first
-  time. Passing an interface to a method costs about 40 ns less, a method that
-  takes two structs and returns two is roughly twice as fast, and calls that
-  only pass numbers or strings are unchanged. Modules are about 1 % larger.
+- `HResult` and `EventRegistrationToken` are projected as subclasses of `int`
+  rather than as structs with a single field in them, since that is what each
+  of them is. An `EventRegistrationToken` can be compared, hashed and used as
+  a dictionary key like the integer it is, and an `HResult` can be compared
+  against the codes in `winrt.system.hresult` directly.
 
 ### Deprecated
+- `HResult.value` and `EventRegistrationToken.value` are deprecated. The value
+  of each is now the object itself, so reading the field still works and
+  raises a `DeprecationWarning`. It will be removed in a future release.
 - The method names that v3.x generated from the
   `[Windows.Foundation.Metadata.Overload]` attribute are still available as
   aliases, but calling one raises a `DeprecationWarning`. They will be removed
@@ -218,6 +187,8 @@
 - Fixed replacing an item of a Python list passed to WinRT as an `IVector`. The
   value was released one time too many, which corrupts the interpreter, and it
   only worked at all if the object was a `list` rather than any other sequence.
+- Fixed the type hint of `Matrix4x4.translation()`, which said `Vector2`
+  where the value is a `Vector3`.
 - Fixed `@typing.overload` missing from the type hints of overloaded methods.
 - Fixed methods being silently dropped when two overloads could not be told
   apart.

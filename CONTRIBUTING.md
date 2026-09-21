@@ -24,8 +24,10 @@ Once Nuget is installed, run:
 
 ### For linting
 
-- Black
+- Ruff
+- mypy
 - ClangFormat
+- CSharpier (`dotnet tool restore`)
 
 ## Building PyWinRT.exe
 
@@ -43,6 +45,12 @@ the generated files of the projection. This requires that the Windows SDK is
 installed either via the Visual Studio Installer or standalone.
 
     py .\scripts\generate-pywinrt.py
+
+The generator also merges the census of ABI call shapes it takes while it runs
+into `runtime/src/shapes.json`, and writes the trampolines that `winrt-runtime`
+compiles from it to `runtime/src/shapes-generated.h`. Both are committed, and a
+run may only append to the census; `runtime/src/table-format.md` describes the
+table format and the census.
 
 Some additional files are also generated instead by:
 
@@ -97,6 +105,20 @@ If using MSYS2 shell for MINGW, this can be simplified to:
 
     PYTHONPATH=_install/test python -X dev -m unittest
 
+## Linting
+
+The rules and the files they apply to are in `ruff.toml` and `mypy.ini`, so an
+editor checks the same thing as the `lint` job in `.github/workflows/test.yaml`
+does:
+
+    pipx run ruff check
+
+mypy reads the packages from one directory, `_install/lint`, and they are
+generated into several, so the lint job copies them together first with the
+`merge packages` step of that workflow. Run that step, then:
+
+    pipx run mypy
+
 ## Building the Nuget package
 
 To build the nuget package for the `PyWinRT.exe` tool.
@@ -105,13 +127,22 @@ To build the nuget package for the `PyWinRT.exe` tool.
 
 ## Building Python wheels
 
-To build the binary wheels of the projection packages:
+A projection package is data, so its wheel is `py3-none-any` and is built once.
+`winrt-runtime` and the interop modules are compiled, so cibuildwheel builds
+theirs for each version of Python and each target architecture. With no
+arguments, both halves are built:
 
     py .\scripts\build-bdist.py
 
-To only build for a specific Python and target architecture:
+Either half can be built on its own, and any other argument is passed on to
+cibuildwheel:
 
-    py .\scripts\build-bdist.py --only cp312-win_amd64
+    py .\scripts\build-bdist.py --pure
+    py .\scripts\build-bdist.py --compiled --only cp312-win_amd64
+
+The pure half needs `winrt-table` installed rather than merely importable,
+because hatchling finds the hook that compiles the tables through the entry
+point in its metadata.
 
 A release also needs the source distributions:
 
@@ -120,7 +151,18 @@ A release also needs the source distributions:
 
 ## Profiling
 
-To measure performance, create a `RelWithDebInfo` build of the projection and
+`perf/dispatch.py` measures what it costs to call a projected member at all,
+which is the number that a change to the runtime is judged by. Its docstring
+has the commands and the cautions that come with reading a single row.
+
+It needs a `Release` build, which is compiled with link time optimization, the
+same as the wheels are, so it takes noticeably longer to link than the other
+configurations and it is what users run. Turning that off to compare against is
+an edit to `projection/CMakeLists.txt`: passing
+`-DCMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE=OFF` does nothing, because the
+plain `set()` there shadows the cache variable.
+
+To find where the time goes, create a `RelWithDebInfo` build of the projection
 and install it, e.g. in `_install/perf`.
 
 Download the `PerfView.exe` tool from <https://github.com/microsoft/perfview>
