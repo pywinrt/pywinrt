@@ -40,6 +40,13 @@ There are also some PyWinRT-specific sub-packages distributed in the
 `winrt-runtime <https://pypi.org/project/winrt-runtime/>`_ package. As well as
 some extra interop packages that bridge between WinRT and Win32 types.
 
+A namespace package holds no compiled code. It is a table describing the
+namespace - its types, their members and the ABI call each member makes - with
+the type hints beside it, so one ``py3-none-any`` wheel serves every supported
+version of Python and every architecture. ``winrt-runtime`` reads the table and
+makes the calls, so it and the interop packages are the only ones that are
+compiled for a particular interpreter.
+
 .. seealso:: :doc:`api/index`
 
 ----------
