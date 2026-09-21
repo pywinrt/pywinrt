@@ -28,6 +28,14 @@ Release is compiled with ``/O2 /GL`` and linked with ``/LTCG``, the same as the
 wheels, so these are the numbers users get.  They are still one machine on one
 day, so only compare runs taken together.
 
+``min`` of the repeats is not as robust as it looks.  One run of the whole case
+table has read 62 ns for a row that eleven later runs of the same build read
+110 to 123, so a row that appears to have moved by more than about 15 per cent
+is confirmed by running that row on its own a few times and comparing the
+minima, which is what the argument filter below is for::
+
+    py perf\dispatch.py "IVector<String> get"
+
 Any command line arguments are substrings, and only the cases whose name
 contains one of them are run.
 """
