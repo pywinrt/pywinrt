@@ -1612,7 +1612,7 @@ sealed class TableWriter
     /// </summary>
     /// <remarks>
     /// The binary the runtime reads is compiled from this text by
-    /// <c>winrt.table</c> in <c>winrt-table</c>. So nothing
+    /// <c>winrt.table</c> in <c>winrt-table-compiler</c>. So nothing
     /// written here is an offset or an index: a reference is spelled as the name
     /// of the record it points at, and the order records are written in is the
     /// order they are numbered in there. The grammar and the vocabulary are in

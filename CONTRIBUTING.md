@@ -140,9 +140,9 @@ cibuildwheel:
     py .\scripts\build-bdist.py --pure
     py .\scripts\build-bdist.py --compiled --only cp312-win_amd64
 
-The pure half needs `winrt-table` installed rather than merely importable,
-because hatchling finds the hook that compiles the tables through the entry
-point in its metadata.
+The pure half needs `winrt-table-compiler` installed rather than merely
+importable, because hatchling finds the hook that compiles the tables through
+the entry point in its metadata.
 
 A release also needs the source distributions:
 
