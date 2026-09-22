@@ -1,11 +1,30 @@
 import array as stdlib_array
 import datetime
+import struct
 import sys
+import typing
 import unittest
 import uuid
 
 import test_winrt.testcomponent as tc
-from winrt.system import Array, Object
+from winrt.system import (
+    Array,
+    BufferFormat,
+    Char16,
+    Double,
+    Int8,
+    Int16,
+    Int32,
+    Int64,
+    Object,
+    Single,
+    StructFormat,
+    UInt8,
+    UInt16,
+    UInt32,
+    UInt64,
+    WinrtSignature,
+)
 from winrt.windows.foundation import (
     IPropertyValue,
     IStringable,
@@ -14,6 +33,22 @@ from winrt.windows.foundation import (
     Size,
     Uri,
 )
+
+#: Every winrt.system scalar alias with the three formats it is annotated
+#: with - buffer, struct and WinRT signature - and the WinRT type it names.
+SCALAR_ALIASES = [
+    (Int8, "b", "b", "i1", "Int8"),
+    (UInt8, "B", "B", "u1", "UInt8"),
+    (Int16, "h", "h", "i2", "Int16"),
+    (UInt16, "H", "H", "u2", "UInt16"),
+    (Int32, "i", "i", "i4", "Int32"),
+    (UInt32, "I", "I", "u4", "UInt32"),
+    (Int64, "q", "q", "i8", "Int64"),
+    (UInt64, "Q", "Q", "u8", "UInt64"),
+    (Single, "f", "f", "f4", "Single"),
+    (Double, "d", "d", "f8", "Double"),
+    (Char16, "u", "H", "c2", "Char16"),
+]
 
 is_64bits = sys.maxsize > 2**32
 pointer_size = 8 if is_64bits else 4
@@ -41,7 +76,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertTrue(m.c_contiguous)
 
     def test_int8(self):
-        a = Array("b", [1, 2, 3])
+        a = Array(Int8, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "Int8")
         self.assertEqual(len(a), 3)
@@ -56,7 +91,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertTrue(m.c_contiguous)
 
     def test_uint8(self):
-        a = Array("B", [1, 2, 3])
+        a = Array(UInt8, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "UInt8")
         self.assertEqual(len(a), 3)
@@ -71,7 +106,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertTrue(m.c_contiguous)
 
     def test_int16(self):
-        a = Array("h", [1, 2, 3])
+        a = Array(Int16, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "Int16")
         self.assertEqual(len(a), 3)
@@ -86,7 +121,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertTrue(m.c_contiguous)
 
     def test_uint16(self):
-        a = Array("H", [1, 2, 3])
+        a = Array(UInt16, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "UInt16")
         self.assertEqual(len(a), 3)
@@ -101,7 +136,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertTrue(m.c_contiguous)
 
     def test_int32(self):
-        a = Array("i", [1, 2, 3])
+        a = Array(Int32, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "Int32")
         self.assertEqual(len(a), 3)
@@ -116,7 +151,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertTrue(m.c_contiguous)
 
     def test_uint32(self):
-        a = Array("I", [1, 2, 3])
+        a = Array(UInt32, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "UInt32")
         self.assertEqual(len(a), 3)
@@ -131,7 +166,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertTrue(m.c_contiguous)
 
     def test_int64(self):
-        a = Array("q", [1, 2, 3])
+        a = Array(Int64, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "Int64")
         self.assertEqual(len(a), 3)
@@ -146,7 +181,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertTrue(m.c_contiguous)
 
     def test_uint64(self):
-        a = Array("Q", [1, 2, 3])
+        a = Array(UInt64, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "UInt64")
         self.assertEqual(len(a), 3)
@@ -161,7 +196,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertTrue(m.c_contiguous)
 
     def test_char(self):
-        a = Array("u", ["A", "B", "\u1234"])
+        a = Array(Char16, ["A", "B", "\u1234"])
 
         self.assertEqual(a._winrt_element_type_name_, "Char16")
         self.assertEqual(len(a), 3)
@@ -355,7 +390,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertTrue(m.c_contiguous)
 
     def test_sequence_protocol(self):
-        a = Array("B", list(range(10)))
+        a = Array(UInt8, list(range(10)))
 
         for i, v in enumerate(a):
             # positive index
@@ -376,16 +411,16 @@ class TestWinRTArray(unittest.TestCase):
 #: and as the return value.
 ARRAY_MEMBERS = [
     ("array1", "?", [True, False, True]),
-    ("array2", "B", [1, 2, 3]),
-    ("array3", "H", [1, 2, 3]),
-    ("array4", "I", [1, 2, 3]),
-    ("array5", "Q", [1, 2, 3]),
-    ("array6", "h", [-1, 2, -3]),
-    ("array7", "i", [-1, 2, -3]),
-    ("array8", "q", [-1, 2, -3]),
-    ("array9", "f", [1.5, 2.5, 3.5]),
-    ("array10", "d", [1.5, 2.5, 3.5]),
-    ("array11", "u", ["A", "B", "\u1234"]),
+    ("array2", UInt8, [1, 2, 3]),
+    ("array3", UInt16, [1, 2, 3]),
+    ("array4", UInt32, [1, 2, 3]),
+    ("array5", UInt64, [1, 2, 3]),
+    ("array6", Int16, [-1, 2, -3]),
+    ("array7", Int32, [-1, 2, -3]),
+    ("array8", Int64, [-1, 2, -3]),
+    ("array9", Single, [1.5, 2.5, 3.5]),
+    ("array10", Double, [1.5, 2.5, 3.5]),
+    ("array11", Char16, ["A", "B", "\u1234"]),
     ("array12", str, ["one", "two", "three"]),
 ]
 
@@ -519,7 +554,7 @@ class TestArrayParameters(unittest.TestCase):
 
     def test_passed_array_must_hold_the_declared_element(self):
         with self.assertRaises(BufferError):
-            self.tests.array7(Array("h", [1, 2]), Array("i", 2))
+            self.tests.array7(Array(Int16, [1, 2]), Array(Int32, 2))
 
     def test_lent_array_must_be_writable(self):
         with self.assertRaises(BufferError):
@@ -533,3 +568,49 @@ class TestArrayParameters(unittest.TestCase):
         self.assertEqual(list(lent), [1, 2, 3])
         self.assertEqual(list(received), [1, 2, 3])
         self.assertEqual(list(returned), [1, 2, 3])
+
+
+class TestScalarAliases(unittest.TestCase):
+    """
+    The winrt.system aliases that name the scalars no Python type names, and
+    the three annotations each one carries.
+    """
+
+    def test_array_of_each_alias(self):
+        for alias, buffer_format, _, _, winrt_name in SCALAR_ALIASES:
+            with self.subTest(winrt_type=winrt_name):
+                a = Array(alias, 3)
+
+                self.assertEqual(a._winrt_element_type_name_, winrt_name)
+
+                with memoryview(a) as m:
+                    self.assertEqual(m.format, buffer_format)
+
+    def test_buffer_format_comes_first(self):
+        # Code written against the single string these aliases used to carry
+        # reads the first annotation by position, so the buffer format is the
+        # one that has to come first.
+        for alias, buffer_format, _, _, winrt_name in SCALAR_ALIASES:
+            with self.subTest(winrt_type=winrt_name):
+                self.assertEqual(typing.get_args(alias)[1], buffer_format)
+
+    def test_annotations_are_found_by_type(self):
+        for alias, buffer_format, struct_format, signature, name in SCALAR_ALIASES:
+            with self.subTest(winrt_type=name):
+                annotations = typing.get_args(alias)[1:]
+
+                for kind, expected in (
+                    (BufferFormat, buffer_format),
+                    (StructFormat, struct_format),
+                    (WinrtSignature, signature),
+                ):
+                    found = [a for a in annotations if isinstance(a, kind)]
+                    self.assertEqual(found, [expected])
+
+    def test_struct_format_matches_the_element(self):
+        # The struct module has no "u" format at all, which is why Char16 is
+        # the one alias whose struct format is not its buffer format.
+        for alias, _, struct_format, _, winrt_name in SCALAR_ALIASES:
+            with self.subTest(winrt_type=winrt_name):
+                with memoryview(Array(alias, 1)) as m:
+                    self.assertEqual(struct.calcsize(struct_format), m.itemsize)

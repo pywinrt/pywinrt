@@ -99,13 +99,21 @@ the `PEP 3118 additions`_ and are used as the format for the buffer protocol for
 `arrays`_ of these types. These format strings can be read at runtime by using
 :attr:`memoryview.format`.
 
+The eleven types that have no Python type of their own are named in Python by
+the aliases in :mod:`winrt.system`, such as :class:`winrt.system.Int32`. Each
+alias is annotated with what its type is called in each of the three languages
+involved - :class:`winrt.system.BufferFormat`, :class:`winrt.system.StructFormat`
+and :class:`winrt.system.WinrtSignature` - so a program that needs one of them
+finds it with an :func:`isinstance` check over :func:`typing.get_args`.
+
 .. _defined in the struct module: https://docs.python.org/3/library/struct.html#format-characters
 .. _PEP 3118 additions: https://peps.python.org/pep-3118/#additions-to-the-struct-string-syntax
 
 .. [#s] Strings that are converted to ``Char16`` can only contain one character,
     similar to how :func:`ord` works.
 .. [#u] ``"u"`` is deprecated in the :mod:`array` module and is not
-    compatible with the :mod:`struct` module. Use ``"H"`` instead if needed.
+    compatible with the :mod:`struct` module. Use ``"H"`` instead if needed,
+    which is what :class:`winrt.system.StructFormat` carries for ``Char16``.
 .. [#g] Use ``"I2H8B"`` with the :mod:`struct` module since it does not support
     the PEP 3118 ``T{}`` syntax.
 

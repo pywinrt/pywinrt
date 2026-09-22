@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, UTC
 from uuid import UUID, uuid4
 
 import winrt.windows.foundation as wf
-from winrt.system import Array
+from winrt.system import Array, Char16
 
 
 class TestPropertyValue(unittest.TestCase):
@@ -235,7 +235,9 @@ class TestPropertyValue(unittest.TestCase):
             self.assertEqual(a[x], x + 1)
 
     def test_create_char16_array(self):
-        o = wf.PropertyValue.create_char16_array(Array("u", ["A", "B", "C", "D", "E"]))
+        o = wf.PropertyValue.create_char16_array(
+            Array(Char16, ["A", "B", "C", "D", "E"])
+        )
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.CHAR16_ARRAY)
         a = ipv.get_char16_array()

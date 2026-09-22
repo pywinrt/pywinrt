@@ -39,6 +39,52 @@
 
         .. versionadded:: 2.3
 
+    -----------
+    Annotations
+    -----------
+
+    The aliases this module gives the WinRT fundamental types that no Python
+    type names on its own - ``Int8``, ``UInt8``, ``Int16``, ``UInt16``,
+    ``Int32``, ``UInt32``, ``Int64``, ``UInt64``, ``Single``, ``Double`` and
+    ``Char16`` - are :data:`typing.Annotated` aliases of the Python type each
+    one is projected as. The annotations say what that WinRT type is called in
+    each of three languages, and each one is found by its own class::
+
+        from typing import get_args
+        from winrt.system import Int32, WinrtSignature
+
+        signature = next(
+            a for a in get_args(Int32)[1:] if isinstance(a, WinrtSignature)
+        )
+
+    .. class:: BufferFormat(str)
+
+        The `PEP 3118`_ buffer format of a WinRT fundamental type, such as
+        ``"i"`` for ``Int32``. This is what :attr:`memoryview.format` reports
+        for an :class:`Array` of that type.
+
+        .. versionadded:: 4.0
+
+    .. class:: StructFormat(str)
+
+        The :mod:`struct` module format of a WinRT fundamental type. It is the
+        same character as the buffer format for every type but ``Char16``,
+        where it is ``"H"``, because :mod:`struct` has no ``"u"`` format at
+        all.
+
+        .. versionadded:: 4.0
+
+    .. class:: WinrtSignature(str)
+
+        The WinRT type signature of a WinRT fundamental type, such as ``"i4"``
+        for ``Int32``. The signature of a parameterized type is composed from
+        the signatures of its type arguments, and its interface identifier is
+        hashed from that.
+
+        .. versionadded:: 4.0
+
+    .. _PEP 3118: https://peps.python.org/pep-3118/
+
     -----------------
     Fundamental types
     -----------------
