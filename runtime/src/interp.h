@@ -251,6 +251,12 @@ namespace py::interp
         projection* owner;
         uint32_t index;
         table::category category;
+        /// The type still takes type arguments, so its members have no ABI
+        /// until an instance fills them in. That is one of the two reasons a
+        /// member has no trampoline - the other is a projection generated
+        /// against a census without its call shape - and they want different
+        /// errors, so the flag is kept rather than the table consulted.
+        bool parameterized;
         /// The wrapper type, which for an interface is the one bound to the
         /// underscored name.
         PyTypeObject* py_type;

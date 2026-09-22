@@ -237,6 +237,23 @@ rootCommand.SetHandler(
             }
 
             census = Census.Load(file);
+
+            // The census is read rather than extended, so a component that
+            // makes a call it does not cover is told which shape that is here,
+            // rather than when the member is first used. Taking the census
+            // costs one metadata walk and is what makes the report complete.
+            var needed = new ShapeCensus().Take(
+                inputAssemblies.SelectMany(a => a.MainModule.Types).Where(t => t.IsWindowsRuntime)
+            );
+
+            if (census.ReportMissing(needed, Console.Error) > 0)
+            {
+                Console.Error.WriteLine(
+                    "warning: those members are still projected, but using one raises. Add a "
+                        + "member of each shape above to https://github.com/pywinrt/testwinrt "
+                        + "and the next winrt-runtime release will cover it."
+                );
+            }
         }
         else
         {
