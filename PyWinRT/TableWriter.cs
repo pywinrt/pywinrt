@@ -1660,6 +1660,7 @@ sealed class TableWriter
     {
         sink.Line($"format {FormatMajor}.{FormatMinor}");
         sink.Line($"generator {PyWinRT.VersionString}");
+        sink.Line($"census {census.Lineage} {census.Revision}");
         sink.Line($"namespace {ns.Namespace}");
 
         foreach (var type in sorted)

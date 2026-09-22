@@ -567,6 +567,34 @@ namespace py::interp
             return nullptr;
         }
 
+        if (file->census_lineage() != census_lineage())
+        {
+            PyErr_Format(
+                PyExc_ImportError,
+                "'%s' was generated against call shape census %s and this "
+                "winrt-runtime's trampolines came from census %s, so a shape id in "
+                "the table would reach a trampoline for another signature; generate "
+                "against the census that ships beside the PyWinRT tool",
+                module_name,
+                std::string{file->census_lineage()}.c_str(),
+                std::string{census_lineage()}.c_str());
+            return nullptr;
+        }
+
+        if (file->census_revision() > census_revision())
+        {
+            PyErr_Format(
+                PyExc_ImportError,
+                "'%s' was generated against revision %u of the call shape census and "
+                "this winrt-runtime was built from revision %u, so it has no "
+                "trampoline for the shapes the later revision added; upgrade "
+                "winrt-runtime to one built from that revision",
+                module_name,
+                file->census_revision(),
+                census_revision());
+            return nullptr;
+        }
+
         if (file->forward_shape_limit() > forward_shape_count()
             || file->reverse_shape_limit() > reverse_shape_count())
         {

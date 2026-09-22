@@ -156,6 +156,8 @@ namespace py::table
         namespace_ = read_u32(data_ + 28);
         forward_shape_limit_ = read_u32(data_ + 32);
         reverse_shape_limit_ = read_u32(data_ + 36);
+        census_lineage_ = read_u32(data_ + 40);
+        census_revision_ = read_u32(data_ + 44);
 
         auto const section_count = read_u32(data_ + 16);
         auto const directory = read_u32(data_ + 20);
@@ -260,6 +262,11 @@ namespace py::table
     std::string_view file::winrt_namespace() const
     {
         return string(namespace_);
+    }
+
+    std::string_view file::census_lineage() const
+    {
+        return string(census_lineage_);
     }
 
     void const* file::guid(uint32_t index) const
@@ -1401,6 +1408,19 @@ namespace py::cpp::_winrt
                     PyUnicode_FromStringAndSize(
                         table.winrt_namespace().data(),
                         static_cast<Py_ssize_t>(table.winrt_namespace().size()))))
+            {
+                return nullptr;
+            }
+
+            if (!set_item(
+                    result.get(),
+                    "census",
+                    Py_BuildValue(
+                        "(NI)",
+                        PyUnicode_FromStringAndSize(
+                            table.census_lineage().data(),
+                            static_cast<Py_ssize_t>(table.census_lineage().size())),
+                        table.census_revision())))
             {
                 return nullptr;
             }

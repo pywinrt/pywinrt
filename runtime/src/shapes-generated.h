@@ -13,6 +13,14 @@
 
 namespace py::shapes
 {
+    // Which census these trampolines were instantiated from. A table carries
+    // the same pair, and a runtime refuses one whose lineage is not this or
+    // whose revision is ahead of this, because a shape id only means what it
+    // was assigned to mean in the census that issued it.
+
+    inline constexpr char census_lineage[] = "2e30db26-66c8-4551-85b9-a537376d8f99";
+    inline constexpr uint32_t census_revision = 1;
+
     // The struct layouts that appear as by-value arguments. A calling
     // convention looks at the field types and the alignment and not only at
     // the size, so each one is spelled faithfully and the compiler decides

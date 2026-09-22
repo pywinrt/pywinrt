@@ -24,6 +24,7 @@ from winrt.table import TableTextError, build, parse
 TABLE = """\
 format 4.0
 generator 1.2.3
+census 6cba0b28-2f9e-4d2a-9f4e-0f0b6a2e4d11 7
 namespace Test.Sample
 
 enum Test.Sample.Grade python_type
@@ -151,6 +152,7 @@ class TestTextTable(unittest.TestCase):
         self.assertEqual(table["format"], (4, 0))
         self.assertEqual(table["namespace"], "Test.Sample")
         self.assertEqual(table["generator"], "1.2.3")
+        self.assertEqual(table["census"], ("6cba0b28-2f9e-4d2a-9f4e-0f0b6a2e4d11", 7))
 
     def test_the_types_keep_the_order_they_are_written_in(self) -> None:
         table = read()
@@ -394,6 +396,18 @@ class TestTextErrors(unittest.TestCase):
             parse(TABLE.replace("format 4.0", "format 4.9"))
 
         self.assertIn("says more than", str(caught.exception))
+
+    def test_a_table_that_does_not_say_which_census_it_used(self) -> None:
+        with self.assertRaises(TableTextError) as caught:
+            parse(TABLE.replace("census 6cba0b28-2f9e-4d2a-9f4e-0f0b6a2e4d11 7\n", ""))
+
+        self.assertIn("does not say what its census is", str(caught.exception))
+
+    def test_a_census_that_is_not_a_lineage_and_a_revision(self) -> None:
+        with self.assertRaises(TableTextError) as caught:
+            parse(TABLE.replace(" 7\nnamespace", "\nnamespace"))
+
+        self.assertIn("is not a census lineage and revision", str(caught.exception))
 
 
 if __name__ == "__main__":

@@ -59,6 +59,37 @@ sealed class Census
     public int Version { get; set; } = CurrentVersion;
 
     /// <summary>
+    /// Which census this is. It is generated once, when the file is created,
+    /// and is never changed afterwards.
+    /// </summary>
+    /// <remarks>
+    /// A table carries the lineage of the census its shape ids were assigned
+    /// by, and a runtime refuses a table whose lineage is not the one its own
+    /// trampolines were instantiated from. It is an identity rather than a
+    /// hash of the contents because the census grows every time another winmd
+    /// is projected while every id it has already issued keeps its meaning: a
+    /// package generated against this census as it stood has to go on loading
+    /// against a runtime built from it after it has grown.
+    /// </remarks>
+    [JsonPropertyName("lineage")]
+    public string Lineage { get; set; } = "";
+
+    /// <summary>
+    /// How many times ids have been appended to this census.
+    /// </summary>
+    /// <remarks>
+    /// This is what the lineage on its own misses. Someone who starts from
+    /// this census and lets a run of their own extend it keeps the lineage,
+    /// and every id appended past the highest one a given runtime knows would
+    /// mis-dispatch. A table records the revision it was generated against and
+    /// the runtime refuses anything ahead of its own, which costs none of the
+    /// forward compatibility above because a lower revision is still a prefix
+    /// of the higher one.
+    /// </remarks>
+    [JsonPropertyName("revision")]
+    public int Revision { get; set; }
+
+    /// <summary>
     /// The id of each forward shape. Append-only: an id is never reused and
     /// never renumbered.
     /// </summary>
@@ -99,7 +130,7 @@ sealed class Census
     {
         if (!file.Exists)
         {
-            return new Census();
+            return new Census { Lineage = Guid.NewGuid().ToString() };
         }
 
         using var stream = file.OpenRead();
@@ -112,6 +143,11 @@ sealed class Census
             throw new FormatException(
                 $"{file.FullName} is version {census.Version}, expected {CurrentVersion}"
             );
+        }
+
+        if (census.Lineage.Length == 0)
+        {
+            throw new FormatException($"{file.FullName} does not say which census it is");
         }
 
         return census;
@@ -170,8 +206,8 @@ sealed class Census
             .Concat(Enumerable.Range(0, maxArity + 1).Select(n => new string('p', n)))
             .Distinct(StringComparer.Ordinal);
 
-        AssignIds(ShapeIds, forward, k => (AbiShape.Parse(k).Args.Count, k));
-        AssignIds(
+        var assignedForward = AssignIds(ShapeIds, forward, k => (AbiShape.Parse(k).Args.Count, k));
+        var assignedReverse = AssignIds(
             ReverseIds,
             Packages.Values.SelectMany(p => p.Reverse),
             k =>
@@ -180,20 +216,36 @@ sealed class Census
                 return (slot, shapeKey);
             }
         );
+
+        // The revision counts appends and nothing else, so a run that finds
+        // every shape already numbered leaves the file byte-identical and
+        // every table that names this revision keeps naming it.
+        if (assignedForward || assignedReverse)
+        {
+            Revision++;
+        }
     }
 
-    private static void AssignIds<TKey>(
+    /// <summary>
+    /// Numbers the keys of <paramref name="keys"/> that <paramref name="ids"/>
+    /// does not have yet, and says whether there were any.
+    /// </summary>
+    private static bool AssignIds<TKey>(
         SortedDictionary<string, int> ids,
         IEnumerable<string> keys,
         Func<string, TKey> order
     )
     {
         var next = ids.Count == 0 ? 0 : ids.Values.Max() + 1;
+        var assigned = false;
 
         foreach (var key in keys.Where(k => !ids.ContainsKey(k)).OrderBy(order).ToList())
         {
             ids[key] = next++;
+            assigned = true;
         }
+
+        return assigned;
     }
 
     /// <summary>
@@ -359,6 +411,14 @@ sealed class Census
         w.WriteLine("namespace py::shapes");
         w.WriteLine("{");
         w.Indent++;
+        w.WriteLine("// Which census these trampolines were instantiated from. A table carries");
+        w.WriteLine("// the same pair, and a runtime refuses one whose lineage is not this or");
+        w.WriteLine("// whose revision is ahead of this, because a shape id only means what it");
+        w.WriteLine("// was assigned to mean in the census that issued it.");
+        w.WriteBlankLine();
+        w.WriteLine($"inline constexpr char census_lineage[] = \"{Lineage}\";");
+        w.WriteLine($"inline constexpr uint32_t census_revision = {Revision};");
+        w.WriteBlankLine();
         w.WriteLine("// The struct layouts that appear as by-value arguments. A calling");
         w.WriteLine("// convention looks at the field types and the alignment and not only at");
         w.WriteLine("// the size, so each one is spelled faithfully and the compiler decides");

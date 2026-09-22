@@ -474,6 +474,17 @@ namespace py::table
         std::string_view generator_version() const;
         std::string_view winrt_namespace() const;
 
+        /// Which census the shape ids in this table were assigned by, which a
+        /// runtime compares against the one its own trampolines came from.
+        std::string_view census_lineage() const;
+
+        /// How many times ids had been appended to that census when the table
+        /// was generated.
+        uint32_t census_revision() const noexcept
+        {
+            return census_revision_;
+        }
+
         /// One past the highest forward shape id the table uses, so that a
         /// runtime whose shapes-generated.h is older than the table can say so at
         /// import instead of indexing out of bounds on the first call.
@@ -563,6 +574,8 @@ namespace py::table
         uint32_t namespace_;
         uint32_t forward_shape_limit_;
         uint32_t reverse_shape_limit_;
+        uint32_t census_lineage_;
+        uint32_t census_revision_;
         section strings_;
         section guids_;
         section refs_;

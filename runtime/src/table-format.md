@@ -89,6 +89,31 @@ The header records one past the highest id the table uses, so that a runtime
 whose `shapes-generated.h` is older than the table can say so at import rather
 than index out of bounds on the first call.
 
+That bound catches a table that asks for more than the runtime has. It does not
+catch a table whose ids were assigned by a *different* census, which is what a
+generation run against an empty directory produces: the ids start at zero again
+in whatever order that run's metadata happened to be walked, the highest of them
+is below the runtime's own count, and every call goes through a trampoline for
+another signature. So the census carries an identity that the table records and
+the runtime checks.
+
+The identity is a **lineage**, a GUID generated once when a census file is
+created and never changed afterwards, and a **revision**, an integer that
+increments each time ids are appended. The rule the runtime applies is: the same
+lineage, and a revision no higher than its own.
+
+It is an identity and not a hash of the contents, because a census that grows is
+exactly what the append-only rule is for. A package generated against this
+census as it stands has to keep loading against a runtime built from it after
+another winmd has been projected into it, and a content hash would refuse that.
+The revision is what a lineage alone misses: someone who starts from this census
+and lets their own run append to it keeps the lineage, so only the revision says
+that the table names ids the runtime has no trampoline for.
+
+`shapes-generated.h` carries the same pair as `census_lineage` and
+`census_revision`, so a runtime is built with the identity of the census its
+trampolines came from.
+
 ## What a shape is
 
 Every WinRT method is `HRESULT __stdcall f(void* this, ...)` and every output is
@@ -143,6 +168,7 @@ word, so a flag is never mistaken for a name.
 ```
 format 4.0
 generator 3.2.1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
 namespace Windows.Foundation
 
 enum Windows.Foundation.AsyncStatus python_type
@@ -169,10 +195,11 @@ class Windows.Foundation.Uri python_type stringable
             out string return
 ```
 
-The three lines before the first type are the header: the format version the
-text is written to, the version of the generator that wrote it, and the WinRT
-namespace the table is for. A blank line, and a line whose first non-space
-character is `#`, say nothing.
+The four lines before the first type are the header: the format version the
+text is written to, the version of the generator that wrote it, the lineage and
+the revision of the shape census the members' shape ids were assigned by, and
+the WinRT namespace the table is for. A blank line, and a line whose first
+non-space character is `#`, say nothing.
 
 ### How a type is named
 
@@ -247,8 +274,8 @@ arm64 runtime.
 | 28 | `u32` | WinRT namespace, a string ref, e.g. `Windows.Foundation` |
 | 32 | `u32` | one past the highest forward shape id used |
 | 36 | `u32` | one past the highest reverse shape id used |
-| 40 | `u32` | reserved, zero |
-| 44 | `u32` | reserved, zero |
+| 40 | `u32` | census lineage, a string ref |
+| 44 | `u32` | census revision |
 
 ### Section directory
 
@@ -596,6 +623,8 @@ A reader checks, before it trusts anything:
 - that the recorded file size is the size of the buffer;
 - that every section lies inside the buffer, is eight byte aligned and, for the
   record sections, has a size that is a whole number of records;
+- that the census lineage is the one `shapes-generated.h` was written from and
+  that the census revision is not ahead of its own;
 - that both shape id limits are within the arrays in `shapes-generated.h`;
 - that the string blob begins with a NUL and ends with a NUL.
 
