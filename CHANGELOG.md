@@ -13,7 +13,8 @@
 - `winrt.system.Array` now accepts the type of its elements wherever it used to
   need a format string. The eleven `winrt.system` aliases - `Int8`, `UInt8`,
   `Int16`, `UInt16`, `Int32`, `UInt32`, `Int64`, `UInt64`, `Single`, `Double`
-  and `Char16` - name the scalars, and `bool` names `Boolean`.
+  and `Char16` - name the scalars, `bool` names `Boolean`, and a projected enum
+  type names an array of that enum, which had no spelling at all before.
 - The `winrt.system` aliases say what their annotation means. Each one carries
   a `winrt.system.BufferFormat`, a `winrt.system.StructFormat` and a
   `winrt.system.WinrtSignature`, so code that reads one finds it with an

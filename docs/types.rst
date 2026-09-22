@@ -129,8 +129,9 @@ treated as bit flags or not. Enum types without this attribute are projected as
 an :class:`enum.IntEnum` type or if the ``[Flags]`` attribute is present, the type is
 projected as an :class:`enum.IntFlag` type.
 
-For arrays and buffers containing enums, use the ``"i"`` format string for
-regular enums and ``"I"`` for flags.
+An array of enums is named with the enum type itself, as in
+``Array(SomeEnum, 3)``. A buffer passed where such an array is expected uses
+the ``"i"`` format string for a regular enum and ``"I"`` for a flags enum.
 
 
 -------

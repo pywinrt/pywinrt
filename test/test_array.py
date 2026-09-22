@@ -29,10 +29,12 @@ from winrt.windows.foundation import (
     IPropertyValue,
     IStringable,
     Point,
+    PropertyType,
     Rect,
     Size,
     Uri,
 )
+from winrt.windows.storage import FileAttributes
 
 #: Every winrt.system scalar alias with the three formats it is annotated
 #: with - buffer, struct and WinRT signature - and the WinRT type it names.
@@ -208,6 +210,36 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.strides, (2,))
             self.assertEqual(m.itemsize, 2)
             self.assertEqual(m.format, "u")
+            self.assertTrue(m.c_contiguous)
+
+    def test_enum(self):
+        a = Array(PropertyType, [PropertyType.INT32, PropertyType.STRING])
+
+        self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.PropertyType")
+        self.assertEqual(len(a), 2)
+        self.assertEqual(list(a), [PropertyType.INT32, PropertyType.STRING])
+
+        with memoryview(a) as m:
+            self.assertEqual(m.ndim, 1)
+            self.assertEqual(m.shape, (2,))
+            self.assertEqual(m.strides, (4,))
+            self.assertEqual(m.itemsize, 4)
+            self.assertEqual(m.format, "i")
+            self.assertTrue(m.c_contiguous)
+
+    def test_flags_enum(self):
+        a = Array(FileAttributes, [FileAttributes.DIRECTORY, FileAttributes.READ_ONLY])
+
+        self.assertEqual(a._winrt_element_type_name_, "Windows.Storage.FileAttributes")
+        self.assertEqual(len(a), 2)
+        self.assertEqual(list(a), [FileAttributes.DIRECTORY, FileAttributes.READ_ONLY])
+
+        with memoryview(a) as m:
+            self.assertEqual(m.ndim, 1)
+            self.assertEqual(m.shape, (2,))
+            self.assertEqual(m.strides, (4,))
+            self.assertEqual(m.itemsize, 4)
+            self.assertEqual(m.format, "I")
             self.assertTrue(m.c_contiguous)
 
     def test_string(self):
