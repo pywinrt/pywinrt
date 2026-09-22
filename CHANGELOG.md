@@ -42,19 +42,17 @@
   display - still dominates by orders of magnitude. Treat any single one of
   these figures as approximate: a benchmark row moves by up to 20 % between
   builds of code that cannot affect it.
-- Generating a projection of your own WinRT component now requires
-  `--emit-shapes <dir>`. The table names the ABI call shape of each member by
-  an id, and `<dir>` is where the census that assigns those ids
-  (`shapes.json`) and the trampolines `winrt-runtime` compiles from it
-  (`shapes-generated.h`) live. The census in this repository, under
-  `runtime/src`, is the one the published `winrt-runtime` is built from, so a
-  component whose members all have shapes it already lists works with the
-  published wheel. A component that needs a new shape makes the tool append
-  one, and its projection then needs a `winrt-runtime` built from that census;
-  importing it against an older one fails with a message that says so rather
-  than calling the wrong trampoline. What the tool writes for your component
-  is a table and the type stubs beside it, so projecting one needs no compiler
-  either.
+- Generating a projection of your own WinRT component needs nothing but the
+  tool. The table names the ABI call shape of each member by an id, the ids
+  are assigned by a census that `winrt-runtime` compiles its call trampolines
+  from, and the `PyWinRT` NuGet package now carries that census beside
+  `pywinrt.exe`. It is the one the `winrt-runtime` of the same release was
+  built from, so a component whose members all have shapes it already lists
+  works with the published wheel and no option has to be given. A different
+  census is named with `--shapes <file>`, for targeting a `winrt-runtime`
+  other than the one the tool shipped with. What the tool writes for your
+  component is a table and the type stubs beside it, so projecting one needs
+  no compiler either.
 - A table now records which census its shape ids were assigned by, as a
   lineage and a revision, and `winrt-runtime` refuses one whose census is not
   the one its own trampolines came from. Before this, a projection generated

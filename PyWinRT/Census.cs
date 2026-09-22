@@ -128,11 +128,6 @@ sealed class Census
 
     public static Census Load(FileInfo file)
     {
-        if (!file.Exists)
-        {
-            return new Census { Lineage = Guid.NewGuid().ToString() };
-        }
-
         using var stream = file.OpenRead();
         var census =
             JsonSerializer.Deserialize<Census>(stream, jsonOptions)
@@ -152,6 +147,20 @@ sealed class Census
 
         return census;
     }
+
+    /// <summary>
+    /// Loads the census in <paramref name="file"/>, or starts one when the
+    /// file is not there.
+    /// </summary>
+    /// <remarks>
+    /// Starting one is right for exactly one kind of run: one that also writes
+    /// the <c>shapes-generated.h</c> the ids are resolved through, which is
+    /// this repository's own. Every other run reads a census someone else
+    /// wrote and refuses to invent one, because ids assigned in a run's own
+    /// order mean something else to the runtime that resolves them.
+    /// </remarks>
+    public static Census LoadOrCreate(FileInfo file) =>
+        file.Exists ? Load(file) : new Census { Lineage = Guid.NewGuid().ToString() };
 
     public void Save(DirectoryInfo path, string fileName)
     {

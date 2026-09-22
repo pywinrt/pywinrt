@@ -1049,8 +1049,12 @@ sealed class TableWriter
         census.ShapeIds.TryGetValue(key, out var id)
             ? (uint)id
             : throw new InvalidOperationException(
-                $"the ABI shape ({key}) of {context} is missing from the shape census; "
-                    + "delete runtime/src/shapes.json and regenerate"
+                $"the ABI call shape ({key}) of {context} is not in the shape census, so no "
+                    + "published winrt-runtime can make that call. Add a member of this shape "
+                    + "to https://github.com/pywinrt/testwinrt and the next winrt-runtime "
+                    + "release will cover it. --emit-shapes appends it locally instead, but a "
+                    + "projection that uses it then loads only against a winrt-runtime built "
+                    + "from the same directory"
             );
 
     // ----- generic instances ----------------------------------------------
