@@ -60,7 +60,7 @@ class TestWinRTArray(unittest.TestCase):
             Array()  # type: ignore
 
     def test_bool(self):
-        a = Array("?", [False, True])
+        a = Array(bool, [False, True])
 
         self.assertEqual(a._winrt_element_type_name_, "Boolean")
         self.assertEqual(len(a), 2)
@@ -389,6 +389,12 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "P")
             self.assertTrue(m.c_contiguous)
 
+    def test_ambiguous_builtin_types(self):
+        for builtin in (int, float):
+            with self.subTest(type=builtin):
+                with self.assertRaises(TypeError):
+                    Array(builtin, 3)
+
     def test_sequence_protocol(self):
         a = Array(UInt8, list(range(10)))
 
@@ -410,7 +416,7 @@ class TestWinRTArray(unittest.TestCase):
 #: from the array it is passed, and hands the same values back as an output
 #: and as the return value.
 ARRAY_MEMBERS = [
-    ("array1", "?", [True, False, True]),
+    ("array1", bool, [True, False, True]),
     ("array2", UInt8, [1, 2, 3]),
     ("array3", UInt16, [1, 2, 3]),
     ("array4", UInt32, [1, 2, 3]),
@@ -544,7 +550,7 @@ class TestArrayParameters(unittest.TestCase):
             for index, value in enumerate(passed):
                 lent[index] = value
 
-            return Array("?", list(passed)), Array("?", list(passed))
+            return Array(bool, list(passed)), Array(bool, list(passed))
 
         self.tests.array1_call(handler)
 

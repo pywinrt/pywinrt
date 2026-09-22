@@ -294,6 +294,10 @@ namespace py::cpp::_winrt
                     return nullptr;
                 }
             }
+            else if (type == &PyBool_Type)
+            {
+                self->array = std::make_unique<py::ComArray<bool>>();
+            }
             else if (type == &PyUnicode_Type)
             {
                 self->array = std::make_unique<py::ComArray<winrt::hstring>>();
@@ -317,6 +321,22 @@ namespace py::cpp::_winrt
             {
                 self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::IInspectable>>();
+            }
+            else if (type == &PyLong_Type)
+            {
+                PyErr_SetString(
+                    PyExc_TypeError,
+                    "int does not say which WinRT integer type: name one with "
+                    "a winrt.system alias such as winrt.system.Int32");
+                return nullptr;
+            }
+            else if (type == &PyFloat_Type)
+            {
+                PyErr_SetString(
+                    PyExc_TypeError,
+                    "float does not say which WinRT floating point type: name "
+                    "one with winrt.system.Single or winrt.system.Double");
+                return nullptr;
             }
             else
             {
