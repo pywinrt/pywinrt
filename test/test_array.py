@@ -5,6 +5,7 @@ import sys
 import typing
 import unittest
 import uuid
+import warnings
 
 import test_winrt.testcomponent as tc
 from winrt.system import (
@@ -50,6 +51,24 @@ SCALAR_ALIASES = [
     (Single, "f", "f", "f4", "Single"),
     (Double, "d", "d", "f8", "Double"),
     (Char16, "u", "H", "c2", "Char16"),
+]
+
+#: Every format string Array takes, with the WinRT type it names. Passing one
+#: is deprecated, so this is the list of spellings that have to go on working
+#: until they are removed.
+FORMAT_STRINGS = [
+    ("?", "Boolean"),
+    ("b", "Int8"),
+    ("B", "UInt8"),
+    ("h", "Int16"),
+    ("H", "UInt16"),
+    ("i", "Int32"),
+    ("I", "UInt32"),
+    ("q", "Int64"),
+    ("Q", "UInt64"),
+    ("f", "Single"),
+    ("d", "Double"),
+    ("u", "Char16"),
 ]
 
 is_64bits = sys.maxsize > 2**32
@@ -652,3 +671,28 @@ class TestScalarAliases(unittest.TestCase):
             with self.subTest(winrt_type=winrt_name):
                 with memoryview(Array(alias, 1)) as m:
                     self.assertEqual(struct.calcsize(struct_format), m.itemsize)
+
+
+class TestDeprecatedFormatStrings(unittest.TestCase):
+    """
+    The format string an array can still be named with, and the warning that
+    says which spelling replaced it.
+    """
+
+    def test_each_format_string_warns(self):
+        for buffer_format, winrt_name in FORMAT_STRINGS:
+            with self.subTest(format=buffer_format):
+                with self.assertWarns(DeprecationWarning):
+                    a = Array(buffer_format, 3)
+
+                self.assertEqual(a._winrt_element_type_name_, winrt_name)
+
+    def test_naming_the_type_does_not_warn(self):
+        with warnings.catch_warnings():
+            warnings.simplefilter("error", DeprecationWarning)
+
+            for alias, _, _, _, winrt_name in SCALAR_ALIASES:
+                with self.subTest(winrt_type=winrt_name):
+                    Array(alias, 3)
+
+            Array(bool, 3)

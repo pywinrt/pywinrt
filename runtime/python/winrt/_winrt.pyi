@@ -1,4 +1,3 @@
-import array
 from datetime import datetime, timedelta
 import types
 from typing import (
@@ -12,6 +11,8 @@ from typing import (
 )
 from collections.abc import ItemsView, Iterable, Iterator, KeysView, ValuesView
 from uuid import UUID
+
+from typing_extensions import Buffer, deprecated
 
 from winrt.runtime import ApartmentType
 
@@ -158,36 +159,35 @@ class Array(MutableSequence[_T]):
     @overload
     def __init__(
         self,
-        type: type[_T] | str,
+        type: type[_T],
         size: int,
     ) -> None: ...
     @overload
     def __init__(
         self,
-        type: type[_T] | str,
-        initializer: memoryview,
-    ) -> None: ...
-    @overload
-    def __init__(self, type: str, initializer: array.array) -> None: ...
-    @overload
-    def __init__(
-        self,
-        type: type[_T] | str,
-        initializer: Array[_T],
+        type: type[_T],
+        initializer: Buffer,
     ) -> None: ...
     @overload
     def __init__(
         self,
-        type: type[_T] | str,
+        type: type[_T],
         initializer: list[_T],
         /,
     ) -> None: ...
     @overload
     def __init__(
         self,
-        type: type[_T] | str,
+        type: type[_T],
         initializer: tuple[_T],
         /,
+    ) -> None: ...
+    @overload
+    @deprecated("Passing a format string to Array is deprecated: pass the type instead")
+    def __init__(
+        self,
+        type: str,
+        initializer: int | Buffer | list[Any] | tuple[Any],
     ) -> None: ...
     def __buffer__(self, flags: int, /) -> memoryview: ...
     def __release_buffer__(self, view: memoryview, /) -> None: ...
