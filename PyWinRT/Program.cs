@@ -66,11 +66,23 @@ var nullabilityJsonPathOption = new Option<FileInfo?>(
     ArgumentHelpName = "path",
 };
 
+var shapesOption = new Option<FileInfo?>(
+    "--shapes",
+    "The ABI call shape census (shapes.json) that the tables name their members' call "
+        + "shapes out of. Defaults to the copy that ships beside this tool, which is the "
+        + "census the matching winrt-runtime was built from."
+)
+{
+    Arity = ArgumentArity.ZeroOrOne,
+    ArgumentHelpName = "path",
+};
+
 var emitShapesOption = new Option<DirectoryInfo?>(
     "--emit-shapes",
     "Directory holding the ABI call shape census (shapes.json) and the trampoline "
-        + "instantiations (shapes-generated.h) that this run merges into. With --verbose, "
-        + "the merged census is reported."
+        + "instantiations (shapes-generated.h) that this run merges into, which is how a "
+        + "census gains a shape. A projection generated this way needs a winrt-runtime "
+        + "built from the same directory. With --verbose, the merged census is reported."
 )
 {
     Arity = ArgumentArity.ZeroOrOne,
@@ -91,6 +103,7 @@ rootCommand.AddOption(outputOption);
 rootCommand.AddOption(includeOption);
 rootCommand.AddOption(excludeOption);
 rootCommand.AddOption(nullabilityJsonPathOption);
+rootCommand.AddOption(shapesOption);
 rootCommand.AddOption(emitShapesOption);
 rootCommand.AddOption(componentDllsOption);
 rootCommand.AddOption(verboseOption);
@@ -110,6 +123,7 @@ rootCommand.SetHandler(
         var nullabilityInfoPath = invocationContext.ParseResult.GetValueForOption(
             nullabilityJsonPathOption
         );
+        var shapes = invocationContext.ParseResult.GetValueForOption(shapesOption);
         var emitShapes = invocationContext.ParseResult.GetValueForOption(emitShapesOption);
         var componentDlls = invocationContext.ParseResult.GetValueForOption(componentDllsOption);
         var verbose = invocationContext.ParseResult.GetValueForOption(verboseOption);
@@ -189,31 +203,64 @@ rootCommand.SetHandler(
         var loadTime = stopwatch.Elapsed;
         stopwatch.Restart();
 
-        if (emitShapes is null)
+        if (shapes is not null && emitShapes is not null)
         {
             throw new Exception(
-                "--emit-shapes is required: the tables name the ABI call shapes of "
-                    + "their members by id, and the ids live in the census file"
+                "--shapes and --emit-shapes name different censuses: --shapes reads one, "
+                    + "and --emit-shapes reads and extends the one in its directory"
             );
         }
 
-        // The trampolines that call WinRT are compiled into winrt-runtime once
-        // for the whole tree, so the census reads every type of every input,
-        // including the interfaces that are exclusive to a runtime class and are
-        // therefore never projected as a Python type but are still what a call
-        // goes through. No run can see all of the metadata at once - WinUI 2 and
-        // the Windows App SDK both define Microsoft.UI.Xaml.Controls - so each
-        // one merges what it found into the census file, which also holds the
-        // shape ids and is why they are stable.
-        var fragment = new ShapeCensus().Take(
-            inputAssemblies.SelectMany(a => a.MainModule.Types).Where(t => t.IsWindowsRuntime)
-        );
+        Census census;
 
-        var census = Census.Load(new FileInfo(Path.Combine(emitShapes.FullName, "shapes.json")));
+        if (emitShapes is null)
+        {
+            // A table names a member's call shape by an id, and an id means
+            // what the census that issued it says it means. So a run that does
+            // not also build the trampolines reads a census someone else wrote
+            // and never assigns an id of its own: the default is the copy that
+            // ships beside this tool, which is the one the matching
+            // winrt-runtime was built from.
+            var file =
+                shapes ?? new FileInfo(Path.Combine(AppContext.BaseDirectory, "shapes.json"));
 
-        census.Merge(inputPackage, fragment);
-        census.Save(emitShapes, "shapes.json");
-        census.WriteShapesHeader(emitShapes, "shapes-generated.h");
+            if (!file.Exists)
+            {
+                throw new Exception(
+                    $"there is no ABI call shape census at {file.FullName}: the tables name "
+                        + "the call shapes of their members by id, and the ids are assigned by "
+                        + "the census that the winrt-runtime being generated against was built "
+                        + "from. It ships beside the tool in the PyWinRT NuGet package, and in "
+                        + "the PyWinRT source tree at runtime/src/shapes.json; name one with "
+                        + "--shapes, or build a winrt-runtime of your own with --emit-shapes"
+                );
+            }
+
+            census = Census.Load(file);
+        }
+        else
+        {
+            // The trampolines that call WinRT are compiled into winrt-runtime
+            // once for the whole tree, so the census reads every type of every
+            // input, including the interfaces that are exclusive to a runtime
+            // class and are therefore never projected as a Python type but are
+            // still what a call goes through. No run can see all of the
+            // metadata at once - WinUI 2 and the Windows App SDK both define
+            // Microsoft.UI.Xaml.Controls - so each one merges what it found
+            // into the census file, which also holds the shape ids and is why
+            // they are stable.
+            var fragment = new ShapeCensus().Take(
+                inputAssemblies.SelectMany(a => a.MainModule.Types).Where(t => t.IsWindowsRuntime)
+            );
+
+            census = Census.LoadOrCreate(
+                new FileInfo(Path.Combine(emitShapes.FullName, "shapes.json"))
+            );
+
+            census.Merge(inputPackage, fragment);
+            census.Save(emitShapes, "shapes.json");
+            census.WriteShapesHeader(emitShapes, "shapes-generated.h");
+        }
 
         if (verbose)
         {
