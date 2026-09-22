@@ -587,6 +587,19 @@ namespace py::interp
         {
             switch (info.category)
             {
+            case table::category::enum_:
+            {
+                // A flags enum is read unsigned and every other one signed,
+                // which is the same split that makes one class enum.IntFlag
+                // and the other enum.IntEnum.
+                auto const record = info.owner->table->type(info.index);
+                auto const is_flags
+                    = (record.flags() & table::type_flags::flags_enum) != 0;
+
+                element.code
+                    = is_flags ? table::type_code::enum_u32 : table::type_code::enum32;
+                break;
+            }
             case table::category::struct_:
                 element.code = table::type_code::struct_;
                 break;

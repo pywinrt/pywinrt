@@ -399,8 +399,8 @@ namespace py::interp
             return cache;
         }
 
-        // An enum, or one of the winrt.system names: a real Python type that
-        // this runtime did not build, so all that is kept is the type itself.
+        // One of the winrt.system names: a real Python type that this runtime
+        // did not build, so all that is kept is the type itself.
         entry.owner = &owner;
         entry.index = type;
         entry.py_type = py_type;
