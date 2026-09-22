@@ -85,6 +85,66 @@ namespace py::cpp::_winrt
         return true;
     }
 
+    /**
+     * The PEP 3118 buffer format among @p annotations, which are the
+     * __metadata__ of an Annotated alias, or a null handle when there is none.
+     *
+     * Each annotation of a winrt.system scalar says which kind of format it is
+     * in _annotation_kind_, and reading that rather than taking the first
+     * string is what tells the buffer format from the struct format: Char16 is
+     * "u" as one and "H" as the other, and both are formats of their own that
+     * name different types.
+     *
+     * @returns @c false with a Python error set.
+     */
+    static bool find_buffer_format(PyObject* annotations, pyobj_handle& format) noexcept
+    {
+        if (!PyTuple_Check(annotations))
+        {
+            return true;
+        }
+
+        for (Py_ssize_t i = 0; i < PyTuple_GET_SIZE(annotations); i++)
+        {
+            auto const annotation = PyTuple_GET_ITEM(annotations, i);
+
+            pyobj_handle kind;
+
+            if (PyObject_GetOptionalAttrString(
+                    annotation, "_annotation_kind_", kind.put())
+                < 0)
+            {
+                return false;
+            }
+
+            if (!kind)
+            {
+                continue;
+            }
+
+            if (!PyUnicode_Check(kind.get()))
+            {
+                continue;
+            }
+
+            if (PyUnicode_CompareWithASCIIString(kind.get(), "buffer_format") != 0)
+            {
+                continue;
+            }
+
+            if (!PyUnicode_Check(annotation))
+            {
+                continue;
+            }
+
+            format = pyobj_handle{Py_NewRef(annotation)};
+
+            return true;
+        }
+
+        return true;
+    }
+
     static PyObject* Array_tp_new(
         PyTypeObject* subtype, PyObject* args, PyObject* kwds) noexcept
     {
@@ -112,6 +172,31 @@ namespace py::cpp::_winrt
         }
 
         std::unique_ptr<py::Array> array;
+
+        // A winrt.system scalar alias - Annotated[int, BufferFormat("i"), ...]
+        // - names the same element type as the buffer format it carries, so
+        // that format stands in for it here.
+        pyobj_handle annotations;
+
+        if (PyObject_GetOptionalAttrString(arg0, "__metadata__", annotations.put()) < 0)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle buffer_format;
+
+        if (annotations)
+        {
+            if (!find_buffer_format(annotations.get(), buffer_format))
+            {
+                return nullptr;
+            }
+        }
+
+        if (buffer_format)
+        {
+            arg0 = buffer_format.get();
+        }
 
         if (PyUnicode_Check(arg0))
         {

@@ -10,6 +10,16 @@
   table a projection package carries as text into the binary form that
   `winrt-runtime` reads. It is a build-time dependency of every projection
   package and there is nothing in it to import.
+- `winrt.system.Array` now accepts the type of its elements wherever it used to
+  need a format string. The eleven `winrt.system` aliases - `Int8`, `UInt8`,
+  `Int16`, `UInt16`, `Int32`, `UInt32`, `Int64`, `UInt64`, `Single`, `Double`
+  and `Char16` - name the scalars.
+- The `winrt.system` aliases say what their annotation means. Each one carries
+  a `winrt.system.BufferFormat`, a `winrt.system.StructFormat` and a
+  `winrt.system.WinrtSignature`, so code that reads one finds it with an
+  `isinstance` check over `typing.get_args` rather than by its position. They
+  are subclasses of `str`, and the buffer format comes first, so the single
+  string the aliases used to carry reads back the same as it did.
 
 ### Changed
 - A projection package no longer contains a compiled extension module. Each
