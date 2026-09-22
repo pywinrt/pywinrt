@@ -430,4 +430,8 @@ namespace py::interp
     uint32_t forward_shape_count() noexcept;
 
     uint32_t reverse_shape_count() noexcept;
+
+    std::string_view census_lineage() noexcept;
+
+    uint32_t census_revision() noexcept;
 } // namespace py::interp

@@ -67,6 +67,18 @@ namespace py::interp
     {
         return static_cast<uint32_t>(std::size(shapes::reverse_shapes));
     }
+
+    /// Which census these trampolines were instantiated from.
+    std::string_view census_lineage() noexcept
+    {
+        return shapes::census_lineage;
+    }
+
+    /// How many times ids had been appended to that census.
+    uint32_t census_revision() noexcept
+    {
+        return shapes::census_revision;
+    }
 } // namespace py::interp
 
 namespace py::shapes

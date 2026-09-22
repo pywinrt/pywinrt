@@ -39,6 +39,11 @@ TABLE_TEXT_NAME = f"{TABLE_NAME}.txt"
 #: A reference to nothing: no type, no shape.
 NO_REF = 0xFFFFFFFF
 
+#: The lines before the first type record, each of which is the keyword and
+#: what it says. The census is the identity of the shape census the member
+#: shape ids were assigned by, as a lineage and a revision.
+HEADER_KEYWORDS = ("format", "generator", "census", "namespace")
+
 HEADER_SIZE = 48
 SECTION_ENTRY_SIZE = 12
 TYPE_RECORD_WORDS = 24
@@ -259,6 +264,8 @@ class Table:
     major: int
     minor: int
     generator: str
+    lineage: str
+    revision: int
     namespace: str
     types: list[Type] = field(default_factory=list)
 
@@ -327,7 +334,7 @@ class _Parser:
         keyword, _, rest = text.strip().partition(" ")
 
         if level == 0:
-            if self._table is None and keyword in ("format", "generator", "namespace"):
+            if self._table is None and keyword in HEADER_KEYWORDS:
                 self._header[keyword] = rest
                 return
 
@@ -350,7 +357,7 @@ class _Parser:
         return self._table
 
     def _start_table(self) -> None:
-        for name in ("format", "generator", "namespace"):
+        for name in HEADER_KEYWORDS:
             if name not in self._header:
                 self._fail(f"the table does not say what its {name} is")
 
@@ -373,10 +380,17 @@ class _Parser:
                 f"format {FORMAT_MAJOR}.{FORMAT_MINOR} can write"
             )
 
+        census = self._header["census"].split(" ")
+
+        if len(census) != 2 or not census[1].isdigit():
+            self._fail(f"'{self._header['census']}' is not a census lineage and revision")
+
         self._table = Table(
             major=major,
             minor=minor,
             generator=self._header["generator"],
+            lineage=census[0],
+            revision=int(census[1]),
             namespace=self._header["namespace"],
         )
 
@@ -662,6 +676,7 @@ def build(table: Table) -> bytes:
     # Every string, GUID and list is pooled before anything is laid out, so that
     # the sections have their final size when the offsets are computed.
     strings.add(table.generator)
+    strings.add(table.lineage)
     strings.add(table.namespace)
 
     for type_ in types:
@@ -745,13 +760,15 @@ def build(table: Table) -> bytes:
         directory_offset,
     )
     struct.pack_into(
-        "<IIII",
+        "<IIIIII",
         data,
         24,
         strings.add(table.generator),
         strings.add(table.namespace),
         max((m.shape + 1 for m in members if m.shape != NO_REF), default=0),
         max((m.reverse + 1 for m in members if m.reverse != NO_REF), default=0),
+        strings.add(table.lineage),
+        table.revision,
     )
 
     for position, (tag, size) in enumerate(sections):
