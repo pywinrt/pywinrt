@@ -39,6 +39,28 @@
     <None Include="nuget\README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 
+  <!--
+    The ABI call shape census ships beside the tool, because the tool is what
+    reads it: a table names each member's call shape by an id, and an id means
+    what the census that issued it says it means. Nothing reads it at run time -
+    winrt-runtime has it compiled in as shapes-generated.h - so this is the only
+    place it is packaged. Taking it straight from the runtime sources is what
+    pairs the two: the tool and the runtime are built from this tree at the same
+    version, so the packed copy is by construction the one the matching
+    runtime's trampolines came from. A tool package ships what publishing the
+    project produces, so copying it to the output directory is what puts it in
+    the package; Pack="false" keeps it out of the content folders, which a tool
+    package has no reader for.
+  -->
+  <ItemGroup>
+    <Content
+      Include="..\runtime\src\shapes.json"
+      Link="shapes.json"
+      CopyToOutputDirectory="PreserveNewest"
+      Pack="false"
+    />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Mono.Cecil" Version="0.11.5" />
     <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
