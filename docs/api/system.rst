@@ -139,9 +139,10 @@
         This type implements the Python sequence protocol.
 
         :param type:
-            The type to use for elements of the array. This can be a WinRT
-            type or a format string for fundamental types.
-        :type type: str or type
+            The type to use for elements of the array. This is a projected
+            WinRT type, a Python type that a WinRT type is projected as, or
+            one of the :mod:`winrt.system` aliases for a fundamental type.
+        :type type: type
         :param initializer:
             An optional iterator of values to use to initialize the array.
             If an integer value is given, an empty array of that size will
@@ -151,13 +152,19 @@
         :type initializer: int or iter or buffer
 
 
+        .. deprecated:: 4.0
+            Passing a format string, such as ``"I"``, in place of the type.
+            Every format string has a type that names the same thing: a
+            :mod:`winrt.system` alias for the eleven scalars, :class:`bool`
+            for ``"?"`` and the enum type itself for ``"i"`` and ``"I"``.
+
         Creation examples::
 
-            from winrt.system import Array
+            from winrt.system import Array, UInt32
             from winrt.windows.foundation import Point
 
             # array of 10 32-bit unsigned integers.
-            a1 = Array("I", 10)
+            a1 = Array(UInt32, 10)
             # array of 3 points with initial values
             a2 = Array(Point, [Point(1, 1), Point(2, 2), Point(3, 3)])
 
