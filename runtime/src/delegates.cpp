@@ -199,6 +199,14 @@ namespace py::interp
         auto const shape = get_reverse_shape(record.group(0).member(0).reverse_shape());
         if (!shape)
         {
+            // Said here rather than left to get_reverse_shape, which cannot
+            // tell a table that asks for a trampoline past the end from one
+            // that was generated without any.
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "a Python callable cannot be used as '%s' because its Invoke has a "
+                "signature this winrt-runtime has no callback for",
+                entry.winrt_name);
             return false;
         }
 

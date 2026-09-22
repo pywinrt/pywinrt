@@ -141,6 +141,7 @@ namespace py::interp
         entry.owner = &proj;
         entry.index = record.index();
         entry.category = record.get_category();
+        entry.parameterized = (record.flags() & table::type_flags::parameterized) != 0;
         entry.guid = record.guid();
         entry.winrt_name = keep(proj, qualified(record));
         entry.tp_name = record.py_name();
