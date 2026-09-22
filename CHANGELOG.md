@@ -55,6 +55,11 @@
   than calling the wrong trampoline. What the tool writes for your component
   is a table and the type stubs beside it, so projecting one needs no compiler
   either.
+- A table now records which census its shape ids were assigned by, as a
+  lineage and a revision, and `winrt-runtime` refuses one whose census is not
+  the one its own trampolines came from. Before this, a projection generated
+  against a census that was not the runtime's would import and then call the
+  wrong trampoline, with the arguments laid out for another signature.
 - The type stubs now use modern annotation syntax. Optional and union types are
   spelled `X | None` and `X | Y` instead of `typing.Optional[X]` and
   `typing.Union[X, Y]`, `typing.Tuple` and `typing.Type` are now the builtin

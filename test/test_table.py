@@ -23,6 +23,8 @@ import importlib
 import pathlib
 import struct
 import sys
+import tempfile
+import types
 import unittest
 import uuid
 from typing import Any
@@ -167,6 +169,32 @@ def read(*parts: str) -> dict[str, Any]:
     return winrt._winrt.read_table(find_table(*parts))
 
 
+def refuse(case: unittest.TestCase, data: bytes) -> str:
+    """
+    Puts ``data`` through the import path and returns why it was refused.
+
+    The checks that compare a table against what this winrt-runtime was
+    built with are made where a namespace is loaded into its module rather
+    than where the bytes are read, so a table that is well formed but not
+    this runtime's has to go through ``load_projection`` to be seen.
+
+    The directory is left to the operating system to clean up: a table is
+    mapped once and never unmapped, because the names and descriptors built
+    from it point into it, and Windows does not delete a file that a view is
+    still mapped over.
+    """
+    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as directory:
+        path = pathlib.Path(directory) / "_table.pywinrt"
+        path.write_bytes(data)
+
+        with case.assertRaises(ImportError) as caught:
+            winrt._winrt.load_projection(
+                types.ModuleType(f"_not_a_projection_{path.parent.name}"), str(path)
+            )
+
+        return str(caught.exception)
+
+
 def defined(table: dict[str, Any]) -> dict[str, dict[str, Any]]:
     """The types the namespace defines, by WinRT name."""
     return {
@@ -219,6 +247,16 @@ class TestTableFormat(unittest.TestCase):
         self.assertGreater(table["forward_shape_limit"], 0)
         self.assertGreater(table["reverse_shape_limit"], 0)
 
+        # the census the shape ids were assigned by: one lineage for the
+        # whole tree, since one winrt-runtime resolves every table in it
+        lineage, revision = table["census"]
+
+        self.assertEqual(uuid.UUID(lineage).version, 4)
+        self.assertGreater(revision, 0)
+        self.assertEqual(
+            read("winrt", "windows", "foundation")["census"], (lineage, revision)
+        )
+
     def test_rejects_what_is_not_a_table(self) -> None:
         for name, data in (
             ("empty", b""),
@@ -242,6 +280,36 @@ class TestTableFormat(unittest.TestCase):
 
         with self.assertRaises(ImportError):
             winrt._winrt.read_table(bytes(data))
+
+    def test_rejects_another_census(self) -> None:
+        """
+        A table whose shape ids were assigned by a census that is not this
+        runtime's, which is what generating against an empty directory
+        produces. The ids start at zero again in that run's own order, so
+        each of them names a trampoline for some other signature, and none
+        of them is out of range.
+        """
+        data = find_table("test_winrt", "testcomponent")
+        lineage = winrt._winrt.read_table(data)["census"][0]
+        other = str(uuid.UUID(int=uuid.UUID(lineage).int ^ 1))
+
+        message = refuse(self, data.replace(lineage.encode(), other.encode()))
+
+        self.assertIn(other, message)
+        self.assertIn(lineage, message)
+
+    def test_rejects_a_later_revision_of_this_census(self) -> None:
+        """
+        A table from the same census after someone else appended to it,
+        which the lineage alone does not catch and the shape id bound does
+        not either, because their census is still smaller than this one.
+        """
+        data = bytearray(find_table("test_winrt", "testcomponent"))
+        # the census revision, which a runtime has no trampoline for beyond
+        # the one its own shapes-generated.h was written from
+        struct.pack_into("<I", data, 44, 99)
+
+        self.assertIn("revision 99", refuse(self, bytes(data)))
 
 
 class TestTableContents(unittest.TestCase):
