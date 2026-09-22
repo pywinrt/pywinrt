@@ -8,8 +8,26 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: build and publish
+      - name: build
         run: |
           $version = $env:GITHUB_REF.Replace("refs/tags/v", "")
           dotnet pack PyWinRT -o . /p:Version="$version"
+      - name: check the packed shape census
+        # The tool reads the ABI call shape census that sits beside it, so a
+        # package without it generates nothing, and one whose census is not the
+        # one the matching winrt-runtime was built from generates tables that
+        # runtime refuses. Neither is something to find out after the push.
+        run: |
+          $version = $env:GITHUB_REF.Replace("refs/tags/v", "")
+          Expand-Archive "PyWinRT.$version.nupkg" -DestinationPath nupkg
+          $packed = Get-ChildItem "nupkg/tools/*/any/shapes.json"
+          if (-not $packed) {
+            throw "the package has no shape census beside the tool"
+          }
+          if ((Get-FileHash $packed).Hash -ne (Get-FileHash "runtime/src/shapes.json").Hash) {
+            throw "the packed shape census is not runtime/src/shapes.json"
+          }
+      - name: publish
+        run: |
+          $version = $env:GITHUB_REF.Replace("refs/tags/v", "")
           nuget push "PyWinRT.$version.nupkg" -ApiKey "${{ secrets.NUGET_API_KEY }}" -Source 'https://api.nuget.org/v3/index.json'
