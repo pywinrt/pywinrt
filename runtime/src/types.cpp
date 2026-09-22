@@ -268,6 +268,7 @@ namespace py::interp
         entry.owner = &proj;
         entry.index = index;
         entry.category = record.get_category();
+        entry.parameterized = (record.flags() & table::type_flags::parameterized) != 0;
 
         try
         {
@@ -357,6 +358,7 @@ namespace py::interp
         entry.owner = &proj;
         entry.index = index;
         entry.category = record.get_category();
+        entry.parameterized = (record.flags() & table::type_flags::parameterized) != 0;
         entry.guid = record.guid();
 
         try

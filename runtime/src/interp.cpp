@@ -405,6 +405,7 @@ namespace py::interp
         entry.index = type;
         entry.py_type = py_type;
         entry.category = record.get_category();
+        entry.parameterized = (record.flags() & table::type_flags::parameterized) != 0;
         entry.winrt_name = record.name().data();
 
         cache = &entry;
@@ -1447,10 +1448,23 @@ namespace py::interp
 
         if (!shape)
         {
+            if (member.declaring->parameterized)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' is a member of '%s', which has no type arguments, so there "
+                    "is nothing to call it on",
+                    overload.winrt_name,
+                    member.type_name);
+                return nullptr;
+            }
+
+            // The projection was generated against a shape census that has no
+            // trampoline for this call, which only a third-party projection
+            // can be: the census is taken over everything this tree projects.
             PyErr_Format(
-                PyExc_TypeError,
-                "'%s' is a member of '%s', which has no type arguments, so there "
-                "is nothing to call it on",
+                PyExc_NotImplementedError,
+                "'%s' of '%s' has a signature this winrt-runtime has no trampoline for",
                 overload.winrt_name,
                 member.type_name);
             return nullptr;

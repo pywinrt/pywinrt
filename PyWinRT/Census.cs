@@ -258,6 +258,44 @@ sealed class Census
     }
 
     /// <summary>
+    /// Writes a warning for every shape <paramref name="fragment"/> needs that
+    /// this census does not have, and answers how many there were.
+    /// </summary>
+    /// <remarks>
+    /// This is what a run that only reads a census does instead of extending
+    /// it. The members involved are still projected, so what the author loses
+    /// is those calls rather than the whole namespace, and what they need in
+    /// order to get them back is the list of shapes below.
+    /// </remarks>
+    public int ReportMissing(CensusFragment fragment, TextWriter w)
+    {
+        var forward = fragment.Forward.Where(kv => !ShapeIds.ContainsKey(kv.Key)).ToList();
+        var reverse = fragment.Reverse.Where(k => !ReverseIds.ContainsKey(k)).ToList();
+
+        foreach (var (key, count) in forward)
+        {
+            w.WriteLine(
+                $"warning: the ABI call shape ({(key.Length == 0 ? "" : key)}) is not in the "
+                    + $"shape census, so the {count} member(s) that make that call cannot be "
+                    + "called"
+            );
+        }
+
+        foreach (var key in reverse)
+        {
+            var (slot, shapeKey) = FromReverseKey(key);
+
+            w.WriteLine(
+                $"warning: the shape census has no callback for slot {slot} with the ABI call "
+                    + $"shape ({(shapeKey.Length == 0 ? "" : shapeKey)}), so a member in that "
+                    + "slot cannot be implemented in Python"
+            );
+        }
+
+        return forward.Count + reverse.Count;
+    }
+
+    /// <summary>
     /// Gets the forward shapes in id order.
     /// </summary>
     public IReadOnlyList<(int Id, AbiShape Shape)> GetShapes() =>

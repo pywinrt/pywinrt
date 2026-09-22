@@ -896,7 +896,7 @@ sealed class TableWriter
                 }
             );
             member.OutCount = 1;
-            member.ForwardShape = GetShapeId("p", method.Method);
+            member.ForwardShape = GetShapeId("p");
 
             return member;
         }
@@ -1032,7 +1032,7 @@ sealed class TableWriter
             return;
         }
 
-        member.ForwardShape = GetShapeId(shape.Key, method);
+        member.ForwardShape = GetShapeId(shape.Key);
 
         if (
             census.ReverseIds.TryGetValue(
@@ -1045,17 +1045,19 @@ sealed class TableWriter
         }
     }
 
-    private uint GetShapeId(string key, MethodDefinition context) =>
-        census.ShapeIds.TryGetValue(key, out var id)
-            ? (uint)id
-            : throw new InvalidOperationException(
-                $"the ABI call shape ({key}) of {context} is not in the shape census, so no "
-                    + "published winrt-runtime can make that call. Add a member of this shape "
-                    + "to https://github.com/pywinrt/testwinrt and the next winrt-runtime "
-                    + "release will cover it. --emit-shapes appends it locally instead, but a "
-                    + "projection that uses it then loads only against a winrt-runtime built "
-                    + "from the same directory"
-            );
+    /// <summary>
+    /// The id of the forward shape <paramref name="key"/>, or
+    /// <see cref="NoRef"/> when the census does not have it.
+    /// </summary>
+    /// <remarks>
+    /// A member the census cannot name is written without a shape rather than
+    /// refused, so that the rest of the namespace is still projected and only
+    /// the calls that have no trampoline are lost. The run reports every
+    /// missing shape once, by shape rather than by member, because a shape is
+    /// what a report upstream has to name.
+    /// </remarks>
+    private uint GetShapeId(string key) =>
+        census.ShapeIds.TryGetValue(key, out var id) ? (uint)id : NoRef;
 
     // ----- generic instances ----------------------------------------------
 

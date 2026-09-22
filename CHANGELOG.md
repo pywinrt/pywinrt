@@ -53,6 +53,15 @@
   other than the one the tool shipped with. What the tool writes for your
   component is a table and the type stubs beside it, so projecting one needs
   no compiler either.
+- A component that makes a call no shape in the census covers is now reported
+  while it is generated, naming each shape the census is missing. Those
+  members are still projected and the rest of the namespace is unaffected;
+  using one raises rather than dispatching to the wrong trampoline. The way to
+  get such a shape covered is to add a member of that shape to
+  https://github.com/pywinrt/testwinrt, which puts it in the next
+  `winrt-runtime` release. `--emit-shapes <dir>` still appends one locally,
+  but a projection generated that way loads only against a `winrt-runtime`
+  built from `<dir>`, so it is not a route to a publishable package.
 - A table now records which census its shape ids were assigned by, as a
   lineage and a revision, and `winrt-runtime` refuses one whose census is not
   the one its own trampolines came from. Before this, a projection generated

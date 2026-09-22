@@ -408,12 +408,24 @@ Python input arguments, which is what selects between them at the call.
 | 1 | WinRT method name, a string ref, e.g. `get_Length`, for the error path |
 | 2 | declaring interface, a type ref: the interface to query the object for |
 | 3 | vtable slot |
-| 4 | forward shape id |
+| 4 | forward shape id, or `0xFFFFFFFF` when the member has none |
 | 5 | first parameter, an index into `PARM` |
 | 6 | parameter count, including the return value |
 | 7 | number of Python input arguments |
 | 8 | number of Python output values |
 | 9 | reverse shape id, or `0xFFFFFFFF` when nothing implements the member |
+
+A member with no forward shape cannot be called, and one with no reverse
+shape cannot be answered from Python. Two different things leave a member
+that way. A member of a **parameterized definition** has no ABI until its
+type arguments are known - `IVector<T>.Append` passes a `T` - so the
+definition's record carries none and the record of each concrete instance
+carries its own. Otherwise the table was generated against a **census that
+does not have the shape**, which only a third-party projection can be,
+since the census is taken over everything this tree projects. The generator
+warns in that case rather than refusing, so the rest of the namespace is
+still projected; a reader tells the two apart by the `parameterized` flag on
+the declaring type, and raises either way when the member is used.
 
 Member flags:
 

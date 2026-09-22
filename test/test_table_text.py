@@ -185,6 +185,23 @@ class TestTextTable(unittest.TestCase):
             [index["Windows.Foundation.IClosable"]],
         )
 
+    def test_a_member_the_census_could_not_name_has_no_shape(self) -> None:
+        """
+        A member may carry no shape at all, which is what the generator
+        writes for a call it found no trampoline for and for a member of a
+        parameterized definition, whose ABI is not known until an instance
+        fills the type arguments in. Either way the member is still
+        described; only the call is missing.
+        """
+        table = read(TABLE.replace(" shape=1 role=size", " role=size"))
+        groups = {g["py_name"]: g for g in types(table)["Test.Sample.IThing"]["groups"]}
+
+        size = groups["size"]["members"][0]
+
+        self.assertEqual(size["forward_shape"], NO_REF)
+        self.assertEqual(size["winrt_name"], "get_Size")
+        self.assertEqual(size["slot"], 6)
+
     def test_a_type_that_names_nothing_has_no_reference(self) -> None:
         extent = types(read())["Test.Sample.Extent"]
 
