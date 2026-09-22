@@ -172,6 +172,13 @@
   against the codes in `winrt.system.hresult` directly.
 
 ### Deprecated
+- Passing a format string to `winrt.system.Array` is deprecated and raises a
+  `DeprecationWarning`. Pass the type of the elements instead: `bool` for
+  `"?"`, `winrt.system.Int8` for `"b"`, `UInt8` for `"B"`, `Int16` for `"h"`,
+  `UInt16` for `"H"`, `Int32` for `"i"`, `UInt32` for `"I"`, `Int64` for `"q"`,
+  `UInt64` for `"Q"`, `Single` for `"f"`, `Double` for `"d"` and `Char16` for
+  `"u"`. An array of enums was spelled `"i"` or `"I"` and is now spelled with
+  the enum type. Format strings will be removed in a future release.
 - `HResult.value` and `EventRegistrationToken.value` are deprecated. The value
   of each is now the object itself, so reading the field still works and
   raises a `DeprecationWarning`. It will be removed in a future release.

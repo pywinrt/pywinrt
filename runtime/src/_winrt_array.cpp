@@ -200,6 +200,24 @@ namespace py::cpp::_winrt
 
         if (PyUnicode_Check(arg0))
         {
+            // Every format string has a type that names the same thing, and
+            // two spellings of one thing is where a format being a buffer
+            // format and a struct format at once came from. A format unwrapped
+            // from an alias just above is not the spelling being deprecated.
+            if (!buffer_format)
+            {
+                if (PyErr_WarnEx(
+                        PyExc_DeprecationWarning,
+                        "passing a format string to Array is deprecated: pass "
+                        "the type instead, such as winrt.system.Int32, bool, "
+                        "str or a projected enum",
+                        1)
+                    < 0)
+                {
+                    return nullptr;
+                }
+            }
+
             if (PyUnicode_CompareWithASCIIString(arg0, "?") == 0)
             {
                 self->array = std::make_unique<py::ComArray<bool>>();
