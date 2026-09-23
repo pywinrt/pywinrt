@@ -158,6 +158,18 @@ archs = ["x86", "AMD64", "ARM64"]{extra_cibuildwheel_windows}
 # the compiled half has to hand.
 RUNTIME_TEST_COMMAND = '\ntest-command = "python -c \\"import winrt._winrt\\""'
 
+# cibuildwheel's Windows default is to run delvewheel, which copies the DLLs an
+# extension links against into the wheel. Only the Windows App Runtime
+# bootstrapper is redistributed that way, and the package that loads it says so
+# for itself, so every other package wants no repair step at all. delvewheel
+# cannot run over them anyway: it resolves each imported name to a file on disk,
+# and winrt-Windows.System.Interop reaches
+# ext-ms-win-rtcore-ntuser-integration-l1-1-0.dll through CoreMessaging.dll,
+# which is an API set that the loader resolves without one.
+NO_WHEEL_REPAIR = """
+# this package redistributes no DLL of its own, so there is nothing to copy in
+repair-wheel-command = \"\""""
+
 # The runtime keeps its Python package tree in python/ so that src/ can hold the
 # C++ sources of the extension module. The C++ headers that the rest of the
 # projection compiles against live inside the package itself, as numpy and
@@ -595,7 +607,7 @@ def write_compiled_project_files(
                 extra_cibuildwheel_windows=(
                     '\nrepair-wheel-command = "python scripts/add_bootstrap_dll.py {wheel} {dest_dir}"'
                     if is_app_sdk_bootstrap_package(package_name)
-                    else ""
+                    else NO_WHEEL_REPAIR
                 ),
             )
         )

@@ -48,3 +48,5 @@ test-skip = "*-win_arm64"
 
 [tool.cibuildwheel.windows]
 archs = ["x86", "AMD64", "ARM64"]
+# this package redistributes no DLL of its own, so there is nothing to copy in
+repair-wheel-command = ""
