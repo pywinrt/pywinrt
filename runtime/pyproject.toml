@@ -47,3 +47,5 @@ test-command = "python -c \"import winrt._winrt\""
 
 [tool.cibuildwheel.windows]
 archs = ["x86", "AMD64", "ARM64"]
+# this package redistributes no DLL of its own, so there is nothing to copy in
+repair-wheel-command = ""
