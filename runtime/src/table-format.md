@@ -114,6 +114,16 @@ that the table names ids the runtime has no trampoline for.
 `census_revision`, so a runtime is built with the identity of the census its
 trampolines came from.
 
+A table records the revision it **needs**, which is the oldest one that has
+every id it names, rather than the one the census stood at when it was
+written. `shapes.json` keeps a `revisions` list of how many ids there were at
+the end of each revision, and ids are handed out in order, so which revision
+first covered a given id is a lookup. Two things follow. A namespace stays
+readable by every runtime that has its ids, instead of being refused by one
+that could have run it; and its table stops changing when the census grows for
+some other namespace, which is what makes one generator run over every family
+settle in one pass however the runs are ordered.
+
 ## What a shape is
 
 Every WinRT method is `HRESULT __stdcall f(void* this, ...)` and every output is
@@ -196,9 +206,9 @@ class Windows.Foundation.Uri python_type stringable
 ```
 
 The four lines before the first type are the header: the format version the
-text is written to, the version of the generator that wrote it, the lineage and
-the revision of the shape census the members' shape ids were assigned by, and
-the WinRT namespace the table is for. A blank line, and a line whose first
+text is written to, the version of the generator that wrote it, the lineage of
+the shape census the members' shape ids were assigned by and the oldest
+revision of it that has them, and the WinRT namespace the table is for. A blank line, and a line whose first
 non-space character is `#`, say nothing.
 
 ### How a type is named

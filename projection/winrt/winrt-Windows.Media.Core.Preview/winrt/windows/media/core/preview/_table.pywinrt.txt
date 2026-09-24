@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 3
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
 namespace Windows.Media.Core.Preview
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
