@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.Windows.Widgets.Feeds.Providers
 
 class Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersRequestedArgs python_type
@@ -90,6 +90,7 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedManager python_type
     default Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager2
+    requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager3
     factory Microsoft.Windows.Widgets.Feeds.Providers.IFeedManagerStatics
     method get_default static
         method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedManagerStatics shape=4 static
@@ -105,6 +106,11 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedManager python_type
     method set_custom_query_parameters
         method SetCustomQueryParameters slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager shape=4 reverse=43
             in class type=Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersUpdateOptions name=options
+    method try_remove_announcement_by_id
+        method TryRemoveAnnouncementById slot=6 inputs=3 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager3 shape=117 reverse=25
+            in string name=feedProviderDefinitionId
+            in string name=feedDefinitionId
+            in string name=announcementId
     method try_show_announcement
         method TryShowAnnouncement slot=7 inputs=3 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager2 shape=117 reverse=45
             in string name=feedProviderDefinitionId
@@ -284,6 +290,16 @@ interface Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager2 python_type
             in string name=feedProviderDefinitionId
             in string name=feedDefinitionId
             in class type=Microsoft.Windows.Widgets.Notifications.FeedAnnouncement name=announcement
+
+interface Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager3 python_type
+    py _IFeedManager3
+    guid a6af915b-0cdc-46f1-a4d6-10d8c644984a
+    signature {a6af915b-0cdc-46f1-a4d6-10d8c644984a}
+    method try_remove_announcement_by_id
+        method TryRemoveAnnouncementById slot=6 inputs=3 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager3 shape=117 reverse=25
+            in string name=feedProviderDefinitionId
+            in string name=feedDefinitionId
+            in string name=announcementId
 
 interface Microsoft.Windows.Widgets.Feeds.Providers.IFeedManagerStatics
     guid 4baf5174-77d6-5e2a-94ea-4f14ccdb1f2c

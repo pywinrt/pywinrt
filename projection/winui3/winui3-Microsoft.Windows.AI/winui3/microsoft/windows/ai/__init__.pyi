@@ -9,10 +9,15 @@ import winrt.system
 import winrt.windows.foundation as windows_foundation
 
 __all__ = [
+    "AICapabilityCategory",
     "AIFeatureReadyResultState",
     "AIFeatureReadyState",
+    "AICapabilities",
     "AIFeatureReadyResult",
 ]
+
+class AICapabilityCategory(enum.IntEnum):
+    COPILOT_PLUS_PC = 0
 
 class AIFeatureReadyResultState(enum.IntEnum):
     IN_PROGRESS = 0
@@ -24,6 +29,18 @@ class AIFeatureReadyState(enum.IntEnum):
     NOT_READY = 1
     NOT_SUPPORTED_ON_CURRENT_SYSTEM = 2
     DISABLED_BY_USER = 3
+    CAPABILITY_MISSING = 4
+    NOT_COMPATIBLE_WITH_SYSTEM_HARDWARE = 5
+    OS_UPDATE_NEEDED = 6
+
+@typing.final
+class AICapabilities_Static(winrt._winrt.IInspectable_Static):
+    # System.Boolean Microsoft.Windows.AI.AICapabilities::HasAICapability(Microsoft.Windows.AI.AICapabilityCategory)
+    def has_a_i_capability(cls, category: AICapabilityCategory, /) -> bool: ...
+
+@typing.final
+class AICapabilities(winrt.system.Object, metaclass=AICapabilities_Static):
+    ...
 
 @typing.final
 class AIFeatureReadyResult(winrt.system.Object):
@@ -39,4 +56,7 @@ class AIFeatureReadyResult(winrt.system.Object):
     # Microsoft.Windows.AI.AIFeatureReadyResultState Microsoft.Windows.AI.AIFeatureReadyResult::get_Status()
     @_property
     def status(self) -> AIFeatureReadyResultState: ...
+    # System.Boolean Microsoft.Windows.AI.AIFeatureReadyResult::get_PackageInstallationFailed()
+    @_property
+    def package_installation_failed(self) -> bool: ...
 

@@ -16,6 +16,9 @@ on:
       - .config/_tools.json
       - patches/**
       - scripts/fetch-tools.ps1
+      # what fetch-tools.ps1 runs to fetch the App SDK
+      - scripts/app_sdk.py
+      - scripts/nuget.py
       # the version scheme, whose tests are part of the suite
       - scripts/versions.py
       - scripts/tests/**
@@ -53,6 +56,9 @@ on:
       - .config/_tools.json
       - patches/**
       - scripts/fetch-tools.ps1
+      # what fetch-tools.ps1 runs to fetch the App SDK
+      - scripts/app_sdk.py
+      - scripts/nuget.py
       # the version scheme, whose tests are part of the suite
       - scripts/versions.py
       - scripts/tests/**

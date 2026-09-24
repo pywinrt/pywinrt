@@ -233,6 +233,22 @@
   `CoreWebView2SharedWorker` and the managers and event arguments that go with
   them - and find-on-page, `CoreWebView2Find` and `CoreWebView2FindOptions`.
   Nothing was removed.
+- Updated the Windows App SDK to 2.5.1, from 1.7.250513003, whose servicing
+  ended in March. Nine namespaces are new and have a package each:
+  `Microsoft.Windows.AI.Foundation`, `Microsoft.Windows.AI.MachineLearning`,
+  `Microsoft.Windows.AI.Video`, `Microsoft.Windows.Vision`,
+  `Microsoft.Windows.SemanticSearch`, `Microsoft.Windows.Search.AppContentIndex`,
+  `Microsoft.Windows.Storage.Pickers`, `Microsoft.Windows.Foundation` and
+  `Microsoft.UI.Xaml.Settings`. No namespace was removed, so the family goes
+  from 69 packages to 78. Everything in it is now versioned `4!2.5.1`, the
+  version of the `Microsoft.WindowsAppSDK` metapackage, which is the version
+  Microsoft's own release notes and runtime installer speak.
+- The Windows App SDK is projected from its component packages -
+  `Microsoft.WindowsAppSDK.Foundation`, `.InteractiveExperiences`, `.WinUI`,
+  `.Widgets`, `.AI`, `.Search` and `Microsoft.Windows.AI.MachineLearning` -
+  rather than from the metapackage, which has carried no metadata since 2.0.
+  This is not visible in a wheel; it is what lets a release be projected at
+  all.
 
 ### Deprecated
 - Passing a format string to `winrt.system.Array` is deprecated and raises a

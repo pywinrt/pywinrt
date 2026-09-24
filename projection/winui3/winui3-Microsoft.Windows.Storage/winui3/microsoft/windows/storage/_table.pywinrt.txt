@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.Windows.Storage
 
 class Microsoft.Windows.Storage.ApplicationData python_type closeable
@@ -10,6 +10,7 @@ class Microsoft.Windows.Storage.ApplicationData python_type closeable
     requires Microsoft.Windows.Storage.IApplicationData
     requires Windows.Foundation.IClosable
     factory Microsoft.Windows.Storage.IApplicationDataStatics
+    factory Microsoft.Windows.Storage.IApplicationDataStatics2
     property is_machine_path_supported
         get get_IsMachinePathSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out boolean return
@@ -62,6 +63,11 @@ class Microsoft.Windows.Storage.ApplicationData python_type closeable
     method get_for_package_family static
         method GetForPackageFamily slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataStatics shape=51 static
             in string name=packageFamilyName
+            out class type=Microsoft.Windows.Storage.ApplicationData return
+    method get_for_unpackaged static
+        method GetForUnpackaged slot=6 inputs=2 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataStatics2 shape=117 static
+            in string name=publisher
+            in string name=product
             out class type=Microsoft.Windows.Storage.ApplicationData return
     method get_for_user static
         method GetForUser slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataStatics shape=51 static
@@ -128,6 +134,9 @@ interface Microsoft.Windows.Storage.IApplicationDataContainer
 
 interface Microsoft.Windows.Storage.IApplicationDataStatics
     guid 6a8b41f8-5560-56fb-86b0-d59e897d4d95
+
+interface Microsoft.Windows.Storage.IApplicationDataStatics2
+    guid 33c2cce4-6697-54b9-b845-4e12d26306ff
 
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Storage.ApplicationDataContainer>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, ApplicationDataContainer]]

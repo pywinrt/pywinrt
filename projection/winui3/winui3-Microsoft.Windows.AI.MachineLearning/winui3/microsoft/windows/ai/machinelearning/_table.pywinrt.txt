@@ -1,0 +1,1112 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
+namespace Microsoft.Windows.AI.MachineLearning
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CatalogModelInfo]
+    guid 5a72be24-3605-5b35-9cc3-6b5ebfe5c2c7
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInfo;{62057faa-3def-509f-9ed2-aef1e0de21a4}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Microsoft.Windows.AI.MachineLearning.CatalogModelInfo
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ModelCatalogSource]
+    guid 917fef8e-e0b8-5fee-9e66-5baaa9a841c9
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Microsoft.Windows.AI.MachineLearning.ModelCatalogSource;{3117952c-8dc3-54c9-94fa-bf6f38cbfce9}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Microsoft.Windows.AI.MachineLearning.ModelCatalogSource
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[CatalogModelInfo]]
+    guid 72270921-e7eb-5773-9fb7-5000064772e5
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInfo;{62057faa-3def-509f-9ed2-aef1e0de21a4})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[CatalogModelInstanceResult, Double]
+    guid aa6cdca2-fc5a-584a-9781-4a8ccf2d5c84
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult;{b3701b71-61fa-5185-a2ce-8df6e6a5c66d});f8)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=49 reverse=2
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> name=asyncInfo
+            in double name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[ExecutionProviderReadyResult, Double]
+    guid cc529045-fc8f-5897-bb77-f3459844ef0b
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult;{91c1724d-93c7-5284-adbe-ba2bd7be7c79});f8)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=49 reverse=2
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> name=asyncInfo
+            in double name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[IVector[ExecutionProvider], Double]
+    guid 582a3320-2121-5d01-94d4-a7422940cbd6
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.AI.MachineLearning.ExecutionProvider;{98356468-cf23-504f-b29c-9347781925ff}));f8)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=49 reverse=2
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> name=asyncInfo
+            in double name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[CatalogModelInstanceResult, Double]
+    guid f75608eb-c2ca-51b8-b261-df6b2927deb5
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult;{b3701b71-61fa-5185-a2ce-8df6e6a5c66d});f8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[ExecutionProviderReadyResult, Double]
+    guid cb503403-2777-55e8-a053-58a39c93e645
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult;{91c1724d-93c7-5284-adbe-ba2bd7be7c79});f8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[IVector[ExecutionProvider], Double]
+    guid c819ad74-4288-54d3-9f49-32f89ddd870b
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.AI.MachineLearning.ExecutionProvider;{98356468-cf23-504f-b29c-9347781925ff}));f8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+class Microsoft.Windows.AI.MachineLearning.CatalogModelInfo python_type
+    py CatalogModelInfo
+    signature rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInfo;{62057faa-3def-509f-9ed2-aef1e0de21a4})
+    default Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo
+    requires Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo
+    property execution_providers
+        get get_ExecutionProviders slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out string return
+    property license
+        get get_License slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out string return
+    property license_text
+        get get_LicenseText slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out string return
+    property license_uri
+        get get_LicenseUri slot=15 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out string return
+    property model_size_in_bytes
+        get get_ModelSizeInBytes slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out uint64 return
+    property name
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out string return
+    property publisher
+        get get_Publisher slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out string return
+    property source_id
+        get get_SourceId slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out string return
+    property uri
+        get get_Uri slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out class type=Windows.Foundation.Uri return
+    property version
+        get get_Version slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out string return
+    method get_instance_async
+        method GetInstanceAsync slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> return
+        method GetInstanceAsync slot=19 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=51
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=additionalHeaders
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> return
+    method get_status
+        method GetStatus slot=17 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo shape=4
+            out enum32 type=Microsoft.Windows.AI.MachineLearning.CatalogModelStatus return
+
+class Microsoft.Windows.AI.MachineLearning.CatalogModelInstance python_type closeable
+    py CatalogModelInstance
+    signature rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInstance;{9e920521-5e06-5c30-b0c2-8af313efb756})
+    default Microsoft.Windows.AI.MachineLearning.ICatalogModelInstance
+    requires Microsoft.Windows.AI.MachineLearning.ICatalogModelInstance
+    requires Windows.Foundation.IClosable
+    property model_info
+        get get_ModelInfo slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInstance shape=4
+            out class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo return
+    property model_paths
+        get get_ModelPaths slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInstance shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+
+class Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult python_type
+    py CatalogModelInstanceResult
+    signature rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult;{b3701b71-61fa-5185-a2ce-8df6e6a5c66d})
+    default Microsoft.Windows.AI.MachineLearning.ICatalogModelInstanceResult
+    requires Microsoft.Windows.AI.MachineLearning.ICatalogModelInstanceResult
+    property diagnostic_text
+        get get_DiagnosticText slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInstanceResult shape=4
+            out string return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInstanceResult shape=4
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInstanceResult shape=4
+            out enum32 type=Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceStatus return
+    method get_instance
+        method GetInstance slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.ICatalogModelInstanceResult shape=4
+            out class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInstance return
+
+enum Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceStatus python_type
+    py CatalogModelInstanceStatus
+    signature enum(Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceStatus;i4)
+    constant AVAILABLE 0
+    constant IN_PROGRESS 1
+    constant UNAVAILABLE 2
+
+enum Microsoft.Windows.AI.MachineLearning.CatalogModelStatus python_type
+    py CatalogModelStatus
+    signature enum(Microsoft.Windows.AI.MachineLearning.CatalogModelStatus;i4)
+    constant READY 0
+    constant NOT_READY 1
+
+class Microsoft.Windows.AI.MachineLearning.ExecutionProvider python_type
+    py ExecutionProvider
+    signature rc(Microsoft.Windows.AI.MachineLearning.ExecutionProvider;{98356468-cf23-504f-b29c-9347781925ff})
+    default Microsoft.Windows.AI.MachineLearning.IExecutionProvider
+    requires Microsoft.Windows.AI.MachineLearning.IExecutionProvider
+    property certification
+        get get_Certification slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProvider shape=4
+            out enum32 type=Microsoft.Windows.AI.MachineLearning.ExecutionProviderCertification return
+    property library_path
+        get get_LibraryPath slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProvider shape=4
+            out string return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProvider shape=4
+            out string return
+    property package_id
+        get get_PackageId slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProvider shape=4
+            out class type=Windows.ApplicationModel.PackageId return
+    property ready_state
+        get get_ReadyState slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProvider shape=4
+            out enum32 type=Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyState return
+    method ensure_ready_async
+        method EnsureReadyAsync slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProvider shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> return
+    method try_register
+        method TryRegister slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProvider shape=4
+            out boolean return
+
+class Microsoft.Windows.AI.MachineLearning.ExecutionProviderCatalog python_type
+    py ExecutionProviderCatalog
+    signature rc(Microsoft.Windows.AI.MachineLearning.ExecutionProviderCatalog;{aa9bfe14-2222-5921-8002-4d2a205ea03c})
+    default Microsoft.Windows.AI.MachineLearning.IExecutionProviderCatalog
+    requires Microsoft.Windows.AI.MachineLearning.IExecutionProviderCatalog
+    factory Microsoft.Windows.AI.MachineLearning.IExecutionProviderCatalogStatics
+    method ensure_and_register_certified_async
+        method EnsureAndRegisterCertifiedAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProviderCatalog shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> return
+    method find_all_providers
+        method FindAllProviders slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProviderCatalog shape=51
+            receive_array class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProviderCatalogStatics shape=4 static
+            out class type=Microsoft.Windows.AI.MachineLearning.ExecutionProviderCatalog return
+    method register_certified_async
+        method RegisterCertifiedAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProviderCatalog shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> return
+
+enum Microsoft.Windows.AI.MachineLearning.ExecutionProviderCertification python_type
+    py ExecutionProviderCertification
+    signature enum(Microsoft.Windows.AI.MachineLearning.ExecutionProviderCertification;i4)
+    constant UNKNOWN 0
+    constant CERTIFIED 1
+    constant UNCERTIFIED 2
+
+class Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult python_type
+    py ExecutionProviderReadyResult
+    signature rc(Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult;{91c1724d-93c7-5284-adbe-ba2bd7be7c79})
+    default Microsoft.Windows.AI.MachineLearning.IExecutionProviderReadyResult
+    requires Microsoft.Windows.AI.MachineLearning.IExecutionProviderReadyResult
+    property diagnostic_text
+        get get_DiagnosticText slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProviderReadyResult shape=4
+            out string return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProviderReadyResult shape=4
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IExecutionProviderReadyResult shape=4
+            out enum32 type=Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResultState return
+
+enum Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResultState python_type
+    py ExecutionProviderReadyResultState
+    signature enum(Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResultState;i4)
+    constant IN_PROGRESS 0
+    constant SUCCESS 1
+    constant FAILURE 2
+
+enum Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyState python_type
+    py ExecutionProviderReadyState
+    signature enum(Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyState;i4)
+    constant READY 0
+    constant NOT_READY 1
+    constant NOT_PRESENT 2
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CatalogModelInfo]
+    guid 88b61d2e-ea3e-5b47-bc5d-741650afda63
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInfo;{62057faa-3def-509f-9ed2-aef1e0de21a4}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.AI.MachineLearning.CatalogModelInfo
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=62 role=get_results
+            out class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo return
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ModelCatalogSource]
+    guid 65eb0fb5-5af9-56f2-9556-8541c3db67bb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.AI.MachineLearning.ModelCatalogSource;{3117952c-8dc3-54c9-94fa-bf6f38cbfce9}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.AI.MachineLearning.ModelCatalogSource
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=62 role=get_results
+            out class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[CatalogModelInfo]]
+    guid 46c71e51-145c-5fbf-aac9-075db1fd3aa9
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInfo;{62057faa-3def-509f-9ed2-aef1e0de21a4})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[CatalogModelInstanceResult, Double]
+    guid 65638493-e646-5c03-b731-510573fd21dd
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult;{b3701b71-61fa-5185-a2ce-8df6e6a5c66d});f8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult
+    argument System.Double
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> shape=4 reverse=121 role=get_results
+            out class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[ExecutionProviderReadyResult, Double]
+    guid 4f16a3c6-1230-5503-b92f-7d9c97139ad4
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult;{91c1724d-93c7-5284-adbe-ba2bd7be7c79});f8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult
+    argument System.Double
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> shape=4 reverse=121 role=get_results
+            out class type=Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[IVector[ExecutionProvider], Double]
+    guid 2400b66a-d1b1-5e7f-8acd-421a23771880
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.AI.MachineLearning.ExecutionProvider;{98356468-cf23-504f-b29c-9347781925ff}));f8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>
+    argument System.Double
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> shape=4 reverse=121 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> return
+
+interface Microsoft.Windows.AI.MachineLearning.ICatalogModelInfo
+    guid 62057faa-3def-509f-9ed2-aef1e0de21a4
+
+interface Microsoft.Windows.AI.MachineLearning.ICatalogModelInstance
+    guid 9e920521-5e06-5c30-b0c2-8af313efb756
+
+interface Microsoft.Windows.AI.MachineLearning.ICatalogModelInstanceResult
+    guid b3701b71-61fa-5185-a2ce-8df6e6a5c66d
+
+interface Microsoft.Windows.AI.MachineLearning.IExecutionProvider
+    guid 98356468-cf23-504f-b29c-9347781925ff
+
+interface Microsoft.Windows.AI.MachineLearning.IExecutionProviderCatalog
+    guid aa9bfe14-2222-5921-8002-4d2a205ea03c
+
+interface Microsoft.Windows.AI.MachineLearning.IExecutionProviderCatalogStatics
+    guid 550def98-2611-5433-afb8-43673b610848
+
+interface Microsoft.Windows.AI.MachineLearning.IExecutionProviderReadyResult
+    guid 91c1724d-93c7-5284-adbe-ba2bd7be7c79
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[CatalogModelInfo]
+    guid 7a270079-a95f-5a7e-8859-9df94e2c8a7d
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInfo;{62057faa-3def-509f-9ed2-aef1e0de21a4}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.AI.MachineLearning.CatalogModelInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ExecutionProvider]
+    guid 24c3e327-7502-52ad-8f77-3d2fcebed429
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.AI.MachineLearning.ExecutionProvider;{98356468-cf23-504f-b29c-9347781925ff}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.AI.MachineLearning.ExecutionProvider
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ModelCatalogSource]
+    guid 81967082-bf87-54d0-81f1-5f3056c5999a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.AI.MachineLearning.ModelCatalogSource;{3117952c-8dc3-54c9-94fa-bf6f38cbfce9}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.AI.MachineLearning.ModelCatalogSource
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> return
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[CatalogModelInfo]
+    guid 1c1b27d0-fc9b-5a44-9746-1a617e48b153
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInfo;{62057faa-3def-509f-9ed2-aef1e0de21a4}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.AI.MachineLearning.CatalogModelInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=22 role=current
+            out class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=117 reverse=101 role=get_many
+            fill_array class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ExecutionProvider]
+    guid 511a99cf-fd7c-535c-b039-359b71f8dff5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.AI.MachineLearning.ExecutionProvider;{98356468-cf23-504f-b29c-9347781925ff}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.AI.MachineLearning.ExecutionProvider
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=4 reverse=22 role=current
+            out class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=117 reverse=101 role=get_many
+            fill_array class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ModelCatalogSource]
+    guid 9c66662c-828f-5d44-8b7e-6b16425afd36
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.AI.MachineLearning.ModelCatalogSource;{3117952c-8dc3-54c9-94fa-bf6f38cbfce9}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.AI.MachineLearning.ModelCatalogSource
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=22 role=current
+            out class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=117 reverse=101 role=get_many
+            fill_array class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101 role=get_many
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22 role=pair_key
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43 role=pair_value
+            out string return
+
+interface Microsoft.Windows.AI.MachineLearning.IModelCatalog
+    guid 8cae018c-49f5-5080-abb8-ef4a1df356da
+
+interface Microsoft.Windows.AI.MachineLearning.IModelCatalogFactory
+    guid 2942d7bd-6243-511f-a12c-42cb151b625f
+
+interface Microsoft.Windows.AI.MachineLearning.IModelCatalogSource
+    guid 3117952c-8dc3-54c9-94fa-bf6f38cbfce9
+
+interface Microsoft.Windows.AI.MachineLearning.IModelCatalogSourceStatics
+    guid deba0a9b-6eda-571a-9a05-5a7e2a0531ef
+
+interface Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[CatalogModelInfo]
+    guid 4ec66e4a-d1cc-5086-a553-f99896b2031d
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInfo;{62057faa-3def-509f-9ed2-aef1e0de21a4}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>
+    argument Microsoft.Windows.AI.MachineLearning.CatalogModelInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=173 role=append
+            in class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=117 reverse=101 role=index_of
+            in class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=51 reverse=211 role=replace_all
+            pass_array class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo name=value
+
+interface Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ExecutionProvider]
+    guid e8096b87-1eee-5237-874d-b48b5253cadb
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.AI.MachineLearning.ExecutionProvider;{98356468-cf23-504f-b29c-9347781925ff}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>
+    argument Microsoft.Windows.AI.MachineLearning.ExecutionProvider
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=4 reverse=173 role=append
+            in class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=117 reverse=101 role=index_of
+            in class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=51 reverse=211 role=replace_all
+            pass_array class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider name=value
+
+interface Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ModelCatalogSource]
+    guid e7f73cfa-cc36-52db-b16f-39df10c63506
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.AI.MachineLearning.ModelCatalogSource;{3117952c-8dc3-54c9-94fa-bf6f38cbfce9}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource>
+    argument Microsoft.Windows.AI.MachineLearning.ModelCatalogSource
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=173 role=append
+            in class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=117 reverse=101 role=index_of
+            in class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=51 reverse=211 role=replace_all
+            pass_array class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource name=value
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173 role=append
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101 role=index_of
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211 role=replace_all
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[CatalogModelInfo]
+    guid d88a7cca-1865-56c0-bd1f-b6a043b82022
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.AI.MachineLearning.CatalogModelInfo;{62057faa-3def-509f-9ed2-aef1e0de21a4}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>
+    argument Microsoft.Windows.AI.MachineLearning.CatalogModelInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> shape=117 reverse=66 role=index_of
+            in class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ExecutionProvider]
+    guid 93c6b249-9a52-5640-a46c-75d0a52b40f0
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.AI.MachineLearning.ExecutionProvider;{98356468-cf23-504f-b29c-9347781925ff}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>
+    argument Microsoft.Windows.AI.MachineLearning.ExecutionProvider
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.ExecutionProvider> shape=117 reverse=66 role=index_of
+            in class type=Microsoft.Windows.AI.MachineLearning.ExecutionProvider name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ModelCatalogSource]
+    guid 86ab62eb-d7d8-55b8-9165-2202d53ac7df
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.AI.MachineLearning.ModelCatalogSource;{3117952c-8dc3-54c9-94fa-bf6f38cbfce9}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource>
+    argument Microsoft.Windows.AI.MachineLearning.ModelCatalogSource
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> shape=117 reverse=66 role=index_of
+            in class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
+            in string name=value
+            out uint32 name=index
+            out boolean return
+
+class Microsoft.Windows.AI.MachineLearning.ModelCatalog python_type
+    py ModelCatalog
+    signature rc(Microsoft.Windows.AI.MachineLearning.ModelCatalog;{8cae018c-49f5-5080-abb8-ef4a1df356da})
+    default Microsoft.Windows.AI.MachineLearning.IModelCatalog
+    requires Microsoft.Windows.AI.MachineLearning.IModelCatalog
+    factory Microsoft.Windows.AI.MachineLearning.IModelCatalogFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IModelCatalogFactory shape=117
+            pass_array class type=Microsoft.Windows.AI.MachineLearning.ModelCatalogSource name=sources
+            out class type=Microsoft.Windows.AI.MachineLearning.ModelCatalog return
+    property execution_providers
+        get get_ExecutionProviders slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IModelCatalog shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property sources
+        get get_Sources slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IModelCatalog shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> return
+    method find_all_models_async
+        method FindAllModelsAsync slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IModelCatalog shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo>> return
+    method find_model_async
+        method FindModelAsync slot=10 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IModelCatalog shape=51
+            in string name=idOrName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> return
+    method get_available_model
+        method GetAvailableModel slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IModelCatalog shape=51
+            in string name=idOrName
+            out class type=Microsoft.Windows.AI.MachineLearning.CatalogModelInfo return
+    method get_available_models
+        method GetAvailableModels slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IModelCatalog shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.Windows.AI.MachineLearning.CatalogModelInfo> return
+
+class Microsoft.Windows.AI.MachineLearning.ModelCatalogSource python_type
+    py ModelCatalogSource
+    signature rc(Microsoft.Windows.AI.MachineLearning.ModelCatalogSource;{3117952c-8dc3-54c9-94fa-bf6f38cbfce9})
+    default Microsoft.Windows.AI.MachineLearning.IModelCatalogSource
+    requires Microsoft.Windows.AI.MachineLearning.IModelCatalogSource
+    factory Microsoft.Windows.AI.MachineLearning.IModelCatalogSourceStatics
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IModelCatalogSource shape=4
+            out string return
+    property uri
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IModelCatalogSource shape=4
+            out class type=Windows.Foundation.Uri return
+    method create_from_uri_async static
+        method CreateFromUriAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IModelCatalogSourceStatics shape=51 static
+            in class type=Windows.Foundation.Uri name=location
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> return
+        method CreateFromUriAsync slot=7 inputs=2 outputs=1 declaring=Microsoft.Windows.AI.MachineLearning.IModelCatalogSourceStatics shape=117 static
+            in class type=Windows.Foundation.Uri name=location
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=additionalHeaders
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> return
+
+class System.Double external
+    py winrt.system.Double
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.PackageId external
+    py winrt.windows.applicationmodel.PackageId
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

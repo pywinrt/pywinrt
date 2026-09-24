@@ -670,6 +670,9 @@ class InputFocusController(InputObject, metaclass=InputFocusController_Static):
     # System.Boolean Microsoft.UI.Input.InputFocusController::get_HasFocus()
     @_property
     def has_focus(self) -> bool: ...
+    # System.Boolean Microsoft.UI.Input.InputFocusController::get_ShouldShowKeyboardCues()
+    @_property
+    def should_show_keyboard_cues(self) -> bool: ...
 
 @typing.final
 class InputFocusNavigationHost_Static(InputObject_Static):
@@ -1055,7 +1058,12 @@ class PointerEventArgs(winrt.system.Object):
     def key_modifiers(self) -> windows_system.VirtualKeyModifiers: ...
 
 @typing.final
-class PointerPoint(winrt.system.Object):
+class PointerPoint_Static(winrt._winrt.IInspectable_Static):
+    # Microsoft.UI.Input.PointerPoint Microsoft.UI.Input.PointerPoint::GetCurrentPoint(System.UInt32)
+    def get_current_point(cls, pointer_id: winrt.system.UInt32, /) -> PointerPoint: ...
+
+@typing.final
+class PointerPoint(winrt.system.Object, metaclass=PointerPoint_Static):
     # Microsoft.UI.Input.PointerPoint Microsoft.UI.Input.PointerPoint::GetTransformedPoint(Microsoft.UI.Input.IPointerPointTransform)
     def get_transformed_point(self, transform: IPointerPointTransform, /) -> PointerPoint: ...
     # System.UInt32 Microsoft.UI.Input.PointerPoint::get_FrameId()

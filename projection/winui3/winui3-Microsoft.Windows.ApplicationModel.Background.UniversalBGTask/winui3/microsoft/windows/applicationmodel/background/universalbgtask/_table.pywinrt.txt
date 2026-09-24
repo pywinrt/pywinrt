@@ -1,14 +1,14 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.Windows.ApplicationModel.Background.UniversalBGTask
 
 interface Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.ITask
-    guid d47c97e5-a23f-5b32-8a2e-b93c8cae4299
+    guid 89cf5f73-8195-590b-8158-bc7d2816ce16
 
 class Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.Task activatable python_type
     py Task
-    signature rc(Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.Task;{d47c97e5-a23f-5b32-8a2e-b93c8cae4299})
+    signature rc(Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.Task;{89cf5f73-8195-590b-8158-bc7d2816ce16})
     default Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.ITask
     requires Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.ITask
     requires Windows.ApplicationModel.Background.IBackgroundTask

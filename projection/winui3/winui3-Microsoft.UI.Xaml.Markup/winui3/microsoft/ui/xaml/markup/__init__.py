@@ -20,6 +20,7 @@ __all__ = [
     "IRootObjectProvider",
     "IUriContext",
     "IXamlBindScopeDiagnostics",
+    "IXamlCondition",
     "IXamlMember",
     "IXamlMetadataProvider",
     "IXamlType",

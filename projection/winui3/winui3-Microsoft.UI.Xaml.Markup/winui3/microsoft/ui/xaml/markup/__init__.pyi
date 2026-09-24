@@ -11,6 +11,7 @@ import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
 import winrt.windows.storage.streams as windows_storage_streams
+import winrt.windows.ui as windows_ui
 import winrt.windows.ui.xaml.interop as windows_ui_xaml_interop
 import winui3.microsoft.ui.xaml as microsoft_ui_xaml
 
@@ -29,6 +30,7 @@ __all__ = [
     "IRootObjectProvider",
     "IUriContext",
     "IXamlBindScopeDiagnostics",
+    "IXamlCondition",
     "IXamlMember",
     "IXamlMetadataProvider",
     "IXamlType",
@@ -105,6 +107,10 @@ class XamlBindingHelper_Static(winrt._winrt.IInspectable_Static):
     def set_property_from_byte(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.UInt8, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromChar16(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.Char)
     def set_property_from_char16(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.Char16, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromColor(System.Object,Microsoft.UI.Xaml.DependencyProperty,Windows.UI.Color)
+    def set_property_from_color(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8], /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromCornerRadius(System.Object,Microsoft.UI.Xaml.DependencyProperty,Microsoft.UI.Xaml.CornerRadius)
+    def set_property_from_corner_radius(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: microsoft_ui_xaml.CornerRadius | tuple[winrt.system.Double, winrt.system.Double, winrt.system.Double, winrt.system.Double], /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromDateTime(System.Object,Microsoft.UI.Xaml.DependencyProperty,Windows.Foundation.DateTime)
     def set_property_from_date_time(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: datetime.datetime, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromDouble(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.Double)
@@ -125,6 +131,8 @@ class XamlBindingHelper_Static(winrt._winrt.IInspectable_Static):
     def set_property_from_size(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromString(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.String)
     def set_property_from_string(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: str, /) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromThickness(System.Object,Microsoft.UI.Xaml.DependencyProperty,Microsoft.UI.Xaml.Thickness)
+    def set_property_from_thickness(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: microsoft_ui_xaml.Thickness | tuple[winrt.system.Double, winrt.system.Double, winrt.system.Double, winrt.system.Double], /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromTimeSpan(System.Object,Microsoft.UI.Xaml.DependencyProperty,Windows.Foundation.TimeSpan)
     def set_property_from_time_span(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: datetime.timedelta, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Markup.XamlBindingHelper::SetPropertyFromUInt32(System.Object,Microsoft.UI.Xaml.DependencyProperty,System.UInt32)
@@ -223,6 +231,14 @@ class IXamlBindScopeDiagnostics(winrt._winrt.IInspectable):
     # System.Void Microsoft.UI.Xaml.Markup.IXamlBindScopeDiagnostics::Disable(System.Int32,System.Int32)
     @abstractmethod
     def disable(self, line_number: winrt.system.Int32, column_number: winrt.system.Int32, /) -> None: ...
+
+@typing.final
+class _IXamlCondition: ...
+
+class IXamlCondition(winrt._winrt.IInspectable):
+    # System.Boolean Microsoft.UI.Xaml.Markup.IXamlCondition::Evaluate(System.String)
+    @abstractmethod
+    def evaluate(self, argument: str, /) -> bool: ...
 
 @typing.final
 class _IXamlMember: ...

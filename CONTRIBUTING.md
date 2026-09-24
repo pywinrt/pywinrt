@@ -56,6 +56,20 @@ Some additional files are also generated instead by:
 
     py .\scripts\generate-pyproject.py
 
+## Moving the Windows App SDK pin
+
+The Windows App SDK is a metapackage over component packages that are
+published separately, and `.config/_tools.json` records the version of each
+one. Do not edit those by hand: Microsoft's own build refuses a project that
+references a set of components it did not ship together, so the set belongs to
+a release rather than to us. Run
+
+    py .\scripts\resolve-wasdk.py
+
+which resolves the newest stable release, takes the component set from its
+nuspec, checks it against the list the Runtime component carries, and writes
+the result. Then fetch and regenerate as above.
+
 ## Generating the C++/WinRT headers
 
 `winrt-runtime` and the eight interop modules are the only things here that are

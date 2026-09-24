@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.UI.Xaml
 
 class Microsoft.UI.Xaml.AdaptiveTrigger composable python_type
@@ -629,7 +629,7 @@ class Microsoft.UI.Xaml.DependencyObject composable python_type
     requires Microsoft.UI.Xaml.IDependencyObject
     composable Microsoft.UI.Xaml.IDependencyObjectFactory
     property dispatcher
-        get get_Dispatcher slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IDependencyObject shape=4
+        get get_Dispatcher slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IDependencyObject shape=4 deprecated
             out class type=Windows.UI.Core.CoreDispatcher return
     property dispatcher_queue
         get get_DispatcherQueue slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IDependencyObject shape=4
@@ -2934,6 +2934,9 @@ interface Microsoft.UI.Xaml.ISetterBaseFactory
 interface Microsoft.UI.Xaml.ISetterFactory
     guid 13910a06-a327-5407-ae91-b9d2cc3a7ab5
 
+interface Microsoft.UI.Xaml.ISetterStatics2
+    guid 2c5ff014-59bc-5438-98b9-2292bd4d0731
+
 interface Microsoft.UI.Xaml.ISizeChangedEventArgs
     guid fe76324e-6dfb-58b1-9dcd-886ca8f9a2ea
 
@@ -4423,6 +4426,7 @@ class Microsoft.UI.Xaml.Setter activatable python_type
     default Microsoft.UI.Xaml.ISetter
     requires Microsoft.UI.Xaml.ISetter
     factory Microsoft.UI.Xaml.ISetterFactory
+    factory Microsoft.UI.Xaml.ISetterStatics2
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -4445,6 +4449,9 @@ class Microsoft.UI.Xaml.Setter activatable python_type
             out class type=Microsoft.UI.Xaml.DependencyProperty return
         put put_Property slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.ISetter shape=4
             in class type=Microsoft.UI.Xaml.DependencyProperty name=value
+    property value_property static
+        get get_ValueProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.ISetterStatics2 shape=4 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.SetterBase composable python_type
     py SetterBase
@@ -6415,7 +6422,7 @@ class Microsoft.UI.Xaml.Window composable python_type
         get get_AppWindow slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IWindow2 shape=4
             out class type=Microsoft.UI.Windowing.AppWindow return
     property current static
-        get get_Current slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IWindowStatics shape=4 static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IWindowStatics shape=4 static deprecated
             out class type=Microsoft.UI.Xaml.Window return
     event activated
         add add_Activated slot=18 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.IWindow shape=51

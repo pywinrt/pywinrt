@@ -118,6 +118,7 @@ __all__ = [
     "SemanticZoomAutomationPeer",
     "SliderAutomationPeer",
     "SplitButtonAutomationPeer",
+    "SplitMenuFlyoutItemAutomationPeer",
     "TabViewAutomationPeer",
     "TabViewItemAutomationPeer",
     "TeachingTipAutomationPeer",
@@ -1576,6 +1577,22 @@ class SplitButtonAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xam
     # System.Void Microsoft.UI.Xaml.Automation.Peers.SplitButtonAutomationPeer::Invoke()
     def invoke(self) -> None: ...
     # Microsoft.UI.Xaml.Automation.ExpandCollapseState Microsoft.UI.Xaml.Automation.Peers.SplitButtonAutomationPeer::get_ExpandCollapseState()
+    @_property
+    @typing.final
+    def expand_collapse_state(self) -> microsoft_ui_xaml_automation.ExpandCollapseState: ...
+
+class SplitMenuFlyoutItemAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
+    ...
+
+class SplitMenuFlyoutItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, microsoft_ui_xaml_automation_provider.IInvokeProvider, metaclass=SplitMenuFlyoutItemAutomationPeer_Static):
+    def __new__(cls, owner: microsoft_ui_xaml_controls.SplitMenuFlyoutItem) -> typing.Self: ...
+    # System.Void Microsoft.UI.Xaml.Automation.Peers.SplitMenuFlyoutItemAutomationPeer::Collapse()
+    def collapse(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Automation.Peers.SplitMenuFlyoutItemAutomationPeer::Expand()
+    def expand(self) -> None: ...
+    # System.Void Microsoft.UI.Xaml.Automation.Peers.SplitMenuFlyoutItemAutomationPeer::Invoke()
+    def invoke(self) -> None: ...
+    # Microsoft.UI.Xaml.Automation.ExpandCollapseState Microsoft.UI.Xaml.Automation.Peers.SplitMenuFlyoutItemAutomationPeer::get_ExpandCollapseState()
     @_property
     @typing.final
     def expand_collapse_state(self) -> microsoft_ui_xaml_automation.ExpandCollapseState: ...

@@ -44,6 +44,9 @@ class DirectXColorSpace(enum.IntEnum):
     YCC_STUDIO_G24_LEFT_P709 = 22
     YCC_STUDIO_G24_LEFT_P2020 = 23
     YCC_STUDIO_G24_TOP_LEFT_P2020 = 24
+    RGB_FULL_G10_NONE_P2020 = 25
+    RGB_FULL_G22_EXT_NONE_P709 = 26
+    RGB_FULL_G22_NONE_P3 = 27
 
 class DirectXPixelFormat(enum.IntEnum):
     UNKNOWN = 0

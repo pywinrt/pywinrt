@@ -1,0 +1,1828 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
+namespace Microsoft.Windows.Search.AppContentIndex
+
+class Microsoft.Windows.Search.AppContentIndex.AppContentIndexListener python_type
+    py AppContentIndexListener
+    signature rc(Microsoft.Windows.Search.AppContentIndex.AppContentIndexListener;{2ee89548-521d-510a-893a-1731c6fad619})
+    default Microsoft.Windows.Search.AppContentIndex.IAppContentIndexListener
+    requires Microsoft.Windows.Search.AppContentIndex.IAppContentIndexListener
+    event content_item_status_changed
+        add add_ContentItemStatusChanged slot=10 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexListener shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.Search.AppContentIndex.AppContentIndexer,Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ContentItemStatusChanged slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexListener shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event index_capabilities_changed
+        add add_IndexCapabilitiesChanged slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexListener shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.Search.AppContentIndex.AppContentIndexer,Microsoft.Windows.Search.AppContentIndex.IndexCapabilities> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_IndexCapabilitiesChanged slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexListener shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event index_statistics_changed
+        add add_IndexStatisticsChanged slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexListener shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.Search.AppContentIndex.AppContentIndexer,Microsoft.Windows.Search.AppContentIndex.IndexStatistics> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_IndexStatisticsChanged slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexListener shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+
+class Microsoft.Windows.Search.AppContentIndex.AppContentIndexer python_type closeable
+    py AppContentIndexer
+    signature rc(Microsoft.Windows.Search.AppContentIndex.AppContentIndexer;{f246f681-eae8-503b-8723-b1984c8882b0})
+    default Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer
+    requires Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer
+    requires Windows.Foundation.IClosable
+    factory Microsoft.Windows.Search.AppContentIndex.IAppContentIndexerStatics
+    property default_language
+        get get_DefaultLanguage slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            out string return
+    property index_name
+        get get_IndexName slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            out string return
+    property listener
+        get get_Listener slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppContentIndexListener return
+    method add_or_update
+        method AddOrUpdate slot=12 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            in class type=Microsoft.Windows.Search.AppContentIndex.IndexableAppContent name=indexableContent
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method create_image_query
+        method CreateImageQuery slot=15 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=51
+            in string name=queryPhrase
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuery return
+        method CreateImageQuery slot=16 inputs=2 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=117
+            in string name=queryPhrase
+            in class type=Microsoft.Windows.Search.AppContentIndex.ImageQueryOptions name=options
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuery return
+    method create_image_query_session
+        method CreateImageQuerySession slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession return
+    method create_text_query
+        method CreateTextQuery slot=13 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=51
+            in string name=queryPhrase
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuery return
+        method CreateTextQuery slot=14 inputs=2 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=117
+            in string name=queryPhrase
+            in class type=Microsoft.Windows.Search.AppContentIndex.TextQueryOptions name=options
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuery return
+    method create_text_query_session
+        method CreateTextQuerySession slot=17 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession return
+    method delete_index static
+        method DeleteIndex slot=9 inputs=2 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexerStatics shape=117 static
+            in string name=indexName
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.DeleteIndexWhileInUseBehavior name=deleteIndexWhileInUseBehavior
+            out class type=Microsoft.Windows.Search.AppContentIndex.DeleteIndexResult return
+    method get_content_item_status
+        method GetContentItemStatus slot=24 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=51
+            in string name=contentId
+            out class type=Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult return
+    method get_content_item_statuses
+        method GetContentItemStatuses slot=25 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=51
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=contentIds
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> return
+    method get_content_items
+        method GetContentItems slot=27 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            out class type=Microsoft.Windows.Search.AppContentIndex.ContentItemReader return
+        method GetContentItems slot=28 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=51
+            in enum_u32 type=Microsoft.Windows.Search.AppContentIndex.QueryContentItemsFilterFlags name=filterFlags
+            out class type=Microsoft.Windows.Search.AppContentIndex.ContentItemReader return
+    method get_content_items_requiring_reindexing
+        method GetContentItemsRequiringReindexing slot=26 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            out class type=Microsoft.Windows.Search.AppContentIndex.ContentItemReader return
+    method get_existing_indexes static
+        method GetExistingIndexes slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexerStatics shape=4 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method get_index_capabilities
+        method GetIndexCapabilities slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            out class type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilities return
+    method get_index_capabilities_of_current_system static
+        method GetIndexCapabilitiesOfCurrentSystem slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexerStatics shape=4 static
+            out class type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilitiesOfCurrentSystem return
+    method get_index_statistics
+        method GetIndexStatistics slot=23 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            out class type=Microsoft.Windows.Search.AppContentIndex.IndexStatistics return
+    method get_or_create_index static
+        method GetOrCreateIndex slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexerStatics shape=51 static
+            in string name=indexName
+            out class type=Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexResult return
+        method GetOrCreateIndex slot=8 inputs=2 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexerStatics shape=117 static
+            in string name=indexName
+            in class type=Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexOptions name=options
+            out class type=Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexResult return
+    method is_content_kind_supported
+        method IsContentKindSupported slot=11 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=51
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.RegionContentKind name=contentKind
+            out boolean return
+    method remove_all_content_items
+        method RemoveAllContentItems slot=21 inputs=0 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=0
+    method remove_content_item
+        method RemoveContentItem slot=19 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            in string name=contentId
+    method remove_content_items
+        method RemoveContentItems slot=20 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=contentIds
+    method wait_for_index_capabilities_async
+        method WaitForIndexCapabilitiesAsync slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> return
+    method wait_for_indexing_idle_async
+        method WaitForIndexingIdleAsync slot=22 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer shape=89
+            in timespan name=timeout
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+class Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion python_type
+    py AppIndexContentRegion
+    signature rc(Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion;{b8f55ac8-35cb-5dec-b89e-39ed81907d23})
+    default Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegion
+    requires Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegion
+    factory Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegionStatics
+    property content_kind
+        get get_ContentKind slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegion shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.RegionContentKind return
+    property region_id
+        get get_RegionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegion shape=4
+            out string return
+    method create_from_bitmap static
+        method CreateFromBitmap slot=10 inputs=2 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegionStatics shape=117 static
+            in string name=regionId
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=image
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion return
+        method CreateFromBitmap slot=11 inputs=3 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegionStatics shape=195 static
+            in string name=regionId
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=image
+            in class type=Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions name=options
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion return
+    method create_from_image_stream static
+        method CreateFromImageStream slot=12 inputs=3 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegionStatics shape=195 static
+            in string name=regionId
+            in int32 name=contentByteCount
+            in interface type=Windows.Storage.Streams.IInputStream name=imageStream
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion return
+        method CreateFromImageStream slot=13 inputs=4 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegionStatics shape=239 static
+            in string name=regionId
+            in int32 name=contentByteCount
+            in interface type=Windows.Storage.Streams.IInputStream name=imageStream
+            in class type=Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions name=options
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion return
+    method create_from_string static
+        method CreateFromString slot=6 inputs=2 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegionStatics shape=117 static
+            in string name=regionId
+            in string name=text
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion return
+        method CreateFromString slot=7 inputs=3 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegionStatics shape=195 static
+            in string name=regionId
+            in string name=text
+            in class type=Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions name=options
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion return
+    method create_from_text_stream static
+        method CreateFromTextStream slot=8 inputs=4 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegionStatics shape=239 static
+            in string name=regionId
+            in int32 name=contentByteCount
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding name=encoding
+            in interface type=Windows.Storage.Streams.IInputStream name=textStream
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion return
+        method CreateFromTextStream slot=9 inputs=5 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegionStatics shape=267 static
+            in string name=regionId
+            in int32 name=contentByteCount
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding name=encoding
+            in interface type=Windows.Storage.Streams.IInputStream name=textStream
+            in class type=Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions name=options
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion return
+
+class Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuery python_type
+    py AppIndexImageQuery
+    signature rc(Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuery;{54642613-c596-5bc2-9d0e-7f542e07906f})
+    default Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuery
+    requires Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuery
+    property language
+        get get_Language slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuery shape=4
+            out string return
+    property query_phrase
+        get get_QueryPhrase slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuery shape=4
+            out string return
+    method get_next_matches
+        method GetNextMatches slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuery shape=51
+            in int32 name=maxCount
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> return
+
+class Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession python_type closeable
+    py AppIndexImageQuerySession
+    signature rc(Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession;{62ebf2f4-035b-55ba-8332-86c618cc0783})
+    default Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession
+    requires Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession
+    requires Windows.Foundation.IClosable
+    factory Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySessionStatics
+    property desired_matches_per_result
+        get get_DesiredMatchesPerResult slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession shape=4
+            out int32 return
+        put put_DesiredMatchesPerResult slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession shape=4
+            in int32 name=value
+    property max_matches_per_result static
+        get get_MaxMatchesPerResult slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySessionStatics shape=4 static
+            out int32 return
+    event result_changed
+        add add_ResultChanged slot=15 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ResultChanged slot=16 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method get_result
+        method GetResult slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession shape=4
+            out class type=Microsoft.Windows.Search.AppContentIndex.ImageQuerySessionResult return
+    method start
+        method Start slot=6 inputs=0 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession shape=0
+        method Start slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession shape=4
+            in class type=Microsoft.Windows.Search.AppContentIndex.ImageQueryOptions name=options
+        method Start slot=8 inputs=2 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession shape=51
+            in class type=Microsoft.Windows.Search.AppContentIndex.ImageQueryOptions name=options
+            in string name=firstQueryPhrase
+    method stop
+        method Stop slot=9 inputs=0 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession shape=0
+        method Stop slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession shape=4
+            in class type=Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch name=chosenMatch
+    method update_query_phrase
+        method UpdateQueryPhrase slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession shape=4
+            in string name=newQueryPhrase
+
+class Microsoft.Windows.Search.AppContentIndex.AppIndexQueryMatch composable python_type
+    py AppIndexQueryMatch
+    signature rc(Microsoft.Windows.Search.AppContentIndex.AppIndexQueryMatch;{95fef777-eb2b-5b23-bcb6-b3b1908116fa})
+    default Microsoft.Windows.Search.AppContentIndex.IAppIndexQueryMatch
+    requires Microsoft.Windows.Search.AppContentIndex.IAppIndexQueryMatch
+    composable Microsoft.Windows.Search.AppContentIndex.IAppIndexQueryMatchFactory
+    property content_id
+        get get_ContentId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexQueryMatch shape=4
+            out string return
+    property content_kind
+        get get_ContentKind slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexQueryMatch shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.QueryMatchContentKind return
+    property region_id
+        get get_RegionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexQueryMatch shape=4
+            out string return
+
+class Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuery python_type
+    py AppIndexTextQuery
+    signature rc(Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuery;{b1993a02-80d1-5cea-97c8-166a60098154})
+    default Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuery
+    requires Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuery
+    property language
+        get get_Language slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuery shape=4
+            out string return
+    property query_phrase
+        get get_QueryPhrase slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuery shape=4
+            out string return
+    method get_next_matches
+        method GetNextMatches slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuery shape=51
+            in int32 name=maxCount
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> return
+
+class Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession python_type closeable
+    py AppIndexTextQuerySession
+    signature rc(Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession;{260cae8c-a16a-5c7d-b8ed-652087ce12ea})
+    default Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession
+    requires Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession
+    requires Windows.Foundation.IClosable
+    factory Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySessionStatics
+    property desired_matches_per_result
+        get get_DesiredMatchesPerResult slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession shape=4
+            out int32 return
+        put put_DesiredMatchesPerResult slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession shape=4
+            in int32 name=value
+    property max_matches_per_result static
+        get get_MaxMatchesPerResult slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySessionStatics shape=4 static
+            out int32 return
+    event result_changed
+        add add_ResultChanged slot=15 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ResultChanged slot=16 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method get_result
+        method GetResult slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession shape=4
+            out class type=Microsoft.Windows.Search.AppContentIndex.TextQuerySessionResult return
+    method start
+        method Start slot=6 inputs=0 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession shape=0
+        method Start slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession shape=4
+            in class type=Microsoft.Windows.Search.AppContentIndex.TextQueryOptions name=options
+        method Start slot=8 inputs=2 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession shape=51
+            in class type=Microsoft.Windows.Search.AppContentIndex.TextQueryOptions name=options
+            in string name=firstQueryPhrase
+    method stop
+        method Stop slot=9 inputs=0 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession shape=0
+        method Stop slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession shape=4
+            in class type=Microsoft.Windows.Search.AppContentIndex.TextQueryMatch name=chosenMatch
+    method update_query_phrase
+        method UpdateQueryPhrase slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession shape=4
+            in string name=newQueryPhrase
+
+enum Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding python_type
+    py AppIndexTextStreamEncoding
+    signature enum(Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding;i4)
+    constant UTF8 0
+    constant UTF16_L_E 1
+
+class Microsoft.Windows.Search.AppContentIndex.AppManagedImageQueryMatch python_type
+    py AppManagedImageQueryMatch
+    signature rc(Microsoft.Windows.Search.AppContentIndex.AppManagedImageQueryMatch;{3ae41e0b-8968-5353-ae25-044a8450c41c})
+    base Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch
+    default Microsoft.Windows.Search.AppContentIndex.IAppManagedImageQueryMatch
+    requires Microsoft.Windows.Search.AppContentIndex.IAppManagedImageQueryMatch
+    property region_of_interest
+        get get_RegionOfInterest slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedImageQueryMatch shape=4
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.Rect> return
+
+class Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent python_type
+    py AppManagedIndexableAppContent
+    signature rc(Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent;{39808fa8-95a5-5dd2-90e4-0159cc2252fa})
+    base Microsoft.Windows.Search.AppContentIndex.IndexableAppContent
+    default Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContent
+    requires Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContent
+    factory Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContentStatics
+    property content_regions
+        get get_ContentRegions slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContent shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> return
+    method create_from_bitmap static
+        method CreateFromBitmap slot=12 inputs=2 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContentStatics shape=117 static
+            in string name=contentId
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmapContent
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent return
+        method CreateFromBitmap slot=13 inputs=3 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContentStatics shape=195 static
+            in string name=contentId
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmapContent
+            in class type=Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions name=regionOptions
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent return
+    method create_from_content_regions static
+        method CreateFromContentRegions slot=14 inputs=2 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContentStatics shape=117 static
+            in string name=contentId
+            in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> name=contentRegions
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent return
+    method create_from_image_stream static
+        method CreateFromImageStream slot=10 inputs=3 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContentStatics shape=195 static
+            in string name=contentId
+            in int32 name=contentByteCount
+            in interface type=Windows.Storage.Streams.IInputStream name=imageStream
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent return
+        method CreateFromImageStream slot=11 inputs=4 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContentStatics shape=239 static
+            in string name=contentId
+            in int32 name=contentByteCount
+            in interface type=Windows.Storage.Streams.IInputStream name=imageStream
+            in class type=Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions name=regionOptions
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent return
+    method create_from_string static
+        method CreateFromString slot=6 inputs=2 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContentStatics shape=117 static
+            in string name=contentId
+            in string name=text
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent return
+        method CreateFromString slot=7 inputs=3 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContentStatics shape=195 static
+            in string name=contentId
+            in string name=text
+            in class type=Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions name=regionOptions
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent return
+    method create_from_text_stream static
+        method CreateFromTextStream slot=8 inputs=4 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContentStatics shape=239 static
+            in string name=contentId
+            in int32 name=contentByteCount
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding name=encoding
+            in interface type=Windows.Storage.Streams.IInputStream name=textStream
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent return
+        method CreateFromTextStream slot=9 inputs=5 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContentStatics shape=267 static
+            in string name=contentId
+            in int32 name=contentByteCount
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding name=encoding
+            in interface type=Windows.Storage.Streams.IInputStream name=textStream
+            in class type=Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions name=regionOptions
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent return
+
+class Microsoft.Windows.Search.AppContentIndex.AppManagedOcrTextQueryMatch python_type
+    py AppManagedOcrTextQueryMatch
+    signature rc(Microsoft.Windows.Search.AppContentIndex.AppManagedOcrTextQueryMatch;{ef37c172-6677-5996-a75e-ce7e861a789c})
+    base Microsoft.Windows.Search.AppContentIndex.TextQueryMatch
+    default Microsoft.Windows.Search.AppContentIndex.IAppManagedOcrTextQueryMatch
+    requires Microsoft.Windows.Search.AppContentIndex.IAppManagedOcrTextQueryMatch
+    property fragment
+        get get_Fragment slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedOcrTextQueryMatch shape=4
+            out string return
+    property subregion
+        get get_Subregion slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedOcrTextQueryMatch shape=4
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.Rect> return
+
+class Microsoft.Windows.Search.AppContentIndex.AppManagedTextQueryMatch python_type
+    py AppManagedTextQueryMatch
+    signature rc(Microsoft.Windows.Search.AppContentIndex.AppManagedTextQueryMatch;{c88506bb-1116-5719-bad1-611dce064e23})
+    base Microsoft.Windows.Search.AppContentIndex.TextQueryMatch
+    default Microsoft.Windows.Search.AppContentIndex.IAppManagedTextQueryMatch
+    requires Microsoft.Windows.Search.AppContentIndex.IAppManagedTextQueryMatch
+    property text_length
+        get get_TextLength slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedTextQueryMatch shape=4
+            out int32 return
+    property text_offset
+        get get_TextOffset slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IAppManagedTextQueryMatch shape=4
+            out int32 return
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[IndexCapabilities, Double]
+    guid 12c7d92c-28c9-57cf-bde8-c98d36cc3c40
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Microsoft.Windows.Search.AppContentIndex.IndexCapabilities;{e3eb1595-3b80-5183-8eaa-2aa606e6b290});f8)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Microsoft.Windows.Search.AppContentIndex.IndexCapabilities
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=49 reverse=2
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> name=asyncInfo
+            in double name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[IndexCapabilities, Double]
+    guid e34c6a54-87ff-5ce9-bb27-4c27ab82a50f
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Microsoft.Windows.Search.AppContentIndex.IndexCapabilities;{e3eb1595-3b80-5183-8eaa-2aa606e6b290});f8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Microsoft.Windows.Search.AppContentIndex.IndexCapabilities
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+enum Microsoft.Windows.Search.AppContentIndex.ContentItemErrorDetail python_type
+    py ContentItemErrorDetail
+    signature enum(Microsoft.Windows.Search.AppContentIndex.ContentItemErrorDetail;i4)
+    constant NO_ERROR 0
+    constant UNKNOWN_FAILURE 1
+    constant UNKNOWN_CONTENT_ID 2
+    constant CONTENT_REGION_ERRORS 3
+    constant INDEX_CORRUPTION 4
+    constant INSUFFICIENT_DISK_SPACE 5
+
+class Microsoft.Windows.Search.AppContentIndex.ContentItemReader python_type iterable
+    py ContentItemReader
+    signature rc(Microsoft.Windows.Search.AppContentIndex.ContentItemReader;{87b04a16-0c70-599a-b8f2-9ff19f9fbdba})
+    default Microsoft.Windows.Search.AppContentIndex.IContentItemReader
+    requires Microsoft.Windows.Search.AppContentIndex.IContentItemReader
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_next_items
+        method GetNextItems slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IContentItemReader shape=51
+            in int32 name=maxCount
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+
+enum Microsoft.Windows.Search.AppContentIndex.ContentItemReindexingStatus python_type
+    py ContentItemReindexingStatus
+    signature enum(Microsoft.Windows.Search.AppContentIndex.ContentItemReindexingStatus;i4)
+    constant NONE 0
+    constant UNSPECIFIED 1
+    constant SEMANTIC_MODEL_CHANGED 2
+    constant CONTENT_UNAVAILABLE 3
+    constant SCHEMA_CHANGED 4
+    constant INDEX_CORRUPTION 5
+
+enum Microsoft.Windows.Search.AppContentIndex.ContentItemStatus python_type
+    py ContentItemStatus
+    signature enum(Microsoft.Windows.Search.AppContentIndex.ContentItemStatus;i4)
+    constant NOT_STARTED 0
+    constant IN_PROGRESS 1
+    constant COMPLETED 2
+    constant COMPLETED_WITH_SOME_ERRORS 3
+    constant ERROR 4
+
+class Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult python_type
+    py ContentItemStatusResult
+    signature rc(Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult;{3b78c653-ef36-5946-8fbe-a36ed97a509f})
+    default Microsoft.Windows.Search.AppContentIndex.IContentItemStatusResult
+    requires Microsoft.Windows.Search.AppContentIndex.IContentItemStatusResult
+    property error_detail
+        get get_ErrorDetail slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IContentItemStatusResult shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.ContentItemErrorDetail return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IContentItemStatusResult shape=4
+            out hresult type=Windows.Foundation.HResult return
+    property reindexing_status
+        get get_ReindexingStatus slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IContentItemStatusResult shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.ContentItemReindexingStatus return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IContentItemStatusResult shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.ContentItemStatus return
+
+class Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions activatable python_type
+    py ContentRegionImageOptions
+    signature rc(Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions;{8f4cf4d2-a106-5251-918c-7603c5452cf8})
+    default Microsoft.Windows.Search.AppContentIndex.IContentRegionImageOptions
+    requires Microsoft.Windows.Search.AppContentIndex.IContentRegionImageOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property suppress_image_semantic_indexing
+        get get_SuppressImageSemanticIndexing slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IContentRegionImageOptions shape=4
+            out boolean return
+        put put_SuppressImageSemanticIndexing slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IContentRegionImageOptions shape=4
+            in boolean name=value
+    property image_ocr_indexing_options
+        get get_ImageOcrIndexingOptions slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IContentRegionImageOptions shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.ImageOcrIndexingOptions return
+        put put_ImageOcrIndexingOptions slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IContentRegionImageOptions shape=4
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.ImageOcrIndexingOptions name=value
+
+class Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions activatable python_type
+    py ContentRegionTextOptions
+    signature rc(Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions;{93b4e811-05fd-5cc3-bf33-414b3ab37854})
+    default Microsoft.Windows.Search.AppContentIndex.IContentRegionTextOptions
+    requires Microsoft.Windows.Search.AppContentIndex.IContentRegionTextOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property language
+        get get_Language slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IContentRegionTextOptions shape=4
+            out string return
+        put put_Language slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IContentRegionTextOptions shape=4
+            in string name=value
+    property allow_semantic_indexing
+        get get_AllowSemanticIndexing slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IContentRegionTextOptions shape=4
+            out boolean return
+        put put_AllowSemanticIndexing slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IContentRegionTextOptions shape=4
+            in boolean name=value
+
+class Microsoft.Windows.Search.AppContentIndex.DeleteIndexResult python_type
+    py DeleteIndexResult
+    signature rc(Microsoft.Windows.Search.AppContentIndex.DeleteIndexResult;{f2af9ca5-03a9-521a-8f41-6a14994664a7})
+    default Microsoft.Windows.Search.AppContentIndex.IDeleteIndexResult
+    requires Microsoft.Windows.Search.AppContentIndex.IDeleteIndexResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IDeleteIndexResult shape=4
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IDeleteIndexResult shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.DeleteIndexStatus return
+    property succeeded
+        get get_Succeeded slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IDeleteIndexResult shape=4
+            out boolean return
+
+enum Microsoft.Windows.Search.AppContentIndex.DeleteIndexStatus python_type
+    py DeleteIndexStatus
+    signature enum(Microsoft.Windows.Search.AppContentIndex.DeleteIndexStatus;i4)
+    constant SUCCESS 0
+    constant INDEX_NOT_FOUND 1
+    constant DEFERRED 2
+    constant UNKNOWN_FAILURE 100
+    constant INDEX_IN_USE 101
+
+enum Microsoft.Windows.Search.AppContentIndex.DeleteIndexWhileInUseBehavior python_type
+    py DeleteIndexWhileInUseBehavior
+    signature enum(Microsoft.Windows.Search.AppContentIndex.DeleteIndexWhileInUseBehavior;i4)
+    constant FAIL_IF_IN_USE 0
+    constant DEFER_IF_IN_USE 1
+
+class Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexOptions activatable python_type
+    py GetOrCreateIndexOptions
+    signature rc(Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexOptions;{80b59bef-099a-54a1-a101-e6915b5b6bc1})
+    default Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions
+    requires Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property text_semantic_requirement
+        get get_TextSemanticRequirement slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilityRequirement return
+        put put_TextSemanticRequirement slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions shape=4
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilityRequirement name=value
+    property text_lexical_requirement
+        get get_TextLexicalRequirement slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilityRequirement return
+        put put_TextLexicalRequirement slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions shape=4
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilityRequirement name=value
+    property image_semantic_requirement
+        get get_ImageSemanticRequirement slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilityRequirement return
+        put put_ImageSemanticRequirement slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions shape=4
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilityRequirement name=value
+    property image_ocr_requirement
+        get get_ImageOcrRequirement slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilityRequirement return
+        put put_ImageOcrRequirement slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions shape=4
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilityRequirement name=value
+    property default_language
+        get get_DefaultLanguage slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions shape=4
+            out string return
+        put put_DefaultLanguage slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions shape=4
+            in string name=value
+    property create_always
+        get get_CreateAlways slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions shape=4
+            out boolean return
+        put put_CreateAlways slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions shape=4
+            in boolean name=value
+
+class Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexResult python_type
+    py GetOrCreateIndexResult
+    signature rc(Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexResult;{ebf3f787-2d85-561a-939b-3ebbaf44cf96})
+    default Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexResult
+    requires Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexResult shape=4
+            out hresult type=Windows.Foundation.HResult return
+    property indexer
+        get get_Indexer slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexResult shape=4
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppContentIndexer return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexResult shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexStatus return
+    property succeeded
+        get get_Succeeded slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexResult shape=4
+            out boolean return
+
+enum Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexStatus python_type
+    py GetOrCreateIndexStatus
+    signature enum(Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexStatus;i4)
+    constant CREATED_NEW 0
+    constant OPENED_EXISTING 1
+    constant UNKNOWN_FAILURE 100
+    constant INVALID_OPTIONS 101
+    constant INCOMPATIBLE_WITH_EXISTING_OPTIONS 102
+    constant UNSUPPORTED_DEFAULT_LANGUAGE 103
+    constant INVALID_INDEX_NAME 104
+    constant DEFERRED_DELETION_FAILED 105
+    constant LEXICAL_MODELS_NOT_AVAILABLE 106
+    constant SEMANTIC_MODELS_NOT_AVAILABLE 107
+    constant OCR_MODELS_NOT_AVAILABLE 108
+    constant INDEX_IS_PENDING_DELETION 109
+    constant SEMANTIC_TEXT_INDEX_STORE_FAILURE 110
+    constant SEMANTIC_OCR_TEXT_INDEX_STORE_FAILURE 111
+    constant SEMANTIC_IMAGE_INDEX_STORE_FAILURE 112
+    constant APP_CONTENT_INDEXER_FILE_LOCKED_ERROR 113
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppContentIndexListener
+    guid 2ee89548-521d-510a-893a-1731c6fad619
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppContentIndexer
+    guid f246f681-eae8-503b-8723-b1984c8882b0
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppContentIndexerStatics
+    guid a95dcaa2-4897-522d-a035-950bcb03e49f
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegion
+    guid b8f55ac8-35cb-5dec-b89e-39ed81907d23
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppIndexContentRegionStatics
+    guid 9529149a-91a8-50df-acfe-756eeea82d4f
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuery
+    guid 54642613-c596-5bc2-9d0e-7f542e07906f
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySession
+    guid 62ebf2f4-035b-55ba-8332-86c618cc0783
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppIndexImageQuerySessionStatics
+    guid 69c6d023-f4d9-5247-a9af-f6c400e22714
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppIndexQueryMatch
+    guid 95fef777-eb2b-5b23-bcb6-b3b1908116fa
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppIndexQueryMatchFactory
+    guid 1c79da3e-6ff0-503c-8934-6ca4baaf5d4e
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuery
+    guid b1993a02-80d1-5cea-97c8-166a60098154
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySession
+    guid 260cae8c-a16a-5c7d-b8ed-652087ce12ea
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppIndexTextQuerySessionStatics
+    guid 2cd6ae32-60d7-5642-84eb-3efd535ab3f0
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppManagedImageQueryMatch
+    guid 3ae41e0b-8968-5353-ae25-044a8450c41c
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContent
+    guid 39808fa8-95a5-5dd2-90e4-0159cc2252fa
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppManagedIndexableAppContentStatics
+    guid f21620e7-0d6a-56d5-b7a6-459a715e3cf7
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppManagedOcrTextQueryMatch
+    guid ef37c172-6677-5996-a75e-ce7e861a789c
+
+interface Microsoft.Windows.Search.AppContentIndex.IAppManagedTextQueryMatch
+    guid c88506bb-1116-5719-bad1-611dce064e23
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[IndexCapabilities, Double]
+    guid 433b8a9d-4316-521a-8bc6-c024044d533e
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.Search.AppContentIndex.IndexCapabilities;{e3eb1595-3b80-5183-8eaa-2aa606e6b290});f8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.Search.AppContentIndex.IndexCapabilities
+    argument System.Double
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Search.AppContentIndex.IndexCapabilities,System.Double> shape=4 reverse=121 role=get_results
+            out class type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilities return
+
+interface Microsoft.Windows.Search.AppContentIndex.IContentItemReader
+    guid 87b04a16-0c70-599a-b8f2-9ff19f9fbdba
+
+interface Microsoft.Windows.Search.AppContentIndex.IContentItemStatusResult
+    guid 3b78c653-ef36-5946-8fbe-a36ed97a509f
+
+interface Microsoft.Windows.Search.AppContentIndex.IContentRegionImageOptions
+    guid 8f4cf4d2-a106-5251-918c-7603c5452cf8
+
+interface Microsoft.Windows.Search.AppContentIndex.IContentRegionTextOptions
+    guid 93b4e811-05fd-5cc3-bf33-414b3ab37854
+
+interface Microsoft.Windows.Search.AppContentIndex.IDeleteIndexResult
+    guid f2af9ca5-03a9-521a-8f41-6a14994664a7
+
+interface Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexOptions
+    guid 80b59bef-099a-54a1-a101-e6915b5b6bc1
+
+interface Microsoft.Windows.Search.AppContentIndex.IGetOrCreateIndexResult
+    guid ebf3f787-2d85-561a-939b-3ebbaf44cf96
+
+interface Microsoft.Windows.Search.AppContentIndex.IImageQueryMatch
+    guid 18e69c41-df0b-5c92-852a-4df5501b63c8
+
+interface Microsoft.Windows.Search.AppContentIndex.IImageQueryMatchFactory
+    guid 5eb58ac9-085e-55a4-bbc7-5593f9d9af8c
+
+interface Microsoft.Windows.Search.AppContentIndex.IImageQueryOptions
+    guid 8275e054-8ebf-5e50-abab-9bc7b0ce4912
+
+interface Microsoft.Windows.Search.AppContentIndex.IImageQuerySessionResult
+    guid db6564f0-cb24-5cf6-afba-0d21ce25b8fa
+
+interface Microsoft.Windows.Search.AppContentIndex.IIndexCapabilities
+    guid e3eb1595-3b80-5183-8eaa-2aa606e6b290
+
+interface Microsoft.Windows.Search.AppContentIndex.IIndexCapabilitiesOfCurrentSystem
+    guid 92274a42-221c-57a0-ace1-711a56e16af0
+
+interface Microsoft.Windows.Search.AppContentIndex.IIndexCapabilityState
+    guid c00c4dbd-e259-5930-bb4f-f1d8a8e8f7cb
+
+interface Microsoft.Windows.Search.AppContentIndex.IIndexStatistics
+    guid 16475c25-15a2-5e56-bd81-f7abae16993d
+
+interface Microsoft.Windows.Search.AppContentIndex.IIndexableAppContent
+    guid 8f8751ce-58a2-569c-a2d5-af9a795a005a
+
+interface Microsoft.Windows.Search.AppContentIndex.IIndexableAppContentFactory
+    guid 44fbfe73-232c-593a-9f1b-3e5008ee9bef
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AppIndexContentRegion]
+    guid 93160f4a-db23-5984-98ae-a90a61bc9866
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion;{b8f55ac8-35cb-5dec-b89e-39ed81907d23}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ContentItemStatusResult]
+    guid 9ac44eef-9bc2-5b75-abdf-46a8747f7b84
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult;{3b78c653-ef36-5946-8fbe-a36ed97a509f}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ImageQueryMatch]
+    guid 1e567795-5ef1-509a-ac82-c2063968607a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch;{18e69c41-df0b-5c92-852a-4df5501b63c8}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.IndexCapability> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IndexCapability]
+    guid 761f44fe-4c76-5245-9d4e-cdc9c4e5c962
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Microsoft.Windows.Search.AppContentIndex.IndexCapability;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.Search.AppContentIndex.IndexCapability
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.IndexCapability> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.IndexCapability> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[TextQueryMatch]
+    guid 7d5155be-affe-558e-95f5-70e3e19584f9
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.Search.AppContentIndex.TextQueryMatch;{ab1db800-01d1-595f-af66-7a63746610cb}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.Search.AppContentIndex.TextQueryMatch
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> return
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, ContentItemStatusResult]]
+    guid cefb4e92-be07-55f3-85b3-69473c767985
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult;{3b78c653-ef36-5946-8fbe-a36ed97a509f})))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>> return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AppIndexContentRegion]
+    guid c7ce71f5-a020-546d-8c56-9ef6ef73d7b2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion;{b8f55ac8-35cb-5dec-b89e-39ed81907d23}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> shape=4 reverse=22 role=current
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> shape=117 reverse=101 role=get_many
+            fill_array class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ContentItemStatusResult]
+    guid ec075dc5-836b-5907-a18e-8f7e9993a825
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult;{3b78c653-ef36-5946-8fbe-a36ed97a509f}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=4 reverse=22 role=current
+            out class type=Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=117 reverse=101 role=get_many
+            fill_array class type=Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ImageQueryMatch]
+    guid 5e398c6c-9c51-59a8-8930-b9777fa1554d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch;{18e69c41-df0b-5c92-852a-4df5501b63c8}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> shape=4 reverse=22 role=current
+            out class type=Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> shape=117 reverse=101 role=get_many
+            fill_array class type=Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.IndexCapability> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IndexCapability]
+    guid 58a2f3f6-2cb8-53ff-9dd7-9ce434e9ad6b
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Microsoft.Windows.Search.AppContentIndex.IndexCapability;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.Search.AppContentIndex.IndexCapability
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.IndexCapability> shape=4 reverse=22 role=current
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapability return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.IndexCapability> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.IndexCapability> shape=117 reverse=101 role=get_many
+            fill_array enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapability name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.IndexCapability> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[TextQueryMatch]
+    guid e37c07cf-1a5a-5a9c-a615-fde85e1a9775
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.Search.AppContentIndex.TextQueryMatch;{ab1db800-01d1-595f-af66-7a63746610cb}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.Search.AppContentIndex.TextQueryMatch
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> shape=4 reverse=22 role=current
+            out class type=Microsoft.Windows.Search.AppContentIndex.TextQueryMatch return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> shape=117 reverse=101 role=get_many
+            fill_array class type=Microsoft.Windows.Search.AppContentIndex.TextQueryMatch name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, ContentItemStatusResult]]
+    guid 29293bcf-806b-5840-ba1b-b85f15d55522
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult;{3b78c653-ef36-5946-8fbe-a36ed97a509f})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>> shape=117 reverse=101 role=get_many
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, ContentItemStatusResult]
+    guid df656fd0-6cf4-5eee-9ba6-209a63f696da
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;rc(Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult;{3b78c653-ef36-5946-8fbe-a36ed97a509f}))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=4 reverse=22 role=pair_key
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=4 reverse=43 role=pair_value
+            out class type=Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult return
+
+interface Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, ContentItemStatusResult]
+    guid e58aae44-572b-512a-8b9b-6693bb77d078
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult;{3b78c653-ef36-5946-8fbe-a36ed97a509f}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>>
+    argument System.String
+    argument Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=51 reverse=24 role=lookup
+            in string name=key
+            out class type=Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=51 reverse=100 role=split
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> name=second
+
+interface Windows.Foundation.IReference<Windows.Foundation.Rect> concrete
+    py winrt.windows.foundation._IReference[Rect]
+    guid 80423f11-054f-5eac-afd3-63b6ce15e77b
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.Rect;f4;f4;f4;f4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument Windows.Foundation.Rect
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.Rect> shape=4 reverse=22 role=value
+            out struct type=Windows.Foundation.Rect return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Microsoft.Windows.Search.AppContentIndex.ITextQueryMatch
+    guid ab1db800-01d1-595f-af66-7a63746610cb
+
+interface Microsoft.Windows.Search.AppContentIndex.ITextQueryMatchFactory
+    guid a2f24864-5094-5606-af67-96aee5564f8b
+
+interface Microsoft.Windows.Search.AppContentIndex.ITextQueryOptions
+    guid 33641046-ee24-5ae1-9999-4f58dca7c1c2
+
+interface Microsoft.Windows.Search.AppContentIndex.ITextQuerySessionResult
+    guid 72b9da3b-b5a8-544e-880f-10998e8c0568
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AppIndexContentRegion]
+    guid ed469f87-8e3e-5602-87bb-1b4a22f7e2d5
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion;{b8f55ac8-35cb-5dec-b89e-39ed81907d23}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion>
+    argument Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> shape=117 reverse=66 role=index_of
+            in class type=Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ContentItemStatusResult]
+    guid 93bbb356-9fce-50c8-abfb-03fc67572fdb
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult;{3b78c653-ef36-5946-8fbe-a36ed97a509f}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>
+    argument Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> shape=117 reverse=66 role=index_of
+            in class type=Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ImageQueryMatch]
+    guid b5d4a088-e1a1-512d-80c7-b5ce8da6a6f6
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch;{18e69c41-df0b-5c92-852a-4df5501b63c8}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch>
+    argument Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> shape=117 reverse=66 role=index_of
+            in class type=Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.IndexCapability> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IndexCapability]
+    guid 988a9604-8f1f-5057-8a61-067475b2e3e2
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Microsoft.Windows.Search.AppContentIndex.IndexCapability;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.IndexCapability>
+    argument Microsoft.Windows.Search.AppContentIndex.IndexCapability
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.IndexCapability> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.IndexCapability> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.IndexCapability> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.IndexCapability> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapability return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.IndexCapability> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapability name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.IndexCapability> shape=117 reverse=66 role=index_of
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapability name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[TextQueryMatch]
+    guid a9766377-df07-5331-9a34-19fd55a02915
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.Search.AppContentIndex.TextQueryMatch;{ab1db800-01d1-595f-af66-7a63746610cb}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch>
+    argument Microsoft.Windows.Search.AppContentIndex.TextQueryMatch
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.Search.AppContentIndex.TextQueryMatch return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.Search.AppContentIndex.TextQueryMatch name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> shape=117 reverse=66 role=index_of
+            in class type=Microsoft.Windows.Search.AppContentIndex.TextQueryMatch name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
+            in string name=value
+            out uint32 name=index
+            out boolean return
+
+enum Microsoft.Windows.Search.AppContentIndex.ImageOcrIndexingOptions python_type
+    py ImageOcrIndexingOptions
+    signature enum(Microsoft.Windows.Search.AppContentIndex.ImageOcrIndexingOptions;i4)
+    constant DEFAULT 0
+    constant SUPPRESS_SEMANTIC_INDEXING 1
+    constant SUPPRESS_LEXICAL_AND_SEMANTIC_INDEXING 2
+
+class Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch composable python_type
+    py ImageQueryMatch
+    signature rc(Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch;{18e69c41-df0b-5c92-852a-4df5501b63c8})
+    base Microsoft.Windows.Search.AppContentIndex.AppIndexQueryMatch
+    default Microsoft.Windows.Search.AppContentIndex.IImageQueryMatch
+    requires Microsoft.Windows.Search.AppContentIndex.IImageQueryMatch
+    composable Microsoft.Windows.Search.AppContentIndex.IImageQueryMatchFactory
+
+class Microsoft.Windows.Search.AppContentIndex.ImageQueryOptions activatable python_type
+    py ImageQueryOptions
+    signature rc(Microsoft.Windows.Search.AppContentIndex.ImageQueryOptions;{8275e054-8ebf-5e50-abab-9bc7b0ce4912})
+    default Microsoft.Windows.Search.AppContentIndex.IImageQueryOptions
+    requires Microsoft.Windows.Search.AppContentIndex.IImageQueryOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property match_scope
+        get get_MatchScope slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IImageQueryOptions shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.QueryMatchScope return
+        put put_MatchScope slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IImageQueryOptions shape=4
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.QueryMatchScope name=value
+    property language
+        get get_Language slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IImageQueryOptions shape=4
+            out string return
+        put put_Language slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.IImageQueryOptions shape=4
+            in string name=value
+
+class Microsoft.Windows.Search.AppContentIndex.ImageQuerySessionResult python_type
+    py ImageQuerySessionResult
+    signature rc(Microsoft.Windows.Search.AppContentIndex.ImageQuerySessionResult;{db6564f0-cb24-5cf6-afba-0d21ce25b8fa})
+    default Microsoft.Windows.Search.AppContentIndex.IImageQuerySessionResult
+    requires Microsoft.Windows.Search.AppContentIndex.IImageQuerySessionResult
+    property is_valid
+        get get_IsValid slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IImageQuerySessionResult shape=4
+            out boolean return
+    property matches
+        get get_Matches slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IImageQuerySessionResult shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> return
+    property query_options
+        get get_QueryOptions slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IImageQuerySessionResult shape=4
+            out class type=Microsoft.Windows.Search.AppContentIndex.ImageQueryOptions return
+    property query_phrase
+        get get_QueryPhrase slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IImageQuerySessionResult shape=4
+            out string return
+
+class Microsoft.Windows.Search.AppContentIndex.IndexCapabilities python_type
+    py IndexCapabilities
+    signature rc(Microsoft.Windows.Search.AppContentIndex.IndexCapabilities;{e3eb1595-3b80-5183-8eaa-2aa606e6b290})
+    default Microsoft.Windows.Search.AppContentIndex.IIndexCapabilities
+    requires Microsoft.Windows.Search.AppContentIndex.IIndexCapabilities
+    property has_capabilities_with_errors
+        get get_HasCapabilitiesWithErrors slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexCapabilities shape=4
+            out boolean return
+    method get_capabilities_with_errors
+        method GetCapabilitiesWithErrors slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexCapabilities shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.IndexCapability> return
+    method get_capability_state
+        method GetCapabilityState slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexCapabilities shape=51
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapability name=capability
+            out class type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilityState return
+
+class Microsoft.Windows.Search.AppContentIndex.IndexCapabilitiesOfCurrentSystem python_type
+    py IndexCapabilitiesOfCurrentSystem
+    signature rc(Microsoft.Windows.Search.AppContentIndex.IndexCapabilitiesOfCurrentSystem;{92274a42-221c-57a0-ace1-711a56e16af0})
+    default Microsoft.Windows.Search.AppContentIndex.IIndexCapabilitiesOfCurrentSystem
+    requires Microsoft.Windows.Search.AppContentIndex.IIndexCapabilitiesOfCurrentSystem
+    method get_index_capability_status
+        method GetIndexCapabilityStatus slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexCapabilitiesOfCurrentSystem shape=51
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapability name=capability
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilityOfCurrentSystemStatus return
+    method get_language_status_for_index_capability
+        method GetLanguageStatusForIndexCapability slot=7 inputs=2 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexCapabilitiesOfCurrentSystem shape=117
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapability name=capability
+            in string name=language
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilityLanguageStatus return
+
+enum Microsoft.Windows.Search.AppContentIndex.IndexCapability python_type
+    py IndexCapability
+    signature enum(Microsoft.Windows.Search.AppContentIndex.IndexCapability;i4)
+    constant TEXT_LEXICAL 0
+    constant TEXT_SEMANTIC 1
+    constant IMAGE_OCR 2
+    constant IMAGE_SEMANTIC 3
+
+enum Microsoft.Windows.Search.AppContentIndex.IndexCapabilityInitializationStatus python_type
+    py IndexCapabilityInitializationStatus
+    signature enum(Microsoft.Windows.Search.AppContentIndex.IndexCapabilityInitializationStatus;i4)
+    constant UNKNOWN 0
+    constant INITIALIZED 1
+    constant INITIALIZING 2
+    constant SUPPRESSED 3
+    constant NOT_SUPPORTED 4
+    constant DISABLED_BY_POLICY 5
+    constant INITIALIZATION_ERROR 100
+
+enum Microsoft.Windows.Search.AppContentIndex.IndexCapabilityLanguageStatus python_type
+    py IndexCapabilityLanguageStatus
+    signature enum(Microsoft.Windows.Search.AppContentIndex.IndexCapabilityLanguageStatus;i4)
+    constant SUPPORTED 0
+    constant PARTIAL 1
+    constant NOT_SUPPORTED 2
+
+enum Microsoft.Windows.Search.AppContentIndex.IndexCapabilityOfCurrentSystemStatus python_type
+    py IndexCapabilityOfCurrentSystemStatus
+    signature enum(Microsoft.Windows.Search.AppContentIndex.IndexCapabilityOfCurrentSystemStatus;i4)
+    constant READY 0
+    constant NOT_READY 1
+    constant DISABLED_BY_POLICY 2
+    constant NOT_SUPPORTED 3
+
+enum Microsoft.Windows.Search.AppContentIndex.IndexCapabilityRequirement python_type
+    py IndexCapabilityRequirement
+    signature enum(Microsoft.Windows.Search.AppContentIndex.IndexCapabilityRequirement;i4)
+    constant DEFAULT 0
+    constant SUPPRESSED 1
+    constant REQUIRED 2
+
+class Microsoft.Windows.Search.AppContentIndex.IndexCapabilityState python_type
+    py IndexCapabilityState
+    signature rc(Microsoft.Windows.Search.AppContentIndex.IndexCapabilityState;{c00c4dbd-e259-5930-bb4f-f1d8a8e8f7cb})
+    default Microsoft.Windows.Search.AppContentIndex.IIndexCapabilityState
+    requires Microsoft.Windows.Search.AppContentIndex.IIndexCapabilityState
+    property capability
+        get get_Capability slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexCapabilityState shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapability return
+    property error_message
+        get get_ErrorMessage slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexCapabilityState shape=4
+            out string return
+    property extended_error
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexCapabilityState shape=4
+            out hresult type=Windows.Foundation.HResult return
+    property initialization_status
+        get get_InitializationStatus slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexCapabilityState shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilityInitializationStatus return
+
+class Microsoft.Windows.Search.AppContentIndex.IndexStatistics python_type
+    py IndexStatistics
+    signature rc(Microsoft.Windows.Search.AppContentIndex.IndexStatistics;{16475c25-15a2-5e56-bd81-f7abae16993d})
+    default Microsoft.Windows.Search.AppContentIndex.IIndexStatistics
+    requires Microsoft.Windows.Search.AppContentIndex.IIndexStatistics
+    property completed_count
+        get get_CompletedCount slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexStatistics shape=4
+            out int32 return
+    property errors_count
+        get get_ErrorsCount slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexStatistics shape=4
+            out int32 return
+    property in_progress_count
+        get get_InProgressCount slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexStatistics shape=4
+            out int32 return
+    property indexing_in_progress
+        get get_IndexingInProgress slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexStatistics shape=4
+            out boolean return
+    property item_count
+        get get_ItemCount slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexStatistics shape=4
+            out int32 return
+    property not_started_count
+        get get_NotStartedCount slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexStatistics shape=4
+            out int32 return
+    property pending_deletion_count
+        get get_PendingDeletionCount slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexStatistics shape=4
+            out int32 return
+    property requiring_reindexing_count
+        get get_RequiringReindexingCount slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexStatistics shape=4
+            out int32 return
+
+class Microsoft.Windows.Search.AppContentIndex.IndexableAppContent composable python_type
+    py IndexableAppContent
+    signature rc(Microsoft.Windows.Search.AppContentIndex.IndexableAppContent;{8f8751ce-58a2-569c-a2d5-af9a795a005a})
+    default Microsoft.Windows.Search.AppContentIndex.IIndexableAppContent
+    requires Microsoft.Windows.Search.AppContentIndex.IIndexableAppContent
+    composable Microsoft.Windows.Search.AppContentIndex.IIndexableAppContentFactory
+    property content_id
+        get get_ContentId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.IIndexableAppContent shape=4
+            out string return
+
+enum Microsoft.Windows.Search.AppContentIndex.QueryContentItemsFilterFlags python_type flags_enum
+    py QueryContentItemsFilterFlags
+    signature enum(Microsoft.Windows.Search.AppContentIndex.QueryContentItemsFilterFlags;u4)
+    constant NOT_STARTED 0x1
+    constant IN_PROGRESS 0x2
+    constant COMPLETED 0x4
+    constant WITH_ERRORS 0x8
+    constant PENDING_DELETION 0x10
+    constant REQUIRING_REINDEXING 0x20
+
+enum Microsoft.Windows.Search.AppContentIndex.QueryMatchContentKind python_type
+    py QueryMatchContentKind
+    signature enum(Microsoft.Windows.Search.AppContentIndex.QueryMatchContentKind;i4)
+    constant APP_MANAGED_TEXT 0
+    constant APP_MANAGED_IMAGE 1
+    constant APP_MANAGED_OCR_TEXT 2
+
+enum Microsoft.Windows.Search.AppContentIndex.QueryMatchScope python_type
+    py QueryMatchScope
+    signature enum(Microsoft.Windows.Search.AppContentIndex.QueryMatchScope;i4)
+    constant UNCONSTRAINED 0
+    constant REGION 1
+    constant CONTENT_ITEM 2
+
+enum Microsoft.Windows.Search.AppContentIndex.RegionContentKind python_type
+    py RegionContentKind
+    signature enum(Microsoft.Windows.Search.AppContentIndex.RegionContentKind;i4)
+    constant TEXT 0
+    constant IMAGE 1
+
+enum Microsoft.Windows.Search.AppContentIndex.TextLexicalMatchType python_type
+    py TextLexicalMatchType
+    signature enum(Microsoft.Windows.Search.AppContentIndex.TextLexicalMatchType;i4)
+    constant FUZZY 0
+    constant EXACT 1
+
+class Microsoft.Windows.Search.AppContentIndex.TextQueryMatch composable python_type
+    py TextQueryMatch
+    signature rc(Microsoft.Windows.Search.AppContentIndex.TextQueryMatch;{ab1db800-01d1-595f-af66-7a63746610cb})
+    base Microsoft.Windows.Search.AppContentIndex.AppIndexQueryMatch
+    default Microsoft.Windows.Search.AppContentIndex.ITextQueryMatch
+    requires Microsoft.Windows.Search.AppContentIndex.ITextQueryMatch
+    composable Microsoft.Windows.Search.AppContentIndex.ITextQueryMatchFactory
+
+class Microsoft.Windows.Search.AppContentIndex.TextQueryOptions activatable python_type
+    py TextQueryOptions
+    signature rc(Microsoft.Windows.Search.AppContentIndex.TextQueryOptions;{33641046-ee24-5ae1-9999-4f58dca7c1c2})
+    default Microsoft.Windows.Search.AppContentIndex.ITextQueryOptions
+    requires Microsoft.Windows.Search.AppContentIndex.ITextQueryOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property text_match_type
+        get get_TextMatchType slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.ITextQueryOptions shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.TextLexicalMatchType return
+        put put_TextMatchType slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.ITextQueryOptions shape=4
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.TextLexicalMatchType name=value
+    property suppress_semantic_matches
+        get get_SuppressSemanticMatches slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.ITextQueryOptions shape=4
+            out boolean return
+        put put_SuppressSemanticMatches slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.ITextQueryOptions shape=4
+            in boolean name=value
+    property match_scope
+        get get_MatchScope slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.ITextQueryOptions shape=4
+            out enum32 type=Microsoft.Windows.Search.AppContentIndex.QueryMatchScope return
+        put put_MatchScope slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.ITextQueryOptions shape=4
+            in enum32 type=Microsoft.Windows.Search.AppContentIndex.QueryMatchScope name=value
+    property language
+        get get_Language slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.ITextQueryOptions shape=4
+            out string return
+        put put_Language slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Search.AppContentIndex.ITextQueryOptions shape=4
+            in string name=value
+
+class Microsoft.Windows.Search.AppContentIndex.TextQuerySessionResult python_type
+    py TextQuerySessionResult
+    signature rc(Microsoft.Windows.Search.AppContentIndex.TextQuerySessionResult;{72b9da3b-b5a8-544e-880f-10998e8c0568})
+    default Microsoft.Windows.Search.AppContentIndex.ITextQuerySessionResult
+    requires Microsoft.Windows.Search.AppContentIndex.ITextQuerySessionResult
+    property is_valid
+        get get_IsValid slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.ITextQuerySessionResult shape=4
+            out boolean return
+    property matches
+        get get_Matches slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.ITextQuerySessionResult shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> return
+    property query_options
+        get get_QueryOptions slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.ITextQuerySessionResult shape=4
+            out class type=Microsoft.Windows.Search.AppContentIndex.TextQueryOptions return
+    property query_phrase
+        get get_QueryPhrase slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Search.AppContentIndex.ITextQuerySessionResult shape=4
+            out string return
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Windows.Search.AppContentIndex.AppContentIndexer,Microsoft.Windows.Search.AppContentIndex.IndexCapabilities> concrete
+    py winrt.windows.foundation.TypedEventHandler[AppContentIndexer, IndexCapabilities]
+    guid 836c723a-64c1-5085-b1c4-ff00df2fd0bd
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Windows.Search.AppContentIndex.AppContentIndexer;{f246f681-eae8-503b-8723-b1984c8882b0});rc(Microsoft.Windows.Search.AppContentIndex.IndexCapabilities;{e3eb1595-3b80-5183-8eaa-2aa606e6b290}))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Windows.Search.AppContentIndex.AppContentIndexer
+    argument Microsoft.Windows.Search.AppContentIndex.IndexCapabilities
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Windows.Search.AppContentIndex.AppContentIndexer name=sender
+            in class type=Microsoft.Windows.Search.AppContentIndex.IndexCapabilities name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Windows.Search.AppContentIndex.AppContentIndexer,Microsoft.Windows.Search.AppContentIndex.IndexStatistics> concrete
+    py winrt.windows.foundation.TypedEventHandler[AppContentIndexer, IndexStatistics]
+    guid 362f8b07-b78b-5f14-9b7d-7485f642c692
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Windows.Search.AppContentIndex.AppContentIndexer;{f246f681-eae8-503b-8723-b1984c8882b0});rc(Microsoft.Windows.Search.AppContentIndex.IndexStatistics;{16475c25-15a2-5e56-bd81-f7abae16993d}))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Windows.Search.AppContentIndex.AppContentIndexer
+    argument Microsoft.Windows.Search.AppContentIndex.IndexStatistics
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Windows.Search.AppContentIndex.AppContentIndexer name=sender
+            in class type=Microsoft.Windows.Search.AppContentIndex.IndexStatistics name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Windows.Search.AppContentIndex.AppContentIndexer,Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>> concrete
+    py winrt.windows.foundation.TypedEventHandler[AppContentIndexer, IMapView[String, ContentItemStatusResult]]
+    guid cc4f2e5d-5f66-514c-b224-1c02bd68950f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Windows.Search.AppContentIndex.AppContentIndexer;{f246f681-eae8-503b-8723-b1984c8882b0});pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;rc(Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult;{3b78c653-ef36-5946-8fbe-a36ed97a509f})))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Windows.Search.AppContentIndex.AppContentIndexer
+    argument Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Windows.Search.AppContentIndex.AppContentIndexer name=sender
+            in parameterized type=Windows.Foundation.Collections.IMapView<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult> name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[AppIndexImageQuerySession, Object]
+    guid d49b6723-f16f-5942-9656-2094ffd01fc4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession;{62ebf2f4-035b-55ba-8332-86c618cc0783});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession name=sender
+            in object name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[AppIndexTextQuerySession, Object]
+    guid 64179e18-f369-5fde-afd3-1dad9c97bdf1
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession;{260cae8c-a16a-5c7d-b8ed-652087ce12ea});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession name=sender
+            in object name=args
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Double external
+    py winrt.system.Double
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+class Windows.Graphics.Imaging.SoftwareBitmap external
+    py winrt.windows.graphics.imaging.SoftwareBitmap
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da
