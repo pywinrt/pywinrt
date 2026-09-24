@@ -1,12 +1,12 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["hatchling", "winrt-table-compiler"]
+requires = ["hatchling", "winrt-table-compiler>=4.0.0,<5"]
 build-backend = "hatchling.build"
 
 [project]
 name = "winui3-Microsoft.UI.Xaml.Controls"
-version = "0.0.0"
+version = "4!1.7.250513003"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"
@@ -18,42 +18,44 @@ classifiers = [
 ]
 requires-python = ">=3.11"
 dependencies = [
-    "winrt-runtime~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml.Automation.Peers~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml.Controls.Primitives~=0.0.0.0",
+    "winrt-runtime>=4.0.0,<5",
+    "winrt-Windows.Foundation>=4!10.0.26100.4188",
+    "winrt-Windows.Foundation.Collections>=4!10.0.26100.4188",
+    "winui3-Microsoft.UI.Xaml~=4!1.7.250513003.0",
+    "winui3-Microsoft.UI.Xaml.Automation.Peers~=4!1.7.250513003.0",
+    "winui3-Microsoft.UI.Xaml.Controls.Primitives~=4!1.7.250513003.0",
 ]
 
 [project.optional-dependencies]
 all = [
-    "webview2-Microsoft.Web.WebView2.Core[all]~=0.0.0.0",
-    "winrt-Windows.ApplicationModel.Contacts[all]~=0.0.0.0",
-    "winrt-Windows.ApplicationModel.DataTransfer[all]~=0.0.0.0",
-    "winrt-Windows.Devices.Geolocation[all]~=0.0.0.0",
-    "winrt-Windows.Foundation[all]~=0.0.0.0",
-    "winrt-Windows.Foundation.Collections[all]~=0.0.0.0",
-    "winrt-Windows.Foundation.Numerics[all]~=0.0.0.0",
-    "winrt-Windows.Globalization[all]~=0.0.0.0",
-    "winrt-Windows.Globalization.NumberFormatting[all]~=0.0.0.0",
-    "winrt-Windows.Media.Casting[all]~=0.0.0.0",
-    "winrt-Windows.Media.Playback[all]~=0.0.0.0",
-    "winrt-Windows.UI[all]~=0.0.0.0",
-    "winrt-Windows.UI.Text[all]~=0.0.0.0",
-    "winrt-Windows.UI.Xaml.Interop[all]~=0.0.0.0",
-    "winui3-Microsoft.UI[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Composition[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Input[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Text[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml.Automation.Peers[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml.Controls.Primitives[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml.Data[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml.Documents[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml.Input[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml.Interop[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml.Media[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml.Media.Animation[all]~=0.0.0.0",
-    "winui3-Microsoft.UI.Xaml.Navigation[all]~=0.0.0.0",
+    "webview2-Microsoft.Web.WebView2.Core[all]>=4!1.0.3240.44",
+    "winrt-Windows.ApplicationModel.Contacts[all]>=4!10.0.26100.4188",
+    "winrt-Windows.ApplicationModel.DataTransfer[all]>=4!10.0.26100.4188",
+    "winrt-Windows.Devices.Geolocation[all]>=4!10.0.26100.4188",
+    "winrt-Windows.Foundation[all]>=4!10.0.26100.4188",
+    "winrt-Windows.Foundation.Collections[all]>=4!10.0.26100.4188",
+    "winrt-Windows.Foundation.Numerics[all]>=4!10.0.26100.4188",
+    "winrt-Windows.Globalization[all]>=4!10.0.26100.4188",
+    "winrt-Windows.Globalization.NumberFormatting[all]>=4!10.0.26100.4188",
+    "winrt-Windows.Media.Casting[all]>=4!10.0.26100.4188",
+    "winrt-Windows.Media.Playback[all]>=4!10.0.26100.4188",
+    "winrt-Windows.UI[all]>=4!10.0.26100.4188",
+    "winrt-Windows.UI.Text[all]>=4!10.0.26100.4188",
+    "winrt-Windows.UI.Xaml.Interop[all]>=4!10.0.26100.4188",
+    "winui3-Microsoft.UI[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Composition[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Input[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Text[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Xaml[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Xaml.Automation.Peers[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Xaml.Controls.Primitives[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Xaml.Data[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Xaml.Documents[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Xaml.Input[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Xaml.Interop[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Xaml.Media[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Xaml.Media.Animation[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Xaml.Navigation[all]>=4!1.7.250513003",
 ]
 
 [project.urls]

@@ -10,6 +10,8 @@ on:
       - next
     paths:
       - .github/workflows/generate.yaml
+      # what every package is versioned from
+      - .config/_tools.json
       - projection/**
       - interop/**
       - runtime/**
@@ -19,9 +21,12 @@ on:
       - scripts/generate-cppwinrt.py
       - scripts/generate-pywinrt.py
       - scripts/generate-pyproject.py
+      - scripts/versions.py
   pull_request:
     paths:
       - .github/workflows/generate.yaml
+      # what every package is versioned from
+      - .config/_tools.json
       - projection/**
       - interop/**
       - runtime/**
@@ -31,6 +36,7 @@ on:
       - scripts/generate-cppwinrt.py
       - scripts/generate-pywinrt.py
       - scripts/generate-pyproject.py
+      - scripts/versions.py
 
 jobs:
   generate:

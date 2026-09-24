@@ -10,3 +10,6 @@ for more information.
 Windows Runtime (WinRT) APIs for for the `winui3-Microsoft.Windows.ApplicationModel.Background.UniversalBGTask` namespace.
 
 This package provides the `winui3.microsoft.windows.applicationmodel.background.universalbgtask` module.
+
+The WinRT APIs in it are those of version 1.7.250513003 of the
+`Microsoft.WindowsAppSDK` NuGet package.
