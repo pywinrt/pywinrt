@@ -1,12 +1,12 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["hatchling", "winrt-table-compiler"]
+requires = ["hatchling", "winrt-table-compiler>=4.0.0,<5"]
 build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Windows.Globalization.Collation"
-version = "0.0.0"
+version = "4!10.0.26100.4188"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"
@@ -18,12 +18,13 @@ classifiers = [
 ]
 requires-python = ">=3.11"
 dependencies = [
-    "winrt-runtime~=0.0.0.0",
+    "winrt-runtime>=4.0.0,<5",
+    "winrt-Windows.Foundation.Collections>=4!10.0.26100.4188",
 ]
 
 [project.optional-dependencies]
 all = [
-    "winrt-Windows.Foundation.Collections[all]~=0.0.0.0",
+    "winrt-Windows.Foundation.Collections[all]>=4!10.0.26100.4188",
 ]
 
 [project.urls]

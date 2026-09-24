@@ -170,6 +170,55 @@
   of them is. An `EventRegistrationToken` can be compared, hashed and used as
   a dictionary key like the integer it is, and an `HResult` can be compared
   against the codes in `winrt.system.hresult` directly.
+- BREAKING: A package is now versioned by the metadata it projects instead of
+  by the version of the generator that read that metadata.
+  `winrt-Windows.Storage` is `4!10.0.26100.4188`, the version of the
+  `Microsoft.Windows.SDK.CPP` NuGet package its winmd files come from, and the
+  WinUI 2, Windows App SDK and WebView2 packages are likewise numbered by their
+  own upstream. Each package's README names which NuGet package and version
+  that is. So a package now says which Windows APIs are in it, an upstream
+  release no longer has to wait for a PyWinRT release to be numbered after,
+  and the right way to pin one is the way its upstream numbers it -
+  `winui3-Microsoft.UI.Xaml==4!1.7.*` - rather than by a PyWinRT version.
+  `winrt-runtime` keeps plain semantic versioning, since its version is its
+  own.
+- BREAKING: The `4!` in front of those versions is a PEP 440 epoch and says
+  which generation of PyWinRT the package was built for. It is the same number
+  as `winrt-runtime`'s major version and it changes only when every projection
+  package has to be rebuilt anyway, so a `pip freeze` says which runtime a
+  package goes with. It is also what makes the new numbering sort above the
+  old: without it, `10.0.26100.4188` would have to sort against the `3.2.1` it
+  replaces, and `winui3-Microsoft.UI.Xaml` would go backwards from `3.2.1` to
+  `1.7.250513003`. Some tools that rewrite dependency constraints have
+  historically mishandled epochs; the spelling is `4!1.7.250513003` wherever
+  one is written out.
+- BREAKING: A package now requires `winrt-runtime>=<the version it was
+  generated with>,<5` where it used to pin `winrt-runtime~=<version>.0`. Any
+  runtime of the same generation can run it, so pip is free to install a newer
+  one. The upper bound is the only one anywhere in PyWinRT's metadata, and it
+  is there because that incompatibility is known rather than guessed: a
+  package of one generation is refused by the runtime of the next, so without
+  it pip would upgrade the runtime on its own into an import error. Building a
+  package from its source distribution caps `winrt-table-compiler` the same
+  way, for the same reason - a compiler of the next generation would write a
+  table that the runtime the wheel then asks for cannot read.
+- `winrt-Windows.Foundation`, `winrt-Windows.Foundation.Collections` and
+  `winrt-Windows.Storage.Streams` are now installed with any package that
+  hands back one of their types, instead of being offered by that package's
+  `[all]` extra. Nearly everything in the projection returns an
+  `IAsyncOperation`, an `IVectorView` or an `IBuffer`, so a minimal install
+  was usually missing one of these and said so only when a call returned. The
+  three together are under a megabyte and reference nothing outside the set,
+  so nothing else is pulled in with them.
+- Everything else one package says about another is now a floor rather than a
+  `~=` pin, including the packages named by the `[all]` extra. Packages do not
+  call into each other's compiled code - a type from another package is
+  resolved through WinRT by name - so the pin was protecting nothing, and it
+  made installing two packages that were generated from different upstream
+  releases fail to resolve. Packages that do come from one set of metadata,
+  such as `winui3-Microsoft.UI.Xaml` and `winui3-Microsoft.UI.Xaml.Controls`,
+  are still pinned to each other, because they are generated and released
+  together.
 
 ### Deprecated
 - Passing a format string to `winrt.system.Array` is deprecated and raises a
