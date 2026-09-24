@@ -155,8 +155,13 @@ subprocess.check_call(
 
 # generate code for windows app sdk (winui3)
 
+# Each component is published as a distribution of its own, so the input says
+# which one a namespace belongs to; the generator groups them and splits out
+# any namespace more than one component contributes to.
 WINDOWS_APP_SDK_INPUTS = [
-    arg for path in app_sdk.metadata_paths() for arg in ("--input", f"winui3;{path}")
+    arg
+    for distribution, path in app_sdk.metadata_inputs()
+    for arg in ("--input", f"winui3;{distribution};{path}")
 ]
 WINDOWS_APP_SDK_NULLABILITY_JSON_PATH = (
     REPO_ROOT_PATH / "nullability" / "windows-app-sdk.json"

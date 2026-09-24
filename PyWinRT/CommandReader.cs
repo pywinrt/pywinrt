@@ -14,7 +14,7 @@ enum XmlRequirement
 class CommandReader
 {
     static void AddFilesFromXml(
-        IDictionary<string, string> files,
+        IDictionary<string, InputSpec> files,
         string sdkVersion,
         string xmlPath,
         string sdkPath,
@@ -57,7 +57,7 @@ class CommandReader
             path = Path.Combine(path, name);
 
             path += ".winmd";
-            files.TryAdd(path, "winrt");
+            files.TryAdd(path, new InputSpec(path, "winrt", null));
         }
     }
 
@@ -144,9 +144,9 @@ class CommandReader
         return result.ToString();
     }
 
-    public static (string, string)[] ParseSpec(ArgumentResult result)
+    public static InputSpec[] ParseSpec(ArgumentResult result)
     {
-        var files = new SortedDictionary<string, string>(StringComparer.Ordinal);
+        var files = new SortedDictionary<string, InputSpec>(StringComparer.Ordinal);
 
         foreach (var token in result.Tokens)
         {
@@ -169,7 +169,7 @@ class CommandReader
 
                     foreach (var file in Directory.EnumerateFiles(local))
                     {
-                        files.Add(file, "winrt");
+                        files.Add(file, new InputSpec(file, "winrt", null));
                     }
 
                     continue;
@@ -231,22 +231,25 @@ class CommandReader
                     continue;
                 }
 
+                // <package>;<path>, or <package>;<distribution>;<path> when
+                // the namespaces in the metadata are published together
                 var split = value.Split(";");
-                if (split.Length != 2)
+                if (split.Length is not (2 or 3))
                 {
                     result.ErrorMessage = $"Invalid spec '{value}'";
                     return [];
                 }
 
                 var package = split[0];
-                var path = split[1];
+                var group = split.Length == 3 ? split[1] : null;
+                var path = split[^1];
 
                 // spec can be path to a directory containing .winmd files
                 if (Directory.Exists(path))
                 {
                     foreach (var file in Directory.EnumerateFiles(path, "*.winmd"))
                     {
-                        files.TryAdd(file, package);
+                        files.TryAdd(file, new InputSpec(file, package, group));
                     }
 
                     continue;
@@ -255,7 +258,7 @@ class CommandReader
                 // or path to a .winmd file
                 if (File.Exists(path))
                 {
-                    files.TryAdd(path, package);
+                    files.TryAdd(path, new InputSpec(path, package, group));
                     continue;
                 }
 
@@ -264,6 +267,6 @@ class CommandReader
             }
         }
 
-        return [.. files.Select((kvp) => (kvp.Key, kvp.Value))];
+        return [.. files.Values];
     }
 }
