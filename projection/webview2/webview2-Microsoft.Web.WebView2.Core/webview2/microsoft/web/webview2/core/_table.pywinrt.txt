@@ -146,6 +146,28 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Co
             in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo>> name=asyncInfo
             in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[CoreWebView2ServiceWorkerRegistration]]
+    guid 3e5399af-d0f6-5048-ad51-4d31bf61d9a3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration;{bfb195cd-7534-5ad4-aed9-24dfdf2a610d})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[CoreWebView2SharedWorker]]
+    guid c5b6ac3b-6ede-56f0-87e7-5e29239423ca
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker;{90777544-f10b-5365-912d-a7412e595c2d})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStream> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[IRandomAccessStream]
     guid 398c4183-793d-5b00-819b-4aef92485e94
@@ -181,6 +203,8 @@ class Microsoft.Web.WebView2.Core.CoreWebView2 python_type
     requires Microsoft.Web.WebView2.Core.ICoreWebView2_25
     requires Microsoft.Web.WebView2.Core.ICoreWebView2_26
     requires Microsoft.Web.WebView2.Core.ICoreWebView2_27
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2_28
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2_29
     requires Microsoft.Web.WebView2.Core.ICoreWebView2_3
     requires Microsoft.Web.WebView2.Core.ICoreWebView2_4
     requires Microsoft.Web.WebView2.Core.ICoreWebView2_5
@@ -235,6 +259,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2 python_type
     property frame_id
         get get_FrameId slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_20 shape=4
             out uint32 return
+    property find
+        get get_Find slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_28 shape=4
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2Find return
     property is_suspended
         get get_IsSuspended slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_3 shape=4
             out boolean return
@@ -330,6 +357,12 @@ class Microsoft.Web.WebView2.Core.CoreWebView2 python_type
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2ScreenCaptureStartingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ScreenCaptureStarting slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_27 shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event dedicated_worker_created
+        add add_DedicatedWorkerCreated slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_29 shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_DedicatedWorkerCreated slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_29 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event download_starting
         add add_DownloadStarting slot=8 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2_4 shape=51
@@ -877,6 +910,7 @@ class Microsoft.Web.WebView2.Core.CoreWebView2CompositionController python_type
     requires Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController2
     requires Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController3
     requires Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController4
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController5
     requires Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController
     factory Microsoft.Web.WebView2.Core.ICoreWebView2CompositionControllerStatics
     factory Microsoft.Web.WebView2.Core.ICoreWebView2CompositionControllerStatics2_Manual
@@ -1195,6 +1229,8 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions python_type
     signature rc(Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions;{3337e821-3606-5a0e-8e2f-0c1e57d743f7})
     default Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions
     requires Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions2
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions3
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions4
     requires Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions
     property profile_name
         get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions shape=4
@@ -1211,6 +1247,16 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions python_type
             out string return
         put put_ScriptLocale slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions2 shape=4
             in string name=value
+    property default_background_color
+        get get_DefaultBackgroundColor slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions3 shape=4
+            out struct type=Windows.UI.Color return
+        put put_DefaultBackgroundColor slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions3 shape=29
+            in struct type=Windows.UI.Color name=value
+    property allow_host_input_processing
+        get get_AllowHostInputProcessing slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions4 shape=4
+            out boolean return
+        put put_AllowHostInputProcessing slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions4 shape=4
+            in boolean name=value
 
 class Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference python_type
     py CoreWebView2ControllerWindowReference
@@ -1358,6 +1404,51 @@ class Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs python_t
     property navigation_id
         get get_NavigationId slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DOMContentLoadedEventArgs shape=4
             out uint64 return
+
+class Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker python_type
+    py CoreWebView2DedicatedWorker
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker;{223aadf7-1b62-5d45-af25-827baa0d732b})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorker
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorker
+    property script_uri
+        get get_ScriptUri slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorker shape=4
+            out string return
+    event dedicated_worker_created
+        add add_DedicatedWorkerCreated slot=7 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorker shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker,Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_DedicatedWorkerCreated slot=8 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorker shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event destroying
+        add add_Destroying slot=9 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorker shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Destroying slot=10 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorker shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event web_message_received
+        add add_WebMessageReceived slot=11 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorker shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_WebMessageReceived slot=12 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorker shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method post_web_message_as_json
+        method PostWebMessageAsJson slot=13 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorker shape=4
+            in string name=webMessageAsJson
+    method post_web_message_as_string
+        method PostWebMessageAsString slot=14 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorker shape=4
+            in string name=webMessageAsString
+
+class Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs python_type
+    py CoreWebView2DedicatedWorkerCreatedEventArgs
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs;{e8e78c42-7605-58f8-9221-11b6bb9a42c2})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorkerCreatedEventArgs
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorkerCreatedEventArgs
+    property original_source_frame_info
+        get get_OriginalSourceFrameInfo slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorkerCreatedEventArgs shape=4
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo return
+    property worker
+        get get_Worker slot=7 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorkerCreatedEventArgs shape=4
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker return
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2DefaultDownloadDialogCornerAlignment python_type
     py CoreWebView2DefaultDownloadDialogCornerAlignment
@@ -1529,6 +1620,7 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Environment python_type
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Environment12
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Environment13
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Environment14
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2Environment15
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Environment2
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Environment3
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Environment4
@@ -1604,6 +1696,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Environment python_type
     method create_core_webview2_pointer_info
         method CreateCoreWebView2PointerInfo slot=7 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Environment3 shape=4
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo return
+    method create_find_options
+        method CreateFindOptions slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Environment15 shape=4
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2FindOptions return
     method create_print_settings
         method CreatePrintSettings slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Environment6 shape=4
             out class type=Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings return
@@ -1798,6 +1893,71 @@ enum Microsoft.Web.WebView2.Core.CoreWebView2FileSystemHandlePermission python_t
     constant READ_ONLY 0
     constant READ_WRITE 1
 
+class Microsoft.Web.WebView2.Core.CoreWebView2Find python_type
+    py CoreWebView2Find
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2Find;{d9afbd37-aeb2-5109-bb8f-6ff27cf9d279})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2Find
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2Find
+    property active_match_index
+        get get_ActiveMatchIndex slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Find shape=4
+            out int32 return
+    property match_count
+        get get_MatchCount slot=7 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Find shape=4
+            out int32 return
+    event active_match_index_changed
+        add add_ActiveMatchIndexChanged slot=8 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Find shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Find,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ActiveMatchIndexChanged slot=9 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Find shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event match_count_changed
+        add add_MatchCountChanged slot=10 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Find shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Find,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_MatchCountChanged slot=11 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Find shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method find_next
+        method FindNext slot=13 inputs=0 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Find shape=0
+    method find_previous
+        method FindPrevious slot=14 inputs=0 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Find shape=0
+    method start_async
+        method StartAsync slot=12 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Find shape=51
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2FindOptions name=options
+            out interface type=Windows.Foundation.IAsyncAction return
+    method stop
+        method Stop slot=15 inputs=0 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Find shape=0
+
+class Microsoft.Web.WebView2.Core.CoreWebView2FindOptions python_type
+    py CoreWebView2FindOptions
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2FindOptions;{157b920b-e1dc-5792-8a21-26a1c882c3f6})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions
+    property suppress_default_find_dialog
+        get get_SuppressDefaultFindDialog slot=14 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions shape=4
+            out boolean return
+        put put_SuppressDefaultFindDialog slot=15 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions shape=4
+            in boolean name=value
+    property should_match_word
+        get get_ShouldMatchWord slot=12 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions shape=4
+            out boolean return
+        put put_ShouldMatchWord slot=13 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions shape=4
+            in boolean name=value
+    property should_highlight_all_matches
+        get get_ShouldHighlightAllMatches slot=10 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions shape=4
+            out boolean return
+        put put_ShouldHighlightAllMatches slot=11 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions shape=4
+            in boolean name=value
+    property is_case_sensitive
+        get get_IsCaseSensitive slot=8 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions shape=4
+            out boolean return
+        put put_IsCaseSensitive slot=9 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions shape=4
+            in boolean name=value
+    property find_term
+        get get_FindTerm slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions shape=4
+            out string return
+        put put_FindTerm slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions shape=4
+            in string name=value
+
 class Microsoft.Web.WebView2.Core.CoreWebView2Frame python_type
     py CoreWebView2Frame
     signature rc(Microsoft.Web.WebView2.Core.CoreWebView2Frame;{02ffcbf9-19e7-5bb8-8273-346420fb1503})
@@ -1808,6 +1968,7 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Frame python_type
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Frame5
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Frame6
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Frame7
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2Frame8
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Frame
     property name
         get get_Name slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame shape=4
@@ -1862,6 +2023,12 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Frame python_type
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2FrameCreatedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_FrameCreated slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame7 shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event dedicated_worker_created
+        add add_DedicatedWorkerCreated slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame8 shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_DedicatedWorkerCreated slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame8 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event destroyed
         add add_Destroyed slot=9 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Frame shape=51
@@ -2340,6 +2507,7 @@ enum Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind python_type
     constant LOCAL_FONTS 10
     constant MIDI_SYSTEM_EXCLUSIVE_MESSAGES 11
     constant WINDOW_MANAGEMENT 12
+    constant PERSISTENT_STORAGE 13
 
 class Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs python_type
     py CoreWebView2PermissionRequestedEventArgs
@@ -2792,6 +2960,9 @@ enum Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedReason python_type
     constant LAUNCH_FAILED 4
     constant OUT_OF_MEMORY 5
     constant PROFILE_DELETED 6
+    constant NORMAL_EXIT 7
+    constant ABNORMAL_EXIT 8
+    constant INTEGRITY_FAILURE 9
 
 class Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo python_type
     py CoreWebView2ProcessInfo
@@ -2830,6 +3001,7 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Profile python_type
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Profile6
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Profile7
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Profile8
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2Profile9
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Profile
     property preferred_color_scheme
         get get_PreferredColorScheme slot=11 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Profile shape=4
@@ -2868,6 +3040,17 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Profile python_type
             out boolean return
         put put_IsGeneralAutofillEnabled slot=9 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Profile6 shape=4
             in boolean name=value
+    property are_web_view_script_apis_enabled_for_service_workers
+        get get_AreWebViewScriptApisEnabledForServiceWorkers slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Profile9 shape=4
+            out boolean return
+        put put_AreWebViewScriptApisEnabledForServiceWorkers slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Profile9 shape=4
+            in boolean name=value
+    property service_worker_manager
+        get get_ServiceWorkerManager slot=8 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Profile9 shape=4
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager return
+    property shared_worker_manager
+        get get_SharedWorkerManager slot=9 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Profile9 shape=4
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager return
     event deleted
         add add_Deleted slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Profile8 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Profile,System.Object> name=handler
@@ -3119,6 +3302,103 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEven
         method GetDeferral slot=11 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServerCertificateErrorDetectedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
+class Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker python_type
+    py CoreWebView2ServiceWorker
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker;{1de7e18c-9d65-5e66-9dd3-3a7605a1b3aa})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorker
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorker
+    property script_uri
+        get get_ScriptUri slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorker shape=4
+            out string return
+    event destroying
+        add add_Destroying slot=7 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorker shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Destroying slot=8 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorker shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event web_message_received
+        add add_WebMessageReceived slot=9 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorker shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_WebMessageReceived slot=10 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorker shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method post_web_message_as_json
+        method PostWebMessageAsJson slot=11 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorker shape=4
+            in string name=webMessageAsJson
+    method post_web_message_as_string
+        method PostWebMessageAsString slot=12 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorker shape=4
+            in string name=webMessageAsString
+
+class Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs python_type
+    py CoreWebView2ServiceWorkerActivatedEventArgs
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs;{51e90f5a-4ccb-51ae-a543-7c2a6204459d})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerActivatedEventArgs
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerActivatedEventArgs
+    property active_service_worker
+        get get_ActiveServiceWorker slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerActivatedEventArgs shape=4
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker return
+
+class Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager python_type
+    py CoreWebView2ServiceWorkerManager
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager;{65d41a61-b78c-5950-a9fe-fedec21bf768})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerManager
+    requires Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager_Manual
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerManager
+    event service_worker_registered
+        add add_ServiceWorkerRegistered slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerManager shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager,Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ServiceWorkerRegistered slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerManager shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method get_service_worker_registrations_async
+        method GetServiceWorkerRegistrationsAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerManager shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> return
+        method GetServiceWorkerRegistrationsAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager_Manual shape=51
+            in string name=scope
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> return
+
+interface Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager_Manual
+    guid 59e4391e-019f-5c75-8c86-caf159dbab03
+
+class Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs python_type
+    py CoreWebView2ServiceWorkerRegisteredEventArgs
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs;{b61ce117-71ff-5e7b-b724-ea7f62a0e014})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegisteredEventArgs
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegisteredEventArgs
+    property service_worker_registration
+        get get_ServiceWorkerRegistration slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegisteredEventArgs shape=4
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration return
+
+class Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration python_type
+    py CoreWebView2ServiceWorkerRegistration
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration;{bfb195cd-7534-5ad4-aed9-24dfdf2a610d})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegistration
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegistration
+    property active_service_worker
+        get get_ActiveServiceWorker slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegistration shape=4
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker return
+    property origin
+        get get_Origin slot=7 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegistration shape=4
+            out string return
+    property scope_uri
+        get get_ScopeUri slot=8 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegistration shape=4
+            out string return
+    property top_level_origin
+        get get_TopLevelOrigin slot=9 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegistration shape=4
+            out string return
+    event service_worker_activated
+        add add_ServiceWorkerActivated slot=10 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegistration shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration,Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ServiceWorkerActivated slot=11 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegistration shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event unregistering
+        add add_Unregistering slot=12 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegistration shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Unregistering slot=13 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegistration shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+
 class Microsoft.Web.WebView2.Core.CoreWebView2Settings python_type
     py CoreWebView2Settings
     signature rc(Microsoft.Web.WebView2.Core.CoreWebView2Settings;{003b325e-74cd-52dd-8024-ebb8be38e48e})
@@ -3253,6 +3533,51 @@ enum Microsoft.Web.WebView2.Core.CoreWebView2SharedBufferAccess python_type
     signature enum(Microsoft.Web.WebView2.Core.CoreWebView2SharedBufferAccess;i4)
     constant READ_ONLY 0
     constant READ_WRITE 1
+
+class Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker python_type
+    py CoreWebView2SharedWorker
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker;{90777544-f10b-5365-912d-a7412e595c2d})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorker
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorker
+    property origin
+        get get_Origin slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorker shape=4
+            out string return
+    property script_uri
+        get get_ScriptUri slot=7 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorker shape=4
+            out string return
+    property top_level_origin
+        get get_TopLevelOrigin slot=8 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorker shape=4
+            out string return
+    event destroying
+        add add_Destroying slot=9 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorker shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Destroying slot=10 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorker shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+
+class Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs python_type
+    py CoreWebView2SharedWorkerCreatedEventArgs
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs;{de7947fc-b93c-5a4e-8220-d62523649249})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorkerCreatedEventArgs
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorkerCreatedEventArgs
+    property worker
+        get get_Worker slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorkerCreatedEventArgs shape=4
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker return
+
+class Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager python_type
+    py CoreWebView2SharedWorkerManager
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager;{d5dc327e-9dc1-526e-9452-f036c3271b2b})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorkerManager
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorkerManager
+    event shared_worker_created
+        add add_SharedWorkerCreated slot=6 inputs=1 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorkerManager shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager,Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_SharedWorkerCreated slot=7 inputs=1 outputs=0 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorkerManager shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method get_shared_workers_async
+        method GetSharedWorkersAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorkerManager shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>> return
 
 class Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs python_type
     py CoreWebView2SourceChangedEventArgs
@@ -3865,6 +4190,64 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
         method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo>> shape=4 reverse=62 role=get_results
             out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo> return
 
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[CoreWebView2ServiceWorkerRegistration]]
+    guid bdef85c1-746e-50c6-8b0f-5b7c24302046
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration;{bfb195cd-7534-5ad4-aed9-24dfdf2a610d})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[CoreWebView2SharedWorker]]
+    guid ecb49606-ff6b-5ab0-9985-29d449c59aa0
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker;{90777544-f10b-5365-912d-a7412e595c2d})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> return
+
 interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[IRandomAccessStream]
     guid 430ecece-1418-5d19-81b2-5ddb381603cc
@@ -3936,6 +4319,9 @@ interface Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController3
 interface Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController4
     guid c950cb84-2648-5ad5-badd-bfe659682fb6
 
+interface Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController5
+    guid bde44eff-f687-572c-b47d-9e194016d18b
+
 interface Microsoft.Web.WebView2.Core.ICoreWebView2CompositionControllerStatics
     guid 4df0ab1f-7f2a-573b-b81a-b9b531224736
 
@@ -3975,6 +4361,12 @@ interface Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions
 interface Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions2
     guid 41b69e93-cc17-5c7d-a0c8-fa21c27aadb6
 
+interface Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions3
+    guid d8de3799-3bd3-5656-a9fe-ef2cb8879239
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2ControllerOptions4
+    guid 650fcf6c-966d-542e-86e5-8889d6c734a5
+
 interface Microsoft.Web.WebView2.Core.ICoreWebView2ControllerWindowReference
     guid 0feddad4-48a3-5cc4-9f61-e7adfd1e9c76
 
@@ -4001,6 +4393,12 @@ interface Microsoft.Web.WebView2.Core.ICoreWebView2CustomSchemeRegistration_Manu
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2DOMContentLoadedEventArgs
     guid c474d0a3-24ac-59fc-b78b-da7562a6a052
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorker
+    guid 223aadf7-1b62-5d45-af25-827baa0d732b
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2DedicatedWorkerCreatedEventArgs
+    guid e8e78c42-7605-58f8-9221-11b6bb9a42c2
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2DevToolsProtocolEventReceivedEventArgs
     guid b6a4b41d-fd18-59fa-923a-c57555d960ce
@@ -4055,6 +4453,9 @@ interface Microsoft.Web.WebView2.Core.ICoreWebView2Environment13
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2Environment14
     guid 39f9505f-0d1f-5284-9fa9-9dbd818973fa
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2Environment15
+    guid 37b49c50-b262-5563-a5ed-ae60182495c0
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2Environment2
     guid 0b634668-1017-5fc7-9921-f1f51866a8c0
@@ -4131,6 +4532,12 @@ interface Microsoft.Web.WebView2.Core.ICoreWebView2File
 interface Microsoft.Web.WebView2.Core.ICoreWebView2FileSystemHandle
     guid 241cb4c8-0021-5f72-8bf2-e141dce4c151
 
+interface Microsoft.Web.WebView2.Core.ICoreWebView2Find
+    guid d9afbd37-aeb2-5109-bb8f-6ff27cf9d279
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2FindOptions
+    guid 157b920b-e1dc-5792-8a21-26a1c882c3f6
+
 interface Microsoft.Web.WebView2.Core.ICoreWebView2Frame
     guid 02ffcbf9-19e7-5bb8-8273-346420fb1503
 
@@ -4151,6 +4558,9 @@ interface Microsoft.Web.WebView2.Core.ICoreWebView2Frame6
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2Frame7
     guid 37b88dd4-5973-51ad-98c5-6832c5499dc0
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2Frame8
+    guid 6315796e-e5cc-5c4b-abfc-706c9126e019
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2FrameCreatedEventArgs
     guid 527b01b8-fc6d-5543-8dce-96cdfdb32c81
@@ -4278,6 +4688,9 @@ interface Microsoft.Web.WebView2.Core.ICoreWebView2Profile7
 interface Microsoft.Web.WebView2.Core.ICoreWebView2Profile8
     guid 9362d39c-d521-59e9-88fd-7c5aa1167da6
 
+interface Microsoft.Web.WebView2.Core.ICoreWebView2Profile9
+    guid 771db489-4cc5-5924-9a10-0ec160442614
+
 interface Microsoft.Web.WebView2.Core.ICoreWebView2SaveAsUIShowingEventArgs
     guid cc39a250-2b4c-5608-9097-c59b8a8231b9
 
@@ -4295,6 +4708,21 @@ interface Microsoft.Web.WebView2.Core.ICoreWebView2ScriptException
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2ServerCertificateErrorDetectedEventArgs
     guid 90fdc703-5a9e-56f6-a422-7c114c736420
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorker
+    guid 1de7e18c-9d65-5e66-9dd3-3a7605a1b3aa
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerActivatedEventArgs
+    guid 51e90f5a-4ccb-51ae-a543-7c2a6204459d
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerManager
+    guid 65d41a61-b78c-5950-a9fe-fedec21bf768
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegisteredEventArgs
+    guid b61ce117-71ff-5e7b-b724-ea7f62a0e014
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2ServiceWorkerRegistration
+    guid bfb195cd-7534-5ad4-aed9-24dfdf2a610d
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2Settings
     guid 003b325e-74cd-52dd-8024-ebb8be38e48e
@@ -4331,6 +4759,15 @@ interface Microsoft.Web.WebView2.Core.ICoreWebView2SharedBuffer
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2SharedBuffer_Manual
     guid 1aa4e213-ace3-5f74-a2ae-c6489ceb3239
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorker
+    guid 90777544-f10b-5365-912d-a7412e595c2d
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorkerCreatedEventArgs
+    guid de7947fc-b93c-5a4e-8220-d62523649249
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2SharedWorkerManager
+    guid d5dc327e-9dc1-526e-9452-f036c3271b2b
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2SourceChangedEventArgs
     guid ca437b2c-6a18-5552-b749-b198f8cc34d9
@@ -4418,6 +4855,12 @@ interface Microsoft.Web.WebView2.Core.ICoreWebView2_26
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2_27
     guid d964f497-ffdf-5bcd-bf52-ff4585f2ebc2
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2_28
+    guid 6e43a033-d2e9-59fc-8856-88d4f7438c4d
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2_29
+    guid f12726d8-60e0-5399-9d46-8dede2b4f40a
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2_3
     guid a8c76ae7-6170-5dfe-8f00-79cd76a9b4d9
@@ -4535,6 +4978,26 @@ interface Windows.Foundation.Collections.IIterable<Microsoft.Web.WebView2.Core.C
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[CoreWebView2ServiceWorkerRegistration]
+    guid 990d62e7-67c7-50de-bf76-5ed0aec33e6f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration;{bfb195cd-7534-5ad4-aed9-24dfdf2a610d}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[CoreWebView2SharedWorker]
+    guid 77b1b881-c2ff-57a6-8e21-17a6c13e0549
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker;{90777544-f10b-5365-912d-a7412e595c2d}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> return
 
 interface Windows.Foundation.Collections.IIterable<System.Object> concrete iterable
     py winrt.windows.foundation.collections._IIterable[Object]
@@ -4764,6 +5227,46 @@ interface Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.C
             out uint32 return
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[CoreWebView2ServiceWorkerRegistration]
+    guid 6c193ba5-38cc-5f4c-b022-d1c7963b91cc
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration;{bfb195cd-7534-5ad4-aed9-24dfdf2a610d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> shape=4 reverse=22 role=current
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> shape=117 reverse=101 role=get_many
+            fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[CoreWebView2SharedWorker]
+    guid f0793889-fc9a-591c-99c0-5240e7104a54
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker;{90777544-f10b-5365-912d-a7412e595c2d}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> shape=4 reverse=22 role=current
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> shape=117 reverse=101 role=get_many
+            fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> shape=4 reverse=62 role=move_next
             out boolean return
 
 interface Windows.Foundation.Collections.IIterator<System.Object> concrete iterable iterator
@@ -5288,6 +5791,62 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core
             out uint32 name=index
             out boolean return
 
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[CoreWebView2ServiceWorkerRegistration]
+    guid 4a2ba298-912a-5e58-9f82-cc2cff6f1f95
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration;{bfb195cd-7534-5ad4-aed9-24dfdf2a610d}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>
+    argument Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration> shape=117 reverse=66 role=index_of
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[CoreWebView2SharedWorker]
+    guid 23356f56-34af-554c-98be-63e749a35a97
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker;{90777544-f10b-5365-912d-a7412e595c2d}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>
+    argument Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker> shape=117 reverse=66 role=index_of
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker name=value
+            out uint32 name=index
+            out boolean return
+
 interface Windows.Foundation.Collections.IVectorView<System.Object> concrete iterable sequence
     py winrt.windows.foundation.collections._IVectorView[Object]
     guid a6487363-b074-5c60-ab16-866dce4ee54d
@@ -5459,6 +6018,18 @@ delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWe
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in class type=Microsoft.Web.WebView2.Core.CoreWebView2 name=sender
             in class type=Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2, CoreWebView2DedicatedWorkerCreatedEventArgs]
+    guid 9ad68ce1-2011-5145-a753-55c6d3101c13
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2;{3a3f559a-e5e9-5338-bb67-4eb0504a4f14});rc(Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs;{e8e78c42-7605-58f8-9221-11b6bb9a42c2}))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2
+    argument Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2 name=sender
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[CoreWebView2, CoreWebView2DevToolsProtocolEventReceivedEventArgs]
@@ -5772,6 +6343,42 @@ delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWe
             in class type=Microsoft.Web.WebView2.Core.CoreWebView2Controller name=sender
             in object name=args
 
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker,Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2DedicatedWorker, CoreWebView2DedicatedWorkerCreatedEventArgs]
+    guid 8e947df7-f079-5617-9e17-6e21b074a1b4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker;{223aadf7-1b62-5d45-af25-827baa0d732b});rc(Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs;{e8e78c42-7605-58f8-9221-11b6bb9a42c2}))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker
+    argument Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker name=sender
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2DedicatedWorker, CoreWebView2WebMessageReceivedEventArgs]
+    guid ceaa1825-044f-5702-ba67-4ee12afb9427
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker;{223aadf7-1b62-5d45-af25-827baa0d732b});rc(Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs;{eb066159-b725-5d5b-adc8-f5d7b9290304}))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker
+    argument Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker name=sender
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2DedicatedWorker, Object]
+    guid b030d310-5492-55b1-84f6-91a9ca127bd0
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker;{223aadf7-1b62-5d45-af25-827baa0d732b});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker name=sender
+            in object name=args
+
 delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[CoreWebView2DownloadOperation, Object]
     guid 46151449-f36f-5066-a1bc-4a0a3d9c47ad
@@ -5808,6 +6415,18 @@ delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWe
             in class type=Microsoft.Web.WebView2.Core.CoreWebView2Environment name=sender
             in object name=args
 
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Find,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2Find, Object]
+    guid 83dbbbee-adc1-57f2-8e7b-771b151e74f4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2Find;{d9afbd37-aeb2-5109-bb8f-6ff27cf9d279});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2Find
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2Find name=sender
+            in object name=args
+
 delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[CoreWebView2Frame, CoreWebView2ContentLoadingEventArgs]
     guid 64c814d6-2e6f-5093-a0b3-fa578ca637d7
@@ -5831,6 +6450,18 @@ delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWe
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in class type=Microsoft.Web.WebView2.Core.CoreWebView2Frame name=sender
             in class type=Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2Frame, CoreWebView2DedicatedWorkerCreatedEventArgs]
+    guid 6c0b9493-fbb8-5081-a353-567bf845b34d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2Frame;{02ffcbf9-19e7-5bb8-8273-346420fb1503});rc(Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs;{e8e78c42-7605-58f8-9221-11b6bb9a42c2}))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2Frame
+    argument Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2Frame name=sender
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2FrameCreatedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[CoreWebView2Frame, CoreWebView2FrameCreatedEventArgs]
@@ -5939,6 +6570,90 @@ delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWe
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in class type=Microsoft.Web.WebView2.Core.CoreWebView2Profile name=sender
             in object name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2ServiceWorker, CoreWebView2WebMessageReceivedEventArgs]
+    guid dfb94d18-1714-51b5-b04d-5dbb5dfedd9e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker;{1de7e18c-9d65-5e66-9dd3-3a7605a1b3aa});rc(Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs;{eb066159-b725-5d5b-adc8-f5d7b9290304}))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker
+    argument Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker name=sender
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2ServiceWorker, Object]
+    guid e933332f-7284-5646-a82a-e0e0cb733a9f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker;{1de7e18c-9d65-5e66-9dd3-3a7605a1b3aa});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker name=sender
+            in object name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager,Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2ServiceWorkerManager, CoreWebView2ServiceWorkerRegisteredEventArgs]
+    guid b371c585-0e78-521b-bc31-4d3e746e492e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager;{65d41a61-b78c-5950-a9fe-fedec21bf768});rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs;{b61ce117-71ff-5e7b-b724-ea7f62a0e014}))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager
+    argument Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager name=sender
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration,Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2ServiceWorkerRegistration, CoreWebView2ServiceWorkerActivatedEventArgs]
+    guid 2168e78e-3ef3-5069-ba2a-223b47baacfe
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration;{bfb195cd-7534-5ad4-aed9-24dfdf2a610d});rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs;{51e90f5a-4ccb-51ae-a543-7c2a6204459d}))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration
+    argument Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration name=sender
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2ServiceWorkerRegistration, Object]
+    guid 779b6db3-36c7-5b6a-be6e-6260d8320b36
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration;{bfb195cd-7534-5ad4-aed9-24dfdf2a610d});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration name=sender
+            in object name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2SharedWorker, Object]
+    guid 8cd29279-8beb-5ac2-9256-a711fadfc1c9
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker;{90777544-f10b-5365-912d-a7412e595c2d});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker name=sender
+            in object name=args
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager,Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreWebView2SharedWorkerManager, CoreWebView2SharedWorkerCreatedEventArgs]
+    guid bbd53a42-7b02-5e13-b44b-2e08c7eec009
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager;{d5dc327e-9dc1-526e-9452-f036c3271b2b});rc(Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs;{de7947fc-b93c-5a4e-8220-d62523649249}))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager
+    argument Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager name=sender
+            in class type=Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs name=args
 
 class System.Boolean external
     py winrt.system.Boolean

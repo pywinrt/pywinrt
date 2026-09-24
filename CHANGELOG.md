@@ -228,6 +228,11 @@
   namespace. `Windows.AI.Agents.Mcp` covers Model Context Protocol in this
   release, but it is not the same API: the classes for enumerating and
   describing servers are gone and what is there now filters messages.
+- Updated WebView2 to 1.0.4191.47. Twelve types are new, covering the worker
+  APIs - `CoreWebView2ServiceWorker`, `CoreWebView2DedicatedWorker`,
+  `CoreWebView2SharedWorker` and the managers and event arguments that go with
+  them - and find-on-page, `CoreWebView2Find` and `CoreWebView2FindOptions`.
+  Nothing was removed.
 
 ### Deprecated
 - Passing a format string to `winrt.system.Array` is deprecated and raises a
